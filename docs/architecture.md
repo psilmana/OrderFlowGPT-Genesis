@@ -2,13 +2,13 @@
 
 ## Purpose
 
-OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 adds image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`. Milestone 4 adds workspace detection contracts for chart-specific layout regions.
+OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 added image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`. Milestone 5 adds the first real vision detector for locating the main ATAS trading chart.
 
 ## Package boundaries
 
 - `orderflowgpt_genesis.models` owns immutable market domain objects and validation.
 - `orderflowgpt_genesis.analysis` owns stateless order-flow analysis behavior.
-- `orderflowgpt_genesis.vision` owns frame abstractions, vision-facing interfaces, in-memory frame replay, image caching, scene graph skeletons, workspace detection contracts, image preprocessing configuration, processed frame outputs, and workspace layout region contracts.
+- `orderflowgpt_genesis.vision` owns frame abstractions, vision-facing interfaces, in-memory frame replay, image caching, scene graph skeletons, workspace detection contracts, image preprocessing configuration, processed frame outputs, detector contracts, chart detection, debug overlays, and layout assembly.
 - `orderflowgpt_genesis.__init__` exposes the supported public API.
 
 No current module performs network I/O, file I/O, broker access, exchange access, language-model calls, image capture side effects, persistence, or serialization.
@@ -71,31 +71,29 @@ ProcessedFrame
 
 Milestone 3 deliberately excludes OpenCV bindings, GPU acceleration, model-assisted interpretation, persistence, serialization, live capture, and workspace-specific detector implementations.
 
-## Milestone 4: Workspace Detection
+## Milestone 5: First Real Vision Detector – Chart Detection
 
-Milestone 4 defines the approved workspace layout detection output only:
+Milestone 5 implements the approved detector flow:
 
 ```text
-Image or ProcessedFrame
+ProcessedFrame
   ↓
-Workspace Detection
+ChartDetector
+  ↓
+DetectionResult
+  ↓
+LayoutBuilder
   ↓
 WorkspaceLayout
 ```
 
-Detectors are expected to identify these workspace elements when present:
+- `Detector` defines the common `detect(frame: ProcessedFrame) -> DetectionResult` interface for future detectors.
+- `DetectionResult` wraps every detector output with an optional detected region, confidence, reason, detector name, and optional PNG debug overlay. Raw rectangles are not returned directly.
+- `ChartDetector` is a deterministic production detector for the main trading chart. It converts source pixels to luminance, computes an edge map, combines connected-component analysis with horizontal and vertical histogram projection analysis, validates candidates by size and area, scores edge density, and returns a confidence-rated result.
+- `DebugOverlay` stores PNG bytes and can save overlays to disk. The overlay draws the detected rectangle and confidence bar for local diagnostics.
+- `LayoutBuilder` consumes a chart `DetectionResult` and builds a `WorkspaceLayout`; the layout object does not run detection itself.
 
-- Main chart, represented by `ChartRegion`.
-- Price axis, represented by `PriceAxis`.
-- Time axis, represented by `TimeAxis`.
-- Bottom panels, represented by one or more `BottomPanel` values.
-- Right and left toolbars, represented by `Toolbar` values with a constrained `position`.
-- Status bar, represented by `StatusBar`.
-- Visible viewport, represented by `Viewport`.
-
-`WorkspaceLayout` groups the frame id, workspace id, containing bounds, required chart/axis/viewport regions, optional bottom panels, optional toolbars, optional status bar, confidence, and label. `WorkspaceLayoutDetector` defines the interface for future concrete detectors.
-
-Milestone 4 deliberately excludes native computer-vision implementations, model-assisted interpretation, persistence, serialization, live capture, and platform-specific workspace adapters.
+Milestone 5 deliberately excludes OCR, machine learning, deep learning, YOLO/TensorFlow/PyTorch, price-axis detection, toolbar detection, bottom-panel detection, volume-profile detection, footprint detection, DOM detection, and mouse automation.
 
 ## Extension rules for future milestones
 
