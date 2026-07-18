@@ -2,13 +2,13 @@
 
 ## Purpose
 
-OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 adds image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`.
+OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 added image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`. Milestone 5 adds the first real vision detector for locating the main ATAS trading chart.
 
 ## Package boundaries
 
 - `orderflowgpt_genesis.models` owns immutable market domain objects and validation.
 - `orderflowgpt_genesis.analysis` owns stateless order-flow analysis behavior.
-- `orderflowgpt_genesis.vision` owns frame abstractions, vision-facing interfaces, in-memory frame replay, image caching, scene graph skeletons, workspace detection contracts, image preprocessing configuration, and processed frame outputs.
+- `orderflowgpt_genesis.vision` owns frame abstractions, vision-facing interfaces, in-memory frame replay, image caching, scene graph skeletons, workspace detection contracts, image preprocessing configuration, processed frame outputs, detector contracts, chart detection, debug overlays, and layout assembly.
 - `orderflowgpt_genesis.__init__` exposes the supported public API.
 
 No current module performs network I/O, file I/O, broker access, exchange access, language-model calls, image capture side effects, persistence, or serialization.
@@ -70,6 +70,30 @@ ProcessedFrame
 - `DeterministicImagePreprocessor` provides a no-I/O in-memory implementation for deterministic tests, local pipelines, and adapter contract development.
 
 Milestone 3 deliberately excludes OpenCV bindings, GPU acceleration, model-assisted interpretation, persistence, serialization, live capture, and workspace-specific detector implementations.
+
+## Milestone 5: First Real Vision Detector – Chart Detection
+
+Milestone 5 implements the approved detector flow:
+
+```text
+ProcessedFrame
+  ↓
+ChartDetector
+  ↓
+DetectionResult
+  ↓
+LayoutBuilder
+  ↓
+WorkspaceLayout
+```
+
+- `Detector` defines the common `detect(frame: ProcessedFrame) -> DetectionResult` interface for future detectors.
+- `DetectionResult` wraps every detector output with an optional detected region, confidence, reason, detector name, and optional PNG debug overlay. Raw rectangles are not returned directly.
+- `ChartDetector` is a deterministic production detector for the main trading chart. It converts source pixels to luminance, computes an edge map, performs horizontal and vertical histogram projection analysis, validates the candidate by size and area, scores edge density, and returns a confidence-rated result.
+- `DebugOverlay` stores PNG bytes and can save overlays to disk. The overlay draws the detected rectangle and confidence bar for local diagnostics.
+- `LayoutBuilder` consumes a chart `DetectionResult` and builds a `WorkspaceLayout`; the layout object does not run detection itself.
+
+Milestone 5 deliberately excludes OCR, machine learning, deep learning, YOLO/TensorFlow/PyTorch, price-axis detection, toolbar detection, bottom-panel detection, volume-profile detection, footprint detection, DOM detection, and mouse automation.
 
 ## Extension rules for future milestones
 

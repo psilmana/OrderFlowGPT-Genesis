@@ -113,6 +113,7 @@ def test_workspace_detection_confidence_range():
             confidence=1.1,
         )
 
+
 def test_preprocessing_pipeline_materializes_milestone_3_stages():
     source = ImageFrame(
         data=b"rgb-pixels",
@@ -145,7 +146,9 @@ def test_preprocessing_pipeline_materializes_milestone_3_stages():
     assert processed.morphology.pixel_format == "BINARY"
     assert processed.roi_frames["chart"].width == 300
     assert processed.roi_frames["chart"].height == 200
-    assert [(level.scale, level.width, level.height) for level in processed.pyramid] == [
+    assert [
+        (level.scale, level.width, level.height) for level in processed.pyramid
+    ] == [
         (1.0, 640, 480),
         (0.5, 320, 240),
     ]

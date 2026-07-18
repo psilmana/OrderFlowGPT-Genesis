@@ -13,11 +13,14 @@ from datetime import datetime, timezone
 from types import MappingProxyType
 from typing import Protocol, TypeAlias, runtime_checkable
 from uuid import uuid4
+import struct
+import zlib
 
 FrameId: TypeAlias = str
 SceneNodeId: TypeAlias = str
 WorkspaceId: TypeAlias = str
 ProcessedFrameId: TypeAlias = str
+DetectorName: TypeAlias = str
 
 
 @dataclass(frozen=True, slots=True)
@@ -141,6 +144,62 @@ class BoundingBox:
         """Return whether this box is contained by the supplied dimensions."""
 
         return self.right <= width and self.bottom <= height
+
+
+ChartRegion: TypeAlias = BoundingBox
+
+
+@dataclass(frozen=True, slots=True)
+class DebugOverlay:
+    """A PNG debug overlay for deterministic detector diagnostics."""
+
+    data: bytes
+    width: int
+    height: int
+    pixel_format: str = "PNG"
+
+    def __post_init__(self) -> None:
+        if not self.data:
+            raise ValueError("debug overlay data is required")
+        if self.width <= 0 or self.height <= 0:
+            raise ValueError("debug overlay dimensions must be positive")
+        if self.pixel_format != "PNG":
+            raise ValueError("debug overlay pixel format must be PNG")
+
+    def save_png(self, path: str) -> None:
+        """Save the overlay to a PNG file."""
+
+        with open(path, "wb") as png_file:
+            png_file.write(self.data)
+
+
+@dataclass(frozen=True, slots=True)
+class DetectionResult:
+    """Standard detector output containing a region, confidence, and rationale."""
+
+    region: ChartRegion | None
+    confidence: float
+    reason: str
+    detector_name: DetectorName
+    debug_overlay: DebugOverlay | None = None
+
+    def __post_init__(self) -> None:
+        if not 0.0 <= self.confidence <= 1.0:
+            raise ValueError("detection confidence must be between 0.0 and 1.0")
+        if not self.reason.strip():
+            raise ValueError("detection reason is required")
+        if not self.detector_name.strip():
+            raise ValueError("detector name is required")
+        if self.region is None and self.confidence != 0.0:
+            raise ValueError("missing detections must have zero confidence")
+
+
+@runtime_checkable
+class Detector(Protocol):
+    """Common interface for deterministic processed-frame detectors."""
+
+    def detect(self, frame: "ProcessedFrame") -> DetectionResult:
+        """Return the detector result for a processed frame."""
 
 
 @dataclass(frozen=True, slots=True)
@@ -296,8 +355,7 @@ class DeterministicImagePreprocessor:
             "BINARY",
         )
         roi_frames = {
-            roi.name: _roi_frame(morphology, roi)
-            for roi in active_config.roi_regions
+            roi.name: _roi_frame(morphology, roi) for roi in active_config.roi_regions
         }
         pyramid = tuple(
             _pyramid_level(morphology, scale) for scale in active_config.pyramid_scales
@@ -449,3 +507,265 @@ class WorkspaceDetector(Protocol):
 
     def detect_workspaces(self, frame: ImageFrame) -> Sequence[WorkspaceDetection]:
         """Return workspace detections for the supplied frame."""
+
+
+@dataclass(frozen=True, slots=True)
+class ChartDetectorConfig:
+    """Tunable thresholds for deterministic main-chart detection."""
+
+    min_width_ratio: float = 0.25
+    min_height_ratio: float = 0.25
+    min_area_ratio: float = 0.12
+    min_edge_density: float = 0.015
+    min_active_projection_count: int = 4
+    projection_threshold_ratio: float = 0.035
+    debug_overlay: bool = False
+
+    def __post_init__(self) -> None:
+        for name in (
+            "min_width_ratio",
+            "min_height_ratio",
+            "min_area_ratio",
+            "min_edge_density",
+            "projection_threshold_ratio",
+        ):
+            value = getattr(self, name)
+            if not 0.0 < value < 1.0:
+                raise ValueError(f"{name} must be between 0.0 and 1.0")
+        if self.min_active_projection_count <= 0:
+            raise ValueError("min_active_projection_count must be positive")
+
+
+class ChartDetector:
+    """Locate the main trading chart with deterministic projection/edge analysis."""
+
+    name = "chart-detector"
+
+    def __init__(self, config: ChartDetectorConfig | None = None) -> None:
+        self._config = config or ChartDetectorConfig()
+
+    def detect(self, frame: ProcessedFrame) -> DetectionResult:
+        width = frame.source_frame.width
+        height = frame.source_frame.height
+        luminance = _luminance(frame.source_frame)
+        edges = _edge_map(luminance, width, height)
+        candidate = _projection_candidate(edges, width, height, self._config)
+        if candidate is None:
+            return DetectionResult(
+                region=None,
+                confidence=0.0,
+                reason="no sustained chart-like edge projections found",
+                detector_name=self.name,
+                debug_overlay=(
+                    _debug_overlay(width, height, None, 0.0, "no chart")
+                    if self._config.debug_overlay
+                    else None
+                ),
+            )
+
+        edge_count = _count_edges(edges, width, candidate)
+        area = candidate.width * candidate.height
+        density = edge_count / area
+        area_ratio = area / (width * height)
+        size_score = min(
+            candidate.width / (width * self._config.min_width_ratio),
+            candidate.height / (height * self._config.min_height_ratio),
+            area_ratio / self._config.min_area_ratio,
+            1.0,
+        )
+        density_score = min(density / (self._config.min_edge_density * 2.0), 1.0)
+        confidence = round(
+            max(0.0, min((size_score * 0.55) + (density_score * 0.45), 1.0)), 3
+        )
+        if density < self._config.min_edge_density or confidence < 0.35:
+            return DetectionResult(
+                region=None,
+                confidence=0.0,
+                reason="candidate rejected by minimum edge density",
+                detector_name=self.name,
+                debug_overlay=(
+                    _debug_overlay(width, height, candidate, confidence, "rejected")
+                    if self._config.debug_overlay
+                    else None
+                ),
+            )
+        reason = (
+            "selected largest sustained horizontal/vertical edge projection "
+            f"with edge_density={density:.3f} area_ratio={area_ratio:.3f}"
+        )
+        return DetectionResult(
+            region=candidate,
+            confidence=confidence,
+            reason=reason,
+            detector_name=self.name,
+            debug_overlay=(
+                _debug_overlay(width, height, candidate, confidence, "chart")
+                if self._config.debug_overlay
+                else None
+            ),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class WorkspaceLayout:
+    """Frame layout assembled from detector results."""
+
+    frame_id: FrameId
+    chart_region: ChartRegion | None
+    chart_confidence: float
+    detection_reason: str
+
+
+class LayoutBuilder:
+    """Build workspace layouts from detector results without detecting directly."""
+
+    def build(
+        self, frame: ProcessedFrame, chart_result: DetectionResult
+    ) -> WorkspaceLayout:
+        return WorkspaceLayout(
+            frame_id=frame.source_frame.frame_id,
+            chart_region=chart_result.region,
+            chart_confidence=chart_result.confidence,
+            detection_reason=chart_result.reason,
+        )
+
+
+def _luminance(frame: ImageFrame) -> list[int]:
+    expected_gray = frame.width * frame.height
+    if (
+        frame.pixel_format.upper() in {"GRAY", "BINARY"}
+        and len(frame.data) >= expected_gray
+    ):
+        return list(frame.data[:expected_gray])
+    expected_rgb = expected_gray * 3
+    if frame.pixel_format.upper() == "RGB" and len(frame.data) >= expected_rgb:
+        values: list[int] = []
+        for offset in range(0, expected_rgb, 3):
+            red, green, blue = frame.data[offset : offset + 3]
+            values.append((299 * red + 587 * green + 114 * blue) // 1000)
+        return values
+    # Contract-test fallback: preserve deterministic behavior for non-pixel fixtures.
+    return [0 for _ in range(expected_gray)]
+
+
+def _edge_map(luminance: Sequence[int], width: int, height: int) -> list[bool]:
+    edges = [False] * (width * height)
+    for y in range(1, height - 1):
+        row = y * width
+        for x in range(1, width - 1):
+            idx = row + x
+            gradient = abs(luminance[idx] - luminance[idx - 1]) + abs(
+                luminance[idx] - luminance[idx - width]
+            )
+            edges[idx] = gradient >= 45
+    return edges
+
+
+def _projection_candidate(
+    edges: Sequence[bool],
+    width: int,
+    height: int,
+    config: ChartDetectorConfig,
+) -> BoundingBox | None:
+    col_counts = [0] * width
+    row_counts = [0] * height
+    for y in range(height):
+        for x in range(width):
+            if edges[y * width + x]:
+                col_counts[x] += 1
+                row_counts[y] += 1
+    min_col = max(2, round(height * config.projection_threshold_ratio))
+    min_row = max(2, round(width * config.projection_threshold_ratio))
+    active_cols = [idx for idx, count in enumerate(col_counts) if count >= min_col]
+    active_rows = [idx for idx, count in enumerate(row_counts) if count >= min_row]
+    if (
+        len(active_cols) < config.min_active_projection_count
+        or len(active_rows) < config.min_active_projection_count
+    ):
+        return None
+    box = BoundingBox(
+        x=min(active_cols),
+        y=min(active_rows),
+        width=max(active_cols) - min(active_cols) + 1,
+        height=max(active_rows) - min(active_rows) + 1,
+    )
+    if box.width < round(width * config.min_width_ratio):
+        return None
+    if box.height < round(height * config.min_height_ratio):
+        return None
+    if (box.width * box.height) / (width * height) < config.min_area_ratio:
+        return None
+    return box
+
+
+def _count_edges(edges: Sequence[bool], width: int, box: BoundingBox) -> int:
+    total = 0
+    for y in range(box.y, box.bottom):
+        total += sum(
+            1 for value in edges[y * width + box.x : y * width + box.right] if value
+        )
+    return total
+
+
+def _debug_overlay(
+    width: int,
+    height: int,
+    box: BoundingBox | None,
+    confidence: float,
+    label: str,
+) -> DebugOverlay:
+    pixels = bytearray([24, 28, 34] * width * height)
+    if box is not None:
+        color = (0, 255, 96) if label == "chart" else (255, 128, 0)
+        _draw_rect(pixels, width, height, box, color)
+    _draw_label_bars(pixels, width, height, confidence)
+    return DebugOverlay(
+        data=_png_rgb(width, height, bytes(pixels)), width=width, height=height
+    )
+
+
+def _draw_rect(
+    pixels: bytearray,
+    width: int,
+    height: int,
+    box: BoundingBox,
+    color: tuple[int, int, int],
+) -> None:
+    for x in range(box.x, min(box.right, width)):
+        for y in (box.y, min(box.bottom - 1, height - 1)):
+            offset = (y * width + x) * 3
+            pixels[offset : offset + 3] = bytes(color)
+    for y in range(box.y, min(box.bottom, height)):
+        for x in (box.x, min(box.right - 1, width - 1)):
+            offset = (y * width + x) * 3
+            pixels[offset : offset + 3] = bytes(color)
+
+
+def _draw_label_bars(
+    pixels: bytearray, width: int, height: int, confidence: float
+) -> None:
+    bar_width = min(width, max(1, round(width * confidence)))
+    for y in range(min(8, height)):
+        for x in range(bar_width):
+            offset = (y * width + x) * 3
+            pixels[offset : offset + 3] = b"\x00\xff\x60"
+
+
+def _png_rgb(width: int, height: int, rgb: bytes) -> bytes:
+    def chunk(kind: bytes, data: bytes) -> bytes:
+        return (
+            struct.pack(">I", len(data))
+            + kind
+            + data
+            + struct.pack(">I", zlib.crc32(kind + data) & 0xFFFFFFFF)
+        )
+
+    rows = b"".join(
+        b"\x00" + rgb[y * width * 3 : (y + 1) * width * 3] for y in range(height)
+    )
+    return (
+        b"\x89PNG\r\n\x1a\n"
+        + chunk(b"IHDR", struct.pack(">IIBBBBB", width, height, 8, 2, 0, 0, 0))
+        + chunk(b"IDAT", zlib.compress(rows))
+        + chunk(b"IEND", b"")
+    )
