@@ -382,6 +382,20 @@ def _validate_rois(frame: ImageFrame, rois: Sequence[RegionOfInterest]) -> None:
             raise ValueError("region of interest must fit within the source frame")
 
 
+def _validate_confidence(confidence: float, name: str) -> None:
+    if not 0.0 <= confidence <= 1.0:
+        raise ValueError(f"{name} must be between 0.0 and 1.0")
+
+
+def _contains(container: BoundingBox, candidate: BoundingBox) -> bool:
+    return (
+        candidate.x >= container.x
+        and candidate.y >= container.y
+        and candidate.right <= container.right
+        and candidate.bottom <= container.bottom
+    )
+
+
 @dataclass(frozen=True, slots=True)
 class SceneNode:
     """A visual element placeholder in the scene graph skeleton."""
@@ -437,10 +451,161 @@ class WorkspaceDetection:
             raise ValueError("workspace id is required")
         if not self.frame_id.strip():
             raise ValueError("frame id is required")
-        if not 0.0 <= self.confidence <= 1.0:
-            raise ValueError("workspace confidence must be between 0.0 and 1.0")
+        _validate_confidence(self.confidence, "workspace confidence")
         if not self.label.strip():
             raise ValueError("workspace label is required")
+
+
+@dataclass(frozen=True, slots=True)
+class PriceAxis:
+    """Detected vertical price scale for a chart workspace."""
+
+    bounds: BoundingBox
+    confidence: float
+    label: str = "price_axis"
+
+    def __post_init__(self) -> None:
+        _validate_confidence(self.confidence, "price axis confidence")
+        if not self.label.strip():
+            raise ValueError("price axis label is required")
+
+
+@dataclass(frozen=True, slots=True)
+class TimeAxis:
+    """Detected horizontal time scale for a chart workspace."""
+
+    bounds: BoundingBox
+    confidence: float
+    label: str = "time_axis"
+
+    def __post_init__(self) -> None:
+        _validate_confidence(self.confidence, "time axis confidence")
+        if not self.label.strip():
+            raise ValueError("time axis label is required")
+
+
+@dataclass(frozen=True, slots=True)
+class ChartRegion:
+    """Detected main chart region within a workspace layout."""
+
+    bounds: BoundingBox
+    confidence: float
+    label: str = "main_chart"
+
+    def __post_init__(self) -> None:
+        _validate_confidence(self.confidence, "chart region confidence")
+        if not self.label.strip():
+            raise ValueError("chart region label is required")
+
+
+@dataclass(frozen=True, slots=True)
+class BottomPanel:
+    """Detected bottom panel such as indicators, volume, or logs."""
+
+    bounds: BoundingBox
+    confidence: float
+    label: str = "bottom_panel"
+
+    def __post_init__(self) -> None:
+        _validate_confidence(self.confidence, "bottom panel confidence")
+        if not self.label.strip():
+            raise ValueError("bottom panel label is required")
+
+
+@dataclass(frozen=True, slots=True)
+class Toolbar:
+    """Detected toolbar attached to a workspace edge."""
+
+    bounds: BoundingBox
+    confidence: float
+    position: str
+    label: str = "toolbar"
+
+    def __post_init__(self) -> None:
+        _validate_confidence(self.confidence, "toolbar confidence")
+        if self.position not in {"left", "right"}:
+            raise ValueError("toolbar position must be left or right")
+        if not self.label.strip():
+            raise ValueError("toolbar label is required")
+
+
+@dataclass(frozen=True, slots=True)
+class StatusBar:
+    """Detected workspace status bar."""
+
+    bounds: BoundingBox
+    confidence: float
+    label: str = "status_bar"
+
+    def __post_init__(self) -> None:
+        _validate_confidence(self.confidence, "status bar confidence")
+        if not self.label.strip():
+            raise ValueError("status bar label is required")
+
+
+@dataclass(frozen=True, slots=True)
+class Viewport:
+    """Detected visible content viewport for the workspace."""
+
+    bounds: BoundingBox
+    confidence: float
+    label: str = "viewport"
+
+    def __post_init__(self) -> None:
+        _validate_confidence(self.confidence, "viewport confidence")
+        if not self.label.strip():
+            raise ValueError("viewport label is required")
+
+
+@dataclass(frozen=True, slots=True)
+class WorkspaceLayout:
+    """Detected Milestone 4 workspace structure for a frame."""
+
+    workspace_id: WorkspaceId
+    frame_id: FrameId
+    bounds: BoundingBox
+    chart_region: ChartRegion
+    price_axis: PriceAxis
+    time_axis: TimeAxis
+    viewport: Viewport
+    bottom_panels: tuple[BottomPanel, ...] = ()
+    toolbars: tuple[Toolbar, ...] = ()
+    status_bar: StatusBar | None = None
+    confidence: float = 1.0
+    label: str = "workspace_layout"
+
+    def __post_init__(self) -> None:
+        if not self.workspace_id.strip():
+            raise ValueError("workspace id is required")
+        if not self.frame_id.strip():
+            raise ValueError("frame id is required")
+        _validate_confidence(self.confidence, "workspace layout confidence")
+        if not self.label.strip():
+            raise ValueError("workspace layout label is required")
+        components = [
+            ("chart region", self.chart_region.bounds),
+            ("price axis", self.price_axis.bounds),
+            ("time axis", self.time_axis.bounds),
+            ("viewport", self.viewport.bounds),
+        ]
+        components.extend(
+            ("bottom panel", panel.bounds) for panel in self.bottom_panels
+        )
+        components.extend(("toolbar", toolbar.bounds) for toolbar in self.toolbars)
+        if self.status_bar is not None:
+            components.append(("status bar", self.status_bar.bounds))
+
+        for component_name, component_bounds in components:
+            if not _contains(self.bounds, component_bounds):
+                raise ValueError(f"{component_name} must fit within workspace layout")
+
+
+@runtime_checkable
+class WorkspaceLayoutDetector(Protocol):
+    """Interface for components that detect chart workspace layout regions."""
+
+    def detect_workspace_layouts(self, frame: ImageFrame) -> Sequence[WorkspaceLayout]:
+        """Return workspace layout detections for the supplied frame."""
 
 
 @runtime_checkable

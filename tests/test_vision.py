@@ -3,16 +3,24 @@ from datetime import datetime, timezone
 import pytest
 
 from orderflowgpt_genesis import (
+    BottomPanel,
     BoundingBox,
+    ChartRegion,
     DeterministicImagePreprocessor,
     ImageCache,
     ImageFrame,
     InMemoryFrameReplay,
     PreprocessingConfig,
+    PriceAxis,
     RegionOfInterest,
     SceneGraph,
     SceneNode,
+    StatusBar,
+    TimeAxis,
+    Toolbar,
+    Viewport,
     WorkspaceDetection,
+    WorkspaceLayout,
 )
 
 
@@ -178,3 +186,96 @@ def test_preprocessor_rejects_roi_outside_source_frame():
 
     with pytest.raises(ValueError, match="region of interest"):
         DeterministicImagePreprocessor().preprocess(source, config)
+
+
+def test_workspace_layout_models_milestone_4_detection_regions():
+    layout = WorkspaceLayout(
+        workspace_id="main",
+        frame_id="frame-4",
+        bounds=BoundingBox(x=0, y=0, width=1200, height=800),
+        chart_region=ChartRegion(
+            bounds=BoundingBox(x=80, y=40, width=960, height=560),
+            confidence=0.94,
+        ),
+        price_axis=PriceAxis(
+            bounds=BoundingBox(x=1040, y=40, width=80, height=560),
+            confidence=0.91,
+        ),
+        time_axis=TimeAxis(
+            bounds=BoundingBox(x=80, y=600, width=960, height=50),
+            confidence=0.9,
+        ),
+        viewport=Viewport(
+            bounds=BoundingBox(x=80, y=40, width=1040, height=610),
+            confidence=0.93,
+        ),
+        bottom_panels=(
+            BottomPanel(
+                bounds=BoundingBox(x=80, y=650, width=1040, height=100),
+                confidence=0.88,
+            ),
+        ),
+        toolbars=(
+            Toolbar(
+                bounds=BoundingBox(x=0, y=40, width=80, height=710),
+                confidence=0.86,
+                position="left",
+            ),
+            Toolbar(
+                bounds=BoundingBox(x=1120, y=40, width=80, height=710),
+                confidence=0.87,
+                position="right",
+            ),
+        ),
+        status_bar=StatusBar(
+            bounds=BoundingBox(x=0, y=750, width=1200, height=50),
+            confidence=0.84,
+        ),
+        confidence=0.89,
+    )
+
+    assert layout.chart_region.label == "main_chart"
+    assert layout.price_axis.label == "price_axis"
+    assert layout.time_axis.label == "time_axis"
+    assert layout.bottom_panels[0].label == "bottom_panel"
+    assert [toolbar.position for toolbar in layout.toolbars] == ["left", "right"]
+    assert layout.status_bar is not None
+    assert layout.viewport.label == "viewport"
+
+
+def test_workspace_layout_validates_confidence_and_containment():
+    with pytest.raises(ValueError, match="toolbar position"):
+        Toolbar(
+            bounds=BoundingBox(x=0, y=0, width=10, height=10),
+            confidence=0.5,
+            position="top",
+        )
+
+    with pytest.raises(ValueError, match="price axis confidence"):
+        PriceAxis(
+            bounds=BoundingBox(x=0, y=0, width=10, height=10),
+            confidence=1.5,
+        )
+
+    with pytest.raises(ValueError, match="price axis must fit"):
+        WorkspaceLayout(
+            workspace_id="main",
+            frame_id="frame-4",
+            bounds=BoundingBox(x=0, y=0, width=100, height=100),
+            chart_region=ChartRegion(
+                bounds=BoundingBox(x=0, y=0, width=80, height=80),
+                confidence=0.9,
+            ),
+            price_axis=PriceAxis(
+                bounds=BoundingBox(x=90, y=0, width=20, height=80),
+                confidence=0.9,
+            ),
+            time_axis=TimeAxis(
+                bounds=BoundingBox(x=0, y=80, width=80, height=20),
+                confidence=0.9,
+            ),
+            viewport=Viewport(
+                bounds=BoundingBox(x=0, y=0, width=100, height=100),
+                confidence=0.9,
+            ),
+        )
