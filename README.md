@@ -1,6 +1,6 @@
 # OrderFlowGPT Genesis
 
-OrderFlowGPT Genesis is the architecture foundation for deterministic order-flow analysis and vision-driven workspace understanding. The package defines stable domain primitives, validation rules, an in-memory analysis pipeline, and the Milestone 2 Vision Foundation that future adapters can extend without changing the foundational contracts.
+OrderFlowGPT Genesis is the architecture foundation for deterministic order-flow analysis and vision-driven workspace understanding. The package defines stable domain primitives, validation rules, an in-memory analysis pipeline, and the Milestone 2 Vision Foundation and Milestone 4 Workspace Detection contracts that future adapters can extend without changing the foundational contracts.
 
 ## Current scope
 
@@ -11,6 +11,7 @@ The repository currently delivers:
 - A deterministic analyzer that computes spread, mid-price, imbalance, trade bias, and confidence.
 - Vision Foundation abstractions for image frames, capture/replay interfaces, bounded image caching, scene graph skeletons, and workspace detection contracts.
 - Image Preprocessing contracts for grayscale, HSV, Gaussian blur, adaptive threshold, Canny edges, morphology, ROI extraction, image pyramids, and zoom normalization.
+- Workspace Detection contracts for the main chart, price axis, time axis, bottom panels, right and left toolbars, status bar, viewport, and aggregate workspace layouts.
 - Project documentation, release notes, changelog entries, and automated tests.
 
 ## Quick start
@@ -81,4 +82,4 @@ The architecture is intentionally small and explicit. Domain models are immutabl
 
 ## Support status
 
-This repository is at Milestone 3. It is suitable for deterministic local analysis, test fixtures, in-memory vision foundation workflows, and side-effect-free preprocessing pipeline composition. It does not connect to brokers, exchanges, live data feeds, screen capture services, storage systems, native computer-vision runtimes, or language-model providers.
+This repository is at Milestone 4. It is suitable for deterministic local analysis, test fixtures, in-memory vision foundation workflows, and side-effect-free preprocessing pipeline composition. It does not connect to brokers, exchanges, live data feeds, screen capture services, storage systems, native computer-vision runtimes, or language-model providers.
