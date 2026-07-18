@@ -1,6 +1,6 @@
 # OrderFlowGPT Genesis
 
-OrderFlowGPT Genesis is the architecture foundation for deterministic order-flow analysis and vision-driven workspace understanding. The package defines stable domain primitives, validation rules, an in-memory analysis pipeline, and the Milestone 5 deterministic chart detection framework that future adapters can extend without changing the foundational contracts.
+OrderFlowGPT Genesis is the architecture foundation for deterministic order-flow analysis and vision-driven workspace understanding. The package defines stable domain primitives, validation rules, an in-memory analysis pipeline, the Vision Foundation, Workspace Detection contracts, and the Milestone 5 deterministic chart detection framework that future detectors and AI components can extend without changing the foundational architecture.
 
 ## Current scope
 
