@@ -80,8 +80,14 @@ assert processed.roi_frames["chart"].width == 1280
 ## Chart detection example
 
 ```python
-from orderflowgpt_genesis import ChartDetector, DeterministicImagePreprocessor, ImageFrame, LayoutBuilder
+from orderflowgpt_genesis import (
+    ChartDetector,
+    DeterministicImagePreprocessor,
+    ImageFrame,
+    LayoutBuilder,
+)
 
+gray_pixels = bytes([32] * (1280 * 720))
 frame = ImageFrame(data=gray_pixels, width=1280, height=720, pixel_format="GRAY")
 processed = DeterministicImagePreprocessor().preprocess(frame)
 result = ChartDetector().detect(processed)

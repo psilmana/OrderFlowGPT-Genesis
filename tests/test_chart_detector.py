@@ -91,6 +91,38 @@ def test_chart_detector_rejects_blank_false_positive():
     assert result.confidence == 0.0
 
 
+def test_chart_detector_prefers_main_chart_over_smaller_distractors():
+    frame = make_chart_frame(900, 600, BoundingBox(120, 80, 560, 360))
+    pixels = bytearray(frame.data)
+    for distractor in (
+        BoundingBox(710, 90, 110, 130),
+        BoundingBox(140, 500, 360, 45),
+    ):
+        for y in range(distractor.y, distractor.bottom):
+            for x in range(distractor.x, distractor.right):
+                pixels[y * frame.width + x] = 40
+        for x in range(distractor.x, distractor.right, 12):
+            for y in range(distractor.y, distractor.bottom):
+                pixels[y * frame.width + x] = 200
+        for y in range(distractor.y, distractor.bottom, 12):
+            for x in range(distractor.x, distractor.right):
+                pixels[y * frame.width + x] = 200
+    distracted = ImageFrame(
+        data=bytes(pixels),
+        width=frame.width,
+        height=frame.height,
+        pixel_format=frame.pixel_format,
+        captured_at=frame.captured_at,
+        source="synthetic-atas-with-distractors",
+        frame_id="distractor-test",
+    )
+
+    result = ChartDetector().detect(process(distracted))
+
+    assert result.region is not None
+    assert_close(result.region, BoundingBox(120, 80, 560, 360))
+
+
 def test_chart_detector_rejects_tiny_boundary_candidate():
     frame = make_chart_frame(240, 180, BoundingBox(10, 10, 38, 30))
 

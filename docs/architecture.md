@@ -89,7 +89,7 @@ WorkspaceLayout
 
 - `Detector` defines the common `detect(frame: ProcessedFrame) -> DetectionResult` interface for future detectors.
 - `DetectionResult` wraps every detector output with an optional detected region, confidence, reason, detector name, and optional PNG debug overlay. Raw rectangles are not returned directly.
-- `ChartDetector` is a deterministic production detector for the main trading chart. It converts source pixels to luminance, computes an edge map, performs horizontal and vertical histogram projection analysis, validates the candidate by size and area, scores edge density, and returns a confidence-rated result.
+- `ChartDetector` is a deterministic production detector for the main trading chart. It converts source pixels to luminance, computes an edge map, combines connected-component analysis with horizontal and vertical histogram projection analysis, validates candidates by size and area, scores edge density, and returns a confidence-rated result.
 - `DebugOverlay` stores PNG bytes and can save overlays to disk. The overlay draws the detected rectangle and confidence bar for local diagnostics.
 - `LayoutBuilder` consumes a chart `DetectionResult` and builds a `WorkspaceLayout`; the layout object does not run detection itself.
 
