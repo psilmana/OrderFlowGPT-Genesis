@@ -772,27 +772,55 @@ class ChartDetector:
         )
 
 
-@dataclass(frozen=True, slots=True)
-class WorkspaceLayout:
-    """Frame layout assembled from detector results."""
 
-    frame_id: FrameId
-    chart_region: ChartRegion | None
-    chart_confidence: float
-    detection_reason: str
 
 
 class LayoutBuilder:
-    """Build workspace layouts from detector results without detecting directly."""
+    """Build workspace layouts from detector results."""
 
     def build(
-        self, frame: ProcessedFrame, chart_result: DetectionResult
+        self,
+        frame: ProcessedFrame,
+        chart_result: DetectionResult,
     ) -> WorkspaceLayout:
+
+        chart = ChartRegion(
+            bounds=chart_result.region,
+            confidence=chart_result.confidence,
+        )
+
+        viewport = Viewport(
+            bounds=chart_result.region,
+            confidence=chart_result.confidence,
+        )
+
+        empty_axis = BoundingBox(
+            x=0,
+            y=0,
+            width=1,
+            height=1,
+        )
+
         return WorkspaceLayout(
+            workspace_id="main",
             frame_id=frame.source_frame.frame_id,
-            chart_region=chart_result.region,
-            chart_confidence=chart_result.confidence,
-            detection_reason=chart_result.reason,
+            bounds=BoundingBox(
+                x=0,
+                y=0,
+                width=frame.source_frame.width,
+                height=frame.source_frame.height,
+            ),
+            chart_region=chart,
+            price_axis=PriceAxis(
+                bounds=empty_axis,
+                confidence=0.0,
+            ),
+            time_axis=TimeAxis(
+                bounds=empty_axis,
+                confidence=0.0,
+            ),
+            viewport=viewport,
+            confidence=chart_result.confidence,
         )
 
 
