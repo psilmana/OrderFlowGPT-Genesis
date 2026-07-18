@@ -2,13 +2,13 @@
 
 ## Purpose
 
-OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 adds only the Vision Foundation needed to reason about captured screen frames and detected workspace structure.
+OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 adds image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`.
 
 ## Package boundaries
 
 - `orderflowgpt_genesis.models` owns immutable market domain objects and validation.
 - `orderflowgpt_genesis.analysis` owns stateless order-flow analysis behavior.
-- `orderflowgpt_genesis.vision` owns frame abstractions, vision-facing interfaces, in-memory frame replay, image caching, scene graph skeletons, and workspace detection contracts.
+- `orderflowgpt_genesis.vision` owns frame abstractions, vision-facing interfaces, in-memory frame replay, image caching, scene graph skeletons, workspace detection contracts, image preprocessing configuration, and processed frame outputs.
 - `orderflowgpt_genesis.__init__` exposes the supported public API.
 
 No current module performs network I/O, file I/O, broker access, exchange access, language-model calls, image capture side effects, persistence, or serialization.
@@ -49,6 +49,27 @@ Milestone 2 implements the approved Vision Foundation only:
 - `WorkspaceDetection` and `WorkspaceDetector` define the workspace detection result and detector interface.
 
 Milestone 2 deliberately excludes serialization, persistence, broker/exchange adapters, live screen-capture implementations, streaming infrastructure, and model-assisted interpretation.
+
+## Milestone 3: Image Preprocessing
+
+Milestone 3 implements a side-effect-free preprocessing pipeline shape:
+
+```text
+Image
+  ↓
+Preprocessing
+  ↓
+ProcessedFrame
+```
+
+- `PreprocessingConfig` validates Gaussian blur, adaptive threshold, Canny edge, morphology, image pyramid, zoom normalization, and ROI extraction parameters.
+- `RegionOfInterest` names a bounded frame region to extract after morphology.
+- `ImagePyramidLevel` represents one multi-scale image output with a scale, dimensions, and derived image bytes.
+- `ProcessedFrame` groups the source image, grayscale image, HSV image, Gaussian blur output, adaptive threshold output, Canny edge output, morphology output, ROI frames, image pyramid levels, and zoom-normalized image.
+- `ImagePreprocessor` defines the preprocessing interface for future native computer-vision adapters.
+- `DeterministicImagePreprocessor` provides a no-I/O in-memory implementation for deterministic tests, local pipelines, and adapter contract development.
+
+Milestone 3 deliberately excludes OpenCV bindings, GPU acceleration, model-assisted interpretation, persistence, serialization, live capture, and workspace-specific detector implementations.
 
 ## Extension rules for future milestones
 
