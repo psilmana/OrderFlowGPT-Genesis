@@ -549,7 +549,7 @@ class ChartDetector:
         height = frame.source_frame.height
         luminance = _luminance(frame.source_frame)
         edges = _edge_map(luminance, width, height)
-        candidate = _projection_candidate(edges, width, height, self._config)
+        candidate = _chart_candidate(edges, width, height, self._config)
         if candidate is None:
             return DetectionResult(
                 region=None,
@@ -590,7 +590,8 @@ class ChartDetector:
                 ),
             )
         reason = (
-            "selected largest sustained horizontal/vertical edge projection "
+            "selected strongest connected chart component with sustained "
+            "horizontal/vertical edge projections "
             f"with edge_density={density:.3f} area_ratio={area_ratio:.3f}"
         )
         return DetectionResult(
@@ -661,6 +662,19 @@ def _edge_map(luminance: Sequence[int], width: int, height: int) -> list[bool]:
     return edges
 
 
+def _chart_candidate(
+    edges: Sequence[bool],
+    width: int,
+    height: int,
+    config: ChartDetectorConfig,
+) -> BoundingBox | None:
+    projection_box = _projection_candidate(edges, width, height, config)
+    component_box = _component_candidate(edges, width, height, config)
+    if component_box is not None:
+        return component_box
+    return projection_box
+
+
 def _projection_candidate(
     edges: Sequence[bool],
     width: int,
@@ -689,13 +703,92 @@ def _projection_candidate(
         width=max(active_cols) - min(active_cols) + 1,
         height=max(active_rows) - min(active_rows) + 1,
     )
-    if box.width < round(width * config.min_width_ratio):
-        return None
-    if box.height < round(height * config.min_height_ratio):
-        return None
-    if (box.width * box.height) / (width * height) < config.min_area_ratio:
+    if not _passes_geometry(box, width, height, config):
         return None
     return box
+
+
+def _component_candidate(
+    edges: Sequence[bool],
+    width: int,
+    height: int,
+    config: ChartDetectorConfig,
+) -> BoundingBox | None:
+    visited = [False] * (width * height)
+    best_box: BoundingBox | None = None
+    best_score = 0
+    for idx, is_edge in enumerate(edges):
+        if not is_edge or visited[idx]:
+            continue
+        box, edge_count = _trace_component(edges, visited, width, height, idx)
+        if not _passes_geometry(box, width, height, config):
+            continue
+        score = edge_count * box.width * box.height
+        if score > best_score:
+            best_box = box
+            best_score = score
+    return best_box
+
+
+def _trace_component(
+    edges: Sequence[bool],
+    visited: list[bool],
+    width: int,
+    height: int,
+    start: int,
+) -> tuple[BoundingBox, int]:
+    stack = [start]
+    visited[start] = True
+    min_x = max_x = start % width
+    min_y = max_y = start // width
+    edge_count = 0
+    while stack:
+        idx = stack.pop()
+        edge_count += 1
+        x = idx % width
+        y = idx // width
+        min_x = min(min_x, x)
+        max_x = max(max_x, x)
+        min_y = min(min_y, y)
+        max_y = max(max_y, y)
+        for next_x, next_y in (
+            (x - 1, y),
+            (x + 1, y),
+            (x, y - 1),
+            (x, y + 1),
+            (x - 1, y - 1),
+            (x + 1, y - 1),
+            (x - 1, y + 1),
+            (x + 1, y + 1),
+        ):
+            if next_x < 0 or next_y < 0 or next_x >= width or next_y >= height:
+                continue
+            next_idx = next_y * width + next_x
+            if edges[next_idx] and not visited[next_idx]:
+                visited[next_idx] = True
+                stack.append(next_idx)
+    return (
+        BoundingBox(
+            x=min_x,
+            y=min_y,
+            width=max_x - min_x + 1,
+            height=max_y - min_y + 1,
+        ),
+        edge_count,
+    )
+
+
+def _passes_geometry(
+    box: BoundingBox,
+    width: int,
+    height: int,
+    config: ChartDetectorConfig,
+) -> bool:
+    if box.width < round(width * config.min_width_ratio):
+        return False
+    if box.height < round(height * config.min_height_ratio):
+        return False
+    return (box.width * box.height) / (width * height) >= config.min_area_ratio
 
 
 def _count_edges(edges: Sequence[bool], width: int, box: BoundingBox) -> int:
