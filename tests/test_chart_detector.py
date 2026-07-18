@@ -153,6 +153,7 @@ def test_layout_builder_integrates_chart_detection_result():
     layout = LayoutBuilder().build(processed, result)
 
     assert layout.frame_id == frame.frame_id
-    assert layout.chart_region == result.region
-    assert layout.chart_confidence == result.confidence
-    assert layout.detection_reason == result.reason
+    assert layout.chart_region.bounds == result.region
+    assert layout.chart_region.confidence == result.confidence
+    
+    

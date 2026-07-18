@@ -26,13 +26,15 @@ from .vision import (
     RegionOfInterest,
     SceneGraph,
     SceneNode,
+    StatusBar,
+    TimeAxis,
+    Toolbar,
+    Viewport,
     WorkspaceLayout,
     WorkspaceDetection,
     WorkspaceDetector,
-    WorkspaceLayout,
     WorkspaceLayoutDetector,
 )
-
 __all__ = [
     "AnalysisResult",
     "BottomPanel",
