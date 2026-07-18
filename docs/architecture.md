@@ -2,13 +2,13 @@
 
 ## Purpose
 
-OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 adds image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`.
+OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 adds image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`. Milestone 4 adds workspace detection contracts for chart-specific layout regions.
 
 ## Package boundaries
 
 - `orderflowgpt_genesis.models` owns immutable market domain objects and validation.
 - `orderflowgpt_genesis.analysis` owns stateless order-flow analysis behavior.
-- `orderflowgpt_genesis.vision` owns frame abstractions, vision-facing interfaces, in-memory frame replay, image caching, scene graph skeletons, workspace detection contracts, image preprocessing configuration, and processed frame outputs.
+- `orderflowgpt_genesis.vision` owns frame abstractions, vision-facing interfaces, in-memory frame replay, image caching, scene graph skeletons, workspace detection contracts, image preprocessing configuration, processed frame outputs, and workspace layout region contracts.
 - `orderflowgpt_genesis.__init__` exposes the supported public API.
 
 No current module performs network I/O, file I/O, broker access, exchange access, language-model calls, image capture side effects, persistence, or serialization.
@@ -70,6 +70,32 @@ ProcessedFrame
 - `DeterministicImagePreprocessor` provides a no-I/O in-memory implementation for deterministic tests, local pipelines, and adapter contract development.
 
 Milestone 3 deliberately excludes OpenCV bindings, GPU acceleration, model-assisted interpretation, persistence, serialization, live capture, and workspace-specific detector implementations.
+
+## Milestone 4: Workspace Detection
+
+Milestone 4 defines the approved workspace layout detection output only:
+
+```text
+Image or ProcessedFrame
+  ↓
+Workspace Detection
+  ↓
+WorkspaceLayout
+```
+
+Detectors are expected to identify these workspace elements when present:
+
+- Main chart, represented by `ChartRegion`.
+- Price axis, represented by `PriceAxis`.
+- Time axis, represented by `TimeAxis`.
+- Bottom panels, represented by one or more `BottomPanel` values.
+- Right and left toolbars, represented by `Toolbar` values with a constrained `position`.
+- Status bar, represented by `StatusBar`.
+- Visible viewport, represented by `Viewport`.
+
+`WorkspaceLayout` groups the frame id, workspace id, containing bounds, required chart/axis/viewport regions, optional bottom panels, optional toolbars, optional status bar, confidence, and label. `WorkspaceLayoutDetector` defines the interface for future concrete detectors.
+
+Milestone 4 deliberately excludes native computer-vision implementations, model-assisted interpretation, persistence, serialization, live capture, and platform-specific workspace adapters.
 
 ## Extension rules for future milestones
 
