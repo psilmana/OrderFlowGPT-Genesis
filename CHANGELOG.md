@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added Milestone 4 Workspace Detection contracts for workspace layouts, chart regions, price axes, time axes, bottom panels, toolbars, status bars, viewports, and future layout detector adapters.
+
 ### Added
 
 - Added the Milestone 2 Vision Foundation with image frame abstractions, capture and replay interfaces, an in-memory replay implementation, a bounded image cache, scene graph skeletons, and workspace detection contracts.

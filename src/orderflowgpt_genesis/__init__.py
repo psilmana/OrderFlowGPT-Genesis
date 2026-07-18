@@ -3,6 +3,7 @@
 from .analysis import OrderFlowAnalyzer
 from .models import AnalysisResult, MarketSnapshot, OrderBookLevel, Trade
 from .vision import (
+    BottomPanel,
     BoundingBox,
     ChartDetector,
     ChartDetectorConfig,
@@ -21,16 +22,20 @@ from .vision import (
     LayoutBuilder,
     PreprocessingConfig,
     ProcessedFrame,
+    PriceAxis,
     RegionOfInterest,
     SceneGraph,
     SceneNode,
     WorkspaceLayout,
     WorkspaceDetection,
     WorkspaceDetector,
+    WorkspaceLayout,
+    WorkspaceLayoutDetector,
 )
 
 __all__ = [
     "AnalysisResult",
+    "BottomPanel",
     "BoundingBox",
     "ChartDetector",
     "ChartDetectorConfig",
@@ -51,11 +56,16 @@ __all__ = [
     "OrderBookLevel",
     "OrderFlowAnalyzer",
     "PreprocessingConfig",
+    "PriceAxis",
     "ProcessedFrame",
     "RegionOfInterest",
     "SceneGraph",
     "SceneNode",
+    "StatusBar",
+    "TimeAxis",
+    "Toolbar",
     "Trade",
+    "Viewport",
     "WorkspaceDetection",
     "WorkspaceDetector",
     "WorkspaceLayout",
