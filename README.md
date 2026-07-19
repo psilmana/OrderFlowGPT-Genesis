@@ -1,6 +1,6 @@
 # OrderFlowGPT Genesis
 
-OrderFlowGPT Genesis is the architecture foundation for deterministic order-flow analysis and vision-driven workspace understanding. The package defines stable domain primitives, validation rules, an in-memory analysis pipeline, the Vision Foundation, Workspace Detection contracts, and the Milestone 5 deterministic chart detection framework that future detectors and AI components can extend without changing the foundational architecture.
+OrderFlowGPT Genesis is the architecture foundation for deterministic order-flow analysis and vision-driven workspace understanding. The package defines stable domain primitives, validation rules, an in-memory analysis pipeline, the Vision Foundation, Workspace Detection contracts, and the Milestone 5 deterministic chart detection framework, and the Milestone 6 Vision Object Detection Foundation that future detectors and AI components can extend without changing the foundational architecture.
 
 ## Current scope
 
@@ -13,6 +13,8 @@ The repository currently delivers:
 - Image Preprocessing contracts for grayscale, HSV, Gaussian blur, adaptive threshold, Canny edges, morphology, ROI extraction, image pyramids, and zoom normalization.
 - A production `ChartDetector` that locates the main trading chart from a `ProcessedFrame` using deterministic luminance edge maps, histogram projections, geometric validation, confidence scoring, and optional PNG debug overlays.
 - `DetectionResult`, `Detector`, `LayoutBuilder`, and `WorkspaceLayout` contracts so layout assembly consumes detector outputs instead of performing detection directly.
+- Immutable Milestone 6 object-detection contracts: `DetectedObject`, `ObjectId`, `ObjectType`, `DetectionConfidence`, `DetectionSource`, `DetectionGraph`, `DetectionContext`, `DetectorRegistry`, `ObjectDetector`, `ObjectDetectionPipeline`, and `SequentialObjectDetectionPipeline`.
+- Placeholder object detectors for price axes, time axes, footprints, volume profiles, big trades, and absorption. They deliberately return empty `DetectionResult[DetectedObject]` instances and perform no computer vision, OCR, ML, AI, capture, networking, threading, or side effects.
 - Project documentation, release notes, changelog entries, and automated tests.
 
 ## Quick start
@@ -97,10 +99,25 @@ if layout.chart_region is not None:
     print(layout.chart_region, layout.chart_confidence)
 ```
 
+## Object detection foundation example
+
+```python
+from orderflowgpt_genesis import (
+    DetectorRegistry,
+    PriceAxisDetector,
+    SequentialObjectDetectionPipeline,
+)
+
+registry = DetectorRegistry().add(PriceAxisDetector())
+pipeline = SequentialObjectDetectionPipeline(registry)
+# pipeline.run(context) returns a validated DetectionGraph.
+# Milestone 6 placeholder detectors intentionally return no objects.
+```
+
 ## Architecture
 
 The architecture is intentionally small and explicit. Domain models are immutable dataclasses, services are stateless, and validation is performed at construction time. See [docs/architecture.md](docs/architecture.md) for the complete roadmap.
 
 ## Support status
 
-This repository is at Milestone 5. It is suitable for deterministic local analysis, test fixtures, in-memory vision foundation workflows, and side-effect-free preprocessing pipeline composition, and deterministic chart-region detection. It does not connect to brokers, exchanges, live data feeds, screen capture services, storage systems, native computer-vision runtimes, or language-model providers.
+This repository is at Milestone 6. It is suitable for deterministic local analysis, test fixtures, in-memory vision foundation workflows, and side-effect-free preprocessing pipeline composition, deterministic chart-region detection, and contract-only object-detection pipeline composition. It does not connect to brokers, exchanges, live data feeds, screen capture services, storage systems, native computer-vision runtimes, or language-model providers.
