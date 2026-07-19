@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.6 - Milestone 11
+
+- Added immutable footprint cell coordinate system value objects and deterministic mapping from detected cell geometry to logical rows, columns, ids, and grid ids.
+- Added coordinate lookup helpers and optional `DetectionGraph` coordinate-system exposure after footprint-cell detection.
+- Documented that Milestone 11 performs no OCR and that Milestone 12 introduces Cell Classification.
+
 ## Unreleased
 
 - Added Milestone 10 Footprint Cell Grid detection with immutable configuration, deterministic grid-line segmentation, cell metadata, validation, graph integration, debug overlays for grid plus cells, and documentation clarifying that OCR, bid/ask, volume, and delta are out of scope until later milestones. Milestone 11 introduces the Cell Coordinate System.
