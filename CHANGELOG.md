@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Added Milestone 10 Footprint Cell Grid detection with immutable configuration, deterministic grid-line segmentation, cell metadata, validation, graph integration, debug overlays for grid plus cells, and documentation clarifying that OCR, bid/ask, volume, and delta are out of scope until later milestones. Milestone 11 introduces the Cell Coordinate System.
 - Added Milestone 9 Footprint Grid detection with immutable configuration, deterministic projection/edge/grid-regularity scoring, workspace/chart/axis rejection, graph integration, debug overlays, and documentation clarifying that individual footprint cells are deferred to Milestone 10.
 - Added Milestone 8 Time Axis detection with immutable configuration, deterministic horizontal geometry/edge/projection scoring, chart-alignment validation, object graph integration, debug overlays, and documentation clarifying that timestamp OCR is intentionally deferred. Milestone 9 begins Footprint Grid Detection.
 - Added Milestone 7 Price Axis detection with immutable configuration, deterministic geometry/edge/projection scoring, object graph integration, debug overlays, and documentation clarifying that OCR is intentionally deferred until after region detection.
