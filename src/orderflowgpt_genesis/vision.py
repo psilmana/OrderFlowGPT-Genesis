@@ -347,6 +347,7 @@ class DetectionGraph:
     objects: tuple[DetectedObject, ...] = ()
     grid_coordinate_system: GridCoordinateSystem | None = None
     cell_classifications: tuple["CellClassification", ...] = ()
+    ocr_results: tuple["OCRResult", ...] = ()
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -386,12 +387,39 @@ class DetectionGraph:
         for classification in self.cell_classifications:
             if classification.cell_reference.frame_id != self.frame_id:
                 raise ValueError("cell classification frame id must match graph")
+        result_keys = {
+            (result.cell_id, result.semantic_role) for result in self.ocr_results
+        }
+        if len(result_keys) != len(self.ocr_results):
+            raise ValueError("ocr results must reference unique cell regions")
+        if any(result.frame_id != self.frame_id for result in self.ocr_results):
+            raise ValueError("ocr result frame id must match graph")
+        if result_keys and not result_keys.issubset(
+            {
+                (classification.cell_id, region.semantic_role)
+                for classification in self.cell_classifications
+                for region in classification.semantic_regions
+            }
+        ):
+            raise ValueError("ocr results must reference classified cell regions")
 
     @property
     def CellClassifications(self) -> tuple["CellClassification", ...]:
         """Compatibility-style alias exposing classified footprint cells."""
 
         return self.cell_classifications
+
+    def region_text(self, role: "CellSemanticRole") -> tuple[str, ...]:
+        """Return raw OCR text for all results matching a semantic role."""
+
+        return tuple(
+            result.text() for result in self.ocr_results if result.semantic_role == role
+        )
+
+    def lookup(self, cell_id: str) -> tuple["OCRResult", ...]:
+        """Return raw OCR results for one cell id in deterministic order."""
+
+        return tuple(result for result in self.ocr_results if result.cell_id == cell_id)
 
 
 @dataclass(frozen=True, slots=True)
@@ -708,6 +736,296 @@ class CellLayoutAnalyzer:
         return self.classify(cell_reference)
 
 
+@dataclass(frozen=True, slots=True)
+class OCRConfiguration:
+    """Immutable OCR execution configuration without provider assumptions."""
+
+    language: str = "eng"
+    minimum_confidence: float = 0.0
+    character_whitelist: str = ""
+    character_blacklist: str = ""
+    engine_options: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.language.strip():
+            raise ValueError("ocr language is required")
+        _validate_confidence(self.minimum_confidence, "ocr minimum confidence")
+        object.__setattr__(
+            self, "engine_options", MappingProxyType(dict(self.engine_options))
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class OCRMetadata:
+    """Immutable provider-neutral metadata for a raw OCR result."""
+
+    engine_name: str
+    provider_name: str
+    options: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.engine_name.strip():
+            raise ValueError("ocr engine name is required")
+        if not self.provider_name.strip():
+            raise ValueError("ocr provider name is required")
+        object.__setattr__(self, "options", MappingProxyType(dict(self.options)))
+
+
+@dataclass(frozen=True, slots=True)
+class OCRWord:
+    """One raw OCR word with provider-reported geometry and confidence."""
+
+    text_value: str
+    confidence: float
+    bounding_box: BoundingBox
+
+    def __post_init__(self) -> None:
+        _validate_confidence(self.confidence, "ocr word confidence")
+
+    @property
+    def text(self) -> str:
+        return self.text_value
+
+
+@dataclass(frozen=True, slots=True)
+class OCRLine:
+    """One raw OCR line containing ordered OCR words."""
+
+    words_value: tuple[OCRWord, ...]
+    bounding_box: BoundingBox
+    confidence: float
+
+    def __post_init__(self) -> None:
+        _validate_confidence(self.confidence, "ocr line confidence")
+        ordered = tuple(
+            sorted(
+                self.words_value,
+                key=lambda word: (word.bounding_box.y, word.bounding_box.x),
+            )
+        )
+        if self.words_value != ordered:
+            object.__setattr__(self, "words_value", ordered)
+
+    def words(self) -> tuple[OCRWord, ...]:
+        return self.words_value
+
+    def text(self) -> str:
+        return " ".join(word.text for word in self.words_value)
+
+
+@dataclass(frozen=True, slots=True)
+class OCRPage:
+    """Raw OCR page containing lines and metadata."""
+
+    lines_value: tuple[OCRLine, ...] = ()
+    metadata: OCRMetadata = field(
+        default_factory=lambda: OCRMetadata("unknown", "unknown")
+    )
+
+    def __post_init__(self) -> None:
+        ordered = tuple(
+            sorted(
+                self.lines_value,
+                key=lambda line: (line.bounding_box.y, line.bounding_box.x),
+            )
+        )
+        if self.lines_value != ordered:
+            object.__setattr__(self, "lines_value", ordered)
+
+    def lines(self) -> tuple[OCRLine, ...]:
+        return self.lines_value
+
+
+@dataclass(frozen=True, slots=True)
+class OCRRegion:
+    """Semantic OCR target region linked to one classified cell region."""
+
+    frame_id: FrameId
+    cell_id: str
+    bounding_box: BoundingBox
+    semantic_role: CellSemanticRole
+
+    def __post_init__(self) -> None:
+        if not self.frame_id.strip():
+            raise ValueError("frame id is required")
+        if not self.cell_id.strip():
+            raise ValueError("cell id is required")
+        if self.semantic_role == CellSemanticRole.UNKNOWN:
+            raise ValueError("semantic role is required")
+
+
+@dataclass(frozen=True, slots=True)
+class OCRRequest:
+    """Immutable input for an OCR engine over one predefined semantic region."""
+
+    frame_id: FrameId
+    cell_id: str
+    bounding_box: BoundingBox
+    semantic_role: CellSemanticRole
+    image_region: ImageFrame
+    configuration: OCRConfiguration = field(default_factory=OCRConfiguration)
+
+    def __post_init__(self) -> None:
+        if not self.frame_id.strip():
+            raise ValueError("frame id is required")
+        if not self.cell_id.strip():
+            raise ValueError("cell id is required")
+        if self.semantic_role == CellSemanticRole.UNKNOWN:
+            raise ValueError("semantic role is required")
+        if not self.bounding_box.fits_within(
+            self.image_region.width, self.image_region.height
+        ):
+            raise ValueError("ocr bounding box must fit within image region")
+
+
+@dataclass(frozen=True, slots=True)
+class OCRResult:
+    """Provider-neutral raw OCR output with no parsing or interpretation."""
+
+    frame_id: FrameId
+    cell_id: str
+    semantic_role: CellSemanticRole
+    extracted_text: str
+    confidence: float
+    bounding_boxes: tuple[BoundingBox, ...]
+    detected_words: tuple[OCRWord, ...] = ()
+    detected_lines: tuple[OCRLine, ...] = ()
+    metadata: OCRMetadata = field(
+        default_factory=lambda: OCRMetadata("unknown", "unknown")
+    )
+
+    def __post_init__(self) -> None:
+        if not self.frame_id.strip():
+            raise ValueError("frame id is required")
+        if not self.cell_id.strip():
+            raise ValueError("cell id is required")
+        if self.semantic_role == CellSemanticRole.UNKNOWN:
+            raise ValueError("semantic role is required")
+        _validate_confidence(self.confidence, "ocr result confidence")
+        if not self.bounding_boxes and (self.detected_words or self.detected_lines):
+            raise ValueError("ocr bounding boxes are required for non-empty output")
+        object.__setattr__(
+            self,
+            "detected_words",
+            tuple(
+                sorted(
+                    self.detected_words,
+                    key=lambda word: (word.bounding_box.y, word.bounding_box.x),
+                )
+            ),
+        )
+        object.__setattr__(
+            self,
+            "detected_lines",
+            tuple(
+                sorted(
+                    self.detected_lines,
+                    key=lambda line: (line.bounding_box.y, line.bounding_box.x),
+                )
+            ),
+        )
+
+    def words(self) -> tuple[OCRWord, ...]:
+        return self.detected_words
+
+    def lines(self) -> tuple[OCRLine, ...]:
+        return self.detected_lines
+
+    def text(self) -> str:
+        return self.extracted_text
+
+    def average_confidence(self) -> float:
+        confidences = [word.confidence for word in self.detected_words]
+        return sum(confidences) / len(confidences) if confidences else self.confidence
+
+
+@runtime_checkable
+class OCRProvider(Protocol):
+    """Abstract provider interface only; implementations live outside Genesis."""
+
+    @property
+    def name(self) -> str:
+        """Return provider name."""
+
+    def recognize(self, request: OCRRequest) -> OCRResult:
+        """Return raw OCR output for one request."""
+
+
+@runtime_checkable
+class OCREngine(Protocol):
+    """OCR engine contract accepting requests and returning raw results."""
+
+    def run(self, request: OCRRequest) -> OCRResult:
+        """Run OCR over one predefined semantic region."""
+
+
+@dataclass(frozen=True, slots=True)
+class DummyOCREngine:
+    """Deterministic mock OCR engine for architecture tests; performs no OCR."""
+
+    engine_name: str = "dummy-ocr-engine"
+
+    def run(self, request: OCRRequest) -> OCRResult:
+        text = f"{request.cell_id}:{request.semantic_role.value}"
+        word = OCRWord(text, 1.0, request.bounding_box)
+        line = OCRLine((word,), request.bounding_box, 1.0)
+        metadata = OCRMetadata(self.engine_name, "dummy", {"mock": True})
+        return OCRResult(
+            request.frame_id,
+            request.cell_id,
+            request.semantic_role,
+            text,
+            1.0,
+            (request.bounding_box,),
+            (word,),
+            (line,),
+            metadata,
+        )
+
+
+@runtime_checkable
+class OCRPipeline(Protocol):
+    """Contract for executing OCR after cell classification."""
+
+    def run(
+        self,
+        processed_frame: "ProcessedFrame",
+        cell_classifications: Sequence[CellClassification],
+    ) -> tuple[OCRResult, ...]:
+        """Return raw OCR results for classified cell regions."""
+
+
+@dataclass(frozen=True, slots=True)
+class SequentialOCRPipeline:
+    """Deterministically builds OCR requests from classified cell regions."""
+
+    engine: OCREngine = field(default_factory=DummyOCREngine)
+    configuration: OCRConfiguration = field(default_factory=OCRConfiguration)
+
+    def run(
+        self,
+        processed_frame: "ProcessedFrame",
+        cell_classifications: Sequence[CellClassification],
+    ) -> tuple[OCRResult, ...]:
+        if not cell_classifications:
+            return ()
+        results = []
+        for classification in sorted(
+            cell_classifications, key=lambda item: (item.row, item.column, item.cell_id)
+        ):
+            for region in classification.semantic_regions:
+                request = OCRRequest(
+                    frame_id=classification.cell_reference.frame_id,
+                    cell_id=classification.cell_id,
+                    bounding_box=region.bounds,
+                    semantic_role=region.semantic_role,
+                    image_region=processed_frame.source_frame,
+                    configuration=self.configuration,
+                )
+                results.append(self.engine.run(request))
+        return tuple(results)
+
+
 class CoordinateMapper:
     """Deterministically map footprint-cell detections to logical coordinates."""
 
@@ -905,11 +1223,15 @@ class SequentialObjectDetectionPipeline:
             if footprint_cells
             else ()
         )
+        ocr_results = SequentialOCRPipeline().run(
+            context.processed_frame, cell_classifications
+        )
         return DetectionGraph(
             frame_id=context.processed_frame.source_frame.frame_id,
             objects=detected,
             grid_coordinate_system=coordinate_system,
             cell_classifications=cell_classifications,
+            ocr_results=ocr_results,
         )
 
 
