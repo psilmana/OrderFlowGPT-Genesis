@@ -332,6 +332,7 @@ class DetectionGraph:
 
     frame_id: FrameId
     objects: tuple[DetectedObject, ...] = ()
+    grid_coordinate_system: GridCoordinateSystem | None = None
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -347,6 +348,206 @@ class DetectionGraph:
             missing_children = set(obj.children_ids) - ids
             if missing_children:
                 raise ValueError("detected object child ids must reference objects")
+        if self.grid_coordinate_system is not None:
+            grid_ids = {
+                str(obj.metadata.get("grid_id", ""))
+                for obj in self.objects
+                if obj.object_type == ObjectType.FOOTPRINT_CELL
+            }
+            if self.grid_coordinate_system.grid_id not in grid_ids:
+                raise ValueError("grid coordinate system must reference detected cells")
+
+
+@dataclass(frozen=True, slots=True)
+class CellCoordinate:
+    """Immutable logical position for one footprint cell."""
+
+    row_index: int
+    column_index: int
+    cell_id: str
+    grid: "GridCoordinateSystem" = field(compare=False, repr=False)
+
+    def __post_init__(self) -> None:
+        if self.row_index < 0:
+            raise ValueError("row_index must be non-negative")
+        if self.column_index < 0:
+            raise ValueError("column_index must be non-negative")
+        if not self.cell_id.strip():
+            raise ValueError("cell_id is required")
+
+
+@dataclass(frozen=True, slots=True)
+class GridCoordinateSystem:
+    """Logical row/column structure for an entire detected footprint grid."""
+
+    grid_id: str
+    row_count: int
+    column_count: int
+    cell_width: int
+    cell_height: int
+    bounds: BoundingBox
+    cells: tuple[CellCoordinate, ...] = ()
+
+    def __post_init__(self) -> None:
+        if not self.grid_id.strip():
+            raise ValueError("grid_id is required")
+        if self.row_count <= 0 or self.column_count <= 0:
+            raise ValueError("grid dimensions must be positive")
+        if self.cell_width <= 0 or self.cell_height <= 0:
+            raise ValueError("cell dimensions must be positive")
+        expected_count = self.row_count * self.column_count
+        if len(self.cells) != expected_count:
+            raise ValueError("coordinate count must match grid dimensions")
+        positions = {(cell.row_index, cell.column_index) for cell in self.cells}
+        if len(positions) != len(self.cells):
+            raise ValueError("duplicate coordinates are not allowed")
+        ids = {cell.cell_id for cell in self.cells}
+        if len(ids) != len(self.cells):
+            raise ValueError("duplicate cell ids are not allowed")
+        expected_positions = {
+            (row, column)
+            for row in range(self.row_count)
+            for column in range(self.column_count)
+        }
+        if positions != expected_positions:
+            raise ValueError("coordinate indexing must be continuous")
+        ordered = tuple(
+            sorted(self.cells, key=lambda cell: (cell.row_index, cell.column_index))
+        )
+        if self.cells != ordered:
+            object.__setattr__(self, "cells", ordered)
+
+    @property
+    def rows(self) -> int:
+        return self.row_count
+
+    @property
+    def columns(self) -> int:
+        return self.column_count
+
+    def cell_at(self, row: int, column: int) -> CellCoordinate:
+        for cell in self.cells:
+            if cell.row_index == row and cell.column_index == column:
+                return cell
+        raise KeyError(f"cell coordinate not found: {row},{column}")
+
+    def cell_by_id(self, cell_id: str) -> CellCoordinate:
+        for cell in self.cells:
+            if cell.cell_id == cell_id:
+                return cell
+        raise KeyError(f"cell id not found: {cell_id}")
+
+    def row_cells(self, row: int) -> tuple[CellCoordinate, ...]:
+        return tuple(cell for cell in self.cells if cell.row_index == row)
+
+    def column_cells(self, column: int) -> tuple[CellCoordinate, ...]:
+        return tuple(cell for cell in self.cells if cell.column_index == column)
+
+    def neighbors(self, cell: CellCoordinate) -> tuple[CellCoordinate, ...]:
+        candidates = (
+            (cell.row_index - 1, cell.column_index),
+            (cell.row_index + 1, cell.column_index),
+            (cell.row_index, cell.column_index - 1),
+            (cell.row_index, cell.column_index + 1),
+        )
+        return tuple(
+            self.cell_at(row, column)
+            for row, column in candidates
+            if 0 <= row < self.row_count and 0 <= column < self.column_count
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class CellReference:
+    """Immutable link from a logical cell coordinate to detected geometry."""
+
+    coordinate: CellCoordinate
+    bounds: BoundingBox
+    detected_object: DetectedObject
+    frame_id: FrameId
+
+    def __post_init__(self) -> None:
+        if not self.frame_id.strip():
+            raise ValueError("frame id is required")
+        if self.detected_object.frame_id != self.frame_id:
+            raise ValueError("cell reference frame id must match detected object")
+        if self.detected_object.bounds != self.bounds:
+            raise ValueError("cell reference bounds must match detected object")
+
+
+class CoordinateMapper:
+    """Deterministically map footprint-cell detections to logical coordinates."""
+
+    def map_cells(self, cells: Sequence[DetectedObject]) -> GridCoordinateSystem:
+        if not cells:
+            raise ValueError("at least one footprint cell is required")
+        ordered = tuple(sorted(cells, key=lambda obj: (obj.bounds.y, obj.bounds.x)))
+        if any(obj.object_type != ObjectType.FOOTPRINT_CELL for obj in ordered):
+            raise ValueError("only footprint cells can be mapped")
+        frame_ids = {obj.frame_id for obj in ordered}
+        if len(frame_ids) != 1:
+            raise ValueError("all footprint cells must belong to one frame")
+        grid_ids = {str(obj.metadata.get("grid_id", "")) for obj in ordered}
+        if len(grid_ids) != 1 or not next(iter(grid_ids)).strip():
+            raise ValueError("all footprint cells must reference one grid_id")
+        duplicate_positions = {(obj.bounds.x, obj.bounds.y) for obj in ordered}
+        if len(duplicate_positions) != len(ordered):
+            raise ValueError("duplicate cell positions are not allowed")
+        xs = tuple(sorted({obj.bounds.x for obj in ordered}))
+        ys = tuple(sorted({obj.bounds.y for obj in ordered}))
+        if len(xs) * len(ys) != len(ordered):
+            raise ValueError("missing rows or columns in footprint cells")
+        widths = tuple(obj.bounds.width for obj in ordered)
+        heights = tuple(obj.bounds.height for obj in ordered)
+        if max(widths) / min(widths) > 1.25 or max(heights) / min(heights) > 1.25:
+            raise ValueError("cell dimensions must be consistent")
+        by_position = {(obj.bounds.y, obj.bounds.x): obj for obj in ordered}
+        cell_width = round(sum(widths) / len(widths))
+        cell_height = round(sum(heights) / len(heights))
+        bounds = BoundingBox(
+            xs[0],
+            ys[0],
+            xs[-1] - xs[0] + cell_width,
+            ys[-1] - ys[0] + cell_height,
+        )
+        grid = object.__new__(GridCoordinateSystem)
+        object.__setattr__(grid, "grid_id", next(iter(grid_ids)))
+        object.__setattr__(grid, "row_count", len(ys))
+        object.__setattr__(grid, "column_count", len(xs))
+        object.__setattr__(grid, "cell_width", cell_width)
+        object.__setattr__(grid, "cell_height", cell_height)
+        object.__setattr__(grid, "bounds", bounds)
+        coords = tuple(
+            CellCoordinate(row, column, f"{grid.grid_id}:cell:{row}:{column}", grid)
+            for row, y in enumerate(ys)
+            for column, x in enumerate(xs)
+            if (y, x) in by_position
+        )
+        object.__setattr__(grid, "cells", coords)
+        GridCoordinateSystem.__post_init__(grid)
+        return grid
+
+    def references(self, cells: Sequence[DetectedObject]) -> tuple[CellReference, ...]:
+        grid = self.map_cells(cells)
+        by_coordinate = {
+            (int(obj.metadata["row_index"]), int(obj.metadata["column_index"])): obj
+            for obj in cells
+        }
+        return tuple(
+            CellReference(
+                coordinate=coordinate,
+                bounds=by_coordinate[
+                    (coordinate.row_index, coordinate.column_index)
+                ].bounds,
+                detected_object=by_coordinate[
+                    (coordinate.row_index, coordinate.column_index)
+                ],
+                frame_id=by_coordinate[
+                    (coordinate.row_index, coordinate.column_index)
+                ].frame_id,
+            )
+            for coordinate in grid.cells
+        )
 
 
 @dataclass(frozen=True, slots=True)
@@ -457,9 +658,16 @@ class SequentialObjectDetectionPipeline:
             detected = (chart_object,) + detector_objects
         else:
             detected = detector_objects
+        footprint_cells = tuple(
+            obj for obj in detected if obj.object_type == ObjectType.FOOTPRINT_CELL
+        )
+        coordinate_system = (
+            CoordinateMapper().map_cells(footprint_cells) if footprint_cells else None
+        )
         return DetectionGraph(
             frame_id=context.processed_frame.source_frame.frame_id,
             objects=detected,
+            grid_coordinate_system=coordinate_system,
         )
 
 
@@ -1291,6 +1499,8 @@ class FootprintCellDetector:
                         metadata={
                             "row_index": row_index,
                             "column_index": column_index,
+                            "cell_id": f"{grid_object.object_id.value}:cell:{row_index}:{column_index}",
+                            "grid_id": grid_object.object_id.value,
                             "cell_width": box.width,
                             "cell_height": box.height,
                             "grid_width": grid.width,
