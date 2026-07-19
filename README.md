@@ -1,6 +1,6 @@
 # OrderFlowGPT Genesis
 
-OrderFlowGPT Genesis is the architecture foundation for deterministic order-flow analysis and vision-driven workspace understanding. The package defines stable domain primitives, validation rules, an in-memory analysis pipeline, the Vision Foundation, Workspace Detection contracts, and the Milestone 5 deterministic chart detection framework, and the Milestone 6 Vision Object Detection Foundation, and Milestone 7 deterministic Price Axis Detector, and Milestone 8 deterministic Time Axis Detector, and Milestone 9 deterministic Footprint Grid Detector that future detectors and AI components can extend without changing the foundational architecture.
+OrderFlowGPT Genesis is the architecture foundation for deterministic order-flow analysis and vision-driven workspace understanding. The package defines stable domain primitives, validation rules, an in-memory analysis pipeline, the Vision Foundation, Workspace Detection contracts, and the Milestone 5 deterministic chart detection framework, and the Milestone 6 Vision Object Detection Foundation, and Milestone 7 deterministic Price Axis Detector, and Milestone 8 deterministic Time Axis Detector, and Milestone 9 deterministic Footprint Grid Detector, and Milestone 10 deterministic Footprint Cell Detector that future detectors and AI components can extend without changing the foundational architecture.
 
 ## Current scope
 
@@ -16,7 +16,8 @@ The repository currently delivers:
 - Immutable Milestone 6 object-detection contracts: `DetectedObject`, `ObjectId`, `ObjectType`, `DetectionConfidence`, `DetectionSource`, `DetectionGraph`, `DetectionContext`, `DetectorRegistry`, `ObjectDetector`, `ObjectDetectionPipeline`, and `SequentialObjectDetectionPipeline`.
 - A real `PriceAxisDetector` that uses deterministic geometry, luminance transitions, and edge/projection scores to return an `ObjectType.PRICE_AXIS` `DetectedObject` for the vertical scale immediately to the right of the chart. It intentionally detects only the axis region, not price numbers.
 - A real `TimeAxisDetector` that uses deterministic geometry, horizontal edge density, brightness transitions, projection scoring, and chart alignment checks to return an `ObjectType.TIME_AXIS` `DetectedObject` for the horizontal time scale immediately below the chart. It intentionally detects only the axis region, not timestamps.
-- A real `FootprintGridDetector` that uses deterministic projection analysis, edge density, histogram-style line evidence, connected grid-line regularity, and workspace/chart/axis containment validation to return an `ObjectType.FOOTPRINT_GRID` `DetectedObject`. It detects only the rectangular grid where future footprint cells exist; it does not detect footprint cells, bid/ask numbers, volume, delta, imbalance, OCR text, or AI-derived semantics.
+- A real `FootprintGridDetector` that uses deterministic projection analysis, edge density, histogram-style line evidence, connected grid-line regularity, and workspace/chart/axis containment validation to return an `ObjectType.FOOTPRINT_GRID` `DetectedObject`. It detects only the rectangular grid where footprint cells exist; it does not detect bid/ask numbers, volume, delta, imbalance, OCR text, or AI-derived semantics.
+- A real `FootprintCellDetector` that uses the detected footprint grid and deterministic grid-line/projection analysis to emit ordered `ObjectType.FOOTPRINT_CELL` geometry for every cell. It identifies only cell rectangles and never reads numbers, performs OCR, classifies bid/ask, recognizes volume, or calculates delta.
 - Placeholder object detectors for footprints, volume profiles, big trades, and absorption. They deliberately return empty `DetectionResult[DetectedObject]` instances and perform no OCR, ML, AI, capture, networking, threading, or side effects.
 - Project documentation, release notes, changelog entries, and automated tests.
 
@@ -116,8 +117,8 @@ registry = DetectorRegistry().add(PriceAxisDetector()).add(TimeAxisDetector())
 pipeline = SequentialObjectDetectionPipeline(registry)
 # pipeline.run(context) returns a validated DetectionGraph.
 # Milestone 7 PriceAxisDetector runs before Milestone 8 TimeAxisDetector,
-# followed by Milestone 9 FootprintGridDetector when registered.
-# The graph receives chart, PRICE_AXIS, TIME_AXIS, and FOOTPRINT_GRID objects
+# followed by Milestone 9 FootprintGridDetector and Milestone 10 FootprintCellDetector when registered.
+# The graph receives chart, PRICE_AXIS, TIME_AXIS, FOOTPRINT_GRID, and FOOTPRINT_CELL objects
 # when deterministic geometry finds those regions.
 ```
 
@@ -127,4 +128,4 @@ The architecture is intentionally small and explicit. Domain models are immutabl
 
 ## Support status
 
-This repository is at Milestone 9. It is suitable for deterministic local analysis, test fixtures, in-memory vision foundation workflows, and side-effect-free preprocessing pipeline composition, deterministic chart-region detection, object-detection pipeline composition, deterministic price-axis region detection, and deterministic time-axis region detection. OCR is intentionally not implemented yet because Milestones 7 and 8 only establish reliable axis-region geometry; reading price numbers or timestamps is a later semantic/OCR concern. Milestone 9 detects only the footprint grid rectangle. Milestone 10 will detect individual footprint cells. It does not connect to brokers, exchanges, live data feeds, screen capture services, storage systems, native computer-vision runtimes, or language-model providers.
+This repository is at Milestone 10. It is suitable for deterministic local analysis, test fixtures, in-memory vision foundation workflows, and side-effect-free preprocessing pipeline composition, deterministic chart-region detection, object-detection pipeline composition, deterministic price-axis region detection, and deterministic time-axis region detection. OCR is intentionally not implemented yet because Milestones 7 and 8 only establish reliable axis-region geometry; reading price numbers or timestamps is a later semantic/OCR concern. Milestone 9 detects only the footprint grid rectangle. Milestone 10 detects only footprint-cell geometry. Milestone 11 introduces the Cell Coordinate System; OCR, bid/ask recognition, volume recognition, and delta calculation remain out of scope. It does not connect to brokers, exchanges, live data feeds, screen capture services, storage systems, native computer-vision runtimes, or language-model providers.
