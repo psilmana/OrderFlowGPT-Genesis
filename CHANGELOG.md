@@ -1,9 +1,8 @@
 # Changelog
 
-## 0.1.9 - Milestone 14
+## 0.1.9 - Milestone 15
 
-- Added immutable OCR post-processing and numeric interpretation models, normalization configuration/rules, parser/post-processor/pipeline contracts, deterministic normalization, deterministic numeric parsing, graph-level parsed-value exposure, lookup helpers, and utility helpers.
-- Documented that Milestone 14 converts raw OCR into validated numeric values only and still does not know bid, ask, delta, volume, POC, imbalance, absorption, or market semantics. Milestone 15 introduces Footprint Semantic Interpretation.
+- Added immutable footprint semantic interpretation models, semantic mapper/interpreter/pipeline contracts, deterministic default mapping from cell roles to bid/ask/delta/total semantics, cell value helpers, graph interpretation lookups, validation, and documentation clarifying that trading decisions and imbalance/absorption detection remain out of scope until later milestones.
 
 ## 0.1.8 - Milestone 13
 
