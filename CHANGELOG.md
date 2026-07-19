@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.9 - Milestone 15
+
+- Added immutable footprint semantic interpretation models, semantic mapper/interpreter/pipeline contracts, deterministic default mapping from cell roles to bid/ask/delta/total semantics, cell value helpers, graph interpretation lookups, validation, and documentation clarifying that trading decisions and imbalance/absorption detection remain out of scope until later milestones.
+
 ## 0.1.8 - Milestone 13
 
 - Added immutable OCR Foundation models, OCR engine/pipeline/provider contracts, deterministic `DummyOCREngine`, OCR request/result validation, graph-level `ocr_results` exposure, and raw OCR lookup helpers.
