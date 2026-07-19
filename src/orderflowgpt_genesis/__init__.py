@@ -154,8 +154,6 @@ __all__ = [
     "InterpretationResult",
     "InterpretationWarning",
     "LayoutSemanticMapper",
-    "NumericValue",
-    "ParsedValue",
     "SemanticMapper",
     "SequentialInterpretationPipeline",
     "DetectorRegistry",
