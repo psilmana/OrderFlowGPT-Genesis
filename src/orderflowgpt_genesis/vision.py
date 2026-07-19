@@ -9,6 +9,7 @@ from __future__ import annotations
 from collections import OrderedDict
 from collections.abc import Iterable, Iterator, Mapping, Sequence
 from dataclasses import dataclass, field
+from decimal import Decimal, InvalidOperation
 from datetime import datetime, timezone
 from enum import Enum
 from types import MappingProxyType
@@ -784,6 +785,344 @@ class CellLayoutAnalyzer:
 
     def analyze(self, cell_reference: CellReference) -> CellClassification:
         return self.classify(cell_reference)
+
+
+class NumericType(Enum):
+    """Raw OCR numeric shape after deterministic normalization."""
+
+    UNKNOWN = "UNKNOWN"
+    INTEGER = "INTEGER"
+    DECIMAL = "DECIMAL"
+    SIGNED_INTEGER = "SIGNED_INTEGER"
+    SIGNED_DECIMAL = "SIGNED_DECIMAL"
+    EMPTY = "EMPTY"
+    INVALID = "INVALID"
+
+
+@dataclass(frozen=True, slots=True)
+class NumericValue:
+    """Validated numeric value parsed from normalized OCR text."""
+
+    value: int | Decimal
+    numeric_type: NumericType
+
+    def __post_init__(self) -> None:
+        if self.numeric_type not in {
+            NumericType.INTEGER,
+            NumericType.DECIMAL,
+            NumericType.SIGNED_INTEGER,
+            NumericType.SIGNED_DECIMAL,
+        }:
+            raise ValueError("numeric value requires a numeric type")
+        if isinstance(self.value, bool) or not isinstance(self.value, int | Decimal):
+            raise ValueError("numeric value must be int or Decimal")
+        if isinstance(self.value, Decimal) and not self.value.is_finite():
+            raise ValueError("numeric value must be finite")
+
+
+@dataclass(frozen=True, slots=True)
+class ParsingError:
+    """Positioned deterministic parsing error for raw OCR text."""
+
+    reason: str
+    original_text: str
+    position: int | None = None
+
+    def __post_init__(self) -> None:
+        if not self.reason.strip():
+            raise ValueError("parsing error reason is required")
+        if self.position is not None and self.position < 0:
+            raise ValueError("parsing error position must be non-negative")
+
+
+@dataclass(frozen=True, slots=True)
+class NormalizationRule:
+    """Single deterministic text-normalization replacement rule."""
+
+    source: str
+    replacement: str
+    description: str = "replacement"
+
+    def __post_init__(self) -> None:
+        if self.source == "":
+            raise ValueError("normalization rule source is required")
+        if not self.description.strip():
+            raise ValueError("normalization rule description is required")
+
+    def apply(self, text: str) -> str:
+        return text.replace(self.source, self.replacement)
+
+
+@dataclass(frozen=True, slots=True)
+class OCRNormalizationConfiguration:
+    """Immutable configuration for OCR numeric text normalization."""
+
+    replacement_table: Mapping[str, str] = field(
+        default_factory=lambda: {
+            "O": "0",
+            "o": "0",
+            "I": "1",
+            "l": "1",
+            "S": "5",
+            "B": "8",
+            "−": "-",
+            "–": "-",
+            "—": "-",
+            "，": ",",
+            "٫": ".",
+        }
+    )
+    allowed_characters: str = "0123456789.-"
+    allow_negative: bool = True
+    allow_decimal: bool = True
+    maximum_length: int = 32
+    minimum_length: int = 1
+    strict_mode: bool = True
+
+    def __post_init__(self) -> None:
+        if self.maximum_length <= 0:
+            raise ValueError("maximum length must be positive")
+        if self.minimum_length < 0 or self.minimum_length > self.maximum_length:
+            raise ValueError("minimum length must be between zero and maximum length")
+        if not self.allowed_characters:
+            raise ValueError("allowed characters are required")
+        object.__setattr__(
+            self, "replacement_table", MappingProxyType(dict(self.replacement_table))
+        )
+
+    @property
+    def rules(self) -> tuple[NormalizationRule, ...]:
+        return tuple(
+            NormalizationRule(source, replacement)
+            for source, replacement in self.replacement_table.items()
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class ParsedValue:
+    """Validated numeric interpretation of one raw OCR result."""
+
+    raw_text: str
+    normalized_text: str
+    numeric_type: NumericType
+    parsed_number: NumericValue | None
+    confidence: float
+    validation_messages: tuple[str, ...] = ()
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        _validate_confidence(self.confidence, "parsed value confidence")
+        object.__setattr__(self, "validation_messages", tuple(self.validation_messages))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def is_numeric(self) -> bool:
+        return self.parsed_number is not None
+
+    def is_valid(self) -> bool:
+        return self.numeric_type not in {NumericType.INVALID, NumericType.EMPTY}
+
+    def is_empty(self) -> bool:
+        return self.numeric_type == NumericType.EMPTY
+
+    def numeric_value(self) -> int | Decimal | None:
+        return self.parsed_number.value if self.parsed_number is not None else None
+
+
+@dataclass(frozen=True, slots=True)
+class ParsingResult:
+    """Success/failure wrapper for post-processed OCR numeric parsing."""
+
+    parsed_value: ParsedValue
+    success: bool
+    failure_reason: str = ""
+    warnings: tuple[str, ...] = ()
+    parsing_errors: tuple[ParsingError, ...] = ()
+
+    def __post_init__(self) -> None:
+        if self.success and self.failure_reason:
+            raise ValueError("successful parsing result cannot have a failure reason")
+        if not self.success and not self.failure_reason.strip():
+            raise ValueError("failed parsing result requires a failure reason")
+        object.__setattr__(self, "warnings", tuple(self.warnings))
+        object.__setattr__(self, "parsing_errors", tuple(self.parsing_errors))
+
+    def is_valid(self) -> bool:
+        return self.success and self.parsed_value.is_valid()
+
+    def is_numeric(self) -> bool:
+        return self.success and self.parsed_value.is_numeric()
+
+    def is_empty(self) -> bool:
+        return self.parsed_value.is_empty()
+
+    def numeric_value(self) -> int | Decimal | None:
+        return self.parsed_value.numeric_value()
+
+    def errors(self) -> tuple[ParsingError, ...]:
+        return self.parsing_errors
+
+
+@runtime_checkable
+class NormalizationPipeline(Protocol):
+    """Normalize raw OCR text deterministically before validation."""
+
+    def normalize(self, raw_text: str) -> tuple[str, tuple[str, ...]]:
+        """Return normalized text and warnings."""
+
+
+@runtime_checkable
+class NumericParser(Protocol):
+    """Parse already-normalized text into a numeric parsing result."""
+
+    def parse(self, text: str, confidence: float = 1.0) -> ParsingResult:
+        """Return parsed numeric result."""
+
+
+@runtime_checkable
+class OCRPostProcessor(Protocol):
+    """Post-process raw OCR output into validated numeric values."""
+
+    def process(self, result: "OCRResult") -> ParsingResult:
+        """Return normalized and parsed OCR result."""
+
+
+@dataclass(frozen=True, slots=True)
+class DeterministicNumericParser:
+    """Deterministic parser for integer and decimal OCR numeric text only."""
+
+    configuration: OCRNormalizationConfiguration = field(
+        default_factory=OCRNormalizationConfiguration
+    )
+
+    def parse(self, text: str, confidence: float = 1.0) -> ParsingResult:
+        _validate_confidence(confidence, "parsing confidence")
+        error = _numeric_error(text, self.configuration)
+        if error is not None:
+            ntype = NumericType.EMPTY if text == "" else NumericType.INVALID
+            parsed = ParsedValue(text, text, ntype, None, 0.0, (error.reason,), {})
+            return ParsingResult(parsed, False, error.reason, (), (error,))
+        ntype = _numeric_type(text)
+        try:
+            value: int | Decimal = int(text) if "." not in text else Decimal(text)
+        except (InvalidOperation, ValueError) as exc:
+            error = ParsingError("invalid decimal", text, None)
+            parsed = ParsedValue(
+                text, text, NumericType.INVALID, None, 0.0, (str(exc),), {}
+            )
+            return ParsingResult(parsed, False, error.reason, (), (error,))
+        if isinstance(value, Decimal) and not value.is_finite():
+            error = ParsingError("non-finite decimal", text, None)
+            parsed = ParsedValue(
+                text, text, NumericType.INVALID, None, 0.0, (error.reason,), {}
+            )
+            return ParsingResult(parsed, False, error.reason, (), (error,))
+        parsed = ParsedValue(
+            text, text, ntype, NumericValue(value, ntype), confidence, (), {}
+        )
+        return ParsingResult(parsed, True)
+
+
+@dataclass(frozen=True, slots=True)
+class DeterministicOCRPostProcessor:
+    """Normalize, validate, and parse raw OCR text without market semantics."""
+
+    configuration: OCRNormalizationConfiguration = field(
+        default_factory=OCRNormalizationConfiguration
+    )
+    parser: NumericParser | None = None
+
+    def __post_init__(self) -> None:
+        if self.parser is None:
+            object.__setattr__(
+                self, "parser", DeterministicNumericParser(self.configuration)
+            )
+
+    def normalize(self, raw_text: str) -> tuple[str, tuple[str, ...]]:
+        warnings: list[str] = []
+        normalized = raw_text
+        for rule in self.configuration.rules:
+            updated = rule.apply(normalized)
+            if updated != normalized:
+                warnings.append(rule.description)
+            normalized = updated
+        compact = "".join(normalized.split())
+        if compact != normalized:
+            warnings.append("whitespace removed")
+        normalized = compact.replace(",", "")
+        normalized, decimal_warning = _normalize_decimal_points(normalized)
+        if decimal_warning:
+            warnings.append(decimal_warning)
+        normalized, sign_warning = _cleanup_duplicate_leading_signs(normalized)
+        if sign_warning:
+            warnings.append(sign_warning)
+        trimmed = _trim_garbage(normalized, self.configuration)
+        if trimmed != normalized:
+            warnings.append("garbage trimmed")
+        return trimmed, tuple(warnings)
+
+    def process(self, result: "OCRResult") -> ParsingResult:
+        normalized, warnings = self.normalize(result.text())
+        parsed = self.parser.parse(normalized, result.confidence)  # type: ignore[union-attr]
+        value = ParsedValue(
+            raw_text=result.text(),
+            normalized_text=normalized,
+            numeric_type=parsed.parsed_value.numeric_type,
+            parsed_number=parsed.parsed_value.parsed_number,
+            confidence=parsed.parsed_value.confidence,
+            validation_messages=parsed.parsed_value.validation_messages,
+            metadata={
+                "frame_id": result.frame_id,
+                "cell_id": result.cell_id,
+                "semantic_role": result.semantic_role.value,
+            },
+        )
+        return ParsingResult(
+            value,
+            parsed.success,
+            parsed.failure_reason,
+            warnings + parsed.warnings,
+            parsed.parsing_errors,
+        )
+
+
+def normalize(
+    raw_text: str, configuration: OCRNormalizationConfiguration | None = None
+) -> str:
+    return DeterministicOCRPostProcessor(
+        configuration or OCRNormalizationConfiguration()
+    ).normalize(raw_text)[0]
+
+
+def parse(
+    raw_text: str, configuration: OCRNormalizationConfiguration | None = None
+) -> ParsingResult:
+    config = configuration or OCRNormalizationConfiguration()
+    text = normalize(raw_text, config)
+    return DeterministicNumericParser(config).parse(text)
+
+
+def is_numeric(value: ParsedValue | ParsingResult) -> bool:
+    return value.is_numeric()
+
+
+def is_valid(value: ParsedValue | ParsingResult) -> bool:
+    return value.is_valid()
+
+
+def is_empty(value: ParsedValue | ParsingResult) -> bool:
+    return value.is_empty()
+
+
+def numeric_value(value: ParsedValue | ParsingResult) -> int | Decimal | None:
+    return value.numeric_value()
+
+
+def errors(result: ParsingResult) -> tuple[ParsingError, ...]:
+    return result.errors()
+
+
+def warnings(result: ParsingResult) -> tuple[str, ...]:
+    return result.warnings
 
 
 @dataclass(frozen=True, slots=True)
@@ -1678,12 +2017,16 @@ class SequentialObjectDetectionPipeline:
         ocr_results = SequentialOCRPipeline().run(
             context.processed_frame, cell_classifications
         )
+        parsed_values = tuple(
+            DeterministicOCRPostProcessor().process(result) for result in ocr_results
+        )
         return DetectionGraph(
             frame_id=context.processed_frame.source_frame.frame_id,
             objects=detected,
             grid_coordinate_system=coordinate_system,
             cell_classifications=cell_classifications,
             ocr_results=ocr_results,
+            parsed_values=parsed_values,
         )
 
 
@@ -3840,3 +4183,91 @@ ObjectType.VOLUME_PROFILE = ObjectType("VOLUME_PROFILE")
 ObjectType.CVD_PANEL = ObjectType("CVD_PANEL")
 ObjectType.DELTA_PANEL = ObjectType("DELTA_PANEL")
 ObjectType.UNKNOWN = ObjectType("UNKNOWN")
+
+
+def _normalize_decimal_points(text: str) -> tuple[str, str]:
+    if text.count(".") <= 1:
+        return text, ""
+    first = text.find(".")
+    return (
+        text[: first + 1] + text[first + 1 :].replace(".", ""),
+        "multiple decimal separators normalized",
+    )
+
+
+def _cleanup_duplicate_leading_signs(text: str) -> tuple[str, str]:
+    if len(text) > 1 and set(text[:2]) <= {"+", "-"} and text[0] == text[1]:
+        sign = "-" if text[0] == "-" else ""
+        return sign + text.lstrip("+-"), "duplicate sign cleanup"
+    return text, ""
+
+
+def _trim_garbage(text: str, configuration: OCRNormalizationConfiguration) -> str:
+    allowed = set(configuration.allowed_characters) | {",", "+"}
+    start = 0
+    end = len(text)
+    while start < end and text[start] not in allowed:
+        start += 1
+    while end > start and text[end - 1] not in allowed:
+        end -= 1
+    return text[start:end]
+
+
+def _numeric_error(
+    text: str, configuration: OCRNormalizationConfiguration
+) -> ParsingError | None:
+    if text == "":
+        return ParsingError("empty normalized text", text, 0)
+    if len(text) < configuration.minimum_length:
+        return ParsingError(
+            "normalized text shorter than minimum length", text, len(text)
+        )
+    if len(text) > configuration.maximum_length:
+        return ParsingError("overflow", text, configuration.maximum_length)
+    lowered = text.lower()
+    if lowered in {"nan", "inf", "infinity", "+inf", "-inf", "+infinity", "-infinity"}:
+        return ParsingError("non-finite value", text, 0)
+    allowed = set(configuration.allowed_characters) | {"+"}
+    for index, char in enumerate(text):
+        if char not in allowed:
+            return ParsingError(
+                "alphabetic or disallowed character after normalization", text, index
+            )
+    if not configuration.allow_negative and "-" in text:
+        return ParsingError("negative values are not allowed", text, text.find("-"))
+    if not configuration.allow_decimal and "." in text:
+        return ParsingError("decimal values are not allowed", text, text.find("."))
+    if text.count("-") + text.count("+") > 1:
+        return ParsingError("multiple signs", text, 0)
+    if ("-" in text and not text.startswith("-")) or (
+        "+" in text and not text.startswith("+")
+    ):
+        return ParsingError(
+            "sign must be leading", text, max(text.find("-"), text.find("+"))
+        )
+    unsigned = text[1:] if text.startswith(("-", "+")) else text
+    if unsigned == "":
+        return ParsingError("empty normalized text", text, len(text) - 1)
+    if unsigned.count(".") > 1:
+        return ParsingError(
+            "multiple decimal points", text, text.find(".", text.find(".") + 1)
+        )
+    if unsigned.startswith("."):
+        return ParsingError("leading decimal without digits", text, text.find("."))
+    if unsigned.endswith("."):
+        return ParsingError("trailing decimal without digits", text, len(text) - 1)
+    if not any(char.isdigit() for char in unsigned):
+        return ParsingError("empty normalized text", text, 0)
+    return None
+
+
+def _numeric_type(text: str) -> NumericType:
+    signed = text.startswith(("-", "+"))
+    decimal = "." in text
+    if signed and decimal:
+        return NumericType.SIGNED_DECIMAL
+    if signed:
+        return NumericType.SIGNED_INTEGER
+    if decimal:
+        return NumericType.DECIMAL
+    return NumericType.INTEGER
