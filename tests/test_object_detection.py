@@ -201,6 +201,7 @@ def test_placeholder_detectors_return_empty_detection_results():
 
     results = tuple(detector.detect(context) for detector in detectors)
 
+    assert results[0].detector_name == "price-axis-detector"
     assert all(result.detected_object is None for result in results)
     assert all(result.region is None for result in results)
     assert all(result.confidence == 0.0 for result in results)
