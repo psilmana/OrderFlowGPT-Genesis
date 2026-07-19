@@ -11,7 +11,15 @@ from collections.abc import Iterable, Iterator, Mapping, Sequence
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from types import MappingProxyType
-from typing import Protocol, TypeAlias, runtime_checkable
+from typing import (
+    Any,
+    ClassVar,
+    Generic,
+    Protocol,
+    TypeAlias,
+    TypeVar,
+    runtime_checkable,
+)
 from uuid import uuid4
 import struct
 import zlib
@@ -21,6 +29,7 @@ SceneNodeId: TypeAlias = str
 WorkspaceId: TypeAlias = str
 ProcessedFrameId: TypeAlias = str
 DetectorName: TypeAlias = str
+TDetected = TypeVar("TDetected")
 
 
 @dataclass(frozen=True, slots=True)
@@ -146,9 +155,6 @@ class BoundingBox:
         return self.right <= width and self.bottom <= height
 
 
-ChartRegion: TypeAlias = BoundingBox
-
-
 @dataclass(frozen=True, slots=True)
 class DebugOverlay:
     """A PNG debug overlay for deterministic detector diagnostics."""
@@ -174,14 +180,15 @@ class DebugOverlay:
 
 
 @dataclass(frozen=True, slots=True)
-class DetectionResult:
+class DetectionResult(Generic[TDetected]):
     """Standard detector output containing a region, confidence, and rationale."""
 
-    region: ChartRegion | None
+    region: BoundingBox | None
     confidence: float
     reason: str
     detector_name: DetectorName
     debug_overlay: DebugOverlay | None = None
+    detected_object: TDetected | None = None
 
     def __post_init__(self) -> None:
         if not 0.0 <= self.confidence <= 1.0:
@@ -192,6 +199,257 @@ class DetectionResult:
             raise ValueError("detector name is required")
         if self.region is None and self.confidence != 0.0:
             raise ValueError("missing detections must have zero confidence")
+
+
+@dataclass(frozen=True, slots=True)
+class ObjectId:
+    """Stable identifier for one frame-scoped detected object."""
+
+    value: str
+
+    def __post_init__(self) -> None:
+        if not self.value.strip():
+            raise ValueError("object id is required")
+
+
+@dataclass(frozen=True, slots=True)
+class ObjectType:
+    """Supported semantic type for a detected chart/workspace object."""
+
+    value: str
+
+    PRICE_TEXT: ClassVar["ObjectType"]
+    PRICE_AXIS: ClassVar["ObjectType"]
+    TIME_LABEL: ClassVar["ObjectType"]
+    CANDLE: ClassVar["ObjectType"]
+    FOOTPRINT_CELL: ClassVar["ObjectType"]
+    BID_VALUE: ClassVar["ObjectType"]
+    ASK_VALUE: ClassVar["ObjectType"]
+    DELTA_VALUE: ClassVar["ObjectType"]
+    VOLUME_VALUE: ClassVar["ObjectType"]
+    POC_MARKER: ClassVar["ObjectType"]
+    HVN: ClassVar["ObjectType"]
+    LVN: ClassVar["ObjectType"]
+    BIG_TRADE: ClassVar["ObjectType"]
+    ICEBERG: ClassVar["ObjectType"]
+    ABSORPTION: ClassVar["ObjectType"]
+    STACKED_IMBALANCE: ClassVar["ObjectType"]
+    VOLUME_PROFILE: ClassVar["ObjectType"]
+    CVD_PANEL: ClassVar["ObjectType"]
+    DELTA_PANEL: ClassVar["ObjectType"]
+    UNKNOWN: ClassVar["ObjectType"]
+    _SUPPORTED: ClassVar[frozenset[str]] = frozenset(
+        {
+            "PRICE_TEXT",
+            "PRICE_AXIS",
+            "TIME_LABEL",
+            "CANDLE",
+            "FOOTPRINT_CELL",
+            "BID_VALUE",
+            "ASK_VALUE",
+            "DELTA_VALUE",
+            "VOLUME_VALUE",
+            "POC_MARKER",
+            "HVN",
+            "LVN",
+            "BIG_TRADE",
+            "ICEBERG",
+            "ABSORPTION",
+            "STACKED_IMBALANCE",
+            "VOLUME_PROFILE",
+            "CVD_PANEL",
+            "DELTA_PANEL",
+            "UNKNOWN",
+        }
+    )
+
+    def __post_init__(self) -> None:
+        if self.value not in self._SUPPORTED:
+            raise ValueError("object type is not supported")
+
+
+@dataclass(frozen=True, slots=True)
+class DetectionConfidence:
+    """Confidence score for object-level detections."""
+
+    value: float
+
+    def __post_init__(self) -> None:
+        _validate_confidence(self.value, "object detection confidence")
+
+
+@dataclass(frozen=True, slots=True)
+class DetectionSource:
+    """Detector/source name that produced a detected object."""
+
+    name: str
+
+    def __post_init__(self) -> None:
+        if not self.name.strip():
+            raise ValueError("detection source is required")
+
+
+@dataclass(frozen=True, slots=True)
+class DetectedObject:
+    """Immutable semantic object detected within one frame."""
+
+    object_id: ObjectId
+    bounds: BoundingBox
+    confidence: DetectionConfidence
+    object_type: ObjectType
+    frame_id: FrameId
+    source: DetectionSource
+    parent_id: ObjectId | None = None
+    children_ids: tuple[ObjectId, ...] = ()
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.frame_id.strip():
+            raise ValueError("frame id is required")
+        if self.parent_id == self.object_id:
+            raise ValueError("detected object cannot be its own parent")
+        if len({child.value for child in self.children_ids}) != len(self.children_ids):
+            raise ValueError("detected object child ids must be unique")
+        if any(child == self.object_id for child in self.children_ids):
+            raise ValueError("detected object cannot be its own child")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class DetectionGraph:
+    """All detected objects for one frame with parent/child reference validation."""
+
+    frame_id: FrameId
+    objects: tuple[DetectedObject, ...] = ()
+
+    def __post_init__(self) -> None:
+        if not self.frame_id.strip():
+            raise ValueError("frame id is required")
+        ids = {obj.object_id for obj in self.objects}
+        if len(ids) != len(self.objects):
+            raise ValueError("detected object ids must be unique")
+        for obj in self.objects:
+            if obj.frame_id != self.frame_id:
+                raise ValueError("detected object frame id must match detection graph")
+            if obj.parent_id is not None and obj.parent_id not in ids:
+                raise ValueError("detected object parent id must reference an object")
+            missing_children = set(obj.children_ids) - ids
+            if missing_children:
+                raise ValueError("detected object child ids must reference objects")
+
+
+@dataclass(frozen=True, slots=True)
+class DetectionContext:
+    """Only input future object detectors receive."""
+
+    processed_frame: "ProcessedFrame"
+    workspace_layout: "WorkspaceLayout"
+    configuration: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.processed_frame.source_frame.frame_id != self.workspace_layout.frame_id:
+            raise ValueError(
+                "processed frame and workspace layout frame ids must match"
+            )
+        object.__setattr__(
+            self, "configuration", MappingProxyType(dict(self.configuration))
+        )
+
+
+@runtime_checkable
+class ObjectDetector(Protocol):
+    """Interface for semantic object detectors."""
+
+    @property
+    def name(self) -> DetectorName:
+        """Return the detector name."""
+
+    def detect(self, context: DetectionContext) -> DetectionResult[DetectedObject]:
+        """Return a semantic detected object result, never a raw rectangle."""
+
+
+@dataclass(frozen=True, slots=True)
+class DetectorRegistry:
+    """Immutable registry of object detectors in execution order."""
+
+    detectors: tuple[ObjectDetector, ...] = ()
+
+    def __post_init__(self) -> None:
+        names = [detector.name for detector in self.detectors]
+        if any(not name.strip() for name in names):
+            raise ValueError("detector name is required")
+        if len(set(names)) != len(names):
+            raise ValueError("detector names must be unique")
+
+    def add(self, detector: ObjectDetector) -> "DetectorRegistry":
+        """Return a new registry with the supplied detector appended."""
+
+        return DetectorRegistry(self.detectors + (detector,))
+
+
+@runtime_checkable
+class ObjectDetectionPipeline(Protocol):
+    """Interface for frame-scoped semantic object detection pipelines."""
+
+    def run(self, context: DetectionContext) -> DetectionGraph:
+        """Run registered detectors and return a validated detection graph."""
+
+
+@dataclass(frozen=True, slots=True)
+class SequentialObjectDetectionPipeline:
+    """Side-effect-free pipeline that runs registered detectors in order."""
+
+    registry: DetectorRegistry
+
+    def run(self, context: DetectionContext) -> DetectionGraph:
+        detected = tuple(
+            result.detected_object
+            for detector in self.registry.detectors
+            for result in (detector.detect(context),)
+            if result.detected_object is not None
+        )
+        return DetectionGraph(
+            frame_id=context.processed_frame.source_frame.frame_id,
+            objects=detected,
+        )
+
+
+class _EmptyObjectDetector:
+    """Base class for Milestone 6 placeholder object detectors."""
+
+    name: DetectorName = "empty-object-detector"
+
+    def detect(self, context: DetectionContext) -> DetectionResult[DetectedObject]:
+        return DetectionResult(
+            region=None,
+            confidence=0.0,
+            reason=f"{self.name} is a Milestone 6 placeholder",
+            detector_name=self.name,
+        )
+
+
+class PriceAxisDetector(_EmptyObjectDetector):
+    name = "price-axis-detector"
+
+
+class TimeAxisDetector(_EmptyObjectDetector):
+    name = "time-axis-detector"
+
+
+class FootprintDetector(_EmptyObjectDetector):
+    name = "footprint-detector"
+
+
+class VolumeProfileDetector(_EmptyObjectDetector):
+    name = "volume-profile-detector"
+
+
+class BigTradeDetector(_EmptyObjectDetector):
+    name = "big-trade-detector"
+
+
+class AbsorptionDetector(_EmptyObjectDetector):
+    name = "absorption-detector"
 
 
 @runtime_checkable
@@ -772,9 +1030,6 @@ class ChartDetector:
         )
 
 
-
-
-
 class LayoutBuilder:
     """Build workspace layouts from detector results."""
 
@@ -783,14 +1038,17 @@ class LayoutBuilder:
         frame: ProcessedFrame,
         chart_result: DetectionResult,
     ) -> WorkspaceLayout:
+        if chart_result.region is None:
+            raise ValueError("chart detection result must include a region")
+        chart_region_bounds = chart_result.region
 
         chart = ChartRegion(
-            bounds=chart_result.region,
+            bounds=chart_region_bounds,
             confidence=chart_result.confidence,
         )
 
         viewport = Viewport(
-            bounds=chart_result.region,
+            bounds=chart_region_bounds,
             confidence=chart_result.confidence,
         )
 
@@ -1055,3 +1313,25 @@ def _png_rgb(width: int, height: int, rgb: bytes) -> bytes:
         + chunk(b"IDAT", zlib.compress(rows))
         + chunk(b"IEND", b"")
     )
+
+
+ObjectType.PRICE_TEXT = ObjectType("PRICE_TEXT")
+ObjectType.PRICE_AXIS = ObjectType("PRICE_AXIS")
+ObjectType.TIME_LABEL = ObjectType("TIME_LABEL")
+ObjectType.CANDLE = ObjectType("CANDLE")
+ObjectType.FOOTPRINT_CELL = ObjectType("FOOTPRINT_CELL")
+ObjectType.BID_VALUE = ObjectType("BID_VALUE")
+ObjectType.ASK_VALUE = ObjectType("ASK_VALUE")
+ObjectType.DELTA_VALUE = ObjectType("DELTA_VALUE")
+ObjectType.VOLUME_VALUE = ObjectType("VOLUME_VALUE")
+ObjectType.POC_MARKER = ObjectType("POC_MARKER")
+ObjectType.HVN = ObjectType("HVN")
+ObjectType.LVN = ObjectType("LVN")
+ObjectType.BIG_TRADE = ObjectType("BIG_TRADE")
+ObjectType.ICEBERG = ObjectType("ICEBERG")
+ObjectType.ABSORPTION = ObjectType("ABSORPTION")
+ObjectType.STACKED_IMBALANCE = ObjectType("STACKED_IMBALANCE")
+ObjectType.VOLUME_PROFILE = ObjectType("VOLUME_PROFILE")
+ObjectType.CVD_PANEL = ObjectType("CVD_PANEL")
+ObjectType.DELTA_PANEL = ObjectType("DELTA_PANEL")
+ObjectType.UNKNOWN = ObjectType("UNKNOWN")
