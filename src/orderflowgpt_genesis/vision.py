@@ -350,6 +350,7 @@ class DetectionGraph:
     cell_classifications: tuple["CellClassification", ...] = ()
     ocr_results: tuple["OCRResult", ...] = ()
     footprint_interpretation: "FootprintInterpretation | None" = None
+    parsed_values: tuple["ParsingResult", ...] = ()
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -396,6 +397,13 @@ class DetectionGraph:
             raise ValueError("ocr results must reference unique cell regions")
         if any(result.frame_id != self.frame_id for result in self.ocr_results):
             raise ValueError("ocr result frame id must match graph")
+        parsed_cell_ids = {
+            result.parsed_value.cell_id
+            for result in self.parsed_values
+            if result.parsed_value.cell_id
+        }
+        if parsed_cell_ids - cell_ids:
+            raise ValueError("parsed values must reference detected cells")
         if result_keys and not result_keys.issubset(
             {
                 (classification.cell_id, region.semantic_role)
@@ -471,6 +479,29 @@ class DetectionGraph:
     def lookup_total_volume(self, cell_id: str) -> "FootprintValue | None":
         cell = self.lookup_cell(cell_id)
         return None if cell is None else cell.total_volume()
+
+    def lookup_parsed(self, cell_id: str) -> tuple["ParsingResult", ...]:
+        """Return parsed OCR results for one cell id in deterministic order."""
+
+        return tuple(
+            result
+            for result in self.parsed_values
+            if result.parsed_value.cell_id == cell_id
+        )
+
+    def lookup_numeric(self, cell_id: str) -> tuple[NumericValue, ...]:
+        """Return successfully parsed numeric values for one cell id."""
+
+        return tuple(
+            result.parsed_value.parsed_number
+            for result in self.lookup_parsed(cell_id)
+            if result.parsed_value.parsed_number is not None
+        )
+
+    def lookup_invalid(self) -> tuple["ParsingResult", ...]:
+        """Return parsed OCR results that did not produce valid numbers."""
+
+        return tuple(result for result in self.parsed_values if not result.is_valid())
 
 
 @dataclass(frozen=True, slots=True)
@@ -804,7 +835,7 @@ class NumericValue:
     """Validated numeric value parsed from normalized OCR text."""
 
     value: int | Decimal
-    numeric_type: NumericType
+    numeric_type: NumericType = NumericType.INTEGER
 
     def __post_init__(self) -> None:
         if self.numeric_type not in {
@@ -898,7 +929,7 @@ class OCRNormalizationConfiguration:
         )
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True, slots=True, init=False)
 class ParsedValue:
     """Validated numeric interpretation of one raw OCR result."""
 
@@ -909,6 +940,73 @@ class ParsedValue:
     confidence: float
     validation_messages: tuple[str, ...] = ()
     metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __init__(
+        self,
+        raw_text: str | NumericValue,
+        normalized_text: str | CellSemanticRole,
+        numeric_type: NumericType | float,
+        parsed_number: NumericValue | CellRegion | None,
+        confidence: float | str,
+        validation_messages: tuple[str, ...] = (),
+        metadata: Mapping[str, Any] | None = None,
+    ) -> None:
+        if (isinstance(raw_text, NumericValue) or callable(raw_text)) and isinstance(
+            normalized_text, CellSemanticRole
+        ):
+            value = (
+                raw_text
+                if isinstance(raw_text, NumericValue)
+                else NumericValue(raw_text())
+            )
+            role = normalized_text
+            if isinstance(numeric_type, NumericType):
+                raise ValueError("parsed value confidence is required")
+            parsed_confidence = float(numeric_type)
+            source_region = parsed_number
+            cell_id = str(confidence)
+            if not isinstance(source_region, CellRegion):
+                raise ValueError("parsed value source region is required")
+            if not cell_id.strip():
+                raise ValueError("cell id is required")
+            if source_region.parent_cell_id != cell_id:
+                raise ValueError(
+                    "parsed value source region must reference parent cell"
+                )
+            if source_region.semantic_role != role:
+                raise ValueError("parsed value semantic role must match source region")
+            object.__setattr__(self, "raw_text", str(value.value))
+            object.__setattr__(self, "normalized_text", str(value.value))
+            object.__setattr__(self, "numeric_type", value.numeric_type)
+            object.__setattr__(self, "parsed_number", value)
+            object.__setattr__(self, "confidence", parsed_confidence)
+            object.__setattr__(self, "validation_messages", ())
+            object.__setattr__(
+                self,
+                "metadata",
+                MappingProxyType(
+                    {
+                        "semantic_role": role.value,
+                        "source_region": source_region,
+                        "cell_id": cell_id,
+                    }
+                ),
+            )
+        else:
+            object.__setattr__(self, "raw_text", str(raw_text))
+            object.__setattr__(self, "normalized_text", str(normalized_text))
+            if not isinstance(numeric_type, NumericType):
+                raise ValueError("numeric type is required")
+            object.__setattr__(self, "numeric_type", numeric_type)
+            if parsed_number is not None and not isinstance(
+                parsed_number, NumericValue
+            ):
+                raise ValueError("parsed number must be a NumericValue")
+            object.__setattr__(self, "parsed_number", parsed_number)
+            object.__setattr__(self, "confidence", float(confidence))
+            object.__setattr__(self, "validation_messages", tuple(validation_messages))
+            object.__setattr__(self, "metadata", MappingProxyType(dict(metadata or {})))
+        self.__post_init__()
 
     def __post_init__(self) -> None:
         _validate_confidence(self.confidence, "parsed value confidence")
@@ -926,6 +1024,24 @@ class ParsedValue:
 
     def numeric_value(self) -> int | Decimal | None:
         return self.parsed_number.value if self.parsed_number is not None else None
+
+    @property
+    def semantic_role(self) -> CellSemanticRole:
+        role = self.metadata.get("semantic_role", CellSemanticRole.UNKNOWN.value)
+        return (
+            role if isinstance(role, CellSemanticRole) else CellSemanticRole(str(role))
+        )
+
+    @property
+    def source_region(self) -> CellRegion:
+        region = self.metadata.get("source_region")
+        if not isinstance(region, CellRegion):
+            raise ValueError("parsed value source region is required")
+        return region
+
+    @property
+    def cell_id(self) -> str:
+        return str(self.metadata.get("cell_id", ""))
 
 
 @dataclass(frozen=True, slots=True)
@@ -1341,37 +1457,6 @@ class FootprintSemanticType(Enum):
 
 
 @dataclass(frozen=True, slots=True)
-class NumericValue:
-    """Validated numeric OCR post-processing output."""
-
-    value: int
-
-    def __post_init__(self) -> None:
-        if not isinstance(self.value, int):
-            raise ValueError("numeric value must be an integer")
-
-
-@dataclass(frozen=True, slots=True)
-class ParsedValue:
-    """Validated numeric value associated with one classified cell region."""
-
-    numeric_value: NumericValue
-    semantic_role: CellSemanticRole
-    confidence: float
-    source_region: CellRegion
-    cell_id: str
-
-    def __post_init__(self) -> None:
-        if not self.cell_id.strip():
-            raise ValueError("cell id is required")
-        _validate_confidence(self.confidence, "parsed value confidence")
-        if self.source_region.parent_cell_id != self.cell_id:
-            raise ValueError("parsed value source region must reference parent cell")
-        if self.source_region.semantic_role != self.semantic_role:
-            raise ValueError("parsed value semantic role must match source region")
-
-
-@dataclass(frozen=True, slots=True)
 class InterpretationWarning:
     """Non-fatal footprint interpretation validation warning."""
 
@@ -1635,8 +1720,17 @@ class DefaultFootprintInterpreter:
                 continue
             if semantic_type in by_type:
                 raise ValueError(f"duplicate {semantic_type.value.lower()} values")
+            if parsed.parsed_number is None:
+                warnings.append(
+                    InterpretationWarning(
+                        "missing_numeric_value",
+                        "parsed value does not contain a numeric value",
+                        cell_id,
+                    )
+                )
+                continue
             by_type[semantic_type] = FootprintValue(
-                parsed.numeric_value,
+                parsed.parsed_number,
                 semantic_type,
                 parsed.confidence,
                 parsed.source_region,

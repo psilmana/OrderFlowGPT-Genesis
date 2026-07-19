@@ -47,8 +47,6 @@ from .vision import (
     InterpretationResult,
     InterpretationWarning,
     LayoutSemanticMapper,
-    NumericValue,
-    ParsedValue,
     SemanticMapper,
     SequentialInterpretationPipeline,
     ObjectDetectionPipeline,
