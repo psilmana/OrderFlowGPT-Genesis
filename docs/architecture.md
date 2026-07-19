@@ -2,7 +2,7 @@
 
 ## Purpose
 
-OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 added image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`. Milestone 5 added the first real vision detector for locating the main ATAS trading chart. Milestone 6 adds the contract-only Vision Object Detection Foundation that future semantic detectors will use. Milestone 7 implements the first real semantic detector: deterministic Price Axis detection. Milestone 8 implements the second real semantic detector: deterministic Time Axis detection.
+OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 added image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`. Milestone 5 added the first real vision detector for locating the main ATAS trading chart. Milestone 6 adds the contract-only Vision Object Detection Foundation that future semantic detectors will use. Milestone 7 implements the first real semantic detector: deterministic Price Axis detection. Milestone 8 implements the second real semantic detector: deterministic Time Axis detection. Milestone 9 implements the first detector that understands internal chart structure: deterministic Footprint Grid detection.
 
 ## Package boundaries
 
@@ -112,12 +112,12 @@ DetectionGraph
 ```
 
 - `ObjectId`, `ObjectType`, `DetectionConfidence`, and `DetectionSource` are immutable value objects for semantic detections.
-- `ObjectType` initially supports price text, price axes, time axes, time labels, candles, footprint cells, bid values, ask values, delta values, volume values, POC markers, HVNs, LVNs, big trades, icebergs, absorption, stacked imbalances, volume profiles, CVD panels, delta panels, and unknown objects.
+- `ObjectType` initially supports price text, price axes, time axes, time labels, candles, footprint grids, footprint cells, bid values, ask values, delta values, volume values, POC markers, HVNs, LVNs, big trades, icebergs, absorption, stacked imbalances, volume profiles, CVD panels, delta panels, and unknown objects.
 - `DetectedObject` contains a unique id, bounding box, confidence, object type, optional parent id, optional child ids, frame id, detection source, and immutable metadata mapping.
 - `DetectionGraph` stores all detected objects for one frame and validates unique ids, duplicate ids, parent references, child references, and frame alignment.
 - `DetectionContext` is the only input accepted by future object detectors. It contains a `ProcessedFrame`, a `WorkspaceLayout`, and immutable configuration.
 - `ObjectDetector`, `ObjectDetectionPipeline`, and `DetectorRegistry` define how semantic detectors are registered and run.
-- `SequentialObjectDetectionPipeline` runs registered detectors with `PriceAxisDetector` first and `TimeAxisDetector` second when they are registered, then returns a validated graph.
+- `SequentialObjectDetectionPipeline` runs registered detectors with `PriceAxisDetector` first, `TimeAxisDetector` second, and `FootprintGridDetector` third when they are registered, then returns a validated graph. When footprint-grid detection participates, the graph also includes the chart object from the workspace layout so downstream relationships can include Chart, Price Axis, Time Axis, and Footprint Grid.
 - `FootprintDetector`, `VolumeProfileDetector`, `BigTradeDetector`, and `AbsorptionDetector` remain placeholders that intentionally return empty object detection results. `TimeAxisDetector` becomes a real detector in Milestone 8 while preserving the same object-detector contract.
 
 Milestone 6 deliberately excluded real detection behavior, OpenCV, OCR, machine learning, AI calls, screen capture, external libraries, side effects, globals, threading, async execution, and networking. Its purpose was to create stable extension seams for Milestone 7.
@@ -136,8 +136,17 @@ Milestone 8 adds `TimeAxisDetector`, the second real object detector. It receive
 
 The detector uses no OCR, AI, ML, deep learning, OpenCV, networking, capture, threading, async execution, mutable globals, or external libraries. It relies on in-memory luminance, horizontal edge density, brightness-transition checks, height ratios, projection scoring, workspace containment, excessive chart-overlap rejection, and horizontal alignment validation against the chart. Its metadata records `estimated_height`, `edge_density`, `projection_score`, and `horizontal_alignment_score`. Optional debug overlays draw only the time-axis rectangle and do not alter chart or price-axis overlays.
 
-Timestamp OCR is intentionally deferred. Milestone 8 identifies where the time axis is, not what timestamp labels say, because timestamp parsing requires a separate OCR/text-recognition contract, locale/timezone handling, error modeling, and semantic validation after deterministic region geometry is reliable. Milestone 9 begins Footprint Grid Detection.
+Timestamp OCR is intentionally deferred. Milestone 8 identifies where the time axis is, not what timestamp labels say, because timestamp parsing requires a separate OCR/text-recognition contract, locale/timezone handling, error modeling, and semantic validation after deterministic region geometry is reliable. Milestone 9 detects only the footprint grid rectangle. Milestone 10 will detect individual footprint cells.
 
 ## Extension rules for future milestones
 
 Future milestones may add adapters, persistence, streaming, model-assisted narrative generation, concrete capture providers, concrete workspace detectors, and concrete object detectors. They must keep the Milestone 1 and Milestone 2 public contracts backward compatible unless a major version explicitly documents a breaking change.
+
+
+## Milestone 9: Footprint Grid Detector
+
+Milestone 9 adds `FootprintGridDetector`, the first detector that looks inside the detected chart region. It receives `DetectionContext`, anchors to `WorkspaceLayout.chart_region`, and returns `DetectionResult[DetectedObject]` with `ObjectType.FOOTPRINT_GRID` when deterministic image analysis identifies the rectangular grid where future footprint cells will exist.
+
+The detector estimates left, right, top, and bottom grid boundaries using in-memory luminance transitions, projection-style line evidence, edge density, histogram-style row/column evidence, simple clustering, geometry regularity scoring, and containment validation. It rejects zero-size candidates, grids outside the workspace layout, grids outside the chart region, candidates overlapping detected price or time axes, confidence outside `[0, 1]`, and highly irregular geometry. Metadata records `estimated_rows`, `estimated_columns`, `grid_width`, `grid_height`, `projection_score`, and `edge_density`.
+
+Milestone 9 deliberately detects only the footprint grid rectangle. It does not detect individual footprint cells, bid/ask numbers, volume, delta, imbalance, OCR text, AI interpretations, ML objects, or OpenCV-derived features. Milestone 10 will detect individual footprint cells after this grid boundary is stable.
