@@ -349,7 +349,7 @@ class DetectionGraph:
     grid_coordinate_system: GridCoordinateSystem | None = None
     cell_classifications: tuple["CellClassification", ...] = ()
     ocr_results: tuple["OCRResult", ...] = ()
-    parsed_values: tuple[ParsingResult, ...] = ()
+    footprint_interpretation: "FootprintInterpretation | None" = None
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -404,22 +404,32 @@ class DetectionGraph:
             }
         ):
             raise ValueError("ocr results must reference classified cell regions")
-        parsed_keys = {
-            (
-                str(result.parsed_value.metadata.get("cell_id", "")),
-                str(result.parsed_value.metadata.get("semantic_role", "")),
-            )
-            for result in self.parsed_values
-        }
-        if len(parsed_keys) != len(self.parsed_values):
-            raise ValueError("parsed values must reference unique cell regions")
-        if parsed_keys and not parsed_keys.issubset(
-            {
-                (result.cell_id, result.semantic_role.value)
-                for result in self.ocr_results
+        if self.footprint_interpretation is not None:
+            if self.grid_coordinate_system is None:
+                raise ValueError("footprint interpretation requires coordinate system")
+            if (
+                self.footprint_interpretation.grid_id
+                != self.grid_coordinate_system.grid_id
+            ):
+                raise ValueError(
+                    "footprint interpretation grid id must match coordinate system"
+                )
+            interpreted_ids = {
+                cell.cell_reference.coordinate.cell_id
+                for cell in self.footprint_interpretation.ordered_cells
             }
-        ):
-            raise ValueError("parsed values must reference OCR results")
+            if interpreted_ids - cell_ids:
+                raise ValueError(
+                    "footprint interpretation must reference detected cells"
+                )
+
+    @property
+    def footprint_cells(self) -> tuple[DetectedObject, ...]:
+        """Return detected footprint cells in deterministic graph order."""
+
+        return tuple(
+            obj for obj in self.objects if obj.object_type == ObjectType.FOOTPRINT_CELL
+        )
 
     @property
     def CellClassifications(self) -> tuple["CellClassification", ...]:
@@ -439,29 +449,28 @@ class DetectionGraph:
 
         return tuple(result for result in self.ocr_results if result.cell_id == cell_id)
 
-    def lookup_parsed(self, cell_id: str) -> tuple[ParsingResult, ...]:
-        """Return parsed OCR values for one cell id in deterministic order."""
+    def lookup_cell(self, cell_id: str) -> "FootprintCellData | None":
+        """Return interpreted footprint cell data by cell id when available."""
 
-        return tuple(
-            result
-            for result in self.parsed_values
-            if result.parsed_value.metadata.get("cell_id") == cell_id
-        )
+        if self.footprint_interpretation is None:
+            return None
+        return self.footprint_interpretation.lookup_cell(cell_id)
 
-    def lookup_numeric(self, cell_id: str) -> tuple[int | Decimal, ...]:
-        """Return valid parsed numeric values for one cell id."""
+    def lookup_bid(self, cell_id: str) -> "FootprintValue | None":
+        cell = self.lookup_cell(cell_id)
+        return None if cell is None else cell.bid()
 
-        return tuple(
-            value
-            for result in self.lookup_parsed(cell_id)
-            for value in (result.numeric_value(),)
-            if value is not None
-        )
+    def lookup_ask(self, cell_id: str) -> "FootprintValue | None":
+        cell = self.lookup_cell(cell_id)
+        return None if cell is None else cell.ask()
 
-    def lookup_invalid(self) -> tuple[ParsingResult, ...]:
-        """Return failed or invalid parsed OCR values."""
+    def lookup_delta(self, cell_id: str) -> "FootprintValue | None":
+        cell = self.lookup_cell(cell_id)
+        return None if cell is None else cell.delta()
 
-        return tuple(result for result in self.parsed_values if not result.is_valid())
+    def lookup_total_volume(self, cell_id: str) -> "FootprintValue | None":
+        cell = self.lookup_cell(cell_id)
+        return None if cell is None else cell.total_volume()
 
 
 @dataclass(frozen=True, slots=True)
@@ -1317,6 +1326,408 @@ class OCRResult:
     def average_confidence(self) -> float:
         confidences = [word.confidence for word in self.detected_words]
         return sum(confidences) / len(confidences) if confidences else self.confidence
+
+
+class FootprintSemanticType(Enum):
+    """Market meaning assigned to a validated footprint numeric value."""
+
+    UNKNOWN = "UNKNOWN"
+    BID_VOLUME = "BID_VOLUME"
+    ASK_VOLUME = "ASK_VOLUME"
+    DELTA = "DELTA"
+    TOTAL_VOLUME = "TOTAL_VOLUME"
+    EMPTY = "EMPTY"
+    INVALID = "INVALID"
+
+
+@dataclass(frozen=True, slots=True)
+class NumericValue:
+    """Validated numeric OCR post-processing output."""
+
+    value: int
+
+    def __post_init__(self) -> None:
+        if not isinstance(self.value, int):
+            raise ValueError("numeric value must be an integer")
+
+
+@dataclass(frozen=True, slots=True)
+class ParsedValue:
+    """Validated numeric value associated with one classified cell region."""
+
+    numeric_value: NumericValue
+    semantic_role: CellSemanticRole
+    confidence: float
+    source_region: CellRegion
+    cell_id: str
+
+    def __post_init__(self) -> None:
+        if not self.cell_id.strip():
+            raise ValueError("cell id is required")
+        _validate_confidence(self.confidence, "parsed value confidence")
+        if self.source_region.parent_cell_id != self.cell_id:
+            raise ValueError("parsed value source region must reference parent cell")
+        if self.source_region.semantic_role != self.semantic_role:
+            raise ValueError("parsed value semantic role must match source region")
+
+
+@dataclass(frozen=True, slots=True)
+class InterpretationWarning:
+    """Non-fatal footprint interpretation validation warning."""
+
+    code: str
+    message: str
+    cell_id: str = ""
+
+    def __post_init__(self) -> None:
+        if not self.code.strip():
+            raise ValueError("warning code is required")
+        if not self.message.strip():
+            raise ValueError("warning message is required")
+
+
+@dataclass(frozen=True, slots=True)
+class FootprintValue:
+    """A numeric value with market semantics inside a footprint cell."""
+
+    numeric_value: NumericValue
+    semantic_type: FootprintSemanticType
+    confidence: float
+    source_region: CellRegion
+    cell_id: str
+
+    def __post_init__(self) -> None:
+        if not self.cell_id.strip():
+            raise ValueError("cell id is required")
+        _validate_confidence(self.confidence, "footprint value confidence")
+        if self.source_region.parent_cell_id != self.cell_id:
+            raise ValueError("footprint value source region must reference parent cell")
+        if self.semantic_type in (
+            FootprintSemanticType.UNKNOWN,
+            FootprintSemanticType.INVALID,
+            FootprintSemanticType.EMPTY,
+        ):
+            raise ValueError(
+                "footprint value requires a concrete numeric semantic type"
+            )
+
+
+@dataclass(frozen=True, slots=True)
+class FootprintCellData:
+    """Interpreted market data for one footprint cell."""
+
+    cell_reference: CellReference
+    bid_value: FootprintValue | None = None
+    ask_value: FootprintValue | None = None
+    delta_value: FootprintValue | None = None
+    total_volume_value: FootprintValue | None = None
+    missing_values: tuple[FootprintSemanticType, ...] = ()
+    interpretation_warnings: tuple[InterpretationWarning, ...] = ()
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        values = tuple(
+            v
+            for v in (
+                self.bid_value,
+                self.ask_value,
+                self.delta_value,
+                self.total_volume_value,
+            )
+            if v is not None
+        )
+        cell_id = self.cell_reference.coordinate.cell_id
+        if self.cell_reference.coordinate is None:
+            raise ValueError("missing coordinate")
+        for value in values:
+            if value.cell_id != cell_id:
+                raise ValueError("footprint value cell id must match parent cell")
+        semantic_types = [value.semantic_type for value in values]
+        if len(set(semantic_types)) != len(semantic_types):
+            raise ValueError("duplicate semantic assignments are not allowed")
+        expected = {
+            "bid_value": FootprintSemanticType.BID_VOLUME,
+            "ask_value": FootprintSemanticType.ASK_VOLUME,
+            "delta_value": FootprintSemanticType.DELTA,
+            "total_volume_value": FootprintSemanticType.TOTAL_VOLUME,
+        }
+        for attr, semantic_type in expected.items():
+            value = getattr(self, attr)
+            if value is not None and value.semantic_type != semantic_type:
+                raise ValueError("invalid semantic mapping")
+        object.__setattr__(self, "missing_values", tuple(self.missing_values))
+        object.__setattr__(
+            self, "interpretation_warnings", tuple(self.interpretation_warnings)
+        )
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def bid(self) -> FootprintValue | None:
+        return self.bid_value
+
+    def ask(self) -> FootprintValue | None:
+        return self.ask_value
+
+    def delta(self) -> FootprintValue | None:
+        return self.delta_value
+
+    def total_volume(self) -> FootprintValue | None:
+        return self.total_volume_value
+
+    def is_complete(self) -> bool:
+        return (
+            not self.missing_values
+            and self.bid_value is not None
+            and self.ask_value is not None
+            and self.delta_value is not None
+        )
+
+    def is_empty(self) -> bool:
+        return not any(
+            (self.bid_value, self.ask_value, self.delta_value, self.total_volume_value)
+        )
+
+    def missing_fields(self) -> tuple[FootprintSemanticType, ...]:
+        return self.missing_values
+
+    def warnings(self) -> tuple[InterpretationWarning, ...]:
+        return self.interpretation_warnings
+
+
+@dataclass(frozen=True, slots=True)
+class FootprintInterpretation:
+    """Interpreted footprint data for an entire footprint grid."""
+
+    grid_id: str
+    ordered_cells: tuple[FootprintCellData, ...]
+    interpretation_confidence: float
+    interpretation_warnings: tuple[InterpretationWarning, ...] = ()
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.grid_id.strip():
+            raise ValueError("grid id is required")
+        _validate_confidence(
+            self.interpretation_confidence, "interpretation confidence"
+        )
+        ids = [cell.cell_reference.coordinate.cell_id for cell in self.ordered_cells]
+        if len(set(ids)) != len(ids):
+            raise ValueError("interpreted cells must be unique")
+        ordered = tuple(
+            sorted(
+                self.ordered_cells,
+                key=lambda c: (
+                    c.cell_reference.coordinate.row_index,
+                    c.cell_reference.coordinate.column_index,
+                    c.cell_reference.coordinate.cell_id,
+                ),
+            )
+        )
+        object.__setattr__(self, "ordered_cells", ordered)
+        object.__setattr__(
+            self, "interpretation_warnings", tuple(self.interpretation_warnings)
+        )
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup_cell(self, cell_id: str) -> FootprintCellData | None:
+        return next(
+            (
+                cell
+                for cell in self.ordered_cells
+                if cell.cell_reference.coordinate.cell_id == cell_id
+            ),
+            None,
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class InterpretationResult:
+    """Result wrapper for footprint semantic interpretation."""
+
+    interpretation: FootprintInterpretation
+    warnings: tuple[InterpretationWarning, ...] = ()
+
+    def __post_init__(self) -> None:
+        object.__setattr__(self, "warnings", tuple(self.warnings))
+
+
+@runtime_checkable
+class SemanticMapper(Protocol):
+    """Map classified cell roles and parsed values to footprint semantics."""
+
+    def map(
+        self, role: CellSemanticRole, parsed_value: ParsedValue
+    ) -> FootprintSemanticType:
+        """Return the footprint semantic type for one parsed value."""
+
+
+@dataclass(frozen=True, slots=True)
+class LayoutSemanticMapper:
+    """Generic mapper driven by cell layout roles rather than vendor layouts."""
+
+    role_mapping: Mapping[CellSemanticRole, FootprintSemanticType] = field(
+        default_factory=lambda: MappingProxyType(
+            {
+                CellSemanticRole.BID_REGION: FootprintSemanticType.BID_VOLUME,
+                CellSemanticRole.ASK_REGION: FootprintSemanticType.ASK_VOLUME,
+                CellSemanticRole.CENTER_REGION: FootprintSemanticType.DELTA,
+                CellSemanticRole.DELTA_REGION: FootprintSemanticType.DELTA,
+                CellSemanticRole.EMPTY: FootprintSemanticType.EMPTY,
+                CellSemanticRole.UNKNOWN: FootprintSemanticType.UNKNOWN,
+                CellSemanticRole.BACKGROUND: FootprintSemanticType.UNKNOWN,
+            }
+        )
+    )
+
+    def __post_init__(self) -> None:
+        object.__setattr__(
+            self, "role_mapping", MappingProxyType(dict(self.role_mapping))
+        )
+
+    def map(
+        self, role: CellSemanticRole, parsed_value: ParsedValue
+    ) -> FootprintSemanticType:
+        if role != parsed_value.semantic_role:
+            raise ValueError("invalid semantic mapping")
+        return self.role_mapping.get(role, FootprintSemanticType.UNKNOWN)
+
+
+@runtime_checkable
+class FootprintInterpreter(Protocol):
+    """Interpret parsed numeric values for one classified footprint cell."""
+
+    def interpret(
+        self, classification: CellClassification, parsed_values: Sequence[ParsedValue]
+    ) -> FootprintCellData:
+        """Return interpreted cell data."""
+
+
+@dataclass(frozen=True, slots=True)
+class DefaultFootprintInterpreter:
+    """Deterministic semantic interpreter for one footprint cell."""
+
+    mapper: SemanticMapper = field(default_factory=LayoutSemanticMapper)
+
+    def interpret(
+        self, classification: CellClassification, parsed_values: Sequence[ParsedValue]
+    ) -> FootprintCellData:
+        cell_id = classification.cell_id
+        if classification.cell_reference is None:
+            raise ValueError("missing parent cell")
+        by_type: dict[FootprintSemanticType, FootprintValue] = {}
+        warnings: list[InterpretationWarning] = []
+        for parsed in parsed_values:
+            if parsed.cell_id != cell_id:
+                raise ValueError("parsed value missing parent cell")
+            semantic_type = self.mapper.map(parsed.semantic_role, parsed)
+            if semantic_type == FootprintSemanticType.INVALID:
+                raise ValueError("invalid semantic mapping")
+            if semantic_type in (
+                FootprintSemanticType.UNKNOWN,
+                FootprintSemanticType.EMPTY,
+            ):
+                warnings.append(
+                    InterpretationWarning(
+                        semantic_type.value.lower(),
+                        f"{semantic_type.value} semantic role",
+                        cell_id,
+                    )
+                )
+                continue
+            if semantic_type in by_type:
+                raise ValueError(f"duplicate {semantic_type.value.lower()} values")
+            by_type[semantic_type] = FootprintValue(
+                parsed.numeric_value,
+                semantic_type,
+                parsed.confidence,
+                parsed.source_region,
+                cell_id,
+            )
+        missing = tuple(
+            t
+            for t in (
+                FootprintSemanticType.BID_VOLUME,
+                FootprintSemanticType.ASK_VOLUME,
+                FootprintSemanticType.DELTA,
+            )
+            if t not in by_type
+        )
+        if missing:
+            warnings.append(
+                InterpretationWarning(
+                    "missing_values",
+                    "one or more footprint values are missing",
+                    cell_id,
+                )
+            )
+        return FootprintCellData(
+            classification.cell_reference,
+            by_type.get(FootprintSemanticType.BID_VOLUME),
+            by_type.get(FootprintSemanticType.ASK_VOLUME),
+            by_type.get(FootprintSemanticType.DELTA),
+            by_type.get(FootprintSemanticType.TOTAL_VOLUME),
+            missing,
+            tuple(warnings),
+            {
+                "cell_id": cell_id,
+                "row": classification.row,
+                "column": classification.column,
+            },
+        )
+
+
+@runtime_checkable
+class InterpretationPipeline(Protocol):
+    """Run classification, parsed values, semantic mapping, and grid interpretation."""
+
+    def run(
+        self,
+        cell_classifications: Sequence[CellClassification],
+        parsed_values: Sequence[ParsedValue],
+    ) -> FootprintInterpretation:
+        """Return grid-level interpretation."""
+
+
+@dataclass(frozen=True, slots=True)
+class SequentialInterpretationPipeline:
+    """Deterministic footprint semantic interpretation pipeline."""
+
+    interpreter: FootprintInterpreter = field(
+        default_factory=DefaultFootprintInterpreter
+    )
+
+    def run(
+        self,
+        cell_classifications: Sequence[CellClassification],
+        parsed_values: Sequence[ParsedValue],
+    ) -> FootprintInterpretation:
+        if not cell_classifications:
+            raise ValueError("at least one cell classification is required")
+        ordered_classifications = tuple(
+            sorted(cell_classifications, key=lambda c: (c.row, c.column, c.cell_id))
+        )
+        grid_id = ordered_classifications[0].cell_reference.coordinate.grid.grid_id
+        by_cell: dict[str, list[ParsedValue]] = {
+            c.cell_id: [] for c in ordered_classifications
+        }
+        for parsed in parsed_values:
+            if parsed.cell_id not in by_cell:
+                raise ValueError("parsed value missing parent cell")
+            by_cell[parsed.cell_id].append(parsed)
+        cells = tuple(
+            self.interpreter.interpret(c, tuple(by_cell[c.cell_id]))
+            for c in ordered_classifications
+        )
+        warnings = tuple(w for cell in cells for w in cell.warnings())
+        values = tuple(
+            v
+            for cell in cells
+            for v in (cell.bid(), cell.ask(), cell.delta(), cell.total_volume())
+            if v is not None
+        )
+        confidence = sum(v.confidence for v in values) / len(values) if values else 1.0
+        return FootprintInterpretation(
+            grid_id, cells, confidence, warnings, {"cell_count": len(cells)}
+        )
 
 
 @runtime_checkable
