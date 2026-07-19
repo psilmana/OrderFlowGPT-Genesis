@@ -2,7 +2,7 @@
 
 ## Purpose
 
-OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 added image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`. Milestone 5 added the first real vision detector for locating the main ATAS trading chart. Milestone 6 adds the contract-only Vision Object Detection Foundation that future semantic detectors will use. Milestone 7 implements the first real semantic detector: deterministic Price Axis detection.
+OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 added image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`. Milestone 5 added the first real vision detector for locating the main ATAS trading chart. Milestone 6 adds the contract-only Vision Object Detection Foundation that future semantic detectors will use. Milestone 7 implements the first real semantic detector: deterministic Price Axis detection. Milestone 8 implements the second real semantic detector: deterministic Time Axis detection.
 
 ## Package boundaries
 
@@ -112,13 +112,13 @@ DetectionGraph
 ```
 
 - `ObjectId`, `ObjectType`, `DetectionConfidence`, and `DetectionSource` are immutable value objects for semantic detections.
-- `ObjectType` initially supports price text, price axes, time labels, candles, footprint cells, bid values, ask values, delta values, volume values, POC markers, HVNs, LVNs, big trades, icebergs, absorption, stacked imbalances, volume profiles, CVD panels, delta panels, and unknown objects.
+- `ObjectType` initially supports price text, price axes, time axes, time labels, candles, footprint cells, bid values, ask values, delta values, volume values, POC markers, HVNs, LVNs, big trades, icebergs, absorption, stacked imbalances, volume profiles, CVD panels, delta panels, and unknown objects.
 - `DetectedObject` contains a unique id, bounding box, confidence, object type, optional parent id, optional child ids, frame id, detection source, and immutable metadata mapping.
 - `DetectionGraph` stores all detected objects for one frame and validates unique ids, duplicate ids, parent references, child references, and frame alignment.
 - `DetectionContext` is the only input accepted by future object detectors. It contains a `ProcessedFrame`, a `WorkspaceLayout`, and immutable configuration.
 - `ObjectDetector`, `ObjectDetectionPipeline`, and `DetectorRegistry` define how semantic detectors are registered and run.
-- `SequentialObjectDetectionPipeline` runs registered detectors with `PriceAxisDetector` first when it is registered, then returns a validated graph.
-- `TimeAxisDetector`, `FootprintDetector`, `VolumeProfileDetector`, `BigTradeDetector`, and `AbsorptionDetector` remain placeholders that intentionally return empty object detection results.
+- `SequentialObjectDetectionPipeline` runs registered detectors with `PriceAxisDetector` first and `TimeAxisDetector` second when they are registered, then returns a validated graph.
+- `FootprintDetector`, `VolumeProfileDetector`, `BigTradeDetector`, and `AbsorptionDetector` remain placeholders that intentionally return empty object detection results. `TimeAxisDetector` becomes a real detector in Milestone 8 while preserving the same object-detector contract.
 
 Milestone 6 deliberately excluded real detection behavior, OpenCV, OCR, machine learning, AI calls, screen capture, external libraries, side effects, globals, threading, async execution, and networking. Its purpose was to create stable extension seams for Milestone 7.
 
@@ -128,7 +128,15 @@ Milestone 7 extends the object-detection foundation with the first real `ObjectD
 
 The detector uses no OCR, AI, ML, deep learning, OpenCV, networking, capture, threading, async execution, mutable globals, or external libraries. It relies on in-memory luminance, vertical edge density, brightness-transition checks, width ratios, projection scoring, overlap rejection, and confidence validation. Its metadata records `estimated_width`, `edge_density`, and `projection_score`. Optional debug overlays draw only the price-axis rectangle and do not alter chart overlays.
 
-OCR is intentionally not implemented in Milestone 7 because the scope is region detection only. Reading price labels requires a separate text-recognition contract and validation strategy; this milestone first makes the axis geometry stable for downstream work. Milestone 8 will detect the Time Axis next, preserving the same deterministic extension approach.
+OCR is intentionally not implemented in Milestone 7 because the scope is region detection only. Reading price labels requires a separate text-recognition contract and validation strategy; this milestone first makes the axis geometry stable for downstream work.
+
+## Milestone 8: Time Axis Detector
+
+Milestone 8 adds `TimeAxisDetector`, the second real object detector. It receives `DetectionContext`, anchors itself to `WorkspaceLayout.chart_region`, scans only the workspace area immediately below the detected chart, and returns `DetectionResult[DetectedObject]` with `ObjectType.TIME_AXIS` when deterministic geometry validates a horizontal time-axis region.
+
+The detector uses no OCR, AI, ML, deep learning, OpenCV, networking, capture, threading, async execution, mutable globals, or external libraries. It relies on in-memory luminance, horizontal edge density, brightness-transition checks, height ratios, projection scoring, workspace containment, excessive chart-overlap rejection, and horizontal alignment validation against the chart. Its metadata records `estimated_height`, `edge_density`, `projection_score`, and `horizontal_alignment_score`. Optional debug overlays draw only the time-axis rectangle and do not alter chart or price-axis overlays.
+
+Timestamp OCR is intentionally deferred. Milestone 8 identifies where the time axis is, not what timestamp labels say, because timestamp parsing requires a separate OCR/text-recognition contract, locale/timezone handling, error modeling, and semantic validation after deterministic region geometry is reliable. Milestone 9 begins Footprint Grid Detection.
 
 ## Extension rules for future milestones
 
