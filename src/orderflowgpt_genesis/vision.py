@@ -220,6 +220,7 @@ class ObjectType:
 
     PRICE_TEXT: ClassVar["ObjectType"]
     PRICE_AXIS: ClassVar["ObjectType"]
+    TIME_AXIS: ClassVar["ObjectType"]
     TIME_LABEL: ClassVar["ObjectType"]
     CANDLE: ClassVar["ObjectType"]
     FOOTPRINT_CELL: ClassVar["ObjectType"]
@@ -242,6 +243,7 @@ class ObjectType:
         {
             "PRICE_TEXT",
             "PRICE_AXIS",
+            "TIME_AXIS",
             "TIME_LABEL",
             "CANDLE",
             "FOOTPRINT_CELL",
@@ -406,7 +408,9 @@ class SequentialObjectDetectionPipeline:
             sorted(
                 self.registry.detectors,
                 key=lambda detector: (
-                    0 if detector.name == PriceAxisDetector.name else 1
+                    0
+                    if detector.name == PriceAxisDetector.name
+                    else 1 if detector.name == TimeAxisDetector.name else 2
                 ),
             )
         )
@@ -678,8 +682,258 @@ class PriceAxisDetector:
         )
 
 
-class TimeAxisDetector(_EmptyObjectDetector):
+@dataclass(frozen=True, slots=True)
+class TimeAxisDetectorConfig:
+    """Immutable thresholds for deterministic time-axis detection."""
+
+    min_height_ratio: float = 0.025
+    max_height_ratio: float = 0.16
+    min_edge_density: float = 0.01
+    min_confidence: float = 0.35
+    min_projection_score: float = 0.18
+    brightness_delta_threshold: int = 18
+    max_chart_overlap_ratio: float = 0.05
+    alignment_tolerance: int = 4
+    debug_overlay: bool = False
+
+    def __post_init__(self) -> None:
+        for name in (
+            "min_height_ratio",
+            "max_height_ratio",
+            "min_edge_density",
+            "min_confidence",
+            "min_projection_score",
+            "max_chart_overlap_ratio",
+        ):
+            value = getattr(self, name)
+            if not 0.0 <= value <= 1.0:
+                raise ValueError(f"{name} must be between 0.0 and 1.0")
+        if self.min_height_ratio <= 0.0:
+            raise ValueError("min_height_ratio must be greater than 0.0")
+        if self.max_height_ratio <= self.min_height_ratio:
+            raise ValueError("max_height_ratio must exceed min_height_ratio")
+        if self.brightness_delta_threshold <= 0:
+            raise ValueError("brightness_delta_threshold must be positive")
+        if self.alignment_tolerance < 0:
+            raise ValueError("alignment_tolerance must be non-negative")
+
+
+class TimeAxisDetector:
+    """Detect only the horizontal time-axis region immediately below a chart."""
+
     name = "time-axis-detector"
+
+    def __init__(self, config: TimeAxisDetectorConfig | None = None) -> None:
+        self._config = config or TimeAxisDetectorConfig()
+
+    def detect(self, context: DetectionContext) -> DetectionResult[DetectedObject]:
+        frame = context.processed_frame.source_frame
+        layout = context.workspace_layout
+        chart = layout.chart_region.bounds
+        workspace = layout.bounds
+        search_top = chart.bottom
+        search_bottom = min(
+            workspace.bottom,
+            chart.bottom + round(chart.height * self._config.max_height_ratio),
+        )
+        if search_top >= search_bottom or chart.width <= 0:
+            return self._empty(
+                "no workspace area exists immediately below chart",
+                frame.width,
+                frame.height,
+            )
+
+        min_height = max(1, round(chart.height * self._config.min_height_ratio))
+        max_height = max(
+            min_height, round(chart.height * self._config.max_height_ratio)
+        )
+        max_height = min(max_height, search_bottom - search_top)
+        if max_height <= 0:
+            return self._empty(
+                "time-axis search height is zero", frame.width, frame.height
+            )
+
+        luminance = _luminance(frame)
+        candidate, projection_score = _time_axis_candidate(
+            luminance,
+            frame.width,
+            chart,
+            search_top,
+            search_bottom,
+            min_height,
+            max_height,
+            self._config,
+        )
+        if candidate is None:
+            return self._empty(
+                "no time-axis contrast/projection candidate found",
+                frame.width,
+                frame.height,
+            )
+        if not _contains(workspace, candidate):
+            return self._empty(
+                "time-axis candidate outside workspace layout",
+                frame.width,
+                frame.height,
+                candidate,
+                projection_score,
+            )
+        overlap = _overlap_area(candidate, chart) / (candidate.width * candidate.height)
+        if overlap > self._config.max_chart_overlap_ratio:
+            return self._empty(
+                "time-axis candidate overlaps chart excessively",
+                frame.width,
+                frame.height,
+                candidate,
+                projection_score,
+            )
+        if candidate.height > max_height:
+            return self._empty(
+                "time-axis candidate taller than expected",
+                frame.width,
+                frame.height,
+                candidate,
+                projection_score,
+            )
+        horizontal_alignment_score = _horizontal_alignment_score(
+            chart, candidate, self._config.alignment_tolerance
+        )
+        side_width = max(1, min(candidate.width // 12, 12))
+        center_probe = BoundingBox(
+            candidate.x + (candidate.width // 3),
+            candidate.y,
+            side_width,
+            candidate.height,
+        )
+        left_probe = BoundingBox(candidate.x, candidate.y, side_width, candidate.height)
+        right_probe = BoundingBox(
+            candidate.right - side_width, candidate.y, side_width, candidate.height
+        )
+        center_mean = _region_mean(luminance, frame.width, center_probe)
+        side_delta = max(
+            abs(_region_mean(luminance, frame.width, left_probe) - center_mean),
+            abs(_region_mean(luminance, frame.width, right_probe) - center_mean),
+        )
+        if (
+            horizontal_alignment_score < 1.0
+            or side_delta > self._config.brightness_delta_threshold
+        ):
+            return self._empty(
+                "time-axis candidate is not horizontally aligned with chart",
+                frame.width,
+                frame.height,
+                candidate,
+                projection_score,
+            )
+
+        chart_edge = BoundingBox(
+            chart.x, max(chart.y, chart.bottom - min_height), chart.width, min_height
+        )
+        immediate_strip = BoundingBox(chart.x, chart.bottom, chart.width, min_height)
+        brightness_delta = abs(
+            _region_mean(luminance, frame.width, immediate_strip)
+            - _region_mean(luminance, frame.width, chart_edge)
+        )
+        if brightness_delta < self._config.brightness_delta_threshold * 3:
+            return self._empty(
+                "time-axis candidate rejected by brightness transition",
+                frame.width,
+                frame.height,
+                candidate,
+                projection_score,
+            )
+
+        edge_density = _horizontal_edge_count(luminance, frame.width, candidate) / (
+            candidate.width * candidate.height
+        )
+        height_score = 1.0 - min(
+            abs(candidate.height - min_height) / max(max_height, 1), 1.0
+        )
+        density_score = min(
+            edge_density / max(self._config.min_edge_density * 3.0, 0.001), 1.0
+        )
+        confidence = round(
+            max(
+                0.0,
+                min(
+                    (projection_score * 0.45)
+                    + (density_score * 0.35)
+                    + (height_score * 0.1)
+                    + (horizontal_alignment_score * 0.1),
+                    1.0,
+                ),
+            ),
+            3,
+        )
+        if edge_density < self._config.min_edge_density:
+            return self._empty(
+                "time-axis candidate rejected by edge density",
+                frame.width,
+                frame.height,
+                candidate,
+                confidence,
+            )
+        if (
+            projection_score < self._config.min_projection_score
+            or confidence < self._config.min_confidence
+        ):
+            return self._empty(
+                "time-axis candidate rejected by confidence",
+                frame.width,
+                frame.height,
+                candidate,
+                confidence,
+            )
+
+        metadata = {
+            "estimated_height": candidate.height,
+            "edge_density": round(edge_density, 6),
+            "projection_score": round(projection_score, 6),
+            "horizontal_alignment_score": round(horizontal_alignment_score, 6),
+        }
+        detected = DetectedObject(
+            object_id=ObjectId(f"{frame.frame_id}:time-axis"),
+            bounds=candidate,
+            confidence=DetectionConfidence(confidence),
+            object_type=ObjectType.TIME_AXIS,
+            frame_id=frame.frame_id,
+            source=DetectionSource(self.name),
+            metadata=metadata,
+        )
+        return DetectionResult(
+            region=candidate,
+            confidence=confidence,
+            reason="detected time axis immediately below chart using deterministic projection/edge analysis without OCR",
+            detector_name=self.name,
+            debug_overlay=(
+                _debug_overlay(
+                    frame.width, frame.height, candidate, confidence, "time_axis"
+                )
+                if self._config.debug_overlay
+                else None
+            ),
+            detected_object=detected,
+        )
+
+    def _empty(
+        self,
+        reason: str,
+        width: int,
+        height: int,
+        box: BoundingBox | None = None,
+        confidence: float = 0.0,
+    ) -> DetectionResult[DetectedObject]:
+        return DetectionResult(
+            region=None,
+            confidence=0.0,
+            reason=reason,
+            detector_name=self.name,
+            debug_overlay=(
+                _debug_overlay(width, height, box, confidence, "rejected")
+                if self._config.debug_overlay
+                else None
+            ),
+        )
 
 
 class FootprintDetector(_EmptyObjectDetector):
@@ -1555,6 +1809,91 @@ def _price_axis_candidate(
     return best_box, round(best_score, 6)
 
 
+def _time_axis_candidate(
+    luminance: Sequence[int],
+    frame_width: int,
+    chart: BoundingBox,
+    search_top: int,
+    search_bottom: int,
+    min_height: int,
+    max_height: int,
+    config: TimeAxisDetectorConfig,
+) -> tuple[BoundingBox | None, float]:
+    chart_edge_mean = _region_mean(
+        luminance,
+        frame_width,
+        BoundingBox(
+            chart.x, max(chart.y, chart.bottom - min_height), chart.width, min_height
+        ),
+    )
+    best_box: BoundingBox | None = None
+    best_score = 0.0
+    for height in range(min_height, max_height + 1):
+        box = BoundingBox(x=chart.x, y=search_top, width=chart.width, height=height)
+        mean_delta = abs(_region_mean(luminance, frame_width, box) - chart_edge_mean)
+        edge_density = _horizontal_edge_count(luminance, frame_width, box) / (
+            box.width * box.height
+        )
+        active_rows = 0
+        for row_y in range(box.y, box.bottom):
+            if row_y == 0:
+                continue
+            count = sum(
+                1
+                for x in range(box.x, box.right)
+                if abs(
+                    luminance[row_y * frame_width + x]
+                    - luminance[(row_y - 1) * frame_width + x]
+                )
+                >= 45
+            )
+            if count / box.width >= config.min_edge_density:
+                active_rows += 1
+        if active_rows < 2:
+            continue
+        projection_score = active_rows / box.height
+        contrast_score = min(mean_delta / config.brightness_delta_threshold, 1.0)
+        density_score = min(
+            edge_density / max(config.min_edge_density * 3.0, 0.001), 1.0
+        )
+        height_score = height / max_height
+        score = (
+            (projection_score * 0.45)
+            + (contrast_score * 0.2)
+            + (density_score * 0.15)
+            + (height_score * 0.2)
+        )
+        if score > best_score:
+            best_box = box
+            best_score = score
+    return best_box, round(best_score, 6)
+
+
+def _horizontal_edge_count(
+    luminance: Sequence[int], width: int, box: BoundingBox
+) -> int:
+    total = 0
+    for y in range(max(1, box.y), box.bottom):
+        row = y * width
+        previous = (y - 1) * width
+        for x in range(box.x, box.right):
+            if abs(luminance[row + x] - luminance[previous + x]) >= 45:
+                total += 1
+    return total
+
+
+def _horizontal_alignment_score(
+    chart: BoundingBox, candidate: BoundingBox, tolerance: int
+) -> float:
+    left_delta = abs(candidate.x - chart.x)
+    right_delta = abs(candidate.right - chart.right)
+    if left_delta > tolerance or right_delta > tolerance:
+        return 0.0
+    if tolerance == 0:
+        return 1.0
+    return 1.0 - ((left_delta + right_delta) / (2 * tolerance))
+
+
 def _vertical_edge_count(luminance: Sequence[int], width: int, box: BoundingBox) -> int:
     total = 0
     for y in range(box.y, box.bottom):
@@ -1648,6 +1987,7 @@ def _png_rgb(width: int, height: int, rgb: bytes) -> bytes:
 
 ObjectType.PRICE_TEXT = ObjectType("PRICE_TEXT")
 ObjectType.PRICE_AXIS = ObjectType("PRICE_AXIS")
+ObjectType.TIME_AXIS = ObjectType("TIME_AXIS")
 ObjectType.TIME_LABEL = ObjectType("TIME_LABEL")
 ObjectType.CANDLE = ObjectType("CANDLE")
 ObjectType.FOOTPRINT_CELL = ObjectType("FOOTPRINT_CELL")
