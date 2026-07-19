@@ -189,6 +189,7 @@ class DetectionResult(Generic[TDetected]):
     detector_name: DetectorName
     debug_overlay: DebugOverlay | None = None
     detected_object: TDetected | None = None
+    detected_objects: tuple[TDetected, ...] = ()
 
     def __post_init__(self) -> None:
         if not 0.0 <= self.confidence <= 1.0:
@@ -199,6 +200,10 @@ class DetectionResult(Generic[TDetected]):
             raise ValueError("detector name is required")
         if self.region is None and self.confidence != 0.0:
             raise ValueError("missing detections must have zero confidence")
+        objects = self.detected_objects
+        if self.detected_object is not None and not objects:
+            objects = (self.detected_object,)
+        object.__setattr__(self, "detected_objects", tuple(objects))
 
 
 @dataclass(frozen=True, slots=True)
@@ -417,16 +422,20 @@ class SequentialObjectDetectionPipeline:
                     else (
                         1
                         if detector.name == TimeAxisDetector.name
-                        else 2 if detector.name == FootprintGridDetector.name else 3
+                        else (
+                            2
+                            if detector.name == FootprintGridDetector.name
+                            else 3 if detector.name == FootprintCellDetector.name else 4
+                        )
                     )
                 ),
             )
         )
         detector_objects = tuple(
-            result.detected_object
+            detected
             for detector in ordered_detectors
             for result in (detector.detect(context),)
-            if result.detected_object is not None
+            for detected in result.detected_objects
         )
         if any(
             detector.name == FootprintGridDetector.name
@@ -1131,6 +1140,201 @@ class FootprintGridDetector:
                 else None
             ),
             detected_object=detected,
+        )
+
+    def _empty(
+        self,
+        reason: str,
+        width: int,
+        height: int,
+        box: BoundingBox | None = None,
+        confidence: float = 0.0,
+    ) -> DetectionResult[DetectedObject]:
+        return DetectionResult(
+            region=None,
+            confidence=0.0,
+            reason=reason,
+            detector_name=self.name,
+            debug_overlay=(
+                _debug_overlay(width, height, box, confidence, "rejected")
+                if self._config.debug_overlay
+                else None
+            ),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class FootprintCellDetectorConfig:
+    """Immutable thresholds for deterministic footprint-cell grid detection."""
+
+    minimum_cell_width: int = 6
+    minimum_cell_height: int = 6
+    maximum_spacing_variation: float = 0.25
+    maximum_alignment_deviation: int = 2
+    minimum_confidence: float = 0.35
+    debug_overlay: bool = False
+
+    def __post_init__(self) -> None:
+        if self.minimum_cell_width <= 0:
+            raise ValueError("minimum_cell_width must be positive")
+        if self.minimum_cell_height <= 0:
+            raise ValueError("minimum_cell_height must be positive")
+        if not 0.0 <= self.maximum_spacing_variation <= 1.0:
+            raise ValueError("maximum_spacing_variation must be between 0.0 and 1.0")
+        if self.maximum_alignment_deviation < 0:
+            raise ValueError("maximum_alignment_deviation must be non-negative")
+        if not 0.0 <= self.minimum_confidence <= 1.0:
+            raise ValueError("minimum_confidence must be between 0.0 and 1.0")
+
+
+class FootprintCellDetector:
+    """Segment a detected footprint grid into deterministic cell rectangles only."""
+
+    name = "footprint-cell-detector"
+
+    def __init__(self, config: FootprintCellDetectorConfig | None = None) -> None:
+        self._config = config or FootprintCellDetectorConfig()
+
+    def detect(self, context: DetectionContext) -> DetectionResult[DetectedObject]:
+        frame = context.processed_frame.source_frame
+        grid_result = FootprintGridDetector().detect(context)
+        grid_object = grid_result.detected_object
+        if grid_result.region is None or grid_object is None:
+            return self._empty(
+                "footprint grid is required before cell detection",
+                frame.width,
+                frame.height,
+            )
+        grid = grid_result.region
+        chart = context.workspace_layout.chart_region.bounds
+        luminance = _luminance(frame)
+        columns = _grid_line_centers(luminance, frame.width, grid, vertical=True)
+        rows = _grid_line_centers(luminance, frame.width, grid, vertical=False)
+        if len(columns) < 2 or len(rows) < 2:
+            return self._empty(
+                "insufficient grid lines for footprint cells",
+                frame.width,
+                frame.height,
+                grid,
+                grid_result.confidence,
+            )
+        if _has_duplicates(columns) or _has_duplicates(rows):
+            return self._empty(
+                "duplicate row/column coordinates rejected",
+                frame.width,
+                frame.height,
+                grid,
+                grid_result.confidence,
+            )
+        if not _spacing_regular(
+            columns, self._config.maximum_spacing_variation
+        ) or not _spacing_regular(rows, self._config.maximum_spacing_variation):
+            return self._empty(
+                "irregular footprint-cell spacing rejected",
+                frame.width,
+                frame.height,
+                grid,
+                grid_result.confidence,
+            )
+        cell_widths = tuple(right - left for left, right in zip(columns, columns[1:]))
+        cell_heights = tuple(bottom - top for top, bottom in zip(rows, rows[1:]))
+        if (
+            min(cell_widths) < self._config.minimum_cell_width
+            or min(cell_heights) < self._config.minimum_cell_height
+        ):
+            return self._empty(
+                "footprint cells smaller than configured minimum",
+                frame.width,
+                frame.height,
+                grid,
+                grid_result.confidence,
+            )
+        cells: list[DetectedObject] = []
+        for row_index, (top, bottom) in enumerate(zip(rows, rows[1:])):
+            for column_index, (left, right) in enumerate(zip(columns, columns[1:])):
+                box = BoundingBox(left, top, right - left, bottom - top)
+                if not self._valid_cell(box, grid, chart, context.workspace_layout):
+                    return self._empty(
+                        "footprint cell failed containment/axis validation",
+                        frame.width,
+                        frame.height,
+                        box,
+                        grid_result.confidence,
+                    )
+                confidence = round(
+                    min(
+                        grid_result.confidence
+                        * _cell_alignment_score(box, cell_widths, cell_heights),
+                        1.0,
+                    ),
+                    3,
+                )
+                if confidence < self._config.minimum_confidence:
+                    return self._empty(
+                        "footprint cell confidence below minimum",
+                        frame.width,
+                        frame.height,
+                        box,
+                        confidence,
+                    )
+                cells.append(
+                    DetectedObject(
+                        object_id=ObjectId(
+                            f"{frame.frame_id}:footprint-cell:{row_index}:{column_index}"
+                        ),
+                        bounds=box,
+                        confidence=DetectionConfidence(confidence),
+                        object_type=ObjectType.FOOTPRINT_CELL,
+                        frame_id=frame.frame_id,
+                        source=DetectionSource(self.name),
+                        parent_id=grid_object.object_id,
+                        metadata={
+                            "row_index": row_index,
+                            "column_index": column_index,
+                            "cell_width": box.width,
+                            "cell_height": box.height,
+                            "grid_width": grid.width,
+                            "grid_height": grid.height,
+                        },
+                    )
+                )
+        result_confidence = min((cell.confidence.value for cell in cells), default=0.0)
+        return DetectionResult(
+            region=grid,
+            confidence=result_confidence,
+            reason="segmented footprint grid into deterministic cell geometry only; no OCR, AI, ML, bid/ask, volume, or delta classification",
+            detector_name=self.name,
+            debug_overlay=(
+                _debug_overlay_many(
+                    frame.width,
+                    frame.height,
+                    grid,
+                    tuple(cell.bounds for cell in cells),
+                    result_confidence,
+                )
+                if self._config.debug_overlay
+                else None
+            ),
+            detected_object=cells[0] if cells else None,
+            detected_objects=tuple(cells),
+        )
+
+    def _valid_cell(
+        self,
+        box: BoundingBox,
+        grid: BoundingBox,
+        chart: BoundingBox,
+        layout: WorkspaceLayout,
+    ) -> bool:
+        return (
+            _contains(grid, box)
+            and _contains(chart, box)
+            and not _axis_overlap(
+                box, layout.price_axis.bounds, layout.price_axis.confidence
+            )
+            and not _axis_overlap(
+                box, layout.time_axis.bounds, layout.time_axis.confidence
+            )
         )
 
     def _empty(
@@ -2161,6 +2365,63 @@ def _cluster_centers(indices: Sequence[int]) -> tuple[int, ...]:
     return tuple((start + end) // 2 for start, end in clusters)
 
 
+def _grid_line_centers(
+    luminance: Sequence[int], width: int, grid: BoundingBox, vertical: bool
+) -> tuple[int, ...]:
+    indices: list[int] = []
+    if vertical:
+        threshold = max(2, round(grid.height * 0.45))
+        for x in range(grid.x, grid.right):
+            if x == 0:
+                continue
+            count = sum(
+                1
+                for y in range(grid.y, grid.bottom)
+                if abs(luminance[y * width + x] - luminance[y * width + x - 1]) >= 45
+            )
+            if count >= threshold:
+                indices.append(x)
+    else:
+        threshold = max(2, round(grid.width * 0.45))
+        for y in range(grid.y, grid.bottom):
+            if y == 0:
+                continue
+            count = sum(
+                1
+                for x in range(grid.x, grid.right)
+                if abs(luminance[y * width + x] - luminance[(y - 1) * width + x]) >= 45
+            )
+            if count >= threshold:
+                indices.append(y)
+    return _cluster_centers(tuple(indices))
+
+
+def _has_duplicates(indices: Sequence[int]) -> bool:
+    return len(set(indices)) != len(indices)
+
+
+def _spacing_regular(indices: Sequence[int], tolerance: float) -> bool:
+    if len(indices) < 3:
+        return True
+    gaps = [right - left for left, right in zip(indices, indices[1:])]
+    if any(gap <= 0 for gap in gaps):
+        return False
+    average = sum(gaps) / len(gaps)
+    if average <= 0:
+        return False
+    return all(abs(gap - average) / average <= tolerance for gap in gaps)
+
+
+def _cell_alignment_score(
+    box: BoundingBox, cell_widths: Sequence[int], cell_heights: Sequence[int]
+) -> float:
+    average_width = sum(cell_widths) / len(cell_widths)
+    average_height = sum(cell_heights) / len(cell_heights)
+    width_score = 1.0 - min(abs(box.width - average_width) / average_width, 1.0)
+    height_score = 1.0 - min(abs(box.height - average_height) / average_height, 1.0)
+    return max(0.0, min((width_score + height_score) / 2.0, 1.0))
+
+
 def _axis_overlap(
     candidate: BoundingBox, axis: BoundingBox, axis_confidence: float
 ) -> bool:
@@ -2260,6 +2521,23 @@ def _debug_overlay(
     if box is not None:
         color = (0, 255, 96) if label == "chart" else (255, 128, 0)
         _draw_rect(pixels, width, height, box, color)
+    _draw_label_bars(pixels, width, height, confidence)
+    return DebugOverlay(
+        data=_png_rgb(width, height, bytes(pixels)), width=width, height=height
+    )
+
+
+def _debug_overlay_many(
+    width: int,
+    height: int,
+    grid: BoundingBox,
+    cells: tuple[BoundingBox, ...],
+    confidence: float,
+) -> DebugOverlay:
+    pixels = bytearray([24, 28, 34] * width * height)
+    _draw_rect(pixels, width, height, grid, (255, 128, 0))
+    for cell in cells:
+        _draw_rect(pixels, width, height, cell, (0, 180, 255))
     _draw_label_bars(pixels, width, height, confidence)
     return DebugOverlay(
         data=_png_rgb(width, height, bytes(pixels)), width=width, height=height
