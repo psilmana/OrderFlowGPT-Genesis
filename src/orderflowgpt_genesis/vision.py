@@ -218,11 +218,13 @@ class ObjectType:
 
     value: str
 
+    CHART: ClassVar["ObjectType"]
     PRICE_TEXT: ClassVar["ObjectType"]
     PRICE_AXIS: ClassVar["ObjectType"]
     TIME_AXIS: ClassVar["ObjectType"]
     TIME_LABEL: ClassVar["ObjectType"]
     CANDLE: ClassVar["ObjectType"]
+    FOOTPRINT_GRID: ClassVar["ObjectType"]
     FOOTPRINT_CELL: ClassVar["ObjectType"]
     BID_VALUE: ClassVar["ObjectType"]
     ASK_VALUE: ClassVar["ObjectType"]
@@ -241,11 +243,13 @@ class ObjectType:
     UNKNOWN: ClassVar["ObjectType"]
     _SUPPORTED: ClassVar[frozenset[str]] = frozenset(
         {
+            "CHART",
             "PRICE_TEXT",
             "PRICE_AXIS",
             "TIME_AXIS",
             "TIME_LABEL",
             "CANDLE",
+            "FOOTPRINT_GRID",
             "FOOTPRINT_CELL",
             "BID_VALUE",
             "ASK_VALUE",
@@ -410,16 +414,40 @@ class SequentialObjectDetectionPipeline:
                 key=lambda detector: (
                     0
                     if detector.name == PriceAxisDetector.name
-                    else 1 if detector.name == TimeAxisDetector.name else 2
+                    else (
+                        1
+                        if detector.name == TimeAxisDetector.name
+                        else 2 if detector.name == FootprintGridDetector.name else 3
+                    )
                 ),
             )
         )
-        detected = tuple(
+        detector_objects = tuple(
             result.detected_object
             for detector in ordered_detectors
             for result in (detector.detect(context),)
             if result.detected_object is not None
         )
+        if any(
+            detector.name == FootprintGridDetector.name
+            for detector in ordered_detectors
+        ):
+            chart_object = DetectedObject(
+                object_id=ObjectId(
+                    f"{context.processed_frame.source_frame.frame_id}:chart"
+                ),
+                bounds=context.workspace_layout.chart_region.bounds,
+                confidence=DetectionConfidence(
+                    context.workspace_layout.chart_region.confidence
+                ),
+                object_type=ObjectType.CHART,
+                frame_id=context.processed_frame.source_frame.frame_id,
+                source=DetectionSource("workspace-layout"),
+                metadata={"role": "chart"},
+            )
+            detected = (chart_object,) + detector_objects
+        else:
+            detected = detector_objects
         return DetectionGraph(
             frame_id=context.processed_frame.source_frame.frame_id,
             objects=detected,
@@ -908,6 +936,196 @@ class TimeAxisDetector:
             debug_overlay=(
                 _debug_overlay(
                     frame.width, frame.height, candidate, confidence, "time_axis"
+                )
+                if self._config.debug_overlay
+                else None
+            ),
+            detected_object=detected,
+        )
+
+    def _empty(
+        self,
+        reason: str,
+        width: int,
+        height: int,
+        box: BoundingBox | None = None,
+        confidence: float = 0.0,
+    ) -> DetectionResult[DetectedObject]:
+        return DetectionResult(
+            region=None,
+            confidence=0.0,
+            reason=reason,
+            detector_name=self.name,
+            debug_overlay=(
+                _debug_overlay(width, height, box, confidence, "rejected")
+                if self._config.debug_overlay
+                else None
+            ),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class FootprintGridDetectorConfig:
+    """Immutable thresholds for deterministic footprint-grid detection."""
+
+    min_width_ratio: float = 0.35
+    min_height_ratio: float = 0.35
+    max_margin_from_chart: float = 0.25
+    min_edge_density: float = 0.006
+    min_confidence: float = 0.35
+    projection_threshold_ratio: float = 0.05
+    grid_regularity_tolerance: float = 0.55
+    debug_overlay: bool = False
+
+    def __post_init__(self) -> None:
+        for name in (
+            "min_width_ratio",
+            "min_height_ratio",
+            "max_margin_from_chart",
+            "min_edge_density",
+            "min_confidence",
+            "projection_threshold_ratio",
+            "grid_regularity_tolerance",
+        ):
+            value = getattr(self, name)
+            if not 0.0 <= value <= 1.0:
+                raise ValueError(f"{name} must be between 0.0 and 1.0")
+        if self.min_width_ratio <= 0.0:
+            raise ValueError("min_width_ratio must be greater than 0.0")
+        if self.min_height_ratio <= 0.0:
+            raise ValueError("min_height_ratio must be greater than 0.0")
+        if self.max_margin_from_chart <= 0.0:
+            raise ValueError("max_margin_from_chart must be greater than 0.0")
+        if self.min_edge_density <= 0.0:
+            raise ValueError("min_edge_density must be greater than 0.0")
+        if self.min_confidence <= 0.0:
+            raise ValueError("min_confidence must be greater than 0.0")
+
+
+class FootprintGridDetector:
+    """Detect the rectangular footprint grid inside the chart without OCR/AI/ML."""
+
+    name = "footprint-grid-detector"
+
+    def __init__(self, config: FootprintGridDetectorConfig | None = None) -> None:
+        self._config = config or FootprintGridDetectorConfig()
+
+    def detect(self, context: DetectionContext) -> DetectionResult[DetectedObject]:
+        frame = context.processed_frame.source_frame
+        layout = context.workspace_layout
+        chart = layout.chart_region.bounds
+        luminance = _luminance(frame)
+        edges = _edge_map(luminance, frame.width, frame.height)
+        candidate, projection_score, rows, columns = _footprint_grid_candidate(
+            luminance, frame.width, chart, self._config
+        )
+        if candidate is None:
+            return self._empty(
+                "no regular footprint-grid projections found", frame.width, frame.height
+            )
+        if not _contains(layout.bounds, candidate):
+            return self._empty(
+                "footprint grid outside workspace layout",
+                frame.width,
+                frame.height,
+                candidate,
+                projection_score,
+            )
+        if not _contains(chart, candidate):
+            return self._empty(
+                "footprint grid outside chart region",
+                frame.width,
+                frame.height,
+                candidate,
+                projection_score,
+            )
+        if _axis_overlap(
+            candidate, layout.price_axis.bounds, layout.price_axis.confidence
+        ):
+            return self._empty(
+                "footprint grid overlaps price axis",
+                frame.width,
+                frame.height,
+                candidate,
+                projection_score,
+            )
+        if _axis_overlap(
+            candidate, layout.time_axis.bounds, layout.time_axis.confidence
+        ):
+            return self._empty(
+                "footprint grid overlaps time axis",
+                frame.width,
+                frame.height,
+                candidate,
+                projection_score,
+            )
+        if not _inside_chart_margins(candidate, chart, self._config):
+            return self._empty(
+                "footprint grid has highly irregular geometry",
+                frame.width,
+                frame.height,
+                candidate,
+                projection_score,
+            )
+        edge_density = _count_edges(edges, frame.width, candidate) / (
+            candidate.width * candidate.height
+        )
+        regularity = _grid_regularity_score(rows, columns)
+        size_score = min(
+            candidate.width / (chart.width * self._config.min_width_ratio),
+            candidate.height / (chart.height * self._config.min_height_ratio),
+            1.0,
+        )
+        density_score = min(
+            edge_density / max(self._config.min_edge_density * 3.0, 0.001), 1.0
+        )
+        confidence = round(
+            min(
+                (projection_score * 0.4)
+                + (density_score * 0.25)
+                + (regularity * 0.2)
+                + (size_score * 0.15),
+                1.0,
+            ),
+            3,
+        )
+        if (
+            edge_density < self._config.min_edge_density
+            or confidence < self._config.min_confidence
+            or regularity < (1.0 - self._config.grid_regularity_tolerance)
+        ):
+            return self._empty(
+                "footprint grid rejected by density/confidence/regularity",
+                frame.width,
+                frame.height,
+                candidate,
+                confidence,
+            )
+        metadata = {
+            "estimated_rows": len(rows),
+            "estimated_columns": len(columns),
+            "grid_width": candidate.width,
+            "grid_height": candidate.height,
+            "projection_score": round(projection_score, 6),
+            "edge_density": round(edge_density, 6),
+        }
+        detected = DetectedObject(
+            object_id=ObjectId(f"{frame.frame_id}:footprint-grid"),
+            bounds=candidate,
+            confidence=DetectionConfidence(confidence),
+            object_type=ObjectType.FOOTPRINT_GRID,
+            frame_id=frame.frame_id,
+            source=DetectionSource(self.name),
+            metadata=metadata,
+        )
+        return DetectionResult(
+            region=candidate,
+            confidence=confidence,
+            reason="detected footprint grid using deterministic edge/projection analysis only",
+            detector_name=self.name,
+            debug_overlay=(
+                _debug_overlay(
+                    frame.width, frame.height, candidate, confidence, "footprint_grid"
                 )
                 if self._config.debug_overlay
                 else None
@@ -1869,6 +2087,116 @@ def _time_axis_candidate(
     return best_box, round(best_score, 6)
 
 
+def _footprint_grid_candidate(
+    luminance: Sequence[int],
+    frame_width: int,
+    chart: BoundingBox,
+    config: FootprintGridDetectorConfig,
+) -> tuple[BoundingBox | None, float, tuple[int, ...], tuple[int, ...]]:
+    min_col_edges = max(2, round(chart.height * config.projection_threshold_ratio))
+    min_row_edges = max(2, round(chart.width * config.projection_threshold_ratio))
+    border_x = max(2, round(chart.width * 0.01))
+    border_y = max(2, round(chart.height * 0.01))
+    cols = tuple(
+        x
+        for x in range(chart.x + border_x, chart.right - border_x)
+        if x > 0
+        and sum(
+            1
+            for y in range(chart.y + border_y, chart.bottom - border_y)
+            if abs(luminance[y * frame_width + x] - luminance[y * frame_width + x - 1])
+            >= 45
+        )
+        >= min_col_edges
+    )
+    rows = tuple(
+        y
+        for y in range(chart.y + border_y, chart.bottom - border_y)
+        if y > 0
+        and sum(
+            1
+            for x in range(chart.x + border_x, chart.right - border_x)
+            if abs(
+                luminance[y * frame_width + x] - luminance[(y - 1) * frame_width + x]
+            )
+            >= 45
+        )
+        >= min_row_edges
+    )
+    if len(cols) < 2 or len(rows) < 2:
+        return None, 0.0, (), ()
+    column_centers = _cluster_centers(cols)
+    row_centers = _cluster_centers(rows)
+    if len(column_centers) < 2 or len(row_centers) < 2:
+        return None, 0.0, row_centers, column_centers
+    box = BoundingBox(
+        min(cols), min(rows), max(cols) - min(cols) + 1, max(rows) - min(rows) + 1
+    )
+    if box.width < round(chart.width * config.min_width_ratio) or box.height < round(
+        chart.height * config.min_height_ratio
+    ):
+        return None, 0.0, row_centers, column_centers
+    col_score = len(column_centers) / max(chart.width * 0.08, 1.0)
+    row_score = len(row_centers) / max(chart.height * 0.08, 1.0)
+    return (
+        box,
+        round(min((col_score + row_score) / 2.0, 1.0), 6),
+        row_centers,
+        column_centers,
+    )
+
+
+def _cluster_centers(indices: Sequence[int]) -> tuple[int, ...]:
+    if not indices:
+        return ()
+    clusters: list[tuple[int, int]] = []
+    start = previous = indices[0]
+    for index in indices[1:]:
+        if index <= previous + 2:
+            previous = index
+            continue
+        clusters.append((start, previous))
+        start = previous = index
+    clusters.append((start, previous))
+    return tuple((start + end) // 2 for start, end in clusters)
+
+
+def _axis_overlap(
+    candidate: BoundingBox, axis: BoundingBox, axis_confidence: float
+) -> bool:
+    return axis_confidence > 0.0 and _overlap_area(candidate, axis) > 0
+
+
+def _inside_chart_margins(
+    candidate: BoundingBox, chart: BoundingBox, config: FootprintGridDetectorConfig
+) -> bool:
+    max_margin_x = round(chart.width * config.max_margin_from_chart)
+    max_margin_y = round(chart.height * config.max_margin_from_chart)
+    return (
+        candidate.x - chart.x <= max_margin_x + 2
+        and chart.right - candidate.right <= max_margin_x + 2
+        and candidate.y - chart.y <= max_margin_y + 2
+        and chart.bottom - candidate.bottom <= max_margin_y + 2
+    )
+
+
+def _grid_regularity_score(rows: Sequence[int], columns: Sequence[int]) -> float:
+    return min(_axis_regularity_score(rows), _axis_regularity_score(columns))
+
+
+def _axis_regularity_score(indices: Sequence[int]) -> float:
+    if len(indices) < 3:
+        return 1.0
+    gaps = [right - left for left, right in zip(indices, indices[1:]) if right > left]
+    if not gaps:
+        return 0.0
+    average = sum(gaps) / len(gaps)
+    if average == 0:
+        return 0.0
+    mean_deviation = sum(abs(gap - average) for gap in gaps) / len(gaps)
+    return max(0.0, 1.0 - min(mean_deviation / average, 1.0))
+
+
 def _horizontal_edge_count(
     luminance: Sequence[int], width: int, box: BoundingBox
 ) -> int:
@@ -1985,11 +2313,13 @@ def _png_rgb(width: int, height: int, rgb: bytes) -> bytes:
     )
 
 
+ObjectType.CHART = ObjectType("CHART")
 ObjectType.PRICE_TEXT = ObjectType("PRICE_TEXT")
 ObjectType.PRICE_AXIS = ObjectType("PRICE_AXIS")
 ObjectType.TIME_AXIS = ObjectType("TIME_AXIS")
 ObjectType.TIME_LABEL = ObjectType("TIME_LABEL")
 ObjectType.CANDLE = ObjectType("CANDLE")
+ObjectType.FOOTPRINT_GRID = ObjectType("FOOTPRINT_GRID")
 ObjectType.FOOTPRINT_CELL = ObjectType("FOOTPRINT_CELL")
 ObjectType.BID_VALUE = ObjectType("BID_VALUE")
 ObjectType.ASK_VALUE = ObjectType("ASK_VALUE")
