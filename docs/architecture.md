@@ -2,7 +2,7 @@
 
 ## Purpose
 
-OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 added image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`. Milestone 5 added the first real vision detector for locating the main ATAS trading chart. Milestone 6 adds the contract-only Vision Object Detection Foundation that future semantic detectors will use. Milestone 7 implements the first real semantic detector: deterministic Price Axis detection. Milestone 8 implements the second real semantic detector: deterministic Time Axis detection. Milestone 9 implements the first detector that understands internal chart structure: deterministic Footprint Grid detection. Milestone 10 segments that grid into deterministic footprint-cell geometry. Milestone 11 assigns every detected footprint cell a stable logical coordinate and deterministic cell identifier. Milestone 12 classifies the internal logical regions of every footprint cell without OCR or numeric interpretation.
+OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 added image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`. Milestone 5 added the first real vision detector for locating the main ATAS trading chart. Milestone 6 adds the contract-only Vision Object Detection Foundation that future semantic detectors will use. Milestone 7 implements the first real semantic detector: deterministic Price Axis detection. Milestone 8 implements the second real semantic detector: deterministic Time Axis detection. Milestone 9 implements the first detector that understands internal chart structure: deterministic Footprint Grid detection. Milestone 10 segments that grid into deterministic footprint-cell geometry. Milestone 11 assigns every detected footprint cell a stable logical coordinate and deterministic cell identifier. Milestone 12 classifies the internal logical regions of every footprint cell without OCR or numeric interpretation. Milestone 15 maps validated numeric values from classified regions into footprint market semantics without trading decisions.
 
 ## Package boundaries
 
@@ -187,3 +187,28 @@ Milestone 13 adds immutable provider-neutral OCR contracts: `OCRRequest`, `OCRRe
 After Milestone 12 cell classification, `SequentialOCRPipeline` iterates through deterministic `CellClassification` results and their `CellRegion` entries, creates one `OCRRequest` per semantic region, calls the configured `OCREngine`, and returns ordered `OCRResult` values. `DetectionGraph` now exposes `ocr_results` plus raw lookup helpers `region_text(role)` and `lookup(cell_id)` without replacing previous APIs. `OCRResult`, `OCRLine`, and `OCRPage` expose helper methods for `words()`, `lines()`, `text()`, and `average_confidence()` while performing no interpretation.
 
 `DummyOCREngine` is the only built-in engine. It returns deterministic mock OCR text for architecture tests and performs no real OCR. No Tesseract, EasyOCR, PaddleOCR, cloud API, OpenAI Vision, AI, ML, OpenCV OCR, networking, threading, or async execution is implemented. Milestone 13 does not parse numbers, validate numbers, convert values, recognize bid/ask values, calculate delta, or parse volume. Milestone 14 introduces OCR Post Processing.
+
+
+## Milestone 15: Footprint Semantic Interpretation
+
+Milestone 15 adds immutable semantic interpretation models: `NumericValue`, `ParsedValue`, `FootprintSemanticType`, `FootprintValue`, `FootprintCellData`, `FootprintInterpretation`, `InterpretationResult`, and `InterpretationWarning`. It also adds `SemanticMapper`, `FootprintInterpreter`, and `InterpretationPipeline` contracts with deterministic default implementations.
+
+The interpretation flow is intentionally narrow:
+
+```text
+CellClassification
+  ↓
+ParsedValue
+  ↓
+SemanticMapper
+  ↓
+FootprintCellData
+  ↓
+FootprintInterpretation
+```
+
+`LayoutSemanticMapper` maps generic `CellSemanticRole` values from `CellLayout` definitions to `FootprintSemanticType` values. The default mapping treats `BID_REGION` as `BID_VOLUME`, `ASK_REGION` as `ASK_VOLUME`, `CENTER_REGION` and `DELTA_REGION` as `DELTA`, `EMPTY` as `EMPTY`, and unknown/background roles as `UNKNOWN`. This avoids hardcoded vendor-specific footprint layouts.
+
+`FootprintCellData` validates duplicate bid/ask/delta assignments, missing parent-cell references, missing coordinates, invalid semantic assignments, multiple values assigned to the same role, and confidence bounds. It exposes helpers for `bid()`, `ask()`, `delta()`, `total_volume()`, `is_complete()`, `is_empty()`, `missing_fields()`, and `warnings()`. `DetectionGraph` now exposes detected `footprint_cells`, optional `footprint_interpretation`, and lookup helpers for interpreted cell, bid, ask, delta, and total-volume values without replacing existing graph APIs.
+
+Milestone 15 gives Genesis semantic meaning for footprint values only. Genesis still does not detect imbalances, absorption, stacked imbalances, unfinished auctions, calculate signals, make trading decisions, or generate trades. Milestone 16 introduces Imbalance Detection.
