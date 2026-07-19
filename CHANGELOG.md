@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.9 - Milestone 14
+
+- Added immutable OCR post-processing and numeric interpretation models, normalization configuration/rules, parser/post-processor/pipeline contracts, deterministic normalization, deterministic numeric parsing, graph-level parsed-value exposure, lookup helpers, and utility helpers.
+- Documented that Milestone 14 converts raw OCR into validated numeric values only and still does not know bid, ask, delta, volume, POC, imbalance, absorption, or market semantics. Milestone 15 introduces Footprint Semantic Interpretation.
+
 ## 0.1.8 - Milestone 13
 
 - Added immutable OCR Foundation models, OCR engine/pipeline/provider contracts, deterministic `DummyOCREngine`, OCR request/result validation, graph-level `ocr_results` exposure, and raw OCR lookup helpers.
