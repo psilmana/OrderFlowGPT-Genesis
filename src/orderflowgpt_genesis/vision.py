@@ -10,6 +10,7 @@ from collections import OrderedDict
 from collections.abc import Iterable, Iterator, Mapping, Sequence
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
+from enum import Enum
 from types import MappingProxyType
 from typing import (
     Any,
@@ -30,6 +31,18 @@ WorkspaceId: TypeAlias = str
 ProcessedFrameId: TypeAlias = str
 DetectorName: TypeAlias = str
 TDetected = TypeVar("TDetected")
+
+
+class CellSemanticRole(Enum):
+    """Logical semantic regions supported inside a footprint cell."""
+
+    UNKNOWN = "UNKNOWN"
+    BID_REGION = "BID_REGION"
+    ASK_REGION = "ASK_REGION"
+    DELTA_REGION = "DELTA_REGION"
+    CENTER_REGION = "CENTER_REGION"
+    BACKGROUND = "BACKGROUND"
+    EMPTY = "EMPTY"
 
 
 @dataclass(frozen=True, slots=True)
@@ -333,6 +346,7 @@ class DetectionGraph:
     frame_id: FrameId
     objects: tuple[DetectedObject, ...] = ()
     grid_coordinate_system: GridCoordinateSystem | None = None
+    cell_classifications: tuple["CellClassification", ...] = ()
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -356,6 +370,28 @@ class DetectionGraph:
             }
             if self.grid_coordinate_system.grid_id not in grid_ids:
                 raise ValueError("grid coordinate system must reference detected cells")
+        cell_ids = {
+            str(obj.metadata.get("cell_id", ""))
+            for obj in self.objects
+            if obj.object_type == ObjectType.FOOTPRINT_CELL
+        }
+        classification_ids = {
+            classification.cell_reference.coordinate.cell_id
+            for classification in self.cell_classifications
+        }
+        if len(classification_ids) != len(self.cell_classifications):
+            raise ValueError("cell classifications must reference unique cells")
+        if classification_ids - cell_ids:
+            raise ValueError("cell classifications must reference detected cells")
+        for classification in self.cell_classifications:
+            if classification.cell_reference.frame_id != self.frame_id:
+                raise ValueError("cell classification frame id must match graph")
+
+    @property
+    def CellClassifications(self) -> tuple["CellClassification", ...]:
+        """Compatibility-style alias exposing classified footprint cells."""
+
+        return self.cell_classifications
 
 
 @dataclass(frozen=True, slots=True)
@@ -473,6 +509,203 @@ class CellReference:
             raise ValueError("cell reference frame id must match detected object")
         if self.detected_object.bounds != self.bounds:
             raise ValueError("cell reference bounds must match detected object")
+
+
+@dataclass(frozen=True, slots=True)
+class CellRegion:
+    """Immutable semantic sub-region inside a footprint cell."""
+
+    bounds: BoundingBox
+    semantic_role: CellSemanticRole
+    confidence: float
+    parent_cell_id: str
+    frame_id: FrameId
+
+    def __post_init__(self) -> None:
+        if not self.parent_cell_id.strip():
+            raise ValueError("parent cell id is required")
+        if not self.frame_id.strip():
+            raise ValueError("frame id is required")
+        _validate_confidence(self.confidence, "cell region confidence")
+
+
+@dataclass(frozen=True, slots=True)
+class CellLayoutBand:
+    """One configurable vertical logical band in a footprint-cell layout."""
+
+    semantic_role: CellSemanticRole
+    weight: int = 1
+    required: bool = True
+
+    def __post_init__(self) -> None:
+        if self.weight <= 0:
+            raise ValueError("cell layout band weight must be positive")
+
+
+@dataclass(frozen=True, slots=True)
+class CellLayout:
+    """Configurable expected logical subdivision of a footprint cell."""
+
+    bands: tuple[CellLayoutBand, ...] = (
+        CellLayoutBand(CellSemanticRole.ASK_REGION),
+        CellLayoutBand(CellSemanticRole.CENTER_REGION),
+        CellLayoutBand(CellSemanticRole.BID_REGION),
+    )
+
+    def __post_init__(self) -> None:
+        if not self.bands:
+            raise ValueError("cell layout requires at least one band")
+        roles = [band.semantic_role for band in self.bands]
+        if len(set(roles)) != len(roles):
+            raise ValueError("cell layout semantic roles must be unique")
+        required_roles = [band.semantic_role for band in self.bands if band.required]
+        if len(set(required_roles)) != len(required_roles):
+            raise ValueError("required semantic roles must be unique")
+
+    @property
+    def required_roles(self) -> frozenset[CellSemanticRole]:
+        return frozenset(band.semantic_role for band in self.bands if band.required)
+
+
+@dataclass(frozen=True, slots=True)
+class CellClassification:
+    """Immutable logical classification result for one footprint cell."""
+
+    cell_reference: CellReference
+    detected_cell_regions: tuple[CellRegion, ...]
+    overall_confidence: float
+    validation_metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        _validate_confidence(self.overall_confidence, "cell classification confidence")
+        if not self.detected_cell_regions:
+            raise ValueError("cell classification requires semantic regions")
+        roles = [region.semantic_role for region in self.detected_cell_regions]
+        if len(set(roles)) != len(roles):
+            raise ValueError("duplicate semantic roles are not allowed")
+        required = frozenset(self.validation_metadata.get("required_roles", ()))
+        if required and not required.issubset(set(roles)):
+            raise ValueError("missing required semantic regions")
+        parent_id = self.cell_reference.coordinate.cell_id
+        for region in self.detected_cell_regions:
+            if region.parent_cell_id != parent_id:
+                raise ValueError("cell region parent id must match cell reference")
+            if region.frame_id != self.cell_reference.frame_id:
+                raise ValueError("cell region frame id must match cell reference")
+            if not _contains(self.cell_reference.bounds, region.bounds):
+                raise ValueError("cell region must be inside parent cell")
+        for index, first in enumerate(self.detected_cell_regions):
+            for second in self.detected_cell_regions[index + 1 :]:
+                if _overlap_area(first.bounds, second.bounds) > 0:
+                    raise ValueError("semantic regions must not overlap")
+        ordered = tuple(
+            sorted(
+                self.detected_cell_regions,
+                key=lambda region: (
+                    region.bounds.y,
+                    region.bounds.x,
+                    region.semantic_role.value,
+                ),
+            )
+        )
+        if self.detected_cell_regions != ordered:
+            object.__setattr__(self, "detected_cell_regions", ordered)
+        metadata = {
+            **dict(self.validation_metadata),
+            "cell_id": parent_id,
+            "row": self.cell_reference.coordinate.row_index,
+            "column": self.cell_reference.coordinate.column_index,
+            "semantic_regions": tuple(role.value for role in roles),
+            "classification_confidence": self.overall_confidence,
+        }
+        object.__setattr__(self, "validation_metadata", MappingProxyType(metadata))
+
+    @property
+    def cell_id(self) -> str:
+        return self.cell_reference.coordinate.cell_id
+
+    @property
+    def row(self) -> int:
+        return self.cell_reference.coordinate.row_index
+
+    @property
+    def column(self) -> int:
+        return self.cell_reference.coordinate.column_index
+
+    @property
+    def semantic_regions(self) -> tuple[CellRegion, ...]:
+        return self.detected_cell_regions
+
+    @property
+    def classification_confidence(self) -> float:
+        return self.overall_confidence
+
+    def region_by_role(self, role: CellSemanticRole) -> CellRegion | None:
+        for region in self.detected_cell_regions:
+            if region.semantic_role == role:
+                return region
+        return None
+
+    def bid_region(self) -> CellRegion | None:
+        return self.region_by_role(CellSemanticRole.BID_REGION)
+
+    def ask_region(self) -> CellRegion | None:
+        return self.region_by_role(CellSemanticRole.ASK_REGION)
+
+    def center_region(self) -> CellRegion | None:
+        return self.region_by_role(CellSemanticRole.CENTER_REGION)
+
+    def all_regions(self) -> tuple[CellRegion, ...]:
+        return self.detected_cell_regions
+
+
+@dataclass(frozen=True, slots=True)
+class CellLayoutAnalyzer:
+    """Create deterministic logical footprint-cell regions without OCR."""
+
+    layout: CellLayout = field(default_factory=CellLayout)
+
+    def classify(self, cell_reference: CellReference) -> CellClassification:
+        total_weight = sum(band.weight for band in self.layout.bands)
+        top = cell_reference.bounds.y
+        regions = []
+        for index, band in enumerate(self.layout.bands):
+            remaining_height = cell_reference.bounds.bottom - top
+            if index == len(self.layout.bands) - 1:
+                height = remaining_height
+            else:
+                height = max(
+                    1,
+                    round(cell_reference.bounds.height * band.weight / total_weight),
+                )
+                height = min(
+                    height, remaining_height - (len(self.layout.bands) - index - 1)
+                )
+            bounds = BoundingBox(
+                cell_reference.bounds.x,
+                top,
+                cell_reference.bounds.width,
+                height,
+            )
+            regions.append(
+                CellRegion(
+                    bounds=bounds,
+                    semantic_role=band.semantic_role,
+                    confidence=1.0,
+                    parent_cell_id=cell_reference.coordinate.cell_id,
+                    frame_id=cell_reference.frame_id,
+                )
+            )
+            top = bounds.bottom
+        return CellClassification(
+            cell_reference=cell_reference,
+            detected_cell_regions=tuple(regions),
+            overall_confidence=1.0,
+            validation_metadata={"required_roles": self.layout.required_roles},
+        )
+
+    def analyze(self, cell_reference: CellReference) -> CellClassification:
+        return self.classify(cell_reference)
 
 
 class CoordinateMapper:
@@ -664,10 +897,19 @@ class SequentialObjectDetectionPipeline:
         coordinate_system = (
             CoordinateMapper().map_cells(footprint_cells) if footprint_cells else None
         )
+        cell_classifications = (
+            tuple(
+                CellLayoutAnalyzer().classify(reference)
+                for reference in CoordinateMapper().references(footprint_cells)
+            )
+            if footprint_cells
+            else ()
+        )
         return DetectionGraph(
             frame_id=context.processed_frame.source_frame.frame_id,
             objects=detected,
             grid_coordinate_system=coordinate_system,
+            cell_classifications=cell_classifications,
         )
 
 
