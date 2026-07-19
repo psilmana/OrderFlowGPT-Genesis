@@ -178,3 +178,12 @@ Milestone 12 adds immutable logical cell-classification models: `CellSemanticRol
 `CellClassification` validates region confidence values, parent-cell references, frame alignment, duplicate semantic roles, overlapping semantic regions, required roles, and containment inside the parent cell. It exposes metadata for `cell_id`, row, column, semantic regions, and classification confidence, plus logical helpers for `bid_region()`, `ask_region()`, `center_region()`, `region_by_role(role)`, and `all_regions()`. `DetectionGraph` now exposes `cell_classifications` and the compatibility-style `CellClassifications` property when footprint cells are available, without changing detector contracts or replacing existing APIs.
 
 Milestone 12 performs no OCR, no text recognition, no numeric recognition, no bid/ask value extraction, no delta calculation, no volume calculation, no AI, no ML, no OpenCV processing, no networking, no threading, and no async execution. It only teaches Genesis the logical layout of each detected footprint cell. Milestone 13 introduces OCR Foundation after the logical cell-region architecture is stable.
+
+
+## Milestone 13: OCR Foundation
+
+Milestone 13 adds immutable provider-neutral OCR contracts: `OCRRequest`, `OCRResult`, `OCRWord`, `OCRLine`, `OCRPage`, `OCRRegion`, `OCRConfiguration`, and `OCRMetadata`. The new `OCREngine`, `OCRPipeline`, and `OCRProvider` interfaces define how future OCR adapters will receive predefined semantic regions and return raw OCR output without changing detector contracts.
+
+After Milestone 12 cell classification, `SequentialOCRPipeline` iterates through deterministic `CellClassification` results and their `CellRegion` entries, creates one `OCRRequest` per semantic region, calls the configured `OCREngine`, and returns ordered `OCRResult` values. `DetectionGraph` now exposes `ocr_results` plus raw lookup helpers `region_text(role)` and `lookup(cell_id)` without replacing previous APIs. `OCRResult`, `OCRLine`, and `OCRPage` expose helper methods for `words()`, `lines()`, `text()`, and `average_confidence()` while performing no interpretation.
+
+`DummyOCREngine` is the only built-in engine. It returns deterministic mock OCR text for architecture tests and performs no real OCR. No Tesseract, EasyOCR, PaddleOCR, cloud API, OpenAI Vision, AI, ML, OpenCV OCR, networking, threading, or async execution is implemented. Milestone 13 does not parse numbers, validate numbers, convert values, recognize bid/ask values, calculate delta, or parse volume. Milestone 14 introduces OCR Post Processing.

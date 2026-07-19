@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.8 - Milestone 13
+
+- Added immutable OCR Foundation models, OCR engine/pipeline/provider contracts, deterministic `DummyOCREngine`, OCR request/result validation, graph-level `ocr_results` exposure, and raw OCR lookup helpers.
+- Documented that Milestone 13 implements no external OCR provider, no numeric interpretation, no bid/ask recognition, no volume parsing, no delta calculation, no AI, no ML, no networking, and that Milestone 14 introduces OCR Post Processing.
+
 ## 0.1.7 - Milestone 12
 
 - Added immutable footprint cell classification models, configurable logical cell layouts, deterministic cell-region analysis, validation for semantic geometry, lookup helpers, and `DetectionGraph` cell-classification exposure.
