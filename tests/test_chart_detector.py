@@ -155,5 +155,3 @@ def test_layout_builder_integrates_chart_detection_result():
     assert layout.frame_id == frame.frame_id
     assert layout.chart_region.bounds == result.region
     assert layout.chart_region.confidence == result.confidence
-    
-    

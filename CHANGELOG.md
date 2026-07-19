@@ -18,3 +18,11 @@
 - Added immutable domain models for order-book levels, trades, market snapshots, and analysis results.
 - Added a stateless analyzer for spread, mid-price, imbalance, trade pressure, bias, and confidence.
 - Added architecture documentation, release notes, and automated tests.
+
+## 0.1.1 - Milestone 6 Vision Object Detection Foundation
+
+- Added immutable object-detection contracts for detected object ids, supported object types, confidence, detection source metadata, and frame-scoped detected objects.
+- Added `DetectionGraph` validation for unique object ids plus valid parent and child references within one frame.
+- Added `DetectionContext`, immutable `DetectorRegistry`, and `SequentialObjectDetectionPipeline` so future detectors receive only a processed frame, workspace layout, and configuration.
+- Added placeholder object detectors for price axes, time axes, footprint cells, volume profiles, big trades, and absorption; these intentionally return empty `DetectionResult[DetectedObject]` values with no computer vision, OCR, ML, AI, capture, networking, or side effects.
+- Documented how Milestone 6 extends the prior roadmap without replacing existing workspace layout or chart detection contracts.

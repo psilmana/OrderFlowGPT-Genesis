@@ -2,13 +2,13 @@
 
 ## Purpose
 
-OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 added image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`. Milestone 5 adds the first real vision detector for locating the main ATAS trading chart.
+OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 added image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`. Milestone 5 added the first real vision detector for locating the main ATAS trading chart. Milestone 6 adds the contract-only Vision Object Detection Foundation that future semantic detectors will use.
 
 ## Package boundaries
 
 - `orderflowgpt_genesis.models` owns immutable market domain objects and validation.
 - `orderflowgpt_genesis.analysis` owns stateless order-flow analysis behavior.
-- `orderflowgpt_genesis.vision` owns frame abstractions, vision-facing interfaces, in-memory frame replay, image caching, scene graph skeletons, workspace detection contracts, image preprocessing configuration, processed frame outputs, detector contracts, chart detection, debug overlays, and layout assembly.
+- `orderflowgpt_genesis.vision` owns frame abstractions, vision-facing interfaces, in-memory frame replay, image caching, scene graph skeletons, workspace detection contracts, image preprocessing configuration, processed frame outputs, detector contracts, chart detection, debug overlays, layout assembly, object-detection contracts, detector registration, and object-detection pipeline orchestration.
 - `orderflowgpt_genesis.__init__` exposes the supported public API.
 
 No current module performs network I/O, file I/O, broker access, exchange access, language-model calls, image capture side effects, persistence, or serialization.
@@ -95,6 +95,33 @@ WorkspaceLayout
 
 Milestone 5 deliberately excludes OCR, machine learning, deep learning, YOLO/TensorFlow/PyTorch, price-axis detection, toolbar detection, bottom-panel detection, volume-profile detection, footprint detection, DOM detection, and mouse automation.
 
+## Milestone 6: Vision Object Detection Foundation
+
+Milestone 6 extends, rather than replaces, the existing workspace and chart-detection architecture:
+
+```text
+ProcessedFrame + WorkspaceLayout + Configuration
+  ↓
+DetectionContext
+  ↓
+DetectorRegistry / ObjectDetectionPipeline
+  ↓
+DetectionResult[DetectedObject]
+  ↓
+DetectionGraph
+```
+
+- `ObjectId`, `ObjectType`, `DetectionConfidence`, and `DetectionSource` are immutable value objects for semantic detections.
+- `ObjectType` initially supports price text, price axes, time labels, candles, footprint cells, bid values, ask values, delta values, volume values, POC markers, HVNs, LVNs, big trades, icebergs, absorption, stacked imbalances, volume profiles, CVD panels, delta panels, and unknown objects.
+- `DetectedObject` contains a unique id, bounding box, confidence, object type, optional parent id, optional child ids, frame id, detection source, and immutable metadata mapping.
+- `DetectionGraph` stores all detected objects for one frame and validates unique ids, duplicate ids, parent references, child references, and frame alignment.
+- `DetectionContext` is the only input accepted by future object detectors. It contains a `ProcessedFrame`, a `WorkspaceLayout`, and immutable configuration.
+- `ObjectDetector`, `ObjectDetectionPipeline`, and `DetectorRegistry` define how semantic detectors are registered and run.
+- `SequentialObjectDetectionPipeline` runs registered detectors in order and returns a validated graph.
+- `PriceAxisDetector`, `TimeAxisDetector`, `FootprintDetector`, `VolumeProfileDetector`, `BigTradeDetector`, and `AbsorptionDetector` are placeholders that intentionally return empty object detection results.
+
+Milestone 6 deliberately excludes real detection behavior, OpenCV, OCR, machine learning, AI calls, screen capture, external libraries, side effects, globals, threading, async execution, and networking. Its purpose is to create stable extension seams for Milestone 7.
+
 ## Extension rules for future milestones
 
-Future milestones may add adapters, persistence, streaming, model-assisted narrative generation, concrete capture providers, and concrete workspace detectors. They must keep the Milestone 1 and Milestone 2 public contracts backward compatible unless a major version explicitly documents a breaking change.
+Future milestones may add adapters, persistence, streaming, model-assisted narrative generation, concrete capture providers, concrete workspace detectors, and concrete object detectors. They must keep the Milestone 1 and Milestone 2 public contracts backward compatible unless a major version explicitly documents a breaking change.
