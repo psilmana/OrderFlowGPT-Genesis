@@ -2,7 +2,7 @@
 
 ## Purpose
 
-OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 added image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`. Milestone 5 added the first real vision detector for locating the main ATAS trading chart. Milestone 6 adds the contract-only Vision Object Detection Foundation that future semantic detectors will use. Milestone 7 implements the first real semantic detector: deterministic Price Axis detection. Milestone 8 implements the second real semantic detector: deterministic Time Axis detection. Milestone 9 implements the first detector that understands internal chart structure: deterministic Footprint Grid detection. Milestone 10 segments that grid into deterministic footprint-cell geometry.
+OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 added image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`. Milestone 5 added the first real vision detector for locating the main ATAS trading chart. Milestone 6 adds the contract-only Vision Object Detection Foundation that future semantic detectors will use. Milestone 7 implements the first real semantic detector: deterministic Price Axis detection. Milestone 8 implements the second real semantic detector: deterministic Time Axis detection. Milestone 9 implements the first detector that understands internal chart structure: deterministic Footprint Grid detection. Milestone 10 segments that grid into deterministic footprint-cell geometry. Milestone 11 assigns every detected footprint cell a stable logical coordinate and deterministic cell identifier.
 
 ## Package boundaries
 
@@ -156,6 +156,15 @@ Milestone 9 deliberately detects only the footprint grid rectangle. It does not 
 
 Milestone 10 adds `FootprintCellDetector`, a deterministic object detector that segments the previously detected `ObjectType.FOOTPRINT_GRID` into individual rectangular `ObjectType.FOOTPRINT_CELL` objects. It preserves prior detector contracts and extends `DetectionResult` with a tuple of detected objects so a single detector can return every cell while remaining compatible with existing single-object detectors.
 
-The detector uses in-memory luminance transitions, projection analysis, grid-line clustering, regular spacing validation, alignment scoring, containment checks, and axis-overlap rejection. Cells are emitted deterministically from top to bottom and left to right. Metadata records `row_index`, `column_index`, `cell_width`, `cell_height`, `grid_width`, and `grid_height`. Optional debug overlays draw both the footprint grid rectangle and every detected cell rectangle.
+The detector uses in-memory luminance transitions, projection analysis, grid-line clustering, regular spacing validation, alignment scoring, containment checks, and axis-overlap rejection. Cells are emitted deterministically from top to bottom and left to right. Metadata records `row_index`, `column_index`, `cell_id`, `grid_id`, `cell_width`, `cell_height`, `grid_width`, and `grid_height`. Optional debug overlays draw both the footprint grid rectangle and every detected cell rectangle.
 
 Milestone 10 detects only footprint-cell geometry. It does not read numbers, perform OCR, classify bid or ask, recognize volume, calculate delta, call AI/ML systems, use OpenCV, capture screens, perform networking, or introduce mutable globals. Milestone 11 introduces the Cell Coordinate System that downstream semantic milestones can use after this geometry is stable.
+
+
+## Milestone 11: Footprint Cell Coordinate System
+
+Milestone 11 adds immutable logical coordinate objects for detected footprint cells: `CellCoordinate`, `GridCoordinateSystem`, `CellReference`, and `CoordinateMapper`. After footprint-cell detection, Genesis deterministically orders cells from top to bottom and left to right, assigns continuous row and column indices, creates stable cell ids scoped to the detected footprint grid, and records `row_index`, `column_index`, `cell_id`, and `grid_id` metadata on every footprint cell.
+
+`GridCoordinateSystem` validates unique coordinates, unique ids, positive dimensions, continuous indexing, and deterministic ordering. It exposes logical helpers for `cell_at(row, column)`, `cell_by_id(id)`, `neighbors(cell)`, `row_cells(row)`, and `column_cells(column)`. `DetectionGraph` now exposes the optional coordinate system when footprint cells are available, without changing existing detector APIs or replacing `DetectionGraph`.
+
+Milestone 11 performs no OCR, reads no numbers, detects no bid/ask values, classifies no volume or delta values, and uses no AI, ML, OpenCV, networking, threading, or async execution. Milestone 12 introduces Cell Classification after the coordinate system is stable.
