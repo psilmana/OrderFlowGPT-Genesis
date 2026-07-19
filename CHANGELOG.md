@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Added Milestone 7 Price Axis detection with immutable configuration, deterministic geometry/edge/projection scoring, object graph integration, debug overlays, and documentation clarifying that OCR is intentionally deferred until after region detection.
 - Added Milestone 4 Workspace Detection contracts for workspace layouts, chart regions, price axes, time axes, bottom panels, toolbars, status bars, viewports, and future layout detector adapters.
 
 ### Added

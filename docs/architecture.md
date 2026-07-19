@@ -2,7 +2,7 @@
 
 ## Purpose
 
-OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 added image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`. Milestone 5 added the first real vision detector for locating the main ATAS trading chart. Milestone 6 adds the contract-only Vision Object Detection Foundation that future semantic detectors will use.
+OrderFlowGPT Genesis grows through narrow milestones. Milestone 1 froze the deterministic order-flow analysis core. Milestone 2 added the Vision Foundation needed to reason about captured screen frames and detected workspace structure. Milestone 3 added image preprocessing contracts that convert an `ImageFrame` into a `ProcessedFrame`. Milestone 5 added the first real vision detector for locating the main ATAS trading chart. Milestone 6 adds the contract-only Vision Object Detection Foundation that future semantic detectors will use. Milestone 7 implements the first real semantic detector: deterministic Price Axis detection.
 
 ## Package boundaries
 
@@ -117,10 +117,18 @@ DetectionGraph
 - `DetectionGraph` stores all detected objects for one frame and validates unique ids, duplicate ids, parent references, child references, and frame alignment.
 - `DetectionContext` is the only input accepted by future object detectors. It contains a `ProcessedFrame`, a `WorkspaceLayout`, and immutable configuration.
 - `ObjectDetector`, `ObjectDetectionPipeline`, and `DetectorRegistry` define how semantic detectors are registered and run.
-- `SequentialObjectDetectionPipeline` runs registered detectors in order and returns a validated graph.
-- `PriceAxisDetector`, `TimeAxisDetector`, `FootprintDetector`, `VolumeProfileDetector`, `BigTradeDetector`, and `AbsorptionDetector` are placeholders that intentionally return empty object detection results.
+- `SequentialObjectDetectionPipeline` runs registered detectors with `PriceAxisDetector` first when it is registered, then returns a validated graph.
+- `TimeAxisDetector`, `FootprintDetector`, `VolumeProfileDetector`, `BigTradeDetector`, and `AbsorptionDetector` remain placeholders that intentionally return empty object detection results.
 
-Milestone 6 deliberately excludes real detection behavior, OpenCV, OCR, machine learning, AI calls, screen capture, external libraries, side effects, globals, threading, async execution, and networking. Its purpose is to create stable extension seams for Milestone 7.
+Milestone 6 deliberately excluded real detection behavior, OpenCV, OCR, machine learning, AI calls, screen capture, external libraries, side effects, globals, threading, async execution, and networking. Its purpose was to create stable extension seams for Milestone 7.
+
+## Milestone 7: Price Axis Detector
+
+Milestone 7 extends the object-detection foundation with the first real `ObjectDetector` implementation. `PriceAxisDetector` receives a `DetectionContext`, uses the existing `WorkspaceLayout.chart_region` as an anchor, scans only the workspace area immediately to the right of the chart, and returns `DetectionResult[DetectedObject]` with `ObjectType.PRICE_AXIS` when deterministic geometry validates a vertical axis region.
+
+The detector uses no OCR, AI, ML, deep learning, OpenCV, networking, capture, threading, async execution, mutable globals, or external libraries. It relies on in-memory luminance, vertical edge density, brightness-transition checks, width ratios, projection scoring, overlap rejection, and confidence validation. Its metadata records `estimated_width`, `edge_density`, and `projection_score`. Optional debug overlays draw only the price-axis rectangle and do not alter chart overlays.
+
+OCR is intentionally not implemented in Milestone 7 because the scope is region detection only. Reading price labels requires a separate text-recognition contract and validation strategy; this milestone first makes the axis geometry stable for downstream work. Milestone 8 will detect the Time Axis next, preserving the same deterministic extension approach.
 
 ## Extension rules for future milestones
 

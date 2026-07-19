@@ -402,9 +402,17 @@ class SequentialObjectDetectionPipeline:
     registry: DetectorRegistry
 
     def run(self, context: DetectionContext) -> DetectionGraph:
+        ordered_detectors = tuple(
+            sorted(
+                self.registry.detectors,
+                key=lambda detector: (
+                    0 if detector.name == PriceAxisDetector.name else 1
+                ),
+            )
+        )
         detected = tuple(
             result.detected_object
-            for detector in self.registry.detectors
+            for detector in ordered_detectors
             for result in (detector.detect(context),)
             if result.detected_object is not None
         )
@@ -428,8 +436,246 @@ class _EmptyObjectDetector:
         )
 
 
-class PriceAxisDetector(_EmptyObjectDetector):
+@dataclass(frozen=True, slots=True)
+class PriceAxisDetectorConfig:
+    """Immutable thresholds for deterministic price-axis detection."""
+
+    min_width_ratio: float = 0.025
+    max_width_ratio: float = 0.18
+    min_edge_density: float = 0.01
+    min_confidence: float = 0.35
+    min_projection_score: float = 0.18
+    brightness_delta_threshold: int = 18
+    max_chart_overlap_ratio: float = 0.05
+    debug_overlay: bool = False
+
+    def __post_init__(self) -> None:
+        for name in (
+            "min_width_ratio",
+            "max_width_ratio",
+            "min_edge_density",
+            "min_confidence",
+            "min_projection_score",
+            "max_chart_overlap_ratio",
+        ):
+            value = getattr(self, name)
+            if not 0.0 <= value <= 1.0:
+                raise ValueError(f"{name} must be between 0.0 and 1.0")
+        if self.min_width_ratio <= 0.0:
+            raise ValueError("min_width_ratio must be greater than 0.0")
+        if self.max_width_ratio <= self.min_width_ratio:
+            raise ValueError("max_width_ratio must exceed min_width_ratio")
+        if self.brightness_delta_threshold <= 0:
+            raise ValueError("brightness_delta_threshold must be positive")
+
+
+class PriceAxisDetector:
+    """Detect only the vertical price-axis region immediately right of a chart."""
+
     name = "price-axis-detector"
+
+    def __init__(self, config: PriceAxisDetectorConfig | None = None) -> None:
+        self._config = config or PriceAxisDetectorConfig()
+
+    def detect(self, context: DetectionContext) -> DetectionResult[DetectedObject]:
+        frame = context.processed_frame.source_frame
+        layout = context.workspace_layout
+        chart = layout.chart_region.bounds
+        workspace = layout.bounds
+        search_left = chart.right
+        search_right = min(
+            workspace.right,
+            chart.right + round(chart.width * self._config.max_width_ratio),
+        )
+        if search_left >= search_right or chart.height <= 0:
+            return self._empty(
+                "no workspace area exists immediately right of chart",
+                frame.width,
+                frame.height,
+            )
+
+        min_width = max(1, round(chart.width * self._config.min_width_ratio))
+        max_width = max(min_width, round(chart.width * self._config.max_width_ratio))
+        max_width = min(max_width, search_right - search_left)
+        if max_width <= 0:
+            return self._empty(
+                "price-axis search width is zero", frame.width, frame.height
+            )
+
+        luminance = _luminance(frame)
+        edges = _edge_map(luminance, frame.width, frame.height)
+        candidate, projection_score = _price_axis_candidate(
+            luminance,
+            edges,
+            frame.width,
+            chart,
+            search_left,
+            search_right,
+            min_width,
+            max_width,
+            self._config,
+        )
+        if candidate is None:
+            return self._empty(
+                "no price-axis contrast/projection candidate found",
+                frame.width,
+                frame.height,
+            )
+        if not _contains(workspace, candidate):
+            return self._empty(
+                "price-axis candidate outside workspace layout",
+                frame.width,
+                frame.height,
+                candidate,
+                projection_score,
+            )
+        overlap = _overlap_area(candidate, chart) / (candidate.width * candidate.height)
+        if overlap > self._config.max_chart_overlap_ratio:
+            return self._empty(
+                "price-axis candidate overlaps chart excessively",
+                frame.width,
+                frame.height,
+                candidate,
+                projection_score,
+            )
+        if candidate.width > max_width:
+            return self._empty(
+                "price-axis candidate wider than expected",
+                frame.width,
+                frame.height,
+                candidate,
+                projection_score,
+            )
+        min_expected_width = min_width + round((max_width - min_width) * 0.35)
+        if max_width >= 24 and candidate.width < min_expected_width:
+            return self._empty(
+                "price-axis candidate narrower than expected",
+                frame.width,
+                frame.height,
+                candidate,
+                projection_score,
+            )
+
+        chart_edge = BoundingBox(
+            max(chart.x, chart.right - min_width), chart.y, min_width, chart.height
+        )
+        immediate_strip = BoundingBox(chart.right, chart.y, min_width, chart.height)
+        immediate_mean = _region_mean(luminance, frame.width, immediate_strip)
+        chart_mean = _region_mean(luminance, frame.width, chart_edge)
+        brightness_delta = abs(immediate_mean - chart_mean)
+        background_probe_x = min(workspace.right - min_width, chart.right + max_width)
+        background_probe = BoundingBox(
+            background_probe_x, chart.y, min_width, chart.height
+        )
+        if (
+            abs(immediate_mean - _region_mean(luminance, frame.width, background_probe))
+            < self._config.brightness_delta_threshold
+        ):
+            return self._empty(
+                "price-axis candidate is not immediately right of chart",
+                frame.width,
+                frame.height,
+                candidate,
+                projection_score,
+            )
+        if brightness_delta < self._config.brightness_delta_threshold * 3:
+            return self._empty(
+                "price-axis candidate rejected by brightness transition",
+                frame.width,
+                frame.height,
+                candidate,
+                projection_score,
+            )
+
+        edge_density = _vertical_edge_count(luminance, frame.width, candidate) / (
+            candidate.width * candidate.height
+        )
+        width_score = 1.0 - min(
+            abs(candidate.width - min_width) / max(max_width, 1), 1.0
+        )
+        density_score = min(
+            edge_density / max(self._config.min_edge_density * 3.0, 0.001), 1.0
+        )
+        confidence = round(
+            max(
+                0.0,
+                min(
+                    (projection_score * 0.5)
+                    + (density_score * 0.35)
+                    + (width_score * 0.15),
+                    1.0,
+                ),
+            ),
+            3,
+        )
+        if edge_density < self._config.min_edge_density:
+            return self._empty(
+                "price-axis candidate rejected by edge density",
+                frame.width,
+                frame.height,
+                candidate,
+                confidence,
+            )
+        if (
+            projection_score < self._config.min_projection_score
+            or confidence < self._config.min_confidence
+        ):
+            return self._empty(
+                "price-axis candidate rejected by confidence",
+                frame.width,
+                frame.height,
+                candidate,
+                confidence,
+            )
+
+        metadata = {
+            "estimated_width": candidate.width,
+            "edge_density": round(edge_density, 6),
+            "projection_score": round(projection_score, 6),
+        }
+        detected = DetectedObject(
+            object_id=ObjectId(f"{frame.frame_id}:price-axis"),
+            bounds=candidate,
+            confidence=DetectionConfidence(confidence),
+            object_type=ObjectType.PRICE_AXIS,
+            frame_id=frame.frame_id,
+            source=DetectionSource(self.name),
+            metadata=metadata,
+        )
+        return DetectionResult(
+            region=candidate,
+            confidence=confidence,
+            reason="detected price axis immediately right of chart using deterministic projection/edge analysis",
+            detector_name=self.name,
+            debug_overlay=(
+                _debug_overlay(
+                    frame.width, frame.height, candidate, confidence, "price_axis"
+                )
+                if self._config.debug_overlay
+                else None
+            ),
+            detected_object=detected,
+        )
+
+    def _empty(
+        self,
+        reason: str,
+        width: int,
+        height: int,
+        box: BoundingBox | None = None,
+        confidence: float = 0.0,
+    ) -> DetectionResult[DetectedObject]:
+        return DetectionResult(
+            region=None,
+            confidence=0.0,
+            reason=reason,
+            detector_name=self.name,
+            debug_overlay=(
+                _debug_overlay(width, height, box, confidence, "rejected")
+                if self._config.debug_overlay
+                else None
+            ),
+        )
 
 
 class TimeAxisDetector(_EmptyObjectDetector):
@@ -1249,6 +1495,91 @@ def _count_edges(edges: Sequence[bool], width: int, box: BoundingBox) -> int:
             1 for value in edges[y * width + box.x : y * width + box.right] if value
         )
     return total
+
+
+def _price_axis_candidate(
+    luminance: Sequence[int],
+    edges: Sequence[bool],
+    frame_width: int,
+    chart: BoundingBox,
+    search_left: int,
+    search_right: int,
+    min_width: int,
+    max_width: int,
+    config: PriceAxisDetectorConfig,
+) -> tuple[BoundingBox | None, float]:
+    chart_edge_mean = _region_mean(
+        luminance,
+        frame_width,
+        BoundingBox(
+            max(chart.x, chart.right - min_width), chart.y, min_width, chart.height
+        ),
+    )
+    best_box: BoundingBox | None = None
+    best_score = 0.0
+    for width in range(min_width, max_width + 1):
+        box = BoundingBox(x=search_left, y=chart.y, width=width, height=chart.height)
+        mean_delta = abs(_region_mean(luminance, frame_width, box) - chart_edge_mean)
+        edge_density = _vertical_edge_count(luminance, frame_width, box) / (
+            box.width * box.height
+        )
+        active_cols = 0
+        for col in range(box.x, box.right):
+            count = sum(
+                1
+                for y in range(box.y, box.bottom)
+                if col > 0
+                and abs(
+                    luminance[y * frame_width + col]
+                    - luminance[y * frame_width + col - 1]
+                )
+                >= 45
+            )
+            if count / box.height >= config.min_edge_density:
+                active_cols += 1
+        projection_score = active_cols / box.width
+        contrast_score = min(mean_delta / config.brightness_delta_threshold, 1.0)
+        density_score = min(
+            edge_density / max(config.min_edge_density * 3.0, 0.001), 1.0
+        )
+        width_score = width / max_width
+        score = (
+            (projection_score * 0.45)
+            + (contrast_score * 0.2)
+            + (density_score * 0.15)
+            + (width_score * 0.2)
+        )
+        if score > best_score:
+            best_box = box
+            best_score = score
+    return best_box, round(best_score, 6)
+
+
+def _vertical_edge_count(luminance: Sequence[int], width: int, box: BoundingBox) -> int:
+    total = 0
+    for y in range(box.y, box.bottom):
+        row = y * width
+        for x in range(max(1, box.x), box.right):
+            if abs(luminance[row + x] - luminance[row + x - 1]) >= 45:
+                total += 1
+    return total
+
+
+def _region_mean(luminance: Sequence[int], width: int, box: BoundingBox) -> float:
+    total = 0
+    count = 0
+    for y in range(box.y, box.bottom):
+        row = y * width
+        for x in range(box.x, box.right):
+            total += luminance[row + x]
+            count += 1
+    return total / count if count else 0.0
+
+
+def _overlap_area(first: BoundingBox, second: BoundingBox) -> int:
+    x_overlap = max(0, min(first.right, second.right) - max(first.x, second.x))
+    y_overlap = max(0, min(first.bottom, second.bottom) - max(first.y, second.y))
+    return x_overlap * y_overlap
 
 
 def _debug_overlay(
