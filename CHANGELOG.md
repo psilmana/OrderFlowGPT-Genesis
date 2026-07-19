@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.7 - Milestone 12
+
+- Added immutable footprint cell classification models, configurable logical cell layouts, deterministic cell-region analysis, validation for semantic geometry, lookup helpers, and `DetectionGraph` cell-classification exposure.
+- Documented that Milestone 12 performs no OCR, no text recognition, no numeric interpretation, no AI, no ML, and that Milestone 13 introduces OCR Foundation.
+
 ## 0.1.6 - Milestone 11
 
 - Added immutable footprint cell coordinate system value objects and deterministic mapping from detected cell geometry to logical rows, columns, ids, and grid ids.
