@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.12 - Milestone 18
+
+- Added deterministic Stacked Footprint Imbalance Detection with immutable stack type/configuration/detection/result/statistics models, vertical bid/ask stack detection from `FootprintImbalanceResult` plus `FootprintMatrix`, graph/pipeline integration, lookup helpers, and documentation clarifying that Milestone 18 detects stacked bid/ask imbalances only with no absorption, unfinished auction, POC, trading logic, signals, or recommendations. Milestone 19 introduces Absorption Detection.
+
 ## 0.1.11 - Milestone 17
 
 - Added deterministic single-cell Footprint Imbalance Detection with immutable configuration, detection/result/statistics models, ask-vs-bid-below and bid-vs-ask-above comparisons from the Milestone 16 `FootprintMatrix`, graph/pipeline integration, lookup helpers, and documentation clarifying that stacked imbalance detection, absorption, unfinished auctions, POC detection, trading signals, strategy logic, and recommendations remain out of scope. Milestone 18 introduces stacked imbalance detection.
