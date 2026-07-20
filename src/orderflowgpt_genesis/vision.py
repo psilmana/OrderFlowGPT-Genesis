@@ -351,6 +351,7 @@ class DetectionGraph:
     ocr_results: tuple["OCRResult", ...] = ()
     footprint_interpretation: "FootprintInterpretation | None" = None
     parsed_values: tuple["ParsingResult", ...] = ()
+    footprint_matrix: "FootprintMatrix | None" = None
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -430,6 +431,21 @@ class DetectionGraph:
                 raise ValueError(
                     "footprint interpretation must reference detected cells"
                 )
+        if self.footprint_matrix is not None:
+            if self.grid_coordinate_system is None:
+                raise ValueError("footprint matrix requires coordinate system")
+            if self.footprint_interpretation is None:
+                raise ValueError("footprint matrix requires interpretation")
+            matrix_ids = {cell.cell_id for cell in self.footprint_matrix.cells}
+            if matrix_ids != cell_ids:
+                raise ValueError("footprint matrix must reference detected cells")
+            if (
+                self.footprint_matrix.dimensions_value.rows
+                != self.grid_coordinate_system.row_count
+                or self.footprint_matrix.dimensions_value.columns
+                != self.grid_coordinate_system.column_count
+            ):
+                raise ValueError("footprint matrix dimensions must match grid")
 
     @property
     def footprint_cells(self) -> tuple[DetectedObject, ...]:
@@ -502,6 +518,26 @@ class DetectionGraph:
         """Return parsed OCR results that did not produce valid numbers."""
 
         return tuple(result for result in self.parsed_values if not result.is_valid())
+
+    def matrix_cell(self, row: int, column: int) -> "MatrixCell":
+        if self.footprint_matrix is None:
+            raise ValueError("footprint matrix is not available")
+        return self.footprint_matrix.cell(row, column)
+
+    def matrix_row(self, index: int) -> "MatrixRow":
+        if self.footprint_matrix is None:
+            raise ValueError("footprint matrix is not available")
+        return self.footprint_matrix.row(index)
+
+    def matrix_column(self, index: int) -> tuple["MatrixCell", ...]:
+        if self.footprint_matrix is None:
+            raise ValueError("footprint matrix is not available")
+        return self.footprint_matrix.column(index)
+
+    def matrix_statistics(self) -> "MatrixStatistics":
+        if self.footprint_matrix is None:
+            raise ValueError("footprint matrix is not available")
+        return self.footprint_matrix.statistics()
 
 
 @dataclass(frozen=True, slots=True)
@@ -1625,6 +1661,345 @@ class FootprintInterpretation:
 
 
 @dataclass(frozen=True, slots=True)
+class MatrixDimensions:
+    """Immutable row/column dimensions for a footprint matrix."""
+
+    rows: int
+    columns: int
+
+    def __post_init__(self) -> None:
+        if self.rows <= 0 or self.columns <= 0:
+            raise ValueError("matrix dimensions must be positive")
+
+
+@dataclass(frozen=True, slots=True)
+class MatrixPosition:
+    """Immutable logical matrix position for one footprint cell."""
+
+    row_index: int
+    column_index: int
+    cell_id: str
+    coordinate: CellCoordinate
+
+    def __post_init__(self) -> None:
+        if self.row_index < 0 or self.column_index < 0:
+            raise ValueError("matrix position indexes must be non-negative")
+        if not self.cell_id.strip():
+            raise ValueError("matrix position cell id is required")
+        if self.coordinate.row_index != self.row_index:
+            raise ValueError("matrix position row must match coordinate")
+        if self.coordinate.column_index != self.column_index:
+            raise ValueError("matrix position column must match coordinate")
+        if self.coordinate.cell_id != self.cell_id:
+            raise ValueError("matrix position cell id must match coordinate")
+
+
+@dataclass(frozen=True, slots=True)
+class MatrixCell:
+    """Canonical immutable matrix entry referencing all cell-level source data."""
+
+    position: MatrixPosition
+    interpretation: FootprintCellData
+    parsed_values: tuple[ParsingResult, ...]
+    classification: CellClassification
+    original_cell: DetectedObject
+
+    def __post_init__(self) -> None:
+        cell_id = self.position.cell_id
+        if self.interpretation.cell_reference.coordinate.cell_id != cell_id:
+            raise ValueError("matrix cell interpretation must match position")
+        if self.classification.cell_id != cell_id:
+            raise ValueError("matrix cell classification must match position")
+        if self.original_cell.object_type != ObjectType.FOOTPRINT_CELL:
+            raise ValueError("matrix cell original object must be a footprint cell")
+        if str(self.original_cell.metadata.get("cell_id", "")) != cell_id:
+            raise ValueError("matrix cell original object must match position")
+        if any(result.parsed_value.cell_id != cell_id for result in self.parsed_values):
+            raise ValueError("matrix cell parsed values must match position")
+        object.__setattr__(self, "parsed_values", tuple(self.parsed_values))
+
+    @property
+    def row_index(self) -> int:
+        return self.position.row_index
+
+    @property
+    def column_index(self) -> int:
+        return self.position.column_index
+
+    @property
+    def cell_id(self) -> str:
+        return self.position.cell_id
+
+    @property
+    def coordinate(self) -> CellCoordinate:
+        return self.position.coordinate
+
+
+@dataclass(frozen=True, slots=True)
+class MatrixRow:
+    """Immutable row of matrix cells."""
+
+    index: int
+    cells: tuple[MatrixCell, ...]
+
+    def __post_init__(self) -> None:
+        if self.index < 0:
+            raise ValueError("matrix row index must be non-negative")
+        if not self.cells:
+            raise ValueError("matrix row must contain cells")
+        if any(cell.row_index != self.index for cell in self.cells):
+            raise ValueError("matrix row cells must share the row index")
+        ordered = tuple(sorted(self.cells, key=lambda cell: cell.column_index))
+        if self.cells != ordered:
+            raise ValueError("matrix row cells must be column ordered")
+        columns = tuple(cell.column_index for cell in self.cells)
+        if len(set(columns)) != len(columns):
+            raise ValueError("duplicate matrix row columns are not allowed")
+        if columns != tuple(range(len(self.cells))):
+            raise ValueError("matrix row columns must be continuous")
+        object.__setattr__(self, "cells", tuple(self.cells))
+
+
+@dataclass(frozen=True, slots=True)
+class MatrixStatistics:
+    """Structural statistics for a footprint matrix."""
+
+    rows: int
+    columns: int
+    total_cells: int
+    interpreted_cells: int
+    empty_cells: int
+    missing_cells: int
+    bid_cells: int
+    ask_cells: int
+    delta_cells: int
+    unknown_cells: int
+
+    def __post_init__(self) -> None:
+        values = (
+            self.rows,
+            self.columns,
+            self.total_cells,
+            self.interpreted_cells,
+            self.empty_cells,
+            self.missing_cells,
+            self.bid_cells,
+            self.ask_cells,
+            self.delta_cells,
+            self.unknown_cells,
+        )
+        if any(value < 0 for value in values):
+            raise ValueError("matrix statistics cannot be negative")
+
+
+@dataclass(frozen=True, slots=True)
+class FootprintMatrix:
+    """Canonical immutable two-dimensional footprint-cell representation."""
+
+    grid_id: str
+    rows: tuple[MatrixRow, ...]
+    dimensions_value: MatrixDimensions
+    statistics_value: MatrixStatistics
+
+    def __post_init__(self) -> None:
+        if not self.grid_id.strip():
+            raise ValueError("matrix grid id is required")
+        if len(self.rows) != self.dimensions_value.rows:
+            raise ValueError("matrix row count must match dimensions")
+        ordered_rows = tuple(sorted(self.rows, key=lambda row: row.index))
+        if self.rows != ordered_rows:
+            raise ValueError("matrix rows must be row ordered")
+        if tuple(row.index for row in self.rows) != tuple(
+            range(self.dimensions_value.rows)
+        ):
+            raise ValueError("matrix rows must be continuous")
+        cells = tuple(cell for row in self.rows for cell in row.cells)
+        if any(len(row.cells) != self.dimensions_value.columns for row in self.rows):
+            raise ValueError("matrix rows must match column dimensions")
+        positions = {(cell.row_index, cell.column_index) for cell in cells}
+        if len(positions) != len(cells):
+            raise ValueError("duplicate matrix positions are not allowed")
+        expected_positions = {
+            (row, column)
+            for row in range(self.dimensions_value.rows)
+            for column in range(self.dimensions_value.columns)
+        }
+        if positions != expected_positions:
+            raise ValueError("matrix coordinates must be continuous")
+        ids = {cell.cell_id for cell in cells}
+        if len(ids) != len(cells):
+            raise ValueError("duplicate matrix cell ids are not allowed")
+        if self.statistics_value.total_cells != len(cells):
+            raise ValueError("matrix statistics must match cell count")
+        object.__setattr__(self, "rows", tuple(self.rows))
+
+    @property
+    def cells(self) -> tuple[MatrixCell, ...]:
+        return tuple(cell for row in self.rows for cell in row.cells)
+
+    def cell(self, row: int, column: int) -> MatrixCell:
+        if row < 0 or column < 0:
+            raise KeyError(f"matrix cell not found: {row},{column}")
+        return self.rows[row].cells[column]
+
+    def row(self, index: int) -> MatrixRow:
+        return self.rows[index]
+
+    def column(self, index: int) -> tuple[MatrixCell, ...]:
+        return tuple(row.cells[index] for row in self.rows)
+
+    def above(self, cell: MatrixCell) -> MatrixCell | None:
+        return (
+            None
+            if cell.row_index == 0
+            else self.cell(cell.row_index - 1, cell.column_index)
+        )
+
+    def below(self, cell: MatrixCell) -> MatrixCell | None:
+        if cell.row_index + 1 >= self.dimensions_value.rows:
+            return None
+        return self.cell(cell.row_index + 1, cell.column_index)
+
+    def left(self, cell: MatrixCell) -> MatrixCell | None:
+        return (
+            None
+            if cell.column_index == 0
+            else self.cell(cell.row_index, cell.column_index - 1)
+        )
+
+    def right(self, cell: MatrixCell) -> MatrixCell | None:
+        if cell.column_index + 1 >= self.dimensions_value.columns:
+            return None
+        return self.cell(cell.row_index, cell.column_index + 1)
+
+    def neighbors(self, cell: MatrixCell) -> tuple[MatrixCell, ...]:
+        return tuple(
+            candidate
+            for candidate in (
+                self.above(cell),
+                self.below(cell),
+                self.left(cell),
+                self.right(cell),
+            )
+            if candidate is not None
+        )
+
+    def diagonal_neighbors(self, cell: MatrixCell) -> tuple[MatrixCell, ...]:
+        candidates = (
+            (cell.row_index - 1, cell.column_index - 1),
+            (cell.row_index - 1, cell.column_index + 1),
+            (cell.row_index + 1, cell.column_index - 1),
+            (cell.row_index + 1, cell.column_index + 1),
+        )
+        return tuple(
+            self.cell(row, column)
+            for row, column in candidates
+            if 0 <= row < self.dimensions_value.rows
+            and 0 <= column < self.dimensions_value.columns
+        )
+
+    def dimensions(self) -> MatrixDimensions:
+        return self.dimensions_value
+
+    def statistics(self) -> MatrixStatistics:
+        return self.statistics_value
+
+
+@dataclass(frozen=True, slots=True)
+class FootprintMatrixBuilder:
+    """Build and validate the canonical immutable footprint matrix."""
+
+    def build(
+        self,
+        detection_graph: DetectionGraph,
+        coordinate_mapper: CoordinateMapper,
+        interpretation: FootprintInterpretation,
+    ) -> FootprintMatrix:
+        cells = detection_graph.footprint_cells
+        grid = coordinate_mapper.map_cells(cells)
+        if grid.grid_id != interpretation.grid_id:
+            raise ValueError("matrix grid id must match interpretation")
+        by_coordinate = {(c.row_index, c.column_index): c for c in grid.cells}
+        expected = {
+            (row, column)
+            for row in range(grid.row_count)
+            for column in range(grid.column_count)
+        }
+        if set(by_coordinate) != expected:
+            raise ValueError("matrix coordinates must not have gaps")
+        by_cell_id = {cell.cell_id: cell for cell in grid.cells}
+        interpreted = {
+            cell.cell_reference.coordinate.cell_id: cell
+            for cell in interpretation.ordered_cells
+        }
+        if set(interpreted) != set(by_cell_id):
+            raise ValueError("every coordinate must have one interpretation")
+        classifications = {c.cell_id: c for c in detection_graph.cell_classifications}
+        originals = {str(obj.metadata.get("cell_id", "")): obj for obj in cells}
+        parsed = {
+            cell_id: tuple(
+                result
+                for result in detection_graph.parsed_values
+                if result.parsed_value.cell_id == cell_id
+            )
+            for cell_id in by_cell_id
+        }
+        matrix_cells = tuple(
+            MatrixCell(
+                MatrixPosition(
+                    coordinate.row_index,
+                    coordinate.column_index,
+                    coordinate.cell_id,
+                    coordinate,
+                ),
+                interpreted[coordinate.cell_id],
+                parsed[coordinate.cell_id],
+                classifications[coordinate.cell_id],
+                originals[coordinate.cell_id],
+            )
+            for coordinate in grid.cells
+        )
+        rows = tuple(
+            MatrixRow(
+                row,
+                tuple(cell for cell in matrix_cells if cell.row_index == row),
+            )
+            for row in range(grid.row_count)
+        )
+        statistics = self._statistics(grid.row_count, grid.column_count, matrix_cells)
+        return FootprintMatrix(
+            grid.grid_id,
+            rows,
+            MatrixDimensions(grid.row_count, grid.column_count),
+            statistics,
+        )
+
+    @staticmethod
+    def _statistics(
+        rows: int, columns: int, cells: Sequence[MatrixCell]
+    ) -> MatrixStatistics:
+        total = rows * columns
+        return MatrixStatistics(
+            rows=rows,
+            columns=columns,
+            total_cells=total,
+            interpreted_cells=sum(not cell.interpretation.is_empty() for cell in cells),
+            empty_cells=sum(cell.interpretation.is_empty() for cell in cells),
+            missing_cells=total - len(cells),
+            bid_cells=sum(cell.interpretation.bid() is not None for cell in cells),
+            ask_cells=sum(cell.interpretation.ask() is not None for cell in cells),
+            delta_cells=sum(cell.interpretation.delta() is not None for cell in cells),
+            unknown_cells=sum(
+                any(
+                    warning.code in ("unknown", "missing_values")
+                    for warning in cell.interpretation.warnings()
+                )
+                for cell in cells
+            ),
+        )
+
+
+@dataclass(frozen=True, slots=True)
 class InterpretationResult:
     """Result wrapper for footprint semantic interpretation."""
 
@@ -2114,13 +2489,41 @@ class SequentialObjectDetectionPipeline:
         parsed_values = tuple(
             DeterministicOCRPostProcessor().process(result) for result in ocr_results
         )
-        return DetectionGraph(
+        footprint_interpretation = (
+            SequentialInterpretationPipeline().run(
+                cell_classifications,
+                tuple(result.parsed_value for result in parsed_values),
+            )
+            if cell_classifications
+            else None
+        )
+        graph = DetectionGraph(
             frame_id=context.processed_frame.source_frame.frame_id,
             objects=detected,
             grid_coordinate_system=coordinate_system,
             cell_classifications=cell_classifications,
             ocr_results=ocr_results,
+            footprint_interpretation=footprint_interpretation,
             parsed_values=parsed_values,
+        )
+        footprint_matrix = (
+            FootprintMatrixBuilder().build(
+                graph,
+                CoordinateMapper(),
+                footprint_interpretation,
+            )
+            if footprint_interpretation is not None
+            else None
+        )
+        return DetectionGraph(
+            frame_id=graph.frame_id,
+            objects=graph.objects,
+            grid_coordinate_system=graph.grid_coordinate_system,
+            cell_classifications=graph.cell_classifications,
+            ocr_results=graph.ocr_results,
+            footprint_interpretation=graph.footprint_interpretation,
+            parsed_values=graph.parsed_values,
+            footprint_matrix=footprint_matrix,
         )
 
 
