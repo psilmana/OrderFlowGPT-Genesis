@@ -3,6 +3,12 @@
 from .analysis import OrderFlowAnalyzer
 from .models import AnalysisResult, MarketSnapshot, OrderBookLevel, Trade
 from .vision import (
+    VolumeClusterAnalyzer,
+    VolumeCluster,
+    VolumeClusterResult,
+    VolumeClusterStatistics,
+    VolumeClusterConfiguration,
+    VolumeClusterType,
     FootprintDeltaAnalyzer,
     DeltaResult,
     DeltaStatistics,
@@ -150,6 +156,12 @@ from .vision import (
 )
 
 __all__ = [
+    "VolumeClusterAnalyzer",
+    "VolumeCluster",
+    "VolumeClusterResult",
+    "VolumeClusterStatistics",
+    "VolumeClusterConfiguration",
+    "VolumeClusterType",
     "FootprintDeltaAnalyzer",
     "DeltaResult",
     "DeltaStatistics",
