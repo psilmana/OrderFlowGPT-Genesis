@@ -169,3 +169,7 @@ Still not implemented:
 - Trading signals
 
 Bundle 2 begins Auction Market Theory on top of this immutable Market Profile Core.
+
+
+### Genesis Auction Market Theory Bundle 3
+Bundle 3 completes the deterministic Auction Market Theory layer. Genesis now supports Poor High, Poor Low, Single Prints, and Naked POC Tracking using only immutable footprint and point-of-control objects. After Bundle 3 the complete Auction Market Theory module is finished. Still NOT implemented: Delta Divergence, Cumulative Delta, Iceberg Detection, Exhaustion, Market Structure, AI Reasoning, and Trading Signals. Bundle 4 begins Advanced Order Flow Analytics.

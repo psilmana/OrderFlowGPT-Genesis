@@ -89,3 +89,7 @@
 - Implemented Bundle 1 of the Genesis Market Profile Core with immutable Session Point of Control, High Volume Nodes, Low Volume Nodes, and 70% Value Area analysis.
 - Extended the detection graph and sequential object detection pipeline to expose Market Profile Core results after volume cluster analysis.
 - Documented that developing POC, developing value area, composite profiles, Auction Theory, market prediction, and trading signals remain out of scope; Bundle 2 begins Auction Market Theory.
+
+
+### Genesis Auction Market Theory Bundle 3
+Bundle 3 completes the deterministic Auction Market Theory layer. Genesis now supports Poor High, Poor Low, Single Prints, and Naked POC Tracking using only immutable footprint and point-of-control objects. After Bundle 3 the complete Auction Market Theory module is finished. Still NOT implemented: Delta Divergence, Cumulative Delta, Iceberg Detection, Exhaustion, Market Structure, AI Reasoning, and Trading Signals. Bundle 4 begins Advanced Order Flow Analytics.
