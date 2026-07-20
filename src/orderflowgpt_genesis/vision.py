@@ -66,6 +66,34 @@ class DeltaType(Enum):
     ZERO = "ZERO"
 
 
+class DeltaDivergenceType(Enum):
+    """Deterministic delta/price divergence classifications."""
+
+    BULLISH_DIVERGENCE = "BULLISH_DIVERGENCE"
+    BEARISH_DIVERGENCE = "BEARISH_DIVERGENCE"
+    HIDDEN_BULLISH = "HIDDEN_BULLISH"
+    HIDDEN_BEARISH = "HIDDEN_BEARISH"
+    NEUTRAL = "NEUTRAL"
+
+
+class DeltaMomentumType(Enum):
+    """Deterministic delta momentum classifications."""
+
+    ACCELERATING_BUYING = "ACCELERATING_BUYING"
+    ACCELERATING_SELLING = "ACCELERATING_SELLING"
+    WEAKENING_BUYING = "WEAKENING_BUYING"
+    WEAKENING_SELLING = "WEAKENING_SELLING"
+    FLAT = "FLAT"
+
+
+class ExhaustionType(Enum):
+    """Deterministic order-flow exhaustion classifications."""
+
+    BUYER_EXHAUSTION = "BUYER_EXHAUSTION"
+    SELLER_EXHAUSTION = "SELLER_EXHAUSTION"
+    NO_EXHAUSTION = "NO_EXHAUSTION"
+
+
 class VolumeClusterType(Enum):
     """Supported deterministic single-cell volume classifications."""
 
@@ -451,6 +479,10 @@ class DetectionGraph:
     poor_auctions: "PoorAuctionResult | None" = None
     single_prints: "SinglePrintResult | None" = None
     naked_pocs: "NakedPointOfControlResult | None" = None
+    delta_divergence: "DeltaDivergenceResult | None" = None
+    cumulative_delta: "CumulativeDeltaResult | None" = None
+    delta_momentum: "DeltaMomentumResult | None" = None
+    exhaustion: "ExhaustionResult | None" = None
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -607,6 +639,10 @@ class DetectionGraph:
             ("poor auctions", self.poor_auctions),
             ("single prints", self.single_prints),
             ("naked pocs", self.naked_pocs),
+            ("delta divergence", self.delta_divergence),
+            ("cumulative delta", self.cumulative_delta),
+            ("delta momentum", self.delta_momentum),
+            ("exhaustion", self.exhaustion),
         ):
             if result is not None:
                 if self.footprint_matrix is None:
@@ -989,6 +1025,49 @@ class DetectionGraph:
         if self.naked_pocs is None:
             return NakedPointOfControlStatistics(0, 0, 0, 0, 0)
         return self.naked_pocs.statistics()
+
+    def lookup_delta_divergence(
+        self, divergence_type: "DeltaDivergenceType"
+    ) -> "DeltaDivergence | None":
+        if self.delta_divergence is None:
+            return None
+        return self.delta_divergence.lookup(divergence_type)
+
+    def delta_divergence_statistics(self) -> "DeltaDivergenceStatistics":
+        if self.delta_divergence is None:
+            return DeltaDivergenceStatistics(0, 0, 0, 0, 0, 0)
+        return self.delta_divergence.statistics()
+
+    def cumulative_delta_statistics(self) -> "CumulativeDeltaStatistics":
+        if self.cumulative_delta is None:
+            return CumulativeDeltaStatistics(
+                0, Decimal("0"), Decimal("0"), Decimal("0"), Decimal("0")
+            )
+        return self.cumulative_delta.statistics()
+
+    def lookup_delta_momentum(
+        self, momentum_type: "DeltaMomentumType"
+    ) -> "DeltaMomentum | None":
+        if self.delta_momentum is None:
+            return None
+        return self.delta_momentum.lookup(momentum_type)
+
+    def delta_momentum_statistics(self) -> "DeltaMomentumStatistics":
+        if self.delta_momentum is None:
+            return DeltaMomentumStatistics(0, 0, 0, 0, 0, 0)
+        return self.delta_momentum.statistics()
+
+    def lookup_exhaustion(
+        self, exhaustion_type: "ExhaustionType"
+    ) -> "Exhaustion | None":
+        if self.exhaustion is None:
+            return None
+        return self.exhaustion.lookup(exhaustion_type)
+
+    def exhaustion_statistics(self) -> "ExhaustionStatistics":
+        if self.exhaustion is None:
+            return ExhaustionStatistics(0, 0, 0, 0)
+        return self.exhaustion.statistics()
 
 
 @dataclass(frozen=True, slots=True)
@@ -5072,6 +5151,514 @@ class FootprintDeltaAnalyzer:
 
 
 @dataclass(frozen=True, slots=True)
+class DeltaDivergenceConfiguration:
+    minimum_delta_change: Decimal = Decimal("0")
+    minimum_price_rows: int = 1
+    hidden: bool = False
+
+    def __post_init__(self) -> None:
+        change = Decimal(str(self.minimum_delta_change))
+        if change < 0 or self.minimum_price_rows <= 0:
+            raise ValueError("delta divergence configuration values must be positive")
+        object.__setattr__(self, "minimum_delta_change", change)
+
+
+@dataclass(frozen=True, slots=True)
+class DeltaDivergence:
+    divergence_type: DeltaDivergenceType
+    start_row: int
+    end_row: int
+    price_change_rows: int
+    delta_change: Decimal
+    confidence: float = 1.0
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.start_row < 0 or self.end_row < self.start_row:
+            raise ValueError("delta divergence ordering is invalid")
+        _validate_confidence(self.confidence, "delta divergence confidence")
+        object.__setattr__(self, "delta_change", Decimal(str(self.delta_change)))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class DeltaDivergenceStatistics:
+    total_divergences: int
+    bullish: int
+    bearish: int
+    hidden_bullish: int
+    hidden_bearish: int
+    neutral: int
+
+    def __post_init__(self) -> None:
+        vals = (
+            self.bullish,
+            self.bearish,
+            self.hidden_bullish,
+            self.hidden_bearish,
+            self.neutral,
+        )
+        if (
+            self.total_divergences < 0
+            or any(v < 0 for v in vals)
+            or sum(vals) != self.total_divergences
+        ):
+            raise ValueError("delta divergence statistics are inconsistent")
+
+
+@dataclass(frozen=True, slots=True)
+class DeltaDivergenceResult:
+    matrix: "FootprintMatrix"
+    delta: DeltaResult
+    divergences: tuple[DeltaDivergence, ...]
+    statistics_value: DeltaDivergenceStatistics
+    configuration: DeltaDivergenceConfiguration = field(
+        default_factory=DeltaDivergenceConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.delta.matrix != self.matrix:
+            raise ValueError("delta divergence must reference matrix delta")
+        ordered = tuple(
+            sorted(
+                self.divergences,
+                key=lambda d: (d.start_row, d.end_row, d.divergence_type.value),
+            )
+        )
+        if self.divergences != ordered:
+            raise ValueError("delta divergences must be ordered")
+        keys = {(d.start_row, d.end_row, d.divergence_type) for d in self.divergences}
+        if len(keys) != len(self.divergences):
+            raise ValueError("duplicate delta divergences are not allowed")
+        max_row = self.matrix.dimensions_value.rows
+        if any(d.end_row >= max_row for d in self.divergences):
+            raise ValueError("delta divergence rows must reference matrix rows")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, divergence_type: DeltaDivergenceType) -> DeltaDivergence | None:
+        return next(
+            (d for d in self.divergences if d.divergence_type == divergence_type), None
+        )
+
+    def statistics(self) -> DeltaDivergenceStatistics:
+        return self.statistics_value
+
+
+@dataclass(frozen=True, slots=True)
+class DeltaDivergenceAnalyzer:
+    configuration: DeltaDivergenceConfiguration = field(
+        default_factory=DeltaDivergenceConfiguration
+    )
+
+    def analyze(
+        self, matrix: "FootprintMatrix", delta: DeltaResult
+    ) -> DeltaDivergenceResult:
+        rows = delta.rows
+        first, last = rows[0], rows[-1]
+        price_change = last.row_index - first.row_index
+        delta_change = last.row_delta - first.row_delta
+        dtype = DeltaDivergenceType.NEUTRAL
+        if (
+            abs(delta_change) >= self.configuration.minimum_delta_change
+            and abs(price_change) >= self.configuration.minimum_price_rows
+        ):
+            if self.configuration.hidden:
+                if delta_change > 0:
+                    dtype = DeltaDivergenceType.HIDDEN_BULLISH
+                elif delta_change < 0:
+                    dtype = DeltaDivergenceType.HIDDEN_BEARISH
+            elif delta_change > 0:
+                dtype = DeltaDivergenceType.BULLISH_DIVERGENCE
+            elif delta_change < 0:
+                dtype = DeltaDivergenceType.BEARISH_DIVERGENCE
+        item = DeltaDivergence(
+            dtype,
+            first.row_index,
+            last.row_index,
+            price_change,
+            delta_change,
+            1.0,
+            {"source": "footprint_delta"},
+        )
+        stats = DeltaDivergenceStatistics(
+            1,
+            int(dtype == DeltaDivergenceType.BULLISH_DIVERGENCE),
+            int(dtype == DeltaDivergenceType.BEARISH_DIVERGENCE),
+            int(dtype == DeltaDivergenceType.HIDDEN_BULLISH),
+            int(dtype == DeltaDivergenceType.HIDDEN_BEARISH),
+            int(dtype == DeltaDivergenceType.NEUTRAL),
+        )
+        return DeltaDivergenceResult(
+            matrix,
+            delta,
+            (item,),
+            stats,
+            self.configuration,
+            {"detector": "DeltaDivergenceAnalyzer"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class CumulativeDeltaConfiguration:
+    reset_rows: tuple[int, ...] = ()
+
+    def __post_init__(self) -> None:
+        if (
+            tuple(sorted(self.reset_rows)) != self.reset_rows
+            or len(set(self.reset_rows)) != len(self.reset_rows)
+            or any(r < 0 for r in self.reset_rows)
+        ):
+            raise ValueError(
+                "cumulative delta reset rows must be ordered unique non-negative"
+            )
+
+
+@dataclass(frozen=True, slots=True)
+class CumulativeDelta:
+    row_index: int
+    row_delta: Decimal
+    running_delta: Decimal
+    session_delta: Decimal
+    reset: bool = False
+    confidence: float = 1.0
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.row_index < 0:
+            raise ValueError("cumulative delta row must be non-negative")
+        _validate_confidence(self.confidence, "cumulative delta confidence")
+        for n in ("row_delta", "running_delta", "session_delta"):
+            object.__setattr__(self, n, Decimal(str(getattr(self, n))))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class CumulativeDeltaStatistics:
+    rows: int
+    final_running_delta: Decimal
+    final_session_delta: Decimal
+    maximum_running_delta: Decimal
+    minimum_running_delta: Decimal
+
+    def __post_init__(self) -> None:
+        if self.rows < 0:
+            raise ValueError("cumulative delta rows cannot be negative")
+        for n in self.__slots__[1:]:
+            object.__setattr__(self, n, Decimal(str(getattr(self, n))))
+
+
+@dataclass(frozen=True, slots=True)
+class CumulativeDeltaResult:
+    matrix: "FootprintMatrix"
+    delta: DeltaResult
+    values: tuple[CumulativeDelta, ...]
+    statistics_value: CumulativeDeltaStatistics
+    configuration: CumulativeDeltaConfiguration = field(
+        default_factory=CumulativeDeltaConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.delta.matrix != self.matrix:
+            raise ValueError("cumulative delta must reference matrix delta")
+        if tuple(v.row_index for v in self.values) != tuple(
+            range(self.matrix.dimensions_value.rows)
+        ):
+            raise ValueError(
+                "cumulative deltas must be ordered and reference matrix rows"
+            )
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, row_index: int) -> CumulativeDelta | None:
+        return next((v for v in self.values if v.row_index == row_index), None)
+
+    def statistics(self) -> CumulativeDeltaStatistics:
+        return self.statistics_value
+
+
+@dataclass(frozen=True, slots=True)
+class CumulativeDeltaAnalyzer:
+    configuration: CumulativeDeltaConfiguration = field(
+        default_factory=CumulativeDeltaConfiguration
+    )
+
+    def analyze(
+        self, matrix: "FootprintMatrix", delta: DeltaResult
+    ) -> CumulativeDeltaResult:
+        running = session = Decimal("0")
+        vals = []
+        resets = set(self.configuration.reset_rows)
+        for row in delta.rows:
+            if row.row_index in resets:
+                session = Decimal("0")
+            running += row.row_delta
+            session += row.row_delta
+            vals.append(
+                CumulativeDelta(
+                    row.row_index,
+                    row.row_delta,
+                    running,
+                    session,
+                    row.row_index in resets,
+                    1.0,
+                    {"source": "row_delta"},
+                )
+            )
+        values = tuple(vals)
+        runs = tuple(v.running_delta for v in values) or (Decimal("0"),)
+        stats = CumulativeDeltaStatistics(
+            len(values), running, session, max(runs), min(runs)
+        )
+        return CumulativeDeltaResult(
+            matrix,
+            delta,
+            values,
+            stats,
+            self.configuration,
+            {"detector": "CumulativeDeltaAnalyzer"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class DeltaMomentumConfiguration:
+    minimum_change: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        object.__setattr__(self, "minimum_change", Decimal(str(self.minimum_change)))
+
+
+@dataclass(frozen=True, slots=True)
+class DeltaMomentum:
+    momentum_type: DeltaMomentumType
+    start_row: int
+    end_row: int
+    delta_change: Decimal
+    confidence: float = 1.0
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.start_row < 0 or self.end_row < self.start_row:
+            raise ValueError("delta momentum ordering is invalid")
+        _validate_confidence(self.confidence, "delta momentum confidence")
+        object.__setattr__(self, "delta_change", Decimal(str(self.delta_change)))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class DeltaMomentumStatistics:
+    total_momentums: int
+    accelerating_buying: int
+    accelerating_selling: int
+    weakening_buying: int
+    weakening_selling: int
+    flat: int
+
+    def __post_init__(self) -> None:
+        vals = (
+            self.accelerating_buying,
+            self.accelerating_selling,
+            self.weakening_buying,
+            self.weakening_selling,
+            self.flat,
+        )
+        if (
+            self.total_momentums < 0
+            or any(v < 0 for v in vals)
+            or sum(vals) != self.total_momentums
+        ):
+            raise ValueError("delta momentum statistics are inconsistent")
+
+
+@dataclass(frozen=True, slots=True)
+class DeltaMomentumResult:
+    matrix: "FootprintMatrix"
+    delta: DeltaResult
+    momentums: tuple[DeltaMomentum, ...]
+    statistics_value: DeltaMomentumStatistics
+    configuration: DeltaMomentumConfiguration = field(
+        default_factory=DeltaMomentumConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.delta.matrix != self.matrix:
+            raise ValueError("delta momentum must reference matrix delta")
+        ordered = tuple(
+            sorted(
+                self.momentums,
+                key=lambda m: (m.start_row, m.end_row, m.momentum_type.value),
+            )
+        )
+        if self.momentums != ordered:
+            raise ValueError("delta momentums must be ordered")
+        if len(
+            {(m.start_row, m.end_row, m.momentum_type) for m in self.momentums}
+        ) != len(self.momentums):
+            raise ValueError("duplicate delta momentums are not allowed")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, momentum_type: DeltaMomentumType) -> DeltaMomentum | None:
+        return next(
+            (m for m in self.momentums if m.momentum_type == momentum_type), None
+        )
+
+    def statistics(self) -> DeltaMomentumStatistics:
+        return self.statistics_value
+
+
+@dataclass(frozen=True, slots=True)
+class DeltaMomentumAnalyzer:
+    configuration: DeltaMomentumConfiguration = field(
+        default_factory=DeltaMomentumConfiguration
+    )
+
+    def analyze(
+        self, matrix: "FootprintMatrix", delta: DeltaResult
+    ) -> DeltaMomentumResult:
+        first, last = delta.rows[0], delta.rows[-1]
+        change = last.row_delta - first.row_delta
+        mt = DeltaMomentumType.FLAT
+        if abs(change) > self.configuration.minimum_change:
+            if last.row_delta > 0 and change > 0:
+                mt = DeltaMomentumType.ACCELERATING_BUYING
+            elif last.row_delta < 0 and change < 0:
+                mt = DeltaMomentumType.ACCELERATING_SELLING
+            elif first.row_delta > 0 and change < 0:
+                mt = DeltaMomentumType.WEAKENING_BUYING
+            elif first.row_delta < 0 and change > 0:
+                mt = DeltaMomentumType.WEAKENING_SELLING
+        item = DeltaMomentum(
+            mt, first.row_index, last.row_index, change, 1.0, {"source": "row_delta"}
+        )
+        stats = DeltaMomentumStatistics(
+            1,
+            int(mt == DeltaMomentumType.ACCELERATING_BUYING),
+            int(mt == DeltaMomentumType.ACCELERATING_SELLING),
+            int(mt == DeltaMomentumType.WEAKENING_BUYING),
+            int(mt == DeltaMomentumType.WEAKENING_SELLING),
+            int(mt == DeltaMomentumType.FLAT),
+        )
+        return DeltaMomentumResult(
+            matrix,
+            delta,
+            (item,),
+            stats,
+            self.configuration,
+            {"detector": "DeltaMomentumAnalyzer"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class ExhaustionConfiguration:
+    minimum_abs_delta: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        object.__setattr__(
+            self, "minimum_abs_delta", Decimal(str(self.minimum_abs_delta))
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class Exhaustion:
+    exhaustion_type: ExhaustionType
+    row_index: int
+    delta_value: Decimal
+    confidence: float = 1.0
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.row_index < 0:
+            raise ValueError("exhaustion row must be non-negative")
+        _validate_confidence(self.confidence, "exhaustion confidence")
+        object.__setattr__(self, "delta_value", Decimal(str(self.delta_value)))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class ExhaustionStatistics:
+    total_exhaustions: int
+    buyer: int
+    seller: int
+    none: int
+
+    def __post_init__(self) -> None:
+        if (
+            self.total_exhaustions < 0
+            or self.buyer + self.seller + self.none != self.total_exhaustions
+        ):
+            raise ValueError("exhaustion statistics are inconsistent")
+
+
+@dataclass(frozen=True, slots=True)
+class ExhaustionResult:
+    matrix: "FootprintMatrix"
+    delta: DeltaResult
+    exhaustions: tuple[Exhaustion, ...]
+    statistics_value: ExhaustionStatistics
+    configuration: ExhaustionConfiguration = field(
+        default_factory=ExhaustionConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.delta.matrix != self.matrix:
+            raise ValueError("exhaustion must reference matrix delta")
+        if self.exhaustions != tuple(
+            sorted(
+                self.exhaustions, key=lambda e: (e.row_index, e.exhaustion_type.value)
+            )
+        ):
+            raise ValueError("exhaustions must be ordered")
+        if len({(e.row_index, e.exhaustion_type) for e in self.exhaustions}) != len(
+            self.exhaustions
+        ):
+            raise ValueError("duplicate exhaustions are not allowed")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, exhaustion_type: ExhaustionType) -> Exhaustion | None:
+        return next(
+            (e for e in self.exhaustions if e.exhaustion_type == exhaustion_type), None
+        )
+
+    def statistics(self) -> ExhaustionStatistics:
+        return self.statistics_value
+
+
+@dataclass(frozen=True, slots=True)
+class ExhaustionDetector:
+    configuration: ExhaustionConfiguration = field(
+        default_factory=ExhaustionConfiguration
+    )
+
+    def detect(self, matrix: "FootprintMatrix", delta: DeltaResult) -> ExhaustionResult:
+        last = delta.rows[-1]
+        et = ExhaustionType.NO_EXHAUSTION
+        if abs(last.row_delta) >= self.configuration.minimum_abs_delta:
+            if last.row_delta > 0:
+                et = ExhaustionType.BUYER_EXHAUSTION
+            elif last.row_delta < 0:
+                et = ExhaustionType.SELLER_EXHAUSTION
+        item = Exhaustion(
+            et, last.row_index, last.row_delta, 1.0, {"source": "row_delta"}
+        )
+        stats = ExhaustionStatistics(
+            1,
+            int(et == ExhaustionType.BUYER_EXHAUSTION),
+            int(et == ExhaustionType.SELLER_EXHAUSTION),
+            int(et == ExhaustionType.NO_EXHAUSTION),
+        )
+        return ExhaustionResult(
+            matrix,
+            delta,
+            (item,),
+            stats,
+            self.configuration,
+            {"detector": "ExhaustionDetector"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
 class FootprintMatrix:
     """Canonical immutable two-dimensional footprint-cell representation."""
 
@@ -5878,6 +6465,34 @@ class SequentialObjectDetectionPipeline:
             and point_of_control is not None
             else None
         )
+        delta_divergence = (
+            DeltaDivergenceAnalyzer().analyze(footprint_matrix, footprint_delta)
+            if footprint_matrix is not None
+            and naked_pocs is not None
+            and footprint_delta is not None
+            else None
+        )
+        cumulative_delta = (
+            CumulativeDeltaAnalyzer().analyze(footprint_matrix, footprint_delta)
+            if footprint_matrix is not None
+            and delta_divergence is not None
+            and footprint_delta is not None
+            else None
+        )
+        delta_momentum = (
+            DeltaMomentumAnalyzer().analyze(footprint_matrix, footprint_delta)
+            if footprint_matrix is not None
+            and cumulative_delta is not None
+            and footprint_delta is not None
+            else None
+        )
+        exhaustion = (
+            ExhaustionDetector().detect(footprint_matrix, footprint_delta)
+            if footprint_matrix is not None
+            and delta_momentum is not None
+            and footprint_delta is not None
+            else None
+        )
         return DetectionGraph(
             frame_id=graph.frame_id,
             objects=graph.objects,
@@ -5903,6 +6518,10 @@ class SequentialObjectDetectionPipeline:
             poor_auctions=poor_auctions,
             single_prints=single_prints,
             naked_pocs=naked_pocs,
+            delta_divergence=delta_divergence,
+            cumulative_delta=cumulative_delta,
+            delta_momentum=delta_momentum,
+            exhaustion=exhaustion,
         )
 
 
