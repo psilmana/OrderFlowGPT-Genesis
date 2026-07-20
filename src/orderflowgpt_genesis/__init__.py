@@ -3,6 +3,13 @@
 from .analysis import OrderFlowAnalyzer
 from .models import AnalysisResult, MarketSnapshot, OrderBookLevel, Trade
 from .vision import (
+    AbsorptionConfiguration,
+    AbsorptionResult,
+    AbsorptionSide,
+    AbsorptionStatistics,
+    AbsorptionType,
+    FootprintAbsorption,
+    FootprintAbsorptionDetector,
     ImbalanceSide,
     ImbalanceType,
     StackedImbalance,
@@ -136,6 +143,13 @@ from .vision import (
 
 __all__ = [
     "AnalysisResult",
+    "AbsorptionConfiguration",
+    "AbsorptionResult",
+    "AbsorptionSide",
+    "AbsorptionStatistics",
+    "AbsorptionType",
+    "FootprintAbsorption",
+    "FootprintAbsorptionDetector",
     "ImbalanceSide",
     "ImbalanceType",
     "ImbalanceStatistics",

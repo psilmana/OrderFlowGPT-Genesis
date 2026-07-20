@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.13 - Milestone 19
+
+- Added deterministic Absorption Detection with immutable absorption type/side/configuration/detection/result/statistics models, graph and pipeline integration, lookup/statistics helpers, and tests confirming threshold behavior, validation, immutability, and deterministic no-op pipeline behavior when source footprint values do not qualify. Milestone 19 adds no AI, ML, OCR changes, OpenCV additions, networking, async processing, threading, vendor-specific logic, trading signals, entries, exits, or recommendations.
+
 ## 0.1.12 - Milestone 18
 
 - Added deterministic Stacked Footprint Imbalance Detection with immutable stack type/configuration/detection/result/statistics models, vertical bid/ask stack detection from `FootprintImbalanceResult` plus `FootprintMatrix`, graph/pipeline integration, lookup helpers, and documentation clarifying that Milestone 18 detects stacked bid/ask imbalances only with no absorption, unfinished auction, POC, trading logic, signals, or recommendations. Milestone 19 introduces Absorption Detection.
