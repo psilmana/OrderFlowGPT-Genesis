@@ -34,6 +34,22 @@ DetectorName: TypeAlias = str
 TDetected = TypeVar("TDetected")
 
 
+class ImbalanceType(Enum):
+    """Supported single-cell footprint imbalance classifications."""
+
+    ASK_IMBALANCE = "ASK_IMBALANCE"
+    BID_IMBALANCE = "BID_IMBALANCE"
+    NONE = "NONE"
+
+
+class ImbalanceSide(Enum):
+    """Dominant side for a detected single-cell imbalance."""
+
+    ASK = "ASK"
+    BID = "BID"
+    NONE = "NONE"
+
+
 class CellSemanticRole(Enum):
     """Logical semantic regions supported inside a footprint cell."""
 
@@ -352,6 +368,7 @@ class DetectionGraph:
     footprint_interpretation: "FootprintInterpretation | None" = None
     parsed_values: tuple["ParsingResult", ...] = ()
     footprint_matrix: "FootprintMatrix | None" = None
+    footprint_imbalances: "FootprintImbalanceResult | None" = None
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -446,6 +463,11 @@ class DetectionGraph:
                 != self.grid_coordinate_system.column_count
             ):
                 raise ValueError("footprint matrix dimensions must match grid")
+        if self.footprint_imbalances is not None:
+            if self.footprint_matrix is None:
+                raise ValueError("footprint imbalances require footprint matrix")
+            if self.footprint_imbalances.matrix != self.footprint_matrix:
+                raise ValueError("footprint imbalances must reference graph matrix")
 
     @property
     def footprint_cells(self) -> tuple[DetectedObject, ...]:
@@ -538,6 +560,37 @@ class DetectionGraph:
         if self.footprint_matrix is None:
             raise ValueError("footprint matrix is not available")
         return self.footprint_matrix.statistics()
+
+    def imbalances(self) -> tuple["FootprintImbalance", ...]:
+        if self.footprint_imbalances is None:
+            return ()
+        return self.footprint_imbalances.imbalances()
+
+    def ask_imbalances(self) -> tuple["FootprintImbalance", ...]:
+        if self.footprint_imbalances is None:
+            return ()
+        return self.footprint_imbalances.ask_imbalances()
+
+    def bid_imbalances(self) -> tuple["FootprintImbalance", ...]:
+        if self.footprint_imbalances is None:
+            return ()
+        return self.footprint_imbalances.bid_imbalances()
+
+    def lookup_imbalance(self, cell_id: str) -> "FootprintImbalance | None":
+        if self.footprint_imbalances is None:
+            return None
+        return self.footprint_imbalances.lookup(cell_id)
+
+    def has_imbalance(self, cell_id: str) -> bool:
+        return self.lookup_imbalance(cell_id) is not None
+
+    def imbalance_statistics(self) -> "ImbalanceStatistics":
+        if self.footprint_imbalances is None:
+            if self.footprint_matrix is None:
+                raise ValueError("footprint imbalances are not available")
+            total = self.footprint_matrix.statistics().total_cells
+            return ImbalanceStatistics(total, 0, 0, 0, total)
+        return self.footprint_imbalances.statistics()
 
 
 @dataclass(frozen=True, slots=True)
@@ -1793,6 +1846,262 @@ class MatrixStatistics:
 
 
 @dataclass(frozen=True, slots=True)
+class ImbalanceConfiguration:
+    """Immutable settings for single-cell footprint imbalance detection."""
+
+    minimum_ratio: Decimal = Decimal("3")
+    minimum_volume: Decimal = Decimal("1")
+    compare_diagonal: bool = True
+    allow_zero_opposite: bool = False
+    strict_mode: bool = True
+
+    def __post_init__(self) -> None:
+        ratio = Decimal(str(self.minimum_ratio))
+        volume = Decimal(str(self.minimum_volume))
+        if not ratio.is_finite() or ratio <= 0:
+            raise ValueError("minimum ratio must be positive and finite")
+        if not volume.is_finite() or volume < 0:
+            raise ValueError("minimum volume must be non-negative and finite")
+        object.__setattr__(self, "minimum_ratio", ratio)
+        object.__setattr__(self, "minimum_volume", volume)
+
+
+@dataclass(frozen=True, slots=True)
+class FootprintImbalance:
+    """One deterministic bid/ask imbalance detected from matrix cell values."""
+
+    cell_id: str
+    position: "MatrixPosition"
+    imbalance_type: ImbalanceType
+    side: ImbalanceSide
+    ratio: Decimal
+    dominant_value: Decimal
+    opposite_value: Decimal
+    confidence: float
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.cell_id.strip():
+            raise ValueError("imbalance cell id is required")
+        if self.position.cell_id != self.cell_id:
+            raise ValueError("imbalance position must reference cell id")
+        if self.imbalance_type == ImbalanceType.NONE:
+            raise ValueError("detected imbalance cannot have NONE type")
+        if (
+            self.imbalance_type == ImbalanceType.ASK_IMBALANCE
+            and self.side != ImbalanceSide.ASK
+        ):
+            raise ValueError("ask imbalance must use ask side")
+        if (
+            self.imbalance_type == ImbalanceType.BID_IMBALANCE
+            and self.side != ImbalanceSide.BID
+        ):
+            raise ValueError("bid imbalance must use bid side")
+        ratio = Decimal(str(self.ratio))
+        dominant = Decimal(str(self.dominant_value))
+        opposite = Decimal(str(self.opposite_value))
+        if not ratio.is_finite() or ratio <= 0:
+            raise ValueError("imbalance ratio must be positive and finite")
+        if not dominant.is_finite() or dominant < 0:
+            raise ValueError("dominant value must be non-negative and finite")
+        if not opposite.is_finite() or opposite < 0:
+            raise ValueError("opposite value must be non-negative and finite")
+        _validate_confidence(self.confidence, "imbalance confidence")
+        object.__setattr__(self, "ratio", ratio)
+        object.__setattr__(self, "dominant_value", dominant)
+        object.__setattr__(self, "opposite_value", opposite)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class ImbalanceStatistics:
+    """Aggregate counts for detected single-cell footprint imbalances."""
+
+    total_cells: int
+    ask_imbalances: int
+    bid_imbalances: int
+    total_imbalances: int
+    cells_without_imbalance: int
+
+    def __post_init__(self) -> None:
+        values = (
+            self.total_cells,
+            self.ask_imbalances,
+            self.bid_imbalances,
+            self.total_imbalances,
+            self.cells_without_imbalance,
+        )
+        if any(value < 0 for value in values):
+            raise ValueError("imbalance statistics cannot be negative")
+        if self.total_imbalances != self.ask_imbalances + self.bid_imbalances:
+            raise ValueError("total imbalances must equal ask plus bid imbalances")
+        if self.cells_without_imbalance + self.total_imbalances != self.total_cells:
+            raise ValueError("imbalance statistics must account for all cells")
+
+
+@dataclass(frozen=True, slots=True)
+class FootprintImbalanceResult:
+    """Immutable result set for single-cell footprint imbalance detection."""
+
+    matrix: "FootprintMatrix"
+    detections: tuple[FootprintImbalance, ...]
+    configuration: ImbalanceConfiguration = field(
+        default_factory=ImbalanceConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        ordered = tuple(
+            sorted(
+                self.detections,
+                key=lambda d: (
+                    d.position.row_index,
+                    d.position.column_index,
+                    d.imbalance_type.value,
+                ),
+            )
+        )
+        if self.detections != ordered:
+            raise ValueError("imbalance detections must be ordered")
+        ids = [d.cell_id for d in self.detections]
+        if len(set(ids)) != len(ids):
+            raise ValueError("duplicate imbalance detections are not allowed")
+        matrix_ids = {cell.cell_id for cell in self.matrix.cells}
+        if set(ids) - matrix_ids:
+            raise ValueError("imbalance detections must reference matrix cells")
+        object.__setattr__(self, "detections", ordered)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def imbalances(self) -> tuple[FootprintImbalance, ...]:
+        return self.detections
+
+    def ask_imbalances(self) -> tuple[FootprintImbalance, ...]:
+        return tuple(
+            d
+            for d in self.detections
+            if d.imbalance_type == ImbalanceType.ASK_IMBALANCE
+        )
+
+    def bid_imbalances(self) -> tuple[FootprintImbalance, ...]:
+        return tuple(
+            d
+            for d in self.detections
+            if d.imbalance_type == ImbalanceType.BID_IMBALANCE
+        )
+
+    def lookup(self, cell_id: str) -> FootprintImbalance | None:
+        return next((d for d in self.detections if d.cell_id == cell_id), None)
+
+    def has_imbalance(self, cell_id: str) -> bool:
+        return self.lookup(cell_id) is not None
+
+    def statistics(self) -> ImbalanceStatistics:
+        ask_count = len(self.ask_imbalances())
+        bid_count = len(self.bid_imbalances())
+        total = len(self.detections)
+        return ImbalanceStatistics(
+            self.matrix.statistics().total_cells,
+            ask_count,
+            bid_count,
+            total,
+            self.matrix.statistics().total_cells - total,
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class FootprintImbalanceDetector:
+    """Detect deterministic individual bid/ask footprint imbalances from a matrix."""
+
+    configuration: ImbalanceConfiguration = field(
+        default_factory=ImbalanceConfiguration
+    )
+
+    def detect(self, matrix: "FootprintMatrix") -> FootprintImbalanceResult:
+        detections = []
+        for cell in matrix.cells:
+            ask = self._decimal(cell.interpretation.ask())
+            bid = self._decimal(cell.interpretation.bid())
+            if ask is not None:
+                opposite_cell = (
+                    matrix.below(cell) if self.configuration.compare_diagonal else cell
+                )
+                opposite = (
+                    None
+                    if opposite_cell is None
+                    else self._decimal(opposite_cell.interpretation.bid())
+                )
+                detection = self._build(
+                    cell, ImbalanceType.ASK_IMBALANCE, ImbalanceSide.ASK, ask, opposite
+                )
+                if detection is not None:
+                    detections.append(detection)
+                    continue
+            if bid is not None:
+                opposite_cell = (
+                    matrix.above(cell) if self.configuration.compare_diagonal else cell
+                )
+                opposite = (
+                    None
+                    if opposite_cell is None
+                    else self._decimal(opposite_cell.interpretation.ask())
+                )
+                detection = self._build(
+                    cell, ImbalanceType.BID_IMBALANCE, ImbalanceSide.BID, bid, opposite
+                )
+                if detection is not None:
+                    detections.append(detection)
+        return FootprintImbalanceResult(
+            matrix,
+            tuple(detections),
+            self.configuration,
+            {"detector": "FootprintImbalanceDetector"},
+        )
+
+    @staticmethod
+    def _decimal(value: FootprintValue | None) -> Decimal | None:
+        if value is None:
+            return None
+        return Decimal(str(value.numeric_value.value))
+
+    def _build(
+        self,
+        cell: "MatrixCell",
+        imbalance_type: ImbalanceType,
+        side: ImbalanceSide,
+        dominant: Decimal,
+        opposite: Decimal | None,
+    ) -> FootprintImbalance | None:
+        if dominant < self.configuration.minimum_volume:
+            return None
+        if opposite is None:
+            return None
+        if opposite == 0:
+            if not self.configuration.allow_zero_opposite:
+                return None
+            ratio = dominant
+        else:
+            ratio = dominant / opposite
+        if ratio < self.configuration.minimum_ratio:
+            return None
+        confidence = (
+            min(1.0, float(ratio / self.configuration.minimum_ratio))
+            if self.configuration.strict_mode
+            else 1.0
+        )
+        return FootprintImbalance(
+            cell.cell_id,
+            cell.position,
+            imbalance_type,
+            side,
+            ratio,
+            dominant,
+            opposite,
+            confidence,
+            {"compare_diagonal": self.configuration.compare_diagonal},
+        )
+
+
+@dataclass(frozen=True, slots=True)
 class FootprintMatrix:
     """Canonical immutable two-dimensional footprint-cell representation."""
 
@@ -2524,6 +2833,11 @@ class SequentialObjectDetectionPipeline:
             footprint_interpretation=graph.footprint_interpretation,
             parsed_values=graph.parsed_values,
             footprint_matrix=footprint_matrix,
+            footprint_imbalances=(
+                FootprintImbalanceDetector().detect(footprint_matrix)
+                if footprint_matrix is not None
+                else None
+            ),
         )
 
 

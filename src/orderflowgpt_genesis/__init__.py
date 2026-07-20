@@ -3,6 +3,13 @@
 from .analysis import OrderFlowAnalyzer
 from .models import AnalysisResult, MarketSnapshot, OrderBookLevel, Trade
 from .vision import (
+    ImbalanceSide,
+    ImbalanceType,
+    ImbalanceStatistics,
+    ImbalanceConfiguration,
+    FootprintImbalanceDetector,
+    FootprintImbalanceResult,
+    FootprintImbalance,
     BottomPanel,
     AbsorptionDetector,
     BigTradeDetector,
@@ -123,6 +130,13 @@ from .vision import (
 
 __all__ = [
     "AnalysisResult",
+    "ImbalanceSide",
+    "ImbalanceType",
+    "ImbalanceStatistics",
+    "ImbalanceConfiguration",
+    "FootprintImbalanceDetector",
+    "FootprintImbalanceResult",
+    "FootprintImbalance",
     "VolumeProfileDetector",
     "TimeAxisDetector",
     "TimeAxisDetectorConfig",
