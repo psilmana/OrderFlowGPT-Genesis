@@ -94,6 +94,13 @@ class ExcessType(Enum):
     EXCESS_LOW = "EXCESS_LOW"
 
 
+class PoorAuctionType(Enum):
+    """Supported deterministic poor-auction boundary types."""
+
+    POOR_HIGH = "POOR_HIGH"
+    POOR_LOW = "POOR_LOW"
+
+
 class AbsorptionSide(Enum):
     """Passive side inferred for deterministic absorption observations."""
 
@@ -441,6 +448,9 @@ class DetectionGraph:
     developing_value_area: "DevelopingValueAreaResult | None" = None
     unfinished_auctions: "UnfinishedAuctionResult | None" = None
     excess: "ExcessResult | None" = None
+    poor_auctions: "PoorAuctionResult | None" = None
+    single_prints: "SinglePrintResult | None" = None
+    naked_pocs: "NakedPointOfControlResult | None" = None
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -594,6 +604,9 @@ class DetectionGraph:
             ("developing value area", self.developing_value_area),
             ("unfinished auctions", self.unfinished_auctions),
             ("excess", self.excess),
+            ("poor auctions", self.poor_auctions),
+            ("single prints", self.single_prints),
+            ("naked pocs", self.naked_pocs),
         ):
             if result is not None:
                 if self.footprint_matrix is None:
@@ -944,6 +957,38 @@ class DetectionGraph:
         if self.excess is None:
             return ExcessStatistics(0, 0, 0)
         return self.excess.statistics()
+
+    def lookup_poor_auction(
+        self, auction_type: "PoorAuctionType"
+    ) -> "PoorAuction | None":
+        if self.poor_auctions is None:
+            return None
+        return self.poor_auctions.lookup(auction_type)
+
+    def poor_auction_statistics(self) -> "PoorAuctionStatistics":
+        if self.poor_auctions is None:
+            return PoorAuctionStatistics(0, 0, 0)
+        return self.poor_auctions.statistics()
+
+    def lookup_single_print(self, row: int) -> "SinglePrint | None":
+        if self.single_prints is None:
+            return None
+        return self.single_prints.lookup(row)
+
+    def single_print_statistics(self) -> "SinglePrintStatistics":
+        if self.single_prints is None:
+            return SinglePrintStatistics(0, 0, 0)
+        return self.single_prints.statistics()
+
+    def lookup_naked_poc(self, row: int) -> "NakedPointOfControl | None":
+        if self.naked_pocs is None:
+            return None
+        return self.naked_pocs.lookup(row)
+
+    def naked_poc_statistics(self) -> "NakedPointOfControlStatistics":
+        if self.naked_pocs is None:
+            return NakedPointOfControlStatistics(0, 0, 0, 0, 0)
+        return self.naked_pocs.statistics()
 
 
 @dataclass(frozen=True, slots=True)
@@ -4326,6 +4371,365 @@ class ExcessDetector:
         )
 
 
+@dataclass(frozen=True, slots=True)
+class PoorAuctionConfiguration:
+    minimum_boundary_volume: Decimal = Decimal("1")
+
+    def __post_init__(self) -> None:
+        value = Decimal(str(self.minimum_boundary_volume))
+        if not value.is_finite() or value < 0:
+            raise ValueError("poor auction minimum boundary volume is invalid")
+        object.__setattr__(self, "minimum_boundary_volume", value)
+
+
+@dataclass(frozen=True, slots=True)
+class PoorAuction:
+    auction_type: PoorAuctionType
+    row: int
+    bid_volume: Decimal
+    ask_volume: Decimal
+    confidence: float
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.row < 0:
+            raise ValueError("poor auction row must be non-negative")
+        bid, ask = Decimal(str(self.bid_volume)), Decimal(str(self.ask_volume))
+        if any(not value.is_finite() or value < 0 for value in (bid, ask)):
+            raise ValueError("poor auction volumes are invalid")
+        _validate_confidence(self.confidence, "poor auction confidence")
+        object.__setattr__(self, "bid_volume", bid)
+        object.__setattr__(self, "ask_volume", ask)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class PoorAuctionStatistics:
+    total_auctions: int
+    high_count: int
+    low_count: int
+
+
+@dataclass(frozen=True, slots=True)
+class PoorAuctionResult:
+    matrix: "FootprintMatrix"
+    auctions: tuple[PoorAuction, ...]
+    statistics_value: PoorAuctionStatistics
+    configuration: PoorAuctionConfiguration = field(
+        default_factory=PoorAuctionConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        _validate_boundary_result(self, self.auctions, "poor auctions")
+
+    def lookup(self, auction_type: PoorAuctionType) -> PoorAuction | None:
+        return next((a for a in self.auctions if a.auction_type == auction_type), None)
+
+    def statistics(self) -> PoorAuctionStatistics:
+        return self.statistics_value
+
+
+@dataclass(frozen=True, slots=True)
+class PoorAuctionDetector:
+    configuration: PoorAuctionConfiguration = field(
+        default_factory=PoorAuctionConfiguration
+    )
+
+    def detect(self, matrix: "FootprintMatrix") -> PoorAuctionResult:
+        found: list[PoorAuction] = []
+        for auction_type, row in (
+            (PoorAuctionType.POOR_HIGH, 0),
+            (PoorAuctionType.POOR_LOW, matrix.dimensions_value.rows - 1),
+        ):
+            bid, ask = _row_bid_ask(matrix.row(row))
+            if (
+                bid >= self.configuration.minimum_boundary_volume
+                and ask >= self.configuration.minimum_boundary_volume
+            ):
+                found.append(
+                    PoorAuction(
+                        auction_type, row, bid, ask, 1.0, {"source": "footprint_matrix"}
+                    )
+                )
+        result = tuple(found)
+        return PoorAuctionResult(
+            matrix,
+            result,
+            PoorAuctionStatistics(
+                len(result),
+                sum(a.auction_type == PoorAuctionType.POOR_HIGH for a in result),
+                sum(a.auction_type == PoorAuctionType.POOR_LOW for a in result),
+            ),
+            self.configuration,
+            {"detector": "PoorAuctionDetector"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class SinglePrintConfiguration:
+    maximum_active_cells_per_row: int = 1
+    minimum_cell_volume: Decimal = Decimal("1")
+
+    def __post_init__(self) -> None:
+        value = Decimal(str(self.minimum_cell_volume))
+        if self.maximum_active_cells_per_row <= 0 or not value.is_finite() or value < 0:
+            raise ValueError("single print configuration is invalid")
+        object.__setattr__(self, "minimum_cell_volume", value)
+
+
+@dataclass(frozen=True, slots=True)
+class SinglePrint:
+    start_row: int
+    end_row: int
+    price_range: tuple[int, int]
+    row_count: int
+    matrix: "FootprintMatrix"
+    confidence: float
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.start_row < 0 or self.end_row < self.start_row:
+            raise ValueError("single print rows must be ordered")
+        if self.row_count != self.end_row - self.start_row + 1:
+            raise ValueError("single print row count must match range")
+        _validate_confidence(self.confidence, "single print confidence")
+        object.__setattr__(self, "price_range", tuple(self.price_range))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class SinglePrintStatistics:
+    total_regions: int
+    total_rows: int
+    boundary_regions: int
+
+
+@dataclass(frozen=True, slots=True)
+class SinglePrintResult:
+    matrix: "FootprintMatrix"
+    single_prints: tuple[SinglePrint, ...]
+    statistics_value: SinglePrintStatistics
+    configuration: SinglePrintConfiguration = field(
+        default_factory=SinglePrintConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        last = -1
+        seen: set[tuple[int, int]] = set()
+        for item in self.single_prints:
+            if item.matrix != self.matrix:
+                raise ValueError("single prints must reference matrix")
+            if item.end_row >= self.matrix.dimensions_value.rows:
+                raise ValueError("single prints must reference matrix rows")
+            key = (item.start_row, item.end_row)
+            if key in seen:
+                raise ValueError("duplicate single prints are not allowed")
+            if item.start_row <= last:
+                raise ValueError("single prints must be ordered")
+            seen.add(key)
+            last = item.end_row
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, row: int) -> SinglePrint | None:
+        return next(
+            (s for s in self.single_prints if s.start_row <= row <= s.end_row), None
+        )
+
+    def statistics(self) -> SinglePrintStatistics:
+        return self.statistics_value
+
+
+@dataclass(frozen=True, slots=True)
+class SinglePrintDetector:
+    configuration: SinglePrintConfiguration = field(
+        default_factory=SinglePrintConfiguration
+    )
+
+    def detect(self, matrix: "FootprintMatrix") -> SinglePrintResult:
+        active = [
+            sum(
+                VolumeClusterAnalyzer._total_volume(c)
+                >= self.configuration.minimum_cell_volume
+                for c in r.cells
+            )
+            <= self.configuration.maximum_active_cells_per_row
+            for r in matrix.rows
+        ]
+        regions: list[SinglePrint] = []
+        start: int | None = None
+        for idx, is_single in enumerate(active + [False]):
+            if is_single and start is None:
+                start = idx
+            if not is_single and start is not None:
+                end = idx - 1
+                regions.append(
+                    SinglePrint(
+                        start,
+                        end,
+                        (start, end),
+                        end - start + 1,
+                        matrix,
+                        1.0,
+                        {"source": "footprint_matrix"},
+                    )
+                )
+                start = None
+        result = tuple(regions)
+        stats = SinglePrintStatistics(
+            len(result),
+            sum(s.row_count for s in result),
+            sum(
+                s.start_row == 0 or s.end_row == matrix.dimensions_value.rows - 1
+                for s in result
+            ),
+        )
+        return SinglePrintResult(
+            matrix,
+            result,
+            stats,
+            self.configuration,
+            {"detector": "SinglePrintDetector"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class NakedPointOfControlConfiguration:
+    expiration_period: int = 0
+
+    def __post_init__(self) -> None:
+        if self.expiration_period < 0:
+            raise ValueError("naked poc expiration period must be non-negative")
+
+
+@dataclass(frozen=True, slots=True)
+class NakedPointOfControl:
+    row: int
+    total_volume: Decimal
+    creation_index: int
+    first_revisit_index: int | None
+    state: str
+    confidence: float
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.row < 0 or self.creation_index < 0:
+            raise ValueError("naked poc references are invalid")
+        if (
+            self.first_revisit_index is not None
+            and self.first_revisit_index <= self.creation_index
+        ):
+            raise ValueError("naked poc revisit index must follow creation index")
+        if self.state not in {"active", "tested", "expired"}:
+            raise ValueError("naked poc state is invalid")
+        _validate_confidence(self.confidence, "naked poc confidence")
+        object.__setattr__(self, "total_volume", Decimal(str(self.total_volume)))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class NakedPointOfControlStatistics:
+    total_pocs: int
+    active_count: int
+    tested_count: int
+    expired_count: int
+    history_length: int
+
+
+@dataclass(frozen=True, slots=True)
+class NakedPointOfControlResult:
+    matrix: "FootprintMatrix"
+    naked_pocs: tuple[NakedPointOfControl, ...]
+    statistics_value: NakedPointOfControlStatistics
+    configuration: NakedPointOfControlConfiguration = field(
+        default_factory=NakedPointOfControlConfiguration
+    )
+    history: tuple[PointOfControlResult, ...] = ()
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.history and self.history[-1].matrix != self.matrix:
+            raise ValueError("naked pocs must reference graph matrix")
+        keys = tuple((p.row, p.creation_index) for p in self.naked_pocs)
+        if len(set(keys)) != len(keys):
+            raise ValueError("duplicate naked pocs are not allowed")
+        if (
+            tuple(sorted(self.naked_pocs, key=lambda p: (p.creation_index, p.row)))
+            != self.naked_pocs
+        ):
+            raise ValueError("naked pocs must be ordered")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, row: int) -> NakedPointOfControl | None:
+        return next((p for p in self.naked_pocs if p.row == row), None)
+
+    def statistics(self) -> NakedPointOfControlStatistics:
+        return self.statistics_value
+
+
+@dataclass(frozen=True, slots=True)
+class NakedPointOfControlTracker:
+    configuration: NakedPointOfControlConfiguration = field(
+        default_factory=NakedPointOfControlConfiguration
+    )
+
+    def track(
+        self, history: Sequence[PointOfControlResult]
+    ) -> NakedPointOfControlResult:
+        if not history:
+            raise ValueError("naked poc history is required")
+        rows = history[-1].matrix.dimensions_value.rows
+        pocs: list[NakedPointOfControl] = []
+        for i, poc_result in enumerate(history):
+            if poc_result.poc.row >= rows:
+                raise ValueError("naked poc history references incompatible matrices")
+            revisit = next(
+                (
+                    j
+                    for j, later in enumerate(history[i + 1 :], i + 1)
+                    if later.poc.row == poc_result.poc.row
+                ),
+                None,
+            )
+            if revisit is not None:
+                state = "tested"
+            elif (
+                self.configuration.expiration_period
+                and len(history) - 1 - i >= self.configuration.expiration_period
+            ):
+                state = "expired"
+            else:
+                state = "active"
+            pocs.append(
+                NakedPointOfControl(
+                    poc_result.poc.row,
+                    poc_result.poc.total_volume,
+                    i,
+                    revisit,
+                    state,
+                    1.0,
+                    {"source": "point_of_control"},
+                )
+            )
+        tracked = tuple(pocs)
+        stats = NakedPointOfControlStatistics(
+            len(tracked),
+            sum(p.state == "active" for p in tracked),
+            sum(p.state == "tested" for p in tracked),
+            sum(p.state == "expired" for p in tracked),
+            len(history),
+        )
+        return NakedPointOfControlResult(
+            history[-1].matrix,
+            tracked,
+            stats,
+            self.configuration,
+            tuple(history),
+            {"tracker": "NakedPointOfControlTracker"},
+        )
+
+
 def _row_bid_ask(row: "MatrixRow") -> tuple[Decimal, Decimal]:
     bid = ask = Decimal("0")
     for cell in row.cells:
@@ -5457,6 +5861,23 @@ class SequentialObjectDetectionPipeline:
             if footprint_matrix is not None and unfinished_auctions is not None
             else None
         )
+        poor_auctions = (
+            PoorAuctionDetector().detect(footprint_matrix)
+            if footprint_matrix is not None and excess is not None
+            else None
+        )
+        single_prints = (
+            SinglePrintDetector().detect(footprint_matrix)
+            if footprint_matrix is not None and poor_auctions is not None
+            else None
+        )
+        naked_pocs = (
+            NakedPointOfControlTracker().track((point_of_control,))
+            if footprint_matrix is not None
+            and single_prints is not None
+            and point_of_control is not None
+            else None
+        )
         return DetectionGraph(
             frame_id=graph.frame_id,
             objects=graph.objects,
@@ -5479,6 +5900,9 @@ class SequentialObjectDetectionPipeline:
             developing_value_area=developing_value_area,
             unfinished_auctions=unfinished_auctions,
             excess=excess,
+            poor_auctions=poor_auctions,
+            single_prints=single_prints,
+            naked_pocs=naked_pocs,
         )
 
 
@@ -7725,19 +8149,23 @@ def _numeric_type(text: str) -> NumericType:
     return NumericType.INTEGER
 
 
-def _boundary_key(entry: Any) -> UnfinishedAuctionType | ExcessType:
+def _boundary_key(entry: Any) -> UnfinishedAuctionType | ExcessType | PoorAuctionType:
     if isinstance(entry, UnfinishedAuction):
         return entry.auction_type
     if isinstance(entry, Excess):
         return entry.excess_type
+    if isinstance(entry, PoorAuction):
+        return entry.auction_type
     raise ValueError("boundary result entry type is invalid")
 
 
-def _boundary_order(key: UnfinishedAuctionType | ExcessType) -> int:
+def _boundary_order(key: UnfinishedAuctionType | ExcessType | PoorAuctionType) -> int:
     order = {
         UnfinishedAuctionType.TOP: 0,
         UnfinishedAuctionType.BOTTOM: 1,
         ExcessType.EXCESS_HIGH: 0,
         ExcessType.EXCESS_LOW: 1,
+        PoorAuctionType.POOR_HIGH: 0,
+        PoorAuctionType.POOR_LOW: 1,
     }
     return order[key]

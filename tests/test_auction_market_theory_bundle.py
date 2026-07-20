@@ -15,7 +15,18 @@ from orderflowgpt_genesis import (
     ExcessType,
     HighVolumeNodeAnalyzer,
     LowVolumeNodeAnalyzer,
+    NakedPointOfControlConfiguration,
+    NakedPointOfControlTracker,
     PointOfControlAnalyzer,
+    PoorAuction,
+    PoorAuctionDetector,
+    PoorAuctionResult,
+    PoorAuctionStatistics,
+    PoorAuctionType,
+    SinglePrint,
+    SinglePrintDetector,
+    SinglePrintResult,
+    SinglePrintStatistics,
     UnfinishedAuction,
     UnfinishedAuctionDetector,
     UnfinishedAuctionResult,
@@ -169,3 +180,136 @@ def test_pipeline_integration_exposes_bundle_two_results():
     assert graph.developing_value_area is not None
     assert graph.unfinished_auctions is not None
     assert graph.excess is not None
+
+
+def bundle3_graph(columns, rows, asks, bids):
+    graph = bundle_graph(columns, rows, asks, bids)
+    poor = PoorAuctionDetector().detect(graph.footprint_matrix)
+    singles = SinglePrintDetector().detect(graph.footprint_matrix)
+    naked = NakedPointOfControlTracker().track((graph.point_of_control,))
+    return DetectionGraph(
+        graph.frame_id,
+        graph.objects,
+        graph.grid_coordinate_system,
+        graph.cell_classifications,
+        graph.ocr_results,
+        graph.footprint_interpretation,
+        graph.parsed_values,
+        graph.footprint_matrix,
+        graph.footprint_imbalances,
+        graph.stacked_imbalances,
+        graph.absorption,
+        graph.footprint_delta,
+        graph.volume_clusters,
+        graph.point_of_control,
+        graph.high_volume_nodes,
+        graph.low_volume_nodes,
+        graph.value_area,
+        graph.developing_poc,
+        graph.developing_value_area,
+        graph.unfinished_auctions,
+        graph.excess,
+        poor,
+        singles,
+        naked,
+    )
+
+
+def test_poor_auction_high_low_none_both_and_graph_lookup_statistics():
+    high = bundle3_graph(1, 2, (2, 0), (2, 0))
+    assert high.lookup_poor_auction(PoorAuctionType.POOR_HIGH).row == 0
+    low = bundle3_graph(1, 2, (0, 2), (0, 2))
+    assert low.lookup_poor_auction(PoorAuctionType.POOR_LOW).row == 1
+    both = bundle3_graph(1, 2, (2, 2), (2, 2))
+    assert both.poor_auction_statistics().total_auctions == 2
+    assert bundle3_graph(1, 2, (2, 0), (0, 2)).poor_auctions.auctions == ()
+
+
+def test_single_print_regions_boundaries_large_single_row_single_column():
+    graph = bundle3_graph(
+        3, 5, (1, 0, 0, 1, 0, 0, 3, 3, 0, 0, 0, 2, 0, 0, 3), (0,) * 15
+    )
+    assert [(s.start_row, s.end_row) for s in graph.single_prints.single_prints] == [
+        (0, 1),
+        (3, 4),
+    ]
+    assert graph.lookup_single_print(1).row_count == 2
+    assert graph.single_print_statistics().boundary_regions == 2
+    assert bundle3_graph(1, 1, (1,), (0,)).single_print_statistics().total_regions == 1
+    assert (
+        bundle3_graph(1, 20, tuple(range(20)), (0,) * 20)
+        .single_print_statistics()
+        .total_rows
+        == 20
+    )
+
+
+def test_naked_poc_creation_tracking_tested_expired_history_multiple():
+    first = bundle_graph(1, 3, (1, 9, 1), (0, 0, 0)).point_of_control
+    second = bundle_graph(1, 3, (9, 1, 1), (0, 0, 0)).point_of_control
+    third = bundle_graph(1, 3, (1, 9, 1), (0, 0, 0)).point_of_control
+    result = NakedPointOfControlTracker().track((first, second, third))
+    assert [p.state for p in result.naked_pocs] == ["tested", "active", "active"]
+    assert result.naked_pocs[0].first_revisit_index == 2
+    assert result.statistics().history_length == 3
+    expired = NakedPointOfControlTracker(NakedPointOfControlConfiguration(1)).track(
+        (first, second)
+    )
+    assert expired.naked_pocs[0].state == "expired"
+
+
+def test_bundle_three_immutability_validation_metadata_confidence_ordering_duplicates_references():
+    graph = bundle3_graph(1, 2, (2, 2), (2, 2))
+    poor = graph.poor_auctions.auctions[0]
+    with pytest.raises(FrozenInstanceError):
+        poor.row = 5
+    with pytest.raises(TypeError):
+        poor.metadata["x"] = "y"
+    with pytest.raises(ValueError, match="confidence"):
+        PoorAuction(PoorAuctionType.POOR_HIGH, 0, 1, 1, 2.0)
+    with pytest.raises(ValueError, match="duplicate"):
+        PoorAuctionResult(
+            graph.footprint_matrix, (poor, poor), PoorAuctionStatistics(2, 2, 0)
+        )
+    single = graph.single_prints.single_prints[0]
+    with pytest.raises(ValueError, match="ordered"):
+        SinglePrint(1, 0, (1, 0), 0, graph.footprint_matrix, 1.0)
+    with pytest.raises(ValueError, match="duplicate"):
+        SinglePrintResult(
+            graph.footprint_matrix, (single, single), SinglePrintStatistics(2, 2, 0)
+        )
+    wrong = bundle_graph(1, 2, (9, 1), (0, 0))
+    with pytest.raises(ValueError, match="naked pocs must reference graph matrix"):
+        DetectionGraph(
+            wrong.frame_id,
+            wrong.objects,
+            wrong.grid_coordinate_system,
+            wrong.cell_classifications,
+            wrong.ocr_results,
+            wrong.footprint_interpretation,
+            wrong.parsed_values,
+            wrong.footprint_matrix,
+            None,
+            None,
+            None,
+            None,
+            None,
+            wrong.point_of_control,
+            wrong.high_volume_nodes,
+            wrong.low_volume_nodes,
+            wrong.value_area,
+            wrong.developing_poc,
+            wrong.developing_value_area,
+            wrong.unfinished_auctions,
+            wrong.excess,
+            None,
+            None,
+            graph.naked_pocs,
+        )
+
+
+def test_pipeline_integration_exposes_bundle_three_results():
+    graph = make_graph(2, 2)
+    assert graph.poor_auctions is not None
+    assert graph.single_prints is not None
+    assert graph.naked_pocs is not None
