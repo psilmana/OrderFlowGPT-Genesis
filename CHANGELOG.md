@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.11 - Milestone 17
+
+- Added deterministic single-cell Footprint Imbalance Detection with immutable configuration, detection/result/statistics models, ask-vs-bid-below and bid-vs-ask-above comparisons from the Milestone 16 `FootprintMatrix`, graph/pipeline integration, lookup helpers, and documentation clarifying that stacked imbalance detection, absorption, unfinished auctions, POC detection, trading signals, strategy logic, and recommendations remain out of scope. Milestone 18 introduces stacked imbalance detection.
+
 ## 0.1.10 - Milestone 16
 
 - Added the immutable Footprint Matrix Builder with `FootprintMatrix`, row/cell/position/dimension/statistics models, deterministic two-dimensional ordering, graph and pipeline integration, matrix lookup helpers, and structural statistics only. Milestone 16 adds no imbalance detection, absorption, POC detection, stacked imbalance logic, unfinished auction logic, signal generation, strategy code, or trading decisions. Milestone 17 introduces Imbalance Detection.
