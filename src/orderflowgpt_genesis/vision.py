@@ -42,6 +42,14 @@ class ImbalanceType(Enum):
     NONE = "NONE"
 
 
+class StackedImbalanceType(Enum):
+    """Supported vertically stacked footprint imbalance classifications."""
+
+    STACKED_ASK = "STACKED_ASK"
+    STACKED_BID = "STACKED_BID"
+    NONE = "NONE"
+
+
 class ImbalanceSide(Enum):
     """Dominant side for a detected single-cell imbalance."""
 
@@ -369,6 +377,7 @@ class DetectionGraph:
     parsed_values: tuple["ParsingResult", ...] = ()
     footprint_matrix: "FootprintMatrix | None" = None
     footprint_imbalances: "FootprintImbalanceResult | None" = None
+    stacked_imbalances: "StackedImbalanceResult | None" = None
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -468,6 +477,13 @@ class DetectionGraph:
                 raise ValueError("footprint imbalances require footprint matrix")
             if self.footprint_imbalances.matrix != self.footprint_matrix:
                 raise ValueError("footprint imbalances must reference graph matrix")
+        if self.stacked_imbalances is not None:
+            if self.footprint_matrix is None or self.footprint_imbalances is None:
+                raise ValueError("stacked imbalances require matrix and imbalances")
+            if self.stacked_imbalances.matrix != self.footprint_matrix:
+                raise ValueError("stacked imbalances must reference graph matrix")
+            if self.stacked_imbalances.imbalances != self.footprint_imbalances:
+                raise ValueError("stacked imbalances must reference graph imbalances")
 
     @property
     def footprint_cells(self) -> tuple[DetectedObject, ...]:
@@ -591,6 +607,36 @@ class DetectionGraph:
             total = self.footprint_matrix.statistics().total_cells
             return ImbalanceStatistics(total, 0, 0, 0, total)
         return self.footprint_imbalances.statistics()
+
+    def stacks(self) -> tuple["StackedImbalance", ...]:
+        if self.stacked_imbalances is None:
+            return ()
+        return self.stacked_imbalances.stacks()
+
+    def ask_stacks(self) -> tuple["StackedImbalance", ...]:
+        if self.stacked_imbalances is None:
+            return ()
+        return self.stacked_imbalances.ask_stacks()
+
+    def bid_stacks(self) -> tuple["StackedImbalance", ...]:
+        if self.stacked_imbalances is None:
+            return ()
+        return self.stacked_imbalances.bid_stacks()
+
+    def lookup_stack(self, stack_id: str) -> "StackedImbalance | None":
+        if self.stacked_imbalances is None:
+            return None
+        return self.stacked_imbalances.lookup(stack_id)
+
+    def lookup_stacks_by_cell(self, cell_id: str) -> tuple["StackedImbalance", ...]:
+        if self.stacked_imbalances is None:
+            return ()
+        return self.stacked_imbalances.lookup_by_cell(cell_id)
+
+    def stacked_imbalance_statistics(self) -> "StackedImbalanceStatistics":
+        if self.stacked_imbalances is None:
+            return StackedImbalanceStatistics(0, 0, 0, 0, Decimal("0"), 0)
+        return self.stacked_imbalances.statistics()
 
 
 @dataclass(frozen=True, slots=True)
@@ -2102,6 +2148,314 @@ class FootprintImbalanceDetector:
 
 
 @dataclass(frozen=True, slots=True)
+class StackedImbalanceConfiguration:
+    """Immutable settings for vertically stacked imbalance detection."""
+
+    minimum_stack_size: int = 3
+    allow_gaps: bool = False
+    maximum_gap: int = 0
+    minimum_average_ratio: Decimal = Decimal("3")
+    minimum_total_volume: Decimal = Decimal("1")
+
+    def __post_init__(self) -> None:
+        if self.minimum_stack_size <= 1:
+            raise ValueError("minimum stack size must be greater than one")
+        if self.maximum_gap < 0:
+            raise ValueError("maximum gap must be non-negative")
+        if not self.allow_gaps and self.maximum_gap != 0:
+            raise ValueError("maximum gap requires gaps to be allowed")
+        ratio = Decimal(str(self.minimum_average_ratio))
+        volume = Decimal(str(self.minimum_total_volume))
+        if not ratio.is_finite() or ratio <= 0:
+            raise ValueError("minimum average ratio must be positive and finite")
+        if not volume.is_finite() or volume < 0:
+            raise ValueError("minimum total volume must be non-negative and finite")
+        object.__setattr__(self, "minimum_average_ratio", ratio)
+        object.__setattr__(self, "minimum_total_volume", volume)
+
+
+@dataclass(frozen=True, slots=True)
+class StackedImbalance:
+    """One deterministic vertical sequence of same-side footprint imbalances."""
+
+    stack_id: str
+    stack_type: StackedImbalanceType
+    starting_cell: MatrixPosition
+    ending_cell: MatrixPosition
+    cells: tuple[FootprintImbalance, ...]
+    row_span: tuple[int, int]
+    average_ratio: Decimal
+    total_dominant_volume: Decimal
+    confidence: float
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.stack_id.strip():
+            raise ValueError("stack id is required")
+        if self.stack_type == StackedImbalanceType.NONE:
+            raise ValueError("detected stack cannot have NONE type")
+        if len(self.cells) <= 1:
+            raise ValueError("stack must contain at least two cells")
+        ordered = tuple(
+            sorted(
+                self.cells,
+                key=lambda d: (
+                    d.position.column_index,
+                    d.position.row_index,
+                    d.cell_id,
+                ),
+            )
+        )
+        if self.cells != ordered:
+            raise ValueError("stack cells must be ordered")
+        columns = {cell.position.column_index for cell in self.cells}
+        if len(columns) != 1:
+            raise ValueError("stack cells must share one matrix column")
+        expected_type = (
+            ImbalanceType.ASK_IMBALANCE
+            if self.stack_type == StackedImbalanceType.STACKED_ASK
+            else ImbalanceType.BID_IMBALANCE
+        )
+        if any(cell.imbalance_type != expected_type for cell in self.cells):
+            raise ValueError("stack cells must match stack type")
+        if (
+            self.starting_cell != self.cells[0].position
+            or self.ending_cell != self.cells[-1].position
+        ):
+            raise ValueError("stack boundaries must match included cells")
+        if self.row_span != (self.starting_cell.row_index, self.ending_cell.row_index):
+            raise ValueError("row span must match stack boundaries")
+        ratio = Decimal(str(self.average_ratio))
+        volume = Decimal(str(self.total_dominant_volume))
+        if not ratio.is_finite() or ratio <= 0:
+            raise ValueError("average ratio must be positive and finite")
+        if not volume.is_finite() or volume < 0:
+            raise ValueError("total dominant volume must be non-negative and finite")
+        _validate_confidence(self.confidence, "stack confidence")
+        object.__setattr__(self, "average_ratio", ratio)
+        object.__setattr__(self, "total_dominant_volume", volume)
+        object.__setattr__(self, "cells", tuple(self.cells))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class StackedImbalanceStatistics:
+    """Aggregate counts for deterministic stacked footprint imbalances."""
+
+    total_stacks: int
+    ask_stacks: int
+    bid_stacks: int
+    largest_stack: int
+    average_stack_size: Decimal
+    maximum_stack_size: int
+
+    def __post_init__(self) -> None:
+        values = (
+            self.total_stacks,
+            self.ask_stacks,
+            self.bid_stacks,
+            self.largest_stack,
+            self.maximum_stack_size,
+        )
+        if any(value < 0 for value in values):
+            raise ValueError("stack statistics cannot be negative")
+        if self.total_stacks != self.ask_stacks + self.bid_stacks:
+            raise ValueError("total stacks must equal ask plus bid stacks")
+        average = Decimal(str(self.average_stack_size))
+        if not average.is_finite() or average < 0:
+            raise ValueError("average stack size must be non-negative and finite")
+        if self.largest_stack != self.maximum_stack_size:
+            raise ValueError("largest stack must equal maximum stack size")
+        object.__setattr__(self, "average_stack_size", average)
+
+
+@dataclass(frozen=True, slots=True)
+class StackedImbalanceResult:
+    """Immutable result set for stacked imbalance detection."""
+
+    matrix: "FootprintMatrix"
+    imbalances: FootprintImbalanceResult
+    detections: tuple[StackedImbalance, ...]
+    configuration: StackedImbalanceConfiguration = field(
+        default_factory=StackedImbalanceConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.imbalances.matrix != self.matrix:
+            raise ValueError("stacked result imbalances must reference matrix")
+        ordered = tuple(
+            sorted(
+                self.detections,
+                key=lambda d: (
+                    d.starting_cell.column_index,
+                    d.starting_cell.row_index,
+                    d.stack_type.value,
+                    d.stack_id,
+                ),
+            )
+        )
+        if self.detections != ordered:
+            raise ValueError("stacked imbalance detections must be ordered")
+        ids = [d.stack_id for d in self.detections]
+        if len(set(ids)) != len(ids):
+            raise ValueError("duplicate stacks are not allowed")
+        matrix_ids = {cell.cell_id for cell in self.matrix.cells}
+        for stack in self.detections:
+            cell_ids = {cell.cell_id for cell in stack.cells}
+            if cell_ids - matrix_ids:
+                raise ValueError("stack cells must reference matrix cells")
+        object.__setattr__(self, "detections", ordered)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def stacks(self) -> tuple[StackedImbalance, ...]:
+        return self.detections
+
+    def ask_stacks(self) -> tuple[StackedImbalance, ...]:
+        return tuple(
+            d
+            for d in self.detections
+            if d.stack_type == StackedImbalanceType.STACKED_ASK
+        )
+
+    def bid_stacks(self) -> tuple[StackedImbalance, ...]:
+        return tuple(
+            d
+            for d in self.detections
+            if d.stack_type == StackedImbalanceType.STACKED_BID
+        )
+
+    def lookup(self, stack_id: str) -> StackedImbalance | None:
+        return next((d for d in self.detections if d.stack_id == stack_id), None)
+
+    def lookup_by_cell(self, cell_id: str) -> tuple[StackedImbalance, ...]:
+        return tuple(
+            d
+            for d in self.detections
+            if any(cell.cell_id == cell_id for cell in d.cells)
+        )
+
+    def statistics(self) -> StackedImbalanceStatistics:
+        sizes = tuple(len(stack.cells) for stack in self.detections)
+        total = len(sizes)
+        maximum = max(sizes, default=0)
+        average = Decimal("0") if total == 0 else Decimal(sum(sizes)) / Decimal(total)
+        return StackedImbalanceStatistics(
+            total,
+            len(self.ask_stacks()),
+            len(self.bid_stacks()),
+            maximum,
+            average,
+            maximum,
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class StackedImbalanceDetector:
+    """Detect vertical stacks of same-side footprint imbalances from immutable data."""
+
+    configuration: StackedImbalanceConfiguration = field(
+        default_factory=StackedImbalanceConfiguration
+    )
+
+    def detect(
+        self, matrix: "FootprintMatrix", imbalances: FootprintImbalanceResult
+    ) -> StackedImbalanceResult:
+        if imbalances.matrix != matrix:
+            raise ValueError(
+                "stacked imbalance detector inputs must reference the same matrix"
+            )
+        detections: list[StackedImbalance] = []
+        lookup = {imbalance.cell_id: imbalance for imbalance in imbalances.imbalances()}
+        for column in range(matrix.dimensions_value.columns):
+            for imbalance_type, stack_type in (
+                (ImbalanceType.ASK_IMBALANCE, StackedImbalanceType.STACKED_ASK),
+                (ImbalanceType.BID_IMBALANCE, StackedImbalanceType.STACKED_BID),
+            ):
+                detections.extend(
+                    self._column_stacks(
+                        matrix, lookup, column, imbalance_type, stack_type
+                    )
+                )
+        return StackedImbalanceResult(
+            matrix,
+            imbalances,
+            tuple(detections),
+            self.configuration,
+            {"detector": "StackedImbalanceDetector"},
+        )
+
+    def _column_stacks(
+        self,
+        matrix: "FootprintMatrix",
+        lookup: Mapping[str, FootprintImbalance],
+        column: int,
+        imbalance_type: ImbalanceType,
+        stack_type: StackedImbalanceType,
+    ) -> tuple[StackedImbalance, ...]:
+        found: list[StackedImbalance] = []
+        current: list[FootprintImbalance] = []
+        gaps = 0
+        for row in range(matrix.dimensions_value.rows):
+            cell = matrix.cell(row, column)
+            imbalance = lookup.get(cell.cell_id)
+            if imbalance is not None and imbalance.imbalance_type == imbalance_type:
+                current.append(imbalance)
+                gaps = 0
+                continue
+            if (
+                current
+                and self.configuration.allow_gaps
+                and gaps < self.configuration.maximum_gap
+            ):
+                gaps += 1
+                continue
+            self._append_if_valid(found, current, stack_type)
+            current = []
+            gaps = 0
+        self._append_if_valid(found, current, stack_type)
+        return tuple(found)
+
+    def _append_if_valid(
+        self,
+        found: list[StackedImbalance],
+        cells: Sequence[FootprintImbalance],
+        stack_type: StackedImbalanceType,
+    ) -> None:
+        if len(cells) < self.configuration.minimum_stack_size:
+            return
+        average_ratio = sum((cell.ratio for cell in cells), Decimal("0")) / Decimal(
+            len(cells)
+        )
+        total_volume = sum((cell.dominant_value for cell in cells), Decimal("0"))
+        if (
+            average_ratio < self.configuration.minimum_average_ratio
+            or total_volume < self.configuration.minimum_total_volume
+        ):
+            return
+        first = cells[0]
+        last = cells[-1]
+        stack_id = f"{stack_type.value}:{first.position.column_index}:{first.position.row_index}-{last.position.row_index}"
+        confidence = min(
+            1.0, float(average_ratio / self.configuration.minimum_average_ratio)
+        )
+        found.append(
+            StackedImbalance(
+                stack_id,
+                stack_type,
+                first.position,
+                last.position,
+                tuple(cells),
+                (first.position.row_index, last.position.row_index),
+                average_ratio,
+                total_volume,
+                confidence,
+                {"minimum_stack_size": self.configuration.minimum_stack_size},
+            )
+        )
+
+
+@dataclass(frozen=True, slots=True)
 class FootprintMatrix:
     """Canonical immutable two-dimensional footprint-cell representation."""
 
@@ -2824,6 +3178,16 @@ class SequentialObjectDetectionPipeline:
             if footprint_interpretation is not None
             else None
         )
+        footprint_imbalances = (
+            FootprintImbalanceDetector().detect(footprint_matrix)
+            if footprint_matrix is not None
+            else None
+        )
+        stacked_imbalances = (
+            StackedImbalanceDetector().detect(footprint_matrix, footprint_imbalances)
+            if footprint_matrix is not None and footprint_imbalances is not None
+            else None
+        )
         return DetectionGraph(
             frame_id=graph.frame_id,
             objects=graph.objects,
@@ -2833,11 +3197,8 @@ class SequentialObjectDetectionPipeline:
             footprint_interpretation=graph.footprint_interpretation,
             parsed_values=graph.parsed_values,
             footprint_matrix=footprint_matrix,
-            footprint_imbalances=(
-                FootprintImbalanceDetector().detect(footprint_matrix)
-                if footprint_matrix is not None
-                else None
-            ),
+            footprint_imbalances=footprint_imbalances,
+            stacked_imbalances=stacked_imbalances,
         )
 
 
