@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.10 - Milestone 16
+
+- Added the immutable Footprint Matrix Builder with `FootprintMatrix`, row/cell/position/dimension/statistics models, deterministic two-dimensional ordering, graph and pipeline integration, matrix lookup helpers, and structural statistics only. Milestone 16 adds no imbalance detection, absorption, POC detection, stacked imbalance logic, unfinished auction logic, signal generation, strategy code, or trading decisions. Milestone 17 introduces Imbalance Detection.
+
 ## 0.1.9 - Milestone 15
 
 - Added immutable footprint semantic interpretation models, semantic mapper/interpreter/pipeline contracts, deterministic default mapping from cell roles to bid/ask/delta/total semantics, cell value helpers, graph interpretation lookups, validation, and documentation clarifying that trading decisions and imbalance/absorption detection remain out of scope until later milestones.
