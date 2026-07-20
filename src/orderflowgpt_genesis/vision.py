@@ -74,6 +74,12 @@ class VolumeClusterType(Enum):
     NORMAL_VOLUME = "NORMAL_VOLUME"
 
 
+class PointOfControlType(Enum):
+    """Supported deterministic point-of-control classifications."""
+
+    SESSION_POC = "SESSION_POC"
+
+
 class AbsorptionSide(Enum):
     """Passive side inferred for deterministic absorption observations."""
 
@@ -413,6 +419,10 @@ class DetectionGraph:
     absorption: "AbsorptionResult | None" = None
     footprint_delta: "DeltaResult | None" = None
     volume_clusters: "VolumeClusterResult | None" = None
+    point_of_control: "PointOfControlResult | None" = None
+    high_volume_nodes: "HighVolumeNodeResult | None" = None
+    low_volume_nodes: "LowVolumeNodeResult | None" = None
+    value_area: "ValueAreaResult | None" = None
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -536,6 +546,31 @@ class DetectionGraph:
                 raise ValueError("volume clusters require footprint matrix")
             if self.volume_clusters.matrix != self.footprint_matrix:
                 raise ValueError("volume clusters must reference graph matrix")
+        if self.point_of_control is not None:
+            if self.footprint_matrix is None:
+                raise ValueError("point of control requires footprint matrix")
+            if self.point_of_control.matrix != self.footprint_matrix:
+                raise ValueError("point of control must reference graph matrix")
+        if self.high_volume_nodes is not None:
+            if self.footprint_matrix is None:
+                raise ValueError("high volume nodes require footprint matrix")
+            if self.high_volume_nodes.matrix != self.footprint_matrix:
+                raise ValueError("high volume nodes must reference graph matrix")
+        if self.low_volume_nodes is not None:
+            if self.footprint_matrix is None:
+                raise ValueError("low volume nodes require footprint matrix")
+            if self.low_volume_nodes.matrix != self.footprint_matrix:
+                raise ValueError("low volume nodes must reference graph matrix")
+        if self.value_area is not None:
+            if self.footprint_matrix is None:
+                raise ValueError("value area requires footprint matrix")
+            if self.value_area.matrix != self.footprint_matrix:
+                raise ValueError("value area must reference graph matrix")
+            if (
+                self.point_of_control is not None
+                and self.value_area.poc != self.point_of_control.poc
+            ):
+                raise ValueError("value area poc must reference graph point of control")
 
     @property
     def footprint_cells(self) -> tuple[DetectedObject, ...]:
@@ -791,6 +826,51 @@ class DetectionGraph:
                 total, 0, 0, total, Decimal("0"), Decimal("0"), Decimal("0")
             )
         return self.volume_clusters.statistics()
+
+    def session_poc(self) -> "PointOfControl | None":
+        if self.point_of_control is None:
+            return None
+        return self.point_of_control.poc
+
+    def point_of_control_statistics(self) -> "PointOfControlStatistics":
+        if self.point_of_control is None:
+            if self.footprint_matrix is None:
+                raise ValueError("point of control is not available")
+            return PointOfControlAnalyzer().analyze(self.footprint_matrix).statistics()
+        return self.point_of_control.statistics()
+
+    def lookup_high_volume_node(self, row: int) -> "HighVolumeNode | None":
+        if self.high_volume_nodes is None:
+            return None
+        return self.high_volume_nodes.lookup(row)
+
+    def lookup_low_volume_node(self, row: int) -> "LowVolumeNode | None":
+        if self.low_volume_nodes is None:
+            return None
+        return self.low_volume_nodes.lookup(row)
+
+    def high_volume_node_statistics(self) -> "HighVolumeNodeStatistics":
+        if self.high_volume_nodes is None:
+            if self.footprint_matrix is None:
+                raise ValueError("high volume nodes are not available")
+            rows = self.footprint_matrix.dimensions_value.rows
+            return HighVolumeNodeStatistics(rows, 0, Decimal("0"), Decimal("80"))
+        return self.high_volume_nodes.statistics()
+
+    def low_volume_node_statistics(self) -> "LowVolumeNodeStatistics":
+        if self.low_volume_nodes is None:
+            if self.footprint_matrix is None:
+                raise ValueError("low volume nodes are not available")
+            rows = self.footprint_matrix.dimensions_value.rows
+            return LowVolumeNodeStatistics(rows, 0, Decimal("0"), Decimal("20"))
+        return self.low_volume_nodes.statistics()
+
+    def value_area_statistics(self) -> "ValueAreaStatistics":
+        if self.value_area is None:
+            if self.footprint_matrix is None:
+                raise ValueError("value area is not available")
+            return ValueAreaAnalyzer().analyze(self.footprint_matrix).statistics()
+        return self.value_area.statistics()
 
 
 @dataclass(frozen=True, slots=True)
@@ -3071,6 +3151,585 @@ class VolumeClusterAnalyzer:
 
 
 @dataclass(frozen=True, slots=True)
+class PointOfControlConfiguration:
+    """Immutable settings for deterministic session POC analysis."""
+
+    poc_type: PointOfControlType = PointOfControlType.SESSION_POC
+    strict_mode: bool = True
+
+    def __post_init__(self) -> None:
+        if self.poc_type != PointOfControlType.SESSION_POC:
+            raise ValueError("only SESSION_POC is supported")
+
+
+@dataclass(frozen=True, slots=True)
+class PointOfControl:
+    """The matrix row with the greatest traded volume."""
+
+    row: int
+    total_volume: Decimal
+    poc_type: PointOfControlType
+    confidence: float
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.row < 0:
+            raise ValueError("point of control row must be non-negative")
+        volume = Decimal(str(self.total_volume))
+        if not volume.is_finite() or volume < 0:
+            raise ValueError("point of control volume must be non-negative and finite")
+        if self.poc_type != PointOfControlType.SESSION_POC:
+            raise ValueError("only SESSION_POC is supported")
+        _validate_confidence(self.confidence, "point of control confidence")
+        object.__setattr__(self, "total_volume", volume)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class PointOfControlStatistics:
+    """Aggregate statistics for deterministic session POC analysis."""
+
+    total_rows: int
+    poc_row: int
+    poc_volume: Decimal
+    total_volume: Decimal
+    tied_poc_rows: int
+
+    def __post_init__(self) -> None:
+        if self.total_rows <= 0 or self.poc_row < 0 or self.poc_row >= self.total_rows:
+            raise ValueError("point of control statistics row bounds are invalid")
+        if self.tied_poc_rows <= 0:
+            raise ValueError("point of control tied row count must be positive")
+        poc = Decimal(str(self.poc_volume))
+        total = Decimal(str(self.total_volume))
+        if any(not value.is_finite() or value < 0 for value in (poc, total)):
+            raise ValueError(
+                "point of control statistics volumes must be non-negative and finite"
+            )
+        if poc > total:
+            raise ValueError("point of control volume cannot exceed total volume")
+        object.__setattr__(self, "poc_volume", poc)
+        object.__setattr__(self, "total_volume", total)
+
+
+@dataclass(frozen=True, slots=True)
+class PointOfControlResult:
+    """Immutable result for deterministic session POC analysis."""
+
+    matrix: "FootprintMatrix"
+    poc: PointOfControl
+    statistics_value: PointOfControlStatistics
+    configuration: PointOfControlConfiguration = field(
+        default_factory=PointOfControlConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.poc.row >= self.matrix.dimensions_value.rows:
+            raise ValueError("point of control must reference matrix row")
+        if (
+            self.statistics_value.poc_row != self.poc.row
+            or self.statistics_value.poc_volume != self.poc.total_volume
+        ):
+            raise ValueError("point of control statistics must match poc")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def statistics(self) -> PointOfControlStatistics:
+        return self.statistics_value
+
+
+@dataclass(frozen=True, slots=True)
+class PointOfControlAnalyzer:
+    """Find the session POC by highest matrix-row traded volume."""
+
+    configuration: PointOfControlConfiguration = field(
+        default_factory=PointOfControlConfiguration
+    )
+
+    def analyze(self, matrix: "FootprintMatrix") -> PointOfControlResult:
+        row_volumes = _matrix_row_volumes(matrix)
+        max_volume = max(row_volumes)
+        poc_row = next(
+            index for index, volume in enumerate(row_volumes) if volume == max_volume
+        )
+        poc = PointOfControl(
+            poc_row,
+            max_volume,
+            self.configuration.poc_type,
+            1.0,
+            {"source": "footprint_matrix", "tie_break": "lowest_row"},
+        )
+        stats = PointOfControlStatistics(
+            len(row_volumes),
+            poc_row,
+            max_volume,
+            sum(row_volumes, Decimal("0")),
+            sum(v == max_volume for v in row_volumes),
+        )
+        return PointOfControlResult(
+            matrix,
+            poc,
+            stats,
+            self.configuration,
+            {"detector": "PointOfControlAnalyzer"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class HighVolumeNodeConfiguration:
+    """Immutable settings for deterministic HVN row analysis."""
+
+    percentile_threshold: Decimal = Decimal("80")
+    minimum_volume: Decimal = Decimal("0")
+    strict_mode: bool = True
+
+    def __post_init__(self) -> None:
+        threshold = Decimal(str(self.percentile_threshold))
+        minimum = Decimal(str(self.minimum_volume))
+        if (
+            any(not value.is_finite() for value in (threshold, minimum))
+            or threshold < 0
+            or threshold > 100
+            or minimum < 0
+        ):
+            raise ValueError("high volume node configuration values are invalid")
+        object.__setattr__(self, "percentile_threshold", threshold)
+        object.__setattr__(self, "minimum_volume", minimum)
+
+
+@dataclass(frozen=True, slots=True)
+class LowVolumeNodeConfiguration:
+    """Immutable settings for deterministic LVN row analysis."""
+
+    percentile_threshold: Decimal = Decimal("20")
+    minimum_volume: Decimal = Decimal("0")
+    strict_mode: bool = True
+
+    def __post_init__(self) -> None:
+        threshold = Decimal(str(self.percentile_threshold))
+        minimum = Decimal(str(self.minimum_volume))
+        if (
+            any(not value.is_finite() for value in (threshold, minimum))
+            or threshold < 0
+            or threshold > 100
+            or minimum < 0
+        ):
+            raise ValueError("low volume node configuration values are invalid")
+        object.__setattr__(self, "percentile_threshold", threshold)
+        object.__setattr__(self, "minimum_volume", minimum)
+
+
+@dataclass(frozen=True, slots=True)
+class HighVolumeNode:
+    row: int
+    total_volume: Decimal
+    percentile: Decimal
+    confidence: float
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        _validate_node(self, "high volume node")
+
+
+@dataclass(frozen=True, slots=True)
+class LowVolumeNode:
+    row: int
+    total_volume: Decimal
+    percentile: Decimal
+    confidence: float
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        _validate_node(self, "low volume node")
+
+
+def _validate_node(node: HighVolumeNode | LowVolumeNode, name: str) -> None:
+    if node.row < 0:
+        raise ValueError(f"{name} row must be non-negative")
+    volume = Decimal(str(node.total_volume))
+    percentile = Decimal(str(node.percentile))
+    if (
+        not volume.is_finite()
+        or volume < 0
+        or not percentile.is_finite()
+        or percentile < 0
+        or percentile > 100
+    ):
+        raise ValueError(f"{name} values are invalid")
+    _validate_confidence(node.confidence, f"{name} confidence")
+    object.__setattr__(node, "total_volume", volume)
+    object.__setattr__(node, "percentile", percentile)
+    object.__setattr__(node, "metadata", MappingProxyType(dict(node.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class HighVolumeNodeStatistics:
+    total_rows: int
+    node_count: int
+    maximum_volume: Decimal
+    threshold_percentile: Decimal
+
+    def __post_init__(self) -> None:
+        _validate_node_stats(self, "high volume node statistics")
+
+
+@dataclass(frozen=True, slots=True)
+class LowVolumeNodeStatistics:
+    total_rows: int
+    node_count: int
+    minimum_volume: Decimal
+    threshold_percentile: Decimal
+
+    def __post_init__(self) -> None:
+        _validate_node_stats(self, "low volume node statistics")
+
+
+def _validate_node_stats(
+    stats: HighVolumeNodeStatistics | LowVolumeNodeStatistics, name: str
+) -> None:
+    if (
+        stats.total_rows <= 0
+        or stats.node_count < 0
+        or stats.node_count > stats.total_rows
+    ):
+        raise ValueError(f"{name} counts are invalid")
+    for field_name in ("maximum_volume", "minimum_volume"):
+        if hasattr(stats, field_name):
+            value = Decimal(str(getattr(stats, field_name)))
+            if not value.is_finite() or value < 0:
+                raise ValueError(f"{name} volume is invalid")
+            object.__setattr__(stats, field_name, value)
+    threshold = Decimal(str(stats.threshold_percentile))
+    if not threshold.is_finite() or threshold < 0 or threshold > 100:
+        raise ValueError(f"{name} threshold is invalid")
+    object.__setattr__(stats, "threshold_percentile", threshold)
+
+
+@dataclass(frozen=True, slots=True)
+class HighVolumeNodeResult:
+    matrix: "FootprintMatrix"
+    nodes: tuple[HighVolumeNode, ...]
+    statistics_value: HighVolumeNodeStatistics
+    configuration: HighVolumeNodeConfiguration = field(
+        default_factory=HighVolumeNodeConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        _validate_node_result(self, self.nodes, "high volume nodes")
+
+    def lookup(self, row: int) -> HighVolumeNode | None:
+        return next((node for node in self.nodes if node.row == row), None)
+
+    def statistics(self) -> HighVolumeNodeStatistics:
+        return self.statistics_value
+
+
+@dataclass(frozen=True, slots=True)
+class LowVolumeNodeResult:
+    matrix: "FootprintMatrix"
+    nodes: tuple[LowVolumeNode, ...]
+    statistics_value: LowVolumeNodeStatistics
+    configuration: LowVolumeNodeConfiguration = field(
+        default_factory=LowVolumeNodeConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        _validate_node_result(self, self.nodes, "low volume nodes")
+
+    def lookup(self, row: int) -> LowVolumeNode | None:
+        return next((node for node in self.nodes if node.row == row), None)
+
+    def statistics(self) -> LowVolumeNodeStatistics:
+        return self.statistics_value
+
+
+def _validate_node_result(
+    result: HighVolumeNodeResult | LowVolumeNodeResult,
+    nodes: tuple[Any, ...],
+    name: str,
+) -> None:
+    ordered = tuple(sorted(nodes, key=lambda node: node.row))
+    if nodes != ordered:
+        raise ValueError(f"{name} must be ordered")
+    if len({node.row for node in nodes}) != len(nodes):
+        raise ValueError(f"duplicate {name} are not allowed")
+    if any(node.row >= result.matrix.dimensions_value.rows for node in nodes):
+        raise ValueError(f"{name} must reference matrix rows")
+    if (
+        result.statistics_value.total_rows != result.matrix.dimensions_value.rows
+        or result.statistics_value.node_count != len(nodes)
+    ):
+        raise ValueError(f"{name} statistics must match nodes")
+    object.__setattr__(result, "nodes", ordered)
+    object.__setattr__(result, "metadata", MappingProxyType(dict(result.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class HighVolumeNodeAnalyzer:
+    configuration: HighVolumeNodeConfiguration = field(
+        default_factory=HighVolumeNodeConfiguration
+    )
+
+    def analyze(self, matrix: "FootprintMatrix") -> HighVolumeNodeResult:
+        volumes = _matrix_row_volumes(matrix)
+        sorted_volumes = tuple(sorted(volumes))
+        nodes = tuple(
+            HighVolumeNode(
+                row,
+                volume,
+                _volume_percentile(volume, sorted_volumes),
+                1.0,
+                {"source": "footprint_matrix"},
+            )
+            for row, volume in enumerate(volumes)
+            if volume >= self.configuration.minimum_volume
+            and _volume_percentile(volume, sorted_volumes)
+            >= self.configuration.percentile_threshold
+        )
+        stats = HighVolumeNodeStatistics(
+            len(volumes),
+            len(nodes),
+            max(volumes),
+            self.configuration.percentile_threshold,
+        )
+        return HighVolumeNodeResult(
+            matrix,
+            nodes,
+            stats,
+            self.configuration,
+            {"detector": "HighVolumeNodeAnalyzer"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class LowVolumeNodeAnalyzer:
+    configuration: LowVolumeNodeConfiguration = field(
+        default_factory=LowVolumeNodeConfiguration
+    )
+
+    def analyze(self, matrix: "FootprintMatrix") -> LowVolumeNodeResult:
+        volumes = _matrix_row_volumes(matrix)
+        sorted_volumes = tuple(sorted(volumes))
+        nodes = tuple(
+            LowVolumeNode(
+                row,
+                volume,
+                _volume_percentile(volume, sorted_volumes),
+                1.0,
+                {"source": "footprint_matrix"},
+            )
+            for row, volume in enumerate(volumes)
+            if volume >= self.configuration.minimum_volume
+            and _volume_percentile(volume, sorted_volumes)
+            <= self.configuration.percentile_threshold
+        )
+        stats = LowVolumeNodeStatistics(
+            len(volumes),
+            len(nodes),
+            min(volumes),
+            self.configuration.percentile_threshold,
+        )
+        return LowVolumeNodeResult(
+            matrix,
+            nodes,
+            stats,
+            self.configuration,
+            {"detector": "LowVolumeNodeAnalyzer"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class ValueAreaConfiguration:
+    value_area_percentage: Decimal = Decimal("70")
+    strict_mode: bool = True
+    minimum_rows: int = 1
+
+    def __post_init__(self) -> None:
+        pct = Decimal(str(self.value_area_percentage))
+        if not pct.is_finite() or pct <= 0 or pct > 100:
+            raise ValueError("value area percentage must be between 0 and 100")
+        if self.minimum_rows <= 0:
+            raise ValueError("value area minimum rows must be positive")
+        object.__setattr__(self, "value_area_percentage", pct)
+
+
+@dataclass(frozen=True, slots=True)
+class ValueArea:
+    vah: int
+    val: int
+    poc_row: int
+    included_rows: tuple[int, ...]
+    included_volume: Decimal
+    target_volume: Decimal
+    coverage_percentage: Decimal
+    confidence: float
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if (
+            self.val < 0
+            or self.vah < self.val
+            or self.poc_row < self.val
+            or self.poc_row > self.vah
+        ):
+            raise ValueError("value area boundaries are invalid")
+        ordered = tuple(sorted(self.included_rows))
+        if self.included_rows != ordered:
+            raise ValueError("value area rows must be ordered")
+        if len(set(self.included_rows)) != len(self.included_rows):
+            raise ValueError("duplicate value area rows are not allowed")
+        if self.val != self.included_rows[0] or self.vah != self.included_rows[-1]:
+            raise ValueError("value area boundaries must match rows")
+        included = Decimal(str(self.included_volume))
+        target = Decimal(str(self.target_volume))
+        coverage = Decimal(str(self.coverage_percentage))
+        if any(not v.is_finite() or v < 0 for v in (included, target, coverage)):
+            raise ValueError("value area volumes must be non-negative and finite")
+        _validate_confidence(self.confidence, "value area confidence")
+        object.__setattr__(self, "included_volume", included)
+        object.__setattr__(self, "target_volume", target)
+        object.__setattr__(self, "coverage_percentage", coverage)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class ValueAreaStatistics:
+    total_rows: int
+    included_rows: int
+    total_volume: Decimal
+    included_volume: Decimal
+    target_percentage: Decimal
+    coverage_percentage: Decimal
+
+    def __post_init__(self) -> None:
+        if (
+            self.total_rows <= 0
+            or self.included_rows <= 0
+            or self.included_rows > self.total_rows
+        ):
+            raise ValueError("value area statistics counts are invalid")
+        for name in (
+            "total_volume",
+            "included_volume",
+            "target_percentage",
+            "coverage_percentage",
+        ):
+            value = Decimal(str(getattr(self, name)))
+            if not value.is_finite() or value < 0:
+                raise ValueError("value area statistics values are invalid")
+            object.__setattr__(self, name, value)
+
+
+@dataclass(frozen=True, slots=True)
+class ValueAreaResult:
+    matrix: "FootprintMatrix"
+    value_area: ValueArea
+    poc: PointOfControl
+    statistics_value: ValueAreaStatistics
+    configuration: ValueAreaConfiguration = field(
+        default_factory=ValueAreaConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.value_area.vah >= self.matrix.dimensions_value.rows:
+            raise ValueError("value area must reference matrix rows")
+        if self.poc.row != self.value_area.poc_row:
+            raise ValueError("value area poc must match")
+        if (
+            self.statistics_value.total_rows != self.matrix.dimensions_value.rows
+            or self.statistics_value.included_rows != len(self.value_area.included_rows)
+        ):
+            raise ValueError("value area statistics must match")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def statistics(self) -> ValueAreaStatistics:
+        return self.statistics_value
+
+
+@dataclass(frozen=True, slots=True)
+class ValueAreaAnalyzer:
+    configuration: ValueAreaConfiguration = field(
+        default_factory=ValueAreaConfiguration
+    )
+
+    def analyze(
+        self, matrix: "FootprintMatrix", poc_result: PointOfControlResult | None = None
+    ) -> ValueAreaResult:
+        poc_result = (
+            PointOfControlAnalyzer().analyze(matrix)
+            if poc_result is None
+            else poc_result
+        )
+        if poc_result.matrix != matrix:
+            raise ValueError("value area poc must reference matrix")
+        volumes = _matrix_row_volumes(matrix)
+        total = sum(volumes, Decimal("0"))
+        target = total * self.configuration.value_area_percentage / Decimal("100")
+        low = high = poc_result.poc.row
+        included = volumes[low]
+        while (
+            included < target or (high - low + 1) < self.configuration.minimum_rows
+        ) and (low > 0 or high + 1 < len(volumes)):
+            up = volumes[low - 1] if low > 0 else None
+            down = volumes[high + 1] if high + 1 < len(volumes) else None
+            if up is not None and (down is None or up >= down):
+                low -= 1
+                included += up
+            elif down is not None:
+                high += 1
+                included += down
+        rows = tuple(range(low, high + 1))
+        coverage = Decimal("0") if total == 0 else included / total * Decimal("100")
+        va = ValueArea(
+            high,
+            low,
+            poc_result.poc.row,
+            rows,
+            included,
+            target,
+            coverage,
+            1.0,
+            {"source": "footprint_matrix"},
+        )
+        stats = ValueAreaStatistics(
+            len(volumes),
+            len(rows),
+            total,
+            included,
+            self.configuration.value_area_percentage,
+            coverage,
+        )
+        return ValueAreaResult(
+            matrix,
+            va,
+            poc_result.poc,
+            stats,
+            self.configuration,
+            {"detector": "ValueAreaAnalyzer"},
+        )
+
+
+def _matrix_row_volumes(matrix: "FootprintMatrix") -> tuple[Decimal, ...]:
+    return tuple(
+        sum(
+            (VolumeClusterAnalyzer._total_volume(cell) for cell in row.cells),
+            Decimal("0"),
+        )
+        for row in matrix.rows
+    )
+
+
+def _volume_percentile(volume: Decimal, sorted_volumes: tuple[Decimal, ...]) -> Decimal:
+    if len(sorted_volumes) <= 1:
+        return Decimal("100")
+    less = sum(candidate < volume for candidate in sorted_volumes)
+    return Decimal(less) / Decimal(len(sorted_volumes) - 1) * Decimal("100")
+
+
+@dataclass(frozen=True, slots=True)
 class DeltaConfiguration:
     """Immutable settings for deterministic footprint delta analysis."""
 
@@ -4110,6 +4769,28 @@ class SequentialObjectDetectionPipeline:
             if footprint_matrix is not None and footprint_delta is not None
             else None
         )
+        point_of_control = (
+            PointOfControlAnalyzer().analyze(footprint_matrix)
+            if footprint_matrix is not None and volume_clusters is not None
+            else None
+        )
+        high_volume_nodes = (
+            HighVolumeNodeAnalyzer().analyze(footprint_matrix)
+            if footprint_matrix is not None and point_of_control is not None
+            else None
+        )
+        low_volume_nodes = (
+            LowVolumeNodeAnalyzer().analyze(footprint_matrix)
+            if footprint_matrix is not None and high_volume_nodes is not None
+            else None
+        )
+        value_area = (
+            ValueAreaAnalyzer().analyze(footprint_matrix, point_of_control)
+            if footprint_matrix is not None
+            and low_volume_nodes is not None
+            and point_of_control is not None
+            else None
+        )
         return DetectionGraph(
             frame_id=graph.frame_id,
             objects=graph.objects,
@@ -4124,6 +4805,10 @@ class SequentialObjectDetectionPipeline:
             absorption=absorption,
             footprint_delta=footprint_delta,
             volume_clusters=volume_clusters,
+            point_of_control=point_of_control,
+            high_volume_nodes=high_volume_nodes,
+            low_volume_nodes=low_volume_nodes,
+            value_area=value_area,
         )
 
 
