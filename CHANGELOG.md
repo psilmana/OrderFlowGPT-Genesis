@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.19 - Bundle 4 Advanced Order Flow Analytics
+
+- Added deterministic Advanced Order Flow Analytics for Delta Divergence Detection, Cumulative Delta, Delta Momentum Analysis, and Exhaustion Detection using only immutable objects produced by previous milestones.
+- Extended `DetectionGraph`, public exports, and `SequentialObjectDetectionPipeline` with Bundle 4 results, lookup helpers, and statistics without removing previous APIs.
+- Documented that Genesis still does not perform AI reasoning, prediction, trading signals, probability estimation, machine learning, OCR changes, OpenCV additions, networking, threading, async work, randomness, or vendor-specific logic. Bundle 5 introduces Market Structure Analysis.
+
 ## 0.1.17 - Bundle 2 Auction Market Theory
 
 - Added immutable Auction Market Theory support: Developing POC, Developing Value Area, Unfinished Auctions, Excess High, and Excess Low.
