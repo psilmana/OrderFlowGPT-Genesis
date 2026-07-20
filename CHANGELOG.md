@@ -66,3 +66,10 @@
 - Added `DetectionContext`, immutable `DetectorRegistry`, and `SequentialObjectDetectionPipeline` so future detectors receive only a processed frame, workspace layout, and configuration.
 - Added placeholder object detectors for price axes, time axes, footprint cells, volume profiles, big trades, and absorption; these intentionally return empty `DetectionResult[DetectedObject]` values with no computer vision, OCR, ML, AI, capture, networking, or side effects.
 - Documented how Milestone 6 extends the prior roadmap without replacing existing workspace layout or chart detection contracts.
+
+## Milestone 20 — Deterministic Delta Analysis
+
+- Added immutable footprint delta analysis over the existing `FootprintMatrix`.
+- Computes cell, row, matrix, and statistics delta values deterministically from bid and ask volumes only.
+- Does not add divergence detection, trend analysis, market prediction, AI, ML, OCR, OpenCV, threading, async, networking, globals, randomness, vendor-specific logic, or trading signals.
+- Milestone 21 introduces Volume Cluster Analysis.

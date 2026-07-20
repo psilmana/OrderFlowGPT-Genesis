@@ -3,6 +3,14 @@
 from .analysis import OrderFlowAnalyzer
 from .models import AnalysisResult, MarketSnapshot, OrderBookLevel, Trade
 from .vision import (
+    FootprintDeltaAnalyzer,
+    DeltaResult,
+    DeltaStatistics,
+    FootprintDelta,
+    RowDelta,
+    CellDelta,
+    DeltaConfiguration,
+    DeltaType,
     AbsorptionConfiguration,
     AbsorptionResult,
     AbsorptionSide,
@@ -142,6 +150,14 @@ from .vision import (
 )
 
 __all__ = [
+    "FootprintDeltaAnalyzer",
+    "DeltaResult",
+    "DeltaStatistics",
+    "FootprintDelta",
+    "RowDelta",
+    "CellDelta",
+    "DeltaConfiguration",
+    "DeltaType",
     "AnalysisResult",
     "AbsorptionConfiguration",
     "AbsorptionResult",

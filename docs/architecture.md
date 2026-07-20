@@ -243,3 +243,9 @@ Milestone 19 adds `FootprintAbsorptionDetector`, a deterministic analytics compo
 The detector emits immutable `FootprintAbsorption` objects inside an `AbsorptionResult`, with aggregate `AbsorptionStatistics` plus graph helpers for all, buy-side, sell-side, and cell-specific absorption lookup. Pipeline integration runs after matrix construction, single-cell imbalance detection, and stacked imbalance detection. Absorption results must reference the same matrix and imbalance result already attached to the `DetectionGraph`.
 
 Milestone 19 remains side-effect free and deterministic. It adds no AI, ML, OCR changes, OpenCV additions, networking, async processing, threading, globals, randomness, vendor-specific logic, trading signals, entries, exits, or recommendations.
+
+## Milestone 20 — Deterministic Delta Analysis
+
+`FootprintDeltaAnalyzer` runs after Absorption Detection in `SequentialObjectDetectionPipeline` and reads only the immutable `FootprintMatrix`. It produces immutable `DeltaResult` data containing cell deltas, row deltas, whole-footprint aggregates, and deterministic statistics. `DetectionGraph` exposes the result through `footprint_delta` plus lookup helpers for cell delta, row delta, positive cells, negative cells, zero cells, and delta statistics.
+
+This milestone computes deterministic delta values only. It does not add divergence detection, trend analysis, market prediction, market bias, trading signals, AI, ML, OCR changes, OpenCV additions, threading, async execution, networking, globals, randomness, or vendor-specific logic. Milestone 21 introduces Volume Cluster Analysis.
