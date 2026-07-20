@@ -80,6 +80,20 @@ class PointOfControlType(Enum):
     SESSION_POC = "SESSION_POC"
 
 
+class UnfinishedAuctionType(Enum):
+    """Supported deterministic unfinished-auction boundary types."""
+
+    TOP = "TOP"
+    BOTTOM = "BOTTOM"
+
+
+class ExcessType(Enum):
+    """Supported deterministic auction excess boundary types."""
+
+    EXCESS_HIGH = "EXCESS_HIGH"
+    EXCESS_LOW = "EXCESS_LOW"
+
+
 class AbsorptionSide(Enum):
     """Passive side inferred for deterministic absorption observations."""
 
@@ -423,6 +437,10 @@ class DetectionGraph:
     high_volume_nodes: "HighVolumeNodeResult | None" = None
     low_volume_nodes: "LowVolumeNodeResult | None" = None
     value_area: "ValueAreaResult | None" = None
+    developing_poc: "DevelopingPointOfControlResult | None" = None
+    developing_value_area: "DevelopingValueAreaResult | None" = None
+    unfinished_auctions: "UnfinishedAuctionResult | None" = None
+    excess: "ExcessResult | None" = None
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -571,6 +589,17 @@ class DetectionGraph:
                 and self.value_area.poc != self.point_of_control.poc
             ):
                 raise ValueError("value area poc must reference graph point of control")
+        for name, result in (
+            ("developing poc", self.developing_poc),
+            ("developing value area", self.developing_value_area),
+            ("unfinished auctions", self.unfinished_auctions),
+            ("excess", self.excess),
+        ):
+            if result is not None:
+                if self.footprint_matrix is None:
+                    raise ValueError(f"{name} requires footprint matrix")
+                if result.matrix != self.footprint_matrix:
+                    raise ValueError(f"{name} must reference graph matrix")
 
     @property
     def footprint_cells(self) -> tuple[DetectedObject, ...]:
@@ -871,6 +900,50 @@ class DetectionGraph:
                 raise ValueError("value area is not available")
             return ValueAreaAnalyzer().analyze(self.footprint_matrix).statistics()
         return self.value_area.statistics()
+
+    def developing_poc_statistics(self) -> "DevelopingPointOfControlStatistics":
+        if self.developing_poc is None:
+            if self.footprint_matrix is None:
+                raise ValueError("developing poc is not available")
+            return (
+                DevelopingPointOfControlAnalyzer()
+                .analyze(self.footprint_matrix)
+                .statistics()
+            )
+        return self.developing_poc.statistics()
+
+    def developing_value_area_statistics(self) -> "DevelopingValueAreaStatistics":
+        if self.developing_value_area is None:
+            if self.footprint_matrix is None:
+                raise ValueError("developing value area is not available")
+            return (
+                DevelopingValueAreaAnalyzer()
+                .analyze(self.footprint_matrix)
+                .statistics()
+            )
+        return self.developing_value_area.statistics()
+
+    def lookup_unfinished_auction(
+        self, auction_type: "UnfinishedAuctionType"
+    ) -> "UnfinishedAuction | None":
+        if self.unfinished_auctions is None:
+            return None
+        return self.unfinished_auctions.lookup(auction_type)
+
+    def unfinished_auction_statistics(self) -> "UnfinishedAuctionStatistics":
+        if self.unfinished_auctions is None:
+            return UnfinishedAuctionStatistics(0, 0, 0)
+        return self.unfinished_auctions.statistics()
+
+    def lookup_excess(self, excess_type: "ExcessType") -> "Excess | None":
+        if self.excess is None:
+            return None
+        return self.excess.lookup(excess_type)
+
+    def excess_statistics(self) -> "ExcessStatistics":
+        if self.excess is None:
+            return ExcessStatistics(0, 0, 0)
+        return self.excess.statistics()
 
 
 @dataclass(frozen=True, slots=True)
@@ -3712,6 +3785,579 @@ class ValueAreaAnalyzer:
         )
 
 
+@dataclass(frozen=True, slots=True)
+class DevelopingPointOfControlConfiguration:
+    strict_mode: bool = True
+
+
+@dataclass(frozen=True, slots=True)
+class DevelopingPointOfControl:
+    slice_index: int
+    row: int
+    total_volume: Decimal
+    confidence: float
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.slice_index < 0 or self.row < 0:
+            raise ValueError("developing poc indexes must be non-negative")
+        volume = Decimal(str(self.total_volume))
+        if not volume.is_finite() or volume < 0:
+            raise ValueError("developing poc volume must be non-negative and finite")
+        _validate_confidence(self.confidence, "developing poc confidence")
+        object.__setattr__(self, "total_volume", volume)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class DevelopingPointOfControlStatistics:
+    total_slices: int
+    current_row: int
+    previous_row: int | None
+    movement_distance: int
+    stable_slices: int
+
+    def __post_init__(self) -> None:
+        if self.total_slices <= 0 or self.current_row < 0 or self.movement_distance < 0:
+            raise ValueError("developing poc statistics are invalid")
+        if self.previous_row is not None and self.previous_row < 0:
+            raise ValueError("developing poc previous row is invalid")
+
+
+@dataclass(frozen=True, slots=True)
+class DevelopingPointOfControlResult:
+    matrix: "FootprintMatrix"
+    history: tuple[DevelopingPointOfControl, ...]
+    statistics_value: DevelopingPointOfControlStatistics
+    configuration: DevelopingPointOfControlConfiguration = field(
+        default_factory=DevelopingPointOfControlConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        _validate_developing_history(self.matrix, self.history, "developing poc")
+        if (
+            self.statistics_value.total_slices != len(self.history)
+            or self.statistics_value.current_row != self.current_poc.row
+        ):
+            raise ValueError("developing poc statistics must match history")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    @property
+    def current_poc(self) -> DevelopingPointOfControl:
+        return self.history[-1]
+
+    @property
+    def previous_poc(self) -> DevelopingPointOfControl | None:
+        return None if len(self.history) == 1 else self.history[-2]
+
+    @property
+    def movement_direction(self) -> str:
+        if self.previous_poc is None or self.current_poc.row == self.previous_poc.row:
+            return "STABLE"
+        return "UP" if self.current_poc.row < self.previous_poc.row else "DOWN"
+
+    @property
+    def movement_distance(self) -> int:
+        return (
+            0
+            if self.previous_poc is None
+            else abs(self.current_poc.row - self.previous_poc.row)
+        )
+
+    def statistics(self) -> DevelopingPointOfControlStatistics:
+        return self.statistics_value
+
+
+@dataclass(frozen=True, slots=True)
+class DevelopingPointOfControlAnalyzer:
+    configuration: DevelopingPointOfControlConfiguration = field(
+        default_factory=DevelopingPointOfControlConfiguration
+    )
+
+    def analyze(self, matrix: "FootprintMatrix") -> DevelopingPointOfControlResult:
+        history = tuple(
+            self._slice_poc(matrix, column)
+            for column in range(matrix.dimensions_value.columns)
+        )
+        previous = None if len(history) == 1 else history[-2].row
+        stats = DevelopingPointOfControlStatistics(
+            len(history),
+            history[-1].row,
+            previous,
+            0 if previous is None else abs(history[-1].row - previous),
+            sum(
+                1 for left, right in zip(history, history[1:]) if left.row == right.row
+            ),
+        )
+        return DevelopingPointOfControlResult(
+            matrix,
+            history,
+            stats,
+            self.configuration,
+            {"detector": "DevelopingPointOfControlAnalyzer"},
+        )
+
+    @staticmethod
+    def _slice_poc(matrix: "FootprintMatrix", column: int) -> DevelopingPointOfControl:
+        volumes = tuple(
+            sum(
+                (
+                    VolumeClusterAnalyzer._total_volume(row.cells[c])
+                    for c in range(column + 1)
+                ),
+                Decimal("0"),
+            )
+            for row in matrix.rows
+        )
+        max_volume = max(volumes)
+        row = next(
+            index for index, volume in enumerate(volumes) if volume == max_volume
+        )
+        return DevelopingPointOfControl(
+            column, row, max_volume, 1.0, {"source": "footprint_matrix"}
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class DevelopingValueAreaConfiguration(ValueAreaConfiguration):
+    pass
+
+
+@dataclass(frozen=True, slots=True)
+class DevelopingValueArea:
+    slice_index: int
+    vah: int
+    val: int
+    included_rows: tuple[int, ...]
+    confidence: float
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.slice_index < 0 or self.val < 0 or self.vah < self.val:
+            raise ValueError("developing value area boundaries are invalid")
+        if self.included_rows != tuple(sorted(self.included_rows)) or len(
+            set(self.included_rows)
+        ) != len(self.included_rows):
+            raise ValueError(
+                "developing value area rows must be ordered without duplicates"
+            )
+        if self.included_rows and (
+            self.val != self.included_rows[0] or self.vah != self.included_rows[-1]
+        ):
+            raise ValueError("developing value area boundaries must match rows")
+        _validate_confidence(self.confidence, "developing value area confidence")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class DevelopingValueAreaStatistics:
+    total_slices: int
+    current_vah: int
+    current_val: int
+    previous_vah: int | None
+    previous_val: int | None
+    expansion: int
+    contraction: int
+
+    def __post_init__(self) -> None:
+        if (
+            self.total_slices <= 0
+            or self.current_vah < self.current_val
+            or self.expansion < 0
+            or self.contraction < 0
+        ):
+            raise ValueError("developing value area statistics are invalid")
+
+
+@dataclass(frozen=True, slots=True)
+class DevelopingValueAreaResult:
+    matrix: "FootprintMatrix"
+    history: tuple[DevelopingValueArea, ...]
+    statistics_value: DevelopingValueAreaStatistics
+    configuration: DevelopingValueAreaConfiguration = field(
+        default_factory=DevelopingValueAreaConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        _validate_developing_history(self.matrix, self.history, "developing value area")
+        if self.statistics_value.total_slices != len(self.history):
+            raise ValueError("developing value area statistics must match history")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    @property
+    def current_value_area(self) -> DevelopingValueArea:
+        return self.history[-1]
+
+    @property
+    def previous_value_area(self) -> DevelopingValueArea | None:
+        return None if len(self.history) == 1 else self.history[-2]
+
+    @property
+    def movement(self) -> str:
+        previous = self.previous_value_area
+        current = self.current_value_area
+        if previous is None or (current.vah, current.val) == (
+            previous.vah,
+            previous.val,
+        ):
+            return "STABLE"
+        if current.vah <= previous.vah and current.val < previous.val:
+            return "UP"
+        if current.vah > previous.vah and current.val >= previous.val:
+            return "DOWN"
+        return "MIXED"
+
+    def statistics(self) -> DevelopingValueAreaStatistics:
+        return self.statistics_value
+
+
+@dataclass(frozen=True, slots=True)
+class DevelopingValueAreaAnalyzer:
+    configuration: DevelopingValueAreaConfiguration = field(
+        default_factory=DevelopingValueAreaConfiguration
+    )
+
+    def analyze(self, matrix: "FootprintMatrix") -> DevelopingValueAreaResult:
+        history = []
+        for column in range(matrix.dimensions_value.columns):
+            sliced = _prefix_row_volumes(matrix, column)
+            va = _value_area_from_volumes(sliced, self.configuration)
+            history.append(
+                DevelopingValueArea(
+                    column,
+                    va.vah,
+                    va.val,
+                    va.included_rows,
+                    1.0,
+                    {"source": "footprint_matrix"},
+                )
+            )
+        hist = tuple(history)
+        prev = None if len(hist) == 1 else hist[-2]
+        cur = hist[-1]
+        expansion = (
+            0 if prev is None else max(0, (cur.vah - cur.val) - (prev.vah - prev.val))
+        )
+        contraction = (
+            0 if prev is None else max(0, (prev.vah - prev.val) - (cur.vah - cur.val))
+        )
+        stats = DevelopingValueAreaStatistics(
+            len(hist),
+            cur.vah,
+            cur.val,
+            None if prev is None else prev.vah,
+            None if prev is None else prev.val,
+            expansion,
+            contraction,
+        )
+        return DevelopingValueAreaResult(
+            matrix,
+            hist,
+            stats,
+            self.configuration,
+            {"detector": "DevelopingValueAreaAnalyzer"},
+        )
+
+
+def _validate_developing_history(
+    matrix: "FootprintMatrix", history: tuple[Any, ...], name: str
+) -> None:
+    if not history:
+        raise ValueError(f"{name} history is required")
+    if tuple(item.slice_index for item in history) != tuple(range(len(history))):
+        raise ValueError(f"{name} history must be ordered")
+    if len({item.slice_index for item in history}) != len(history):
+        raise ValueError(f"duplicate {name} history entries are not allowed")
+    if len(history) != matrix.dimensions_value.columns:
+        raise ValueError(f"{name} history must reference matrix slices")
+
+
+def _prefix_row_volumes(matrix: "FootprintMatrix", column: int) -> tuple[Decimal, ...]:
+    return tuple(
+        sum(
+            (
+                VolumeClusterAnalyzer._total_volume(row.cells[c])
+                for c in range(column + 1)
+            ),
+            Decimal("0"),
+        )
+        for row in matrix.rows
+    )
+
+
+def _value_area_from_volumes(
+    volumes: tuple[Decimal, ...], configuration: ValueAreaConfiguration
+) -> DevelopingValueArea:
+    max_volume = max(volumes)
+    poc_row = next(
+        index for index, volume in enumerate(volumes) if volume == max_volume
+    )
+    total = sum(volumes, Decimal("0"))
+    target = total * configuration.value_area_percentage / Decimal("100")
+    low = high = poc_row
+    included = volumes[poc_row]
+    while (included < target or (high - low + 1) < configuration.minimum_rows) and (
+        low > 0 or high + 1 < len(volumes)
+    ):
+        up = volumes[low - 1] if low > 0 else None
+        down = volumes[high + 1] if high + 1 < len(volumes) else None
+        if up is not None and (down is None or up >= down):
+            low -= 1
+            included += up
+        elif down is not None:
+            high += 1
+            included += down
+    return DevelopingValueArea(0, high, low, tuple(range(low, high + 1)), 1.0)
+
+
+@dataclass(frozen=True, slots=True)
+class UnfinishedAuction:
+    auction_type: UnfinishedAuctionType
+    row: int
+    bid_volume: Decimal
+    ask_volume: Decimal
+    confidence: float
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.row < 0:
+            raise ValueError("unfinished auction row must be non-negative")
+        bid, ask = Decimal(str(self.bid_volume)), Decimal(str(self.ask_volume))
+        if any(not value.is_finite() or value < 0 for value in (bid, ask)):
+            raise ValueError("unfinished auction volumes are invalid")
+        _validate_confidence(self.confidence, "unfinished auction confidence")
+        object.__setattr__(self, "bid_volume", bid)
+        object.__setattr__(self, "ask_volume", ask)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class UnfinishedAuctionConfiguration:
+    minimum_boundary_volume: Decimal = Decimal("1")
+    strict_mode: bool = True
+
+    def __post_init__(self) -> None:
+        value = Decimal(str(self.minimum_boundary_volume))
+        if not value.is_finite() or value < 0:
+            raise ValueError("unfinished auction minimum volume is invalid")
+        object.__setattr__(self, "minimum_boundary_volume", value)
+
+
+@dataclass(frozen=True, slots=True)
+class UnfinishedAuctionStatistics:
+    total_auctions: int
+    top_count: int
+    bottom_count: int
+
+
+@dataclass(frozen=True, slots=True)
+class UnfinishedAuctionResult:
+    matrix: "FootprintMatrix"
+    auctions: tuple[UnfinishedAuction, ...]
+    statistics_value: UnfinishedAuctionStatistics
+    configuration: UnfinishedAuctionConfiguration = field(
+        default_factory=UnfinishedAuctionConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        _validate_boundary_result(self, self.auctions, "unfinished auctions")
+
+    def lookup(self, auction_type: UnfinishedAuctionType) -> UnfinishedAuction | None:
+        return next(
+            (
+                auction
+                for auction in self.auctions
+                if auction.auction_type == auction_type
+            ),
+            None,
+        )
+
+    def statistics(self) -> UnfinishedAuctionStatistics:
+        return self.statistics_value
+
+
+@dataclass(frozen=True, slots=True)
+class UnfinishedAuctionDetector:
+    configuration: UnfinishedAuctionConfiguration = field(
+        default_factory=UnfinishedAuctionConfiguration
+    )
+
+    def detect(self, matrix: "FootprintMatrix") -> UnfinishedAuctionResult:
+        auctions = []
+        for auction_type, row in (
+            (UnfinishedAuctionType.TOP, 0),
+            (UnfinishedAuctionType.BOTTOM, matrix.dimensions_value.rows - 1),
+        ):
+            bid, ask = _row_bid_ask(matrix.row(row))
+            if (
+                bid >= self.configuration.minimum_boundary_volume
+                and ask >= self.configuration.minimum_boundary_volume
+            ):
+                auctions.append(
+                    UnfinishedAuction(
+                        auction_type, row, bid, ask, 1.0, {"source": "footprint_matrix"}
+                    )
+                )
+        result = tuple(auctions)
+        stats = UnfinishedAuctionStatistics(
+            len(result),
+            sum(a.auction_type == UnfinishedAuctionType.TOP for a in result),
+            sum(a.auction_type == UnfinishedAuctionType.BOTTOM for a in result),
+        )
+        return UnfinishedAuctionResult(
+            matrix,
+            result,
+            stats,
+            self.configuration,
+            {"detector": "UnfinishedAuctionDetector"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class ExcessConfiguration:
+    minimum_opposite_volume: Decimal = Decimal("1")
+    strict_mode: bool = True
+
+    def __post_init__(self) -> None:
+        value = Decimal(str(self.minimum_opposite_volume))
+        if not value.is_finite() or value < 0:
+            raise ValueError("excess minimum opposite volume is invalid")
+        object.__setattr__(self, "minimum_opposite_volume", value)
+
+
+@dataclass(frozen=True, slots=True)
+class Excess:
+    excess_type: ExcessType
+    row: int
+    bid_volume: Decimal
+    ask_volume: Decimal
+    confidence: float
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        UnfinishedAuction(
+            (
+                UnfinishedAuctionType.TOP
+                if self.excess_type == ExcessType.EXCESS_HIGH
+                else UnfinishedAuctionType.BOTTOM
+            ),
+            self.row,
+            self.bid_volume,
+            self.ask_volume,
+            self.confidence,
+            self.metadata,
+        )
+        object.__setattr__(self, "bid_volume", Decimal(str(self.bid_volume)))
+        object.__setattr__(self, "ask_volume", Decimal(str(self.ask_volume)))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class ExcessStatistics:
+    total_excesses: int
+    high_count: int
+    low_count: int
+
+
+@dataclass(frozen=True, slots=True)
+class ExcessResult:
+    matrix: "FootprintMatrix"
+    excesses: tuple[Excess, ...]
+    statistics_value: ExcessStatistics
+    configuration: ExcessConfiguration = field(default_factory=ExcessConfiguration)
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        _validate_boundary_result(self, self.excesses, "excess")
+
+    def lookup(self, excess_type: ExcessType) -> Excess | None:
+        return next(
+            (excess for excess in self.excesses if excess.excess_type == excess_type),
+            None,
+        )
+
+    def statistics(self) -> ExcessStatistics:
+        return self.statistics_value
+
+
+@dataclass(frozen=True, slots=True)
+class ExcessDetector:
+    configuration: ExcessConfiguration = field(default_factory=ExcessConfiguration)
+
+    def detect(self, matrix: "FootprintMatrix") -> ExcessResult:
+        excesses = []
+        top_bid, top_ask = _row_bid_ask(matrix.row(0))
+        if top_ask >= self.configuration.minimum_opposite_volume and top_bid == 0:
+            excesses.append(
+                Excess(
+                    ExcessType.EXCESS_HIGH,
+                    0,
+                    top_bid,
+                    top_ask,
+                    1.0,
+                    {"source": "footprint_matrix"},
+                )
+            )
+        bottom_bid, bottom_ask = _row_bid_ask(
+            matrix.row(matrix.dimensions_value.rows - 1)
+        )
+        if bottom_bid >= self.configuration.minimum_opposite_volume and bottom_ask == 0:
+            excesses.append(
+                Excess(
+                    ExcessType.EXCESS_LOW,
+                    matrix.dimensions_value.rows - 1,
+                    bottom_bid,
+                    bottom_ask,
+                    1.0,
+                    {"source": "footprint_matrix"},
+                )
+            )
+        result = tuple(excesses)
+        stats = ExcessStatistics(
+            len(result),
+            sum(e.excess_type == ExcessType.EXCESS_HIGH for e in result),
+            sum(e.excess_type == ExcessType.EXCESS_LOW for e in result),
+        )
+        return ExcessResult(
+            matrix, result, stats, self.configuration, {"detector": "ExcessDetector"}
+        )
+
+
+def _row_bid_ask(row: "MatrixRow") -> tuple[Decimal, Decimal]:
+    bid = ask = Decimal("0")
+    for cell in row.cells:
+        bid_value, ask_value = cell.interpretation.bid(), cell.interpretation.ask()
+        bid += (
+            Decimal("0")
+            if bid_value is None
+            else Decimal(str(bid_value.numeric_value.value))
+        )
+        ask += (
+            Decimal("0")
+            if ask_value is None
+            else Decimal(str(ask_value.numeric_value.value))
+        )
+    return bid, ask
+
+
+def _validate_boundary_result(result: Any, entries: tuple[Any, ...], name: str) -> None:
+    rows = result.matrix.dimensions_value.rows
+    if any(entry.row >= rows for entry in entries):
+        raise ValueError(f"{name} must reference matrix rows")
+    keys = tuple(_boundary_key(entry) for entry in entries)
+    if len(set(keys)) != len(keys):
+        raise ValueError(f"duplicate {name} are not allowed")
+    if (
+        tuple(sorted(entries, key=lambda entry: _boundary_order(_boundary_key(entry))))
+        != entries
+    ):
+        raise ValueError(f"{name} must be ordered")
+    object.__setattr__(result, "metadata", MappingProxyType(dict(result.metadata)))
+
+
 def _matrix_row_volumes(matrix: "FootprintMatrix") -> tuple[Decimal, ...]:
     return tuple(
         sum(
@@ -4791,6 +5437,26 @@ class SequentialObjectDetectionPipeline:
             and point_of_control is not None
             else None
         )
+        developing_poc = (
+            DevelopingPointOfControlAnalyzer().analyze(footprint_matrix)
+            if footprint_matrix is not None and value_area is not None
+            else None
+        )
+        developing_value_area = (
+            DevelopingValueAreaAnalyzer().analyze(footprint_matrix)
+            if footprint_matrix is not None and developing_poc is not None
+            else None
+        )
+        unfinished_auctions = (
+            UnfinishedAuctionDetector().detect(footprint_matrix)
+            if footprint_matrix is not None and developing_value_area is not None
+            else None
+        )
+        excess = (
+            ExcessDetector().detect(footprint_matrix)
+            if footprint_matrix is not None and unfinished_auctions is not None
+            else None
+        )
         return DetectionGraph(
             frame_id=graph.frame_id,
             objects=graph.objects,
@@ -4809,6 +5475,10 @@ class SequentialObjectDetectionPipeline:
             high_volume_nodes=high_volume_nodes,
             low_volume_nodes=low_volume_nodes,
             value_area=value_area,
+            developing_poc=developing_poc,
+            developing_value_area=developing_value_area,
+            unfinished_auctions=unfinished_auctions,
+            excess=excess,
         )
 
 
@@ -7053,3 +7723,21 @@ def _numeric_type(text: str) -> NumericType:
     if decimal:
         return NumericType.DECIMAL
     return NumericType.INTEGER
+
+
+def _boundary_key(entry: Any) -> UnfinishedAuctionType | ExcessType:
+    if isinstance(entry, UnfinishedAuction):
+        return entry.auction_type
+    if isinstance(entry, Excess):
+        return entry.excess_type
+    raise ValueError("boundary result entry type is invalid")
+
+
+def _boundary_order(key: UnfinishedAuctionType | ExcessType) -> int:
+    order = {
+        UnfinishedAuctionType.TOP: 0,
+        UnfinishedAuctionType.BOTTOM: 1,
+        ExcessType.EXCESS_HIGH: 0,
+        ExcessType.EXCESS_LOW: 1,
+    }
+    return order[key]

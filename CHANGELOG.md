@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.17 - Bundle 2 Auction Market Theory
+
+- Added immutable Auction Market Theory support: Developing POC, Developing Value Area, Unfinished Auctions, Excess High, and Excess Low.
+- Extended `DetectionGraph` and `SequentialObjectDetectionPipeline` with deterministic Bundle 2 results, lookup helpers, and statistics while preserving previous APIs.
+- Documented that Poor High, Poor Low, Single Prints, Naked POC, trading signals, prediction, and order execution remain out of scope; Bundle 3 begins advanced Auction continuation analysis.
+
 ## 0.1.15 - Milestone 21
 
 - Added deterministic Volume Cluster Analysis with immutable cluster type/configuration/cluster/result/statistics models, `VolumeClusterAnalyzer`, `DetectionGraph` helpers, and pipeline integration immediately after `FootprintDeltaAnalyzer`. Milestone 21 classifies individual cell volume only and explicitly excludes Point of Control, HVN/LVN, market profile, auction logic, market bias, trading logic, and trading signals. Milestone 22 introduces POC.
