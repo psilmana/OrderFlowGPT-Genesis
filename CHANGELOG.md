@@ -77,3 +77,9 @@
 - Computes cell, row, matrix, and statistics delta values deterministically from bid and ask volumes only.
 - Does not add divergence detection, trend analysis, market prediction, AI, ML, OCR, OpenCV, threading, async, networking, globals, randomness, vendor-specific logic, or trading signals.
 - Milestone 21 introduces Volume Cluster Analysis.
+
+## Unreleased
+
+- Implemented Bundle 1 of the Genesis Market Profile Core with immutable Session Point of Control, High Volume Nodes, Low Volume Nodes, and 70% Value Area analysis.
+- Extended the detection graph and sequential object detection pipeline to expose Market Profile Core results after volume cluster analysis.
+- Documented that developing POC, developing value area, composite profiles, Auction Theory, market prediction, and trading signals remain out of scope; Bundle 2 begins Auction Market Theory.
