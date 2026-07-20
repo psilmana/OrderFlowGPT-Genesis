@@ -248,4 +248,10 @@ Milestone 19 remains side-effect free and deterministic. It adds no AI, ML, OCR 
 
 `FootprintDeltaAnalyzer` runs after Absorption Detection in `SequentialObjectDetectionPipeline` and reads only the immutable `FootprintMatrix`. It produces immutable `DeltaResult` data containing cell deltas, row deltas, whole-footprint aggregates, and deterministic statistics. `DetectionGraph` exposes the result through `footprint_delta` plus lookup helpers for cell delta, row delta, positive cells, negative cells, zero cells, and delta statistics.
 
-This milestone computes deterministic delta values only. It does not add divergence detection, trend analysis, market prediction, market bias, trading signals, AI, ML, OCR changes, OpenCV additions, threading, async execution, networking, globals, randomness, or vendor-specific logic. Milestone 21 introduces Volume Cluster Analysis.
+## Milestone 21: Deterministic Volume Cluster Analysis
+
+Milestone 21 adds `VolumeClusterAnalyzer`, an immutable deterministic analytics component that runs immediately after `FootprintDeltaAnalyzer`. It reads only existing semantic values from `FootprintMatrix`, computes total volume for every cell, and classifies each individual cell as `HIGH_VOLUME`, `LOW_VOLUME`, or `NORMAL_VOLUME` using `VolumeClusterConfiguration` percentile thresholds plus `minimum_volume`.
+
+`VolumeClusterResult` stores immutable `VolumeCluster` entries, `VolumeClusterStatistics`, configuration, metadata, matrix references, deterministic ordering, and duplicate-reference validation. `DetectionGraph` exposes `volume_clusters`, `high_volume_cells()`, `low_volume_cells()`, `normal_volume_cells()`, `lookup_volume_cluster(cell_id)`, and `volume_cluster_statistics()` without replacing earlier APIs. Milestone 21 classifies individual cell volume only: no Point of Control, no HVN/LVN zones, no market profile, no auction logic, no market bias, and no trading logic or trading signals. Milestone 22 introduces Point of Control (POC).
+
+Milestone 21 does not add Point of Control, HVN/LVN, market profile, auction logic, market prediction, market bias, trading signals, AI, ML, OCR changes, OpenCV additions, threading, async execution, networking, globals, randomness, or vendor-specific logic. Milestone 22 introduces Point of Control (POC).

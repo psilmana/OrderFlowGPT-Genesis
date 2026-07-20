@@ -66,6 +66,14 @@ class DeltaType(Enum):
     ZERO = "ZERO"
 
 
+class VolumeClusterType(Enum):
+    """Supported deterministic single-cell volume classifications."""
+
+    HIGH_VOLUME = "HIGH_VOLUME"
+    LOW_VOLUME = "LOW_VOLUME"
+    NORMAL_VOLUME = "NORMAL_VOLUME"
+
+
 class AbsorptionSide(Enum):
     """Passive side inferred for deterministic absorption observations."""
 
@@ -404,6 +412,7 @@ class DetectionGraph:
     stacked_imbalances: "StackedImbalanceResult | None" = None
     absorption: "AbsorptionResult | None" = None
     footprint_delta: "DeltaResult | None" = None
+    volume_clusters: "VolumeClusterResult | None" = None
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -522,6 +531,11 @@ class DetectionGraph:
                 raise ValueError("footprint delta requires footprint matrix")
             if self.footprint_delta.matrix != self.footprint_matrix:
                 raise ValueError("footprint delta must reference graph matrix")
+        if self.volume_clusters is not None:
+            if self.footprint_matrix is None:
+                raise ValueError("volume clusters require footprint matrix")
+            if self.volume_clusters.matrix != self.footprint_matrix:
+                raise ValueError("volume clusters must reference graph matrix")
 
     @property
     def footprint_cells(self) -> tuple[DetectedObject, ...]:
@@ -747,6 +761,36 @@ class DetectionGraph:
                 Decimal("0"),
             )
         return self.footprint_delta.statistics()
+
+    def high_volume_cells(self) -> tuple["VolumeCluster", ...]:
+        if self.volume_clusters is None:
+            return ()
+        return self.volume_clusters.high_volume_cells()
+
+    def low_volume_cells(self) -> tuple["VolumeCluster", ...]:
+        if self.volume_clusters is None:
+            return ()
+        return self.volume_clusters.low_volume_cells()
+
+    def normal_volume_cells(self) -> tuple["VolumeCluster", ...]:
+        if self.volume_clusters is None:
+            return ()
+        return self.volume_clusters.normal_volume_cells()
+
+    def lookup_volume_cluster(self, cell_id: str) -> "VolumeCluster | None":
+        if self.volume_clusters is None:
+            return None
+        return self.volume_clusters.lookup(cell_id)
+
+    def volume_cluster_statistics(self) -> "VolumeClusterStatistics":
+        if self.volume_clusters is None:
+            if self.footprint_matrix is None:
+                raise ValueError("volume clusters are not available")
+            total = self.footprint_matrix.statistics().total_cells
+            return VolumeClusterStatistics(
+                total, 0, 0, total, Decimal("0"), Decimal("0"), Decimal("0")
+            )
+        return self.volume_clusters.statistics()
 
 
 @dataclass(frozen=True, slots=True)
@@ -2787,6 +2831,246 @@ class FootprintAbsorptionDetector:
 
 
 @dataclass(frozen=True, slots=True)
+class VolumeClusterConfiguration:
+    """Immutable settings for deterministic volume cluster analysis."""
+
+    high_volume_percentile: Decimal = Decimal("80")
+    low_volume_percentile: Decimal = Decimal("20")
+    minimum_volume: Decimal = Decimal("0")
+    strict_mode: bool = True
+
+    def __post_init__(self) -> None:
+        high = Decimal(str(self.high_volume_percentile))
+        low = Decimal(str(self.low_volume_percentile))
+        minimum = Decimal(str(self.minimum_volume))
+        if any(not value.is_finite() for value in (high, low, minimum)):
+            raise ValueError("volume cluster configuration values must be finite")
+        if high < 0 or high > 100 or low < 0 or low > 100:
+            raise ValueError("volume cluster percentiles must be between 0 and 100")
+        if low > high:
+            raise ValueError(
+                "low volume percentile cannot exceed high volume percentile"
+            )
+        if minimum < 0:
+            raise ValueError("minimum volume cannot be negative")
+        object.__setattr__(self, "high_volume_percentile", high)
+        object.__setattr__(self, "low_volume_percentile", low)
+        object.__setattr__(self, "minimum_volume", minimum)
+
+
+@dataclass(frozen=True, slots=True)
+class VolumeCluster:
+    """Deterministic volume classification for one footprint matrix cell."""
+
+    cell_id: str
+    row: int
+    column: int
+    total_volume: Decimal
+    cluster_type: VolumeClusterType
+    percentile: Decimal
+    confidence: float
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.cell_id.strip():
+            raise ValueError("volume cluster cell id is required")
+        if self.row < 0 or self.column < 0:
+            raise ValueError("volume cluster position must be non-negative")
+        total = Decimal(str(self.total_volume))
+        percentile = Decimal(str(self.percentile))
+        if not total.is_finite() or total < 0:
+            raise ValueError(
+                "volume cluster total volume must be non-negative and finite"
+            )
+        if not percentile.is_finite() or percentile < 0 or percentile > 100:
+            raise ValueError("volume cluster percentile must be between 0 and 100")
+        _validate_confidence(self.confidence, "volume cluster confidence")
+        object.__setattr__(self, "total_volume", total)
+        object.__setattr__(self, "percentile", percentile)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class VolumeClusterStatistics:
+    """Aggregate counts and values for deterministic volume clusters."""
+
+    total_cells: int
+    high_volume_cells: int
+    low_volume_cells: int
+    normal_volume_cells: int
+    maximum_volume: Decimal
+    minimum_volume: Decimal
+    average_volume: Decimal
+
+    def __post_init__(self) -> None:
+        counts = (
+            self.total_cells,
+            self.high_volume_cells,
+            self.low_volume_cells,
+            self.normal_volume_cells,
+        )
+        if any(count < 0 for count in counts):
+            raise ValueError("volume cluster statistics cannot be negative")
+        if (
+            self.high_volume_cells + self.low_volume_cells + self.normal_volume_cells
+            != self.total_cells
+        ):
+            raise ValueError("volume cluster statistics must account for all cells")
+        maximum = Decimal(str(self.maximum_volume))
+        minimum = Decimal(str(self.minimum_volume))
+        average = Decimal(str(self.average_volume))
+        if any(not value.is_finite() for value in (maximum, minimum, average)):
+            raise ValueError("volume cluster statistics values must be finite")
+        if maximum < minimum:
+            raise ValueError("maximum volume must be greater than minimum volume")
+        object.__setattr__(self, "maximum_volume", maximum)
+        object.__setattr__(self, "minimum_volume", minimum)
+        object.__setattr__(self, "average_volume", average)
+
+
+@dataclass(frozen=True, slots=True)
+class VolumeClusterResult:
+    """Immutable result set for deterministic volume cluster analysis."""
+
+    matrix: "FootprintMatrix"
+    clusters: tuple[VolumeCluster, ...]
+    statistics_value: VolumeClusterStatistics
+    configuration: VolumeClusterConfiguration = field(
+        default_factory=VolumeClusterConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        ordered = tuple(
+            sorted(self.clusters, key=lambda c: (c.row, c.column, c.cell_id))
+        )
+        if self.clusters != ordered:
+            raise ValueError("volume clusters must be ordered")
+        if len({cluster.cell_id for cluster in self.clusters}) != len(self.clusters):
+            raise ValueError("duplicate volume clusters are not allowed")
+        matrix_cells = {
+            (cell.cell_id, cell.row_index, cell.column_index)
+            for cell in self.matrix.cells
+        }
+        cluster_cells = {
+            (cluster.cell_id, cluster.row, cluster.column) for cluster in self.clusters
+        }
+        if matrix_cells != cluster_cells:
+            raise ValueError("volume clusters must reference matrix cells")
+        if self.statistics_value.total_cells != len(self.clusters):
+            raise ValueError("volume cluster statistics must match clusters")
+        object.__setattr__(self, "clusters", ordered)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def high_volume_cells(self) -> tuple[VolumeCluster, ...]:
+        return tuple(
+            c for c in self.clusters if c.cluster_type == VolumeClusterType.HIGH_VOLUME
+        )
+
+    def low_volume_cells(self) -> tuple[VolumeCluster, ...]:
+        return tuple(
+            c for c in self.clusters if c.cluster_type == VolumeClusterType.LOW_VOLUME
+        )
+
+    def normal_volume_cells(self) -> tuple[VolumeCluster, ...]:
+        return tuple(
+            c
+            for c in self.clusters
+            if c.cluster_type == VolumeClusterType.NORMAL_VOLUME
+        )
+
+    def lookup(self, cell_id: str) -> VolumeCluster | None:
+        return next(
+            (cluster for cluster in self.clusters if cluster.cell_id == cell_id), None
+        )
+
+    def statistics(self) -> VolumeClusterStatistics:
+        return self.statistics_value
+
+
+@dataclass(frozen=True, slots=True)
+class VolumeClusterAnalyzer:
+    """Classify individual matrix cells by deterministic total-volume percentiles."""
+
+    configuration: VolumeClusterConfiguration = field(
+        default_factory=VolumeClusterConfiguration
+    )
+
+    def analyze(self, matrix: "FootprintMatrix") -> VolumeClusterResult:
+        volumes = tuple(self._total_volume(cell) for cell in matrix.cells)
+        sorted_volumes = tuple(sorted(volumes))
+        clusters = tuple(
+            self._cluster(cell, volume, sorted_volumes)
+            for cell, volume in zip(matrix.cells, volumes, strict=True)
+        )
+        stats = VolumeClusterStatistics(
+            len(clusters),
+            sum(c.cluster_type == VolumeClusterType.HIGH_VOLUME for c in clusters),
+            sum(c.cluster_type == VolumeClusterType.LOW_VOLUME for c in clusters),
+            sum(c.cluster_type == VolumeClusterType.NORMAL_VOLUME for c in clusters),
+            max(volumes, default=Decimal("0")),
+            min(volumes, default=Decimal("0")),
+            (
+                Decimal("0")
+                if not volumes
+                else sum(volumes, Decimal("0")) / Decimal(len(volumes))
+            ),
+        )
+        return VolumeClusterResult(
+            matrix,
+            clusters,
+            stats,
+            self.configuration,
+            {"detector": "VolumeClusterAnalyzer"},
+        )
+
+    @staticmethod
+    def _total_volume(cell: "MatrixCell") -> Decimal:
+        total = cell.interpretation.total_volume()
+        if total is not None:
+            return Decimal(str(total.numeric_value.value))
+        bid = cell.interpretation.bid()
+        ask = cell.interpretation.ask()
+        bid_value = (
+            Decimal("0") if bid is None else Decimal(str(bid.numeric_value.value))
+        )
+        ask_value = (
+            Decimal("0") if ask is None else Decimal(str(ask.numeric_value.value))
+        )
+        return bid_value + ask_value
+
+    def _cluster(
+        self, cell: "MatrixCell", volume: Decimal, sorted_volumes: tuple[Decimal, ...]
+    ) -> VolumeCluster:
+        percentile = self._percentile(volume, sorted_volumes)
+        if volume < self.configuration.minimum_volume:
+            cluster_type = VolumeClusterType.NORMAL_VOLUME
+        elif percentile >= self.configuration.high_volume_percentile:
+            cluster_type = VolumeClusterType.HIGH_VOLUME
+        elif percentile <= self.configuration.low_volume_percentile:
+            cluster_type = VolumeClusterType.LOW_VOLUME
+        else:
+            cluster_type = VolumeClusterType.NORMAL_VOLUME
+        return VolumeCluster(
+            cell.cell_id,
+            cell.row_index,
+            cell.column_index,
+            volume,
+            cluster_type,
+            percentile,
+            1.0,
+            {"source": "footprint_matrix"},
+        )
+
+    @staticmethod
+    def _percentile(volume: Decimal, sorted_volumes: tuple[Decimal, ...]) -> Decimal:
+        if len(sorted_volumes) <= 1:
+            return Decimal("100")
+        less = sum(candidate < volume for candidate in sorted_volumes)
+        return (Decimal(less) / Decimal(len(sorted_volumes) - 1)) * Decimal("100")
+
+
+@dataclass(frozen=True, slots=True)
 class DeltaConfiguration:
     """Immutable settings for deterministic footprint delta analysis."""
 
@@ -3821,6 +4105,11 @@ class SequentialObjectDetectionPipeline:
             if footprint_matrix is not None and absorption is not None
             else None
         )
+        volume_clusters = (
+            VolumeClusterAnalyzer().analyze(footprint_matrix)
+            if footprint_matrix is not None and footprint_delta is not None
+            else None
+        )
         return DetectionGraph(
             frame_id=graph.frame_id,
             objects=graph.objects,
@@ -3834,6 +4123,7 @@ class SequentialObjectDetectionPipeline:
             stacked_imbalances=stacked_imbalances,
             absorption=absorption,
             footprint_delta=footprint_delta,
+            volume_clusters=volume_clusters,
         )
 
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.15 - Milestone 21
+
+- Added deterministic Volume Cluster Analysis with immutable cluster type/configuration/cluster/result/statistics models, `VolumeClusterAnalyzer`, `DetectionGraph` helpers, and pipeline integration immediately after `FootprintDeltaAnalyzer`. Milestone 21 classifies individual cell volume only and explicitly excludes Point of Control, HVN/LVN, market profile, auction logic, market bias, trading logic, and trading signals. Milestone 22 introduces POC.
+
 ## 0.1.13 - Milestone 19
 
 - Added deterministic Absorption Detection with immutable absorption type/side/configuration/detection/result/statistics models, graph and pipeline integration, lookup/statistics helpers, and tests confirming threshold behavior, validation, immutability, and deterministic no-op pipeline behavior when source footprint values do not qualify. Milestone 19 adds no AI, ML, OCR changes, OpenCV additions, networking, async processing, threading, vendor-specific logic, trading signals, entries, exits, or recommendations.
