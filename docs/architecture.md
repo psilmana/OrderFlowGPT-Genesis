@@ -255,3 +255,18 @@ Milestone 21 adds `VolumeClusterAnalyzer`, an immutable deterministic analytics 
 `VolumeClusterResult` stores immutable `VolumeCluster` entries, `VolumeClusterStatistics`, configuration, metadata, matrix references, deterministic ordering, and duplicate-reference validation. `DetectionGraph` exposes `volume_clusters`, `high_volume_cells()`, `low_volume_cells()`, `normal_volume_cells()`, `lookup_volume_cluster(cell_id)`, and `volume_cluster_statistics()` without replacing earlier APIs. Milestone 21 classifies individual cell volume only: no Point of Control, no HVN/LVN zones, no market profile, no auction logic, no market bias, and no trading logic or trading signals. Milestone 22 introduces Point of Control (POC).
 
 Milestone 21 does not add Point of Control, HVN/LVN, market profile, auction logic, market prediction, market bias, trading signals, AI, ML, OCR changes, OpenCV additions, threading, async execution, networking, globals, randomness, or vendor-specific logic. Milestone 22 introduces Point of Control (POC).
+
+## Market Profile Core (Bundle 1)
+
+Bundle 1 adds the immutable Genesis Market Profile Core. The implementation is deterministic and consumes only existing model outputs such as `FootprintMatrix`, `VolumeClusterResult`, and `FootprintDelta`; it does not inspect images, alter OCR/OpenCV behavior, perform networking, or introduce AI/ML logic.
+
+The sequential object detection pipeline now enriches a completed footprint matrix in this order: footprint imbalance detection, stacked imbalance detection, absorption detection, footprint delta analysis, volume cluster analysis, point of control analysis, high volume node analysis, low volume node analysis, and value area analysis.
+
+The detection graph exposes lookup helpers and statistics for:
+
+- Session Point of Control (POC)
+- High Volume Nodes (HVN)
+- Low Volume Nodes (LVN)
+- Value Area (VAH / VAL)
+
+Out of scope for Bundle 1: developing POC, developing value area, composite profiles, Auction Theory, market prediction, and trading signals. Bundle 2 begins Auction Market Theory.

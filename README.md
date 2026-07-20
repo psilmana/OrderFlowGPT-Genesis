@@ -146,3 +146,25 @@ Milestone 20 adds deterministic Delta Analysis over the immutable `FootprintMatr
 Milestone 21 adds deterministic Volume Cluster Analysis over the immutable `FootprintMatrix`. It classifies individual cell volume only as `HIGH_VOLUME`, `LOW_VOLUME`, or `NORMAL_VOLUME` using deterministic percentile thresholds and a minimum-volume guard. It does not implement Point of Control, HVN/LVN, market profile, auction logic, market bias, trading logic, or trading signals. Milestone 22 introduces Point of Control (POC).
 
 Delta Analysis intentionally computes delta values only. It does not perform divergence detection, trend analysis, market prediction, market bias, or trading signals.
+
+### Genesis Market Profile Core (Bundle 1)
+
+Genesis now includes the immutable Market Profile Core foundation. The core operates only on existing immutable footprint models, including `FootprintMatrix`, `VolumeClusterResult`, and footprint delta outputs; it does not inspect images, run OCR, parse strings, use networking, or introduce AI/ML behavior.
+
+Supported deterministic analyses:
+
+- Session Point of Control (POC): the matrix row with the highest traded volume, with deterministic lowest-row tie-breaking.
+- High Volume Nodes (HVN): one-row nodes selected by configurable percentile thresholds; nearby nodes are not merged and zones are not created.
+- Low Volume Nodes (LVN): one-row nodes selected by configurable percentile thresholds; zones are not created.
+- Value Area (VAH / VAL): default 70% value area calculated from the POC by expanding to the larger adjacent row volume deterministically.
+
+Still not implemented:
+
+- Developing POC
+- Developing Value Area
+- Composite Profile
+- Auction Theory
+- Market prediction
+- Trading signals
+
+Bundle 2 begins Auction Market Theory on top of this immutable Market Profile Core.
