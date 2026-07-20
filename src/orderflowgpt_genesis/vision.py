@@ -50,6 +50,22 @@ class StackedImbalanceType(Enum):
     NONE = "NONE"
 
 
+class AbsorptionType(Enum):
+    """Supported deterministic footprint absorption classifications."""
+
+    BUY_ABSORPTION = "BUY_ABSORPTION"
+    SELL_ABSORPTION = "SELL_ABSORPTION"
+    NONE = "NONE"
+
+
+class AbsorptionSide(Enum):
+    """Passive side inferred for deterministic absorption observations."""
+
+    BID = "BID"
+    ASK = "ASK"
+    NONE = "NONE"
+
+
 class ImbalanceSide(Enum):
     """Dominant side for a detected single-cell imbalance."""
 
@@ -378,6 +394,7 @@ class DetectionGraph:
     footprint_matrix: "FootprintMatrix | None" = None
     footprint_imbalances: "FootprintImbalanceResult | None" = None
     stacked_imbalances: "StackedImbalanceResult | None" = None
+    absorption: "AbsorptionResult | None" = None
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -484,6 +501,13 @@ class DetectionGraph:
                 raise ValueError("stacked imbalances must reference graph matrix")
             if self.stacked_imbalances.imbalances != self.footprint_imbalances:
                 raise ValueError("stacked imbalances must reference graph imbalances")
+        if self.absorption is not None:
+            if self.footprint_matrix is None or self.footprint_imbalances is None:
+                raise ValueError("absorption requires matrix and imbalances")
+            if self.absorption.matrix != self.footprint_matrix:
+                raise ValueError("absorption must reference graph matrix")
+            if self.absorption.imbalances != self.footprint_imbalances:
+                raise ValueError("absorption must reference graph imbalances")
 
     @property
     def footprint_cells(self) -> tuple[DetectedObject, ...]:
@@ -637,6 +661,36 @@ class DetectionGraph:
         if self.stacked_imbalances is None:
             return StackedImbalanceStatistics(0, 0, 0, 0, Decimal("0"), 0)
         return self.stacked_imbalances.statistics()
+
+    def absorptions(self) -> tuple["FootprintAbsorption", ...]:
+        if self.absorption is None:
+            return ()
+        return self.absorption.absorptions()
+
+    def buy_absorptions(self) -> tuple["FootprintAbsorption", ...]:
+        if self.absorption is None:
+            return ()
+        return self.absorption.buy_absorptions()
+
+    def sell_absorptions(self) -> tuple["FootprintAbsorption", ...]:
+        if self.absorption is None:
+            return ()
+        return self.absorption.sell_absorptions()
+
+    def lookup_absorption(self, cell_id: str) -> "FootprintAbsorption | None":
+        if self.absorption is None:
+            return None
+        return self.absorption.lookup(cell_id)
+
+    def absorption_statistics(self) -> "AbsorptionStatistics":
+        if self.absorption is None:
+            total = (
+                0
+                if self.footprint_matrix is None
+                else self.footprint_matrix.statistics().total_cells
+            )
+            return AbsorptionStatistics(total, 0, 0, 0, total)
+        return self.absorption.statistics()
 
 
 @dataclass(frozen=True, slots=True)
@@ -2456,6 +2510,227 @@ class StackedImbalanceDetector:
 
 
 @dataclass(frozen=True, slots=True)
+class AbsorptionConfiguration:
+    """Immutable settings for deterministic absorption detection."""
+
+    minimum_absorbed_volume: Decimal = Decimal("50")
+    minimum_pressure_ratio: Decimal = Decimal("3")
+
+    def __post_init__(self) -> None:
+        volume = Decimal(str(self.minimum_absorbed_volume))
+        ratio = Decimal(str(self.minimum_pressure_ratio))
+        if not volume.is_finite() or volume < 0:
+            raise ValueError("minimum absorbed volume must be non-negative and finite")
+        if not ratio.is_finite() or ratio <= 0:
+            raise ValueError("minimum pressure ratio must be positive and finite")
+        object.__setattr__(self, "minimum_absorbed_volume", volume)
+        object.__setattr__(self, "minimum_pressure_ratio", ratio)
+
+
+@dataclass(frozen=True, slots=True)
+class FootprintAbsorption:
+    """One deterministic absorption observation derived from footprint values."""
+
+    cell_id: str
+    position: MatrixPosition
+    absorption_type: AbsorptionType
+    passive_side: AbsorptionSide
+    absorbed_volume: Decimal
+    pressure_ratio: Decimal
+    source_imbalance: FootprintImbalance
+    confidence: float
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.cell_id.strip():
+            raise ValueError("absorption cell id is required")
+        if self.position.cell_id != self.cell_id:
+            raise ValueError("absorption position must reference cell id")
+        if self.source_imbalance.cell_id != self.cell_id:
+            raise ValueError("absorption source imbalance must reference cell id")
+        if self.absorption_type == AbsorptionType.NONE:
+            raise ValueError("detected absorption cannot have NONE type")
+        if (
+            self.absorption_type == AbsorptionType.BUY_ABSORPTION
+            and self.passive_side != AbsorptionSide.BID
+        ):
+            raise ValueError("buy absorption must use bid passive side")
+        if (
+            self.absorption_type == AbsorptionType.SELL_ABSORPTION
+            and self.passive_side != AbsorptionSide.ASK
+        ):
+            raise ValueError("sell absorption must use ask passive side")
+        volume = Decimal(str(self.absorbed_volume))
+        ratio = Decimal(str(self.pressure_ratio))
+        if not volume.is_finite() or volume < 0:
+            raise ValueError("absorbed volume must be non-negative and finite")
+        if not ratio.is_finite() or ratio <= 0:
+            raise ValueError("pressure ratio must be positive and finite")
+        _validate_confidence(self.confidence, "absorption confidence")
+        object.__setattr__(self, "absorbed_volume", volume)
+        object.__setattr__(self, "pressure_ratio", ratio)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class AbsorptionStatistics:
+    """Aggregate counts for deterministic absorption detections."""
+
+    total_cells: int
+    buy_absorptions: int
+    sell_absorptions: int
+    total_absorptions: int
+    cells_without_absorption: int
+
+    def __post_init__(self) -> None:
+        values = (
+            self.total_cells,
+            self.buy_absorptions,
+            self.sell_absorptions,
+            self.total_absorptions,
+            self.cells_without_absorption,
+        )
+        if any(value < 0 for value in values):
+            raise ValueError("absorption statistics cannot be negative")
+        if self.total_absorptions != self.buy_absorptions + self.sell_absorptions:
+            raise ValueError("total absorptions must equal buy plus sell absorptions")
+        if self.cells_without_absorption + self.total_absorptions != self.total_cells:
+            raise ValueError("absorption statistics must account for all cells")
+
+
+@dataclass(frozen=True, slots=True)
+class AbsorptionResult:
+    """Immutable result set for deterministic absorption detection."""
+
+    matrix: FootprintMatrix
+    imbalances: FootprintImbalanceResult
+    detections: tuple[FootprintAbsorption, ...]
+    configuration: AbsorptionConfiguration = field(
+        default_factory=AbsorptionConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.imbalances.matrix != self.matrix:
+            raise ValueError("absorption result imbalances must reference matrix")
+        ordered = tuple(
+            sorted(
+                self.detections,
+                key=lambda d: (
+                    d.position.row_index,
+                    d.position.column_index,
+                    d.absorption_type.value,
+                ),
+            )
+        )
+        if self.detections != ordered:
+            raise ValueError("absorption detections must be ordered")
+        ids = [d.cell_id for d in self.detections]
+        if len(set(ids)) != len(ids):
+            raise ValueError("duplicate absorption detections are not allowed")
+        matrix_ids = {cell.cell_id for cell in self.matrix.cells}
+        if set(ids) - matrix_ids:
+            raise ValueError("absorption detections must reference matrix cells")
+        object.__setattr__(self, "detections", ordered)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def absorptions(self) -> tuple[FootprintAbsorption, ...]:
+        return self.detections
+
+    def buy_absorptions(self) -> tuple[FootprintAbsorption, ...]:
+        return tuple(
+            d
+            for d in self.detections
+            if d.absorption_type == AbsorptionType.BUY_ABSORPTION
+        )
+
+    def sell_absorptions(self) -> tuple[FootprintAbsorption, ...]:
+        return tuple(
+            d
+            for d in self.detections
+            if d.absorption_type == AbsorptionType.SELL_ABSORPTION
+        )
+
+    def lookup(self, cell_id: str) -> FootprintAbsorption | None:
+        return next((d for d in self.detections if d.cell_id == cell_id), None)
+
+    def statistics(self) -> AbsorptionStatistics:
+        buy = len(self.buy_absorptions())
+        sell = len(self.sell_absorptions())
+        total = len(self.detections)
+        cells = self.matrix.statistics().total_cells
+        return AbsorptionStatistics(cells, buy, sell, total, cells - total)
+
+
+@dataclass(frozen=True, slots=True)
+class FootprintAbsorptionDetector:
+    """Detect deterministic absorption from matrix values and imbalance pressure."""
+
+    configuration: AbsorptionConfiguration = field(
+        default_factory=AbsorptionConfiguration
+    )
+
+    def detect(
+        self, matrix: FootprintMatrix, imbalances: FootprintImbalanceResult
+    ) -> AbsorptionResult:
+        if imbalances.matrix != matrix:
+            raise ValueError(
+                "absorption detector inputs must reference the same matrix"
+            )
+        found = []
+        for imbalance in imbalances.imbalances():
+            cell = matrix.cell(
+                imbalance.position.row_index, imbalance.position.column_index
+            )
+            detection = self._build(cell, imbalance)
+            if detection is not None:
+                found.append(detection)
+        return AbsorptionResult(
+            matrix,
+            imbalances,
+            tuple(found),
+            self.configuration,
+            {"detector": "FootprintAbsorptionDetector"},
+        )
+
+    @staticmethod
+    def _decimal(value: FootprintValue | None) -> Decimal | None:
+        if value is None:
+            return None
+        return Decimal(str(value.numeric_value.value))
+
+    def _build(
+        self, cell: MatrixCell, imbalance: FootprintImbalance
+    ) -> FootprintAbsorption | None:
+        if imbalance.ratio < self.configuration.minimum_pressure_ratio:
+            return None
+        if imbalance.imbalance_type == ImbalanceType.ASK_IMBALANCE:
+            passive = self._decimal(cell.interpretation.bid())
+            absorption_type = AbsorptionType.BUY_ABSORPTION
+            passive_side = AbsorptionSide.BID
+        else:
+            passive = self._decimal(cell.interpretation.ask())
+            absorption_type = AbsorptionType.SELL_ABSORPTION
+            passive_side = AbsorptionSide.ASK
+        if passive is None or passive < self.configuration.minimum_absorbed_volume:
+            return None
+        confidence = min(
+            1.0, float(imbalance.ratio / self.configuration.minimum_pressure_ratio)
+        )
+        return FootprintAbsorption(
+            cell.cell_id,
+            cell.position,
+            absorption_type,
+            passive_side,
+            passive,
+            imbalance.ratio,
+            imbalance,
+            confidence,
+            {"source": "footprint_imbalance"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
 class FootprintMatrix:
     """Canonical immutable two-dimensional footprint-cell representation."""
 
@@ -3188,6 +3463,11 @@ class SequentialObjectDetectionPipeline:
             if footprint_matrix is not None and footprint_imbalances is not None
             else None
         )
+        absorption = (
+            FootprintAbsorptionDetector().detect(footprint_matrix, footprint_imbalances)
+            if footprint_matrix is not None and footprint_imbalances is not None
+            else None
+        )
         return DetectionGraph(
             frame_id=graph.frame_id,
             objects=graph.objects,
@@ -3199,6 +3479,7 @@ class SequentialObjectDetectionPipeline:
             footprint_matrix=footprint_matrix,
             footprint_imbalances=footprint_imbalances,
             stacked_imbalances=stacked_imbalances,
+            absorption=absorption,
         )
 
 
