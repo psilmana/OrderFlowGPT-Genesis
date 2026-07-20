@@ -58,6 +58,14 @@ class AbsorptionType(Enum):
     NONE = "NONE"
 
 
+class DeltaType(Enum):
+    """Deterministic sign classification for footprint delta values."""
+
+    POSITIVE = "POSITIVE"
+    NEGATIVE = "NEGATIVE"
+    ZERO = "ZERO"
+
+
 class AbsorptionSide(Enum):
     """Passive side inferred for deterministic absorption observations."""
 
@@ -395,6 +403,7 @@ class DetectionGraph:
     footprint_imbalances: "FootprintImbalanceResult | None" = None
     stacked_imbalances: "StackedImbalanceResult | None" = None
     absorption: "AbsorptionResult | None" = None
+    footprint_delta: "DeltaResult | None" = None
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -508,6 +517,11 @@ class DetectionGraph:
                 raise ValueError("absorption must reference graph matrix")
             if self.absorption.imbalances != self.footprint_imbalances:
                 raise ValueError("absorption must reference graph imbalances")
+        if self.footprint_delta is not None:
+            if self.footprint_matrix is None:
+                raise ValueError("footprint delta requires footprint matrix")
+            if self.footprint_delta.matrix != self.footprint_matrix:
+                raise ValueError("footprint delta must reference graph matrix")
 
     @property
     def footprint_cells(self) -> tuple[DetectedObject, ...]:
@@ -691,6 +705,48 @@ class DetectionGraph:
             )
             return AbsorptionStatistics(total, 0, 0, 0, total)
         return self.absorption.statistics()
+
+    def cell_delta(self, cell_id: str) -> "CellDelta | None":
+        if self.footprint_delta is None:
+            return None
+        return self.footprint_delta.cell_delta(cell_id)
+
+    def row_delta(self, row_index: int) -> "RowDelta | None":
+        if self.footprint_delta is None:
+            return None
+        return self.footprint_delta.row_delta(row_index)
+
+    def positive_cells(self) -> tuple["CellDelta", ...]:
+        if self.footprint_delta is None:
+            return ()
+        return self.footprint_delta.positive_cells()
+
+    def negative_cells(self) -> tuple["CellDelta", ...]:
+        if self.footprint_delta is None:
+            return ()
+        return self.footprint_delta.negative_cells()
+
+    def zero_cells(self) -> tuple["CellDelta", ...]:
+        if self.footprint_delta is None:
+            return ()
+        return self.footprint_delta.zero_cells()
+
+    def delta_statistics(self) -> "DeltaStatistics":
+        if self.footprint_delta is None:
+            if self.footprint_matrix is None:
+                raise ValueError("footprint delta is not available")
+            cells = self.footprint_matrix.statistics().total_cells
+            return DeltaStatistics(
+                self.footprint_matrix.dimensions_value.rows,
+                cells,
+                0,
+                0,
+                cells,
+                Decimal("0"),
+                Decimal("0"),
+                Decimal("0"),
+            )
+        return self.footprint_delta.statistics()
 
 
 @dataclass(frozen=True, slots=True)
@@ -2731,6 +2787,298 @@ class FootprintAbsorptionDetector:
 
 
 @dataclass(frozen=True, slots=True)
+class DeltaConfiguration:
+    """Immutable settings for deterministic footprint delta analysis."""
+
+    include_empty_cells: bool = True
+
+
+@dataclass(frozen=True, slots=True)
+class CellDelta:
+    """Deterministic bid/ask delta for one footprint matrix cell."""
+
+    cell_id: str
+    row: int
+    column: int
+    bid: Decimal
+    ask: Decimal
+    delta: Decimal
+    absolute_delta: Decimal
+    confidence: float
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.cell_id.strip():
+            raise ValueError("delta cell id is required")
+        if self.row < 0 or self.column < 0:
+            raise ValueError("delta cell position must be non-negative")
+        bid = Decimal(str(self.bid))
+        ask = Decimal(str(self.ask))
+        delta = Decimal(str(self.delta))
+        absolute = Decimal(str(self.absolute_delta))
+        if not bid.is_finite() or bid < 0:
+            raise ValueError("delta bid must be non-negative and finite")
+        if not ask.is_finite() or ask < 0:
+            raise ValueError("delta ask must be non-negative and finite")
+        if not delta.is_finite() or not absolute.is_finite():
+            raise ValueError("delta values must be finite")
+        if delta != ask - bid:
+            raise ValueError("cell delta must equal ask minus bid")
+        if absolute != abs(delta):
+            raise ValueError("absolute cell delta must equal abs(delta)")
+        _validate_confidence(self.confidence, "delta confidence")
+        object.__setattr__(self, "bid", bid)
+        object.__setattr__(self, "ask", ask)
+        object.__setattr__(self, "delta", delta)
+        object.__setattr__(self, "absolute_delta", absolute)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    @property
+    def delta_type(self) -> DeltaType:
+        if self.delta > 0:
+            return DeltaType.POSITIVE
+        if self.delta < 0:
+            return DeltaType.NEGATIVE
+        return DeltaType.ZERO
+
+
+@dataclass(frozen=True, slots=True)
+class RowDelta:
+    """Aggregate deterministic delta for one matrix row."""
+
+    row_index: int
+    total_bid: Decimal
+    total_ask: Decimal
+    row_delta: Decimal
+    absolute_delta: Decimal
+    cell_count: int
+
+    def __post_init__(self) -> None:
+        if self.row_index < 0 or self.cell_count <= 0:
+            raise ValueError("row delta indexes and counts must be valid")
+        bid = Decimal(str(self.total_bid))
+        ask = Decimal(str(self.total_ask))
+        delta = Decimal(str(self.row_delta))
+        absolute = Decimal(str(self.absolute_delta))
+        if any(not value.is_finite() for value in (bid, ask, delta, absolute)):
+            raise ValueError("row delta values must be finite")
+        if bid < 0 or ask < 0:
+            raise ValueError("row delta volumes must be non-negative")
+        if delta != ask - bid or absolute != abs(delta):
+            raise ValueError("row delta aggregates are inconsistent")
+        object.__setattr__(self, "total_bid", bid)
+        object.__setattr__(self, "total_ask", ask)
+        object.__setattr__(self, "row_delta", delta)
+        object.__setattr__(self, "absolute_delta", absolute)
+
+
+@dataclass(frozen=True, slots=True)
+class FootprintDelta:
+    """Aggregate deterministic delta for the entire footprint matrix."""
+
+    total_bid: Decimal
+    total_ask: Decimal
+    net_delta: Decimal
+    absolute_delta: Decimal
+    maximum_positive_delta: Decimal
+    maximum_negative_delta: Decimal
+    average_cell_delta: Decimal
+
+    def __post_init__(self) -> None:
+        values = tuple(
+            Decimal(str(v))
+            for v in (
+                self.total_bid,
+                self.total_ask,
+                self.net_delta,
+                self.absolute_delta,
+                self.maximum_positive_delta,
+                self.maximum_negative_delta,
+                self.average_cell_delta,
+            )
+        )
+        if any(not value.is_finite() for value in values):
+            raise ValueError("footprint delta values must be finite")
+        bid, ask, net, absolute, max_pos, max_neg, average = values
+        if bid < 0 or ask < 0:
+            raise ValueError("footprint delta volumes must be non-negative")
+        if net != ask - bid or absolute != abs(net):
+            raise ValueError("footprint delta aggregates are inconsistent")
+        if max_pos < 0 or max_neg > 0:
+            raise ValueError("maximum deltas have invalid signs")
+        for name, value in zip(self.__slots__, values, strict=True):
+            object.__setattr__(self, name, value)
+
+
+@dataclass(frozen=True, slots=True)
+class DeltaStatistics:
+    """Aggregate counts and basic values for deterministic delta analysis."""
+
+    rows: int
+    cells: int
+    positive_cells: int
+    negative_cells: int
+    zero_cells: int
+    maximum_delta: Decimal
+    minimum_delta: Decimal
+    average_delta: Decimal
+
+    def __post_init__(self) -> None:
+        if any(
+            v < 0
+            for v in (
+                self.rows,
+                self.cells,
+                self.positive_cells,
+                self.negative_cells,
+                self.zero_cells,
+            )
+        ):
+            raise ValueError("delta statistics counts cannot be negative")
+        if self.positive_cells + self.negative_cells + self.zero_cells != self.cells:
+            raise ValueError("delta statistics must account for all cells")
+        maximum = Decimal(str(self.maximum_delta))
+        minimum = Decimal(str(self.minimum_delta))
+        average = Decimal(str(self.average_delta))
+        if any(not value.is_finite() for value in (maximum, minimum, average)):
+            raise ValueError("delta statistics values must be finite")
+        if maximum < minimum:
+            raise ValueError("maximum delta must be greater than minimum delta")
+        object.__setattr__(self, "maximum_delta", maximum)
+        object.__setattr__(self, "minimum_delta", minimum)
+        object.__setattr__(self, "average_delta", average)
+
+
+@dataclass(frozen=True, slots=True)
+class DeltaResult:
+    """Immutable result set for deterministic footprint delta analysis."""
+
+    matrix: "FootprintMatrix"
+    cells: tuple[CellDelta, ...]
+    rows: tuple[RowDelta, ...]
+    footprint: FootprintDelta
+    statistics_value: DeltaStatistics
+    configuration: DeltaConfiguration = field(default_factory=DeltaConfiguration)
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        ordered_cells = tuple(
+            sorted(self.cells, key=lambda c: (c.row, c.column, c.cell_id))
+        )
+        if self.cells != ordered_cells:
+            raise ValueError("delta cells must be ordered")
+        ordered_rows = tuple(sorted(self.rows, key=lambda r: r.row_index))
+        if self.rows != ordered_rows:
+            raise ValueError("delta rows must be ordered")
+        if len({c.cell_id for c in self.cells}) != len(self.cells):
+            raise ValueError("duplicate delta cells are not allowed")
+        if len({r.row_index for r in self.rows}) != len(self.rows):
+            raise ValueError("duplicate delta rows are not allowed")
+        matrix_ids = {cell.cell_id for cell in self.matrix.cells}
+        if {cell.cell_id for cell in self.cells} != matrix_ids:
+            raise ValueError("delta cells must reference matrix cells")
+        if tuple(r.row_index for r in self.rows) != tuple(
+            range(self.matrix.dimensions_value.rows)
+        ):
+            raise ValueError("delta rows must reference matrix rows")
+        object.__setattr__(self, "cells", ordered_cells)
+        object.__setattr__(self, "rows", ordered_rows)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def cell_delta(self, cell_id: str) -> CellDelta | None:
+        return next((cell for cell in self.cells if cell.cell_id == cell_id), None)
+
+    def row_delta(self, row_index: int) -> RowDelta | None:
+        return next((row for row in self.rows if row.row_index == row_index), None)
+
+    def positive_cells(self) -> tuple[CellDelta, ...]:
+        return tuple(cell for cell in self.cells if cell.delta > 0)
+
+    def negative_cells(self) -> tuple[CellDelta, ...]:
+        return tuple(cell for cell in self.cells if cell.delta < 0)
+
+    def zero_cells(self) -> tuple[CellDelta, ...]:
+        return tuple(cell for cell in self.cells if cell.delta == 0)
+
+    def statistics(self) -> DeltaStatistics:
+        return self.statistics_value
+
+
+@dataclass(frozen=True, slots=True)
+class FootprintDeltaAnalyzer:
+    """Compute deterministic delta values from an immutable footprint matrix."""
+
+    configuration: DeltaConfiguration = field(default_factory=DeltaConfiguration)
+
+    def analyze(self, matrix: "FootprintMatrix") -> DeltaResult:
+        cells = tuple(self._cell_delta(cell) for cell in matrix.cells)
+        rows = tuple(self._row_delta(row, cells) for row in matrix.rows)
+        total_bid = sum((cell.bid for cell in cells), Decimal("0"))
+        total_ask = sum((cell.ask for cell in cells), Decimal("0"))
+        deltas = tuple(cell.delta for cell in cells)
+        net = total_ask - total_bid
+        count = Decimal(len(cells))
+        footprint = FootprintDelta(
+            total_bid,
+            total_ask,
+            net,
+            abs(net),
+            max((d for d in deltas if d > 0), default=Decimal("0")),
+            min((d for d in deltas if d < 0), default=Decimal("0")),
+            Decimal("0") if not cells else net / count,
+        )
+        stats = DeltaStatistics(
+            matrix.dimensions_value.rows,
+            len(cells),
+            sum(d > 0 for d in deltas),
+            sum(d < 0 for d in deltas),
+            sum(d == 0 for d in deltas),
+            max(deltas, default=Decimal("0")),
+            min(deltas, default=Decimal("0")),
+            Decimal("0") if not cells else net / count,
+        )
+        return DeltaResult(
+            matrix,
+            cells,
+            rows,
+            footprint,
+            stats,
+            self.configuration,
+            {"detector": "FootprintDeltaAnalyzer"},
+        )
+
+    @staticmethod
+    def _decimal(value: FootprintValue | None) -> Decimal:
+        if value is None:
+            return Decimal("0")
+        return Decimal(str(value.numeric_value.value))
+
+    def _cell_delta(self, cell: "MatrixCell") -> CellDelta:
+        bid = self._decimal(cell.interpretation.bid())
+        ask = self._decimal(cell.interpretation.ask())
+        delta = ask - bid
+        return CellDelta(
+            cell.cell_id,
+            cell.row_index,
+            cell.column_index,
+            bid,
+            ask,
+            delta,
+            abs(delta),
+            1.0,
+            {"source": "footprint_matrix"},
+        )
+
+    @staticmethod
+    def _row_delta(row: "MatrixRow", cells: Sequence[CellDelta]) -> RowDelta:
+        row_cells = tuple(cell for cell in cells if cell.row == row.index)
+        bid = sum((cell.bid for cell in row_cells), Decimal("0"))
+        ask = sum((cell.ask for cell in row_cells), Decimal("0"))
+        delta = ask - bid
+        return RowDelta(row.index, bid, ask, delta, abs(delta), len(row_cells))
+
+
+@dataclass(frozen=True, slots=True)
 class FootprintMatrix:
     """Canonical immutable two-dimensional footprint-cell representation."""
 
@@ -3468,6 +3816,11 @@ class SequentialObjectDetectionPipeline:
             if footprint_matrix is not None and footprint_imbalances is not None
             else None
         )
+        footprint_delta = (
+            FootprintDeltaAnalyzer().analyze(footprint_matrix)
+            if footprint_matrix is not None and absorption is not None
+            else None
+        )
         return DetectionGraph(
             frame_id=graph.frame_id,
             objects=graph.objects,
@@ -3480,6 +3833,7 @@ class SequentialObjectDetectionPipeline:
             footprint_imbalances=footprint_imbalances,
             stacked_imbalances=stacked_imbalances,
             absorption=absorption,
+            footprint_delta=footprint_delta,
         )
 
 
