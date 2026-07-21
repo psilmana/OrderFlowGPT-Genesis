@@ -157,6 +157,800 @@ class CellSemanticRole(Enum):
     EMPTY = "EMPTY"
 
 
+class SwingType(Enum):
+    HIGHER_SWING_HIGH = "HIGHER_SWING_HIGH"
+    LOWER_SWING_HIGH = "LOWER_SWING_HIGH"
+    HIGHER_SWING_LOW = "HIGHER_SWING_LOW"
+    LOWER_SWING_LOW = "LOWER_SWING_LOW"
+    EQUAL_HIGH = "EQUAL_HIGH"
+    EQUAL_LOW = "EQUAL_LOW"
+
+
+class SupportResistanceType(Enum):
+    SUPPORT = "SUPPORT"
+    RESISTANCE = "RESISTANCE"
+    BROKEN_SUPPORT = "BROKEN_SUPPORT"
+    BROKEN_RESISTANCE = "BROKEN_RESISTANCE"
+
+
+class ZoneType(Enum):
+    SUPPLY = "SUPPLY"
+    DEMAND = "DEMAND"
+    BROKEN_SUPPLY = "BROKEN_SUPPLY"
+    BROKEN_DEMAND = "BROKEN_DEMAND"
+
+
+class MarketStructureType(Enum):
+    HIGHER_HIGH = "HIGHER_HIGH"
+    HIGHER_LOW = "HIGHER_LOW"
+    LOWER_HIGH = "LOWER_HIGH"
+    LOWER_LOW = "LOWER_LOW"
+    BULLISH_STRUCTURE = "BULLISH_STRUCTURE"
+    BEARISH_STRUCTURE = "BEARISH_STRUCTURE"
+    NEUTRAL_STRUCTURE = "NEUTRAL_STRUCTURE"
+
+
+def _cell_decimal(cell: "MatrixCell") -> Decimal:
+    value = (
+        cell.interpretation.total_volume()
+        or cell.interpretation.ask()
+        or cell.interpretation.bid()
+        or cell.interpretation.delta()
+    )
+    if value is None:
+        return Decimal("0")
+    return Decimal(str(value.numeric_value.value))
+
+
+def _row_metric(matrix: "FootprintMatrix", row_index: int) -> Decimal:
+    return sum(
+        (_cell_decimal(cell) for cell in matrix.row(row_index).cells), Decimal("0")
+    )
+
+
+def _validate_decimal_confidence(value: Decimal) -> None:
+    if value < Decimal("0") or value > Decimal("1"):
+        raise ValueError("confidence must be between 0 and 1")
+
+
+@dataclass(frozen=True, slots=True)
+class SwingConfiguration:
+    lookback: int = 1
+    equality_tolerance: Decimal = Decimal("0")
+    minimum_confidence: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        if self.lookback <= 0:
+            raise ValueError("lookback must be positive")
+        if self.equality_tolerance < 0:
+            raise ValueError("equality tolerance cannot be negative")
+        _validate_decimal_confidence(self.minimum_confidence)
+
+
+@dataclass(frozen=True, slots=True)
+class SwingPoint:
+    swing_id: str
+    swing_type: SwingType
+    cell_id: str
+    position: MatrixPosition
+    value: Decimal
+    confidence: Decimal = Decimal("1")
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.swing_id.strip() or not self.cell_id.strip():
+            raise ValueError("swing identifiers are required")
+        if self.position.cell_id != self.cell_id:
+            raise ValueError("swing position must reference cell")
+        _validate_decimal_confidence(self.confidence)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class SwingStatistics:
+    total_swings: int
+    swing_highs: int
+    swing_lows: int
+    equal_highs: int
+    equal_lows: int
+
+
+@dataclass(frozen=True, slots=True)
+class SwingResult:
+    matrix: "FootprintMatrix"
+    swings: tuple[SwingPoint, ...]
+    configuration: SwingConfiguration = field(default_factory=SwingConfiguration)
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        ordered = tuple(
+            sorted(
+                self.swings,
+                key=lambda s: (
+                    s.position.column_index,
+                    s.position.row_index,
+                    s.swing_type.value,
+                ),
+            )
+        )
+        if self.swings != ordered:
+            raise ValueError("swings must be ordered")
+        ids = [s.swing_id for s in self.swings]
+        if len(set(ids)) != len(ids):
+            raise ValueError("duplicate swings are not allowed")
+        matrix_ids = {c.cell_id for c in self.matrix.cells}
+        if {s.cell_id for s in self.swings} - matrix_ids:
+            raise ValueError("swings must reference matrix cells")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, swing_id: str) -> SwingPoint | None:
+        return next((s for s in self.swings if s.swing_id == swing_id), None)
+
+    def statistics(self) -> SwingStatistics:
+        highs = tuple(s for s in self.swings if "HIGH" in s.swing_type.value)
+        lows = tuple(s for s in self.swings if "LOW" in s.swing_type.value)
+        return SwingStatistics(
+            len(self.swings),
+            len(highs),
+            len(lows),
+            len([s for s in self.swings if s.swing_type == SwingType.EQUAL_HIGH]),
+            len([s for s in self.swings if s.swing_type == SwingType.EQUAL_LOW]),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class SwingDetector:
+    configuration: SwingConfiguration = field(default_factory=SwingConfiguration)
+
+    def detect(self, matrix: "FootprintMatrix") -> SwingResult:
+        swings: list[SwingPoint] = []
+        previous_high: Decimal | None = None
+        previous_low: Decimal | None = None
+        for column in range(matrix.dimensions_value.columns):
+            cells = matrix.column(column)
+            if not cells:
+                continue
+            metrics = tuple((cell, _cell_decimal(cell)) for cell in cells)
+            high_cell, high_value = max(
+                metrics, key=lambda item: (item[1], -item[0].row_index)
+            )
+            low_cell, low_value = min(
+                metrics, key=lambda item: (item[1], item[0].row_index)
+            )
+            high_type = (
+                SwingType.HIGHER_SWING_HIGH
+                if previous_high is None
+                or high_value > previous_high + self.configuration.equality_tolerance
+                else (
+                    SwingType.EQUAL_HIGH
+                    if abs(high_value - previous_high)
+                    <= self.configuration.equality_tolerance
+                    else SwingType.LOWER_SWING_HIGH
+                )
+            )
+            low_type = (
+                SwingType.LOWER_SWING_LOW
+                if previous_low is None
+                or low_value < previous_low - self.configuration.equality_tolerance
+                else (
+                    SwingType.EQUAL_LOW
+                    if abs(low_value - previous_low)
+                    <= self.configuration.equality_tolerance
+                    else SwingType.HIGHER_SWING_LOW
+                )
+            )
+            for prefix, cell, value, swing_type in (
+                ("H", high_cell, high_value, high_type),
+                ("L", low_cell, low_value, low_type),
+            ):
+                swings.append(
+                    SwingPoint(
+                        f"{matrix.grid_id}:swing:{prefix}:{column}",
+                        swing_type,
+                        cell.cell_id,
+                        cell.position,
+                        value,
+                        Decimal("1"),
+                        {"column_index": column},
+                    )
+                )
+            previous_high, previous_low = high_value, low_value
+        return SwingResult(
+            matrix,
+            tuple(
+                sorted(
+                    swings,
+                    key=lambda s: (
+                        s.position.column_index,
+                        s.position.row_index,
+                        s.swing_type.value,
+                    ),
+                )
+            ),
+            self.configuration,
+            {"detector": "SwingDetector"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class SupportResistanceConfiguration:
+    minimum_touches: int = 1
+    break_tolerance: Decimal = Decimal("0")
+    minimum_confidence: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        if self.minimum_touches <= 0:
+            raise ValueError("minimum touches must be positive")
+        if self.break_tolerance < 0:
+            raise ValueError("break tolerance cannot be negative")
+        _validate_decimal_confidence(self.minimum_confidence)
+
+
+@dataclass(frozen=True, slots=True)
+class SupportResistanceLevel:
+    level_id: str
+    level_type: SupportResistanceType
+    cell_id: str
+    position: MatrixPosition
+    value: Decimal
+    touches: int = 1
+    confidence: Decimal = Decimal("1")
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.level_id.strip() or not self.cell_id.strip():
+            raise ValueError("level identifiers are required")
+        if self.position.cell_id != self.cell_id:
+            raise ValueError("level position must reference cell")
+        if self.touches <= 0:
+            raise ValueError("touches must be positive")
+        _validate_decimal_confidence(self.confidence)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class SupportResistanceStatistics:
+    total_levels: int
+    supports: int
+    resistances: int
+    broken_supports: int
+    broken_resistances: int
+
+
+@dataclass(frozen=True, slots=True)
+class SupportResistanceResult:
+    matrix: "FootprintMatrix"
+    levels: tuple[SupportResistanceLevel, ...]
+    swing_result: SwingResult
+    configuration: SupportResistanceConfiguration = field(
+        default_factory=SupportResistanceConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        ordered = tuple(
+            sorted(
+                self.levels,
+                key=lambda level: (
+                    level.position.column_index,
+                    level.position.row_index,
+                    level.level_type.value,
+                ),
+            )
+        )
+        if self.levels != ordered:
+            raise ValueError("support resistance levels must be ordered")
+        ids = [level.level_id for level in self.levels]
+        if len(set(ids)) != len(ids):
+            raise ValueError("duplicate support resistance levels are not allowed")
+        if self.swing_result.matrix != self.matrix:
+            raise ValueError("support resistance must reference swing matrix")
+        if {level.cell_id for level in self.levels} - {
+            c.cell_id for c in self.matrix.cells
+        }:
+            raise ValueError("support resistance levels must reference matrix cells")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, level_id: str) -> SupportResistanceLevel | None:
+        return next(
+            (level for level in self.levels if level.level_id == level_id), None
+        )
+
+    def statistics(self) -> SupportResistanceStatistics:
+        return SupportResistanceStatistics(
+            len(self.levels),
+            len(
+                [
+                    level
+                    for level in self.levels
+                    if level.level_type == SupportResistanceType.SUPPORT
+                ]
+            ),
+            len(
+                [
+                    level
+                    for level in self.levels
+                    if level.level_type == SupportResistanceType.RESISTANCE
+                ]
+            ),
+            len(
+                [
+                    level
+                    for level in self.levels
+                    if level.level_type == SupportResistanceType.BROKEN_SUPPORT
+                ]
+            ),
+            len(
+                [
+                    level
+                    for level in self.levels
+                    if level.level_type == SupportResistanceType.BROKEN_RESISTANCE
+                ]
+            ),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class SupportResistanceDetector:
+    configuration: SupportResistanceConfiguration = field(
+        default_factory=SupportResistanceConfiguration
+    )
+
+    def detect(
+        self, matrix: "FootprintMatrix", swing_result: SwingResult | None = None
+    ) -> SupportResistanceResult:
+        swings = (
+            SwingDetector().detect(matrix) if swing_result is None else swing_result
+        )
+        levels = []
+        last_close = _row_metric(matrix, matrix.dimensions_value.rows - 1)
+        for s in swings.swings:
+            if "LOW" in s.swing_type.value:
+                typ = (
+                    SupportResistanceType.BROKEN_SUPPORT
+                    if last_close < s.value - self.configuration.break_tolerance
+                    else SupportResistanceType.SUPPORT
+                )
+            else:
+                typ = (
+                    SupportResistanceType.BROKEN_RESISTANCE
+                    if last_close > s.value + self.configuration.break_tolerance
+                    else SupportResistanceType.RESISTANCE
+                )
+            levels.append(
+                SupportResistanceLevel(
+                    s.swing_id.replace("swing", "sr"),
+                    typ,
+                    s.cell_id,
+                    s.position,
+                    s.value,
+                    1,
+                    s.confidence,
+                    {"swing_id": s.swing_id},
+                )
+            )
+        return SupportResistanceResult(
+            matrix,
+            tuple(
+                sorted(
+                    levels,
+                    key=lambda level: (
+                        level.position.column_index,
+                        level.position.row_index,
+                        level.level_type.value,
+                    ),
+                )
+            ),
+            swings,
+            self.configuration,
+            {"detector": "SupportResistanceDetector"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class ZoneConfiguration:
+    width_rows: int = 1
+    minimum_confidence: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        if self.width_rows <= 0:
+            raise ValueError("width rows must be positive")
+        _validate_decimal_confidence(self.minimum_confidence)
+
+
+@dataclass(frozen=True, slots=True)
+class SupplyDemandZone:
+    zone_id: str
+    zone_type: ZoneType
+    start_row: int
+    end_row: int
+    column_index: int
+    reference_ids: tuple[str, ...]
+    confidence: Decimal = Decimal("1")
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.zone_id.strip():
+            raise ValueError("zone id is required")
+        if self.start_row < 0 or self.end_row < self.start_row or self.column_index < 0:
+            raise ValueError("zone ordering is invalid")
+        if not self.reference_ids or len(set(self.reference_ids)) != len(
+            self.reference_ids
+        ):
+            raise ValueError("zone references must be unique")
+        _validate_decimal_confidence(self.confidence)
+        object.__setattr__(self, "reference_ids", tuple(self.reference_ids))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    @property
+    def is_broken(self) -> bool:
+        return self.zone_type in (ZoneType.BROKEN_SUPPLY, ZoneType.BROKEN_DEMAND)
+
+    @property
+    def is_active(self) -> bool:
+        return not self.is_broken
+
+
+@dataclass(frozen=True, slots=True)
+class ZoneStatistics:
+    total_zones: int
+    supply_zones: int
+    demand_zones: int
+    broken_zones: int
+    active_zones: int
+
+
+@dataclass(frozen=True, slots=True)
+class ZoneResult:
+    matrix: "FootprintMatrix"
+    zones: tuple[SupplyDemandZone, ...]
+    support_resistance: SupportResistanceResult
+    configuration: ZoneConfiguration = field(default_factory=ZoneConfiguration)
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        ordered = tuple(
+            sorted(
+                self.zones,
+                key=lambda z: (
+                    z.column_index,
+                    z.start_row,
+                    z.end_row,
+                    z.zone_type.value,
+                ),
+            )
+        )
+        if self.zones != ordered:
+            raise ValueError("zones must be ordered")
+        ids = [z.zone_id for z in self.zones]
+        if len(set(ids)) != len(ids):
+            raise ValueError("duplicate zones are not allowed")
+        if self.support_resistance.matrix != self.matrix:
+            raise ValueError("zones must reference support resistance matrix")
+        level_ids = {level.level_id for level in self.support_resistance.levels}
+        if any(set(z.reference_ids) - level_ids for z in self.zones):
+            raise ValueError("zones must reference support resistance levels")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, zone_id: str) -> SupplyDemandZone | None:
+        return next((z for z in self.zones if z.zone_id == zone_id), None)
+
+    def statistics(self) -> ZoneStatistics:
+        return ZoneStatistics(
+            len(self.zones),
+            len(
+                [
+                    z
+                    for z in self.zones
+                    if z.zone_type in (ZoneType.SUPPLY, ZoneType.BROKEN_SUPPLY)
+                ]
+            ),
+            len(
+                [
+                    z
+                    for z in self.zones
+                    if z.zone_type in (ZoneType.DEMAND, ZoneType.BROKEN_DEMAND)
+                ]
+            ),
+            len([z for z in self.zones if z.is_broken]),
+            len([z for z in self.zones if z.is_active]),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class ZoneDetector:
+    configuration: ZoneConfiguration = field(default_factory=ZoneConfiguration)
+
+    def detect(
+        self,
+        matrix: "FootprintMatrix",
+        support_resistance: SupportResistanceResult | None = None,
+    ) -> ZoneResult:
+        sr = (
+            SupportResistanceDetector().detect(matrix)
+            if support_resistance is None
+            else support_resistance
+        )
+        zones = []
+        max_row = matrix.dimensions_value.rows - 1
+        for level in sr.levels:
+            start = max(0, level.position.row_index - self.configuration.width_rows + 1)
+            end = min(
+                max_row, level.position.row_index + self.configuration.width_rows - 1
+            )
+            if level.level_type == SupportResistanceType.RESISTANCE:
+                zt = ZoneType.SUPPLY
+            elif level.level_type == SupportResistanceType.SUPPORT:
+                zt = ZoneType.DEMAND
+            elif level.level_type == SupportResistanceType.BROKEN_RESISTANCE:
+                zt = ZoneType.BROKEN_SUPPLY
+            else:
+                zt = ZoneType.BROKEN_DEMAND
+            zones.append(
+                SupplyDemandZone(
+                    level.level_id.replace("sr", "zone"),
+                    zt,
+                    start,
+                    end,
+                    level.position.column_index,
+                    (level.level_id,),
+                    level.confidence,
+                    {"level_type": level.level_type.value},
+                )
+            )
+        return ZoneResult(
+            matrix,
+            tuple(
+                sorted(
+                    zones,
+                    key=lambda z: (
+                        z.column_index,
+                        z.start_row,
+                        z.end_row,
+                        z.zone_type.value,
+                    ),
+                )
+            ),
+            sr,
+            self.configuration,
+            {"detector": "ZoneDetector"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class MarketStructureConfiguration:
+    equality_tolerance: Decimal = Decimal("0")
+    minimum_confidence: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        if self.equality_tolerance < 0:
+            raise ValueError("equality tolerance cannot be negative")
+        _validate_decimal_confidence(self.minimum_confidence)
+
+
+@dataclass(frozen=True, slots=True)
+class MarketStructure:
+    structure_id: str
+    structure_type: MarketStructureType
+    reference_ids: tuple[str, ...]
+    confidence: Decimal = Decimal("1")
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.structure_id.strip():
+            raise ValueError("structure id is required")
+        if not self.reference_ids or len(set(self.reference_ids)) != len(
+            self.reference_ids
+        ):
+            raise ValueError("structure references must be unique")
+        _validate_decimal_confidence(self.confidence)
+        object.__setattr__(self, "reference_ids", tuple(self.reference_ids))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class MarketStructureStatistics:
+    total_structures: int
+    higher_highs: int
+    higher_lows: int
+    lower_highs: int
+    lower_lows: int
+    bullish: int
+    bearish: int
+    neutral: int
+
+
+@dataclass(frozen=True, slots=True)
+class MarketStructureResult:
+    matrix: "FootprintMatrix"
+    structures: tuple[MarketStructure, ...]
+    swing_result: SwingResult
+    zone_result: ZoneResult | None = None
+    configuration: MarketStructureConfiguration = field(
+        default_factory=MarketStructureConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        ids = [s.structure_id for s in self.structures]
+        if len(set(ids)) != len(ids):
+            raise ValueError("duplicate market structures are not allowed")
+        if self.swing_result.matrix != self.matrix:
+            raise ValueError("market structure must reference swing matrix")
+        swing_ids = {s.swing_id for s in self.swing_result.swings}
+        if any(
+            set(s.reference_ids) - swing_ids
+            for s in self.structures
+            if s.structure_type
+            not in (
+                MarketStructureType.BULLISH_STRUCTURE,
+                MarketStructureType.BEARISH_STRUCTURE,
+                MarketStructureType.NEUTRAL_STRUCTURE,
+            )
+        ):
+            raise ValueError("market structures must reference swings")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, structure_id: str) -> MarketStructure | None:
+        return next(
+            (s for s in self.structures if s.structure_id == structure_id), None
+        )
+
+    def statistics(self) -> MarketStructureStatistics:
+        return MarketStructureStatistics(
+            len(self.structures),
+            len(
+                [
+                    s
+                    for s in self.structures
+                    if s.structure_type == MarketStructureType.HIGHER_HIGH
+                ]
+            ),
+            len(
+                [
+                    s
+                    for s in self.structures
+                    if s.structure_type == MarketStructureType.HIGHER_LOW
+                ]
+            ),
+            len(
+                [
+                    s
+                    for s in self.structures
+                    if s.structure_type == MarketStructureType.LOWER_HIGH
+                ]
+            ),
+            len(
+                [
+                    s
+                    for s in self.structures
+                    if s.structure_type == MarketStructureType.LOWER_LOW
+                ]
+            ),
+            len(
+                [
+                    s
+                    for s in self.structures
+                    if s.structure_type == MarketStructureType.BULLISH_STRUCTURE
+                ]
+            ),
+            len(
+                [
+                    s
+                    for s in self.structures
+                    if s.structure_type == MarketStructureType.BEARISH_STRUCTURE
+                ]
+            ),
+            len(
+                [
+                    s
+                    for s in self.structures
+                    if s.structure_type == MarketStructureType.NEUTRAL_STRUCTURE
+                ]
+            ),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class MarketStructureAnalyzer:
+    configuration: MarketStructureConfiguration = field(
+        default_factory=MarketStructureConfiguration
+    )
+
+    def analyze(
+        self,
+        matrix: "FootprintMatrix",
+        swing_result: SwingResult | None = None,
+        zone_result: ZoneResult | None = None,
+    ) -> MarketStructureResult:
+        swings = (
+            SwingDetector(
+                SwingConfiguration(
+                    equality_tolerance=self.configuration.equality_tolerance,
+                    minimum_confidence=self.configuration.minimum_confidence,
+                )
+            ).detect(matrix)
+            if swing_result is None
+            else swing_result
+        )
+        structures = []
+        for s in swings.swings:
+            mapping = {
+                SwingType.HIGHER_SWING_HIGH: MarketStructureType.HIGHER_HIGH,
+                SwingType.HIGHER_SWING_LOW: MarketStructureType.HIGHER_LOW,
+                SwingType.LOWER_SWING_HIGH: MarketStructureType.LOWER_HIGH,
+                SwingType.LOWER_SWING_LOW: MarketStructureType.LOWER_LOW,
+            }
+            if s.swing_type in mapping:
+                structures.append(
+                    MarketStructure(
+                        s.swing_id.replace("swing", "structure"),
+                        mapping[s.swing_type],
+                        (s.swing_id,),
+                        s.confidence,
+                        {"swing_type": s.swing_type.value},
+                    )
+                )
+        hh = len(
+            [
+                s
+                for s in structures
+                if s.structure_type == MarketStructureType.HIGHER_HIGH
+            ]
+        )
+        hl = len(
+            [
+                s
+                for s in structures
+                if s.structure_type == MarketStructureType.HIGHER_LOW
+            ]
+        )
+        lh = len(
+            [
+                s
+                for s in structures
+                if s.structure_type == MarketStructureType.LOWER_HIGH
+            ]
+        )
+        ll = len(
+            [s for s in structures if s.structure_type == MarketStructureType.LOWER_LOW]
+        )
+        aggregate = (
+            MarketStructureType.BULLISH_STRUCTURE
+            if hh and hl and hh + hl > lh + ll
+            else (
+                MarketStructureType.BEARISH_STRUCTURE
+                if lh and ll and lh + ll > hh + hl
+                else MarketStructureType.NEUTRAL_STRUCTURE
+            )
+        )
+        refs = tuple(s.swing_id for s in swings.swings[:2]) or (
+            matrix.cells[0].cell_id,
+        )
+        structures.append(
+            MarketStructure(
+                f"{matrix.grid_id}:structure:aggregate",
+                aggregate,
+                refs,
+                Decimal("1"),
+                {
+                    "higher_highs": hh,
+                    "higher_lows": hl,
+                    "lower_highs": lh,
+                    "lower_lows": ll,
+                },
+            )
+        )
+        return MarketStructureResult(
+            matrix,
+            tuple(structures),
+            swings,
+            zone_result,
+            self.configuration,
+            {"analyzer": "MarketStructureAnalyzer"},
+        )
+
+
 @dataclass(frozen=True, slots=True)
 class ImageFrame:
     """A captured image and its normalized frame metadata."""
@@ -483,6 +1277,10 @@ class DetectionGraph:
     cumulative_delta: "CumulativeDeltaResult | None" = None
     delta_momentum: "DeltaMomentumResult | None" = None
     exhaustion: "ExhaustionResult | None" = None
+    swing_result: "SwingResult | None" = None
+    support_resistance: "SupportResistanceResult | None" = None
+    supply_demand_zones: "ZoneResult | None" = None
+    market_structure: "MarketStructureResult | None" = None
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -643,12 +1441,36 @@ class DetectionGraph:
             ("cumulative delta", self.cumulative_delta),
             ("delta momentum", self.delta_momentum),
             ("exhaustion", self.exhaustion),
+            ("swing result", self.swing_result),
+            ("support resistance", self.support_resistance),
+            ("supply demand zones", self.supply_demand_zones),
+            ("market structure", self.market_structure),
         ):
             if result is not None:
                 if self.footprint_matrix is None:
                     raise ValueError(f"{name} requires footprint matrix")
                 if result.matrix != self.footprint_matrix:
                     raise ValueError(f"{name} must reference graph matrix")
+        if (
+            self.support_resistance is not None
+            and self.swing_result is not None
+            and self.support_resistance.swing_result != self.swing_result
+        ):
+            raise ValueError("support resistance must reference graph swings")
+        if (
+            self.supply_demand_zones is not None
+            and self.support_resistance is not None
+            and self.supply_demand_zones.support_resistance != self.support_resistance
+        ):
+            raise ValueError(
+                "supply demand zones must reference graph support resistance"
+            )
+        if (
+            self.market_structure is not None
+            and self.swing_result is not None
+            and self.market_structure.swing_result != self.swing_result
+        ):
+            raise ValueError("market structure must reference graph swings")
 
     @property
     def footprint_cells(self) -> tuple[DetectedObject, ...]:
@@ -1068,6 +1890,74 @@ class DetectionGraph:
         if self.exhaustion is None:
             return ExhaustionStatistics(0, 0, 0, 0)
         return self.exhaustion.statistics()
+
+    def swings(self) -> tuple["SwingPoint", ...]:
+        return () if self.swing_result is None else self.swing_result.swings
+
+    def lookup_swing(self, swing_id: str) -> "SwingPoint | None":
+        return None if self.swing_result is None else self.swing_result.lookup(swing_id)
+
+    def swing_statistics(self) -> "SwingStatistics":
+        return (
+            SwingStatistics(0, 0, 0, 0, 0)
+            if self.swing_result is None
+            else self.swing_result.statistics()
+        )
+
+    def support_resistance_levels(self) -> tuple["SupportResistanceLevel", ...]:
+        return () if self.support_resistance is None else self.support_resistance.levels
+
+    def lookup_support_resistance(
+        self, level_id: str
+    ) -> "SupportResistanceLevel | None":
+        return (
+            None
+            if self.support_resistance is None
+            else self.support_resistance.lookup(level_id)
+        )
+
+    def support_resistance_statistics(self) -> "SupportResistanceStatistics":
+        return (
+            SupportResistanceStatistics(0, 0, 0, 0, 0)
+            if self.support_resistance is None
+            else self.support_resistance.statistics()
+        )
+
+    def zones(self) -> tuple["SupplyDemandZone", ...]:
+        return (
+            () if self.supply_demand_zones is None else self.supply_demand_zones.zones
+        )
+
+    def lookup_zone(self, zone_id: str) -> "SupplyDemandZone | None":
+        return (
+            None
+            if self.supply_demand_zones is None
+            else self.supply_demand_zones.lookup(zone_id)
+        )
+
+    def zone_statistics(self) -> "ZoneStatistics":
+        return (
+            ZoneStatistics(0, 0, 0, 0, 0)
+            if self.supply_demand_zones is None
+            else self.supply_demand_zones.statistics()
+        )
+
+    def market_structures(self) -> tuple["MarketStructure", ...]:
+        return () if self.market_structure is None else self.market_structure.structures
+
+    def lookup_market_structure(self, structure_id: str) -> "MarketStructure | None":
+        return (
+            None
+            if self.market_structure is None
+            else self.market_structure.lookup(structure_id)
+        )
+
+    def market_structure_statistics(self) -> "MarketStructureStatistics":
+        return (
+            MarketStructureStatistics(0, 0, 0, 0, 0, 0, 0, 0)
+            if self.market_structure is None
+            else self.market_structure.statistics()
+        )
 
 
 @dataclass(frozen=True, slots=True)
@@ -6493,6 +7383,30 @@ class SequentialObjectDetectionPipeline:
             and footprint_delta is not None
             else None
         )
+        swing_result = (
+            SwingDetector().detect(footprint_matrix)
+            if footprint_matrix is not None and exhaustion is not None
+            else None
+        )
+        support_resistance = (
+            SupportResistanceDetector().detect(footprint_matrix, swing_result)
+            if footprint_matrix is not None and swing_result is not None
+            else None
+        )
+        supply_demand_zones = (
+            ZoneDetector().detect(footprint_matrix, support_resistance)
+            if footprint_matrix is not None and support_resistance is not None
+            else None
+        )
+        market_structure = (
+            MarketStructureAnalyzer().analyze(
+                footprint_matrix, swing_result, supply_demand_zones
+            )
+            if footprint_matrix is not None
+            and supply_demand_zones is not None
+            and swing_result is not None
+            else None
+        )
         return DetectionGraph(
             frame_id=graph.frame_id,
             objects=graph.objects,
@@ -6522,6 +7436,10 @@ class SequentialObjectDetectionPipeline:
             cumulative_delta=cumulative_delta,
             delta_momentum=delta_momentum,
             exhaustion=exhaustion,
+            swing_result=swing_result,
+            support_resistance=support_resistance,
+            supply_demand_zones=supply_demand_zones,
+            market_structure=market_structure,
         )
 
 
