@@ -282,3 +282,9 @@ Out of scope for Bundle 1: developing POC, developing value area, composite prof
 
 ### Genesis Auction Market Theory Bundle 3
 Bundle 3 completes the deterministic Auction Market Theory layer. Genesis now supports Poor High, Poor Low, Single Prints, and Naked POC Tracking using only immutable footprint and point-of-control objects. After Bundle 3 the complete Auction Market Theory module is finished. Still NOT implemented: Delta Divergence, Cumulative Delta, Iceberg Detection, Exhaustion, Market Structure, AI Reasoning, and Trading Signals. Bundle 4 begins Advanced Order Flow Analytics.
+
+## Bundle 5: Market Structure Analysis
+
+The object detection pipeline now extends deterministic advanced order-flow analytics with `SwingDetector`, `SupportResistanceDetector`, `ZoneDetector`, and `MarketStructureAnalyzer`. These components operate only on immutable prior-bundle objects and produce frozen result models attached to `DetectionGraph` as `swing_result`, `support_resistance`, `supply_demand_zones`, and `market_structure`.
+
+The implementation remains platform-independent and reproducible. It does not add AI reasoning, probability estimation, prediction, trading recommendations, machine learning, OCR changes, image-analysis changes, networking, threading, or async behavior. Bundle 6 introduces the Trend Engine.
