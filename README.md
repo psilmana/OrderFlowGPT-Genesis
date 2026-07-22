@@ -191,3 +191,13 @@ The implementation classifies RTH, ETH, pre-market, post-market, and unknown ses
 Genesis still does **not** perform AI reasoning, prediction, trading signals, probability estimation, machine learning, OCR changes, OpenCV changes, networking, threading, async execution, or vendor-specific logic.
 
 Bundle 8 introduces Multi-Timeframe Context.
+
+## Bundle 8: Multi-Timeframe Context Engine
+
+Bundle 8 adds deterministic multi-timeframe context models, alignment, context aggregation, and confluence analysis. The engine exposes immutable `TimeframeContext`, `Alignment`, `ContextAggregation`, and `Confluence` results from the `DetectionGraph`, plus lookup and statistics helpers for each result family.
+
+Supported timeframe contexts are Tick, 1 Minute, 5 Minute, 15 Minute, 30 Minute, 1 Hour, 4 Hour, Daily, and Unknown. Alignment is classified only as Fully Aligned, Partially Aligned, Opposing, or Neutral. Confluence is classified only as Strong, Moderate, Weak, or No Confluence.
+
+Genesis remains deterministic and does **not** perform AI reasoning, prediction, trade recommendations, probability estimation, machine learning, strategy generation, or buy/sell signal generation.
+
+Bundle 9 introduces the Dataset Builder for Fabio video learning.
