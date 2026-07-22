@@ -314,3 +314,23 @@ The analyzers consume only immutable results produced by prior bundles, includin
 The confluence engine exposes deterministic relationships only. It does not emit entries, exits, trade signals, strategy recommendations, probability estimates, predictions, AI reasoning, or machine-learning output.
 
 Bundle 9 introduces the Dataset Builder for Fabio video learning.
+
+## Bundle 9: Dataset Builder & Annotation Infrastructure
+
+Bundle 9 adds the immutable dataset boundary in `orderflowgpt_genesis.dataset`. It converts one completed post-Bundle-8 `DetectionGraph` into one complete `TrainingSample` by pairing graph-backed deterministic analysis summaries with frame identity, timestamps, dataset versioning, and optional human annotation placeholders.
+
+The canonical Bundle 9 pipeline is:
+
+```text
+DetectionGraph
+  ↓
+FeatureVectorBuilder
+  ↓
+TrainingSampleBuilder
+  ↓
+DatasetBuilder
+```
+
+`FeatureVector` stores immutable summaries and references for Detection Graph, Market Profile, Auction Theory, Trend Engine, Session Intelligence, Multi-Timeframe Context, Delta, Volume Clusters, and Confluence without duplicating mutable state. `Annotation`, `AnnotationType`, and `AnnotationStatus` support empty Fabio decision, reasoning text, trade direction, human confidence label, comments, and tags.
+
+Exports are deterministic and versioned through `DatasetExporter` for JSONL, SQLite, and Parquet-compatible payload files. Bundle 9 creates AI-ready datasets only; it performs no AI, ML, neural-network training, LLM calls, prediction, probabilities, strategy generation, vendor-specific logic, OCR modifications, or OpenCV changes. Bundle 10 introduces the Learning Engine.
