@@ -141,3 +141,11 @@ Bundle 3 completes the deterministic Auction Market Theory layer. Genesis now su
 Genesis still does not perform AI reasoning, prediction, trade recommendations, probability estimation, machine learning, strategy generation, or buy/sell signal generation.
 
 Bundle 9 introduces the Dataset Builder for Fabio video learning.
+
+## Bundle 10 - Fabio Video Ingestion
+
+- Added deterministic immutable video ingestion, frame extraction, timestamp mapping, audio timeline extraction, frame/audio synchronization, and `VideoDataset` integration.
+- Added configurable FPS, every-N-frames, and keyframe sampling modes without scene understanding.
+- Added regression coverage for metadata, frame numbering, timestamp ordering, synchronization, audio mapping, dataset/training-sample integration, immutability, duplicate validation, reference validation, and multiple video inputs.
+- Bundle 10 includes NO speech recognition, NO AI, NO learning, NO reasoning, NO ML, NO prediction, NO strategy generation, and NO trade recommendations.
+- Bundle 11 introduces Transcript Alignment.
