@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.22 - Bundle 9 Dataset Builder & Annotation Infrastructure
+
+- Added immutable dataset models, feature-vector construction, training-sample building, dataset validation, deterministic serialization, dataset statistics, and versioned export support for JSONL, SQLite, and Parquet-compatible payload files.
+- Added Fabio annotation placeholders for decision, reasoning text, trade direction, human confidence labels, comments, and tags while allowing empty annotations.
+- Documented that Bundle 9 creates AI-ready datasets but performs no AI, ML, neural networks, LLM calls, prediction, probabilities, strategy generation, vendor-specific logic, OCR modifications, or OpenCV changes. Bundle 10 introduces the Learning Engine.
+
 ## 0.1.21 - Bundle 6 Trend Engine
 
 - Added deterministic Trend State Detection, Pullback Detection, Break of Structure, and Change of Character using only immutable objects produced by previous bundles.
