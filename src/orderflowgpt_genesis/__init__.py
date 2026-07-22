@@ -2,6 +2,28 @@
 
 from .analysis import OrderFlowAnalyzer
 from .models import AnalysisResult, MarketSnapshot, OrderBookLevel, Trade
+
+from .dataset import (
+    Annotation,
+    AnnotationStatus,
+    AnnotationType,
+    DatasetBuilder,
+    DatasetConfiguration,
+    DatasetExporter,
+    DatasetSerializer,
+    DatasetStatistics,
+    DatasetValidator,
+    DatasetVersion,
+    FeatureVector,
+    FeatureVectorBuilder,
+    FrameIdentifier,
+    FrameMetadata,
+    TrainingDataset,
+    TrainingSample,
+    TrainingSampleBuilder,
+    VideoIdentifier,
+)
+
 from .vision import (
     TimeframeType,
     TimeframeContext,
@@ -662,4 +684,22 @@ __all__ = [
     "ConfluenceStatistics",
     "ConfluenceResult",
     "ConfluenceAnalyzer",
+    "Annotation",
+    "AnnotationStatus",
+    "AnnotationType",
+    "DatasetBuilder",
+    "DatasetConfiguration",
+    "DatasetExporter",
+    "DatasetSerializer",
+    "DatasetStatistics",
+    "DatasetValidator",
+    "DatasetVersion",
+    "FeatureVector",
+    "FeatureVectorBuilder",
+    "FrameIdentifier",
+    "FrameMetadata",
+    "TrainingDataset",
+    "TrainingSample",
+    "TrainingSampleBuilder",
+    "VideoIdentifier",
 ]
