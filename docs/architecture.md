@@ -334,3 +334,15 @@ DatasetBuilder
 `FeatureVector` stores immutable summaries and references for Detection Graph, Market Profile, Auction Theory, Trend Engine, Session Intelligence, Multi-Timeframe Context, Delta, Volume Clusters, and Confluence without duplicating mutable state. `Annotation`, `AnnotationType`, and `AnnotationStatus` support empty Fabio decision, reasoning text, trade direction, human confidence label, comments, and tags.
 
 Exports are deterministic and versioned through `DatasetExporter` for JSONL, SQLite, and Parquet-compatible payload files. Bundle 9 creates AI-ready datasets only; it performs no AI, ML, neural-network training, LLM calls, prediction, probabilities, strategy generation, vendor-specific logic, OCR modifications, or OpenCV changes. Bundle 10 introduces the Learning Engine.
+
+## Bundle 10: Deterministic Fabio Video Ingestion
+
+Bundle 10 adds the immutable video ingestion layer for Fabio training videos. The pipeline is:
+
+`Video -> Frame Extraction -> Timestamp Mapping -> Genesis Vision Pipeline -> FeatureVector -> TrainingSample -> VideoDataset`.
+
+Each extracted frame receives deterministic video, frame, timestamp, and content-hash references. The existing Genesis deterministic analytics remain unchanged; Bundle 10 only attaches video identifiers, frame identifiers, timestamps, audio segment references, and training-sample references.
+
+Audio support is metadata-only: Genesis extracts deterministic duration and segment timelines. There is NO speech recognition in Bundle 10.
+
+Bundle 10 explicitly contains NO AI, NO learning, NO reasoning, NO ML, NO neural networks, NO prediction, NO strategy generation, and NO trade recommendations. Bundle 11 introduces Transcript Alignment.
