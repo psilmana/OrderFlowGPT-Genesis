@@ -113,3 +113,12 @@ Bundle 3 completes the deterministic Auction Market Theory layer. Genesis now su
 - Extended `DetectionGraph` and `SequentialObjectDetectionPipeline` with Bundle 5 results and lookup/statistics helpers.
 - Genesis continues to exclude AI reasoning, probability estimation, prediction, trading recommendations, and machine learning.
 - Bundle 6 introduces the Trend Engine.
+
+## Bundle 7 - Session Intelligence
+
+- Added deterministic trading session detection for RTH, ETH, pre-market, post-market, and unknown sessions.
+- Added session statistics for high, low, range, POC, volume, delta, imbalance count, absorption count, and trend state.
+- Added Initial Balance analysis for IB high, low, mid, range, break, and extension.
+- Added opening auction classification for open drive, open test drive, open auction, in-range/out-of-range auction, rejection reverse, and unknown.
+- Extended graph and sequential pipeline integration without AI, prediction, signals, probabilities, ML, networking, OCR changes, OpenCV changes, threading, async execution, randomness, or vendor-specific behavior.
+- Bundle 8 introduces Multi-Timeframe Context.

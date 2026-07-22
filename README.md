@@ -181,3 +181,13 @@ Bundle 3 completes the deterministic Auction Market Theory layer. Genesis now su
 Bundle 5 adds deterministic market-structure analysis to Genesis. It consumes only immutable objects produced by prior bundles, including `DetectionGraph`, `FootprintMatrix`, order-flow analytics, Market Profile, and Auction Market Theory results. The bundle introduces swing high/low detection, support and resistance extraction, supply and demand zone detection, and market structure classification.
 
 Genesis still does **not** perform AI reasoning, probability estimation, prediction, trading recommendations, or machine learning. Bundle 6 introduces the Trend Engine.
+
+## Bundle 7: Session Intelligence
+
+Genesis now includes deterministic Session Intelligence for trading-session context. Bundle 7 adds immutable models, configurations, results, detectors, analyzers, graph fields, and pipeline stages for Trading Session Detection, Session Statistics, Initial Balance (IB), and Opening Auction Analysis.
+
+The implementation classifies RTH, ETH, pre-market, post-market, and unknown sessions from existing timestamp metadata only; computes session high, low, range, POC, volume, delta, imbalance count, absorption count, and trend state; derives IB high, low, mid, range, break, and extension; and labels opening-auction structure as open drive, open test drive, open auction, open auction in range, open auction out of range, open rejection reverse, or unknown.
+
+Genesis still does **not** perform AI reasoning, prediction, trading signals, probability estimation, machine learning, OCR changes, OpenCV changes, networking, threading, async execution, or vendor-specific logic.
+
+Bundle 8 introduces Multi-Timeframe Context.

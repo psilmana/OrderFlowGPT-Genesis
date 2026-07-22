@@ -292,3 +292,11 @@ Bundle 3 completes the deterministic Auction Market Theory layer. Genesis now su
 The object detection pipeline now extends deterministic advanced order-flow analytics with `SwingDetector`, `SupportResistanceDetector`, `ZoneDetector`, and `MarketStructureAnalyzer`. These components operate only on immutable prior-bundle objects and produce frozen result models attached to `DetectionGraph` as `swing_result`, `support_resistance`, `supply_demand_zones`, and `market_structure`.
 
 The implementation remains platform-independent and reproducible. It does not add AI reasoning, probability estimation, prediction, trading recommendations, machine learning, OCR changes, image-analysis changes, networking, threading, or async behavior. Bundle 6 introduces the Trend Engine.
+
+## Bundle 7 Session Intelligence
+
+Bundle 7 extends the immutable `DetectionGraph` with `trading_session`, `session_statistics`, `initial_balance`, and `opening_auction` outputs plus deterministic lookup/statistics helpers. The sequential pipeline now continues after the Trend Engine through `TradingSessionDetector`, `SessionStatisticsAnalyzer`, `InitialBalanceAnalyzer`, and `OpeningAuctionAnalyzer`.
+
+All Bundle 7 components consume only existing immutable graph, footprint matrix, market structure, trend, delta, volume cluster, market profile, auction-market-theory, advanced-order-flow, and timestamp/context objects. They never inspect images, perform OCR, modify OpenCV behavior, use networking, spawn threads, run async work, use randomness, forecast outcomes, produce trading signals, estimate probabilities, or apply machine learning.
+
+Bundle 8 introduces Multi-Timeframe Context.

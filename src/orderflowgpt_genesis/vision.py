@@ -1627,6 +1627,725 @@ class CHOCHDetector:
         )
 
 
+class TradingSessionType(Enum):
+    RTH = "RTH"
+    ETH = "ETH"
+    PRE_MARKET = "PRE_MARKET"
+    POST_MARKET = "POST_MARKET"
+    UNKNOWN = "UNKNOWN"
+
+
+class OpeningAuctionType(Enum):
+    OPEN_DRIVE = "OPEN_DRIVE"
+    OPEN_TEST_DRIVE = "OPEN_TEST_DRIVE"
+    OPEN_AUCTION = "OPEN_AUCTION"
+    OPEN_AUCTION_IN_RANGE = "OPEN_AUCTION_IN_RANGE"
+    OPEN_AUCTION_OUT_OF_RANGE = "OPEN_AUCTION_OUT_OF_RANGE"
+    OPEN_REJECTION_REVERSE = "OPEN_REJECTION_REVERSE"
+    UNKNOWN = "UNKNOWN"
+
+
+def _session_minute(value: Any) -> int | None:
+    if value is None:
+        return None
+    if isinstance(value, int):
+        return value if 0 <= value < 1440 else None
+    text = str(value).strip()
+    if not text:
+        return None
+    if text.isdigit():
+        minute = int(text)
+        return minute if 0 <= minute < 1440 else None
+    parts = text.split(":")
+    if len(parts) >= 2 and parts[0].isdigit() and parts[1].isdigit():
+        hour, minute = int(parts[0]), int(parts[1])
+        if 0 <= hour < 24 and 0 <= minute < 60:
+            return hour * 60 + minute
+    return None
+
+
+def _column_minutes(matrix: "FootprintMatrix") -> tuple[int | None, ...]:
+    minutes: list[int | None] = []
+    for column in range(matrix.dimensions_value.columns):
+        values = []
+        for cell in matrix.column(column):
+            metadata = cell.original_cell.metadata
+            values.append(
+                _session_minute(
+                    metadata.get("minute")
+                    or metadata.get("timestamp")
+                    or metadata.get("time")
+                    or cell.interpretation.metadata.get("minute")
+                    or cell.interpretation.metadata.get("timestamp")
+                    or cell.interpretation.metadata.get("time")
+                )
+            )
+        known = tuple(value for value in values if value is not None)
+        minutes.append(known[0] if known and len(set(known)) == 1 else None)
+    return tuple(minutes)
+
+
+def _session_price(row: int, rows: int) -> Decimal:
+    return Decimal(rows - row - 1)
+
+
+def _cell_total(cell: "MatrixCell") -> Decimal:
+    return VolumeClusterAnalyzer._total_volume(cell)
+
+
+def _cell_delta_amount(cell: "MatrixCell") -> Decimal:
+    bid_value = cell.interpretation.bid()
+    ask_value = cell.interpretation.ask()
+    bid = (
+        Decimal("0")
+        if bid_value is None
+        else Decimal(str(bid_value.numeric_value.value))
+    )
+    ask = (
+        Decimal("0")
+        if ask_value is None
+        else Decimal(str(ask_value.numeric_value.value))
+    )
+    return ask - bid
+
+
+@dataclass(frozen=True, slots=True)
+class TradingSessionConfiguration:
+    rth_start_minute: int = 570
+    rth_end_minute: int = 960
+    pre_market_start_minute: int = 240
+    post_market_end_minute: int = 1200
+    minimum_confidence: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        if not (
+            0
+            <= self.pre_market_start_minute
+            <= self.rth_start_minute
+            < self.rth_end_minute
+            <= self.post_market_end_minute
+            <= 1439
+        ):
+            raise ValueError("trading session minute boundaries are invalid")
+        _validate_decimal_confidence(self.minimum_confidence)
+
+
+@dataclass(frozen=True, slots=True)
+class TradingSession:
+    session_id: str
+    session_type: TradingSessionType
+    start_column: int
+    end_column: int
+    reference_ids: tuple[str, ...]
+    confidence: Decimal = Decimal("1")
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if (
+            not self.session_id.strip()
+            or self.start_column < 0
+            or self.end_column < self.start_column
+        ):
+            raise ValueError("trading session bounds are invalid")
+        if not self.reference_ids or len(set(self.reference_ids)) != len(
+            self.reference_ids
+        ):
+            raise ValueError("trading session references must be unique")
+        _validate_decimal_confidence(self.confidence)
+        object.__setattr__(self, "reference_ids", tuple(self.reference_ids))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class TradingSessionStatistics:
+    total_sessions: int
+    rth_sessions: int
+    eth_sessions: int
+    pre_market_sessions: int
+    post_market_sessions: int
+    unknown_sessions: int
+
+
+@dataclass(frozen=True, slots=True)
+class TradingSessionResult:
+    matrix: "FootprintMatrix"
+    sessions: tuple[TradingSession, ...]
+    configuration: TradingSessionConfiguration = field(
+        default_factory=TradingSessionConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.sessions != tuple(
+            sorted(
+                self.sessions,
+                key=lambda x: (x.start_column, x.end_column, x.session_id),
+            )
+        ):
+            raise ValueError("trading sessions must be ordered")
+        ids = [x.session_id for x in self.sessions]
+        if len(set(ids)) != len(ids):
+            raise ValueError("duplicate trading sessions are not allowed")
+        cell_ids = {c.cell_id for c in self.matrix.cells}
+        last_end = -1
+        for session in self.sessions:
+            if (
+                session.end_column >= self.matrix.dimensions_value.columns
+                or session.start_column <= last_end
+            ):
+                raise ValueError("trading session ordering is invalid")
+            if set(session.reference_ids) - cell_ids:
+                raise ValueError("trading sessions must reference matrix cells")
+            last_end = session.end_column
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, session_id: str) -> TradingSession | None:
+        return next((x for x in self.sessions if x.session_id == session_id), None)
+
+    def statistics(self) -> TradingSessionStatistics:
+        return TradingSessionStatistics(
+            len(self.sessions),
+            len([x for x in self.sessions if x.session_type == TradingSessionType.RTH]),
+            len([x for x in self.sessions if x.session_type == TradingSessionType.ETH]),
+            len(
+                [
+                    x
+                    for x in self.sessions
+                    if x.session_type == TradingSessionType.PRE_MARKET
+                ]
+            ),
+            len(
+                [
+                    x
+                    for x in self.sessions
+                    if x.session_type == TradingSessionType.POST_MARKET
+                ]
+            ),
+            len(
+                [
+                    x
+                    for x in self.sessions
+                    if x.session_type == TradingSessionType.UNKNOWN
+                ]
+            ),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class TradingSessionDetector:
+    configuration: TradingSessionConfiguration = field(
+        default_factory=TradingSessionConfiguration
+    )
+
+    def detect(self, matrix: "FootprintMatrix") -> TradingSessionResult:
+        minutes = _column_minutes(matrix)
+        sessions: list[TradingSession] = []
+        current_type: TradingSessionType | None = None
+        start = 0
+        for column, minute in enumerate(minutes + (None,)):
+            session_type = self._type(minute) if column < len(minutes) else None
+            if current_type is None:
+                current_type = session_type
+                start = column
+            elif session_type != current_type:
+                refs = tuple(
+                    cell.cell_id
+                    for col in range(start, column)
+                    for cell in matrix.column(col)
+                )
+                sessions.append(
+                    TradingSession(
+                        f"{matrix.grid_id}:session:{start}:{column - 1}:{current_type.value}",
+                        current_type,
+                        start,
+                        column - 1,
+                        refs,
+                        Decimal("1"),
+                        {
+                            "start_minute": minutes[start],
+                            "end_minute": minutes[column - 1],
+                        },
+                    )
+                )
+                current_type = session_type
+                start = column
+        return TradingSessionResult(
+            matrix,
+            tuple(sessions),
+            self.configuration,
+            {"detector": "TradingSessionDetector"},
+        )
+
+    def _type(self, minute: int | None) -> TradingSessionType:
+        if minute is None:
+            return TradingSessionType.UNKNOWN
+        c = self.configuration
+        if c.rth_start_minute <= minute < c.rth_end_minute:
+            return TradingSessionType.RTH
+        if c.pre_market_start_minute <= minute < c.rth_start_minute:
+            return TradingSessionType.PRE_MARKET
+        if c.rth_end_minute <= minute <= c.post_market_end_minute:
+            return TradingSessionType.POST_MARKET
+        return TradingSessionType.ETH
+
+
+@dataclass(frozen=True, slots=True)
+class SessionStatisticsConfiguration:
+    minimum_confidence: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        _validate_decimal_confidence(self.minimum_confidence)
+
+
+@dataclass(frozen=True, slots=True)
+class SessionStatistics:
+    session_id: str
+    session_high: Decimal
+    session_low: Decimal
+    session_range: Decimal
+    session_poc: int
+    session_volume: Decimal
+    session_delta: Decimal
+    session_imbalance_count: int
+    session_absorption_count: int
+    session_trend_state: TrendStateType
+
+
+@dataclass(frozen=True, slots=True)
+class SessionStatisticsResult:
+    matrix: "FootprintMatrix"
+    sessions: TradingSessionResult
+    statistics_values: tuple[SessionStatistics, ...]
+    configuration: SessionStatisticsConfiguration = field(
+        default_factory=SessionStatisticsConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.sessions.matrix != self.matrix:
+            raise ValueError("session statistics must reference graph matrix")
+        if len({x.session_id for x in self.statistics_values}) != len(
+            self.statistics_values
+        ):
+            raise ValueError("duplicate session statistics are not allowed")
+        ids = {x.session_id for x in self.sessions.sessions}
+        if {x.session_id for x in self.statistics_values} - ids:
+            raise ValueError("session statistics must reference sessions")
+        object.__setattr__(self, "statistics_values", tuple(self.statistics_values))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, session_id: str) -> SessionStatistics | None:
+        return next(
+            (x for x in self.statistics_values if x.session_id == session_id), None
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class SessionStatisticsAnalyzer:
+    configuration: SessionStatisticsConfiguration = field(
+        default_factory=SessionStatisticsConfiguration
+    )
+
+    def analyze(
+        self,
+        matrix: "FootprintMatrix",
+        sessions: TradingSessionResult,
+        imbalances: "FootprintImbalanceResult | None" = None,
+        absorption: "AbsorptionResult | None" = None,
+        trend_state: "TrendStateResult | None" = None,
+    ) -> SessionStatisticsResult:
+        out = []
+        imb_ids = (
+            {x.cell_id for x in imbalances.detections}
+            if imbalances is not None
+            else set()
+        )
+        abs_ids = (
+            {x.cell_id for x in absorption.detections}
+            if absorption is not None
+            else set()
+        )
+        trend = (
+            trend_state.states[0].state_type
+            if trend_state is not None and trend_state.states
+            else TrendStateType.NEUTRAL
+        )
+        for session in sessions.sessions:
+            cells = tuple(
+                cell
+                for col in range(session.start_column, session.end_column + 1)
+                for cell in matrix.column(col)
+            )
+            rows = tuple(cell.row_index for cell in cells)
+            volumes_by_row = tuple(
+                sum((_cell_total(c) for c in cells if c.row_index == row), Decimal("0"))
+                for row in range(matrix.dimensions_value.rows)
+            )
+            poc = next(
+                i for i, v in enumerate(volumes_by_row) if v == max(volumes_by_row)
+            )
+            high = _session_price(min(rows), matrix.dimensions_value.rows)
+            low = _session_price(max(rows), matrix.dimensions_value.rows)
+            out.append(
+                SessionStatistics(
+                    session.session_id,
+                    high,
+                    low,
+                    high - low,
+                    poc,
+                    sum((_cell_total(c) for c in cells), Decimal("0")),
+                    sum((_cell_delta_amount(c) for c in cells), Decimal("0")),
+                    len([c for c in cells if c.cell_id in imb_ids]),
+                    len([c for c in cells if c.cell_id in abs_ids]),
+                    trend,
+                )
+            )
+        return SessionStatisticsResult(
+            matrix,
+            sessions,
+            tuple(out),
+            self.configuration,
+            {"analyzer": "SessionStatisticsAnalyzer"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class InitialBalanceConfiguration:
+    columns: int = 2
+    minimum_confidence: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        if self.columns <= 0:
+            raise ValueError("initial balance columns must be positive")
+        _validate_decimal_confidence(self.minimum_confidence)
+
+
+@dataclass(frozen=True, slots=True)
+class InitialBalance:
+    initial_balance_id: str
+    session_id: str
+    ib_high: Decimal
+    ib_low: Decimal
+    ib_mid: Decimal
+    ib_range: Decimal
+    ib_extension: Decimal
+    ib_break: bool
+    reference_ids: tuple[str, ...]
+    confidence: Decimal = Decimal("1")
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.initial_balance_id.strip() or not self.session_id.strip():
+            raise ValueError("initial balance ids are required")
+        if (
+            self.ib_high < self.ib_low
+            or self.ib_range != self.ib_high - self.ib_low
+            or self.ib_mid != (self.ib_high + self.ib_low) / Decimal("2")
+        ):
+            raise ValueError("initial balance values are inconsistent")
+        if not self.reference_ids or len(set(self.reference_ids)) != len(
+            self.reference_ids
+        ):
+            raise ValueError("initial balance references must be unique")
+        _validate_decimal_confidence(self.confidence)
+        object.__setattr__(self, "reference_ids", tuple(self.reference_ids))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class InitialBalanceStatistics:
+    total_initial_balances: int
+    breaks: int
+    extensions: int
+
+
+@dataclass(frozen=True, slots=True)
+class InitialBalanceResult:
+    matrix: "FootprintMatrix"
+    balances: tuple[InitialBalance, ...]
+    sessions: TradingSessionResult
+    configuration: InitialBalanceConfiguration = field(
+        default_factory=InitialBalanceConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.sessions.matrix != self.matrix:
+            raise ValueError("initial balance must reference graph sessions")
+        if self.balances != tuple(
+            sorted(self.balances, key=lambda x: x.initial_balance_id)
+        ):
+            raise ValueError("initial balances must be ordered")
+        ids = [x.initial_balance_id for x in self.balances]
+        if len(set(ids)) != len(ids):
+            raise ValueError("duplicate initial balances are not allowed")
+        cell_ids = {c.cell_id for c in self.matrix.cells}
+        session_ids = {s.session_id for s in self.sessions.sessions}
+        for balance in self.balances:
+            if (
+                balance.session_id not in session_ids
+                or set(balance.reference_ids) - cell_ids
+            ):
+                raise ValueError("initial balance references are invalid")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, initial_balance_id: str) -> InitialBalance | None:
+        return next(
+            (x for x in self.balances if x.initial_balance_id == initial_balance_id),
+            None,
+        )
+
+    def statistics(self) -> InitialBalanceStatistics:
+        return InitialBalanceStatistics(
+            len(self.balances),
+            len([x for x in self.balances if x.ib_break]),
+            len([x for x in self.balances if x.ib_extension > 0]),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class InitialBalanceAnalyzer:
+    configuration: InitialBalanceConfiguration = field(
+        default_factory=InitialBalanceConfiguration
+    )
+
+    def analyze(
+        self, matrix: "FootprintMatrix", sessions: TradingSessionResult
+    ) -> InitialBalanceResult:
+        out = []
+        rows_count = matrix.dimensions_value.rows
+        for session in sessions.sessions:
+            end = min(
+                session.end_column,
+                session.start_column + self.configuration.columns - 1,
+            )
+            ib_cells = tuple(
+                cell
+                for col in range(session.start_column, end + 1)
+                for cell in matrix.column(col)
+            )
+            all_cells = tuple(
+                cell
+                for col in range(session.start_column, session.end_column + 1)
+                for cell in matrix.column(col)
+            )
+            ib_high = _session_price(min(c.row_index for c in ib_cells), rows_count)
+            ib_low = _session_price(max(c.row_index for c in ib_cells), rows_count)
+            all_high = _session_price(min(c.row_index for c in all_cells), rows_count)
+            all_low = _session_price(max(c.row_index for c in all_cells), rows_count)
+            extension = max(all_high - ib_high, ib_low - all_low, Decimal("0"))
+            out.append(
+                InitialBalance(
+                    f"{matrix.grid_id}:ib:{session.start_column}:{session.end_column}",
+                    session.session_id,
+                    ib_high,
+                    ib_low,
+                    (ib_high + ib_low) / Decimal("2"),
+                    ib_high - ib_low,
+                    extension,
+                    extension > 0,
+                    tuple(c.cell_id for c in ib_cells),
+                    Decimal("1"),
+                    {"columns": len(set(c.column_index for c in ib_cells))},
+                )
+            )
+        return InitialBalanceResult(
+            matrix,
+            tuple(sorted(out, key=lambda x: x.initial_balance_id)),
+            sessions,
+            self.configuration,
+            {"analyzer": "InitialBalanceAnalyzer"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class OpeningAuctionConfiguration:
+    drive_delta_threshold: Decimal = Decimal("1")
+    minimum_confidence: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        _validate_decimal_confidence(self.minimum_confidence)
+        object.__setattr__(
+            self, "drive_delta_threshold", Decimal(str(self.drive_delta_threshold))
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class OpeningAuction:
+    auction_id: str
+    auction_type: OpeningAuctionType
+    session_id: str
+    reference_ids: tuple[str, ...]
+    confidence: Decimal = Decimal("1")
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.auction_id.strip() or not self.session_id.strip():
+            raise ValueError("opening auction ids are required")
+        if not self.reference_ids or len(set(self.reference_ids)) != len(
+            self.reference_ids
+        ):
+            raise ValueError("opening auction references must be unique")
+        _validate_decimal_confidence(self.confidence)
+        object.__setattr__(self, "reference_ids", tuple(self.reference_ids))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class OpeningAuctionStatistics:
+    total_auctions: int
+    open_drives: int
+    open_test_drives: int
+    open_auctions: int
+    rejection_reverses: int
+    unknown: int
+
+
+@dataclass(frozen=True, slots=True)
+class OpeningAuctionResult:
+    matrix: "FootprintMatrix"
+    auctions: tuple[OpeningAuction, ...]
+    sessions: TradingSessionResult
+    initial_balance: InitialBalanceResult
+    configuration: OpeningAuctionConfiguration = field(
+        default_factory=OpeningAuctionConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if (
+            self.sessions.matrix != self.matrix
+            or self.initial_balance.matrix != self.matrix
+        ):
+            raise ValueError("opening auction must reference graph matrix")
+        if self.auctions != tuple(sorted(self.auctions, key=lambda x: x.auction_id)):
+            raise ValueError("opening auctions must be ordered")
+        ids = [x.auction_id for x in self.auctions]
+        if len(set(ids)) != len(ids):
+            raise ValueError("duplicate opening auctions are not allowed")
+        cell_ids = {c.cell_id for c in self.matrix.cells}
+        session_ids = {s.session_id for s in self.sessions.sessions}
+        for auction in self.auctions:
+            if (
+                auction.session_id not in session_ids
+                or set(auction.reference_ids) - cell_ids
+            ):
+                raise ValueError("opening auction references are invalid")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, auction_id: str) -> OpeningAuction | None:
+        return next((x for x in self.auctions if x.auction_id == auction_id), None)
+
+    def statistics(self) -> OpeningAuctionStatistics:
+        return OpeningAuctionStatistics(
+            len(self.auctions),
+            len(
+                [
+                    x
+                    for x in self.auctions
+                    if x.auction_type == OpeningAuctionType.OPEN_DRIVE
+                ]
+            ),
+            len(
+                [
+                    x
+                    for x in self.auctions
+                    if x.auction_type == OpeningAuctionType.OPEN_TEST_DRIVE
+                ]
+            ),
+            len(
+                [
+                    x
+                    for x in self.auctions
+                    if x.auction_type
+                    in (
+                        OpeningAuctionType.OPEN_AUCTION,
+                        OpeningAuctionType.OPEN_AUCTION_IN_RANGE,
+                        OpeningAuctionType.OPEN_AUCTION_OUT_OF_RANGE,
+                    )
+                ]
+            ),
+            len(
+                [
+                    x
+                    for x in self.auctions
+                    if x.auction_type == OpeningAuctionType.OPEN_REJECTION_REVERSE
+                ]
+            ),
+            len(
+                [
+                    x
+                    for x in self.auctions
+                    if x.auction_type == OpeningAuctionType.UNKNOWN
+                ]
+            ),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class OpeningAuctionAnalyzer:
+    configuration: OpeningAuctionConfiguration = field(
+        default_factory=OpeningAuctionConfiguration
+    )
+
+    def analyze(
+        self,
+        matrix: "FootprintMatrix",
+        sessions: TradingSessionResult,
+        initial_balance: InitialBalanceResult,
+        statistics: SessionStatisticsResult | None = None,
+    ) -> OpeningAuctionResult:
+        out = []
+        for session in sessions.sessions:
+            opening = tuple(matrix.column(session.start_column))
+            refs = tuple(c.cell_id for c in opening)
+            deltas = tuple(_cell_delta_amount(c) for c in opening)
+            net = sum(deltas, Decimal("0"))
+            nonzero_signs = {1 if d > 0 else -1 for d in deltas if d != 0}
+            balance = next(
+                (
+                    x
+                    for x in initial_balance.balances
+                    if x.session_id == session.session_id
+                ),
+                None,
+            )
+            atype = OpeningAuctionType.UNKNOWN
+            if not opening:
+                atype = OpeningAuctionType.UNKNOWN
+            elif (
+                len(nonzero_signs) == 1
+                and abs(net) >= self.configuration.drive_delta_threshold
+            ):
+                atype = OpeningAuctionType.OPEN_DRIVE
+            elif balance is not None and balance.ib_break and net != 0:
+                atype = OpeningAuctionType.OPEN_TEST_DRIVE
+            elif balance is not None and balance.ib_extension > 0:
+                atype = OpeningAuctionType.OPEN_REJECTION_REVERSE
+            elif session.session_type == TradingSessionType.RTH:
+                atype = OpeningAuctionType.OPEN_AUCTION_IN_RANGE
+            else:
+                atype = OpeningAuctionType.OPEN_AUCTION
+            out.append(
+                OpeningAuction(
+                    f"{matrix.grid_id}:oa:{session.start_column}:{session.end_column}",
+                    atype,
+                    session.session_id,
+                    refs,
+                    Decimal("1"),
+                    {"net_open_delta": net},
+                )
+            )
+        return OpeningAuctionResult(
+            matrix,
+            tuple(sorted(out, key=lambda x: x.auction_id)),
+            sessions,
+            initial_balance,
+            self.configuration,
+            {"analyzer": "OpeningAuctionAnalyzer"},
+        )
+
+
 @dataclass(frozen=True, slots=True)
 class ImageFrame:
     """A captured image and its normalized frame metadata."""
@@ -1961,6 +2680,10 @@ class DetectionGraph:
     pullbacks: "PullbackResult | None" = None
     break_of_structure: "BreakOfStructureResult | None" = None
     change_of_character: "CHOCHResult | None" = None
+    trading_session: "TradingSessionResult | None" = None
+    session_statistics: "SessionStatisticsResult | None" = None
+    initial_balance: "InitialBalanceResult | None" = None
+    opening_auction: "OpeningAuctionResult | None" = None
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -2129,6 +2852,10 @@ class DetectionGraph:
             ("pullbacks", self.pullbacks),
             ("break of structure", self.break_of_structure),
             ("change of character", self.change_of_character),
+            ("trading session", self.trading_session),
+            ("session statistics", self.session_statistics),
+            ("initial balance", self.initial_balance),
+            ("opening auction", self.opening_auction),
         ):
             if result is not None:
                 if self.footprint_matrix is None:
@@ -2181,6 +2908,23 @@ class DetectionGraph:
             raise ValueError(
                 "change of character must reference graph break of structure"
             )
+        if (
+            self.session_statistics is not None
+            and self.trading_session is not None
+            and self.session_statistics.sessions != self.trading_session
+        ):
+            raise ValueError("session statistics must reference graph sessions")
+        if (
+            self.initial_balance is not None
+            and self.trading_session is not None
+            and self.initial_balance.sessions != self.trading_session
+        ):
+            raise ValueError("initial balance must reference graph sessions")
+        if self.opening_auction is not None and (
+            self.trading_session is not None
+            and self.opening_auction.sessions != self.trading_session
+        ):
+            raise ValueError("opening auction must reference graph sessions")
 
     @property
     def footprint_cells(self) -> tuple[DetectedObject, ...]:
@@ -8211,6 +8955,38 @@ class SequentialObjectDetectionPipeline:
             and break_of_structure is not None
             else None
         )
+        trading_session = (
+            TradingSessionDetector().detect(footprint_matrix)
+            if footprint_matrix is not None and trend_state is not None
+            else None
+        )
+        session_statistics = (
+            SessionStatisticsAnalyzer().analyze(
+                footprint_matrix,
+                trading_session,
+                footprint_imbalances,
+                absorption,
+                trend_state,
+            )
+            if footprint_matrix is not None and trading_session is not None
+            else None
+        )
+        initial_balance = (
+            InitialBalanceAnalyzer().analyze(footprint_matrix, trading_session)
+            if footprint_matrix is not None
+            and session_statistics is not None
+            and trading_session is not None
+            else None
+        )
+        opening_auction = (
+            OpeningAuctionAnalyzer().analyze(
+                footprint_matrix, trading_session, initial_balance, session_statistics
+            )
+            if footprint_matrix is not None
+            and trading_session is not None
+            and initial_balance is not None
+            else None
+        )
         return DetectionGraph(
             frame_id=graph.frame_id,
             objects=graph.objects,
@@ -8248,6 +9024,10 @@ class SequentialObjectDetectionPipeline:
             pullbacks=pullbacks,
             break_of_structure=break_of_structure,
             change_of_character=change_of_character,
+            trading_session=trading_session,
+            session_statistics=session_statistics,
+            initial_balance=initial_balance,
+            opening_auction=opening_auction,
         )
 
 
@@ -10514,3 +11294,91 @@ def _boundary_order(key: UnfinishedAuctionType | ExcessType | PoorAuctionType) -
         PoorAuctionType.POOR_LOW: 1,
     }
     return order[key]
+
+
+def _graph_trading_sessions(self: DetectionGraph) -> tuple[TradingSession, ...]:
+    return () if self.trading_session is None else self.trading_session.sessions
+
+
+def _graph_lookup_trading_session(
+    self: DetectionGraph, session_id: str
+) -> TradingSession | None:
+    return (
+        None
+        if self.trading_session is None
+        else self.trading_session.lookup(session_id)
+    )
+
+
+def _graph_trading_session_statistics(self: DetectionGraph) -> TradingSessionStatistics:
+    return (
+        TradingSessionStatistics(0, 0, 0, 0, 0, 0)
+        if self.trading_session is None
+        else self.trading_session.statistics()
+    )
+
+
+def _graph_lookup_session_statistics(
+    self: DetectionGraph, session_id: str
+) -> SessionStatistics | None:
+    return (
+        None
+        if self.session_statistics is None
+        else self.session_statistics.lookup(session_id)
+    )
+
+
+def _graph_initial_balances(self: DetectionGraph) -> tuple[InitialBalance, ...]:
+    return () if self.initial_balance is None else self.initial_balance.balances
+
+
+def _graph_lookup_initial_balance(
+    self: DetectionGraph, balance_id: str
+) -> InitialBalance | None:
+    return (
+        None
+        if self.initial_balance is None
+        else self.initial_balance.lookup(balance_id)
+    )
+
+
+def _graph_initial_balance_statistics(self: DetectionGraph) -> InitialBalanceStatistics:
+    return (
+        InitialBalanceStatistics(0, 0, 0)
+        if self.initial_balance is None
+        else self.initial_balance.statistics()
+    )
+
+
+def _graph_opening_auctions(self: DetectionGraph) -> tuple[OpeningAuction, ...]:
+    return () if self.opening_auction is None else self.opening_auction.auctions
+
+
+def _graph_lookup_opening_auction(
+    self: DetectionGraph, auction_id: str
+) -> OpeningAuction | None:
+    return (
+        None
+        if self.opening_auction is None
+        else self.opening_auction.lookup(auction_id)
+    )
+
+
+def _graph_opening_auction_statistics(self: DetectionGraph) -> OpeningAuctionStatistics:
+    return (
+        OpeningAuctionStatistics(0, 0, 0, 0, 0, 0)
+        if self.opening_auction is None
+        else self.opening_auction.statistics()
+    )
+
+
+DetectionGraph.trading_sessions = _graph_trading_sessions  # type: ignore[attr-defined]
+DetectionGraph.lookup_trading_session = _graph_lookup_trading_session  # type: ignore[attr-defined]
+DetectionGraph.trading_session_statistics = _graph_trading_session_statistics  # type: ignore[attr-defined]
+DetectionGraph.lookup_session_statistics = _graph_lookup_session_statistics  # type: ignore[attr-defined]
+DetectionGraph.initial_balances = _graph_initial_balances  # type: ignore[attr-defined]
+DetectionGraph.lookup_initial_balance = _graph_lookup_initial_balance  # type: ignore[attr-defined]
+DetectionGraph.initial_balance_statistics = _graph_initial_balance_statistics  # type: ignore[attr-defined]
+DetectionGraph.opening_auctions = _graph_opening_auctions  # type: ignore[attr-defined]
+DetectionGraph.lookup_opening_auction = _graph_lookup_opening_auction  # type: ignore[attr-defined]
+DetectionGraph.opening_auction_statistics = _graph_opening_auction_statistics  # type: ignore[attr-defined]
