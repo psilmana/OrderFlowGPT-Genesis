@@ -1,15 +1,19 @@
 # Release Notes
 
-## Bundle 7: Session Intelligence
+## Bundle 10: Fabio Video Ingestion
 
-Bundle 7 implements the Genesis Session Intelligence Engine milestones for trading session detection, deterministic session statistics, Initial Balance (IB), and opening auction analysis.
+Genesis now supports deterministic Fabio video ingestion and synchronization for sources such as `FabioVideo.mp4`.
 
-Genesis remains deterministic, immutable, reproducible, and platform independent. It does not perform AI reasoning, prediction, trading signals, probability estimation, machine learning, OCR changes, OpenCV changes, networking, threading, async execution, randomness, or vendor-specific logic.
+The Bundle 10 ingestion pipeline imports a video reference, decodes deterministic metadata, extracts deterministic frame references, maps timestamps, extracts audio timeline metadata, synchronizes frames to audio segments, runs the existing Genesis deterministic Vision-to-dataset path, and produces synchronized `TrainingSample` records in a `VideoDataset`.
 
-Bundle 8 introduces Multi-Timeframe Context.
+Bundle 10 is ingestion-only and synchronization-only:
 
-## Bundle 9: Dataset Builder & Annotation Infrastructure
+- NO speech recognition.
+- NO AI.
+- NO learning.
+- NO reasoning.
+- NO ML or neural networks.
+- NO prediction, strategy generation, or trade recommendations.
+- NO OCR modifications and NO OpenCV algorithm changes.
 
-Bundle 9 creates immutable AI-ready training datasets from deterministic Bundle 1-8 analysis graphs. Every analyzed frame can now become a complete `TrainingSample` with frame identity, timestamp metadata, graph-backed `FeatureVector` summaries, Fabio annotation placeholders, validation, statistics, serialization, and versioned JSONL, SQLite, or Parquet-compatible export.
-
-Bundle 9 performs no machine learning, AI reasoning, neural-network training, LLM calls, prediction, probabilities, strategy generation, vendor-specific logic, OCR modifications, or OpenCV changes. Bundle 10 introduces the Learning Engine.
+Bundle 11 introduces Transcript Alignment.

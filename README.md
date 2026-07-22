@@ -219,3 +219,18 @@ TrainingSampleBuilder
   ↓
 DatasetBuilder
 ```
+
+## Bundle 10: Fabio Video Ingestion
+
+Bundle 10 introduces deterministic Fabio video ingestion. Given a Fabio training video such as `FabioVideo.mp4`, Genesis can import the source, derive deterministic video identifiers, extract deterministic frame references, map frame timestamps, extract audio timeline metadata, synchronize frames to audio segments, run the existing Genesis Vision-to-dataset path, and emit synchronized `TrainingSample` records inside a `VideoDataset`.
+
+This bundle is intentionally limited to ingestion and synchronization:
+
+- NO speech recognition.
+- NO AI.
+- NO learning.
+- NO reasoning.
+- NO machine learning, neural networks, predictions, strategies, or trade recommendations.
+- NO OCR modifications and NO OpenCV algorithm changes.
+
+Bundle 11 introduces Transcript Alignment.
