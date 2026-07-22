@@ -346,3 +346,15 @@ Each extracted frame receives deterministic video, frame, timestamp, and content
 Audio support is metadata-only: Genesis extracts deterministic duration and segment timelines. There is NO speech recognition in Bundle 10.
 
 Bundle 10 explicitly contains NO AI, NO learning, NO reasoning, NO ML, NO neural networks, NO prediction, NO strategy generation, and NO trade recommendations. Bundle 11 introduces Transcript Alignment.
+
+## Bundle 11 Transcript Alignment Architecture
+
+The transcript alignment engine sits after Bundle 10 video/frame dataset creation and deterministic Genesis analysis:
+
+`Video → Frame Extraction → Genesis Analysis → Transcript Import → Transcript Alignment → TrainingSample`
+
+Immutable transcript models cover identifiers, metadata, tokens, sentences, paragraphs, segments, timelines, statistics, configuration, timeline alignments, frame alignments, confidence values, and transcript datasets. Importers support deterministic SRT, VTT, timestamped TXT, and JSON transcript data so future speech-to-text systems can provide timestamped text without adding semantic reasoning.
+
+Alignment is timestamp-only: `Frame → Timestamp → Sentence → TrainingSample`. Every frame alignment exposes the nearest sentence, previous sentence, next sentence, and active transcript window. DetectionGraph is extended only with transcript, frame-transcript, and alignment references; no market-analysis behavior is modified.
+
+Bundle 11 explicitly includes **NO AI reasoning**, **NO learning**, and **NO prediction**. Bundle 12 introduces Fabio Knowledge Extraction.
