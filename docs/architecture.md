@@ -300,3 +300,17 @@ Bundle 7 extends the immutable `DetectionGraph` with `trading_session`, `session
 All Bundle 7 components consume only existing immutable graph, footprint matrix, market structure, trend, delta, volume cluster, market profile, auction-market-theory, advanced-order-flow, and timestamp/context objects. They never inspect images, perform OCR, modify OpenCV behavior, use networking, spawn threads, run async work, use randomness, forecast outcomes, produce trading signals, estimate probabilities, or apply machine learning.
 
 Bundle 8 introduces Multi-Timeframe Context.
+
+## Bundle 8: Multi-Timeframe Context Architecture
+
+The Multi-Timeframe Context Engine runs after Session Intelligence in the sequential detection pipeline:
+
+Session Intelligence → TimeframeAnalyzer → AlignmentAnalyzer → ContextAggregationAnalyzer → ConfluenceAnalyzer
+
+The analyzers consume only immutable results produced by prior bundles, including trend state, market structure, session intelligence, market profile, auction market theory, delta, and volume cluster objects. They do not access OCR, image processing, OpenCV, networking, threads, async execution, randomness, or platform-specific services.
+
+`DetectionGraph` now carries optional `timeframe_context`, `alignment`, `context_aggregation`, and `confluence` result objects. Helper methods expose ordered tuples, lookup by identifier, and deterministic statistics. All Bundle 8 models validate ordering, duplicate identifiers, reference integrity, confidence ranges, and metadata immutability.
+
+The confluence engine exposes deterministic relationships only. It does not emit entries, exits, trade signals, strategy recommendations, probability estimates, predictions, AI reasoning, or machine-learning output.
+
+Bundle 9 introduces the Dataset Builder for Fabio video learning.

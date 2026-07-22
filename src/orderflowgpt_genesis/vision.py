@@ -2640,6 +2640,560 @@ class DetectedObject:
         object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
 
 
+class TimeframeType(Enum):
+    TICK = "TICK"
+    ONE_MINUTE = "ONE_MINUTE"
+    FIVE_MINUTE = "FIVE_MINUTE"
+    FIFTEEN_MINUTE = "FIFTEEN_MINUTE"
+    THIRTY_MINUTE = "THIRTY_MINUTE"
+    ONE_HOUR = "ONE_HOUR"
+    FOUR_HOUR = "FOUR_HOUR"
+    DAILY = "DAILY"
+    UNKNOWN = "UNKNOWN"
+
+
+class AlignmentType(Enum):
+    FULLY_ALIGNED = "FULLY_ALIGNED"
+    PARTIALLY_ALIGNED = "PARTIALLY_ALIGNED"
+    OPPOSING = "OPPOSING"
+    NEUTRAL = "NEUTRAL"
+
+
+class ConfluenceType(Enum):
+    STRONG_CONFLUENCE = "STRONG_CONFLUENCE"
+    MODERATE_CONFLUENCE = "MODERATE_CONFLUENCE"
+    WEAK_CONFLUENCE = "WEAK_CONFLUENCE"
+    NO_CONFLUENCE = "NO_CONFLUENCE"
+
+
+def _require_reference_ids(values: tuple[str, ...], label: str) -> None:
+    if not values:
+        raise ValueError(f"{label} references are required")
+    if any(not value.strip() for value in values):
+        raise ValueError(f"{label} references cannot be blank")
+    if len(set(values)) != len(values):
+        raise ValueError(f"{label} references must be unique")
+
+
+def _direction(value: Any) -> str:
+    text = getattr(value, "value", str(value)).upper()
+    if "BULL" in text or "ASK" in text or "BUY" in text or "DEMAND" in text:
+        return "bullish"
+    if "BEAR" in text or "BID" in text or "SELL" in text or "SUPPLY" in text:
+        return "bearish"
+    return "neutral"
+
+
+_TIMEFRAME_ORDER = {
+    TimeframeType.TICK: 0,
+    TimeframeType.ONE_MINUTE: 1,
+    TimeframeType.FIVE_MINUTE: 2,
+    TimeframeType.FIFTEEN_MINUTE: 3,
+    TimeframeType.THIRTY_MINUTE: 4,
+    TimeframeType.ONE_HOUR: 5,
+    TimeframeType.FOUR_HOUR: 6,
+    TimeframeType.DAILY: 7,
+    TimeframeType.UNKNOWN: 8,
+}
+
+
+@dataclass(frozen=True, slots=True)
+class TimeframeContext:
+    context_id: str
+    timeframe_type: TimeframeType
+    reference_ids: tuple[str, ...]
+    dominant_direction: str = "neutral"
+    confidence: Decimal = Decimal("1")
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.context_id.strip():
+            raise ValueError("timeframe context id is required")
+        _require_reference_ids(tuple(self.reference_ids), "timeframe context")
+        if self.dominant_direction not in ("bullish", "bearish", "neutral"):
+            raise ValueError("timeframe direction is invalid")
+        _validate_decimal_confidence(Decimal(str(self.confidence)))
+        object.__setattr__(self, "reference_ids", tuple(self.reference_ids))
+        object.__setattr__(self, "confidence", Decimal(str(self.confidence)))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class TimeframeConfiguration:
+    enabled_timeframes: tuple[TimeframeType, ...] = (TimeframeType.ONE_MINUTE,)
+    minimum_confidence: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        if not self.enabled_timeframes:
+            raise ValueError("enabled timeframes are required")
+        if len(set(self.enabled_timeframes)) != len(self.enabled_timeframes):
+            raise ValueError("enabled timeframes must be unique")
+        ordered = tuple(
+            sorted(self.enabled_timeframes, key=lambda x: _TIMEFRAME_ORDER[x])
+        )
+        if tuple(self.enabled_timeframes) != ordered:
+            raise ValueError("enabled timeframes must be ordered")
+        _validate_decimal_confidence(Decimal(str(self.minimum_confidence)))
+        object.__setattr__(self, "enabled_timeframes", tuple(self.enabled_timeframes))
+        object.__setattr__(
+            self, "minimum_confidence", Decimal(str(self.minimum_confidence))
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class TimeframeStatistics:
+    total_contexts: int
+    bullish_contexts: int
+    bearish_contexts: int
+    neutral_contexts: int
+
+
+@dataclass(frozen=True, slots=True)
+class TimeframeResult:
+    contexts: tuple[TimeframeContext, ...]
+    configuration: TimeframeConfiguration = field(
+        default_factory=TimeframeConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        ordered = tuple(
+            sorted(
+                self.contexts,
+                key=lambda x: (_TIMEFRAME_ORDER[x.timeframe_type], x.context_id),
+            )
+        )
+        if self.contexts != ordered:
+            raise ValueError("timeframe contexts must be ordered")
+        ids = [x.context_id for x in self.contexts]
+        if len(set(ids)) != len(ids):
+            raise ValueError("duplicate timeframe contexts are not allowed")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, context_id: str) -> TimeframeContext | None:
+        return next((x for x in self.contexts if x.context_id == context_id), None)
+
+    def by_type(self, timeframe_type: TimeframeType) -> tuple[TimeframeContext, ...]:
+        return tuple(x for x in self.contexts if x.timeframe_type == timeframe_type)
+
+    def statistics(self) -> TimeframeStatistics:
+        return TimeframeStatistics(
+            len(self.contexts),
+            sum(x.dominant_direction == "bullish" for x in self.contexts),
+            sum(x.dominant_direction == "bearish" for x in self.contexts),
+            sum(x.dominant_direction == "neutral" for x in self.contexts),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class TimeframeAnalyzer:
+    configuration: TimeframeConfiguration = field(
+        default_factory=TimeframeConfiguration
+    )
+
+    def analyze(self, graph: "DetectionGraph") -> TimeframeResult:
+        refs: list[str] = []
+        dirs: list[str] = []
+        for attr, collection, id_attr, type_attr in (
+            ("trend_state", "states", "state_id", "state_type"),
+            ("market_structure", "structures", "structure_id", "structure_type"),
+        ):
+            result = getattr(graph, attr)
+            if result is None:
+                continue
+            for item in getattr(result, collection):
+                refs.append(getattr(item, id_attr))
+                dirs.append(_direction(getattr(item, type_attr)))
+        if graph.trading_session is not None:
+            refs.extend(x.session_id for x in graph.trading_session.sessions)
+        if not refs:
+            refs = [graph.frame_id]
+        direction = "neutral"
+        if dirs.count("bullish") > dirs.count("bearish"):
+            direction = "bullish"
+        elif dirs.count("bearish") > dirs.count("bullish"):
+            direction = "bearish"
+        contexts = tuple(
+            TimeframeContext(
+                f"{graph.frame_id}:tf:{tf.value.lower()}", tf, tuple(refs), direction
+            )
+            for tf in self.configuration.enabled_timeframes
+        )
+        return TimeframeResult(
+            contexts, self.configuration, {"analyzer": "TimeframeAnalyzer"}
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class Alignment:
+    alignment_id: str
+    alignment_type: AlignmentType
+    timeframe_ids: tuple[str, ...]
+    confidence: Decimal = Decimal("1")
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.alignment_id.strip():
+            raise ValueError("alignment id is required")
+        _require_reference_ids(tuple(self.timeframe_ids), "alignment")
+        _validate_decimal_confidence(Decimal(str(self.confidence)))
+        object.__setattr__(self, "timeframe_ids", tuple(self.timeframe_ids))
+        object.__setattr__(self, "confidence", Decimal(str(self.confidence)))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class AlignmentConfiguration:
+    minimum_confidence: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        _validate_decimal_confidence(Decimal(str(self.minimum_confidence)))
+
+
+@dataclass(frozen=True, slots=True)
+class AlignmentStatistics:
+    total_alignments: int
+    fully_aligned: int
+    partially_aligned: int
+    opposing: int
+    neutral: int
+
+
+@dataclass(frozen=True, slots=True)
+class AlignmentResult:
+    alignments: tuple[Alignment, ...]
+    timeframes: TimeframeResult
+    configuration: AlignmentConfiguration = field(
+        default_factory=AlignmentConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.alignments != tuple(
+            sorted(self.alignments, key=lambda x: x.alignment_id)
+        ):
+            raise ValueError("alignments must be ordered")
+        ids = [x.alignment_id for x in self.alignments]
+        if len(set(ids)) != len(ids):
+            raise ValueError("duplicate alignments are not allowed")
+        tfids = {x.context_id for x in self.timeframes.contexts}
+        for a in self.alignments:
+            if set(a.timeframe_ids) - tfids:
+                raise ValueError("alignment must reference timeframe contexts")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, alignment_id: str) -> Alignment | None:
+        return next(
+            (x for x in self.alignments if x.alignment_id == alignment_id), None
+        )
+
+    def statistics(self) -> AlignmentStatistics:
+        return AlignmentStatistics(
+            len(self.alignments),
+            sum(
+                x.alignment_type == AlignmentType.FULLY_ALIGNED for x in self.alignments
+            ),
+            sum(
+                x.alignment_type == AlignmentType.PARTIALLY_ALIGNED
+                for x in self.alignments
+            ),
+            sum(x.alignment_type == AlignmentType.OPPOSING for x in self.alignments),
+            sum(x.alignment_type == AlignmentType.NEUTRAL for x in self.alignments),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class AlignmentAnalyzer:
+    configuration: AlignmentConfiguration = field(
+        default_factory=AlignmentConfiguration
+    )
+
+    def analyze(self, timeframes: TimeframeResult) -> AlignmentResult:
+        dirs = [x.dominant_direction for x in timeframes.contexts]
+        non = [d for d in dirs if d != "neutral"]
+        if not non:
+            at = AlignmentType.NEUTRAL
+        elif len(set(non)) == 1 and len(non) == len(dirs):
+            at = AlignmentType.FULLY_ALIGNED
+        elif "bullish" in non and "bearish" in non:
+            at = AlignmentType.OPPOSING
+        else:
+            at = AlignmentType.PARTIALLY_ALIGNED
+        item = Alignment(
+            "alignment:primary", at, tuple(x.context_id for x in timeframes.contexts)
+        )
+        return AlignmentResult(
+            (item,), timeframes, self.configuration, {"analyzer": "AlignmentAnalyzer"}
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class ContextAggregation:
+    aggregation_id: str
+    source_type: str
+    reference_ids: tuple[str, ...]
+    direction: str = "neutral"
+    confidence: Decimal = Decimal("1")
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.aggregation_id.strip() or not self.source_type.strip():
+            raise ValueError("context aggregation id and source are required")
+        _require_reference_ids(tuple(self.reference_ids), "context aggregation")
+        if self.direction not in ("bullish", "bearish", "neutral"):
+            raise ValueError("context aggregation direction is invalid")
+        _validate_decimal_confidence(Decimal(str(self.confidence)))
+        object.__setattr__(self, "reference_ids", tuple(self.reference_ids))
+        object.__setattr__(self, "confidence", Decimal(str(self.confidence)))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class ContextAggregationConfiguration:
+    minimum_confidence: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        _validate_decimal_confidence(Decimal(str(self.minimum_confidence)))
+
+
+@dataclass(frozen=True, slots=True)
+class ContextAggregationStatistics:
+    total_aggregations: int
+    bullish: int
+    bearish: int
+    neutral: int
+
+
+@dataclass(frozen=True, slots=True)
+class ContextAggregationResult:
+    aggregations: tuple[ContextAggregation, ...]
+    configuration: ContextAggregationConfiguration = field(
+        default_factory=ContextAggregationConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.aggregations != tuple(
+            sorted(self.aggregations, key=lambda x: x.aggregation_id)
+        ):
+            raise ValueError("context aggregations must be ordered")
+        ids = [x.aggregation_id for x in self.aggregations]
+        if len(set(ids)) != len(ids):
+            raise ValueError("duplicate context aggregations are not allowed")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, aggregation_id: str) -> ContextAggregation | None:
+        return next(
+            (x for x in self.aggregations if x.aggregation_id == aggregation_id), None
+        )
+
+    def statistics(self) -> ContextAggregationStatistics:
+        return ContextAggregationStatistics(
+            len(self.aggregations),
+            sum(x.direction == "bullish" for x in self.aggregations),
+            sum(x.direction == "bearish" for x in self.aggregations),
+            sum(x.direction == "neutral" for x in self.aggregations),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class ContextAggregationAnalyzer:
+    configuration: ContextAggregationConfiguration = field(
+        default_factory=ContextAggregationConfiguration
+    )
+
+    def analyze(self, graph: "DetectionGraph") -> ContextAggregationResult:
+        specs = (
+            ("trend", graph.trend_state, "states", "state_id", "state_type"),
+            (
+                "market_structure",
+                graph.market_structure,
+                "structures",
+                "structure_id",
+                "structure_type",
+            ),
+            ("delta", graph.footprint_delta, "rows", "row_index", "row_delta"),
+            (
+                "volume_clusters",
+                graph.volume_clusters,
+                "clusters",
+                "cell_id",
+                "cluster_type",
+            ),
+            (
+                "session",
+                graph.trading_session,
+                "sessions",
+                "session_id",
+                "session_type",
+            ),
+        )
+        out = []
+        for name, result, coll, idattr, tattr in specs:
+            if result is None:
+                continue
+            refs = tuple(str(getattr(x, idattr)) for x in getattr(result, coll))
+            if refs:
+                dirs = [_direction(getattr(x, tattr)) for x in getattr(result, coll)]
+                direction = (
+                    "bullish"
+                    if dirs.count("bullish") > dirs.count("bearish")
+                    else (
+                        "bearish"
+                        if dirs.count("bearish") > dirs.count("bullish")
+                        else "neutral"
+                    )
+                )
+                out.append(
+                    ContextAggregation(f"aggregation:{name}", name, refs, direction)
+                )
+        if not out:
+            out.append(
+                ContextAggregation(
+                    "aggregation:none", "none", (graph.frame_id,), "neutral"
+                )
+            )
+        return ContextAggregationResult(
+            tuple(sorted(out, key=lambda x: x.aggregation_id)),
+            self.configuration,
+            {"analyzer": "ContextAggregationAnalyzer"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class Confluence:
+    confluence_id: str
+    confluence_type: ConfluenceType
+    aggregation_ids: tuple[str, ...]
+    relationship: str = "neutral"
+    confidence: Decimal = Decimal("1")
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.confluence_id.strip():
+            raise ValueError("confluence id is required")
+        _require_reference_ids(tuple(self.aggregation_ids), "confluence")
+        _validate_decimal_confidence(Decimal(str(self.confidence)))
+        object.__setattr__(self, "aggregation_ids", tuple(self.aggregation_ids))
+        object.__setattr__(self, "confidence", Decimal(str(self.confidence)))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class ConfluenceConfiguration:
+    strong_threshold: int = 4
+    moderate_threshold: int = 3
+    weak_threshold: int = 2
+    minimum_confidence: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        if not (
+            self.strong_threshold >= self.moderate_threshold >= self.weak_threshold >= 1
+        ):
+            raise ValueError("confluence thresholds must be ordered")
+        _validate_decimal_confidence(Decimal(str(self.minimum_confidence)))
+
+
+@dataclass(frozen=True, slots=True)
+class ConfluenceStatistics:
+    total_confluences: int
+    strong: int
+    moderate: int
+    weak: int
+    none: int
+
+
+@dataclass(frozen=True, slots=True)
+class ConfluenceResult:
+    confluences: tuple[Confluence, ...]
+    aggregations: ContextAggregationResult
+    configuration: ConfluenceConfiguration = field(
+        default_factory=ConfluenceConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.confluences != tuple(
+            sorted(self.confluences, key=lambda x: x.confluence_id)
+        ):
+            raise ValueError("confluences must be ordered")
+        ids = [x.confluence_id for x in self.confluences]
+        if len(set(ids)) != len(ids):
+            raise ValueError("duplicate confluences are not allowed")
+        agids = {x.aggregation_id for x in self.aggregations.aggregations}
+        for c in self.confluences:
+            if set(c.aggregation_ids) - agids:
+                raise ValueError("confluence must reference aggregations")
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, confluence_id: str) -> Confluence | None:
+        return next(
+            (x for x in self.confluences if x.confluence_id == confluence_id), None
+        )
+
+    def statistics(self) -> ConfluenceStatistics:
+        return ConfluenceStatistics(
+            len(self.confluences),
+            sum(
+                x.confluence_type == ConfluenceType.STRONG_CONFLUENCE
+                for x in self.confluences
+            ),
+            sum(
+                x.confluence_type == ConfluenceType.MODERATE_CONFLUENCE
+                for x in self.confluences
+            ),
+            sum(
+                x.confluence_type == ConfluenceType.WEAK_CONFLUENCE
+                for x in self.confluences
+            ),
+            sum(
+                x.confluence_type == ConfluenceType.NO_CONFLUENCE
+                for x in self.confluences
+            ),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class ConfluenceAnalyzer:
+    configuration: ConfluenceConfiguration = field(
+        default_factory=ConfluenceConfiguration
+    )
+
+    def analyze(self, aggregations: ContextAggregationResult) -> ConfluenceResult:
+        dirs = [
+            x.direction for x in aggregations.aggregations if x.direction != "neutral"
+        ]
+        relationship = (
+            "neutral" if not dirs else max(("bullish", "bearish"), key=dirs.count)
+        )
+        count = dirs.count(relationship) if relationship != "neutral" else 0
+        ctype = (
+            ConfluenceType.STRONG_CONFLUENCE
+            if count >= self.configuration.strong_threshold
+            else (
+                ConfluenceType.MODERATE_CONFLUENCE
+                if count >= self.configuration.moderate_threshold
+                else (
+                    ConfluenceType.WEAK_CONFLUENCE
+                    if count >= self.configuration.weak_threshold
+                    else ConfluenceType.NO_CONFLUENCE
+                )
+            )
+        )
+        item = Confluence(
+            "confluence:primary",
+            ctype,
+            tuple(x.aggregation_id for x in aggregations.aggregations),
+            relationship,
+        )
+        return ConfluenceResult(
+            (item,),
+            aggregations,
+            self.configuration,
+            {"analyzer": "ConfluenceAnalyzer"},
+        )
+
+
 @dataclass(frozen=True, slots=True)
 class DetectionGraph:
     """All detected objects for one frame with parent/child reference validation."""
@@ -2684,6 +3238,10 @@ class DetectionGraph:
     session_statistics: "SessionStatisticsResult | None" = None
     initial_balance: "InitialBalanceResult | None" = None
     opening_auction: "OpeningAuctionResult | None" = None
+    timeframe_context: "TimeframeResult | None" = None
+    alignment: "AlignmentResult | None" = None
+    context_aggregation: "ContextAggregationResult | None" = None
+    confluence: "ConfluenceResult | None" = None
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -8987,6 +9545,52 @@ class SequentialObjectDetectionPipeline:
             and initial_balance is not None
             else None
         )
+        interim_graph = DetectionGraph(
+            frame_id=graph.frame_id,
+            objects=graph.objects,
+            grid_coordinate_system=graph.grid_coordinate_system,
+            cell_classifications=graph.cell_classifications,
+            ocr_results=graph.ocr_results,
+            footprint_interpretation=graph.footprint_interpretation,
+            parsed_values=graph.parsed_values,
+            footprint_matrix=footprint_matrix,
+            footprint_imbalances=footprint_imbalances,
+            stacked_imbalances=stacked_imbalances,
+            absorption=absorption,
+            footprint_delta=footprint_delta,
+            volume_clusters=volume_clusters,
+            point_of_control=point_of_control,
+            high_volume_nodes=high_volume_nodes,
+            low_volume_nodes=low_volume_nodes,
+            value_area=value_area,
+            developing_poc=developing_poc,
+            developing_value_area=developing_value_area,
+            unfinished_auctions=unfinished_auctions,
+            excess=excess,
+            poor_auctions=poor_auctions,
+            single_prints=single_prints,
+            naked_pocs=naked_pocs,
+            delta_divergence=delta_divergence,
+            cumulative_delta=cumulative_delta,
+            delta_momentum=delta_momentum,
+            exhaustion=exhaustion,
+            swing_result=swing_result,
+            support_resistance=support_resistance,
+            supply_demand_zones=supply_demand_zones,
+            market_structure=market_structure,
+            trend_state=trend_state,
+            pullbacks=pullbacks,
+            break_of_structure=break_of_structure,
+            change_of_character=change_of_character,
+            trading_session=trading_session,
+            session_statistics=session_statistics,
+            initial_balance=initial_balance,
+            opening_auction=opening_auction,
+        )
+        timeframe_context = TimeframeAnalyzer().analyze(interim_graph)
+        alignment = AlignmentAnalyzer().analyze(timeframe_context)
+        context_aggregation = ContextAggregationAnalyzer().analyze(interim_graph)
+        confluence = ConfluenceAnalyzer().analyze(context_aggregation)
         return DetectionGraph(
             frame_id=graph.frame_id,
             objects=graph.objects,
@@ -9028,6 +9632,10 @@ class SequentialObjectDetectionPipeline:
             session_statistics=session_statistics,
             initial_balance=initial_balance,
             opening_auction=opening_auction,
+            timeframe_context=timeframe_context,
+            alignment=alignment,
+            context_aggregation=context_aggregation,
+            confluence=confluence,
         )
 
 
@@ -11382,3 +11990,103 @@ DetectionGraph.initial_balance_statistics = _graph_initial_balance_statistics  #
 DetectionGraph.opening_auctions = _graph_opening_auctions  # type: ignore[attr-defined]
 DetectionGraph.lookup_opening_auction = _graph_lookup_opening_auction  # type: ignore[attr-defined]
 DetectionGraph.opening_auction_statistics = _graph_opening_auction_statistics  # type: ignore[attr-defined]
+
+
+def _graph_timeframe_contexts(self: DetectionGraph) -> tuple[TimeframeContext, ...]:
+    return () if self.timeframe_context is None else self.timeframe_context.contexts
+
+
+def _graph_lookup_timeframe_context(
+    self: DetectionGraph, context_id: str
+) -> TimeframeContext | None:
+    return (
+        None
+        if self.timeframe_context is None
+        else self.timeframe_context.lookup(context_id)
+    )
+
+
+def _graph_timeframe_statistics(self: DetectionGraph) -> TimeframeStatistics:
+    return (
+        TimeframeStatistics(0, 0, 0, 0)
+        if self.timeframe_context is None
+        else self.timeframe_context.statistics()
+    )
+
+
+def _graph_alignments(self: DetectionGraph) -> tuple[Alignment, ...]:
+    return () if self.alignment is None else self.alignment.alignments
+
+
+def _graph_lookup_alignment(
+    self: DetectionGraph, alignment_id: str
+) -> Alignment | None:
+    return None if self.alignment is None else self.alignment.lookup(alignment_id)
+
+
+def _graph_alignment_statistics(self: DetectionGraph) -> AlignmentStatistics:
+    return (
+        AlignmentStatistics(0, 0, 0, 0, 0)
+        if self.alignment is None
+        else self.alignment.statistics()
+    )
+
+
+def _graph_context_aggregations(self: DetectionGraph) -> tuple[ContextAggregation, ...]:
+    return (
+        ()
+        if self.context_aggregation is None
+        else self.context_aggregation.aggregations
+    )
+
+
+def _graph_lookup_context_aggregation(
+    self: DetectionGraph, aggregation_id: str
+) -> ContextAggregation | None:
+    return (
+        None
+        if self.context_aggregation is None
+        else self.context_aggregation.lookup(aggregation_id)
+    )
+
+
+def _graph_context_aggregation_statistics(
+    self: DetectionGraph,
+) -> ContextAggregationStatistics:
+    return (
+        ContextAggregationStatistics(0, 0, 0, 0)
+        if self.context_aggregation is None
+        else self.context_aggregation.statistics()
+    )
+
+
+def _graph_confluences(self: DetectionGraph) -> tuple[Confluence, ...]:
+    return () if self.confluence is None else self.confluence.confluences
+
+
+def _graph_lookup_confluence(
+    self: DetectionGraph, confluence_id: str
+) -> Confluence | None:
+    return None if self.confluence is None else self.confluence.lookup(confluence_id)
+
+
+def _graph_confluence_statistics(self: DetectionGraph) -> ConfluenceStatistics:
+    return (
+        ConfluenceStatistics(0, 0, 0, 0, 0)
+        if self.confluence is None
+        else self.confluence.statistics()
+    )
+
+
+DetectionGraph.timeframe_contexts = _graph_timeframe_contexts  # type: ignore[attr-defined]
+DetectionGraph.lookup_timeframe_context = _graph_lookup_timeframe_context  # type: ignore[attr-defined]
+DetectionGraph.timeframe_statistics = _graph_timeframe_statistics  # type: ignore[attr-defined]
+DetectionGraph.alignments = _graph_alignments  # type: ignore[attr-defined]
+DetectionGraph.lookup_alignment = _graph_lookup_alignment  # type: ignore[attr-defined]
+DetectionGraph.alignment_statistics = _graph_alignment_statistics  # type: ignore[attr-defined]
+DetectionGraph.context_aggregations = _graph_context_aggregations  # type: ignore[attr-defined]
+DetectionGraph.lookup_context_aggregation = _graph_lookup_context_aggregation  # type: ignore[attr-defined]
+DetectionGraph.context_aggregation_statistics = _graph_context_aggregation_statistics  # type: ignore[attr-defined]
+DetectionGraph.confluences = _graph_confluences  # type: ignore[attr-defined]
+DetectionGraph.lookup_confluence = _graph_lookup_confluence  # type: ignore[attr-defined]
+DetectionGraph.confluence_statistics = _graph_confluence_statistics  # type: ignore[attr-defined]
