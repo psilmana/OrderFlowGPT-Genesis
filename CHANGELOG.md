@@ -156,3 +156,10 @@ Bundle 9 introduces the Dataset Builder for Fabio video learning.
 - Added SRT, VTT, timestamped TXT, and JSON transcript parsing for reproducible teaching examples.
 - Extended DetectionGraph only with transcript reference fields and TrainingSample with an optional transcript alignment reference.
 - Documented that Bundle 11 performs no AI reasoning, no learning, and no prediction; Bundle 12 introduces Fabio Knowledge Extraction.
+
+## Bundle 12 - Fabio Knowledge Extraction
+
+- Added deterministic Fabio Knowledge Extraction Engine models and extractor for building immutable teaching datasets from Bundle 10 video frames, Bundle 11 transcript alignment, and Genesis DetectionGraph references.
+- Extended TrainingSample and DetectionGraph with knowledge observation, reference, topic, transcript, frame, timeline, and statistics references only; existing market analysis is unchanged.
+- Bundle 12 performs NO learning, NO prediction, NO AI reasoning, NO strategy generation, NO trade recommendations, and NO probabilities. Fabio transcript text is the only knowledge source.
+- Bundle 13 introduces the Learning Engine.

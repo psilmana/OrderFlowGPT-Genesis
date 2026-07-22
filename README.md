@@ -240,3 +240,9 @@ Bundle 11 introduces Transcript Alignment.
 Bundle 11 adds a deterministic transcript alignment layer for Fabio videos. It imports SRT, VTT, timestamped TXT, and JSON transcript payloads, normalizes them into immutable transcript timelines, and maps extracted video frames to the nearest, previous, next, and active transcript sentences. The aligned transcript references can be attached to dataset training samples without changing Genesis market-analysis logic.
 
 This bundle explicitly performs **no AI reasoning**, **no learning**, **no prediction**, **no strategy generation**, and **no trade recommendation**. Speech recognition output may be supplied later only as deterministic transcript input. Bundle 12 introduces Fabio Knowledge Extraction.
+
+### Bundle 12: Fabio Knowledge Extraction
+
+Bundle 12 transforms synchronized Fabio videos into deterministic teaching datasets by linking Fabio transcript statements to timestamps, frames, Genesis `DetectionGraph` instances, and `TrainingSample` records. The extraction engine uses deterministic transcript keyword rules for categories such as absorption, stacked imbalance, POC, value area, trend, market structure, auction theory, delta, session, volume, confluence, general observation, and unknown.
+
+Bundle 12 performs **NO learning**, **NO prediction**, **NO AI reasoning**, and **NO strategy generation**. Fabio transcript text is the only knowledge source, and existing market analysis is not modified. Bundle 13 introduces the Learning Engine.
