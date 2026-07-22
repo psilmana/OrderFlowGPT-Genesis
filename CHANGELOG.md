@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.21 - Bundle 6 Trend Engine
+
+- Added deterministic Trend State Detection, Pullback Detection, Break of Structure, and Change of Character using only immutable objects produced by previous bundles.
+- Extended `DetectionGraph`, public exports, and `SequentialObjectDetectionPipeline` with Bundle 6 results, lookup helpers, and statistics without removing previous APIs.
+- Documented that Genesis still does not perform AI reasoning, prediction, trading signals, probability estimation, machine learning, OCR modifications, OpenCV changes, networking, threading, async work, randomness, or vendor-specific logic. Bundle 7 introduces Session Intelligence.
+
+
 ## 0.1.19 - Bundle 4 Advanced Order Flow Analytics
 
 - Added deterministic Advanced Order Flow Analytics for Delta Divergence Detection, Cumulative Delta, Delta Momentum Analysis, and Exhaustion Detection using only immutable objects produced by previous milestones.
