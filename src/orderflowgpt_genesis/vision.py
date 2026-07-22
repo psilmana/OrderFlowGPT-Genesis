@@ -180,6 +180,40 @@ class ZoneType(Enum):
     BROKEN_DEMAND = "BROKEN_DEMAND"
 
 
+class TrendStateType(Enum):
+    STRONG_BULLISH = "STRONG_BULLISH"
+    BULLISH = "BULLISH"
+    WEAK_BULLISH = "WEAK_BULLISH"
+    NEUTRAL = "NEUTRAL"
+    WEAK_BEARISH = "WEAK_BEARISH"
+    BEARISH = "BEARISH"
+    STRONG_BEARISH = "STRONG_BEARISH"
+
+
+class PullbackType(Enum):
+    BULLISH_PULLBACK = "BULLISH_PULLBACK"
+    BEARISH_PULLBACK = "BEARISH_PULLBACK"
+    DEEP_PULLBACK = "DEEP_PULLBACK"
+    SHALLOW_PULLBACK = "SHALLOW_PULLBACK"
+    COMPLETED_PULLBACK = "COMPLETED_PULLBACK"
+    NO_PULLBACK = "NO_PULLBACK"
+
+
+class BreakOfStructureType(Enum):
+    BULLISH_BOS = "BULLISH_BOS"
+    BEARISH_BOS = "BEARISH_BOS"
+    INTERNAL_BOS = "INTERNAL_BOS"
+    EXTERNAL_BOS = "EXTERNAL_BOS"
+    NO_BOS = "NO_BOS"
+
+
+class ChangeOfCharacterType(Enum):
+    BULLISH_CHOCH = "BULLISH_CHOCH"
+    BEARISH_CHOCH = "BEARISH_CHOCH"
+    CONFIRMED_CHOCH = "CONFIRMED_CHOCH"
+    NO_CHOCH = "NO_CHOCH"
+
+
 class MarketStructureType(Enum):
     HIGHER_HIGH = "HIGHER_HIGH"
     HIGHER_LOW = "HIGHER_LOW"
@@ -951,6 +985,648 @@ class MarketStructureAnalyzer:
         )
 
 
+def _structure_counts(result: MarketStructureResult) -> tuple[int, int, int, int]:
+    stats = result.statistics()
+    return stats.higher_highs, stats.higher_lows, stats.lower_highs, stats.lower_lows
+
+
+def _market_structure_refs(
+    result: MarketStructureResult, refs: tuple[str, ...]
+) -> None:
+    ids = {s.structure_id for s in result.structures}
+    if set(refs) - ids:
+        raise ValueError("trend engine references must reference market structures")
+
+
+@dataclass(frozen=True, slots=True)
+class TrendStateConfiguration:
+    strong_threshold: int = 4
+    minimum_confidence: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        if self.strong_threshold <= 0:
+            raise ValueError("strong threshold must be positive")
+        _validate_decimal_confidence(self.minimum_confidence)
+
+
+@dataclass(frozen=True, slots=True)
+class TrendState:
+    state_id: str
+    state_type: TrendStateType
+    reference_ids: tuple[str, ...]
+    confidence: Decimal = Decimal("1")
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.state_id.strip():
+            raise ValueError("trend state id is required")
+        if not self.reference_ids or len(set(self.reference_ids)) != len(
+            self.reference_ids
+        ):
+            raise ValueError("trend state references must be unique")
+        _validate_decimal_confidence(self.confidence)
+        object.__setattr__(self, "reference_ids", tuple(self.reference_ids))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class TrendStateStatistics:
+    total_states: int
+    bullish_states: int
+    bearish_states: int
+    neutral_states: int
+    strong_states: int
+
+
+@dataclass(frozen=True, slots=True)
+class TrendStateResult:
+    matrix: "FootprintMatrix"
+    states: tuple[TrendState, ...]
+    market_structure: MarketStructureResult
+    configuration: TrendStateConfiguration = field(
+        default_factory=TrendStateConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.market_structure.matrix != self.matrix:
+            raise ValueError("trend state must reference market structure matrix")
+        if self.states != tuple(sorted(self.states, key=lambda x: x.state_id)):
+            raise ValueError("trend states must be ordered")
+        ids = [x.state_id for x in self.states]
+        if len(set(ids)) != len(ids):
+            raise ValueError("duplicate trend states are not allowed")
+        for x in self.states:
+            _market_structure_refs(self.market_structure, x.reference_ids)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, state_id: str) -> TrendState | None:
+        return next((x for x in self.states if x.state_id == state_id), None)
+
+    def statistics(self) -> TrendStateStatistics:
+        return TrendStateStatistics(
+            len(self.states),
+            len([x for x in self.states if "BULLISH" in x.state_type.value]),
+            len([x for x in self.states if "BEARISH" in x.state_type.value]),
+            len([x for x in self.states if x.state_type == TrendStateType.NEUTRAL]),
+            len([x for x in self.states if "STRONG" in x.state_type.value]),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class TrendStateAnalyzer:
+    configuration: TrendStateConfiguration = field(
+        default_factory=TrendStateConfiguration
+    )
+
+    def analyze(
+        self, matrix: "FootprintMatrix", market_structure: MarketStructureResult
+    ) -> TrendStateResult:
+        hh, hl, lh, ll = _structure_counts(market_structure)
+        score = hh + hl - lh - ll
+        state_type = TrendStateType.NEUTRAL
+        if score >= self.configuration.strong_threshold:
+            state_type = TrendStateType.STRONG_BULLISH
+        elif score > 1:
+            state_type = TrendStateType.BULLISH
+        elif score == 1:
+            state_type = TrendStateType.WEAK_BULLISH
+        elif score <= -self.configuration.strong_threshold:
+            state_type = TrendStateType.STRONG_BEARISH
+        elif score < -1:
+            state_type = TrendStateType.BEARISH
+        elif score == -1:
+            state_type = TrendStateType.WEAK_BEARISH
+        refs = tuple(x.structure_id for x in market_structure.structures)
+        return TrendStateResult(
+            matrix,
+            (
+                TrendState(
+                    f"{matrix.grid_id}:trend:state",
+                    state_type,
+                    refs,
+                    Decimal("1"),
+                    {"score": score},
+                ),
+            ),
+            market_structure,
+            self.configuration,
+            {"analyzer": "TrendStateAnalyzer"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class PullbackConfiguration:
+    deep_threshold: int = 2
+    minimum_confidence: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        if self.deep_threshold <= 0:
+            raise ValueError("deep threshold must be positive")
+        _validate_decimal_confidence(self.minimum_confidence)
+
+
+@dataclass(frozen=True, slots=True)
+class Pullback:
+    pullback_id: str
+    pullback_type: PullbackType
+    reference_ids: tuple[str, ...]
+    confidence: Decimal = Decimal("1")
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.pullback_id.strip():
+            raise ValueError("pullback id is required")
+        if not self.reference_ids or len(set(self.reference_ids)) != len(
+            self.reference_ids
+        ):
+            raise ValueError("pullback references must be unique")
+        _validate_decimal_confidence(self.confidence)
+        object.__setattr__(self, "reference_ids", tuple(self.reference_ids))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class PullbackStatistics:
+    total_pullbacks: int
+    bullish_pullbacks: int
+    bearish_pullbacks: int
+    deep_pullbacks: int
+    shallow_pullbacks: int
+    completed_pullbacks: int
+    no_pullbacks: int
+
+
+@dataclass(frozen=True, slots=True)
+class PullbackResult:
+    matrix: "FootprintMatrix"
+    pullbacks: tuple[Pullback, ...]
+    market_structure: MarketStructureResult
+    trend_state: TrendStateResult
+    configuration: PullbackConfiguration = field(default_factory=PullbackConfiguration)
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if (
+            self.market_structure.matrix != self.matrix
+            or self.trend_state.matrix != self.matrix
+        ):
+            raise ValueError("pullbacks must reference graph matrix")
+        if self.pullbacks != tuple(sorted(self.pullbacks, key=lambda x: x.pullback_id)):
+            raise ValueError("pullbacks must be ordered")
+        ids = [x.pullback_id for x in self.pullbacks]
+        if len(set(ids)) != len(ids):
+            raise ValueError("duplicate pullbacks are not allowed")
+        for x in self.pullbacks:
+            _market_structure_refs(self.market_structure, x.reference_ids)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, pullback_id: str) -> Pullback | None:
+        return next((x for x in self.pullbacks if x.pullback_id == pullback_id), None)
+
+    def statistics(self) -> PullbackStatistics:
+        return PullbackStatistics(
+            len(self.pullbacks),
+            len(
+                [
+                    x
+                    for x in self.pullbacks
+                    if x.pullback_type == PullbackType.BULLISH_PULLBACK
+                ]
+            ),
+            len(
+                [
+                    x
+                    for x in self.pullbacks
+                    if x.pullback_type == PullbackType.BEARISH_PULLBACK
+                ]
+            ),
+            len(
+                [
+                    x
+                    for x in self.pullbacks
+                    if x.pullback_type == PullbackType.DEEP_PULLBACK
+                ]
+            ),
+            len(
+                [
+                    x
+                    for x in self.pullbacks
+                    if x.pullback_type == PullbackType.SHALLOW_PULLBACK
+                ]
+            ),
+            len(
+                [
+                    x
+                    for x in self.pullbacks
+                    if x.pullback_type == PullbackType.COMPLETED_PULLBACK
+                ]
+            ),
+            len(
+                [
+                    x
+                    for x in self.pullbacks
+                    if x.pullback_type == PullbackType.NO_PULLBACK
+                ]
+            ),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class PullbackDetector:
+    configuration: PullbackConfiguration = field(default_factory=PullbackConfiguration)
+
+    def detect(
+        self,
+        matrix: "FootprintMatrix",
+        market_structure: MarketStructureResult,
+        trend_state: TrendStateResult,
+    ) -> PullbackResult:
+        hh, hl, lh, ll = _structure_counts(market_structure)
+        refs = tuple(x.structure_id for x in market_structure.structures)
+        p = []
+        if "BULLISH" in trend_state.states[0].state_type.value and (lh or ll):
+            p.append(
+                Pullback(
+                    f"{matrix.grid_id}:pullback:direction",
+                    PullbackType.BULLISH_PULLBACK,
+                    refs,
+                    metadata={"counter_moves": lh + ll},
+                )
+            )
+        elif "BEARISH" in trend_state.states[0].state_type.value and (hh or hl):
+            p.append(
+                Pullback(
+                    f"{matrix.grid_id}:pullback:direction",
+                    PullbackType.BEARISH_PULLBACK,
+                    refs,
+                    metadata={"counter_moves": hh + hl},
+                )
+            )
+        trend_value = trend_state.states[0].state_type.value
+        counter = (
+            (lh + ll)
+            if "BULLISH" in trend_value
+            else ((hh + hl) if "BEARISH" in trend_value else 0)
+        )
+        if counter >= self.configuration.deep_threshold:
+            p.append(
+                Pullback(
+                    f"{matrix.grid_id}:pullback:depth", PullbackType.DEEP_PULLBACK, refs
+                )
+            )
+        elif counter > 0:
+            p.append(
+                Pullback(
+                    f"{matrix.grid_id}:pullback:depth",
+                    PullbackType.SHALLOW_PULLBACK,
+                    refs,
+                )
+            )
+        else:
+            p.append(
+                Pullback(
+                    f"{matrix.grid_id}:pullback:none", PullbackType.NO_PULLBACK, refs
+                )
+            )
+        if (
+            p
+            and p[-1].pullback_type != PullbackType.NO_PULLBACK
+            and (
+                ("BULLISH" in trend_state.states[0].state_type.value and hh)
+                or ("BEARISH" in trend_state.states[0].state_type.value and ll)
+            )
+        ):
+            p.append(
+                Pullback(
+                    f"{matrix.grid_id}:pullback:completed",
+                    PullbackType.COMPLETED_PULLBACK,
+                    refs,
+                )
+            )
+        return PullbackResult(
+            matrix,
+            tuple(sorted(p, key=lambda x: x.pullback_id)),
+            market_structure,
+            trend_state,
+            self.configuration,
+            {"detector": "PullbackDetector"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class BreakOfStructureConfiguration:
+    minimum_confidence: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        _validate_decimal_confidence(self.minimum_confidence)
+
+
+@dataclass(frozen=True, slots=True)
+class BreakOfStructure:
+    bos_id: str
+    bos_type: BreakOfStructureType
+    reference_ids: tuple[str, ...]
+    confidence: Decimal = Decimal("1")
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.bos_id.strip():
+            raise ValueError("bos id is required")
+        if not self.reference_ids or len(set(self.reference_ids)) != len(
+            self.reference_ids
+        ):
+            raise ValueError("bos references must be unique")
+        _validate_decimal_confidence(self.confidence)
+        object.__setattr__(self, "reference_ids", tuple(self.reference_ids))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class BreakOfStructureStatistics:
+    total_bos: int
+    bullish_bos: int
+    bearish_bos: int
+    internal_bos: int
+    external_bos: int
+    no_bos: int
+
+
+@dataclass(frozen=True, slots=True)
+class BreakOfStructureResult:
+    matrix: "FootprintMatrix"
+    structures: tuple[BreakOfStructure, ...]
+    market_structure: MarketStructureResult
+    configuration: BreakOfStructureConfiguration = field(
+        default_factory=BreakOfStructureConfiguration
+    )
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if self.market_structure.matrix != self.matrix:
+            raise ValueError(
+                "break of structure must reference market structure matrix"
+            )
+        if self.structures != tuple(sorted(self.structures, key=lambda x: x.bos_id)):
+            raise ValueError("break of structure items must be ordered")
+        ids = [x.bos_id for x in self.structures]
+        if len(set(ids)) != len(ids):
+            raise ValueError("duplicate break of structure items are not allowed")
+        for x in self.structures:
+            _market_structure_refs(self.market_structure, x.reference_ids)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, bos_id: str) -> BreakOfStructure | None:
+        return next((x for x in self.structures if x.bos_id == bos_id), None)
+
+    def statistics(self) -> BreakOfStructureStatistics:
+        return BreakOfStructureStatistics(
+            len(self.structures),
+            len(
+                [
+                    x
+                    for x in self.structures
+                    if x.bos_type == BreakOfStructureType.BULLISH_BOS
+                ]
+            ),
+            len(
+                [
+                    x
+                    for x in self.structures
+                    if x.bos_type == BreakOfStructureType.BEARISH_BOS
+                ]
+            ),
+            len(
+                [
+                    x
+                    for x in self.structures
+                    if x.bos_type == BreakOfStructureType.INTERNAL_BOS
+                ]
+            ),
+            len(
+                [
+                    x
+                    for x in self.structures
+                    if x.bos_type == BreakOfStructureType.EXTERNAL_BOS
+                ]
+            ),
+            len(
+                [
+                    x
+                    for x in self.structures
+                    if x.bos_type == BreakOfStructureType.NO_BOS
+                ]
+            ),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class BreakOfStructureDetector:
+    configuration: BreakOfStructureConfiguration = field(
+        default_factory=BreakOfStructureConfiguration
+    )
+
+    def detect(
+        self, matrix: "FootprintMatrix", market_structure: MarketStructureResult
+    ) -> BreakOfStructureResult:
+        hh, hl, lh, ll = _structure_counts(market_structure)
+        refs = tuple(x.structure_id for x in market_structure.structures)
+        out = []
+        if hh > 0:
+            out.append(
+                BreakOfStructure(
+                    f"{matrix.grid_id}:bos:bullish",
+                    BreakOfStructureType.BULLISH_BOS,
+                    refs,
+                )
+            )
+        if ll > 0:
+            out.append(
+                BreakOfStructure(
+                    f"{matrix.grid_id}:bos:bearish",
+                    BreakOfStructureType.BEARISH_BOS,
+                    refs,
+                )
+            )
+        (
+            out.append(
+                BreakOfStructure(
+                    f"{matrix.grid_id}:bos:scope",
+                    (
+                        BreakOfStructureType.EXTERNAL_BOS
+                        if abs((hh + hl) - (lh + ll)) > 1
+                        else BreakOfStructureType.INTERNAL_BOS
+                    ),
+                    refs,
+                )
+            )
+            if (hh or ll)
+            else out.append(
+                BreakOfStructure(
+                    f"{matrix.grid_id}:bos:none", BreakOfStructureType.NO_BOS, refs
+                )
+            )
+        )
+        return BreakOfStructureResult(
+            matrix,
+            tuple(sorted(out, key=lambda x: x.bos_id)),
+            market_structure,
+            self.configuration,
+            {"detector": "BreakOfStructureDetector"},
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class CHOCHConfiguration:
+    minimum_confidence: Decimal = Decimal("0")
+
+    def __post_init__(self) -> None:
+        _validate_decimal_confidence(self.minimum_confidence)
+
+
+@dataclass(frozen=True, slots=True)
+class ChangeOfCharacter:
+    choch_id: str
+    choch_type: ChangeOfCharacterType
+    reference_ids: tuple[str, ...]
+    confidence: Decimal = Decimal("1")
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if not self.choch_id.strip():
+            raise ValueError("choch id is required")
+        if not self.reference_ids or len(set(self.reference_ids)) != len(
+            self.reference_ids
+        ):
+            raise ValueError("choch references must be unique")
+        _validate_decimal_confidence(self.confidence)
+        object.__setattr__(self, "reference_ids", tuple(self.reference_ids))
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+
+@dataclass(frozen=True, slots=True)
+class CHOCHStatistics:
+    total_choch: int
+    bullish_choch: int
+    bearish_choch: int
+    confirmed_choch: int
+    no_choch: int
+
+
+@dataclass(frozen=True, slots=True)
+class CHOCHResult:
+    matrix: "FootprintMatrix"
+    changes: tuple[ChangeOfCharacter, ...]
+    market_structure: MarketStructureResult
+    break_of_structure: BreakOfStructureResult
+    configuration: CHOCHConfiguration = field(default_factory=CHOCHConfiguration)
+    metadata: Mapping[str, Any] = field(default_factory=dict)
+
+    def __post_init__(self) -> None:
+        if (
+            self.market_structure.matrix != self.matrix
+            or self.break_of_structure.matrix != self.matrix
+        ):
+            raise ValueError("choch must reference graph matrix")
+        if self.changes != tuple(sorted(self.changes, key=lambda x: x.choch_id)):
+            raise ValueError("choch items must be ordered")
+        ids = [x.choch_id for x in self.changes]
+        if len(set(ids)) != len(ids):
+            raise ValueError("duplicate choch items are not allowed")
+        for x in self.changes:
+            _market_structure_refs(self.market_structure, x.reference_ids)
+        object.__setattr__(self, "metadata", MappingProxyType(dict(self.metadata)))
+
+    def lookup(self, choch_id: str) -> ChangeOfCharacter | None:
+        return next((x for x in self.changes if x.choch_id == choch_id), None)
+
+    def statistics(self) -> CHOCHStatistics:
+        return CHOCHStatistics(
+            len(self.changes),
+            len(
+                [
+                    x
+                    for x in self.changes
+                    if x.choch_type == ChangeOfCharacterType.BULLISH_CHOCH
+                ]
+            ),
+            len(
+                [
+                    x
+                    for x in self.changes
+                    if x.choch_type == ChangeOfCharacterType.BEARISH_CHOCH
+                ]
+            ),
+            len(
+                [
+                    x
+                    for x in self.changes
+                    if x.choch_type == ChangeOfCharacterType.CONFIRMED_CHOCH
+                ]
+            ),
+            len(
+                [
+                    x
+                    for x in self.changes
+                    if x.choch_type == ChangeOfCharacterType.NO_CHOCH
+                ]
+            ),
+        )
+
+
+@dataclass(frozen=True, slots=True)
+class CHOCHDetector:
+    configuration: CHOCHConfiguration = field(default_factory=CHOCHConfiguration)
+
+    def detect(
+        self,
+        matrix: "FootprintMatrix",
+        market_structure: MarketStructureResult,
+        break_of_structure: BreakOfStructureResult,
+    ) -> CHOCHResult:
+        hh, hl, lh, ll = _structure_counts(market_structure)
+        refs = tuple(x.structure_id for x in market_structure.structures)
+        out = []
+        if lh and hh:
+            out.append(
+                ChangeOfCharacter(
+                    f"{matrix.grid_id}:choch:bearish",
+                    ChangeOfCharacterType.BEARISH_CHOCH,
+                    refs,
+                )
+            )
+        if hl and ll:
+            out.append(
+                ChangeOfCharacter(
+                    f"{matrix.grid_id}:choch:bullish",
+                    ChangeOfCharacterType.BULLISH_CHOCH,
+                    refs,
+                )
+            )
+        if out:
+            out.append(
+                ChangeOfCharacter(
+                    f"{matrix.grid_id}:choch:confirmed",
+                    ChangeOfCharacterType.CONFIRMED_CHOCH,
+                    refs,
+                )
+            )
+        else:
+            out.append(
+                ChangeOfCharacter(
+                    f"{matrix.grid_id}:choch:none", ChangeOfCharacterType.NO_CHOCH, refs
+                )
+            )
+        return CHOCHResult(
+            matrix,
+            tuple(sorted(out, key=lambda x: x.choch_id)),
+            market_structure,
+            break_of_structure,
+            self.configuration,
+            {"detector": "CHOCHDetector"},
+        )
+
+
 @dataclass(frozen=True, slots=True)
 class ImageFrame:
     """A captured image and its normalized frame metadata."""
@@ -1281,6 +1957,10 @@ class DetectionGraph:
     support_resistance: "SupportResistanceResult | None" = None
     supply_demand_zones: "ZoneResult | None" = None
     market_structure: "MarketStructureResult | None" = None
+    trend_state: "TrendStateResult | None" = None
+    pullbacks: "PullbackResult | None" = None
+    break_of_structure: "BreakOfStructureResult | None" = None
+    change_of_character: "CHOCHResult | None" = None
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -1445,6 +2125,10 @@ class DetectionGraph:
             ("support resistance", self.support_resistance),
             ("supply demand zones", self.supply_demand_zones),
             ("market structure", self.market_structure),
+            ("trend state", self.trend_state),
+            ("pullbacks", self.pullbacks),
+            ("break of structure", self.break_of_structure),
+            ("change of character", self.change_of_character),
         ):
             if result is not None:
                 if self.footprint_matrix is None:
@@ -1471,6 +2155,32 @@ class DetectionGraph:
             and self.market_structure.swing_result != self.swing_result
         ):
             raise ValueError("market structure must reference graph swings")
+        if (
+            self.trend_state is not None
+            and self.market_structure is not None
+            and self.trend_state.market_structure != self.market_structure
+        ):
+            raise ValueError("trend state must reference graph market structure")
+        if (
+            self.pullbacks is not None
+            and self.market_structure is not None
+            and self.pullbacks.market_structure != self.market_structure
+        ):
+            raise ValueError("pullbacks must reference graph market structure")
+        if (
+            self.break_of_structure is not None
+            and self.market_structure is not None
+            and self.break_of_structure.market_structure != self.market_structure
+        ):
+            raise ValueError("break of structure must reference graph market structure")
+        if (
+            self.change_of_character is not None
+            and self.break_of_structure is not None
+            and self.change_of_character.break_of_structure != self.break_of_structure
+        ):
+            raise ValueError(
+                "change of character must reference graph break of structure"
+            )
 
     @property
     def footprint_cells(self) -> tuple[DetectedObject, ...]:
@@ -1957,6 +2667,72 @@ class DetectionGraph:
             MarketStructureStatistics(0, 0, 0, 0, 0, 0, 0, 0)
             if self.market_structure is None
             else self.market_structure.statistics()
+        )
+
+    def trend_states(self) -> tuple["TrendState", ...]:
+        return () if self.trend_state is None else self.trend_state.states
+
+    def lookup_trend_state(self, state_id: str) -> "TrendState | None":
+        return None if self.trend_state is None else self.trend_state.lookup(state_id)
+
+    def trend_state_statistics(self) -> "TrendStateStatistics":
+        return (
+            TrendStateStatistics(0, 0, 0, 0, 0)
+            if self.trend_state is None
+            else self.trend_state.statistics()
+        )
+
+    def detected_pullbacks(self) -> tuple["Pullback", ...]:
+        return () if self.pullbacks is None else self.pullbacks.pullbacks
+
+    def lookup_pullback(self, pullback_id: str) -> "Pullback | None":
+        return None if self.pullbacks is None else self.pullbacks.lookup(pullback_id)
+
+    def pullback_statistics(self) -> "PullbackStatistics":
+        return (
+            PullbackStatistics(0, 0, 0, 0, 0, 0, 0)
+            if self.pullbacks is None
+            else self.pullbacks.statistics()
+        )
+
+    def bos_events(self) -> tuple["BreakOfStructure", ...]:
+        return (
+            ()
+            if self.break_of_structure is None
+            else self.break_of_structure.structures
+        )
+
+    def lookup_bos(self, bos_id: str) -> "BreakOfStructure | None":
+        return (
+            None
+            if self.break_of_structure is None
+            else self.break_of_structure.lookup(bos_id)
+        )
+
+    def bos_statistics(self) -> "BreakOfStructureStatistics":
+        return (
+            BreakOfStructureStatistics(0, 0, 0, 0, 0, 0)
+            if self.break_of_structure is None
+            else self.break_of_structure.statistics()
+        )
+
+    def choch_events(self) -> tuple["ChangeOfCharacter", ...]:
+        return (
+            () if self.change_of_character is None else self.change_of_character.changes
+        )
+
+    def lookup_choch(self, choch_id: str) -> "ChangeOfCharacter | None":
+        return (
+            None
+            if self.change_of_character is None
+            else self.change_of_character.lookup(choch_id)
+        )
+
+    def choch_statistics(self) -> "CHOCHStatistics":
+        return (
+            CHOCHStatistics(0, 0, 0, 0, 0)
+            if self.change_of_character is None
+            else self.change_of_character.statistics()
         )
 
 
@@ -7407,6 +8183,34 @@ class SequentialObjectDetectionPipeline:
             and swing_result is not None
             else None
         )
+        trend_state = (
+            TrendStateAnalyzer().analyze(footprint_matrix, market_structure)
+            if footprint_matrix is not None and market_structure is not None
+            else None
+        )
+        pullbacks = (
+            PullbackDetector().detect(footprint_matrix, market_structure, trend_state)
+            if footprint_matrix is not None
+            and market_structure is not None
+            and trend_state is not None
+            else None
+        )
+        break_of_structure = (
+            BreakOfStructureDetector().detect(footprint_matrix, market_structure)
+            if footprint_matrix is not None
+            and market_structure is not None
+            and pullbacks is not None
+            else None
+        )
+        change_of_character = (
+            CHOCHDetector().detect(
+                footprint_matrix, market_structure, break_of_structure
+            )
+            if footprint_matrix is not None
+            and market_structure is not None
+            and break_of_structure is not None
+            else None
+        )
         return DetectionGraph(
             frame_id=graph.frame_id,
             objects=graph.objects,
@@ -7440,6 +8244,10 @@ class SequentialObjectDetectionPipeline:
             support_resistance=support_resistance,
             supply_demand_zones=supply_demand_zones,
             market_structure=market_structure,
+            trend_state=trend_state,
+            pullbacks=pullbacks,
+            break_of_structure=break_of_structure,
+            change_of_character=change_of_character,
         )
 
 
