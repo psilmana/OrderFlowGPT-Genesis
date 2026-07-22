@@ -122,3 +122,16 @@ Bundle 3 completes the deterministic Auction Market Theory layer. Genesis now su
 - Added opening auction classification for open drive, open test drive, open auction, in-range/out-of-range auction, rejection reverse, and unknown.
 - Extended graph and sequential pipeline integration without AI, prediction, signals, probabilities, ML, networking, OCR changes, OpenCV changes, threading, async execution, randomness, or vendor-specific behavior.
 - Bundle 8 introduces Multi-Timeframe Context.
+
+## Bundle 8 - Multi-Timeframe Context Engine
+
+- Added immutable timeframe models and deterministic timeframe analysis for Tick, 1 Minute, 5 Minute, 15 Minute, 30 Minute, 1 Hour, 4 Hour, Daily, and Unknown contexts.
+- Added multi-timeframe alignment classifications: Fully Aligned, Partially Aligned, Opposing, and Neutral.
+- Added deterministic context aggregation across prior immutable trend, market-structure, session, delta, volume-cluster, market-profile, and auction-market-theory outputs.
+- Added confluence classifications: Strong Confluence, Moderate Confluence, Weak Confluence, and No Confluence.
+- Extended `DetectionGraph` and the sequential pipeline with Bundle 8 results, lookup helpers, and statistics helpers.
+- Added regression coverage for ordering, immutability, duplicates, confidence, metadata, references, graph integration, and pipeline-visible helpers.
+
+Genesis still does not perform AI reasoning, prediction, trade recommendations, probability estimation, machine learning, strategy generation, or buy/sell signal generation.
+
+Bundle 9 introduces the Dataset Builder for Fabio video learning.
