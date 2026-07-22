@@ -234,3 +234,9 @@ This bundle is intentionally limited to ingestion and synchronization:
 - NO OCR modifications and NO OpenCV algorithm changes.
 
 Bundle 11 introduces Transcript Alignment.
+
+## Bundle 11: Fabio Transcript Alignment
+
+Bundle 11 adds a deterministic transcript alignment layer for Fabio videos. It imports SRT, VTT, timestamped TXT, and JSON transcript payloads, normalizes them into immutable transcript timelines, and maps extracted video frames to the nearest, previous, next, and active transcript sentences. The aligned transcript references can be attached to dataset training samples without changing Genesis market-analysis logic.
+
+This bundle explicitly performs **no AI reasoning**, **no learning**, **no prediction**, **no strategy generation**, and **no trade recommendation**. Speech recognition output may be supplied later only as deterministic transcript input. Bundle 12 introduces Fabio Knowledge Extraction.

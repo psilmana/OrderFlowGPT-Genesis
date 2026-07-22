@@ -3242,10 +3242,23 @@ class DetectionGraph:
     alignment: "AlignmentResult | None" = None
     context_aggregation: "ContextAggregationResult | None" = None
     confluence: "ConfluenceResult | None" = None
+    transcript_references: tuple[str, ...] = ()
+    frame_transcript_references: tuple[str, ...] = ()
+    transcript_alignment_references: tuple[str, ...] = ()
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
             raise ValueError("frame id is required")
+        if len(set(self.transcript_references)) != len(self.transcript_references):
+            raise ValueError("transcript references must be unique")
+        if len(set(self.frame_transcript_references)) != len(
+            self.frame_transcript_references
+        ):
+            raise ValueError("frame transcript references must be unique")
+        if len(set(self.transcript_alignment_references)) != len(
+            self.transcript_alignment_references
+        ):
+            raise ValueError("transcript alignment references must be unique")
         ids = {obj.object_id for obj in self.objects}
         if len(ids) != len(self.objects):
             raise ValueError("detected object ids must be unique")

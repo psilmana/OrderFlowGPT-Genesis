@@ -144,12 +144,18 @@ class TrainingSample:
     metadata: FrameMetadata
     feature_vector: FeatureVector
     annotations: tuple[Annotation, ...] = ()
+    transcript_alignment_id: str | None = None
 
     def __post_init__(self) -> None:
         if not self.sample_id.strip():
             raise ValueError("sample id is required")
         if self.metadata.identifier.frame_id != self.feature_vector.graph_frame_id:
             raise ValueError("sample frame id must match feature vector")
+        if (
+            self.transcript_alignment_id is not None
+            and not self.transcript_alignment_id.strip()
+        ):
+            raise ValueError("transcript alignment id cannot be blank")
         seen = {a.annotation_type for a in self.annotations}
         if len(seen) != len(self.annotations):
             raise ValueError("annotation types must be unique per sample")
@@ -308,6 +314,7 @@ class TrainingSampleBuilder:
         feature_vector: FeatureVector,
         version: DatasetVersion,
         annotations: Iterable[Annotation] = (),
+        transcript_alignment_id: str | None = None,
     ) -> TrainingSample:
         return TrainingSample(
             f"sample:{metadata.identifier.frame_id}:{version.value}",
@@ -315,6 +322,7 @@ class TrainingSampleBuilder:
             metadata,
             feature_vector,
             tuple(annotations),
+            transcript_alignment_id,
         )
 
 

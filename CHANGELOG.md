@@ -149,3 +149,10 @@ Bundle 9 introduces the Dataset Builder for Fabio video learning.
 - Added regression coverage for metadata, frame numbering, timestamp ordering, synchronization, audio mapping, dataset/training-sample integration, immutability, duplicate validation, reference validation, and multiple video inputs.
 - Bundle 10 includes NO speech recognition, NO AI, NO learning, NO reasoning, NO ML, NO prediction, NO strategy generation, and NO trade recommendations.
 - Bundle 11 introduces Transcript Alignment.
+
+## Bundle 11 - Fabio Transcript Alignment
+
+- Added immutable transcript models, deterministic transcript importers, timestamp synchronizers, frame aligners, and transcript dataset references.
+- Added SRT, VTT, timestamped TXT, and JSON transcript parsing for reproducible teaching examples.
+- Extended DetectionGraph only with transcript reference fields and TrainingSample with an optional transcript alignment reference.
+- Documented that Bundle 11 performs no AI reasoning, no learning, and no prediction; Bundle 12 introduces Fabio Knowledge Extraction.
