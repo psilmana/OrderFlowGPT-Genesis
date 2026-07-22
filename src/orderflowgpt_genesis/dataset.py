@@ -145,6 +145,11 @@ class TrainingSample:
     feature_vector: FeatureVector
     annotations: tuple[Annotation, ...] = ()
     transcript_alignment_id: str | None = None
+    knowledge_observation_references: tuple[str, ...] = ()
+    knowledge_topics: tuple[str, ...] = ()
+    transcript_references: tuple[str, ...] = ()
+    frame_references: tuple[str, ...] = ()
+    timeline_references: tuple[str, ...] = ()
 
     def __post_init__(self) -> None:
         if not self.sample_id.strip():
@@ -156,6 +161,17 @@ class TrainingSample:
             and not self.transcript_alignment_id.strip()
         ):
             raise ValueError("transcript alignment id cannot be blank")
+        for label, values in (
+            ("knowledge observation references", self.knowledge_observation_references),
+            ("knowledge topics", self.knowledge_topics),
+            ("transcript references", self.transcript_references),
+            ("frame references", self.frame_references),
+            ("timeline references", self.timeline_references),
+        ):
+            if len(set(values)) != len(values):
+                raise ValueError(f"{label} must be unique per sample")
+            if any(not value.strip() for value in values):
+                raise ValueError(f"{label} cannot contain blank references")
         seen = {a.annotation_type for a in self.annotations}
         if len(seen) != len(self.annotations):
             raise ValueError("annotation types must be unique per sample")

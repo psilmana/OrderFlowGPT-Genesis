@@ -3,6 +3,25 @@
 from .analysis import OrderFlowAnalyzer
 from .models import AnalysisResult, MarketSnapshot, OrderBookLevel, Trade
 
+from .knowledge import (
+    KnowledgeCategory as KnowledgeCategory,
+    KnowledgeConfiguration as KnowledgeConfiguration,
+    KnowledgeContext as KnowledgeContext,
+    KnowledgeDataset as KnowledgeDataset,
+    KnowledgeDatasetBuilder as KnowledgeDatasetBuilder,
+    KnowledgeExtractionEngine as KnowledgeExtractionEngine,
+    KnowledgeExtractor as KnowledgeExtractor,
+    KnowledgeExtractionResult as KnowledgeExtractionResult,
+    KnowledgeIdentifier as KnowledgeIdentifier,
+    KnowledgeMetadata as KnowledgeMetadata,
+    KnowledgeObservation as KnowledgeObservation,
+    KnowledgeReference as KnowledgeReference,
+    KnowledgeStatement as KnowledgeStatement,
+    KnowledgeStatistics as KnowledgeStatistics,
+    KnowledgeTimeline as KnowledgeTimeline,
+    KnowledgeTopic as KnowledgeTopic,
+)
+
 from .dataset import (
     Annotation,
     AnnotationStatus,
