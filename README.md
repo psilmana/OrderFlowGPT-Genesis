@@ -201,3 +201,21 @@ Supported timeframe contexts are Tick, 1 Minute, 5 Minute, 15 Minute, 30 Minute,
 Genesis remains deterministic and does **not** perform AI reasoning, prediction, trade recommendations, probability estimation, machine learning, strategy generation, or buy/sell signal generation.
 
 Bundle 9 introduces the Dataset Builder for Fabio video learning.
+
+## Bundle 9: Genesis Dataset Builder & Annotation Infrastructure
+
+Bundle 9 transforms the completed deterministic market-analysis output from Bundles 1–8 into canonical, immutable training-data samples. Each `TrainingSample` combines frame identity, timestamped `FrameMetadata`, an immutable `FeatureVector` referencing the original `DetectionGraph`, annotation placeholders for Fabio's reasoning, and deterministic export support.
+
+The Bundle 9 dataset layer is AI-ready but performs **no machine learning**. It does not implement AI, neural networks, LLM calls, prediction, probabilities, strategy generation, vendor-specific behavior, OCR changes, or OpenCV changes. Bundle 10 introduces the Learning Engine.
+
+Supported deterministic exports are JSONL, SQLite, and versioned Parquet-compatible payload files. The intended post-Bundle-8 pipeline is:
+
+```text
+DetectionGraph
+  ↓
+FeatureVectorBuilder
+  ↓
+TrainingSampleBuilder
+  ↓
+DatasetBuilder
+```
