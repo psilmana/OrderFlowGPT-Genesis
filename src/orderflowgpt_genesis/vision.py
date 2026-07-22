@@ -3245,6 +3245,9 @@ class DetectionGraph:
     transcript_references: tuple[str, ...] = ()
     frame_transcript_references: tuple[str, ...] = ()
     transcript_alignment_references: tuple[str, ...] = ()
+    knowledge_observations: tuple[str, ...] = ()
+    knowledge_references: tuple[str, ...] = ()
+    knowledge_statistics: tuple[int, ...] = ()
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -3259,6 +3262,17 @@ class DetectionGraph:
             self.transcript_alignment_references
         ):
             raise ValueError("transcript alignment references must be unique")
+        if len(set(self.knowledge_observations)) != len(self.knowledge_observations):
+            raise ValueError("knowledge observations must be unique")
+        if len(set(self.knowledge_references)) != len(self.knowledge_references):
+            raise ValueError("knowledge references must be unique")
+        if any(
+            not value.strip()
+            for value in self.knowledge_observations + self.knowledge_references
+        ):
+            raise ValueError("knowledge references cannot be blank")
+        if any(value < 0 for value in self.knowledge_statistics):
+            raise ValueError("knowledge statistics cannot be negative")
         ids = {obj.object_id for obj in self.objects}
         if len(ids) != len(self.objects):
             raise ValueError("detected object ids must be unique")
