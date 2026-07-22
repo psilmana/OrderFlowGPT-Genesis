@@ -358,3 +358,15 @@ Immutable transcript models cover identifiers, metadata, tokens, sentences, para
 Alignment is timestamp-only: `Frame → Timestamp → Sentence → TrainingSample`. Every frame alignment exposes the nearest sentence, previous sentence, next sentence, and active transcript window. DetectionGraph is extended only with transcript, frame-transcript, and alignment references; no market-analysis behavior is modified.
 
 Bundle 11 explicitly includes **NO AI reasoning**, **NO learning**, and **NO prediction**. Bundle 12 introduces Fabio Knowledge Extraction.
+
+## Bundle 12: Fabio Knowledge Extraction Engine
+
+Bundle 12 adds an immutable knowledge-extraction layer after Bundle 10 video ingestion and Bundle 11 transcript alignment. The deterministic pipeline is:
+
+Video → Frames → Genesis Analysis → Transcript Alignment → Knowledge Extraction → TrainingSample → KnowledgeDataset.
+
+The engine links Fabio transcript sentences to aligned timestamps, frame identifiers, existing Genesis `DetectionGraph` frame identifiers, and `TrainingSample` identifiers. It only classifies categories through deterministic transcript rules and never infers market meaning beyond Fabio's words.
+
+DetectionGraph is extended only with knowledge observations, knowledge references, and knowledge statistics. TrainingSample is extended only with knowledge observation references, knowledge topics, transcript references, frame references, and timeline references.
+
+Bundle 12 includes **NO learning**, **NO prediction**, **NO AI reasoning**, **NO strategy generation**, **NO trade recommendations**, and **NO probabilities**. It also makes **NO OCR** or **OpenCV** changes. Fabio is the only knowledge source. Bundle 13 introduces the Learning Engine.

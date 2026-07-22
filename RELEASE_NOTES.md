@@ -17,3 +17,9 @@ Bundle 10 is ingestion-only and synchronization-only:
 - NO OCR modifications and NO OpenCV algorithm changes.
 
 Bundle 11 introduces Transcript Alignment.
+
+## Bundle 12 - Fabio Knowledge Extraction
+
+Bundle 12 creates deterministic Fabio teaching datasets from Bundle 10 video datasets, Bundle 11 transcript alignment, Genesis DetectionGraph references, and TrainingSample references. It adds immutable knowledge models, statistics, configuration, results, and extraction APIs.
+
+It performs NO learning, NO prediction, NO AI reasoning, NO strategy generation, and NO market forecasting. Bundle 13 introduces the Learning Engine.
