@@ -6,6 +6,7 @@ import json
 import pytest
 
 from orderflowgpt_genesis import GenesisCLI, GenesisConfiguration, GenesisRunner
+from orderflowgpt_genesis.io import safe_filename_stem
 
 
 def make_video(tmp_path, name="lesson01.mp4"):
@@ -55,6 +56,16 @@ def test_missing_transcript_is_warning_not_failure(tmp_path):
     result = GenesisRunner(config(tmp_path)).run_video(make_video(tmp_path))
     assert result.statistics.knowledge_observations == 0
     assert "WARNING Missing transcript" in result.log.read_text(encoding="utf-8")
+
+
+def test_detection_artifact_names_are_cross_platform_safe(tmp_path):
+    result = GenesisRunner(config(tmp_path)).run_video(make_video(tmp_path))
+    detection_files = tuple((result.output / "detections").glob("*.json"))
+    assert len(detection_files) == result.statistics.frames_extracted
+    assert detection_files[0].name == (
+        "video_2efba8d2c67eb939_frame_000000000000_910abc823cde4c7d.json"
+    )
+    assert safe_filename_stem("video:abc/frame:0?x*") == "video_abc_frame_0_x_"
 
 
 def test_missing_video_and_invalid_file_errors(tmp_path):

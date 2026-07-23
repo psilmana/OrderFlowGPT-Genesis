@@ -9,7 +9,12 @@ from pathlib import Path
 
 from .config import GenesisConfiguration
 from .dataset import DatasetBuilder, DatasetConfiguration
-from .io import ensure_asset_directories, prepare_lesson_directory, write_json
+from .io import (
+    ensure_asset_directories,
+    prepare_lesson_directory,
+    safe_filename_stem,
+    write_json,
+)
 from .knowledge import KnowledgeConfiguration, KnowledgeExtractionEngine
 from .learning import LearningConfiguration, MemoryBuilder, MemorySerializer
 from .transcript import TranscriptAligner, TranscriptConfiguration, TranscriptImporter
@@ -210,7 +215,9 @@ class GenesisRunner:
             ).write_bytes(frame.image.data)
         for graph in graphs:
             write_json(
-                lesson_dir / "detections" / f"{graph.frame_id.replace('/', '_')}.json",
+                lesson_dir
+                / "detections"
+                / f"{safe_filename_stem(graph.frame_id)}.json",
                 graph,
             )
         write_json(lesson_dir / "dataset" / "dataset.json", dataset)

@@ -11,6 +11,18 @@ from pathlib import Path
 from types import MappingProxyType
 from typing import Any
 
+_WINDOWS_RESERVED_FILENAME_CHARS = frozenset('<>:"/\\|?*')
+
+
+def safe_filename_stem(value: str) -> str:
+    """Return a deterministic filename stem that is valid on Windows and POSIX."""
+    safe = "".join(
+        "_" if char in _WINDOWS_RESERVED_FILENAME_CHARS or ord(char) < 32 else char
+        for char in value
+    ).strip(" .")
+    return safe or "unnamed"
+
+
 ASSET_DIRECTORIES = (
     Path("assets"),
     Path("assets/fabio"),
