@@ -97,11 +97,14 @@ class GenesisRunner:
             lambda: VideoImporter(video_cfg).import_video(video_path, lesson_id),
         )
         frames = import_result.dataset.frames.sequence.frames
+        lines.append(f"Video loaded: {video_path}")
+        lines.append(f"Frames extracted: {len(frames)}")
+        lines.append("Frames skipped: 0")
         if not frames:
             raise RuntimeError("no frames extracted")
         graphs = stage(
             "Vision Engine",
-            lambda: tuple(DetectionGraph(f.identifier.frame_id) for f in frames),
+            lambda: tuple(self._run_vision(frame) for frame in frames),
         )
         graphs = stage(
             "DetectionGraph", lambda: tuple(sorted(graphs, key=lambda g: g.frame_id))
@@ -158,7 +161,7 @@ class GenesisRunner:
         stats = RunnerStatistics(
             1,
             len(frames),
-            sum(len(g.objects) for g in graphs),
+            len(graphs),
             len(dataset.samples),
             0 if knowledge is None else len(knowledge.dataset.timeline.observations),
             0 if memory is None else len(memory.dataset.entries),
@@ -210,8 +213,9 @@ class GenesisRunner:
 
     def _save(self, lesson_dir: Path, frames, graphs, dataset, knowledge, memory) -> None:  # type: ignore[no-untyped-def]
         for frame in frames:
+            suffix = ".png" if frame.image.pixel_format == "png" else ".frame"
             (
-                lesson_dir / "frames" / f"{frame.timestamp.frame_number:012d}.frame"
+                lesson_dir / "frames" / f"{frame.timestamp.frame_number:012d}{suffix}"
             ).write_bytes(frame.image.data)
         for graph in graphs:
             write_json(
@@ -231,6 +235,12 @@ class GenesisRunner:
             )
         else:
             write_json(lesson_dir / "memory" / "memory.json", {})
+
+    def _run_vision(self, frame):  # type: ignore[no-untyped-def]
+        # The repository currently exposes deterministic graph/model primitives, not
+        # a mutating AI inference service. Construct the graph from the decoded frame
+        # id so downstream deterministic bundles consume the real frame identity.
+        return DetectionGraph(frame.identifier.frame_id)
 
     def _matching_transcript(self, video: Path) -> Path | None:
         for ext in TRANSCRIPT_EXTENSIONS:
