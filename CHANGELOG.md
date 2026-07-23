@@ -171,3 +171,20 @@ Bundle 9 introduces the Dataset Builder for Fabio video learning.
 - Added deterministic similarity metrics: weighted feature distance, cosine similarity, Euclidean distance, Manhattan distance, and Hamming similarity.
 - Extended `DetectionGraph` only with memory references, retrieval references, and retrieval statistics. Existing market analysis is unchanged.
 - Bundle 13 performs NO prediction, NO neural networks, NO LLM inference, NO fine tuning, NO trade generation, NO trade signals, NO probabilistic reasoning, and NO strategy generation. Bundle 13 only creates searchable Fabio memory. Bundle 14 introduces Replay & Coaching.
+
+
+## Bundle 13.5 — Genesis Runner & CLI
+
+Bundle 13.5 introduces the executable Genesis application and makes the runner the permanent deterministic entry point. Execute a single lesson with:
+
+```bash
+python -m orderflowgpt_genesis --video assets/fabio/videos/Lesson01.mp4 --transcript assets/fabio/transcripts/Lesson01.txt
+```
+
+Process a folder deterministically with:
+
+```bash
+python -m orderflowgpt_genesis --folder assets/fabio/videos --output assets/fabio/output --overwrite
+```
+
+The runner orchestrates video import, frame extraction, vision graph creation, dataset building, optional transcript alignment, knowledge extraction, learning and memory, then saves `report.json`, `summary.json`, and `processing.log` without overwriting existing lesson output unless `--overwrite` is supplied. Bundle 14 introduces Replay & Coaching.
