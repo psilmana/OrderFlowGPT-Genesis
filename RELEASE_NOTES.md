@@ -23,3 +23,8 @@ Bundle 11 introduces Transcript Alignment.
 Bundle 12 creates deterministic Fabio teaching datasets from Bundle 10 video datasets, Bundle 11 transcript alignment, Genesis DetectionGraph references, and TrainingSample references. It adds immutable knowledge models, statistics, configuration, results, and extraction APIs.
 
 It performs NO learning, NO prediction, NO AI reasoning, NO strategy generation, and NO market forecasting. Bundle 13 introduces the Learning Engine.
+
+
+## 0.1.25 — Bundle 13.5 Genesis Runner & CLI
+
+Bundle 13.5 introduces the executable Genesis application through `python -m orderflowgpt_genesis --video ...` and `python -m orderflowgpt_genesis --folder ...`. The deterministic runner writes lesson reports, summaries, logs, frames, detections, datasets, knowledge, and memory outputs. Bundle 14 introduces Replay & Coaching.
