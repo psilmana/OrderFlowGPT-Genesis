@@ -163,3 +163,11 @@ Bundle 9 introduces the Dataset Builder for Fabio video learning.
 - Extended TrainingSample and DetectionGraph with knowledge observation, reference, topic, transcript, frame, timeline, and statistics references only; existing market analysis is unchanged.
 - Bundle 12 performs NO learning, NO prediction, NO AI reasoning, NO strategy generation, NO trade recommendations, and NO probabilities. Fabio transcript text is the only knowledge source.
 - Bundle 13 introduces the Learning Engine.
+
+## 0.1.24 - Bundle 13 Fabio Learning & Memory Engine
+
+- Added deterministic immutable Fabio memory models, configuration, statistics, learning results, retrieval results, and public API exports.
+- Added `MemoryBuilder`, `MemoryIndexer`, `MemoryDatabase`, `MemorySearcher`, `MemoryValidator`, `MemorySerializer`, and `MemoryLoader` for reproducible memory creation, indexing, persistence, and top-N retrieval.
+- Added deterministic similarity metrics: weighted feature distance, cosine similarity, Euclidean distance, Manhattan distance, and Hamming similarity.
+- Extended `DetectionGraph` only with memory references, retrieval references, and retrieval statistics. Existing market analysis is unchanged.
+- Bundle 13 performs NO prediction, NO neural networks, NO LLM inference, NO fine tuning, NO trade generation, NO trade signals, NO probabilistic reasoning, and NO strategy generation. Bundle 13 only creates searchable Fabio memory. Bundle 14 introduces Replay & Coaching.
