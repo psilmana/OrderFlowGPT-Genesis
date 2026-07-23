@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import json
 import math
-from dataclasses import dataclass, fields, is_dataclass, replace
+from dataclasses import dataclass, field, fields, is_dataclass, replace
 from datetime import datetime, timezone
 from enum import Enum
 from pathlib import Path
@@ -195,7 +195,7 @@ class LearningConfiguration:
 class SimilarityConfiguration:
     metric: SimilarityMetric = SimilarityMetric.WEIGHTED_FEATURE_DISTANCE
     top_n: int = 5
-    weights: Mapping[str, float] = MappingProxyType({})
+    weights: Mapping[str, float] = field(default_factory=lambda: MappingProxyType({}))
 
     def __post_init__(self) -> None:
         if self.top_n <= 0:
