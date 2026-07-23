@@ -13,6 +13,10 @@ from enum import Enum
 from hashlib import sha256
 from pathlib import Path
 from typing import Iterable
+import json
+import shutil
+import subprocess
+import tempfile
 
 from .dataset import (
     DatasetBuilder,
@@ -238,6 +242,14 @@ class VideoImportResult:
 
 
 class VideoDecoder:
+    """Decode real video metadata when platform tools are available.
+
+    The deterministic fallback is kept for existing fixture-style tests that use raw
+    bytes instead of an encoded movie file. Real files are never replaced by blank
+    frames: when ffprobe/ffmpeg can decode the source, metadata and frames come from
+    the encoded stream.
+    """
+
     def decode(
         self, source: str | Path, configuration: VideoConfiguration
     ) -> VideoMetadata:
@@ -245,6 +257,10 @@ class VideoDecoder:
         data = path.read_bytes() if path.exists() else str(source).encode()
         digest = sha256(data).hexdigest()
         identifier = VideoIdentifier(f"video:{digest[:16]}", str(source), digest)
+        probed = self._probe(path)
+        if probed is not None:
+            duration, fps, frame_count, width, height = probed
+            return VideoMetadata(identifier, duration, fps, frame_count, width, height)
         duration = configuration.synthetic_frame_count / configuration.source_fps
         return VideoMetadata(
             identifier,
@@ -254,6 +270,42 @@ class VideoDecoder:
             configuration.frame_width,
             configuration.frame_height,
         )
+
+    def _probe(self, path: Path) -> tuple[float, int, int, int, int] | None:
+        if not path.exists() or shutil.which("ffprobe") is None:
+            return None
+        command = [
+            "ffprobe",
+            "-v",
+            "error",
+            "-select_streams",
+            "v:0",
+            "-show_entries",
+            "stream=width,height,avg_frame_rate,nb_frames,duration",
+            "-of",
+            "json",
+            str(path),
+        ]
+        completed = subprocess.run(command, capture_output=True, text=True, check=False)
+        if completed.returncode != 0:
+            return None
+        payload = json.loads(completed.stdout or "{}")
+        streams = payload.get("streams") or []
+        if not streams:
+            return None
+        stream = streams[0]
+        width = int(stream.get("width") or 0)
+        height = int(stream.get("height") or 0)
+        fps = _parse_rate(str(stream.get("avg_frame_rate") or "0/1"))
+        duration = float(stream.get("duration") or 0)
+        frame_count = int(stream.get("nb_frames") or 0)
+        if frame_count <= 0 and duration > 0 and fps > 0:
+            frame_count = max(1, int(round(duration * fps)))
+        if min(width, height, fps, frame_count) <= 0:
+            return None
+        if duration <= 0:
+            duration = frame_count / fps
+        return (duration, fps, frame_count, width, height)
 
 
 class TimestampExtractor:
@@ -288,16 +340,20 @@ class FrameExtractor:
     ) -> FrameCollection:
         timestamps = TimestampExtractor().extract(metadata)
         nums = FrameSampler().sample(metadata, configuration)
+        real_frames = self._extract_real_frames(metadata, nums)
         frames = []
         for n in nums:
-            payload = f"{metadata.identifier.content_hash}:{n}".encode()
+            payload = real_frames.get(n)
+            pixel_format = "png" if payload is not None else "deterministic-bytes"
+            if payload is None:
+                payload = f"{metadata.identifier.content_hash}:{n}".encode()
             digest = sha256(payload).hexdigest()
             frame_id = f"{metadata.identifier.video_id}:frame:{n:012d}:{digest[:16]}"
             image = ImageFrame(
                 payload,
                 metadata.width,
                 metadata.height,
-                "deterministic-bytes",
+                pixel_format,
                 timestamps[n].timestamp,
                 metadata.identifier.source_uri,
                 frame_id,
@@ -312,6 +368,36 @@ class FrameExtractor:
                 )
             )
         return FrameCollection(metadata.identifier, FrameSequence(tuple(frames)))
+
+    def _extract_real_frames(
+        self, metadata: VideoMetadata, frame_numbers: tuple[int, ...]
+    ) -> dict[int, bytes]:
+        if not frame_numbers or shutil.which("ffmpeg") is None:
+            return {}
+        source = Path(metadata.identifier.source_uri)
+        if not source.exists():
+            return {}
+        output: dict[int, bytes] = {}
+        selected = set(frame_numbers)
+        with tempfile.TemporaryDirectory(prefix="genesis-frames-") as tmp:
+            pattern = Path(tmp) / "frame-%012d.png"
+            command = [
+                "ffmpeg",
+                "-v",
+                "error",
+                "-i",
+                str(source),
+                "-vsync",
+                "0",
+                str(pattern),
+            ]
+            completed = subprocess.run(command, capture_output=True, check=False)
+            if completed.returncode != 0:
+                return {}
+            for index, frame_file in enumerate(sorted(Path(tmp).glob("frame-*.png"))):
+                if index in selected:
+                    output[index] = frame_file.read_bytes()
+        return output
 
 
 class AudioExtractor:
@@ -443,3 +529,10 @@ class VideoImporter:
             ),
             self.configuration,
         )
+
+
+def _parse_rate(value: str) -> int:
+    numerator, _, denominator = value.partition("/")
+    top = int(numerator or 0)
+    bottom = int(denominator or 1)
+    return max(1, round(top / bottom)) if top > 0 and bottom > 0 else 0

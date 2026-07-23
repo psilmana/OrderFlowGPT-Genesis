@@ -1,4 +1,5 @@
 from dataclasses import FrozenInstanceError
+from pathlib import Path
 
 import pytest
 
@@ -189,3 +190,39 @@ def test_manual_synchronizer_without_samples(tmp_path):
     audio = AudioExtractor().extract(metadata, config)
     sync = FrameAudioSynchronizer().synchronize(metadata.identifier, frames, audio)
     assert [p.training_sample_id for p in sync.points] == [None, None, None]
+
+
+def test_real_video_probe_and_frame_extraction_use_decoder_tools(tmp_path, monkeypatch):
+    source = tmp_path / "real.mp4"
+    source.write_bytes(b"encoded movie bytes")
+
+    monkeypatch.setattr("orderflowgpt_genesis.video.shutil.which", lambda name: name)
+
+    def fake_run(command, capture_output=True, text=False, check=False):
+        class Completed:
+            returncode = 0
+            stdout = ""
+
+        if command[0] == "ffprobe":
+            Completed.stdout = (
+                '{"streams":[{"width":640,"height":360,'
+                '"avg_frame_rate":"30/1","nb_frames":"3",'
+                '"duration":"0.1"}]}'
+            )
+        else:
+            pattern = Path(command[-1])
+            for i in range(1, 4):
+                pattern.with_name(f"frame-{i:012d}.png").write_bytes(
+                    b"png-frame-" + str(i - 1).encode()
+                )
+        return Completed()
+
+    monkeypatch.setattr("orderflowgpt_genesis.video.subprocess.run", fake_run)
+    config = VideoConfiguration(every_n_frames=2)
+    metadata = VideoDecoder().decode(source, config)
+    frames = FrameExtractor().extract(metadata, config).sequence.frames
+
+    assert metadata.frame_count == 3
+    assert [frame.timestamp.frame_number for frame in frames] == [0, 2]
+    assert [frame.image.data for frame in frames] == [b"png-frame-0", b"png-frame-2"]
+    assert all(frame.image.pixel_format == "png" for frame in frames)
