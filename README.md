@@ -246,3 +246,11 @@ This bundle explicitly performs **no AI reasoning**, **no learning**, **no predi
 Bundle 12 transforms synchronized Fabio videos into deterministic teaching datasets by linking Fabio transcript statements to timestamps, frames, Genesis `DetectionGraph` instances, and `TrainingSample` records. The extraction engine uses deterministic transcript keyword rules for categories such as absorption, stacked imbalance, POC, value area, trend, market structure, auction theory, delta, session, volume, confluence, general observation, and unknown.
 
 Bundle 12 performs **NO learning**, **NO prediction**, **NO AI reasoning**, and **NO strategy generation**. Fabio transcript text is the only knowledge source, and existing market analysis is not modified. Bundle 13 introduces the Learning Engine.
+
+### Bundle 13: Fabio Learning & Memory Engine
+
+Bundle 13 transforms Bundle 12 Fabio teaching datasets into deterministic, immutable, searchable Fabio memory. The pipeline is `Teaching Dataset -> Learning Engine -> Memory Index -> Similarity Search -> Retrieved Fabio Examples`. Memory entries contain video, lesson, timestamp, transcript, knowledge-observation, transcript-reference, topic, and deterministic feature-vector references only; raw images are never stored in memory vectors.
+
+The feature-vector builder derives reproducible dimensions from POC, Value Area, HVN/LVN and volume context, Delta, Stacked Imbalance, Absorption, Trend, Market Structure, Auction Theory, Session Intelligence, Multi-Timeframe/Confluence context, Knowledge Topics, and transcript references. Similarity search supports weighted feature distance, cosine similarity, Euclidean distance, Manhattan distance, and Hamming similarity without external embeddings.
+
+Bundle 13 explicitly performs **NO prediction**, **NO neural networks**, **NO LLM inference**, **NO fine tuning**, **NO trade generation**, **NO trade signals**, **NO probabilistic reasoning**, and **NO strategy generation**. Bundle 13 only creates searchable Fabio memory. Bundle 14 introduces Replay & Coaching.

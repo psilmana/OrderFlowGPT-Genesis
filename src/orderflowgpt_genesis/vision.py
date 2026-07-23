@@ -3248,6 +3248,9 @@ class DetectionGraph:
     knowledge_observations: tuple[str, ...] = ()
     knowledge_references: tuple[str, ...] = ()
     knowledge_statistics: tuple[int, ...] = ()
+    memory_references: tuple[str, ...] = ()
+    retrieval_references: tuple[str, ...] = ()
+    retrieval_statistics: tuple[int, ...] = ()
 
     def __post_init__(self) -> None:
         if not self.frame_id.strip():
@@ -3273,6 +3276,17 @@ class DetectionGraph:
             raise ValueError("knowledge references cannot be blank")
         if any(value < 0 for value in self.knowledge_statistics):
             raise ValueError("knowledge statistics cannot be negative")
+        if len(set(self.memory_references)) != len(self.memory_references):
+            raise ValueError("memory references must be unique")
+        if len(set(self.retrieval_references)) != len(self.retrieval_references):
+            raise ValueError("retrieval references must be unique")
+        if any(
+            not value.strip()
+            for value in self.memory_references + self.retrieval_references
+        ):
+            raise ValueError("memory and retrieval references cannot be blank")
+        if any(value < 0 for value in self.retrieval_statistics):
+            raise ValueError("retrieval statistics cannot be negative")
         ids = {obj.object_id for obj in self.objects}
         if len(ids) != len(self.objects):
             raise ValueError("detected object ids must be unique")

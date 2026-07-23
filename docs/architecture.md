@@ -370,3 +370,13 @@ The engine links Fabio transcript sentences to aligned timestamps, frame identif
 DetectionGraph is extended only with knowledge observations, knowledge references, and knowledge statistics. TrainingSample is extended only with knowledge observation references, knowledge topics, transcript references, frame references, and timeline references.
 
 Bundle 12 includes **NO learning**, **NO prediction**, **NO AI reasoning**, **NO strategy generation**, **NO trade recommendations**, and **NO probabilities**. It also makes **NO OCR** or **OpenCV** changes. Fabio is the only knowledge source. Bundle 13 introduces the Learning Engine.
+
+## Bundle 13: Fabio Learning & Memory Engine
+
+Bundle 13 consumes immutable Bundle 12 `KnowledgeDataset` teaching records and builds a deterministic `MemoryDataset` with sorted `MemoryEntry` records, a canonical `MemoryIndex`, immutable metadata, and reproducible statistics. `MemoryBuilder`, `MemoryIndexer`, `MemoryDatabase`, `MemorySearcher`, `MemoryValidator`, `MemorySerializer`, and `MemoryLoader` provide the public learning and retrieval API.
+
+Each `MemoryFeatureVector` is deterministic and contains only numeric/categorical references derived from existing Genesis analysis and Fabio teaching metadata: POC, Value Area, HVN, LVN, Delta, Stacked Imbalance, Absorption, Trend, Market Structure, Auction Theory, Session, Multi-Timeframe/Confluence context, Knowledge Topics, and transcript references. Raw images are excluded.
+
+Similarity is deterministic and configurable through `SimilarityMetric`: weighted feature distance, cosine similarity, Euclidean distance, Manhattan distance, and Hamming similarity. Retrieval accepts a current `DetectionGraph`, converts it to a reproducible feature vector, and returns top-N `RetrievedExample` records containing video, lesson, timestamp, transcript, knowledge observation, similarity score, and memory identifier. `DetectionGraph` is extended only with memory references, retrieval references, and retrieval statistics; market analysis fields are unchanged.
+
+Bundle 13 performs **NO prediction**, **NO neural networks**, **NO LLM inference**, **NO fine tuning**, **NO trade generation**, **NO trade signals**, **NO probabilistic reasoning**, and **NO strategy generation**. Bundle 13 only creates searchable Fabio memory. Bundle 14 introduces Replay & Coaching.
