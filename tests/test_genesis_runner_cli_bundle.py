@@ -125,3 +125,57 @@ def test_configuration_immutability_and_cli_parsing(tmp_path):
     assert args.video.name == "x.mp4"
     assert args.output == tmp_path
     assert args.overwrite is True
+
+
+def test_transcript_integrates_through_knowledge_and_memory(tmp_path):
+    video = make_video(tmp_path)
+    transcript = make_transcript(tmp_path)
+    result = GenesisRunner(config(tmp_path)).run_video(video, transcript)
+
+    report = json.loads(result.report.read_text(encoding="utf-8"))
+    assert report["knowledge_observations"] == 1
+    assert report["memory_entries"] == 1
+
+    dataset = json.loads(
+        (result.output / "dataset" / "dataset.json").read_text(encoding="utf-8")
+    )
+    sample = dataset["samples"][0]
+    assert sample["transcript_alignment_id"].startswith("falign:")
+    assert sample["transcript_references"] == ["sentence:0"]
+    assert sample["transcript_text"] == ["deterministic teaching observation"]
+
+    detections = tuple((result.output / "detections").glob("*.json"))
+    detection = json.loads(detections[0].read_text(encoding="utf-8"))
+    assert detection["frame_transcript_references"] == [
+        sample["transcript_alignment_id"]
+    ]
+
+    knowledge = json.loads(
+        (result.output / "knowledge" / "knowledge.json").read_text(encoding="utf-8")
+    )
+    assert len(knowledge["timeline"]["observations"]) == 1
+
+    memory = json.loads(
+        (result.output / "memory" / "memory.json").read_text(encoding="utf-8")
+    )
+    assert len(memory["entries"]) == 1
+    assert memory["entries"][0]["transcript"] == "deterministic teaching observation"
+
+    log = result.log.read_text(encoding="utf-8")
+    assert "Transcript loaded:" in log
+    assert "Transcript segments: 1" in log
+    assert "Frames matched: 1" in log
+    assert "Knowledge observations created: 1" in log
+    assert "Memory entries created: 1" in log
+
+
+def test_timestamp_mismatch_is_deterministic_nearest_match(tmp_path):
+    video = make_video(tmp_path)
+    transcript = tmp_path / "lesson01.txt"
+    transcript.write_text("[00:10:00.000] far away transcript", encoding="utf-8")
+    result = GenesisRunner(config(tmp_path)).run_video(video, transcript)
+    assert result.statistics.knowledge_observations == 1
+    dataset = json.loads(
+        (result.output / "dataset" / "dataset.json").read_text(encoding="utf-8")
+    )
+    assert dataset["samples"][0]["transcript_text"] == ["far away transcript"]

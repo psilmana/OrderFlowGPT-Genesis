@@ -125,18 +125,30 @@ class GenesisRunner:
         if transcript_path is None:
             lines.append("WARNING Missing transcript: transcript alignment skipped")
         else:
-
-            def align():  # type: ignore[no-untyped-def]
-                cfg = TranscriptConfiguration(
-                    transcript_path.stem,
-                    import_result.dataset.metadata.identifier.video_id,
-                )
-                timeline = TranscriptImporter().import_file(transcript_path, cfg)
-                return TranscriptAligner(cfg).align(
-                    (s.metadata for s in dataset.samples), timeline
-                )
-
-            transcript_dataset = stage("Transcript Alignment", align)
+            transcript_cfg = TranscriptConfiguration(
+                transcript_path.stem,
+                import_result.dataset.metadata.identifier.video_id,
+            )
+            timeline = stage(
+                "Transcript Import",
+                lambda: TranscriptImporter().import_file(
+                    transcript_path, transcript_cfg
+                ),
+            )
+            lines.append(f"Transcript loaded: {transcript_path}")
+            lines.append(f"Transcript segments: {len(timeline.segments)}")
+            transcript_dataset = stage(
+                "Transcript Alignment",
+                lambda: TranscriptAligner(transcript_cfg).align(
+                    (s.metadata for s in dataset.samples), timeline, dataset.samples
+                ),
+            )
+            matched = sum(
+                1
+                for a in transcript_dataset.alignments
+                if a.nearest_sentence_id is not None
+            )
+            lines.append(f"Frames matched: {matched}")
         if transcript_dataset is None:
             knowledge = None
             memory = None
@@ -147,12 +159,23 @@ class GenesisRunner:
                     KnowledgeConfiguration(f"knowledge:{lesson_id}")
                 ).extract(transcript_dataset, graphs, dataset.samples),
             )
+            graphs = knowledge.detection_graphs
+            dataset = dataset.__class__(
+                dataset.dataset_id,
+                dataset.version,
+                knowledge.training_samples,
+                dataset.created_at,
+            )
+            lines.append(
+                f"Knowledge observations created: {len(knowledge.dataset.timeline.observations)}"
+            )
             memory = stage(
                 "Learning & Memory",
                 lambda: MemoryBuilder(
                     LearningConfiguration(f"memory:{lesson_id}", lesson_id)
                 ).build(knowledge.dataset),
             )
+            lines.append(f"Memory entries created: {len(memory.dataset.entries)}")
         stage(
             "Save Results",
             lambda: self._save(lesson_dir, frames, graphs, dataset, knowledge, memory),
