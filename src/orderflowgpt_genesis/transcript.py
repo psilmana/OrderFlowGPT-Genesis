@@ -9,14 +9,14 @@ from __future__ import annotations
 
 import json
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from datetime import datetime, timezone
 from enum import Enum
 from pathlib import Path
 from types import MappingProxyType
 from typing import Iterable, Literal
 
-from .dataset import FrameMetadata, TrainingSample
+from .dataset import FeatureVectorBuilder, FrameMetadata, TrainingSample
 
 TranscriptFormat = Literal["srt", "vtt", "txt", "json"]
 
@@ -217,6 +217,10 @@ class FrameTranscriptAlignment:
     active_sentence_ids: tuple[str, ...]
     confidence: AlignmentConfidence
 
+    @property
+    def alignment_id(self) -> str:
+        return f"falign:{self.frame_id}"
+
     def __post_init__(self) -> None:
         if not self.frame_id.strip() or not self.video_id.strip():
             raise ValueError("frame and video ids are required")
@@ -375,16 +379,70 @@ class TranscriptAligner:
         self.timeline_synchronizer = TimelineSynchronizer()
 
     def align(
-        self, frames: Iterable[FrameMetadata], timeline: TranscriptTimeline
+        self,
+        frames: Iterable[FrameMetadata],
+        timeline: TranscriptTimeline,
+        samples: Iterable[TrainingSample] = (),
     ) -> TranscriptDataset:
         alignments = tuple(
             self.frame_aligner.align(frame, timeline) for frame in frames
         )
+        sample_by_frame = {
+            sample.metadata.identifier.frame_id: sample for sample in samples
+        }
+        sentence_by_id = {
+            sentence.sentence_id: sentence for sentence in timeline.sentences
+        }
+        enriched_samples: list[TrainingSample] = []
+        for alignment in alignments:
+            sample = sample_by_frame.get(alignment.frame_id)
+            if sample is None:
+                continue
+            sentence_ids = _alignment_sentence_ids(alignment)
+            texts = tuple(
+                sentence_by_id[sid].text
+                for sid in sentence_ids
+                if sid in sentence_by_id
+            )
+            enriched_graph = replace(
+                sample.feature_vector.detection_graph,
+                transcript_references=(timeline.metadata.identifier.transcript_id,),
+                frame_transcript_references=(alignment.alignment_id,),
+                transcript_alignment_references=tuple(
+                    f"alignment:{timeline.metadata.identifier.transcript_id}:{sid}"
+                    for sid in sentence_ids
+                ),
+            )
+            enriched_samples.append(
+                replace(
+                    sample,
+                    feature_vector=FeatureVectorBuilder().build(enriched_graph),
+                    transcript_alignment_id=alignment.alignment_id,
+                    transcript_references=sentence_ids,
+                    transcript_text=texts,
+                    frame_references=(alignment.frame_id,),
+                    timeline_references=tuple(
+                        f"alignment:{timeline.metadata.identifier.transcript_id}:{sid}"
+                        for sid in sentence_ids
+                    ),
+                )
+            )
         return TranscriptDataset(
             f"transcript-dataset:{self.configuration.video_id}:{self.configuration.transcript_id}",
             timeline,
             alignments,
+            tuple(sorted(enriched_samples, key=lambda s: s.sample_id)),
         )
+
+
+def _alignment_sentence_ids(alignment: FrameTranscriptAlignment) -> tuple[str, ...]:
+    ordered = (
+        alignment.nearest_sentence_id,
+        alignment.previous_sentence_id,
+        alignment.next_sentence_id,
+        *alignment.active_sentence_ids,
+    )
+    return tuple(dict.fromkeys(sid for sid in ordered if sid is not None))
 
 
 def _validate_span(start_ms: int, end_ms: int) -> None:
@@ -459,6 +517,18 @@ def _parse_timestamped_txt(payload: str) -> tuple[TranscriptSegment, ...]:
                     match.group(3).strip(),
                     _parse_timestamp(match.group(1)),
                     _parse_timestamp(match.group(2)),
+                )
+            )
+            continue
+        single = re.match(r"^\s*\[([0-9:.;,]+)\]\s*(.+)$", line)
+        if single:
+            start_ms = _parse_timestamp(single.group(1))
+            segments.append(
+                TranscriptSegment(
+                    f"segment:{len(segments)}",
+                    single.group(2).strip(),
+                    start_ms,
+                    start_ms,
                 )
             )
     return tuple(segments)
