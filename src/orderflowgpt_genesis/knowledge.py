@@ -310,7 +310,13 @@ class KnowledgeExtractionEngine:
         samples: Iterable[TrainingSample] = (),
     ) -> KnowledgeExtractionResult:
         graph_by_frame = {g.frame_id: g for g in graphs}
-        sample_by_frame = {s.metadata.identifier.frame_id: s for s in samples}
+        source_samples = tuple(transcript_dataset.samples) or tuple(samples)
+        sample_by_frame = {s.metadata.identifier.frame_id: s for s in source_samples}
+        for sample in source_samples:
+            graph_by_frame.setdefault(
+                sample.metadata.identifier.frame_id,
+                sample.feature_vector.detection_graph,
+            )
         sentence_by_id = {
             s.sentence_id: s for s in transcript_dataset.timeline.sentences
         }
@@ -363,14 +369,14 @@ class KnowledgeExtractionEngine:
                 )
                 if statement.statement_id not in {s.statement_id for s in statements}:
                     statements.append(statement)
-                sample = sample_by_frame.get(alignment.frame_id)
+                aligned_sample = sample_by_frame.get(alignment.frame_id)
                 context = KnowledgeContext(
                     f"context:{alignment.frame_id}:{sentence_id}",
                     alignment.video_id,
                     alignment.frame_id,
                     alignment.timestamp_ms,
                     f"alignment:{transcript_dataset.timeline.metadata.identifier.transcript_id}:{sentence_id}",
-                    sample.sample_id if sample else None,
+                    aligned_sample.sample_id if aligned_sample else None,
                     graph.frame_id,
                 )
                 ref = KnowledgeReference(
@@ -379,7 +385,7 @@ class KnowledgeExtractionEngine:
                     sentence_id,
                     alignment.frame_id,
                     graph.frame_id,
-                    sample.sample_id if sample else None,
+                    aligned_sample.sample_id if aligned_sample else None,
                 )
                 obs = KnowledgeObservation(
                     f"knowledge-observation:{alignment.frame_id}:{sentence_id}",
@@ -388,9 +394,9 @@ class KnowledgeExtractionEngine:
                     ref,
                 )
                 observations.append(obs)
-                if sample is not None:
+                if aligned_sample is not None:
                     enhanced_samples[alignment.frame_id] = replace(
-                        sample,
+                        aligned_sample,
                         knowledge_observation_references=tuple(
                             sorted(
                                 set(
@@ -400,32 +406,92 @@ class KnowledgeExtractionEngine:
                             )
                         ),
                         knowledge_topics=tuple(
-                            sorted(set(sample.knowledge_topics + (topic.topic_id,)))
+                            sorted(
+                                set(aligned_sample.knowledge_topics + (topic.topic_id,))
+                            )
                         ),
                         transcript_references=tuple(
-                            sorted(set(sample.transcript_references + (sentence_id,)))
+                            sorted(
+                                set(
+                                    aligned_sample.transcript_references
+                                    + (sentence_id,)
+                                )
+                            )
+                        ),
+                        transcript_text=tuple(
+                            sorted(
+                                set(aligned_sample.transcript_text + (sentence.text,))
+                            )
                         ),
                         frame_references=tuple(
-                            sorted(set(sample.frame_references + (alignment.frame_id,)))
+                            sorted(
+                                set(
+                                    aligned_sample.frame_references
+                                    + (alignment.frame_id,)
+                                )
+                            )
                         ),
                         timeline_references=tuple(
                             sorted(
-                                set(sample.timeline_references + (context.context_id,))
+                                set(
+                                    aligned_sample.timeline_references
+                                    + (context.context_id,)
+                                )
                             )
                         ),
                     )
+                current_graph = enhanced_graphs[alignment.frame_id]
+                alignment_ref = context.transcript_alignment_id
                 enhanced_graphs[alignment.frame_id] = replace(
-                    graph,
+                    current_graph,
+                    transcript_references=tuple(
+                        sorted(
+                            set(
+                                current_graph.transcript_references
+                                + (
+                                    transcript_dataset.timeline.metadata.identifier.transcript_id,
+                                )
+                            )
+                        )
+                    ),
+                    frame_transcript_references=tuple(
+                        sorted(
+                            set(
+                                current_graph.frame_transcript_references
+                                + (alignment.alignment_id,)
+                            )
+                        )
+                    ),
+                    transcript_alignment_references=tuple(
+                        sorted(
+                            set(
+                                current_graph.transcript_alignment_references
+                                + ((alignment_ref,) if alignment_ref else ())
+                            )
+                        )
+                    ),
                     knowledge_observations=tuple(
                         sorted(
-                            set(graph.knowledge_observations + (obs.observation_id,))
+                            set(
+                                current_graph.knowledge_observations
+                                + (obs.observation_id,)
+                            )
                         )
                     ),
                     knowledge_references=tuple(
-                        sorted(set(graph.knowledge_references + (ref.reference_id,)))
+                        sorted(
+                            set(
+                                current_graph.knowledge_references + (ref.reference_id,)
+                            )
+                        )
                     ),
                     knowledge_statistics=(
-                        len(set(graph.knowledge_observations + (obs.observation_id,))),
+                        len(
+                            set(
+                                current_graph.knowledge_observations
+                                + (obs.observation_id,)
+                            )
+                        ),
                     ),
                 )
 

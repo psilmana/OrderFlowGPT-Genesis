@@ -148,6 +148,7 @@ class TrainingSample:
     knowledge_observation_references: tuple[str, ...] = ()
     knowledge_topics: tuple[str, ...] = ()
     transcript_references: tuple[str, ...] = ()
+    transcript_text: tuple[str, ...] = ()
     frame_references: tuple[str, ...] = ()
     timeline_references: tuple[str, ...] = ()
 
@@ -165,6 +166,7 @@ class TrainingSample:
             ("knowledge observation references", self.knowledge_observation_references),
             ("knowledge topics", self.knowledge_topics),
             ("transcript references", self.transcript_references),
+            ("transcript text", self.transcript_text),
             ("frame references", self.frame_references),
             ("timeline references", self.timeline_references),
         ):
@@ -331,6 +333,10 @@ class TrainingSampleBuilder:
         version: DatasetVersion,
         annotations: Iterable[Annotation] = (),
         transcript_alignment_id: str | None = None,
+        transcript_references: Iterable[str] = (),
+        transcript_text: Iterable[str] = (),
+        frame_references: Iterable[str] = (),
+        timeline_references: Iterable[str] = (),
     ) -> TrainingSample:
         return TrainingSample(
             f"sample:{metadata.identifier.frame_id}:{version.value}",
@@ -339,6 +345,10 @@ class TrainingSampleBuilder:
             feature_vector,
             tuple(annotations),
             transcript_alignment_id,
+            transcript_references=tuple(transcript_references),
+            transcript_text=tuple(transcript_text),
+            frame_references=tuple(frame_references),
+            timeline_references=tuple(timeline_references),
         )
 
 
