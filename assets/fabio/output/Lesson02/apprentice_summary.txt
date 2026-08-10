@@ -1,0 +1,69 @@
+GENESIS APPRENTICE — Learning Summary
+======================================================================
+
+Report ID: 9b162a549f564b04
+Timestamp: 2026-08-09T17:58:51.470666
+Mode: transcript-only
+
+Lessons Processed: 1
+Concepts Learned: 106
+Experiences Created: 50
+Sessions Completed: 50
+Coach Explanations: 100
+Frames Processed: 50
+Overall Confidence: 56.25%
+
+Concept Coverage:
+  Segments with concepts: 1047/1196 (87.5%)
+  Segments with NO concepts: 149
+
+Concept Mastery:
+  NOVICE       ██████████████████████████████████████████████████████████████████████████████████████████████████████████ (106)
+
+Top Concepts:
+  Emoji                0.00
+  People               0.00
+  Crazy                0.00
+  Settings             0.00
+  Remove               0.00
+  Content              0.00
+  Share                0.00
+  First                0.00
+  Platform             0.00
+  Screen               0.00
+
+What was learned:
+  ✓ Lesson Lesson02: 106 concepts, 50 experiences
+
+What needs more study:
+  ⚠ Achieve (NOVICE)
+  ⚠ Announcement (NOVICE)
+  ⚠ Artificial (NOVICE)
+  ⚠ Asset (NOVICE)
+  ⚠ Assistant (NOVICE)
+  ⚠ Audience (NOVICE)
+  ⚠ Battleground (NOVICE)
+  ⚠ Beginners (NOVICE)
+  ⚠ Blood (NOVICE)
+  ⚠ Break-even (NOVICE)
+  ⚠ Breakdown (NOVICE)
+  ⚠ Build (NOVICE)
+  ⚠ Candle (NOVICE)
+  ⚠ Capable (NOVICE)
+  ⚠ Change (NOVICE)
+  ⚠ Charts (NOVICE)
+  ⚠ Clarify (NOVICE)
+  ⚠ Clear (NOVICE)
+  ⚠ Commitment (NOVICE)
+  ⚠ Community (NOVICE)
+
+Knowledge Graph:
+  Concepts: 147
+  Relationships: 313
+
+[NOTE] Running in TRANSCRIPT-ONLY mode.
+  Video frames provide timestamps only.
+  Concept extraction is keyword-based from transcript text.
+  Vision analysis (Bundles 1-8) is NOT active.
+
+Knowledge graph: 0 concepts, 0 relationships, avg confidence 0

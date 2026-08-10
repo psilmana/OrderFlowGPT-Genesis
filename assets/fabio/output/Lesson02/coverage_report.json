@@ -1,0 +1,213 @@
+{
+  "total_segments": 1196,
+  "covered_segments": 1047,
+  "uncovered_segments": 149,
+  "coverage_percent": 87.5,
+  "concept_frequency": {
+    "Lower_Low": 388,
+    "Stop_Loss_in_Profit": 321,
+    "Fundamentals": 282,
+    "Mismanagement": 177,
+    "Direction": 136,
+    "Level": 115,
+    "Market": 97,
+    "Breakout": 93,
+    "Break": 93,
+    "Value_Area": 72,
+    "Aggression": 72,
+    "Don't": 70,
+    "Buyers": 62,
+    "Balance": 54,
+    "Sellers": 54,
+    "VAL": 53,
+    "Think": 49,
+    "Close": 47,
+    "Value": 47,
+    "Revenge_Trading": 46,
+    "Absorption": 43,
+    "Risk_to_Reward": 42,
+    "Trade": 40,
+    "Aggressive": 38,
+    "Setup": 37,
+    "Understand": 37,
+    "Failed_Auction": 37,
+    "Imbalance": 36,
+    "Let's": 35,
+    "Profit": 33,
+    "Today": 32,
+    "First": 30,
+    "Short": 29,
+    "Daily_Loss_Limit": 28,
+    "Price": 27,
+    "Stop_Loss": 25,
+    "Start": 25,
+    "Manage": 24,
+    "Volume_Profile": 24,
+    "Profile": 24,
+    "Position_Size": 23,
+    "Second": 22,
+    "Neutral": 21,
+    "Little": 21,
+    "Expect": 20,
+    "Opening_Range_Breakout": 19,
+    "Squeeze": 19,
+    "Momentum": 18,
+    "Bottom": 17,
+    "Profit_Target": 17,
+    "Control": 17,
+    "Explain": 16,
+    "Target": 16,
+    "Opening_Drive": 15,
+    "Previous_Session_High_Low": 15,
+    "Volatility": 15,
+    "Reason": 14,
+    "Trade_Management": 14,
+    "Displacement": 14,
+    "Choppy": 14,
+    "Entry": 14,
+    "Trades": 13,
+    "Expansion": 13,
+    "Reward": 13,
+    "Reload": 13,
+    "Shoot": 12,
+    "Nasdaq": 12,
+    "POC": 12,
+    "Compression": 11,
+    "Didn't": 11,
+    "Gap": 10,
+    "Footprint": 9,
+    "Order_Flow": 9,
+    "Print": 9,
+    "Explosion": 9,
+    "Market_State": 9,
+    "Community": 8,
+    "Complete": 8,
+    "Reflection": 7,
+    "Market_Close": 7,
+    "Report": 6,
+    "Auction": 6,
+    "NY_Session": 6,
+    "Blood": 5,
+    "Areas": 5,
+    "Mean_Reversion": 5,
+    "Delta": 5,
+    "Triple_A_Setup": 5,
+    "Sweat": 4,
+    "Record": 4,
+    "Reversal": 4,
+    "Dollars": 4,
+    "Pre_Market": 4,
+    "Management": 3,
+    "Psychology": 3,
+    "Contracts": 3,
+    "Wrong": 3,
+    "Bias": 3,
+    "Impulse": 3,
+    "Reclaim": 3,
+    "Content": 2,
+    "Total": 2,
+    "Market_Structure": 2,
+    "Trend_Continuation": 2,
+    "VAH": 2,
+    "Interactive": 2,
+    "Enjoy": 2,
+    "Pullback": 2,
+    "Retracement": 2,
+    "Effort": 2,
+    "Buyer's": 2,
+    "Initial": 2,
+    "Crazy": 1,
+    "Long-term": 1,
+    "Majority": 1,
+    "Retrace": 1,
+    "LVN": 1,
+    "Profits": 1,
+    "CVD": 1,
+    "Caught": 1,
+    "Anticipate": 1,
+    "Capitalize": 1,
+    "Couldn't": 1
+  },
+  "uncovered_examples": [
+    {
+      "index": 1,
+      "text_preview": ".640 --> 00:14.880 let me see from settings can you hear me let me remove this oh oh"
+    },
+    {
+      "index": 2,
+      "text_preview": ".360 --> 00:18.320 now it's amazing"
+    },
+    {
+      "index": 4,
+      "text_preview": ".720 --> 00:39.200 live trading live charting somewhere while you are here"
+    },
+    {
+      "index": 6,
+      "text_preview": ".880 --> 00:58.960 time for me using this platform but seems to work fine let me see can you see my screen"
+    },
+    {
+      "index": 16,
+      "text_preview": ".720 --> 02:21.040 this is for you is it clear guys one in chat"
+    },
+    {
+      "index": 29,
+      "text_preview": ".960 --> 04:13.040 internet is it clear guys perfect"
+    },
+    {
+      "index": 45,
+      "text_preview": ".760 --> 07:00.880 two times per week but what i can do is transfer my mindset model in the chat bot okay in the artific"
+    },
+    {
+      "index": 66,
+      "text_preview": ".840 --> 09:49.680 or two hours researching the most important view of the biggest bank in the world so goldman sachs mo"
+    },
+    {
+      "index": 81,
+      "text_preview": ".320 --> 11:42.000 happening next this is an edge this is an informational edge clear for everyone guys three in chat"
+    },
+    {
+      "index": 111,
+      "text_preview": ".600 --> 15:48.720 okay okay this one is here"
+    },
+    {
+      "index": 115,
+      "text_preview": ".280 --> 16:23.120 amazing okay now i go on share screen again"
+    },
+    {
+      "index": 118,
+      "text_preview": ".000 --> 16:42.720 can you see it"
+    },
+    {
+      "index": 119,
+      "text_preview": ".400 --> 16:46.880 perfect"
+    },
+    {
+      "index": 120,
+      "text_preview": ".480 --> 16:55.280 okay okay now let me see here"
+    },
+    {
+      "index": 121,
+      "text_preview": ".800 --> 17:00.800 okay"
+    },
+    {
+      "index": 132,
+      "text_preview": ".720 --> 18:05.040 okay"
+    },
+    {
+      "index": 134,
+      "text_preview": ".080 --> 18:18.240 i want you to go through the model i want you to go through the model i want you to go through the"
+    },
+    {
+      "index": 135,
+      "text_preview": ".240 --> 18:22.960 cash session okay and we can make a lot of money with this"
+    },
+    {
+      "index": 160,
+      "text_preview": ".080 --> 21:45.520 it's almost the same okay there is no big change about this so you can use without any problem okay"
+    },
+    {
+      "index": 164,
+      "text_preview": ".600 --> 22:14.480 so if this is the"
+    }
+  ]
+}

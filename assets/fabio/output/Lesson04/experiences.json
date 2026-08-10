@@ -1,0 +1,712 @@
+[
+  {
+    "experience_id": "a1c4da5d5d4e0b6a",
+    "session_reference": "Lesson04_frame0000",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".000 --> 00:12.240 hello beautiful people give me one in chat you can hear me how is it going",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": []
+  },
+  {
+    "experience_id": "09bf88c01e21bbc7",
+    "session_reference": "Lesson04_frame0001",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".560 --> 00:21.840 amazing today we have a lot of topic to go through a little bit of live charting here is luca",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": []
+  },
+  {
+    "experience_id": "7a496cc27f8c6e83",
+    "session_reference": "Lesson04_frame0002",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".320 --> 00:27.360 let me check if i can share screen to you",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": []
+  },
+  {
+    "experience_id": "97d028c5f995534a",
+    "session_reference": "Lesson04_frame0003",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".000 --> 00:33.760 let's go directly in action",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": []
+  },
+  {
+    "experience_id": "ef32646dce689acb",
+    "session_reference": "Lesson04_frame0004",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".120 --> 00:38.400 can you see my screen guys",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "7a02030bc5e7f5d3"
+    ]
+  },
+  {
+    "experience_id": "ef2a6ae91ece6881",
+    "session_reference": "Lesson04_frame0005",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".600 --> 00:48.000 nobody says already made 100 points in nasdaq amazing what's happening here what do you see",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": []
+  },
+  {
+    "experience_id": "686f2fdc4158dfd5",
+    "session_reference": "Lesson04_frame0006",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".000 --> 00:59.280 from this auction the opening",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": []
+  },
+  {
+    "experience_id": "5c1ecc306e4cc12c",
+    "session_reference": "Lesson04_frame0007",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".000 --> 01:11.520 we see an absorption amazing long you took luca amazing long there was a small long from here",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": []
+  },
+  {
+    "experience_id": "190b38cdde9fe0d1",
+    "session_reference": "Lesson04_frame0008",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".640 --> 01:21.200 there was a small long from here i don't know if it's visible i loaded five contract here",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "492e7fd05e1983dd"
+    ]
+  },
+  {
+    "experience_id": "6e520303005f3a27",
+    "session_reference": "Lesson04_frame0009",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".160 --> 01:34.400 and reloaded here took out here i did market opening scalp amazing one and we are now in a consolidation",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": []
+  },
+  {
+    "experience_id": "c056c249fe4de573",
+    "session_reference": "Lesson04_frame0010",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": ".400 --> 01:41.920 phase the reason i decided to take it out is because i see this absorption it is super strong",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "cff401f67d058167",
+      "2ccdadf5f340f865"
+    ]
+  },
+  {
+    "experience_id": "c63346e5f38b8bb9",
+    "session_reference": "Lesson04_frame0011",
+    "what_was_seen": "market_state=BALANCED; aggression=SELLER_AGGRESSIVE; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".920 --> 01:54.880 and i see this lock in of the sellers okay so now i have a condition where the sellers are pushing",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865"
+    ]
+  },
+  {
+    "experience_id": "f260ed6fb7c44f4c",
+    "session_reference": "Lesson04_frame0012",
+    "what_was_seen": "market_state=TRENDING_UP; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".680 --> 02:04.320 even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "6bcd07c020807ff3",
+      "2ccdadf5f340f865"
+    ]
+  },
+  {
+    "experience_id": "4e7d684c5d2fa46d",
+    "session_reference": "Lesson04_frame0013",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".320 --> 02:10.640 the breakout and test of this level but they need to accept it okay i know that i wanted to do theory",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865"
+    ]
+  },
+  {
+    "experience_id": "1a9ab25a5680925a",
+    "session_reference": "Lesson04_frame0014",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".640 --> 02:17.840 but it's immediately presenting a setup no it's not bad there it's bad the quality i'm streaming full hd guys",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865"
+    ]
+  },
+  {
+    "experience_id": "5527f1cef8bd36f4",
+    "session_reference": "Lesson04_frame0015",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".680 --> 02:24.720 i can see clearly is it better the quality of the video i think it's good",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "e697aecceab20d6a"
+    ]
+  },
+  {
+    "experience_id": "41a4d8b5e6175f43",
+    "session_reference": "Lesson04_frame0016",
+    "what_was_seen": "market_state=BALANCED; aggression=BUYER_AGGRESSIVE; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".760 --> 02:34.800 quality is good okay now as you can see the buyers are trying to get aggressive on this level so it can be a",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "616b2dbc3df5e1cf",
+      "e697aecceab20d6a"
+    ]
+  },
+  {
+    "experience_id": "9e5f242c9f0eecc4",
+    "session_reference": "Lesson04_frame0017",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".800 --> 02:42.880 situation where we can load some risk on the way up and try to have an extension on this squeeze",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865"
+    ]
+  },
+  {
+    "experience_id": "f775534ac6a58a0d",
+    "session_reference": "Lesson04_frame0018",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".880 --> 02:47.840 that we can have here okay now we have multiple setup anticipation of the squeeze",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "c0d5e1f9cab4d158",
+      "4d53c519b32c2eb2"
+    ]
+  },
+  {
+    "experience_id": "102ac07da4ed2aa7",
+    "session_reference": "Lesson04_frame0019",
+    "what_was_seen": "market_state=BALANCED; aggression=SELLER_AGGRESSIVE; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".400 --> 02:54.320 and uh trapped sellers as you can see these sellers are not rewarded i see people already making money",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "b44b598b8821dd6a",
+      "2ccdadf5f340f865",
+      "67af0b5dab7cc991",
+      "ef0b6cddea2fde45"
+    ]
+  },
+  {
+    "experience_id": "5bced78d9d77c74d",
+    "session_reference": "Lesson04_frame0020",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".680 --> 03:00.400 wakas fabio i made nine thousand dollars yesterday my best day i've ever thank you for",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865"
+    ]
+  },
+  {
+    "experience_id": "ef6ee0bb36731916",
+    "session_reference": "Lesson04_frame0021",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".400 --> 03:05.600 this session thank you guys it's beautiful to see look here look here look here look here look here",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "1a0d6f54538e2d57",
+      "2ccdadf5f340f865",
+      "fa09380d70821c7c"
+    ]
+  },
+  {
+    "experience_id": "9aef4d228066ca86",
+    "session_reference": "Lesson04_frame0022",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".880 --> 03:12.720 okay this is something that we can capitalize on this is something that we can capitalize on they",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865"
+    ]
+  },
+  {
+    "experience_id": "f7a80c0faab56019",
+    "session_reference": "Lesson04_frame0023",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".720 --> 03:21.200 already locked the aggression now let's see if they can hold it or if it's an absorption the direction for",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "634c1309078ae5ba",
+      "cff401f67d058167",
+      "2ccdadf5f340f865"
+    ]
+  },
+  {
+    "experience_id": "9d75b7c6bfe4891d",
+    "session_reference": "Lesson04_frame0024",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".200 --> 03:28.480 the day seems long guys already from the opening now i'm watching the chart i feel good now arslan",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "bbad9f7bfbee54f6",
+    "session_reference": "Lesson04_frame0025",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".480 --> 03:34.720 i feel good ready to go ready to go now we want to see how it follow through on this one",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "5244bd04ba2b82e9",
+    "session_reference": "Lesson04_frame0026",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".920 --> 03:40.960 let's see how it goes",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "634c1309078ae5ba",
+      "2ccdadf5f340f865",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "aad59f21821717bf",
+    "session_reference": "Lesson04_frame0027",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".200 --> 03:51.120 no now i'm trading so it's low size because i don't feel really good guys so i took uh only 10 contract long",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "a9385f8dd04f2b9d",
+      "df622612e288d3fa",
+      "2ccdadf5f340f865",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "28755b5820cc3538",
+    "session_reference": "Lesson04_frame0028",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".120 --> 03:59.360 that for a lot of people it's enough money and uh only made the six thousand i don't even remember",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "b44b598b8821dd6a",
+      "a9385f8dd04f2b9d",
+      "2ccdadf5f340f865",
+      "6a928fab8061ed21",
+      "5ac515ff3efa760b",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "3769b7ee37465fb2",
+    "session_reference": "Lesson04_frame0029",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".360 --> 04:05.520 yeah five thousand and eight hundred nothing incredible but still uh ah there is one guy that",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "5ac515ff3efa760b",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "56669308ec6ad904",
+    "session_reference": "Lesson04_frame0030",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".520 --> 04:13.840 told me that it's a demo account so i just want to show you something okay this is my account that we",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "a314441454fc9c78",
+    "session_reference": "Lesson04_frame0031",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".840 --> 04:18.320 have here and as you can see i just want to show you that",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "c53a20b7b39ab47a",
+    "session_reference": "Lesson04_frame0032",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".440 --> 04:27.360 it's directly connected just to show you i don't want to open a position okay when you open here you",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "a9385f8dd04f2b9d",
+      "2ccdadf5f340f865",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "13058e6f24fa36eb",
+    "session_reference": "Lesson04_frame0033",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".360 --> 04:31.920 get the feel in interactive so it's directly reflected here it's not a demo account it's a",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "5ec0e10b45723973",
+      "89588bf64c5c2f2e"
+    ]
+  },
+  {
+    "experience_id": "63dacde5675f80ff",
+    "session_reference": "Lesson04_frame0034",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".920 --> 04:34.320 real account i only trade the real account okay",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "5ec0e10b45723973",
+      "89588bf64c5c2f2e"
+    ]
+  },
+  {
+    "experience_id": "b0a36936c12b294a",
+    "session_reference": "Lesson04_frame0035",
+    "what_was_seen": "market_state=BALANCED; aggression=BALANCED; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".320 --> 04:44.080 now what happened here we can see that the buyers broke out this level and we have a sellers that caught",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "67af0b5dab7cc991",
+      "616b2dbc3df5e1cf",
+      "188ab216a6f110b5",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "29b6d3b381500e92",
+    "session_reference": "Lesson04_frame0036",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".080 --> 04:52.320 absorbed now they are reloading okay now they are reloading so it can have sense okay that all this",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "0c3b7da8cebd78b8",
+    "session_reference": "Lesson04_frame0037",
+    "what_was_seen": "market_state=BALANCED; aggression=SELLER_AGGRESSIVE; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".320 --> 05:00.240 stack of sellers get tested back okay so we have a deep retracement on this one that's the reason this",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "223b20b3d4bbef0d",
+      "67af0b5dab7cc991",
+      "ef0b6cddea2fde45",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "b1697698ff06a2dd",
+    "session_reference": "Lesson04_frame0038",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".240 --> 05:05.040 one for me it's a really stupid trade i just wanted to show you that it's connected let's close this as",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "634c1309078ae5ba",
+      "2ccdadf5f340f865",
+      "5ec0e10b45723973",
+      "be507367892d9fa0"
+    ]
+  },
+  {
+    "experience_id": "db8f7f390d3c128b",
+    "session_reference": "Lesson04_frame0039",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".040 --> 05:12.320 soon as possible and we have a potential test of the single level okay we got we got filled just",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "616b2dbc3df5e1cf",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "992d26ed589ad447",
+    "session_reference": "Lesson04_frame0040",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".320 --> 05:18.320 demonstration purpose guys it's not a financial consultants and stuff and it's only for educational",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "a4cfdae243316520",
+    "session_reference": "Lesson04_frame0041",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".320 --> 05:24.080 purpose now they test this level they are not loading back this one so one trade that you can have",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "616b2dbc3df5e1cf",
+      "5ec0e10b45723973",
+      "be507367892d9fa0",
+      "951ec66417865fe7"
+    ]
+  },
+  {
+    "experience_id": "8e4091f9778b38a5",
+    "session_reference": "Lesson04_frame0042",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".080 --> 05:29.920 is the deep retracement here okay and we want to understand where we can have a deep retracement",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "5ec0e10b45723973",
+      "5d0d2e52cc36ab94"
+    ]
+  },
+  {
+    "experience_id": "36c4ed2036437549",
+    "session_reference": "Lesson04_frame0043",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".920 --> 05:38.720 lag andrea says doesn't seems lagging to me guys it's only andrea experiencing lag because i have an",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "206ebece6e221086",
+    "session_reference": "Lesson04_frame0044",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".720 --> 05:40.720 amazing connection guys it's really stable",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "6d948297da61558d",
+    "session_reference": "Lesson04_frame0045",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".520 --> 05:49.680 now can you see what's happening here we have an absorption a huge up can you see this absorption guys",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "e871217834cdb938",
+      "cff401f67d058167",
+      "2ccdadf5f340f865",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "b73023946b5c8f97",
+    "session_reference": "Lesson04_frame0046",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".680 --> 05:57.040 it's enough the quality of the video to see this small line okay so this one is the most important",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "492e7fd05e1983dd",
+      "2ccdadf5f340f865",
+      "e697aecceab20d6a",
+      "f83669b9c87656e9",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "ebb3cfebea122d57",
+    "session_reference": "Lesson04_frame0047",
+    "what_was_seen": "market_state=BALANCED; aggression=ABSORPTION_SELL; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".040 --> 06:01.920 level that we have now because we have a huge also at the top we have absorption of the sellers but",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "cff401f67d058167",
+      "2ccdadf5f340f865",
+      "67af0b5dab7cc991",
+      "616b2dbc3df5e1cf",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "114223f238164141",
+    "session_reference": "Lesson04_frame0048",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".920 --> 06:09.120 here i think it can be the reload point let me draft the area for you okay this can be a reload point of",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "5e1835a8d23e130a",
+      "5ec0e10b45723973"
+    ]
+  },
+  {
+    "experience_id": "41167c43d2018d1b",
+    "session_reference": "Lesson04_frame0049",
+    "what_was_seen": "market_state=BALANCED; aggression=BUYER_AGGRESSIVE; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": ".120 --> 06:20.320 the buyers okay okay this can be a real point of the buyers where they continue to to go up from this move",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "2ccdadf5f340f865",
+      "188ab216a6f110b5",
+      "ef0b6cddea2fde45",
+      "5ec0e10b45723973",
+      "f084babf4f7fce8b"
+    ]
+  }
+]

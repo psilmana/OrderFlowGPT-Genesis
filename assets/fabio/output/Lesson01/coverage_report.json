@@ -1,0 +1,82 @@
+{
+  "total_segments": 105,
+  "covered_segments": 98,
+  "uncovered_segments": 7,
+  "coverage_percent": 93.3,
+  "concept_frequency": {
+    "Stop_Loss_in_Profit": 45,
+    "Lower_Low": 41,
+    "Stop_Loss": 21,
+    "Absorption": 16,
+    "Direction": 16,
+    "Compression": 9,
+    "Aggression": 8,
+    "Squeeze": 8,
+    "Profit_Target": 8,
+    "Target": 8,
+    "Imbalance": 8,
+    "Failed_Auction": 7,
+    "Neutral": 7,
+    "NASDAQ_Effort": 6,
+    "Risk_to_Reward": 6,
+    "Volatility": 5,
+    "VAL": 5,
+    "Value_Area": 5,
+    "Momentum": 5,
+    "Liquidation": 5,
+    "Mismanagement": 5,
+    "Setup": 5,
+    "Market_Close": 4,
+    "VAH": 4,
+    "Opening_Range_Breakout": 4,
+    "Bias": 4,
+    "Breakout": 4,
+    "Balance": 3,
+    "Slippage": 3,
+    "Fundamentals": 2,
+    "Volume_Profile": 2,
+    "Pullback": 2,
+    "Entry": 2,
+    "Retracement": 2,
+    "Trade_Management": 2,
+    "LVN": 2,
+    "Reflection": 2,
+    "Displacement": 1,
+    "Explosion": 1,
+    "Expansion": 1,
+    "Position_Size": 1,
+    "Gap": 1,
+    "Triple_A_Setup": 1,
+    "Level": 1
+  },
+  "uncovered_examples": [
+    {
+      "index": 13,
+      "text_preview": ".480 --> 01:30.720 explain, let me see if there is something interesting here to explain other than the area"
+    },
+    {
+      "index": 37,
+      "text_preview": ".720 --> 04:07.120 was a reload, then we have one amazing short cluster of two areas, I shorted late guys,"
+    },
+    {
+      "index": 57,
+      "text_preview": ".400 --> 06:36.080 and I could continue to use my profit for the day to capitalize even more, the reason was this crazy"
+    },
+    {
+      "index": 90,
+      "text_preview": ".680 --> 10:32.160 for you guys, oh, never take"
+    },
+    {
+      "index": 93,
+      "text_preview": ".880 --> 11:00.960 nine contract close, in one, two, three, second,"
+    },
+    {
+      "index": 97,
+      "text_preview": ".800 --> 11:32.080 not even the time to put the position, 2000 risk already, one, two, three,"
+    },
+    {
+      "index": 99,
+      "text_preview": ".080 --> 11:44.800 okay, the market start to consolidate here, I close for around 5000 or 6000, something like this,"
+    }
+  ]
+}

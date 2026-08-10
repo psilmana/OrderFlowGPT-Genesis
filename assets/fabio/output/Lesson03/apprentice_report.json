@@ -1,0 +1,352 @@
+{
+  "report_id": "334f6145cc98db30",
+  "report_timestamp": "2026-08-10T01:27:14.910938",
+  "mode": "transcript-only",
+  "total_lessons": 1,
+  "total_concepts_learned": 108,
+  "total_experiences_created": 50,
+  "total_sessions_completed": 50,
+  "total_coach_explanations": 100,
+  "total_frames_processed": 50,
+  "overall_learning_confidence": 0.5643,
+  "concept_mastery_distribution": [
+    [
+      "NOVICE",
+      108
+    ]
+  ],
+  "top_concepts_by_confidence": [
+    [
+      "Hello",
+      0.0
+    ],
+    [
+      "Welcome",
+      0.0
+    ],
+    [
+      "Warriors",
+      0.0
+    ],
+    [
+      "People",
+      0.0
+    ],
+    [
+      "We're",
+      0.0
+    ],
+    [
+      "Today",
+      0.0
+    ],
+    [
+      "Andrea",
+      0.0
+    ],
+    [
+      "Avengers",
+      0.0
+    ],
+    [
+      "Traders",
+      0.0
+    ],
+    [
+      "Inside",
+      0.0
+    ]
+  ],
+  "what_was_learned": [
+    "Lesson Lesson03: 108 concepts, 50 experiences"
+  ],
+  "what_needs_more_study": [
+    "Account (NOVICE)",
+    "Andrea (NOVICE)",
+    "Anyway (NOVICE)",
+    "Arzalan (NOVICE)",
+    "Avengers (NOVICE)",
+    "Battlefield (NOVICE)",
+    "Battleground (NOVICE)",
+    "Brain (NOVICE)",
+    "Break (NOVICE)",
+    "Business (NOVICE)",
+    "Camera (NOVICE)",
+    "Capital (NOVICE)",
+    "Champion (NOVICE)",
+    "Close (NOVICE)",
+    "Congratulations (NOVICE)",
+    "Control (NOVICE)",
+    "Couldn't (NOVICE)",
+    "Damage (NOVICE)",
+    "Dashboard (NOVICE)",
+    "Different (NOVICE)"
+  ],
+  "knowledge_graph_summary": "Knowledge graph: 0 concepts, 0 relationships, avg confidence 0",
+  "coverage": {
+    "total_segments": 1316,
+    "covered_segments": 1160,
+    "uncovered_segments": 156,
+    "coverage_percent": 88.1,
+    "concept_frequency": {
+      "Lower_Low": 395,
+      "Stop_Loss_in_Profit": 291,
+      "Fundamentals": 274,
+      "Mismanagement": 190,
+      "Level": 135,
+      "Aggression": 127,
+      "Direction": 124,
+      "Trend_Continuation": 102,
+      "Market_State": 102,
+      "Breakout": 94,
+      "Break": 94,
+      "Absorption": 90,
+      "Buyers": 81,
+      "Sellers": 75,
+      "Don't": 73,
+      "Value_Area": 68,
+      "Trade": 66,
+      "Market": 61,
+      "Failed_Auction": 61,
+      "Let's": 53,
+      "Control": 51,
+      "Remove": 50,
+      "Candle": 44,
+      "Technical_Only": 43,
+      "Opening_Range_Breakout": 42,
+      "Short": 41,
+      "Stop_Loss": 41,
+      "Three": 41,
+      "Setup": 39,
+      "Close": 39,
+      "Entry": 39,
+      "Pullback": 38,
+      "Aggressive": 38,
+      "Session": 37,
+      "Balance": 35,
+      "Risk_to_Reward": 34,
+      "Profit_Target": 32,
+      "Think": 30,
+      "Revenge_Trading": 30,
+      "Imbalance": 30,
+      "Profit": 28,
+      "Point": 28,
+      "Target": 28,
+      "Today": 26,
+      "First": 26,
+      "Manage": 25,
+      "Understand": 25,
+      "Moment": 24,
+      "VAL": 24,
+      "Position_Size": 22,
+      "Model": 21,
+      "Didn't": 21,
+      "Price": 20,
+      "Start": 20,
+      "Trades": 19,
+      "Volume": 19,
+      "Previous_Session_High_Low": 18,
+      "Daily_Loss_Limit": 18,
+      "Squeeze": 18,
+      "Volatility": 17,
+      "Bottom": 17,
+      "Expansion": 17,
+      "Effort": 17,
+      "Reload": 17,
+      "Volume_Profile": 16,
+      "Profile": 16,
+      "Explain": 16,
+      "Complete": 16,
+      "Reason": 16,
+      "Auction": 16,
+      "Print": 16,
+      "Compression": 15,
+      "Reward": 14,
+      "Delta": 14,
+      "Value": 13,
+      "Second": 12,
+      "Gap": 12,
+      "People": 11,
+      "Process": 11,
+      "Clear": 11,
+      "Neutral": 11,
+      "Crazy": 11,
+      "Expect": 11,
+      "Times": 11,
+      "Trade_Management": 9,
+      "POC": 9,
+      "Reflection": 9,
+      "Shoot": 9,
+      "Momentum": 9,
+      "Little": 9,
+      "Opening_Drive": 8,
+      "Footprint": 8,
+      "Fabio": 8,
+      "NY_Session": 7,
+      "Minutes": 7,
+      "Single": 7,
+      "Market_Close": 7,
+      "Perfect": 6,
+      "Discipline": 6,
+      "Build": 6,
+      "Choppy": 6,
+      "Dollars": 6,
+      "Visible": 6,
+      "Opportunity": 6,
+      "Study": 6,
+      "Difficult": 6,
+      "CVD": 6,
+      "Order_Flow": 5,
+      "Explosion": 5,
+      "Areas": 5,
+      "Management": 5,
+      "Nasdaq": 5,
+      "Displacement": 4,
+      "Share": 4,
+      "Youtube": 4,
+      "Percent": 4,
+      "Mindset": 4,
+      "Reversal": 4,
+      "Couldn't": 3,
+      "Models": 3,
+      "Promise": 3,
+      "Charts": 3,
+      "Service": 3,
+      "Exhaustion": 3,
+      "Bias": 3,
+      "Retracement": 3,
+      "Retrace": 3,
+      "Change": 3,
+      "Contracts": 3,
+      "Trailing_Stop": 3,
+      "Hours": 3,
+      "Traders": 2,
+      "Battleground": 2,
+      "Screen": 2,
+      "Maximum": 2,
+      "Total": 2,
+      "London_Session": 2,
+      "Psychology": 2,
+      "Mean_Reversion": 2,
+      "False_Breakout": 2,
+      "Reclaim": 2,
+      "Slippage": 2,
+      "Market_Structure": 2,
+      "Structure": 2,
+      "NASDAQ_Effort": 2,
+      "Liquidation": 2,
+      "Enjoy": 2,
+      "Welcome": 1,
+      "Majority": 1,
+      "Treat": 1,
+      "Record": 1,
+      "Capable": 1,
+      "Error": 1,
+      "Platform": 1,
+      "VAH": 1,
+      "Reconfirm": 1,
+      "Surprise": 1,
+      "Connect": 1,
+      "Exit": 1,
+      "Mission": 1,
+      "Content": 1,
+      "Interactive": 1,
+      "Brokers": 1,
+      "Beginners": 1,
+      "Soldiers": 1,
+      "Profits": 1,
+      "Breakdown": 1,
+      "Capitalize": 1,
+      "Impulse": 1,
+      "Cumulative": 1,
+      "Community": 1,
+      "Input": 1,
+      "Front": 1,
+      "Settings": 1,
+      "Wrong": 1,
+      "Triple_A_Setup": 1
+    },
+    "uncovered_examples": [
+      {
+        "index": 2,
+        "text_preview": ".600 --> 00:20.720 we're good we're good"
+      },
+      {
+        "index": 4,
+        "text_preview": ".000 --> 00:35.440 uh there is also luca now guys i'm"
+      },
+      {
+        "index": 13,
+        "text_preview": ".840 --> 01:38.880 i cannot stress enough how much it's stressful this profession"
+      },
+      {
+        "index": 92,
+        "text_preview": ".080 --> 11:38.400 okay"
+      },
+      {
+        "index": 98,
+        "text_preview": ".680 --> 12:18.960 you pay emotional triggers"
+      },
+      {
+        "index": 126,
+        "text_preview": ".200 --> 16:02.720 ah i want to ask you something in the previous year i made amazing results"
+      },
+      {
+        "index": 154,
+        "text_preview": ".400 --> 19:32.560 year and is this one"
+      },
+      {
+        "index": 212,
+        "text_preview": ".920 --> 27:07.200 mamma mia"
+      },
+      {
+        "index": 224,
+        "text_preview": ".680 --> 28:31.360 as always guys it's for educational purpose it's not financial advice"
+      },
+      {
+        "index": 256,
+        "text_preview": ".240 --> 32:44.080 no okay then"
+      },
+      {
+        "index": 257,
+        "text_preview": ".960 --> 32:45.760 when you make"
+      },
+      {
+        "index": 263,
+        "text_preview": ".480 --> 33:20.480 okay"
+      },
+      {
+        "index": 265,
+        "text_preview": ".960 --> 33:25.280 okay"
+      },
+      {
+        "index": 269,
+        "text_preview": ".240 --> 33:44.480 okay the problem you know where is the problem when you try to make"
+      },
+      {
+        "index": 275,
+        "text_preview": ".400 --> 34:15.040 look here now"
+      },
+      {
+        "index": 278,
+        "text_preview": ".040 --> 34:42.880 they tap into this but this one this one here"
+      },
+      {
+        "index": 282,
+        "text_preview": ".480 --> 35:18.160 is this okay for everyone guys"
+      },
+      {
+        "index": 326,
+        "text_preview": ".200 --> 40:35.680 nice one"
+      },
+      {
+        "index": 359,
+        "text_preview": ".640 --> 44:47.840 soon interesting"
+      },
+      {
+        "index": 370,
+        "text_preview": ".400 --> 46:23.440 i took two now securing one hour"
+      }
+    ]
+  }
+}

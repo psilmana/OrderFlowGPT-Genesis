@@ -1,0 +1,1804 @@
+[
+  {
+    "concept_id": "cb74336bb8af2eb3",
+    "name": "Emoji",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".960 --> 00:06.560 too many emoji guys you are blocking everything how many people connected crazy",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "f8b23e4de4de1028",
+    "name": "People",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".960 --> 00:06.560 too many emoji guys you are blocking everything how many people connected crazy",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "7376964f94734ad8",
+    "name": "Crazy",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".960 --> 00:06.560 too many emoji guys you are blocking everything how many people connected crazy",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "075c5f3e07155995",
+    "name": "Settings",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".640 --> 00:14.880 let me see from settings can you hear me let me remove this oh oh",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "f4b5536caaadc0ec",
+    "name": "Remove",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".640 --> 00:14.880 let me see from settings can you hear me let me remove this oh oh",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "11cb83a829a1145e",
+    "name": "Content",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".320 --> 00:34.720 okay let me see the chat how are you guys how are you how many of you saw my content",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "45357bf90a7f95eb",
+    "name": "Share",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".200 --> 00:48.880 let me see if i can directly share it seems to work fine seems to work fine it's the first",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "4f78d26cc3c9aa11",
+    "name": "First",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".200 --> 00:48.880 let me see if i can directly share it seems to work fine seems to work fine it's the first",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "23c89ccd4a5718ca",
+    "name": "Platform",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".880 --> 00:58.960 time for me using this platform but seems to work fine let me see can you see my screen",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "1c8b096ef210760a",
+    "name": "Screen",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".880 --> 00:58.960 time for me using this platform but seems to work fine let me see can you see my screen",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "868c89511d984dc0",
+    "name": "Visible",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".360 --> 01:06.320 should be visible",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "052cad8115f55518",
+    "name": "Perfect",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".440 --> 01:18.480 should be visible so i have the chat here i have perfect i have welcome to blood sweat and scalps",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "95b85cd5756a116e",
+    "name": "Welcome",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".440 --> 01:18.480 should be visible so i have the chat here i have perfect i have welcome to blood sweat and scalps",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "c3ef0cded43ebd0f",
+    "name": "Blood",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".440 --> 01:18.480 should be visible so i have the chat here i have perfect i have welcome to blood sweat and scalps",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "061fc373731af399",
+    "name": "Sweat",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".440 --> 01:18.480 should be visible so i have the chat here i have perfect i have welcome to blood sweat and scalps",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "b0b003c943f57d66",
+    "name": "Scalps",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".440 --> 01:18.480 should be visible so i have the chat here i have perfect i have welcome to blood sweat and scalps",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "e9f7737e06b72dcf",
+    "name": "Let's",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".480 --> 01:27.840 amazing amazing let's wait some minutes that everyone connect so just to clarify for everyone",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "68a86cf223c1eafa",
+    "name": "Minutes",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".480 --> 01:27.840 amazing amazing let's wait some minutes that everyone connect so just to clarify for everyone",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "5330a4d51f6f78b9",
+    "name": "Connect",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".480 --> 01:27.840 amazing amazing let's wait some minutes that everyone connect so just to clarify for everyone",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "666d0e3623db25b5",
+    "name": "Clarify",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".480 --> 01:27.840 amazing amazing let's wait some minutes that everyone connect so just to clarify for everyone",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "429217649d081ca9",
+    "name": "Beginners",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".280 --> 01:32.320 this is not for beginners",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "5da3f8192904448f",
+    "name": "Point",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".320 --> 01:44.640 point one so if some friends of you told that you should study from me you don't know",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "b207b6fae28f4e27",
+    "name": "Friends",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".320 --> 01:44.640 point one so if some friends of you told that you should study from me you don't know",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "998e1d0b5367a044",
+    "name": "Study",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".320 --> 01:44.640 point one so if some friends of you told that you should study from me you don't know",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "ca6b2b046e917527",
+    "name": "Don't",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".320 --> 01:44.640 point one so if some friends of you told that you should study from me you don't know",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "529d0f8be67fe626",
+    "name": "Candle",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".640 --> 01:52.400 anything about trading you don't even know what is a candle this is not for you okay if you are already",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "1873382c50cc14a9",
+    "name": "Video",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".400 --> 02:00.960 studying order flow if you know if you saw at least my video on youtube you know what i'm doing you know",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "7628517fec20ef31",
+    "name": "Youtube",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".400 --> 02:00.960 studying order flow if you know if you saw at least my video on youtube you know what i'm doing you know",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "f8223f7ff65e0a14",
+    "name": "Explain",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".520 --> 02:07.840 what i explain in terms of order flow even if you don't know my model this is still for you",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "83982a7df04510d3",
+    "name": "Terms",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".520 --> 02:07.840 what i explain in terms of order flow even if you don't know my model this is still for you",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "4ac6182ac6cdcb6f",
+    "name": "Model",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".520 --> 02:07.840 what i explain in terms of order flow even if you don't know my model this is still for you",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "035d473dc1236845",
+    "name": "Process",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".040 --> 02:18.720 and if you are in the process of being a break-even trader and wants to get a stable long equity line",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "7faf9d2206329789",
+    "name": "Break-even",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".040 --> 02:18.720 and if you are in the process of being a break-even trader and wants to get a stable long equity line",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "045529f39524feaa",
+    "name": "Stable",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".040 --> 02:18.720 and if you are in the process of being a break-even trader and wants to get a stable long equity line",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "fb11e9f9f4a08ee0",
+    "name": "Equity",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".040 --> 02:18.720 and if you are in the process of being a break-even trader and wants to get a stable long equity line",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "d21f0e2aace60b25",
+    "name": "Clear",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".720 --> 02:21.040 this is for you is it clear guys one in chat",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "2c79dc88f22fcf0f",
+    "name": "Community",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".000 --> 02:35.280 what an amazing community then guys also you have to know that at the moment on youtube",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "43afcd2e241867ed",
+    "name": "Moment",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".000 --> 02:35.280 what an amazing community then guys also you have to know that at the moment on youtube",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "5362c49152632151",
+    "name": "Instagram",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".160 --> 02:44.240 on instagram on cumulative audience we have more than 200 000 followers",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "a770f09126479d51",
+    "name": "Cumulative",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".160 --> 02:44.240 on instagram on cumulative audience we have more than 200 000 followers",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "0887b3188913a0cf",
+    "name": "Audience",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".160 --> 02:44.240 on instagram on cumulative audience we have more than 200 000 followers",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "fc5c0a3af708f196",
+    "name": "Followers",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".160 --> 02:44.240 on instagram on cumulative audience we have more than 200 000 followers",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "0ddcce39973514c2",
+    "name": "Maximum",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".240 --> 02:57.200 okay this community aims to be maximum one percent of the total follower okay so",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "4a6ab7508afb3a98",
+    "name": "Percent",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".240 --> 02:57.200 okay this community aims to be maximum one percent of the total follower okay so",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "78760e93ec9241d6",
+    "name": "Total",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".240 --> 02:57.200 okay this community aims to be maximum one percent of the total follower okay so",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "1ce1f004f663fe9b",
+    "name": "Mission",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".560 --> 03:04.480 the mission that i'm trying to achieve and the reason i opened this community is because i wanted a",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "604186375c1902d3",
+    "name": "Achieve",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".560 --> 03:04.480 the mission that i'm trying to achieve and the reason i opened this community is because i wanted a",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "678c0e3bad622399",
+    "name": "Reason",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".560 --> 03:04.480 the mission that i'm trying to achieve and the reason i opened this community is because i wanted a",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "5c63cf60e2db57f0",
+    "name": "Soldiers",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".480 --> 03:13.600 pack of soldiers that are really committed that see trading not only as an hobby but want really to",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "bf2cb8a4ef40bd78",
+    "name": "Hobby",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".480 --> 03:13.600 pack of soldiers that are really committed that see trading not only as an hobby but want really to",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "95f741d698095cf2",
+    "name": "Killers",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".600 --> 03:20.320 become killers in this market and i know that out of all these people the people that will really",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "e93338a91a06f454",
+    "name": "Market",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".600 --> 03:20.320 become killers in this market and i know that out of all these people the people that will really",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "28c7d3bf22404019",
+    "name": "Professional",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".320 --> 03:27.520 make it and will make a living out of it and will become professional it's around two three four percent",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "687d1972c5100e05",
+    "name": "Three",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".320 --> 03:27.520 make it and will make a living out of it and will become professional it's around two three four percent",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "26c43a3693b64e21",
+    "name": "General",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".880 --> 03:57.440 war general okay i will treat you like soldiers i will be rude sometimes with you but i will equip you",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "96faca2ba5d032aa",
+    "name": "Treat",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".880 --> 03:57.440 war general okay i will treat you like soldiers i will be rude sometimes with you but i will equip you",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "cb43c7abd1f94540",
+    "name": "Equip",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".880 --> 03:57.440 war general okay i will treat you like soldiers i will be rude sometimes with you but i will equip you",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "84c1ef12332d6c1c",
+    "name": "Mindset",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".440 --> 04:04.960 with the best mindset model risk management model and trading models that you will ever find on the",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "da23fad15fb84538",
+    "name": "Management",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".440 --> 04:04.960 with the best mindset model risk management model and trading models that you will ever find on the",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "d1e5f44698a16317",
+    "name": "Models",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".440 --> 04:04.960 with the best mindset model risk management model and trading models that you will ever find on the",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "947008f500b092d6",
+    "name": "Internet",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".960 --> 04:13.040 internet is it clear guys perfect",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "6bac2dd00a5b1af9",
+    "name": "Build",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".920 --> 04:27.280 perfect loud and clear amazing now let's go on what will blood sweat and scalps be how we will build it",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "c12e4670dd394365",
+    "name": "Structure",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".080 --> 04:37.040 and how this is structure for everyone okay as you saw there is the section battleground",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "aafca589811488d6",
+    "name": "Battleground",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".080 --> 04:37.040 and how this is structure for everyone okay as you saw there is the section battleground",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "7ae1cccb155ed78f",
+    "name": "Announcement",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".640 --> 04:50.000 operation okay this section here is the section where you will find all kind of announcement from the team",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "2dcfdda39cc47010",
+    "name": "Receive",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".800 --> 05:00.640 okay so you will receive information from me about when we go live the topic of the week the menu of the week",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "f073c905a864ada7",
+    "name": "Topic",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".800 --> 05:00.640 okay so you will receive information from me about when we go live the topic of the week the menu of the week",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "e4263f94931c1238",
+    "name": "Expect",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".640 --> 05:11.920 what you can expect uh also that section will be used to go through the battleground setup preparation",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "37b94deaef0bc6de",
+    "name": "Setup",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".640 --> 05:11.920 what you can expect uh also that section will be used to go through the battleground setup preparation",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "e132305b4551f915",
+    "name": "Profile",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".920 --> 05:18.720 of the week okay because we will use the profile to understand",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "94685e33550aa9e5",
+    "name": "Understand",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".920 --> 05:18.720 of the week okay because we will use the profile to understand",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "aa75b227facbbebd",
+    "name": "Volume",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".760 --> 05:32.080 who is dominating the volume of the week and of the single session okay so you will receive update on me on",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "fcf0b02c642a310c",
+    "name": "Single",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".760 --> 05:32.080 who is dominating the volume of the week and of the single session okay so you will receive update on me on",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "d672cfab5a881fcb",
+    "name": "Session",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".760 --> 05:32.080 who is dominating the volume of the week and of the single session okay so you will receive update on me on",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "80b62f0a95739615",
+    "name": "Update",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".760 --> 05:32.080 who is dominating the volume of the week and of the single session okay so you will receive update on me on",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "74f4880cbbe9d7f8",
+    "name": "Manage",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".080 --> 05:40.720 how i manage also the uh planning for the week you will receive the news related to my view",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "d56df4552bfa886b",
+    "name": "Fundamentals",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".720 --> 05:51.040 the fundamentals of asset managers so i will give you a breakdown on the indices",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "98ba95cbe1af164f",
+    "name": "Asset",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".720 --> 05:51.040 the fundamentals of asset managers so i will give you a breakdown on the indices",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "2b244be50b1c7b61",
+    "name": "Managers",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".720 --> 05:51.040 the fundamentals of asset managers so i will give you a breakdown on the indices",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "66dd4fc107f7b616",
+    "name": "Breakdown",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".720 --> 05:51.040 the fundamentals of asset managers so i will give you a breakdown on the indices",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "ecba73dd1aa8d0ea",
+    "name": "Indices",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".720 --> 05:51.040 the fundamentals of asset managers so i will give you a breakdown on the indices",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "e8e59f01d6b7576b",
+    "name": "Commitment",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".560 --> 06:02.800 related to commitment of traders non-commercial so the speculators to build the narrative",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "38362c925273fb11",
+    "name": "Traders",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".560 --> 06:02.800 related to commitment of traders non-commercial so the speculators to build the narrative",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "2debb208bce10ea8",
+    "name": "Non-commercial",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".560 --> 06:02.800 related to commitment of traders non-commercial so the speculators to build the narrative",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "d3de1cf12ab141c1",
+    "name": "Speculators",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".560 --> 06:02.800 related to commitment of traders non-commercial so the speculators to build the narrative",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "2a6f72eb4a2701ab",
+    "name": "Narrative",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".560 --> 06:02.800 related to commitment of traders non-commercial so the speculators to build the narrative",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "55a8c2d54e987987",
+    "name": "Surprise",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".880 --> 06:20.800 that are really interested and to make them some surprise makes me happier that promise up front and",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "58228b37d9c3b3dc",
+    "name": "Promise",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".880 --> 06:20.800 that are really interested and to make them some surprise makes me happier that promise up front and",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "10e37213be4a36c4",
+    "name": "Front",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".880 --> 06:20.800 that are really interested and to make them some surprise makes me happier that promise up front and",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "4140af706785f241",
+    "name": "Service",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".800 --> 06:27.760 then not give a service that change really their view of the market okay so at the moment i'm building",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "96a7b9dd8e92137b",
+    "name": "Change",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".800 --> 06:27.760 then not give a service that change really their view of the market okay so at the moment i'm building",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "46b653374b595809",
+    "name": "Input",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".760 --> 06:42.080 a chat bot okay that where i input around 50 hours of my time that is capable to be your assistant",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "d4164a629c2f4f95",
+    "name": "Hours",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".760 --> 06:42.080 a chat bot okay that where i input around 50 hours of my time that is capable to be your assistant",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "42a5796f6cccd5f3",
+    "name": "Capable",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".760 --> 06:42.080 a chat bot okay that where i input around 50 hours of my time that is capable to be your assistant",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "68ac724c944ab22f",
+    "name": "Assistant",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".760 --> 06:42.080 a chat bot okay that where i input around 50 hours of my time that is capable to be your assistant",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "fd3ca3435864ef58",
+    "name": "Times",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".760 --> 07:00.880 two times per week but what i can do is transfer my mindset model in the chat bot okay in the artificial",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "8f7eb3e0f96e8798",
+    "name": "Artificial",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".760 --> 07:00.880 two times per week but what i can do is transfer my mindset model in the chat bot okay in the artificial",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "411c70e7684eea8b",
+    "name": "Intelligence",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".880 --> 07:08.240 intelligence transfer exactly my risk management model in the artificial intelligence to give you an",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "2afa71ae0606cdb0",
+    "name": "Opportunity",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".240 --> 07:16.320 opportunity every time that you are on the charts by yourself to implement it and study and reason as i",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "62224d0a99a9bdd5",
+    "name": "Charts",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".240 --> 07:16.320 opportunity every time that you are on the charts by yourself to implement it and study and reason as i",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "a25e14fe5e9fb734",
+    "name": "Implement",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".240 --> 07:16.320 opportunity every time that you are on the charts by yourself to implement it and study and reason as i",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "60693566539294db",
+    "name": "Think",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".320 --> 07:21.520 as if i was there with you what do you think fabio about this setup how much should i risk i took three",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "be07db013a8c5d17",
+    "name": "Fabio",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".320 --> 07:21.520 as if i was there with you what do you think fabio about this setup how much should i risk i took three",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "93ac23854172db06",
+    "name": "Improve",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".520 --> 07:29.440 stop loss for the day how can i improve it okay today is getting difficult the market i cannot manage it",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "cbc69b8fce046672",
+    "name": "Today",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".520 --> 07:29.440 stop loss for the day how can i improve it okay today is getting difficult the market i cannot manage it",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "d70c5f85d02c56b2",
+    "name": "Difficult",
+    "definition": "Concept extracted from Lesson02",
+    "visual_appearance": "unknown",
+    "teacher_explanation": ".520 --> 07:29.440 stop loss for the day how can i improve it okay today is getting difficult the market i cannot manage it",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson02"
+    ],
+    "evolution_events": 0
+  }
+]

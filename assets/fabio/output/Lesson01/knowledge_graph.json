@@ -1,0 +1,1238 @@
+{
+  "total_concepts": 114,
+  "total_relationships": 49,
+  "predefined_relationships": 32,
+  "discovered_relationships": 17,
+  "concepts": [
+    "Absorption",
+    "Accelerate",
+    "Aggression",
+    "Aggressive",
+    "Anticipate",
+    "Areas",
+    "Auction",
+    "Audio",
+    "Balance",
+    "Blood",
+    "Bottom",
+    "Break",
+    "Breakout",
+    "Brokers",
+    "Buyer's",
+    "Buyers",
+    "CVD",
+    "Capitalize",
+    "Caught",
+    "Choppy",
+    "Close",
+    "Community",
+    "Complete",
+    "Compression",
+    "Concentrate",
+    "Content",
+    "Contracts",
+    "Control",
+    "Couldn't",
+    "Crazy",
+    "Delta",
+    "Didn't",
+    "Directional",
+    "Displacement",
+    "Dollars",
+    "Don't",
+    "Effort",
+    "Enjoy",
+    "Entry",
+    "Error",
+    "Exhaustion",
+    "Expansion",
+    "Expect",
+    "Explain",
+    "Explosion",
+    "Failed_Auction",
+    "False_Breakout",
+    "First",
+    "Generous",
+    "Guarantee",
+    "HVN",
+    "Imbalance",
+    "Initial",
+    "Interactive",
+    "LVN",
+    "Let's",
+    "Level",
+    "Liquidation",
+    "Little",
+    "Long-term",
+    "Majority",
+    "Manage",
+    "Management",
+    "Market",
+    "Market_Close",
+    "Mean_Reversion",
+    "Momentum",
+    "Nasdaq",
+    "Opening_Range_Breakout",
+    "Order_Flow",
+    "POC",
+    "Position_Size",
+    "Price",
+    "Print",
+    "Profile",
+    "Profit",
+    "Profit_Target",
+    "Profits",
+    "Reason",
+    "Reconfirm",
+    "Record",
+    "Reload",
+    "Report",
+    "Retrace",
+    "Reversal",
+    "Reward",
+    "Risk_to_Reward",
+    "Sculpt",
+    "Second",
+    "Sellers",
+    "Setup",
+    "Shoot",
+    "Short",
+    "Slippage",
+    "Spark",
+    "Squeeze",
+    "Start",
+    "Stop_Loss",
+    "Sweat",
+    "Target",
+    "Think",
+    "Today",
+    "Total",
+    "Trade",
+    "Trade_Management",
+    "Trades",
+    "Trend_Continuation",
+    "Understand",
+    "VAH",
+    "VAL",
+    "Value",
+    "Victory",
+    "Volatility",
+    "Wrong"
+  ],
+  "concept_details": [
+    {
+      "name": "Absorption",
+      "category": "Order_Flow",
+      "definition": "Heavy volume at a level without price continuation. One side is absorbing the other's aggression, often signaling exhaustion and impending reversal.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Accelerate",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Aggression",
+      "category": "Order_Flow",
+      "definition": "One side is actively and forcefully pushing price. Seen in large footprint bubbles, stacked imbalances, and CVD divergence.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Aggressive",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Anticipate",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Areas",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Auction",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Audio",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Balance",
+      "category": "Market_State",
+      "definition": "Market is rotating around fair value, accepting price within a defined range. ~70% of the time. Do NOT trade breakouts here.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Blood",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Bottom",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Break",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Breakout",
+      "category": "Price_Action",
+      "definition": "Price moves decisively beyond a key level (VAH, VAL, range high/low) with volume and aggression.",
+      "confidence_weight": 0.9
+    },
+    {
+      "name": "Brokers",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Buyer's",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Buyers",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "CVD",
+      "category": "Order_Flow",
+      "definition": "Cumulative Volume Delta \u2014 the running total of delta. Shows which side has been in control over time. Trending CVD = sustained aggression.",
+      "confidence_weight": 0.9
+    },
+    {
+      "name": "Capitalize",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Caught",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Choppy",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Close",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Community",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Complete",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Compression",
+      "category": "Market_State",
+      "definition": "Price is coiling into a tight range, building energy before an expansion move. Often precedes a breakout.",
+      "confidence_weight": 0.9
+    },
+    {
+      "name": "Concentrate",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Content",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Contracts",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Control",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Couldn't",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Crazy",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Delta",
+      "category": "Order_Flow",
+      "definition": "The net difference between buying and selling pressure at each price level. Positive delta = buyers aggressive; negative = sellers aggressive.",
+      "confidence_weight": 0.9
+    },
+    {
+      "name": "Didn't",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Directional",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Displacement",
+      "category": "Price_Action",
+      "definition": "A strong, impulsive move with little retracement. Indicates imbalance and institutional participation.",
+      "confidence_weight": 0.9
+    },
+    {
+      "name": "Dollars",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Don't",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Effort",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Enjoy",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Entry",
+      "category": "Setup",
+      "definition": "The specific price and moment where a position is initiated. Must align with State + Level + Flow.",
+      "confidence_weight": 0.95
+    },
+    {
+      "name": "Error",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Exhaustion",
+      "category": "Order_Flow",
+      "definition": "The aggressive side is running out of orders. Seen as delta divergence, shrinking volume on new highs/lows, and absorption.",
+      "confidence_weight": 0.9
+    },
+    {
+      "name": "Expansion",
+      "category": "Price_Action",
+      "definition": "A widening of the trading range after compression. Price breaks out of a tight coil with increased volatility.",
+      "confidence_weight": 0.85
+    },
+    {
+      "name": "Expect",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Explain",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Explosion",
+      "category": "Price_Action",
+      "definition": "A sudden, violent price move after a period of compression or balance. Often triggered by news or order flow climax.",
+      "confidence_weight": 0.85
+    },
+    {
+      "name": "Failed_Auction",
+      "category": "Setup",
+      "definition": "Price tests a key level multiple times but fails to break through. Indicates absorption and often leads to a reversal or mean reversion.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "False_Breakout",
+      "category": "Setup",
+      "definition": "Price briefly breaks a key level then immediately reverses. Traps breakout traders. High-probability mean reversion signal.",
+      "confidence_weight": 0.9
+    },
+    {
+      "name": "First",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Generous",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Guarantee",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "HVN",
+      "category": "Level",
+      "definition": "High Volume Node \u2014 a thick volume area where price tends to stall or reverse. Acts as support/resistance.",
+      "confidence_weight": 0.85
+    },
+    {
+      "name": "Imbalance",
+      "category": "Market_State",
+      "definition": "One side is aggressively pushing price to discover new value. Characterized by displacement, momentum, and directional conviction.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Initial",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Interactive",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "LVN",
+      "category": "Level",
+      "definition": "Low Volume Node \u2014 a thinly traded area in the profile where price moves quickly. Key for entries in trend continuation.",
+      "confidence_weight": 0.95
+    },
+    {
+      "name": "Let's",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Level",
+      "category": "Level",
+      "definition": "Abstract root concept for any price location that matters in the market structure. Levels are derived from volume profile, market structure, and prior session data.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Liquidation",
+      "category": "Market_Structure",
+      "definition": "A forced position closure, usually via stop loss. Fabio shows these as learning moments.",
+      "confidence_weight": 0.85
+    },
+    {
+      "name": "Little",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Long-term",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Majority",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Manage",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Management",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Market",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Market_Close",
+      "category": "Session",
+      "definition": "End of trading session. Fabio often closes before close to avoid volatility decay and slippage.",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Mean_Reversion",
+      "category": "Setup",
+      "definition": "Trading back toward POC or balance center after a failed breakout or rejection at the edge of value. Best in balance or compressed markets.",
+      "confidence_weight": 0.9
+    },
+    {
+      "name": "Momentum",
+      "category": "Order_Flow",
+      "definition": "The rate and strength of price movement. Sustained momentum confirms directional conviction.",
+      "confidence_weight": 0.9
+    },
+    {
+      "name": "Nasdaq",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Opening_Range_Breakout",
+      "category": "Setup",
+      "definition": "Trading the breakout of the first 15-30 minute range after NY open. Requires aggression and volume confirmation.",
+      "confidence_weight": 0.85
+    },
+    {
+      "name": "Order_Flow",
+      "category": "Order_Flow",
+      "definition": "Abstract root concept for microstructural evidence of buyer and seller behavior at the footprint level.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "POC",
+      "category": "Level",
+      "definition": "Point of Control \u2014 the price level with the highest traded volume. Represents fair value and the strongest magnet for price.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Position_Size",
+      "category": "Risk_Management",
+      "definition": "The number of contracts traded. Fabio scales size based on conviction and volatility. NASDAQ = fewer contracts due to volatility.",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Price",
+      "category": "Price_Action",
+      "definition": "The current market price. The central variable that all analysis revolves around.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Print",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Profile",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Profit",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Profit_Target",
+      "category": "Risk_Management",
+      "definition": "The price level where a winning position is closed for profit. Defined before entry based on structure.",
+      "confidence_weight": 0.95
+    },
+    {
+      "name": "Profits",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Reason",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Reconfirm",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Record",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Reload",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Report",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Retrace",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Reversal",
+      "category": "Price_Action",
+      "definition": "A change in direction after a trend or test. Often preceded by absorption, failed auction, or exhaustion.",
+      "confidence_weight": 0.85
+    },
+    {
+      "name": "Reward",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Risk_to_Reward",
+      "category": "Risk_Management",
+      "definition": "The ratio of potential profit to initial risk. Fabio targets minimum 1:3, often 1:5 or higher on NASDAQ.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Sculpt",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Second",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Sellers",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Setup",
+      "category": "Setup",
+      "definition": "Abstract root concept for specific trade configurations that emerge when State + Level + Flow align.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Shoot",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Short",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Slippage",
+      "category": "Price_Action",
+      "definition": "The difference between expected fill price and actual fill. Common in fast markets, especially at NASDAQ close.",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Spark",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Squeeze",
+      "category": "Setup",
+      "definition": "A rapid acceleration move after compression. Price breaks out of a tight range with explosive momentum.",
+      "confidence_weight": 0.9
+    },
+    {
+      "name": "Start",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Stop_Loss",
+      "category": "Risk_Management",
+      "definition": "The predefined price level where a losing position is closed to limit risk. The maximum acceptable loss per trade.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Sweat",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Target",
+      "category": "Risk_Management",
+      "definition": "The intended exit price for a profitable trade. Synonymous with profit target in Fabio's methodology.",
+      "confidence_weight": 0.95
+    },
+    {
+      "name": "Think",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Today",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Total",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Trade",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Trade_Management",
+      "category": "Risk_Management",
+      "definition": "Abstract root concept for all position and risk management activities \u2014 entries, stops, targets, sizing, and psychological control.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Trades",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Trend_Continuation",
+      "category": "Setup",
+      "definition": "Entering in the direction of the established trend after a pullback to a key level (often LVN or prior balance level).",
+      "confidence_weight": 0.95
+    },
+    {
+      "name": "Understand",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "VAH",
+      "category": "Level",
+      "definition": "Value Area High \u2014 the upper boundary of the 70% volume zone. Acts as resistance in balance; breakout target in imbalance.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "VAL",
+      "category": "Level",
+      "definition": "Value Area Low \u2014 the lower boundary of the 70% volume zone. Acts as support in balance; breakdown target in imbalance.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Value",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Victory",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Volatility",
+      "category": "Market_Structure",
+      "definition": "The degree of price movement. Fabio distinguishes between directional volatility (tradeable) and choppy volatility (avoid).",
+      "confidence_weight": 0.85
+    },
+    {
+      "name": "Wrong",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Absorption",
+      "relation": "requires",
+      "target": "Aggression",
+      "strength": 1.0,
+      "description": "Absorption is visible when aggression meets a level and gets absorbed."
+    },
+    {
+      "source": "Absorption",
+      "relation": "often_precedes",
+      "target": "Failed_Auction",
+      "strength": 0.9,
+      "description": "Absorption at a level often leads to a failed auction."
+    },
+    {
+      "source": "Absorption",
+      "relation": "seen_at",
+      "target": "VAH",
+      "strength": 0.85,
+      "description": "Absorption commonly occurs at Value Area High."
+    },
+    {
+      "source": "Absorption",
+      "relation": "seen_at",
+      "target": "VAL",
+      "strength": 0.85,
+      "description": "Absorption commonly occurs at Value Area Low."
+    },
+    {
+      "source": "Absorption",
+      "relation": "seen_at",
+      "target": "POC",
+      "strength": 0.7,
+      "description": "Absorption can occur at POC during balance."
+    },
+    {
+      "source": "Aggression",
+      "relation": "requires",
+      "target": "Imbalance",
+      "strength": 0.9,
+      "description": "Aggression is most meaningful when the market is imbalanced."
+    },
+    {
+      "source": "Aggression",
+      "relation": "confirms",
+      "target": "Breakout",
+      "strength": 0.95,
+      "description": "A breakout without aggression is suspect."
+    },
+    {
+      "source": "Aggression",
+      "relation": "measured_by",
+      "target": "Delta",
+      "strength": 0.9,
+      "description": "Delta quantifies aggression at the micro level."
+    },
+    {
+      "source": "Aggression",
+      "relation": "measured_by",
+      "target": "CVD",
+      "strength": 0.85,
+      "description": "CVD shows sustained aggression over time."
+    },
+    {
+      "source": "Balance",
+      "relation": "contains",
+      "target": "POC",
+      "strength": 1.0,
+      "description": "Balance is defined around the POC."
+    },
+    {
+      "source": "Balance",
+      "relation": "bounded_by",
+      "target": "VAH",
+      "strength": 1.0,
+      "description": "VAH is the upper boundary of balance."
+    },
+    {
+      "source": "Balance",
+      "relation": "bounded_by",
+      "target": "VAL",
+      "strength": 1.0,
+      "description": "VAL is the lower boundary of balance."
+    },
+    {
+      "source": "Balance",
+      "relation": "favors",
+      "target": "Mean_Reversion",
+      "strength": 0.9,
+      "description": "In balance, mean reversion is the higher-probability play."
+    },
+    {
+      "source": "Compression",
+      "relation": "precedes",
+      "target": "Squeeze",
+      "strength": 0.85,
+      "description": "Compression often resolves with a squeeze/breakout."
+    },
+    {
+      "source": "Delta",
+      "relation": "aggregated_into",
+      "target": "CVD",
+      "strength": 1.0,
+      "description": "CVD is the cumulative sum of delta."
+    },
+    {
+      "source": "Displacement",
+      "relation": "requires",
+      "target": "Aggression",
+      "strength": 0.95,
+      "description": "Displacement is driven by aggression."
+    },
+    {
+      "source": "Displacement",
+      "relation": "creates",
+      "target": "LVN",
+      "strength": 0.9,
+      "description": "A displacement move leaves LVNs in its wake."
+    },
+    {
+      "source": "Exhaustion",
+      "relation": "follows",
+      "target": "Aggression",
+      "strength": 0.85,
+      "description": "After sustained aggression, exhaustion sets in."
+    },
+    {
+      "source": "Exhaustion",
+      "relation": "signals",
+      "target": "Reversal",
+      "strength": 0.8,
+      "description": "Exhaustion often signals an impending reversal."
+    },
+    {
+      "source": "Failed_Auction",
+      "relation": "requires",
+      "target": "Absorption",
+      "strength": 0.9,
+      "description": "A failed auction is confirmed by absorption at the level."
+    },
+    {
+      "source": "Failed_Auction",
+      "relation": "triggers",
+      "target": "Mean_Reversion",
+      "strength": 0.85,
+      "description": "Failed auction is a primary mean reversion signal."
+    },
+    {
+      "source": "Imbalance",
+      "relation": "favors",
+      "target": "Trend_Continuation",
+      "strength": 0.9,
+      "description": "In imbalance, trend continuation is the higher-probability play."
+    },
+    {
+      "source": "Imbalance",
+      "relation": "driven_by",
+      "target": "Aggression",
+      "strength": 0.95,
+      "description": "Imbalance is sustained by aggression."
+    },
+    {
+      "source": "LVN",
+      "relation": "used_for",
+      "target": "Trend_Continuation",
+      "strength": 0.9,
+      "description": "LVNs are ideal entry zones for trend continuation."
+    },
+    {
+      "source": "LVN",
+      "relation": "opposite_of",
+      "target": "HVN",
+      "strength": 1.0,
+      "description": "LVN and HVN are opposites in volume profile."
+    },
+    {
+      "source": "Mean_Reversion",
+      "relation": "targets",
+      "target": "POC",
+      "strength": 0.95,
+      "description": "Mean reversion typically targets the POC."
+    },
+    {
+      "source": "POC",
+      "relation": "attracts",
+      "target": "Price",
+      "strength": 0.95,
+      "description": "POC acts as a magnet for price in balance."
+    },
+    {
+      "source": "Risk_to_Reward",
+      "relation": "requires",
+      "target": "Stop_Loss",
+      "strength": 1.0,
+      "description": "R:R is calculated from stop distance."
+    },
+    {
+      "source": "Risk_to_Reward",
+      "relation": "requires",
+      "target": "Target",
+      "strength": 1.0,
+      "description": "R:R is calculated from target distance."
+    },
+    {
+      "source": "Squeeze",
+      "relation": "follows",
+      "target": "Compression",
+      "strength": 0.85,
+      "description": "Squeezes follow periods of compression."
+    },
+    {
+      "source": "VAH",
+      "relation": "resistance_in",
+      "target": "Balance",
+      "strength": 0.9,
+      "description": "VAH acts as resistance when market is balanced."
+    },
+    {
+      "source": "VAL",
+      "relation": "support_in",
+      "target": "Balance",
+      "strength": 0.9,
+      "description": "VAL acts as support when market is balanced."
+    },
+    {
+      "source": "Absorption",
+      "target": "VAL",
+      "relation": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "matched_text": ".640 --> 00:47.520 the explanation, this one is the long-term value area high, this one is a crazy a",
+      "cooccurrence_count": 2,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 6
+    },
+    {
+      "source": "Target",
+      "target": "VAL",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": ".760 --> 02:00.640 and now the last target is on the value area low, the bottom of the value area lo",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 18
+    },
+    {
+      "source": "Aggression",
+      "target": "Volatility",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": ".400 --> 03:22.640 interesting volatility I recorded, this one was a short, the reason is that we ha",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 30
+    },
+    {
+      "source": "Compression",
+      "target": "Volatility",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": ".520 --> 04:30.960 in a choppy day because today we had some volatility but still compression, stop ",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 41
+    },
+    {
+      "source": "Absorption",
+      "target": "Aggression",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": ".720 --> 04:49.760 risk to reward trade, I'm covered 17,000 above the aggression of the sellers and ",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 43
+    },
+    {
+      "source": "Absorption",
+      "target": "Momentum",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": ".040 --> 05:21.440 it's momentum down, it's a crazy absorption of the buyer's reward of the seller, ",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 47
+    },
+    {
+      "source": "Momentum",
+      "target": "Slippage",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": ".200 --> 06:16.640 slippage, then let's go on, this one still momentum short, failed auction at the ",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 54
+    },
+    {
+      "source": "Setup",
+      "target": "Squeeze",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": ".360 --> 06:24.080 a lot of fight here, so I was anticipating a squeeze, I was thinking this is the ",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 55
+    },
+    {
+      "source": "Momentum",
+      "target": "Squeeze",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": ".560 --> 07:25.440 day, I was expecting a squeeze, the momentum was short, the bias on the fundament",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 64
+    },
+    {
+      "source": "Absorption",
+      "target": "Squeeze",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": ".880 --> 08:29.520 1920, profit target disabsorption of the sellers, was anticipating a squeeze here",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 73
+    },
+    {
+      "source": "Absorption",
+      "target": "Target",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": ".880 --> 08:29.520 1920, profit target disabsorption of the sellers, was anticipating a squeeze here",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 73
+    },
+    {
+      "source": "Squeeze",
+      "target": "Target",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": ".880 --> 08:29.520 1920, profit target disabsorption of the sellers, was anticipating a squeeze here",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 73
+    },
+    {
+      "source": "Absorption",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": ".800 --> 11:28.800 this setup, value area high, crazy absorption level, absorbed buyers, control of ",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 96
+    },
+    {
+      "source": "Absorption",
+      "target": "Level",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": ".800 --> 11:28.800 this setup, value area high, crazy absorption level, absorbed buyers, control of ",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 96
+    },
+    {
+      "source": "Level",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": ".800 --> 11:28.800 this setup, value area high, crazy absorption level, absorbed buyers, control of ",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 96
+    },
+    {
+      "source": "Setup",
+      "target": "VAL",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": ".800 --> 11:28.800 this setup, value area high, crazy absorption level, absorbed buyers, control of ",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 96
+    },
+    {
+      "source": "Level",
+      "target": "VAL",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": ".800 --> 11:28.800 this setup, value area high, crazy absorption level, absorbed buyers, control of ",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 96
+    }
+  ]
+}

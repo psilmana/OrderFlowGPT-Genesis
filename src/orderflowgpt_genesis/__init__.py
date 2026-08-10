@@ -1,6 +1,7 @@
 """Public API for the OrderFlowGPT Genesis architecture."""
 
 from .analysis import OrderFlowAnalyzer
+from .apprentice import ApprenticeLayer
 from .models import AnalysisResult, MarketSnapshot, OrderBookLevel, Trade
 
 from .knowledge import (

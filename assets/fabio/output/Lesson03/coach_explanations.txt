@@ -1,0 +1,1950 @@
+GENESIS LIVE COACH — Explanations
+======================================================================
+
+Lesson: Lesson03 | Frame: 0
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: c0193612e81627b6
+============================================================
+
+Lesson: Lesson03 | Frame: 1
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: f5279568e406bceb
+============================================================
+
+Lesson: Lesson03 | Frame: 2
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: aea544062f993ff5
+============================================================
+
+Lesson: Lesson03 | Frame: 3
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 2089620fd6306144
+============================================================
+
+Lesson: Lesson03 | Frame: 4
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: f59c6261d58dcaf7
+============================================================
+
+Lesson: Lesson03 | Frame: 5
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: eb49de4103ed1d6c
+============================================================
+
+Lesson: Lesson03 | Frame: 6
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 83aae1ae498573ec
+============================================================
+
+Lesson: Lesson03 | Frame: 7
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 3ef4e9c127eab51b
+============================================================
+
+Lesson: Lesson03 | Frame: 8
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: a5513d6d90747eb1
+============================================================
+
+Lesson: Lesson03 | Frame: 9
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 150654fe346c7d4f
+============================================================
+
+Lesson: Lesson03 | Frame: 10
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: dcba9791b02ed368
+============================================================
+
+Lesson: Lesson03 | Frame: 11
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 05ae08404fa5408b
+============================================================
+
+Lesson: Lesson03 | Frame: 12
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: eca3495e66b05991
+============================================================
+
+Lesson: Lesson03 | Frame: 13
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: a16fea71ab9b4dcc
+============================================================
+
+Lesson: Lesson03 | Frame: 14
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 084b75fbb1e2ee9d
+============================================================
+
+Lesson: Lesson03 | Frame: 15
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 3ee0f2b16c94ebc6
+============================================================
+
+Lesson: Lesson03 | Frame: 16
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: a57b0dfab80221e0
+============================================================
+
+Lesson: Lesson03 | Frame: 17
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: befee103d577d5bf
+============================================================
+
+Lesson: Lesson03 | Frame: 18
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: b24e29741160a892
+============================================================
+
+Lesson: Lesson03 | Frame: 19
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 008fed3343a53e8a
+============================================================
+
+Lesson: Lesson03 | Frame: 20
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 6a97d5d5ddceb557
+============================================================
+
+Lesson: Lesson03 | Frame: 21
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 4076eaaed4e2349a
+============================================================
+
+Lesson: Lesson03 | Frame: 22
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 12c83e2614b1b211
+============================================================
+
+Lesson: Lesson03 | Frame: 23
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 2974c4c12a81eba9
+============================================================
+
+Lesson: Lesson03 | Frame: 24
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 96aa9c5806aaf39a
+============================================================
+
+Lesson: Lesson03 | Frame: 25
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: fcd2a0ec6cdec2e2
+============================================================
+
+Lesson: Lesson03 | Frame: 26
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 121e0407c2ec4c43
+============================================================
+
+Lesson: Lesson03 | Frame: 27
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: e418b655dcf6e6ad
+============================================================
+
+Lesson: Lesson03 | Frame: 28
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: b5e7642c4962c97a
+============================================================
+
+Lesson: Lesson03 | Frame: 29
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 704392af3237e6dc
+============================================================
+
+Lesson: Lesson03 | Frame: 30
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 9929cfb36e3388e3
+============================================================
+
+Lesson: Lesson03 | Frame: 31
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Seller Aggressive is present. ask imbalances dominant. Supporting imbalances: ASK at price_31. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Seller Aggressive is present. ask imbalances dominant. Supporting imbalances: ASK at price_31.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0031 (similarity 0.3333333333333333333333333333): .760 --> 04:04.240 charting i want to ask you something guys how many of you lost money not because ...
+  • Lesson03_frame0000 (similarity 0.1666666666666666666666666667): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.1666666666666666666666666667): .080 --> 00:17.440 oh look how many people...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.49 (MEDIUM)
+Explanation ID: 3658335e9d3a2324
+============================================================
+
+Lesson: Lesson03 | Frame: 32
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: eb3646ab977da8dd
+============================================================
+
+Lesson: Lesson03 | Frame: 33
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 35ff837906f4951e
+============================================================
+
+Lesson: Lesson03 | Frame: 34
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 8bf07f38e083563c
+============================================================
+
+Lesson: Lesson03 | Frame: 35
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: e73b82122cb8bd43
+============================================================
+
+Lesson: Lesson03 | Frame: 36
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 3a4fa8edf6d180e4
+============================================================
+
+Lesson: Lesson03 | Frame: 37
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: cf2d642316b9ca85
+============================================================
+
+Lesson: Lesson03 | Frame: 38
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 0be2a2df67584d67
+============================================================
+
+Lesson: Lesson03 | Frame: 39
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 35cdfdb4e2efd938
+============================================================
+
+Lesson: Lesson03 | Frame: 40
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 15474ebcb0059685
+============================================================
+
+Lesson: Lesson03 | Frame: 41
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 262754f71c2bfe70
+============================================================
+
+Lesson: Lesson03 | Frame: 42
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: ff7064ec6ac385f1
+============================================================
+
+Lesson: Lesson03 | Frame: 43
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 64e30c3d6830e8d8
+============================================================
+
+Lesson: Lesson03 | Frame: 44
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 4fa4bab53551251d
+============================================================
+
+Lesson: Lesson03 | Frame: 45
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 4a15d448a63f5e82
+============================================================
+
+Lesson: Lesson03 | Frame: 46
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 563b0bda63a2d623
+============================================================
+
+Lesson: Lesson03 | Frame: 47
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 6ab1fd26888d3dd0
+============================================================
+
+Lesson: Lesson03 | Frame: 48
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 7216a00d3fe97c86
+============================================================
+
+Lesson: Lesson03 | Frame: 49
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: c41c42ecc4f312ac
+============================================================
+

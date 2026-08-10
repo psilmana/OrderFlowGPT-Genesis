@@ -1,0 +1,7265 @@
+{
+  "ontology_version": "1.0.0",
+  "author": "Genesis Apprentice Engine",
+  "source": "Fabio Valentini Order Flow Methodology",
+  "description": "Core conceptual vocabulary extracted from Fabio Valentini's discretionary Order Flow trading methodology. Concepts are organized by category and linked via semantic relationships.",
+  "categories": {
+    "Market_State": "The current condition of the market — the first question Fabio asks before any trade.",
+    "Level": "Price locations that matter, derived from Volume Profile and Market Structure.",
+    "Order_Flow": "Microstructural evidence of buyer/seller behavior at the footprint level.",
+    "Setup": "Specific trade configurations that emerge when State + Level + Flow align.",
+    "Risk_Management": "How Fabio protects capital and manages open positions.",
+    "Session": "Time-of-day context that influences volatility and directional bias.",
+    "Price_Action": "Observable price behavior that provides context or confirmation.",
+    "Market_Structure": "Macro structural elements that define the auction environment."
+  },
+  "concepts": [
+    {
+      "concept_id": "ms_001",
+      "name": "Balance",
+      "category": "Market_State",
+      "definition": "Market is rotating around fair value, accepting price within a defined range. ~70% of the time. Do NOT trade breakouts here.",
+      "keywords": [
+        "balance",
+        "balanced",
+        "rotating",
+        "rotation",
+        "compression",
+        "compressed",
+        "choppy",
+        "range",
+        "consolidation",
+        "consolidating",
+        "no direction",
+        "sideways"
+      ],
+      "visual_markers": [
+        "price oscillating around POC",
+        "tight range on profile",
+        "low volatility",
+        "no displacement"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "POC",
+        "Value_Area",
+        "Mean_Reversion",
+        "Failed_Auction"
+      ],
+      "opposite_concepts": [
+        "Imbalance",
+        "Displacement"
+      ],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "ms_002",
+      "name": "Imbalance",
+      "category": "Market_State",
+      "definition": "One side is aggressively pushing price to discover new value. Characterized by displacement, momentum, and directional conviction.",
+      "keywords": [
+        "imbalance",
+        "imbalanced",
+        "directional",
+        "displacement",
+        "momentum",
+        "trending",
+        "trend",
+        "one-sided",
+        "aggressive move",
+        "breakout",
+        "drive"
+      ],
+      "visual_markers": [
+        "price moving away from POC with volume",
+        "long candles",
+        "CVD trending",
+        "delta aligned with direction"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Aggression",
+        "Displacement",
+        "Momentum",
+        "Trend_Continuation"
+      ],
+      "opposite_concepts": [
+        "Balance",
+        "Compression"
+      ],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "ms_003",
+      "name": "Compression",
+      "category": "Market_State",
+      "definition": "Price is coiling into a tight range, building energy before an expansion move. Often precedes a breakout.",
+      "keywords": [
+        "compression",
+        "compressed",
+        "coiling",
+        "building energy",
+        "tight range",
+        "narrowing",
+        "squeeze"
+      ],
+      "visual_markers": [
+        "Bollinger Bands tightening",
+        "profile compressing",
+        "volume declining",
+        "price inside prior range"
+      ],
+      "parent_concepts": [
+        "Balance"
+      ],
+      "related_concepts": [
+        "Breakout",
+        "Squeeze",
+        "Explosion"
+      ],
+      "opposite_concepts": [
+        "Expansion",
+        "Displacement"
+      ],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "ms_004",
+      "name": "Opening_Drive",
+      "category": "Market_State",
+      "definition": "The initial directional move after market open (especially NY 9:30). Sets the tone and bias for the session.",
+      "keywords": [
+        "opening drive",
+        "opening range",
+        "first move",
+        "open",
+        "opening bell",
+        "initial move",
+        "morning drive"
+      ],
+      "visual_markers": [
+        "first 5-15 min candle",
+        "volume spike at open",
+        "clear directional candle",
+        "break of pre-market range"
+      ],
+      "parent_concepts": [
+        "Imbalance"
+      ],
+      "related_concepts": [
+        "NY_Session",
+        "Aggression",
+        "Breakout"
+      ],
+      "opposite_concepts": [
+        "False_Breakout"
+      ],
+      "confidence_weight": 0.85
+    },
+    {
+      "concept_id": "lvl_001",
+      "name": "POC",
+      "category": "Level",
+      "definition": "Point of Control — the price level with the highest traded volume. Represents fair value and the strongest magnet for price.",
+      "keywords": [
+        "point of control",
+        "poc",
+        "fair value",
+        "most traded price",
+        "center of value",
+        "volume node"
+      ],
+      "visual_markers": [
+        "thickest horizontal line on volume profile",
+        "highest volume histogram bar",
+        "price rotating around this level"
+      ],
+      "parent_concepts": [
+        "Value_Area"
+      ],
+      "related_concepts": [
+        "VAH",
+        "VAL",
+        "Balance",
+        "Mean_Reversion"
+      ],
+      "opposite_concepts": [
+        "LVN"
+      ],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "lvl_002",
+      "name": "VAH",
+      "category": "Level",
+      "definition": "Value Area High — the upper boundary of the 70% volume zone. Acts as resistance in balance; breakout target in imbalance.",
+      "keywords": [
+        "value area high",
+        "vah",
+        "top of value",
+        "upper value",
+        "high of value area",
+        "value area top"
+      ],
+      "visual_markers": [
+        "upper line of value area rectangle",
+        "volume profile thinning above",
+        "rejection or breakout point"
+      ],
+      "parent_concepts": [
+        "Value_Area"
+      ],
+      "related_concepts": [
+        "POC",
+        "VAL",
+        "Failed_Auction",
+        "Absorption"
+      ],
+      "opposite_concepts": [
+        "VAL"
+      ],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "lvl_003",
+      "name": "VAL",
+      "category": "Level",
+      "definition": "Value Area Low — the lower boundary of the 70% volume zone. Acts as support in balance; breakdown target in imbalance.",
+      "keywords": [
+        "value area low",
+        "val",
+        "bottom of value",
+        "lower value",
+        "low of value area",
+        "value area bottom"
+      ],
+      "visual_markers": [
+        "lower line of value area rectangle",
+        "volume profile thinning below",
+        "bounce or breakdown point"
+      ],
+      "parent_concepts": [
+        "Value_Area"
+      ],
+      "related_concepts": [
+        "POC",
+        "VAH",
+        "Failed_Auction",
+        "Absorption"
+      ],
+      "opposite_concepts": [
+        "VAH"
+      ],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "lvl_004",
+      "name": "LVN",
+      "category": "Level",
+      "definition": "Low Volume Node — a thinly traded area in the profile where price moves quickly. Key for entries in trend continuation.",
+      "keywords": [
+        "low volume node",
+        "lvn",
+        "thin area",
+        "gap in profile",
+        "thinly traded",
+        "low volume area",
+        "void"
+      ],
+      "visual_markers": [
+        "gap or thin section in volume profile",
+        "price moves through quickly",
+        "no volume histogram"
+      ],
+      "parent_concepts": [
+        "Volume_Profile"
+      ],
+      "related_concepts": [
+        "POC",
+        "Trend_Continuation",
+        "Pullback",
+        "Retracement"
+      ],
+      "opposite_concepts": [
+        "HVN"
+      ],
+      "confidence_weight": 0.95
+    },
+    {
+      "concept_id": "lvl_005",
+      "name": "HVN",
+      "category": "Level",
+      "definition": "High Volume Node — a thick volume area where price tends to stall or reverse. Acts as support/resistance.",
+      "keywords": [
+        "high volume node",
+        "hvn",
+        "thick area",
+        "volume cluster",
+        "heavy volume zone"
+      ],
+      "visual_markers": [
+        "thick section in volume profile",
+        "price stalls here",
+        "multiple tests",
+        "absorption visible"
+      ],
+      "parent_concepts": [
+        "Volume_Profile"
+      ],
+      "related_concepts": [
+        "POC",
+        "Absorption",
+        "Failed_Auction"
+      ],
+      "opposite_concepts": [
+        "LVN"
+      ],
+      "confidence_weight": 0.85
+    },
+    {
+      "concept_id": "lvl_006",
+      "name": "VWAP",
+      "category": "Level",
+      "definition": "Volume Weighted Average Price — institutional benchmark. Above VWAP = bullish bias; below = bearish bias.",
+      "keywords": [
+        "vwap",
+        "volume weighted average price",
+        "institutional level",
+        "anchor vwap",
+        "session vwap"
+      ],
+      "visual_markers": [
+        "VWAP line on chart",
+        "price crossing VWAP",
+        "tests of VWAP with reaction"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Aggression",
+        "Bias",
+        "Direction"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 0.8
+    },
+    {
+      "concept_id": "lvl_007",
+      "name": "Value_Area",
+      "category": "Level",
+      "definition": "The 70% of volume traded closest to the POC. Defines the accepted range of fair value for the session or structure.",
+      "keywords": [
+        "value area",
+        "70% of volume",
+        "accepted range",
+        "fair value zone",
+        "volume profile area",
+        "area"
+      ],
+      "visual_markers": [
+        "rectangle on profile between VAH and VAL",
+        "bulk of volume histogram inside"
+      ],
+      "parent_concepts": [
+        "Volume_Profile"
+      ],
+      "related_concepts": [
+        "POC",
+        "VAH",
+        "VAL",
+        "Balance"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "lvl_008",
+      "name": "Previous_Session_High_Low",
+      "category": "Level",
+      "definition": "The high and low of the prior trading session. Often acts as key support/resistance and targets.",
+      "keywords": [
+        "previous session high",
+        "previous session low",
+        "yesterday high",
+        "yesterday low",
+        "prior day high",
+        "prior day low",
+        "pdh",
+        "pdl",
+        "high"
+      ],
+      "visual_markers": [
+        "horizontal line at prior day extreme",
+        "price reacting at yesterday's levels"
+      ],
+      "parent_concepts": [
+        "Market_Structure"
+      ],
+      "related_concepts": [
+        "Breakout",
+        "Failed_Auction",
+        "Target"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 0.8
+    },
+    {
+      "concept_id": "of_001",
+      "name": "Absorption",
+      "category": "Order_Flow",
+      "definition": "Heavy volume at a level without price continuation. One side is absorbing the other's aggression, often signaling exhaustion and impending reversal.",
+      "keywords": [
+        "absorption",
+        "absorbed",
+        "absorbing",
+        "absorbed buyers",
+        "absorbed sellers",
+        "not getting rewarded",
+        "building positions",
+        "holding the level",
+        "eating the orders"
+      ],
+      "visual_markers": [
+        "large delta bars at level",
+        "price stalls despite heavy volume",
+        "footprint shows large numbers",
+        "CVD flat while volume spikes"
+      ],
+      "parent_concepts": [
+        "Order_Flow"
+      ],
+      "related_concepts": [
+        "Aggression",
+        "Failed_Auction",
+        "Exhaustion",
+        "POC",
+        "VAH",
+        "VAL"
+      ],
+      "opposite_concepts": [
+        "Displacement",
+        "Breakout"
+      ],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "of_002",
+      "name": "Aggression",
+      "category": "Order_Flow",
+      "definition": "One side is actively and forcefully pushing price. Seen in large footprint bubbles, stacked imbalances, and CVD divergence.",
+      "keywords": [
+        "aggression",
+        "aggressive",
+        "big prints",
+        "bubbles",
+        "imbalance",
+        "hitting",
+        "sweeping",
+        "aggressive sellers",
+        "aggressive buyers",
+        "control"
+      ],
+      "visual_markers": [
+        "stacked imbalances on footprint",
+        "large delta candles",
+        "CVD trending strongly",
+        "big volume bubbles"
+      ],
+      "parent_concepts": [
+        "Order_Flow"
+      ],
+      "related_concepts": [
+        "Absorption",
+        "Delta",
+        "CVD",
+        "Imbalance",
+        "Displacement"
+      ],
+      "opposite_concepts": [
+        "Exhaustion",
+        "Absorption"
+      ],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "of_003",
+      "name": "Delta",
+      "category": "Order_Flow",
+      "definition": "The net difference between buying and selling pressure at each price level. Positive delta = buyers aggressive; negative = sellers aggressive.",
+      "keywords": [
+        "delta",
+        "buying pressure",
+        "selling pressure",
+        "positive delta",
+        "negative delta",
+        "delta divergence"
+      ],
+      "visual_markers": [
+        "delta bars on footprint",
+        "delta histogram",
+        "delta diverging from price"
+      ],
+      "parent_concepts": [
+        "Order_Flow"
+      ],
+      "related_concepts": [
+        "Aggression",
+        "CVD",
+        "Footprint",
+        "Absorption"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "of_004",
+      "name": "CVD",
+      "category": "Order_Flow",
+      "definition": "Cumulative Volume Delta — the running total of delta. Shows which side has been in control over time. Trending CVD = sustained aggression.",
+      "keywords": [
+        "cvd",
+        "cumulative volume delta",
+        "cumulative delta",
+        "delta trend",
+        "buying control",
+        "selling control"
+      ],
+      "visual_markers": [
+        "CVD line trending up or down",
+        "CVD divergence from price",
+        "CVD flattening at extremes"
+      ],
+      "parent_concepts": [
+        "Order_Flow"
+      ],
+      "related_concepts": [
+        "Delta",
+        "Aggression",
+        "Absorption",
+        "Exhaustion"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "of_005",
+      "name": "Footprint",
+      "category": "Order_Flow",
+      "definition": "The ATAS footprint chart showing bid/ask volume at each price level. Reveals microstructure: absorption, aggression, and imbalance.",
+      "keywords": [
+        "footprint",
+        "atas",
+        "bid ask",
+        "order flow",
+        "microstructure",
+        "numbers",
+        "volume at price"
+      ],
+      "visual_markers": [
+        "grid of bid/ask numbers",
+        "colored cells showing imbalance",
+        "large numbers highlighted"
+      ],
+      "parent_concepts": [
+        "Order_Flow"
+      ],
+      "related_concepts": [
+        "Delta",
+        "Aggression",
+        "Absorption",
+        "Stacked_Imbalance"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 0.85
+    },
+    {
+      "concept_id": "of_006",
+      "name": "Stacked_Imbalance",
+      "category": "Order_Flow",
+      "definition": "Multiple consecutive price levels showing the same directional imbalance (e.g., 3+ levels of buying). Signals strong aggression.",
+      "keywords": [
+        "stacked imbalance",
+        "imbalance stack",
+        "consecutive imbalance",
+        "3 level imbalance",
+        "footprint imbalance"
+      ],
+      "visual_markers": [
+        "3+ consecutive cells colored same direction on footprint",
+        "vertical stack of imbalance"
+      ],
+      "parent_concepts": [
+        "Footprint"
+      ],
+      "related_concepts": [
+        "Aggression",
+        "Delta",
+        "Breakout"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "of_007",
+      "name": "Exhaustion",
+      "category": "Order_Flow",
+      "definition": "The aggressive side is running out of orders. Seen as delta divergence, shrinking volume on new highs/lows, and absorption.",
+      "keywords": [
+        "exhaustion",
+        "exhausted",
+        "running out",
+        "no follow through",
+        "weakness",
+        "divergence",
+        "delta divergence"
+      ],
+      "visual_markers": [
+        "price makes new high but delta lower",
+        "volume declining on push",
+        "absorption at extreme",
+        "CVD flattening"
+      ],
+      "parent_concepts": [
+        "Order_Flow"
+      ],
+      "related_concepts": [
+        "Absorption",
+        "Delta",
+        "Failed_Auction",
+        "Reversal"
+      ],
+      "opposite_concepts": [
+        "Aggression",
+        "Momentum"
+      ],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "of_008",
+      "name": "NASDAQ_Effort",
+      "category": "Order_Flow",
+      "definition": "Fabio's proprietary term for aggressive footprint clusters showing institutional effort at key levels. Used to confirm entries and management points.",
+      "keywords": [
+        "nasdaq effort",
+        "effort area",
+        "nasdaq profile area",
+        "effort cluster",
+        "cluster of effort",
+        "area of control"
+      ],
+      "visual_markers": [
+        "cluster of large footprint numbers",
+        "concentrated aggression at a level",
+        "multiple tests with aggression"
+      ],
+      "parent_concepts": [
+        "Aggression"
+      ],
+      "related_concepts": [
+        "Absorption",
+        "VAH",
+        "VAL",
+        "Stop_Loss_in_Profit"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 0.95
+    },
+    {
+      "concept_id": "su_001",
+      "name": "Failed_Auction",
+      "category": "Setup",
+      "definition": "Price tests a key level multiple times but fails to break through. Indicates absorption and often leads to a reversal or mean reversion.",
+      "keywords": [
+        "failed auction",
+        "test",
+        "rejection",
+        "couldn't break",
+        "failed to break",
+        "failed breakout",
+        "false breakout",
+        "fakeout",
+        "rejected",
+        "failed"
+      ],
+      "visual_markers": [
+        "multiple wicks at level",
+        "absorption at VAH/VAL/POC",
+        "delta divergence at test",
+        "volume high but no continuation"
+      ],
+      "parent_concepts": [
+        "Setup"
+      ],
+      "related_concepts": [
+        "Absorption",
+        "VAH",
+        "VAL",
+        "Mean_Reversion",
+        "Exhaustion"
+      ],
+      "opposite_concepts": [
+        "Breakout",
+        "Displacement"
+      ],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "su_002",
+      "name": "Triple_A_Setup",
+      "category": "Setup",
+      "definition": "Fabio's highest conviction setup requiring three aligned elements: Absorption + Accumulation + Aggression at a key level.",
+      "keywords": [
+        "triple a",
+        "aaa",
+        "absorption accumulation aggression",
+        "three a",
+        "triple a setup",
+        "perfect setup",
+        "textbook"
+      ],
+      "visual_markers": [
+        "absorption at level",
+        "small consolidation/accumulation",
+        "then aggressive breakout in direction",
+        "all three aligned"
+      ],
+      "parent_concepts": [
+        "Setup"
+      ],
+      "related_concepts": [
+        "Absorption",
+        "Aggression",
+        "VAH",
+        "VAL",
+        "Opening_Drive"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "su_003",
+      "name": "Trend_Continuation",
+      "category": "Setup",
+      "definition": "Entering in the direction of the established trend after a pullback to a key level (often LVN or prior balance level).",
+      "keywords": [
+        "trend continuation",
+        "pullback entry",
+        "retracement entry",
+        "with trend",
+        "in direction",
+        "continuation",
+        "trend trade",
+        "with"
+      ],
+      "visual_markers": [
+        "impulse leg",
+        "retracement to LVN or 50%",
+        "aggression resumes in trend direction",
+        "CVD aligned"
+      ],
+      "parent_concepts": [
+        "Setup"
+      ],
+      "related_concepts": [
+        "LVN",
+        "Imbalance",
+        "Aggression",
+        "Pullback",
+        "Stop_Loss_in_Profit"
+      ],
+      "opposite_concepts": [
+        "Mean_Reversion"
+      ],
+      "confidence_weight": 0.95
+    },
+    {
+      "concept_id": "su_004",
+      "name": "Mean_Reversion",
+      "category": "Setup",
+      "definition": "Trading back toward POC or balance center after a failed breakout or rejection at the edge of value. Best in balance or compressed markets.",
+      "keywords": [
+        "mean reversion",
+        "reversion",
+        "back to poc",
+        "back to value",
+        "snap back",
+        "reclaim",
+        "back inside"
+      ],
+      "visual_markers": [
+        "price breaks out then reclaims back inside",
+        "failed auction at VAH/VAL",
+        "target is POC",
+        "absorption at extreme"
+      ],
+      "parent_concepts": [
+        "Setup"
+      ],
+      "related_concepts": [
+        "Failed_Auction",
+        "POC",
+        "Balance",
+        "Absorption"
+      ],
+      "opposite_concepts": [
+        "Trend_Continuation",
+        "Breakout"
+      ],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "su_005",
+      "name": "Opening_Range_Breakout",
+      "category": "Setup",
+      "definition": "Trading the breakout of the first 15-30 minute range after NY open. Requires aggression and volume confirmation.",
+      "keywords": [
+        "opening range breakout",
+        "orb",
+        "break of opening range",
+        "first 30 minutes",
+        "morning breakout",
+        "open drive"
+      ],
+      "visual_markers": [
+        "range defined in first 30 min",
+        "break with volume",
+        "footprint shows aggression",
+        "CVD aligned with break"
+      ],
+      "parent_concepts": [
+        "Setup"
+      ],
+      "related_concepts": [
+        "NY_Session",
+        "Opening_Drive",
+        "Aggression",
+        "Breakout"
+      ],
+      "opposite_concepts": [
+        "False_Breakout"
+      ],
+      "confidence_weight": 0.85
+    },
+    {
+      "concept_id": "su_006",
+      "name": "Value_Area_Bounce",
+      "category": "Setup",
+      "definition": "Price tests VAH or VAL and bounces back into the value area. Requires order flow confirmation (absorption or aggression reversal).",
+      "keywords": [
+        "value area bounce",
+        "vah bounce",
+        "val bounce",
+        "bounce at value",
+        "reaction at vah",
+        "reaction at val"
+      ],
+      "visual_markers": [
+        "price touches VAH or VAL",
+        "footprint shows absorption",
+        "delta reverses",
+        "price moves back toward POC"
+      ],
+      "parent_concepts": [
+        "Setup"
+      ],
+      "related_concepts": [
+        "VAH",
+        "VAL",
+        "POC",
+        "Absorption",
+        "Mean_Reversion"
+      ],
+      "opposite_concepts": [
+        "Breakout"
+      ],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "su_007",
+      "name": "Squeeze",
+      "category": "Setup",
+      "definition": "A rapid acceleration move after compression. Price breaks out of a tight range with explosive momentum.",
+      "keywords": [
+        "squeeze",
+        "explosion",
+        "acceleration",
+        "breakout squeeze",
+        "coil release",
+        "rapid move",
+        "impulsive move"
+      ],
+      "visual_markers": [
+        "tight range then long candle",
+        "volume spike",
+        "delta surge",
+        "price moves quickly through LVN"
+      ],
+      "parent_concepts": [
+        "Setup"
+      ],
+      "related_concepts": [
+        "Compression",
+        "Displacement",
+        "Aggression",
+        "LVN"
+      ],
+      "opposite_concepts": [
+        "Balance"
+      ],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "su_008",
+      "name": "False_Breakout",
+      "category": "Setup",
+      "definition": "Price briefly breaks a key level then immediately reverses. Traps breakout traders. High-probability mean reversion signal.",
+      "keywords": [
+        "false breakout",
+        "fake breakout",
+        "trap",
+        "bull trap",
+        "bear trap",
+        "failed break",
+        "reclaim"
+      ],
+      "visual_markers": [
+        "wick beyond level",
+        "immediate reversal",
+        "footprint shows absorption",
+        "price back inside range quickly"
+      ],
+      "parent_concepts": [
+        "Setup"
+      ],
+      "related_concepts": [
+        "Failed_Auction",
+        "Mean_Reversion",
+        "Absorption"
+      ],
+      "opposite_concepts": [
+        "Breakout",
+        "Displacement"
+      ],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "rm_001",
+      "name": "Stop_Loss_in_Profit",
+      "category": "Risk_Management",
+      "definition": "Moving the stop loss to breakeven or into profit after price has moved favorably. Fabio's primary management technique.",
+      "keywords": [
+        "stop loss in profit",
+        "stop in profit",
+        "covered",
+        "breakeven",
+        "be",
+        "break even",
+        "put stop",
+        "move stop",
+        "loss"
+      ],
+      "visual_markers": [
+        "order line moved on chart",
+        "stop now at entry or better",
+        "trailing stop annotation"
+      ],
+      "parent_concepts": [
+        "Trade_Management"
+      ],
+      "related_concepts": [
+        "Risk_to_Reward",
+        "Trailing_Stop",
+        "NASDAQ_Effort"
+      ],
+      "opposite_concepts": [
+        "Stop_Loss"
+      ],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "rm_002",
+      "name": "Risk_to_Reward",
+      "category": "Risk_Management",
+      "definition": "The ratio of potential profit to initial risk. Fabio targets minimum 1:3, often 1:5 or higher on NASDAQ.",
+      "keywords": [
+        "risk to reward",
+        "r:r",
+        "risk reward",
+        "1 to 3",
+        "1 to 5",
+        "1 to 10",
+        "risk 2500",
+        "make 30000",
+        "risk reward ratio",
+        "risk",
+        "make"
+      ],
+      "visual_markers": [
+        "entry, stop, and target lines on chart",
+        "distance measured",
+        "risk small, target large"
+      ],
+      "parent_concepts": [
+        "Trade_Management"
+      ],
+      "related_concepts": [
+        "Stop_Loss_in_Profit",
+        "Target",
+        "Position_Size"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "rm_003",
+      "name": "Daily_Loss_Limit",
+      "category": "Risk_Management",
+      "definition": "Fabio stops trading after 3 losses or a defined daily drawdown. Preserves capital and mental state.",
+      "keywords": [
+        "three losses",
+        "3 losses",
+        "stop trading",
+        "daily limit",
+        "loss limit",
+        "done for the day",
+        "no more trades",
+        "more"
+      ],
+      "visual_markers": [
+        "P&L showing multiple red trades",
+        "closing platform",
+        "stopping commentary"
+      ],
+      "parent_concepts": [
+        "Trade_Management"
+      ],
+      "related_concepts": [
+        "Discipline",
+        "Psychology"
+      ],
+      "opposite_concepts": [
+        "Revenge_Trading"
+      ],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "rm_004",
+      "name": "Trailing_Stop",
+      "category": "Risk_Management",
+      "definition": "Moving the stop loss progressively higher/lower as price moves favorably. Used only on exceptional trend days.",
+      "keywords": [
+        "trail",
+        "trailing stop",
+        "move stop",
+        "lock profit",
+        "trailing",
+        "follow the move"
+      ],
+      "visual_markers": [
+        "stop line following price",
+        "stepped stop adjustments",
+        "protecting open profit"
+      ],
+      "parent_concepts": [
+        "Trade_Management"
+      ],
+      "related_concepts": [
+        "Stop_Loss_in_Profit",
+        "Trend_Continuation"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 0.85
+    },
+    {
+      "concept_id": "rm_005",
+      "name": "Position_Size",
+      "category": "Risk_Management",
+      "definition": "The number of contracts traded. Fabio scales size based on conviction and volatility. NASDAQ = fewer contracts due to volatility.",
+      "keywords": [
+        "contracts",
+        "size",
+        "position size",
+        "number of contracts",
+        "9 contracts",
+        "200 contracts",
+        "size up",
+        "reduce size",
+        "position"
+      ],
+      "visual_markers": [
+        "order ticket showing contract count",
+        "P&L scaling with size"
+      ],
+      "parent_concepts": [
+        "Trade_Management"
+      ],
+      "related_concepts": [
+        "Risk_to_Reward",
+        "Volatility"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 0.8
+    },
+    {
+      "concept_id": "rm_006",
+      "name": "Mismanagement",
+      "category": "Risk_Management",
+      "definition": "When Fabio holds a position too long, ignores absorption, or fails to take profit at target. He explicitly reviews these errors.",
+      "keywords": [
+        "mismanagement",
+        "error",
+        "mistake",
+        "stupid error",
+        "bad decision",
+        "should have closed",
+        "deserved it",
+        "my error",
+        "have",
+        "take"
+      ],
+      "visual_markers": [
+        "trade going from profit to loss",
+        "ignoring absorption signals",
+        "holding through failed auction"
+      ],
+      "parent_concepts": [
+        "Trade_Management"
+      ],
+      "related_concepts": [
+        "Reflection",
+        "Failed_Auction",
+        "Absorption"
+      ],
+      "opposite_concepts": [
+        "Discipline"
+      ],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "se_001",
+      "name": "NY_Session",
+      "category": "Session",
+      "definition": "New York trading session, 9:30 AM - 4:00 PM EST. Highest volatility and liquidity. Fabio's primary trading window.",
+      "keywords": [
+        "new york",
+        "ny open",
+        "opening bell",
+        "9:30",
+        "ny session",
+        "us session",
+        "cash open"
+      ],
+      "visual_markers": [
+        "clock showing 9:30",
+        "volume spike",
+        "opening range forming"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Opening_Drive",
+        "Opening_Range_Breakout",
+        "Volatility"
+      ],
+      "opposite_concepts": [
+        "London_Session",
+        "Pre_Market"
+      ],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "se_002",
+      "name": "London_Session",
+      "category": "Session",
+      "definition": "London trading session, ~3:00 AM - 11:00 AM EST. Often more balanced and mean-reverting. Fabio trades mean reversion here.",
+      "keywords": [
+        "london",
+        "london open",
+        "london session",
+        "european session",
+        "europe open"
+      ],
+      "visual_markers": [
+        "earlier hours on chart",
+        "tighter range",
+        "less volatile"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Mean_Reversion",
+        "Balance"
+      ],
+      "opposite_concepts": [
+        "NY_Session"
+      ],
+      "confidence_weight": 0.8
+    },
+    {
+      "concept_id": "se_003",
+      "name": "Pre_Market",
+      "category": "Session",
+      "definition": "Trading before NY open. Lower liquidity. Fabio uses pre-market structure to plan NY open scenarios.",
+      "keywords": [
+        "pre-market",
+        "premarket",
+        "overnight",
+        "globex",
+        "before open",
+        "early session"
+      ],
+      "visual_markers": [
+        "thin volume before 9:30",
+        "range established overnight",
+        "gap from prior close"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Opening_Drive",
+        "Gap"
+      ],
+      "opposite_concepts": [
+        "NY_Session"
+      ],
+      "confidence_weight": 0.75
+    },
+    {
+      "concept_id": "se_004",
+      "name": "Market_Close",
+      "category": "Session",
+      "definition": "End of trading session. Fabio often closes before close to avoid volatility decay and slippage.",
+      "keywords": [
+        "market close",
+        "closing",
+        "almost closing",
+        "end of session",
+        "close of day",
+        "eod"
+      ],
+      "visual_markers": [
+        "clock near 4:00 PM",
+        "volume declining",
+        "price consolidating"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Volatility",
+        "Slippage"
+      ],
+      "opposite_concepts": [
+        "Opening_Drive"
+      ],
+      "confidence_weight": 0.8
+    },
+    {
+      "concept_id": "pa_001",
+      "name": "Breakout",
+      "category": "Price_Action",
+      "definition": "Price moves decisively beyond a key level (VAH, VAL, range high/low) with volume and aggression.",
+      "keywords": [
+        "breakout",
+        "break",
+        "breaks",
+        "breaking",
+        "break above",
+        "break below",
+        "break of structure",
+        "bos"
+      ],
+      "visual_markers": [
+        "candle closing beyond level",
+        "volume spike",
+        "footprint aggression",
+        "CVD aligned"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Imbalance",
+        "Aggression",
+        "Displacement",
+        "Opening_Range_Breakout"
+      ],
+      "opposite_concepts": [
+        "Failed_Auction",
+        "False_Breakout",
+        "Absorption"
+      ],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "pa_002",
+      "name": "Pullback",
+      "category": "Price_Action",
+      "definition": "A temporary counter-trend move after an impulse. Fabio uses pullbacks to enter in the trend direction at better prices.",
+      "keywords": [
+        "pullback",
+        "retracement",
+        "retrace",
+        "pull back",
+        "correction",
+        "dip",
+        "bounce",
+        "back"
+      ],
+      "visual_markers": [
+        "price moves against trend briefly",
+        "tests LVN or 50% fib",
+        "then resumes",
+        "lower volume on pullback"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Trend_Continuation",
+        "LVN",
+        "Entry"
+      ],
+      "opposite_concepts": [
+        "Reversal"
+      ],
+      "confidence_weight": 0.85
+    },
+    {
+      "concept_id": "pa_003",
+      "name": "Reversal",
+      "category": "Price_Action",
+      "definition": "A change in direction after a trend or test. Often preceded by absorption, failed auction, or exhaustion.",
+      "keywords": [
+        "reversal",
+        "reverse",
+        "turn",
+        "change direction",
+        "flip",
+        "u-turn",
+        "roll over"
+      ],
+      "visual_markers": [
+        "absorption at extreme",
+        "delta divergence",
+        "engulfing candle",
+        "break of micro structure"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Failed_Auction",
+        "Absorption",
+        "Exhaustion",
+        "Mean_Reversion"
+      ],
+      "opposite_concepts": [
+        "Trend_Continuation",
+        "Breakout"
+      ],
+      "confidence_weight": 0.85
+    },
+    {
+      "concept_id": "pa_004",
+      "name": "Displacement",
+      "category": "Price_Action",
+      "definition": "A strong, impulsive move with little retracement. Indicates imbalance and institutional participation.",
+      "keywords": [
+        "displacement",
+        "impulse",
+        "impulsive",
+        "strong move",
+        "big candle",
+        "drive",
+        "leg"
+      ],
+      "visual_markers": [
+        "long body candle",
+        "minimal wick",
+        "high volume",
+        "delta aligned",
+        "price moves through LVN"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Imbalance",
+        "Aggression",
+        "Breakout",
+        "Trend_Continuation"
+      ],
+      "opposite_concepts": [
+        "Balance",
+        "Compression",
+        "Pullback"
+      ],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "pa_005",
+      "name": "Gap",
+      "category": "Price_Action",
+      "definition": "A price discontinuity between close and next open. Fabio notes gaps and often waits for them to fill before managing.",
+      "keywords": [
+        "gap",
+        "gapped",
+        "gap up",
+        "gap down",
+        "fill the gap",
+        "gap fill",
+        "unfilled gap"
+      ],
+      "visual_markers": [
+        "space between candles",
+        "price jumps",
+        "no trades in gap zone"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Pre_Market",
+        "Opening_Drive",
+        "Mean_Reversion"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 0.8
+    },
+    {
+      "concept_id": "pa_006",
+      "name": "Reclaim",
+      "category": "Price_Action",
+      "definition": "Price breaks a level but then moves back through it in the opposite direction. Key signal for false breakout/mean reversion.",
+      "keywords": [
+        "reclaim",
+        "back inside",
+        "back above",
+        "back below",
+        "re-enter",
+        "reclaim the level",
+        "back in range"
+      ],
+      "visual_markers": [
+        "wick beyond level then close back inside",
+        "footprint shows absorption",
+        "delta reverses"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "False_Breakout",
+        "Failed_Auction",
+        "Mean_Reversion"
+      ],
+      "opposite_concepts": [
+        "Breakout"
+      ],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "pa_007",
+      "name": "Slippage",
+      "category": "Price_Action",
+      "definition": "The difference between expected fill price and actual fill. Common in fast markets, especially at NASDAQ close.",
+      "keywords": [
+        "slippage",
+        "slipped",
+        "bad fill",
+        "worse price",
+        "3 tick slippage",
+        "4 tick slippage",
+        "got filled worse"
+      ],
+      "visual_markers": [
+        "order fill price worse than stop",
+        "P&L showing larger loss than expected",
+        "fast market conditions"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Volatility",
+        "Market_Close",
+        "Liquidation"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 0.8
+    },
+    {
+      "concept_id": "str_001",
+      "name": "Higher_High",
+      "category": "Market_Structure",
+      "definition": "Price makes a new high above the previous swing high. Bullish structural development.",
+      "keywords": [
+        "higher high",
+        "hh",
+        "new high",
+        "break of high",
+        "higher swing high"
+      ],
+      "visual_markers": [
+        "price above prior peak",
+        "uptrend structure intact"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Higher_Low",
+        "Trend_Continuation",
+        "Breakout"
+      ],
+      "opposite_concepts": [
+        "Lower_Low"
+      ],
+      "confidence_weight": 0.8
+    },
+    {
+      "concept_id": "str_002",
+      "name": "Lower_Low",
+      "category": "Market_Structure",
+      "definition": "Price makes a new low below the previous swing low. Bearish structural development.",
+      "keywords": [
+        "lower low",
+        "ll",
+        "new low",
+        "break of low",
+        "lower swing low"
+      ],
+      "visual_markers": [
+        "price below prior trough",
+        "downtrend structure intact"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Lower_High",
+        "Trend_Continuation",
+        "Breakout"
+      ],
+      "opposite_concepts": [
+        "Higher_High"
+      ],
+      "confidence_weight": 0.8
+    },
+    {
+      "concept_id": "str_003",
+      "name": "Bias",
+      "category": "Market_Structure",
+      "definition": "The directional inclination based on structure, fundamentals, and session context. Fabio establishes bias before looking for setups.",
+      "keywords": [
+        "bias",
+        "short biased",
+        "long biased",
+        "bullish bias",
+        "bearish bias",
+        "directional bias",
+        "my idea",
+        "i was expecting"
+      ],
+      "visual_markers": [
+        "annotated bias on chart",
+        "prior to entry analysis",
+        "fundamental + technical alignment"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Market_State",
+        "Direction",
+        "Fundamentals"
+      ],
+      "opposite_concepts": [
+        "Neutral"
+      ],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "str_004",
+      "name": "Volatility",
+      "category": "Market_Structure",
+      "definition": "The degree of price movement. Fabio distinguishes between directional volatility (tradeable) and choppy volatility (avoid).",
+      "keywords": [
+        "volatility",
+        "volatile",
+        "high volatility",
+        "volatility to melt",
+        "choppy",
+        "range expansion",
+        "range contraction"
+      ],
+      "visual_markers": [
+        "large candles",
+        "wide range",
+        "ATR expanding",
+        "volume increasing"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Balance",
+        "Imbalance",
+        "Compression",
+        "Position_Size"
+      ],
+      "opposite_concepts": [
+        "Compression"
+      ],
+      "confidence_weight": 0.85
+    },
+    {
+      "concept_id": "str_005",
+      "name": "Liquidation",
+      "category": "Market_Structure",
+      "definition": "A forced position closure, usually via stop loss. Fabio shows these as learning moments.",
+      "keywords": [
+        "liquidation",
+        "liquidated",
+        "stopped out",
+        "stop loss hit",
+        "kick in the face",
+        "pain",
+        "suffering",
+        "snap bam"
+      ],
+      "visual_markers": [
+        "order ticket showing stop fill",
+        "P&L showing loss",
+        "price hitting stop level",
+        "slippage on fill"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Stop_Loss",
+        "Slippage",
+        "Mismanagement"
+      ],
+      "opposite_concepts": [
+        "Profit_Target"
+      ],
+      "confidence_weight": 0.85
+    },
+    {
+      "concept_id": "str_006",
+      "name": "Fundamentals",
+      "category": "Market_Structure",
+      "definition": "Macro context (economic reports, news, data) that informs Fabio's directional bias for the session.",
+      "keywords": [
+        "fundamental",
+        "data",
+        "report",
+        "economic report",
+        "news",
+        "catalyst",
+        "event",
+        "caught report",
+        "data that i explained",
+        "that"
+      ],
+      "visual_markers": [
+        "economic calendar",
+        "news headlines",
+        "pre-market analysis"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Bias",
+        "NY_Session",
+        "Direction"
+      ],
+      "opposite_concepts": [
+        "Technical_Only"
+      ],
+      "confidence_weight": 0.8
+    },
+    {
+      "concept_id": "abs_001",
+      "name": "Direction",
+      "category": "Market_Structure",
+      "definition": "The prevailing price trajectory — up, down, or sideways. Fabio establishes directional bias before any setup.",
+      "keywords": [
+        "direction",
+        "up",
+        "down",
+        "sideways",
+        "trend direction",
+        "bias direction"
+      ],
+      "visual_markers": [
+        "series of higher highs/lows",
+        "lower highs/lows",
+        "flat consolidation"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Bias",
+        "Trend_Continuation",
+        "Imbalance"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "abs_002",
+      "name": "Discipline",
+      "category": "Risk_Management",
+      "definition": "The mental rigor to follow rules, respect limits, and avoid emotional trading decisions.",
+      "keywords": [
+        "discipline",
+        "rules",
+        "follow plan",
+        "stick to plan",
+        "mental game",
+        "emotional control"
+      ],
+      "visual_markers": [
+        "stopping after loss limit",
+        "respecting stop loss",
+        "no revenge trades"
+      ],
+      "parent_concepts": [
+        "Trade_Management"
+      ],
+      "related_concepts": [
+        "Daily_Loss_Limit",
+        "Mismanagement",
+        "Psychology"
+      ],
+      "opposite_concepts": [
+        "Revenge_Trading"
+      ],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "abs_003",
+      "name": "Entry",
+      "category": "Setup",
+      "definition": "The specific price and moment where a position is initiated. Must align with State + Level + Flow.",
+      "keywords": [
+        "entry",
+        "enter",
+        "got in",
+        "entry price",
+        "fill",
+        "initiated",
+        "position entry"
+      ],
+      "visual_markers": [
+        "order ticket showing entry",
+        "arrow on chart",
+        "price at key level with confirmation"
+      ],
+      "parent_concepts": [
+        "Setup"
+      ],
+      "related_concepts": [
+        "Stop_Loss",
+        "Target",
+        "Risk_to_Reward",
+        "Aggression"
+      ],
+      "opposite_concepts": [
+        "Exit"
+      ],
+      "confidence_weight": 0.95
+    },
+    {
+      "concept_id": "abs_004",
+      "name": "Expansion",
+      "category": "Price_Action",
+      "definition": "A widening of the trading range after compression. Price breaks out of a tight coil with increased volatility.",
+      "keywords": [
+        "expansion",
+        "expanding",
+        "range expansion",
+        "breakout",
+        "volatility expansion"
+      ],
+      "visual_markers": [
+        "candles getting larger",
+        "ATR increasing",
+        "volume rising",
+        "break of compression"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Compression",
+        "Breakout",
+        "Displacement",
+        "Volatility"
+      ],
+      "opposite_concepts": [
+        "Compression"
+      ],
+      "confidence_weight": 0.85
+    },
+    {
+      "concept_id": "abs_005",
+      "name": "Explosion",
+      "category": "Price_Action",
+      "definition": "A sudden, violent price move after a period of compression or balance. Often triggered by news or order flow climax.",
+      "keywords": [
+        "explosion",
+        "explosive",
+        "blow up",
+        "blast",
+        "violent move",
+        "sharp move"
+      ],
+      "visual_markers": [
+        "single large candle",
+        "gap",
+        "volume spike",
+        "delta extreme"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Squeeze",
+        "Compression",
+        "Displacement",
+        "Aggression"
+      ],
+      "opposite_concepts": [
+        "Balance"
+      ],
+      "confidence_weight": 0.85
+    },
+    {
+      "concept_id": "abs_006",
+      "name": "Higher_Low",
+      "category": "Market_Structure",
+      "definition": "A pullback low that holds above the previous swing low. Bullish structural confirmation.",
+      "keywords": [
+        "higher low",
+        "hl",
+        "higher swing low",
+        "higher trough",
+        "higher low structure"
+      ],
+      "visual_markers": [
+        "pullback stops above prior low",
+        "stair-step pattern upward"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Higher_High",
+        "Trend_Continuation",
+        "Pullback"
+      ],
+      "opposite_concepts": [
+        "Lower_Low"
+      ],
+      "confidence_weight": 0.85
+    },
+    {
+      "concept_id": "abs_007",
+      "name": "Lower_High",
+      "category": "Market_Structure",
+      "definition": "A rally high that fails below the previous swing high. Bearish structural confirmation.",
+      "keywords": [
+        "lower high",
+        "lh",
+        "lower swing high",
+        "lower peak",
+        "lower high structure"
+      ],
+      "visual_markers": [
+        "rally stops below prior high",
+        "stair-step pattern downward"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Lower_Low",
+        "Trend_Continuation",
+        "Pullback"
+      ],
+      "opposite_concepts": [
+        "Higher_High"
+      ],
+      "confidence_weight": 0.85
+    },
+    {
+      "concept_id": "abs_008",
+      "name": "Market_State",
+      "category": "Market_State",
+      "definition": "Abstract root concept for all market condition classifications. The first question Fabio answers.",
+      "keywords": [
+        "market state",
+        "condition",
+        "market condition",
+        "what is the market doing",
+        "what"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Balance",
+        "Imbalance",
+        "Compression"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "abs_009",
+      "name": "Market_Structure",
+      "category": "Market_Structure",
+      "definition": "Abstract root concept for macro structural elements that define the auction environment.",
+      "keywords": [
+        "market structure",
+        "structure",
+        "auction structure",
+        "macro structure"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Higher_High",
+        "Lower_Low",
+        "Bias",
+        "Trend_Continuation"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "abs_010",
+      "name": "Momentum",
+      "category": "Order_Flow",
+      "definition": "The rate and strength of price movement. Sustained momentum confirms directional conviction.",
+      "keywords": [
+        "momentum",
+        "momentum strong",
+        "momentum building",
+        "momentum shift",
+        "momentum loss"
+      ],
+      "visual_markers": [
+        "CVD trending",
+        "delta aligned",
+        "consecutive directional candles",
+        "volume sustaining"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Imbalance",
+        "Aggression",
+        "Displacement",
+        "Trend_Continuation"
+      ],
+      "opposite_concepts": [
+        "Exhaustion"
+      ],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "abs_011",
+      "name": "Neutral",
+      "category": "Market_Structure",
+      "definition": "No directional bias. Market is unclear or balanced. Fabio often stays flat until bias resolves.",
+      "keywords": [
+        "neutral",
+        "no bias",
+        "flat",
+        "no direction",
+        "unclear",
+        "wait",
+        "sideways bias"
+      ],
+      "visual_markers": [
+        "price inside value area",
+        "no clear structure",
+        "mixed signals"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Balance",
+        "Bias"
+      ],
+      "opposite_concepts": [
+        "Bias"
+      ],
+      "confidence_weight": 0.8
+    },
+    {
+      "concept_id": "abs_012",
+      "name": "Order_Flow",
+      "category": "Order_Flow",
+      "definition": "Abstract root concept for microstructural evidence of buyer and seller behavior at the footprint level.",
+      "keywords": [
+        "order flow",
+        "microstructure",
+        "footprint analysis",
+        "bid ask analysis"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Delta",
+        "Aggression",
+        "Absorption",
+        "CVD",
+        "Footprint"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "abs_013",
+      "name": "Price",
+      "category": "Price_Action",
+      "definition": "The current market price. The central variable that all analysis revolves around.",
+      "keywords": [
+        "price",
+        "current price",
+        "market price",
+        "price level",
+        "price action"
+      ],
+      "visual_markers": [
+        "current candle",
+        "last price",
+        "bid/ask spread"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "POC",
+        "VAH",
+        "VAL",
+        "Level"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "abs_014",
+      "name": "Profit_Target",
+      "category": "Risk_Management",
+      "definition": "The price level where a winning position is closed for profit. Defined before entry based on structure.",
+      "keywords": [
+        "profit target",
+        "target",
+        "take profit",
+        "tp",
+        "objective",
+        "goal price"
+      ],
+      "visual_markers": [
+        "horizontal line at target",
+        "order ticket showing limit exit",
+        "price reaching level"
+      ],
+      "parent_concepts": [
+        "Trade_Management"
+      ],
+      "related_concepts": [
+        "Risk_to_Reward",
+        "Stop_Loss",
+        "Entry"
+      ],
+      "opposite_concepts": [
+        "Stop_Loss"
+      ],
+      "confidence_weight": 0.95
+    },
+    {
+      "concept_id": "abs_015",
+      "name": "Psychology",
+      "category": "Risk_Management",
+      "definition": "The mental and emotional state of the trader. Fabio emphasizes that psychology is as important as technicals.",
+      "keywords": [
+        "psychology",
+        "mental state",
+        "emotions",
+        "fear",
+        "greed",
+        "patience",
+        "frustration"
+      ],
+      "visual_markers": [
+        "stopping after losses",
+        "taking break",
+        "reviewing mistakes",
+        "calm commentary"
+      ],
+      "parent_concepts": [
+        "Trade_Management"
+      ],
+      "related_concepts": [
+        "Discipline",
+        "Daily_Loss_Limit",
+        "Mismanagement"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 0.85
+    },
+    {
+      "concept_id": "abs_016",
+      "name": "Reflection",
+      "category": "Risk_Management",
+      "definition": "Post-trade review and learning. Fabio explicitly reflects on errors, mismanagement, and lessons after each session.",
+      "keywords": [
+        "reflection",
+        "review",
+        "lesson",
+        "learn",
+        "what went wrong",
+        "what i learned",
+        "takeaway"
+      ],
+      "visual_markers": [
+        "post-trade commentary",
+        "journal entry",
+        "reviewing chart after trade"
+      ],
+      "parent_concepts": [
+        "Trade_Management"
+      ],
+      "related_concepts": [
+        "Mismanagement",
+        "Discipline",
+        "Psychology"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 0.85
+    },
+    {
+      "concept_id": "abs_017",
+      "name": "Retracement",
+      "category": "Price_Action",
+      "definition": "A temporary price move against the prevailing trend. Synonymous with pullback in Fabio's vocabulary.",
+      "keywords": [
+        "retracement",
+        "retrace",
+        "pullback",
+        "correction",
+        "dip",
+        "counter-trend move"
+      ],
+      "visual_markers": [
+        "price moves against trend",
+        "tests 50% or LVN",
+        "then resumes"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Pullback",
+        "Trend_Continuation",
+        "LVN",
+        "Entry"
+      ],
+      "opposite_concepts": [
+        "Impulse"
+      ],
+      "confidence_weight": 0.85
+    },
+    {
+      "concept_id": "abs_018",
+      "name": "Revenge_Trading",
+      "category": "Risk_Management",
+      "definition": "Trading impulsively after a loss to recover money. Fabio explicitly warns against this destructive behavior.",
+      "keywords": [
+        "revenge trading",
+        "revenge trade",
+        "trying to get back",
+        "emotional trading",
+        "chasing losses",
+        "even"
+      ],
+      "visual_markers": [
+        "immediate re-entry after stop",
+        "larger size after loss",
+        "emotional commentary"
+      ],
+      "parent_concepts": [
+        "Trade_Management"
+      ],
+      "related_concepts": [
+        "Daily_Loss_Limit",
+        "Mismanagement",
+        "Psychology"
+      ],
+      "opposite_concepts": [
+        "Discipline"
+      ],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "abs_019",
+      "name": "Setup",
+      "category": "Setup",
+      "definition": "Abstract root concept for specific trade configurations that emerge when State + Level + Flow align.",
+      "keywords": [
+        "setup",
+        "trade setup",
+        "configuration",
+        "pattern",
+        "opportunity"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Entry",
+        "Risk_to_Reward",
+        "Stop_Loss",
+        "Target"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "abs_020",
+      "name": "Stop_Loss",
+      "category": "Risk_Management",
+      "definition": "The predefined price level where a losing position is closed to limit risk. The maximum acceptable loss per trade.",
+      "keywords": [
+        "stop loss",
+        "stop",
+        "stop out",
+        "protective stop",
+        "hard stop",
+        "max loss"
+      ],
+      "visual_markers": [
+        "stop order line on chart",
+        "order ticket showing stop price",
+        "price hitting stop level"
+      ],
+      "parent_concepts": [
+        "Trade_Management"
+      ],
+      "related_concepts": [
+        "Risk_to_Reward",
+        "Entry",
+        "Liquidation",
+        "Stop_Loss_in_Profit"
+      ],
+      "opposite_concepts": [
+        "Profit_Target"
+      ],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "abs_021",
+      "name": "Target",
+      "category": "Risk_Management",
+      "definition": "The intended exit price for a profitable trade. Synonymous with profit target in Fabio's methodology.",
+      "keywords": [
+        "target",
+        "profit target",
+        "take profit",
+        "objective",
+        "goal",
+        "destination"
+      ],
+      "visual_markers": [
+        "horizontal line at target",
+        "price reaching level",
+        "limit order at target"
+      ],
+      "parent_concepts": [
+        "Trade_Management"
+      ],
+      "related_concepts": [
+        "Risk_to_Reward",
+        "Stop_Loss",
+        "Entry",
+        "Profit_Target"
+      ],
+      "opposite_concepts": [
+        "Stop_Loss"
+      ],
+      "confidence_weight": 0.95
+    },
+    {
+      "concept_id": "abs_022",
+      "name": "Technical_Only",
+      "category": "Market_Structure",
+      "definition": "Trading purely on technical analysis without considering fundamentals. Fabio sometimes contrasts this with fundamental-informed bias.",
+      "keywords": [
+        "technical only",
+        "pure technical",
+        "no fundamentals",
+        "chart only",
+        "technical trading",
+        "only"
+      ],
+      "visual_markers": [
+        "chart without news overlay",
+        "pure price action analysis"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Fundamentals",
+        "Bias"
+      ],
+      "opposite_concepts": [
+        "Fundamentals"
+      ],
+      "confidence_weight": 0.7
+    },
+    {
+      "concept_id": "abs_023",
+      "name": "Trade_Management",
+      "category": "Risk_Management",
+      "definition": "Abstract root concept for all position and risk management activities — entries, stops, targets, sizing, and psychological control.",
+      "keywords": [
+        "trade management",
+        "management",
+        "position management",
+        "risk management",
+        "execution"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Stop_Loss",
+        "Target",
+        "Position_Size",
+        "Discipline",
+        "Psychology"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "abs_024",
+      "name": "Volume_Profile",
+      "category": "Level",
+      "definition": "Abstract root concept for volume-based price analysis. The distribution of traded volume across price levels.",
+      "keywords": [
+        "volume profile",
+        "profile",
+        "volume distribution",
+        "volume at price",
+        "market profile"
+      ],
+      "visual_markers": [
+        "histogram beside candles",
+        "volume nodes",
+        "value area rectangle"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "POC",
+        "VAH",
+        "VAL",
+        "HVN",
+        "LVN",
+        "Value_Area"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "abs_025",
+      "name": "Exit",
+      "category": "Risk_Management",
+      "definition": "Closing a position, either at target, stop, or discretionary management point.",
+      "keywords": [
+        "exit",
+        "close position",
+        "get out",
+        "flat",
+        "square up"
+      ],
+      "visual_markers": [
+        "order ticket showing close",
+        "position size zero",
+        "P&L realized"
+      ],
+      "parent_concepts": [
+        "Trade_Management"
+      ],
+      "related_concepts": [
+        "Stop_Loss",
+        "Profit_Target",
+        "Stop_Loss_in_Profit",
+        "Liquidation"
+      ],
+      "opposite_concepts": [
+        "Entry"
+      ],
+      "confidence_weight": 0.9
+    },
+    {
+      "concept_id": "abs_026",
+      "name": "Impulse",
+      "category": "Price_Action",
+      "definition": "A strong directional price move with little to no retracement. The 'trend' part of trend + pullback structure.",
+      "keywords": [
+        "impulse",
+        "impulsive move",
+        "trend leg",
+        "drive",
+        "directional leg"
+      ],
+      "visual_markers": [
+        "long body candles",
+        "minimal wicks",
+        "high volume",
+        "delta aligned"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "Displacement",
+        "Trend_Continuation",
+        "Aggression",
+        "Momentum"
+      ],
+      "opposite_concepts": [
+        "Retracement",
+        "Pullback"
+      ],
+      "confidence_weight": 0.85
+    },
+    {
+      "concept_id": "abs_027",
+      "name": "Level",
+      "category": "Level",
+      "definition": "Abstract root concept for any price location that matters in the market structure. Levels are derived from volume profile, market structure, and prior session data.",
+      "keywords": [
+        "level",
+        "price level",
+        "key level",
+        "important level",
+        "support resistance",
+        "zone"
+      ],
+      "visual_markers": [
+        "horizontal line on chart",
+        "volume node",
+        "prior swing high/low",
+        "POC/VAH/VAL"
+      ],
+      "parent_concepts": [],
+      "related_concepts": [
+        "POC",
+        "VAH",
+        "VAL",
+        "HVN",
+        "LVN",
+        "VWAP",
+        "Previous_Session_High_Low"
+      ],
+      "opposite_concepts": [],
+      "confidence_weight": 1.0
+    },
+    {
+      "concept_id": "auto_028",
+      "name": "Shoot",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "shoot",
+        "shoot"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_029",
+      "name": "Trades",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "trades",
+        "trades"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_030",
+      "name": "Today",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "today",
+        "today"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_031",
+      "name": "Blood",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "blood",
+        "blood"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_032",
+      "name": "Sweat",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "sweat",
+        "sweat"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_033",
+      "name": "Sculpt",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "sculpt",
+        "sculpt"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_034",
+      "name": "Community",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "community",
+        "community"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_035",
+      "name": "Content",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "content",
+        "content"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_036",
+      "name": "Guarantee",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "guarantee",
+        "guarantee"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_037",
+      "name": "Short",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "short",
+        "short"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_038",
+      "name": "Market",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "market",
+        "market"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_039",
+      "name": "Expect",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "expect",
+        "expect"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_040",
+      "name": "Close",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "close",
+        "close"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_041",
+      "name": "Let's",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "let's",
+        "let's"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_042",
+      "name": "Start",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "start",
+        "start"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_043",
+      "name": "First",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "first",
+        "first"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_044",
+      "name": "Audio",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "audio",
+        "audio"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_045",
+      "name": "Couldn't",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "couldn't",
+        "couldn't"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_046",
+      "name": "Concentrate",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "concentrate",
+        "concentrate"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_047",
+      "name": "Long-term",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "long-term",
+        "long-term",
+        "long"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_048",
+      "name": "Value",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "value",
+        "value"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_049",
+      "name": "Crazy",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "crazy",
+        "crazy"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_050",
+      "name": "Sellers",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "sellers",
+        "sellers"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_051",
+      "name": "Complete",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "complete",
+        "complete"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_052",
+      "name": "Control",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "control",
+        "control"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_053",
+      "name": "Auction",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "auction",
+        "auction"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_054",
+      "name": "Caught",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "caught",
+        "caught"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_055",
+      "name": "Report",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "report",
+        "report"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_056",
+      "name": "Reconfirm",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "reconfirm",
+        "reconfirm"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_057",
+      "name": "Initial",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "initial",
+        "initial"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_058",
+      "name": "Explain",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "explain",
+        "explain"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_059",
+      "name": "Nasdaq",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "nasdaq",
+        "nasdaq"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_060",
+      "name": "Profile",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "profile",
+        "profile"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_061",
+      "name": "Effort",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "effort",
+        "effort"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_062",
+      "name": "Second",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "second",
+        "second"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_063",
+      "name": "Profit",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "profit",
+        "profit"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_064",
+      "name": "Bottom",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "bottom",
+        "bottom"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_065",
+      "name": "Spark",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "spark",
+        "spark"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_066",
+      "name": "Directional",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "directional",
+        "directional"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_067",
+      "name": "Retrace",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "retrace",
+        "retrace"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_068",
+      "name": "Print",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "print",
+        "print"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_069",
+      "name": "Manage",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "manage",
+        "manage"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_070",
+      "name": "Break",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "break",
+        "break"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_071",
+      "name": "Didn't",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "didn't",
+        "didn't"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_072",
+      "name": "Don't",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "don't",
+        "don't"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_073",
+      "name": "Dollars",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "dollars",
+        "dollars"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_074",
+      "name": "Total",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "total",
+        "total"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_075",
+      "name": "Think",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "think",
+        "think"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_076",
+      "name": "Record",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "record",
+        "record"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_077",
+      "name": "Majority",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "majority",
+        "majority"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_078",
+      "name": "Reason",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "reason",
+        "reason"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_079",
+      "name": "Aggressive",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "aggressive",
+        "aggressive"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_080",
+      "name": "Capitalize",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "capitalize",
+        "capitalize"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_081",
+      "name": "Wrong",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "wrong",
+        "wrong"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_082",
+      "name": "Accelerate",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "accelerate",
+        "accelerate"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_083",
+      "name": "Little",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "little",
+        "little"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_084",
+      "name": "Interactive",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "interactive",
+        "interactive"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_085",
+      "name": "Brokers",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "brokers",
+        "brokers"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_086",
+      "name": "Enjoy",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "enjoy",
+        "enjoy"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_087",
+      "name": "Contracts",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "contracts",
+        "contracts"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_088",
+      "name": "Reload",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "reload",
+        "reload"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_089",
+      "name": "Areas",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "areas",
+        "areas"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_090",
+      "name": "Reward",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "reward",
+        "reward"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_091",
+      "name": "Generous",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "generous",
+        "generous"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_092",
+      "name": "Choppy",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "choppy",
+        "choppy"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_093",
+      "name": "Victory",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "victory",
+        "victory"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_094",
+      "name": "Trade",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "trade",
+        "trade"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_095",
+      "name": "Buyers",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "buyers",
+        "buyers"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_096",
+      "name": "Profits",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "profits",
+        "profits"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_097",
+      "name": "Understand",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "understand",
+        "understand"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_098",
+      "name": "Buyer's",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "buyer's",
+        "buyer's"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_099",
+      "name": "Anticipate",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "anticipate",
+        "anticipate"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_100",
+      "name": "Error",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "error",
+        "error"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_101",
+      "name": "Management",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "keywords": [
+        "management",
+        "management"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_102",
+      "name": "Emoji",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "emoji",
+        "emoji"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_103",
+      "name": "People",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "people",
+        "people"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_104",
+      "name": "Settings",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "settings",
+        "settings"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_105",
+      "name": "Remove",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "remove",
+        "remove",
+        "move"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_106",
+      "name": "Share",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "share",
+        "share"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_107",
+      "name": "Platform",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "platform",
+        "platform"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_108",
+      "name": "Screen",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "screen",
+        "screen"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_109",
+      "name": "Visible",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "visible",
+        "visible"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_110",
+      "name": "Perfect",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "perfect",
+        "perfect"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_111",
+      "name": "Welcome",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "welcome",
+        "welcome"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_112",
+      "name": "Scalps",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "scalps",
+        "scalps"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_113",
+      "name": "Minutes",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "minutes",
+        "minutes"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_114",
+      "name": "Connect",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "connect",
+        "connect"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_115",
+      "name": "Clarify",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "clarify",
+        "clarify"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_116",
+      "name": "Beginners",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "beginners",
+        "beginners"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_117",
+      "name": "Point",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "point",
+        "point"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_118",
+      "name": "Friends",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "friends",
+        "friends"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_119",
+      "name": "Study",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "study",
+        "study"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_120",
+      "name": "Candle",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "candle",
+        "candle"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_121",
+      "name": "Video",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "video",
+        "video"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_122",
+      "name": "Youtube",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "youtube",
+        "youtube"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_123",
+      "name": "Terms",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "terms",
+        "terms"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_124",
+      "name": "Model",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "model",
+        "model"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_125",
+      "name": "Process",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "process",
+        "process"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_126",
+      "name": "Break-even",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "break-even",
+        "break-even"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_127",
+      "name": "Stable",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "stable",
+        "stable"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_128",
+      "name": "Equity",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "equity",
+        "equity"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_129",
+      "name": "Clear",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "clear",
+        "clear"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_130",
+      "name": "Moment",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "moment",
+        "moment"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_131",
+      "name": "Instagram",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "instagram",
+        "instagram"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_132",
+      "name": "Cumulative",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "cumulative",
+        "cumulative"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_133",
+      "name": "Audience",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "audience",
+        "audience"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_134",
+      "name": "Followers",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "followers",
+        "followers"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_135",
+      "name": "Maximum",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "maximum",
+        "maximum"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_136",
+      "name": "Percent",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "percent",
+        "percent"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_137",
+      "name": "Mission",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "mission",
+        "mission"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_138",
+      "name": "Achieve",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "achieve",
+        "achieve"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_139",
+      "name": "Soldiers",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "soldiers",
+        "soldiers"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_140",
+      "name": "Hobby",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "hobby",
+        "hobby"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_141",
+      "name": "Killers",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "killers",
+        "killers"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_142",
+      "name": "Professional",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "professional",
+        "professional"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_143",
+      "name": "Three",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "three",
+        "three"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_144",
+      "name": "General",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "general",
+        "general"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_145",
+      "name": "Treat",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "treat",
+        "treat"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_146",
+      "name": "Equip",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "equip",
+        "equip"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_147",
+      "name": "Mindset",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "mindset",
+        "mindset"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_148",
+      "name": "Models",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "models",
+        "models"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_149",
+      "name": "Internet",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "internet",
+        "internet"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_150",
+      "name": "Build",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "build",
+        "build"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_151",
+      "name": "Structure",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "structure",
+        "structure"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_152",
+      "name": "Battleground",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "battleground",
+        "battleground"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_153",
+      "name": "Announcement",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "announcement",
+        "announcement"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_154",
+      "name": "Receive",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "receive",
+        "receive"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_155",
+      "name": "Topic",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "topic",
+        "topic"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_156",
+      "name": "Volume",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "volume",
+        "volume"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_157",
+      "name": "Single",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "single",
+        "single"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_158",
+      "name": "Session",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "session",
+        "session"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_159",
+      "name": "Update",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "update",
+        "update"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_160",
+      "name": "Asset",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "asset",
+        "asset"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_161",
+      "name": "Managers",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "managers",
+        "managers"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_162",
+      "name": "Breakdown",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "breakdown",
+        "breakdown"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_163",
+      "name": "Indices",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "indices",
+        "indices"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_164",
+      "name": "Commitment",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "commitment",
+        "commitment"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_165",
+      "name": "Traders",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "traders",
+        "traders"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_166",
+      "name": "Non-commercial",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "non-commercial",
+        "non-commercial"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_167",
+      "name": "Speculators",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "speculators",
+        "speculators"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_168",
+      "name": "Narrative",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "narrative",
+        "narrative"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_169",
+      "name": "Surprise",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "surprise",
+        "surprise"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_170",
+      "name": "Promise",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "promise",
+        "promise"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_171",
+      "name": "Front",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "front",
+        "front"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_172",
+      "name": "Service",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "service",
+        "service"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_173",
+      "name": "Change",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "change",
+        "change"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_174",
+      "name": "Input",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "input",
+        "input"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_175",
+      "name": "Hours",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "hours",
+        "hours"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_176",
+      "name": "Capable",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "capable",
+        "capable"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_177",
+      "name": "Assistant",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "assistant",
+        "assistant"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_178",
+      "name": "Times",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "times",
+        "times"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_179",
+      "name": "Artificial",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "artificial",
+        "artificial"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_180",
+      "name": "Intelligence",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "intelligence",
+        "intelligence"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_181",
+      "name": "Opportunity",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "opportunity",
+        "opportunity"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_182",
+      "name": "Charts",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "charts",
+        "charts"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_183",
+      "name": "Implement",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "implement",
+        "implement"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_184",
+      "name": "Fabio",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "fabio",
+        "fabio"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_185",
+      "name": "Improve",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "improve",
+        "improve"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_186",
+      "name": "Difficult",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "keywords": [
+        "difficult",
+        "difficult"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_187",
+      "name": "Hello",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "hello",
+        "hello"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_188",
+      "name": "Warriors",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "warriors",
+        "warriors"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_189",
+      "name": "We're",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "we're",
+        "we're"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_190",
+      "name": "Andrea",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "andrea",
+        "andrea"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_191",
+      "name": "Avengers",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "avengers",
+        "avengers"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_192",
+      "name": "Inside",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "inside",
+        "inside"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_193",
+      "name": "Participate",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "participate",
+        "participate"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_194",
+      "name": "Battlefield",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "battlefield",
+        "battlefield"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_195",
+      "name": "Lives",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "lives",
+        "lives"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_196",
+      "name": "Possibility",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "possibility",
+        "possibility"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_197",
+      "name": "Members",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "members",
+        "members"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_198",
+      "name": "Profitable",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "profitable",
+        "profitable"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_199",
+      "name": "Group",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "group",
+        "group"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_200",
+      "name": "Tomorrow",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "tomorrow",
+        "tomorrow"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_201",
+      "name": "Dashboard",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "dashboard",
+        "dashboard"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_202",
+      "name": "Weekend",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "weekend",
+        "weekend"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_203",
+      "name": "Invite",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "invite",
+        "invite"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_204",
+      "name": "Nutritionist",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "nutritionist",
+        "nutritionist"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_205",
+      "name": "Supplements",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "supplements",
+        "supplements"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_206",
+      "name": "Reduce",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "reduce",
+        "reduce"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_207",
+      "name": "Stress",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "stress",
+        "stress"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_208",
+      "name": "Stressful",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "stressful",
+        "stressful"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_209",
+      "name": "Profession",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "profession",
+        "profession"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_210",
+      "name": "Grande",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "grande",
+        "grande"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_211",
+      "name": "Podcast",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "podcast",
+        "podcast"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_212",
+      "name": "Business",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "business",
+        "business"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_213",
+      "name": "Garbage",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "garbage",
+        "garbage"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_214",
+      "name": "Stuff",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "stuff",
+        "stuff"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_215",
+      "name": "Anyway",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "anyway",
+        "anyway"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_216",
+      "name": "Money",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "money",
+        "money"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_217",
+      "name": "Previous",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "previous",
+        "previous"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_218",
+      "name": "Guess",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "guess",
+        "guess"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_219",
+      "name": "Survive",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "survive",
+        "survive"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_220",
+      "name": "Multiple",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "multiple",
+        "multiple"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_221",
+      "name": "Arzalan",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "arzalan",
+        "arzalan"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_222",
+      "name": "Mental",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "mental",
+        "mental"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_223",
+      "name": "Method",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "method",
+        "method"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_224",
+      "name": "Trick",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "trick",
+        "trick"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_225",
+      "name": "Yesterday",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "yesterday",
+        "yesterday"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_226",
+      "name": "Micro",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "micro",
+        "micro"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_227",
+      "name": "Florin",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "florin",
+        "florin"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_228",
+      "name": "Inefficient",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "inefficient",
+        "inefficient"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_229",
+      "name": "Resilience",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "resilience",
+        "resilience"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_230",
+      "name": "Story",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "story",
+        "story"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_231",
+      "name": "World",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "world",
+        "world"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_232",
+      "name": "Champion",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "champion",
+        "champion"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_233",
+      "name": "Different",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "different",
+        "different"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_234",
+      "name": "Brain",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "brain",
+        "brain"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_235",
+      "name": "Personal",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "personal",
+        "personal"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_236",
+      "name": "Capital",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "capital",
+        "capital"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_237",
+      "name": "Threshold",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "threshold",
+        "threshold"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_238",
+      "name": "Example",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "example",
+        "example"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_239",
+      "name": "Millions",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "millions",
+        "millions"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_240",
+      "name": "Streak",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "streak",
+        "streak"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_241",
+      "name": "Happen",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "happen",
+        "happen"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_242",
+      "name": "Damage",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "damage",
+        "damage"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_243",
+      "name": "Hardship",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "hardship",
+        "hardship"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_244",
+      "name": "Sugar",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "sugar",
+        "sugar"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_245",
+      "name": "Transparent",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "transparent",
+        "transparent"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_246",
+      "name": "Upside",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "upside",
+        "upside"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_247",
+      "name": "Downside",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "downside",
+        "downside"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_248",
+      "name": "Rules",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "rules",
+        "rules"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_249",
+      "name": "Whole",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "whole",
+        "whole"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_250",
+      "name": "Account",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "account",
+        "account"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_251",
+      "name": "Drawdown",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "drawdown",
+        "drawdown"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_252",
+      "name": "Strategy",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "strategy",
+        "strategy"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_253",
+      "name": "Human",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "human",
+        "human"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_254",
+      "name": "Nature",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "nature",
+        "nature"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_255",
+      "name": "Shame",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "shame",
+        "shame"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_256",
+      "name": "Needs",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "needs",
+        "needs",
+        "need"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_257",
+      "name": "Camera",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "camera",
+        "camera"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_258",
+      "name": "Congratulations",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "keywords": [
+        "congratulations",
+        "congratulations"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_259",
+      "name": "Beautiful",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "beautiful",
+        "beautiful"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_260",
+      "name": "Check",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "check",
+        "check"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_261",
+      "name": "Points",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "points",
+        "points"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_262",
+      "name": "What's",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "what's",
+        "what's"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_263",
+      "name": "Small",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "small",
+        "small"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_264",
+      "name": "Contract",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "contract",
+        "contract"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_265",
+      "name": "Scalp",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "scalp",
+        "scalp"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_266",
+      "name": "Phase",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "phase",
+        "phase"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_267",
+      "name": "Strong",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "strong",
+        "strong"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_268",
+      "name": "Uptrend",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "uptrend",
+        "uptrend"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_269",
+      "name": "Gameplay",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "gameplay",
+        "gameplay"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_270",
+      "name": "Accept",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "accept",
+        "accept"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_271",
+      "name": "Theory",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "theory",
+        "theory"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_272",
+      "name": "Quality",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "quality",
+        "quality"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_273",
+      "name": "Extension",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "extension",
+        "extension"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_274",
+      "name": "Wakas",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "wakas",
+        "wakas"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_275",
+      "name": "Thousand",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "thousand",
+        "thousand"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_276",
+      "name": "Thank",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "thank",
+        "thank"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_277",
+      "name": "Chart",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "chart",
+        "chart"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_278",
+      "name": "Arslan",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "arslan",
+        "arslan"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_279",
+      "name": "Ready",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "ready",
+        "ready"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_280",
+      "name": "Follow",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "follow",
+        "follow"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_281",
+      "name": "Eight",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "eight",
+        "eight"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_282",
+      "name": "Incredible",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "incredible",
+        "incredible"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_283",
+      "name": "Broke",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "broke",
+        "broke"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_284",
+      "name": "Sense",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "sense",
+        "sense"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_285",
+      "name": "Stack",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "stack",
+        "stack"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_286",
+      "name": "That's",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "that's",
+        "that's"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_287",
+      "name": "Stupid",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "stupid",
+        "stupid"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_288",
+      "name": "Potential",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "potential",
+        "potential"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_289",
+      "name": "Purpose",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "purpose",
+        "purpose"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_290",
+      "name": "Financial",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "financial",
+        "financial"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_291",
+      "name": "Consultants",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "consultants",
+        "consultants"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_292",
+      "name": "Educational",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "educational",
+        "educational"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_293",
+      "name": "Doesn't",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "doesn't",
+        "doesn't"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_294",
+      "name": "Important",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "important",
+        "important"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_295",
+      "name": "Draft",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "draft",
+        "draft"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    },
+    {
+      "concept_id": "auto_296",
+      "name": "Continue",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson04",
+      "keywords": [
+        "continue",
+        "continue"
+      ],
+      "visual_markers": [],
+      "parent_concepts": [],
+      "related_concepts": [],
+      "opposite_concepts": [],
+      "confidence_weight": 0.0
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Absorption",
+      "relation": "requires",
+      "target": "Aggression",
+      "strength": 1.0,
+      "description": "Absorption is visible when aggression meets a level and gets absorbed."
+    },
+    {
+      "source": "Absorption",
+      "relation": "often_precedes",
+      "target": "Failed_Auction",
+      "strength": 0.9,
+      "description": "Absorption at a level often leads to a failed auction."
+    },
+    {
+      "source": "Absorption",
+      "relation": "seen_at",
+      "target": "VAH",
+      "strength": 0.85,
+      "description": "Absorption commonly occurs at Value Area High."
+    },
+    {
+      "source": "Absorption",
+      "relation": "seen_at",
+      "target": "VAL",
+      "strength": 0.85,
+      "description": "Absorption commonly occurs at Value Area Low."
+    },
+    {
+      "source": "Absorption",
+      "relation": "seen_at",
+      "target": "POC",
+      "strength": 0.7,
+      "description": "Absorption can occur at POC during balance."
+    },
+    {
+      "source": "Aggression",
+      "relation": "requires",
+      "target": "Imbalance",
+      "strength": 0.9,
+      "description": "Aggression is most meaningful when the market is imbalanced."
+    },
+    {
+      "source": "Aggression",
+      "relation": "confirms",
+      "target": "Breakout",
+      "strength": 0.95,
+      "description": "A breakout without aggression is suspect."
+    },
+    {
+      "source": "Aggression",
+      "relation": "measured_by",
+      "target": "Delta",
+      "strength": 0.9,
+      "description": "Delta quantifies aggression at the micro level."
+    },
+    {
+      "source": "Aggression",
+      "relation": "measured_by",
+      "target": "CVD",
+      "strength": 0.85,
+      "description": "CVD shows sustained aggression over time."
+    },
+    {
+      "source": "Balance",
+      "relation": "contains",
+      "target": "POC",
+      "strength": 1.0,
+      "description": "Balance is defined around the POC."
+    },
+    {
+      "source": "Balance",
+      "relation": "bounded_by",
+      "target": "VAH",
+      "strength": 1.0,
+      "description": "VAH is the upper boundary of balance."
+    },
+    {
+      "source": "Balance",
+      "relation": "bounded_by",
+      "target": "VAL",
+      "strength": 1.0,
+      "description": "VAL is the lower boundary of balance."
+    },
+    {
+      "source": "Balance",
+      "relation": "favors",
+      "target": "Mean_Reversion",
+      "strength": 0.9,
+      "description": "In balance, mean reversion is the higher-probability play."
+    },
+    {
+      "source": "Compression",
+      "relation": "precedes",
+      "target": "Squeeze",
+      "strength": 0.85,
+      "description": "Compression often resolves with a squeeze/breakout."
+    },
+    {
+      "source": "Delta",
+      "relation": "aggregated_into",
+      "target": "CVD",
+      "strength": 1.0,
+      "description": "CVD is the cumulative sum of delta."
+    },
+    {
+      "source": "Displacement",
+      "relation": "requires",
+      "target": "Aggression",
+      "strength": 0.95,
+      "description": "Displacement is driven by aggression."
+    },
+    {
+      "source": "Displacement",
+      "relation": "creates",
+      "target": "LVN",
+      "strength": 0.9,
+      "description": "A displacement move leaves LVNs in its wake."
+    },
+    {
+      "source": "Exhaustion",
+      "relation": "follows",
+      "target": "Aggression",
+      "strength": 0.85,
+      "description": "After sustained aggression, exhaustion sets in."
+    },
+    {
+      "source": "Exhaustion",
+      "relation": "signals",
+      "target": "Reversal",
+      "strength": 0.8,
+      "description": "Exhaustion often signals an impending reversal."
+    },
+    {
+      "source": "Failed_Auction",
+      "relation": "requires",
+      "target": "Absorption",
+      "strength": 0.9,
+      "description": "A failed auction is confirmed by absorption at the level."
+    },
+    {
+      "source": "Failed_Auction",
+      "relation": "triggers",
+      "target": "Mean_Reversion",
+      "strength": 0.85,
+      "description": "Failed auction is a primary mean reversion signal."
+    },
+    {
+      "source": "Imbalance",
+      "relation": "favors",
+      "target": "Trend_Continuation",
+      "strength": 0.9,
+      "description": "In imbalance, trend continuation is the higher-probability play."
+    },
+    {
+      "source": "Imbalance",
+      "relation": "driven_by",
+      "target": "Aggression",
+      "strength": 0.95,
+      "description": "Imbalance is sustained by aggression."
+    },
+    {
+      "source": "LVN",
+      "relation": "used_for",
+      "target": "Trend_Continuation",
+      "strength": 0.9,
+      "description": "LVNs are ideal entry zones for trend continuation."
+    },
+    {
+      "source": "LVN",
+      "relation": "opposite_of",
+      "target": "HVN",
+      "strength": 1.0,
+      "description": "LVN and HVN are opposites in volume profile."
+    },
+    {
+      "source": "Mean_Reversion",
+      "relation": "targets",
+      "target": "POC",
+      "strength": 0.95,
+      "description": "Mean reversion typically targets the POC."
+    },
+    {
+      "source": "NASDAQ_Effort",
+      "relation": "is_a",
+      "target": "Aggression",
+      "strength": 1.0,
+      "description": "NASDAQ Effort is a specific form of aggression."
+    },
+    {
+      "source": "NASDAQ_Effort",
+      "relation": "confirms",
+      "target": "Stop_Loss_in_Profit",
+      "strength": 0.85,
+      "description": "NASDAQ Effort areas are used to move stops to profit."
+    },
+    {
+      "source": "Opening_Drive",
+      "relation": "sets",
+      "target": "Bias",
+      "strength": 0.85,
+      "description": "The opening drive often establishes the session bias."
+    },
+    {
+      "source": "POC",
+      "relation": "attracts",
+      "target": "Price",
+      "strength": 0.95,
+      "description": "POC acts as a magnet for price in balance."
+    },
+    {
+      "source": "Pullback",
+      "relation": "to",
+      "target": "LVN",
+      "strength": 0.85,
+      "description": "Pullbacks in trend often find support at LVNs."
+    },
+    {
+      "source": "Risk_to_Reward",
+      "relation": "requires",
+      "target": "Stop_Loss",
+      "strength": 1.0,
+      "description": "R:R is calculated from stop distance."
+    },
+    {
+      "source": "Risk_to_Reward",
+      "relation": "requires",
+      "target": "Target",
+      "strength": 1.0,
+      "description": "R:R is calculated from target distance."
+    },
+    {
+      "source": "Squeeze",
+      "relation": "follows",
+      "target": "Compression",
+      "strength": 0.85,
+      "description": "Squeezes follow periods of compression."
+    },
+    {
+      "source": "Stop_Loss_in_Profit",
+      "relation": "protects",
+      "target": "Risk_to_Reward",
+      "strength": 0.9,
+      "description": "Moving stop to profit secures favorable R:R."
+    },
+    {
+      "source": "Triple_A_Setup",
+      "relation": "requires",
+      "target": "Absorption",
+      "strength": 1.0,
+      "description": "Triple-A requires absorption."
+    },
+    {
+      "source": "Triple_A_Setup",
+      "relation": "requires",
+      "target": "Aggression",
+      "strength": 1.0,
+      "description": "Triple-A requires aggression."
+    },
+    {
+      "source": "Triple_A_Setup",
+      "relation": "occurs_at",
+      "target": "VAH",
+      "strength": 0.8,
+      "description": "Triple-A often forms at VAH or VAL."
+    },
+    {
+      "source": "Triple_A_Setup",
+      "relation": "occurs_at",
+      "target": "VAL",
+      "strength": 0.8,
+      "description": "Triple-A often forms at VAH or VAL."
+    },
+    {
+      "source": "Value_Area",
+      "relation": "contains",
+      "target": "POC",
+      "strength": 1.0,
+      "description": "POC is inside the value area."
+    },
+    {
+      "source": "Value_Area",
+      "relation": "bounded_by",
+      "target": "VAH",
+      "strength": 1.0,
+      "description": "VAH is the upper boundary."
+    },
+    {
+      "source": "Value_Area",
+      "relation": "bounded_by",
+      "target": "VAL",
+      "strength": 1.0,
+      "description": "VAL is the lower boundary."
+    },
+    {
+      "source": "VAH",
+      "relation": "resistance_in",
+      "target": "Balance",
+      "strength": 0.9,
+      "description": "VAH acts as resistance when market is balanced."
+    },
+    {
+      "source": "VAL",
+      "relation": "support_in",
+      "target": "Balance",
+      "strength": 0.9,
+      "description": "VAL acts as support when market is balanced."
+    }
+  ],
+  "decision_hierarchy": {
+    "description": "Fabio's reasoning hierarchy. Genesis must answer these in order before any trade consideration.",
+    "steps": [
+      {
+        "order": 1,
+        "question": "What is the Market State?",
+        "concepts": [
+          "Balance",
+          "Imbalance",
+          "Compression"
+        ],
+        "output": "bias_direction"
+      },
+      {
+        "order": 2,
+        "question": "What is the Location?",
+        "concepts": [
+          "POC",
+          "VAH",
+          "VAL",
+          "LVN",
+          "VWAP",
+          "Previous_Session_High_Low"
+        ],
+        "output": "key_level"
+      },
+      {
+        "order": 3,
+        "question": "What is the Aggression?",
+        "concepts": [
+          "Absorption",
+          "Aggression",
+          "Delta",
+          "CVD",
+          "Footprint",
+          "Stacked_Imbalance",
+          "NASDAQ_Effort"
+        ],
+        "output": "confirmation"
+      },
+      {
+        "order": 4,
+        "question": "What is the Risk?",
+        "concepts": [
+          "Risk_to_Reward",
+          "Stop_Loss",
+          "Position_Size"
+        ],
+        "output": "risk_parameters"
+      },
+      {
+        "order": 5,
+        "question": "How do we Manage?",
+        "concepts": [
+          "Stop_Loss_in_Profit",
+          "Trailing_Stop",
+          "Target"
+        ],
+        "output": "management_plan"
+      },
+      {
+        "order": 6,
+        "question": "What is the Reflection?",
+        "concepts": [
+          "Mismanagement",
+          "Liquidation",
+          "Discipline"
+        ],
+        "output": "lesson_learned"
+      }
+    ]
+  },
+  "extraction_rules": {
+    "ngram_sizes": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "case_sensitive": false,
+    "match_whole_word": false,
+    "minimum_confidence": 0.5,
+    "stopwords": [
+      "the",
+      "and",
+      "for",
+      "are",
+      "but",
+      "not",
+      "you",
+      "all",
+      "can",
+      "had",
+      "her",
+      "was",
+      "one",
+      "our",
+      "out",
+      "day",
+      "get",
+      "has",
+      "him",
+      "his",
+      "how",
+      "its",
+      "may",
+      "new",
+      "now",
+      "old",
+      "see",
+      "two",
+      "who",
+      "boy",
+      "did",
+      "she",
+      "use",
+      "her",
+      "way",
+      "many",
+      "oil",
+      "sit",
+      "set",
+      "run",
+      "eat",
+      "far",
+      "sea",
+      "eye",
+      "ago",
+      "off",
+      "too",
+      "any",
+      "say",
+      "man",
+      "try",
+      "ask",
+      "end",
+      "why",
+      "let",
+      "put",
+      "say",
+      "she",
+      "try",
+      "way",
+      "own",
+      "say",
+      "too",
+      "old",
+      "tell",
+      "very",
+      "when",
+      "much",
+      "would",
+      "there",
+      "their",
+      "what",
+      "said",
+      "each",
+      "which",
+      "will",
+      "about",
+      "could",
+      "other",
+      "after",
+      "first",
+      "never",
+      "these",
+      "think",
+      "where",
+      "being",
+      "every",
+      "great",
+      "might",
+      "shall",
+      "still",
+      "those",
+      "while",
+      "this",
+      "that",
+      "with",
+      "have",
+      "from",
+      "they",
+      "know",
+      "want",
+      "been",
+      "good",
+      "much",
+      "some",
+      "time",
+      "than",
+      "them",
+      "well",
+      "were"
+    ],
+    "context_window_chars": 300,
+    "max_concepts_per_lesson": 25,
+    "deduplicate_by_name": true
+  },
+  "evolution_log": [
+    "ADDED 'Shoot' (auto_028)",
+    "ADDED 'Trades' (auto_029)",
+    "ADDED 'Today' (auto_030)",
+    "ADDED 'Blood' (auto_031)",
+    "ADDED 'Sweat' (auto_032)",
+    "ADDED 'Sculpt' (auto_033)",
+    "ADDED 'Community' (auto_034)",
+    "ADDED 'Content' (auto_035)",
+    "ADDED 'Guarantee' (auto_036)",
+    "ADDED 'Short' (auto_037)",
+    "ADDED 'Market' (auto_038)",
+    "ADDED 'Expect' (auto_039)",
+    "ADDED 'Close' (auto_040)",
+    "ADDED 'Let's' (auto_041)",
+    "ADDED 'Start' (auto_042)",
+    "ADDED 'First' (auto_043)",
+    "ADDED 'Audio' (auto_044)",
+    "ADDED 'Couldn't' (auto_045)",
+    "ADDED 'Concentrate' (auto_046)",
+    "ADDED 'Long-term' (auto_047)",
+    "ADDED 'Value' (auto_048)",
+    "ADDED 'Crazy' (auto_049)",
+    "ADDED 'Sellers' (auto_050)",
+    "ADDED 'Complete' (auto_051)",
+    "ADDED 'Control' (auto_052)",
+    "ADDED 'Auction' (auto_053)",
+    "ADDED 'Caught' (auto_054)",
+    "ADDED 'Report' (auto_055)",
+    "ADDED 'Reconfirm' (auto_056)",
+    "ADDED 'Initial' (auto_057)",
+    "ADDED 'Explain' (auto_058)",
+    "ADDED 'Nasdaq' (auto_059)",
+    "ADDED 'Profile' (auto_060)",
+    "ADDED 'Effort' (auto_061)",
+    "ADDED 'Second' (auto_062)",
+    "ADDED 'Profit' (auto_063)",
+    "ADDED 'Bottom' (auto_064)",
+    "ADDED 'Spark' (auto_065)",
+    "ADDED 'Directional' (auto_066)",
+    "ADDED 'Retrace' (auto_067)",
+    "ADDED 'Print' (auto_068)",
+    "ADDED 'Manage' (auto_069)",
+    "ADDED 'Break' (auto_070)",
+    "ADDED 'Didn't' (auto_071)",
+    "ADDED 'Don't' (auto_072)",
+    "ADDED 'Dollars' (auto_073)",
+    "ADDED 'Total' (auto_074)",
+    "ADDED 'Think' (auto_075)",
+    "ADDED 'Record' (auto_076)",
+    "ADDED 'Majority' (auto_077)",
+    "ADDED 'Reason' (auto_078)",
+    "ADDED 'Aggressive' (auto_079)",
+    "ADDED 'Capitalize' (auto_080)",
+    "ADDED 'Wrong' (auto_081)",
+    "ADDED 'Accelerate' (auto_082)",
+    "ADDED 'Little' (auto_083)",
+    "ADDED 'Interactive' (auto_084)",
+    "ADDED 'Brokers' (auto_085)",
+    "ADDED 'Enjoy' (auto_086)",
+    "ADDED 'Contracts' (auto_087)",
+    "ADDED 'Reload' (auto_088)",
+    "ADDED 'Areas' (auto_089)",
+    "ADDED 'Reward' (auto_090)",
+    "ADDED 'Generous' (auto_091)",
+    "ADDED 'Choppy' (auto_092)",
+    "ADDED 'Victory' (auto_093)",
+    "ADDED 'Trade' (auto_094)",
+    "ADDED 'Buyers' (auto_095)",
+    "ADDED 'Profits' (auto_096)",
+    "ADDED 'Understand' (auto_097)",
+    "ADDED 'Buyer's' (auto_098)",
+    "ADDED 'Anticipate' (auto_099)",
+    "ADDED 'Error' (auto_100)",
+    "ADDED 'Management' (auto_101)",
+    "KEYWORD 'area' -> 'Value_Area' (freq=21)",
+    "KEYWORD 'risk' -> 'Risk_to_Reward' (freq=13)",
+    "KEYWORD 'have' -> 'Mismanagement' (freq=12)",
+    "KEYWORD 'loss' -> 'Stop_Loss_in_Profit' (freq=11)",
+    "KEYWORD 'that' -> 'Fundamentals' (freq=8)",
+    "KEYWORD 'high' -> 'Previous_Session_High_Low' (freq=7)",
+    "KEYWORD 'failed' -> 'Failed_Auction' (freq=7)",
+    "KEYWORD 'take' -> 'Mismanagement' (freq=7)",
+    "KEYWORD 'position' -> 'Position_Size' (freq=7)",
+    "KEYWORD 'even' -> 'Revenge_Trading' (freq=6)",
+    "KEYWORD 'more' -> 'Daily_Loss_Limit' (freq=5)",
+    "ADDED 'Emoji' (auto_102)",
+    "ADDED 'People' (auto_103)",
+    "ADDED 'Settings' (auto_104)",
+    "ADDED 'Remove' (auto_105)",
+    "ADDED 'Share' (auto_106)",
+    "ADDED 'Platform' (auto_107)",
+    "ADDED 'Screen' (auto_108)",
+    "ADDED 'Visible' (auto_109)",
+    "ADDED 'Perfect' (auto_110)",
+    "ADDED 'Welcome' (auto_111)",
+    "ADDED 'Scalps' (auto_112)",
+    "ADDED 'Minutes' (auto_113)",
+    "ADDED 'Connect' (auto_114)",
+    "ADDED 'Clarify' (auto_115)",
+    "ADDED 'Beginners' (auto_116)",
+    "ADDED 'Point' (auto_117)",
+    "ADDED 'Friends' (auto_118)",
+    "ADDED 'Study' (auto_119)",
+    "ADDED 'Candle' (auto_120)",
+    "ADDED 'Video' (auto_121)",
+    "ADDED 'Youtube' (auto_122)",
+    "ADDED 'Terms' (auto_123)",
+    "ADDED 'Model' (auto_124)",
+    "ADDED 'Process' (auto_125)",
+    "ADDED 'Break-even' (auto_126)",
+    "ADDED 'Stable' (auto_127)",
+    "ADDED 'Equity' (auto_128)",
+    "ADDED 'Clear' (auto_129)",
+    "ADDED 'Moment' (auto_130)",
+    "ADDED 'Instagram' (auto_131)",
+    "ADDED 'Cumulative' (auto_132)",
+    "ADDED 'Audience' (auto_133)",
+    "ADDED 'Followers' (auto_134)",
+    "ADDED 'Maximum' (auto_135)",
+    "ADDED 'Percent' (auto_136)",
+    "ADDED 'Mission' (auto_137)",
+    "ADDED 'Achieve' (auto_138)",
+    "ADDED 'Soldiers' (auto_139)",
+    "ADDED 'Hobby' (auto_140)",
+    "ADDED 'Killers' (auto_141)",
+    "ADDED 'Professional' (auto_142)",
+    "ADDED 'Three' (auto_143)",
+    "ADDED 'General' (auto_144)",
+    "ADDED 'Treat' (auto_145)",
+    "ADDED 'Equip' (auto_146)",
+    "ADDED 'Mindset' (auto_147)",
+    "ADDED 'Models' (auto_148)",
+    "ADDED 'Internet' (auto_149)",
+    "ADDED 'Build' (auto_150)",
+    "ADDED 'Structure' (auto_151)",
+    "ADDED 'Battleground' (auto_152)",
+    "ADDED 'Announcement' (auto_153)",
+    "ADDED 'Receive' (auto_154)",
+    "ADDED 'Topic' (auto_155)",
+    "ADDED 'Volume' (auto_156)",
+    "ADDED 'Single' (auto_157)",
+    "ADDED 'Session' (auto_158)",
+    "ADDED 'Update' (auto_159)",
+    "ADDED 'Asset' (auto_160)",
+    "ADDED 'Managers' (auto_161)",
+    "ADDED 'Breakdown' (auto_162)",
+    "ADDED 'Indices' (auto_163)",
+    "ADDED 'Commitment' (auto_164)",
+    "ADDED 'Traders' (auto_165)",
+    "ADDED 'Non-commercial' (auto_166)",
+    "ADDED 'Speculators' (auto_167)",
+    "ADDED 'Narrative' (auto_168)",
+    "ADDED 'Surprise' (auto_169)",
+    "ADDED 'Promise' (auto_170)",
+    "ADDED 'Front' (auto_171)",
+    "ADDED 'Service' (auto_172)",
+    "ADDED 'Change' (auto_173)",
+    "ADDED 'Input' (auto_174)",
+    "ADDED 'Hours' (auto_175)",
+    "ADDED 'Capable' (auto_176)",
+    "ADDED 'Assistant' (auto_177)",
+    "ADDED 'Times' (auto_178)",
+    "ADDED 'Artificial' (auto_179)",
+    "ADDED 'Intelligence' (auto_180)",
+    "ADDED 'Opportunity' (auto_181)",
+    "ADDED 'Charts' (auto_182)",
+    "ADDED 'Implement' (auto_183)",
+    "ADDED 'Fabio' (auto_184)",
+    "ADDED 'Improve' (auto_185)",
+    "ADDED 'Difficult' (auto_186)",
+    "KEYWORD 'what' -> 'Market_State' (freq=167)",
+    "KEYWORD 'with' -> 'Trend_Continuation' (freq=82)",
+    "KEYWORD 'back' -> 'Pullback' (freq=60)",
+    "KEYWORD 'only' -> 'Technical_Only' (freq=46)",
+    "KEYWORD 'move' -> 'Remove' (freq=46)",
+    "ADDED 'Hello' (auto_187)",
+    "ADDED 'Warriors' (auto_188)",
+    "ADDED 'We're' (auto_189)",
+    "ADDED 'Andrea' (auto_190)",
+    "ADDED 'Avengers' (auto_191)",
+    "ADDED 'Inside' (auto_192)",
+    "ADDED 'Participate' (auto_193)",
+    "ADDED 'Battlefield' (auto_194)",
+    "ADDED 'Lives' (auto_195)",
+    "ADDED 'Possibility' (auto_196)",
+    "ADDED 'Members' (auto_197)",
+    "ADDED 'Profitable' (auto_198)",
+    "ADDED 'Group' (auto_199)",
+    "ADDED 'Tomorrow' (auto_200)",
+    "ADDED 'Dashboard' (auto_201)",
+    "ADDED 'Weekend' (auto_202)",
+    "ADDED 'Invite' (auto_203)",
+    "ADDED 'Nutritionist' (auto_204)",
+    "ADDED 'Supplements' (auto_205)",
+    "ADDED 'Reduce' (auto_206)",
+    "ADDED 'Stress' (auto_207)",
+    "ADDED 'Stressful' (auto_208)",
+    "ADDED 'Profession' (auto_209)",
+    "ADDED 'Grande' (auto_210)",
+    "ADDED 'Podcast' (auto_211)",
+    "ADDED 'Business' (auto_212)",
+    "ADDED 'Garbage' (auto_213)",
+    "ADDED 'Stuff' (auto_214)",
+    "ADDED 'Anyway' (auto_215)",
+    "ADDED 'Money' (auto_216)",
+    "ADDED 'Previous' (auto_217)",
+    "ADDED 'Guess' (auto_218)",
+    "ADDED 'Survive' (auto_219)",
+    "ADDED 'Multiple' (auto_220)",
+    "ADDED 'Arzalan' (auto_221)",
+    "ADDED 'Mental' (auto_222)",
+    "ADDED 'Method' (auto_223)",
+    "ADDED 'Trick' (auto_224)",
+    "ADDED 'Yesterday' (auto_225)",
+    "ADDED 'Micro' (auto_226)",
+    "ADDED 'Florin' (auto_227)",
+    "ADDED 'Inefficient' (auto_228)",
+    "ADDED 'Resilience' (auto_229)",
+    "ADDED 'Story' (auto_230)",
+    "ADDED 'World' (auto_231)",
+    "ADDED 'Champion' (auto_232)",
+    "ADDED 'Different' (auto_233)",
+    "ADDED 'Brain' (auto_234)",
+    "ADDED 'Personal' (auto_235)",
+    "ADDED 'Capital' (auto_236)",
+    "ADDED 'Threshold' (auto_237)",
+    "ADDED 'Example' (auto_238)",
+    "ADDED 'Millions' (auto_239)",
+    "ADDED 'Streak' (auto_240)",
+    "ADDED 'Happen' (auto_241)",
+    "ADDED 'Damage' (auto_242)",
+    "ADDED 'Hardship' (auto_243)",
+    "ADDED 'Sugar' (auto_244)",
+    "ADDED 'Transparent' (auto_245)",
+    "ADDED 'Upside' (auto_246)",
+    "ADDED 'Downside' (auto_247)",
+    "ADDED 'Rules' (auto_248)",
+    "ADDED 'Whole' (auto_249)",
+    "ADDED 'Account' (auto_250)",
+    "ADDED 'Drawdown' (auto_251)",
+    "ADDED 'Strategy' (auto_252)",
+    "ADDED 'Human' (auto_253)",
+    "ADDED 'Nature' (auto_254)",
+    "ADDED 'Shame' (auto_255)",
+    "ADDED 'Needs' (auto_256)",
+    "ADDED 'Camera' (auto_257)",
+    "ADDED 'Congratulations' (auto_258)",
+    "KEYWORD 'need' -> 'Needs' (freq=102)",
+    "KEYWORD 'long' -> 'Long-term' (freq=81)",
+    "ADDED 'Beautiful' (auto_259)",
+    "ADDED 'Check' (auto_260)",
+    "ADDED 'Points' (auto_261)",
+    "ADDED 'What's' (auto_262)",
+    "ADDED 'Small' (auto_263)",
+    "ADDED 'Contract' (auto_264)",
+    "ADDED 'Scalp' (auto_265)",
+    "ADDED 'Phase' (auto_266)",
+    "ADDED 'Strong' (auto_267)",
+    "ADDED 'Uptrend' (auto_268)",
+    "ADDED 'Gameplay' (auto_269)",
+    "ADDED 'Accept' (auto_270)",
+    "ADDED 'Theory' (auto_271)",
+    "ADDED 'Quality' (auto_272)",
+    "ADDED 'Extension' (auto_273)",
+    "ADDED 'Wakas' (auto_274)",
+    "ADDED 'Thousand' (auto_275)",
+    "ADDED 'Thank' (auto_276)",
+    "ADDED 'Chart' (auto_277)",
+    "ADDED 'Arslan' (auto_278)",
+    "ADDED 'Ready' (auto_279)",
+    "ADDED 'Follow' (auto_280)",
+    "ADDED 'Eight' (auto_281)",
+    "ADDED 'Incredible' (auto_282)",
+    "ADDED 'Broke' (auto_283)",
+    "ADDED 'Sense' (auto_284)",
+    "ADDED 'Stack' (auto_285)",
+    "ADDED 'That's' (auto_286)",
+    "ADDED 'Stupid' (auto_287)",
+    "ADDED 'Potential' (auto_288)",
+    "ADDED 'Purpose' (auto_289)",
+    "ADDED 'Financial' (auto_290)",
+    "ADDED 'Consultants' (auto_291)",
+    "ADDED 'Educational' (auto_292)",
+    "ADDED 'Doesn't' (auto_293)",
+    "ADDED 'Important' (auto_294)",
+    "ADDED 'Draft' (auto_295)",
+    "ADDED 'Continue' (auto_296)",
+    "KEYWORD 'make' -> 'Risk_to_Reward' (freq=94)"
+  ],
+  "evolution_version": "1.0.4"
+}
