@@ -1,0 +1,163 @@
+{
+  "total_segments": 1196,
+  "covered_segments": 1011,
+  "uncovered_segments": 185,
+  "coverage_percent": 84.5,
+  "concept_frequency": {
+    "Lower_Low": 388,
+    "Stop_Loss_in_Profit": 340,
+    "Fundamentals": 282,
+    "Mismanagement": 163,
+    "Direction": 136,
+    "Absorption": 130,
+    "Level": 115,
+    "Breakout": 104,
+    "Market": 97,
+    "Break": 93,
+    "Session": 80,
+    "Trend_Continuation": 79,
+    "Aggression": 72,
+    "Pullback": 55,
+    "Balance": 54,
+    "VAL": 53,
+    "Close": 47,
+    "Revenge_Trading": 46,
+    "Risk_to_Reward": 42,
+    "Trade": 40,
+    "Aggressive": 38,
+    "Setup": 37,
+    "Failed_Auction": 37,
+    "Imbalance": 36,
+    "Value_Area": 34,
+    "Short": 29,
+    "Price": 27,
+    "Stop_Loss": 25,
+    "Volume_Profile": 24,
+    "Profile": 24,
+    "Position_Size": 23,
+    "Neutral": 21,
+    "Opening_Range_Breakout": 19,
+    "Squeeze": 19,
+    "Momentum": 18,
+    "Profit_Target": 17,
+    "Target": 16,
+    "Opening_Drive": 15,
+    "Volatility": 15,
+    "Trade_Management": 14,
+    "Displacement": 14,
+    "NASDAQ_Effort": 14,
+    "Entry": 14,
+    "Expansion": 13,
+    "Reward": 13,
+    "POC": 12,
+    "Compression": 11,
+    "Gap": 10,
+    "Footprint": 9,
+    "Order_Flow": 9,
+    "Print": 9,
+    "Explosion": 9,
+    "Market_State": 9,
+    "Reflection": 7,
+    "Market_Close": 7,
+    "Auction": 6,
+    "Mean_Reversion": 5,
+    "Delta": 5,
+    "Triple_A_Setup": 5,
+    "Reversal": 4,
+    "Pre_Market": 4,
+    "NY_Session": 4,
+    "Psychology": 3,
+    "Bias": 3,
+    "Impulse": 3,
+    "Reclaim": 3,
+    "Market_Structure": 2,
+    "VAH": 2,
+    "Retracement": 2,
+    "Initial": 2,
+    "Long-term": 1,
+    "LVN": 1,
+    "CVD": 1
+  },
+  "uncovered_examples": [
+    {
+      "index": 0,
+      "text_preview": "too many emoji guys you are blocking everything how many people connected crazy"
+    },
+    {
+      "index": 1,
+      "text_preview": "let me see from settings can you hear me let me remove this oh oh"
+    },
+    {
+      "index": 2,
+      "text_preview": "now it's amazing"
+    },
+    {
+      "index": 3,
+      "text_preview": "okay let me see the chat how are you guys how are you how many of you saw my content"
+    },
+    {
+      "index": 4,
+      "text_preview": "live trading live charting somewhere while you are here"
+    },
+    {
+      "index": 5,
+      "text_preview": "let me see if i can directly share it seems to work fine seems to work fine it's the first"
+    },
+    {
+      "index": 6,
+      "text_preview": "time for me using this platform but seems to work fine let me see can you see my screen"
+    },
+    {
+      "index": 16,
+      "text_preview": "this is for you is it clear guys one in chat"
+    },
+    {
+      "index": 29,
+      "text_preview": "internet is it clear guys perfect"
+    },
+    {
+      "index": 45,
+      "text_preview": "two times per week but what i can do is transfer my mindset model in the chat bot okay in the artificial"
+    },
+    {
+      "index": 66,
+      "text_preview": "or two hours researching the most important view of the biggest bank in the world so goldman sachs morgan"
+    },
+    {
+      "index": 81,
+      "text_preview": "happening next this is an edge this is an informational edge clear for everyone guys three in chat"
+    },
+    {
+      "index": 92,
+      "text_preview": "are talking and this is giving me a lot of ah but i think you cannot hear can you hear notification"
+    },
+    {
+      "index": 93,
+      "text_preview": "i don't think so let me check"
+    },
+    {
+      "index": 94,
+      "text_preview": "no i don't think you can hear is it bothering you okay no notification so it's perfect"
+    },
+    {
+      "index": 111,
+      "text_preview": "okay okay this one is here"
+    },
+    {
+      "index": 113,
+      "text_preview": "just one second"
+    },
+    {
+      "index": 114,
+      "text_preview": "just one second"
+    },
+    {
+      "index": 115,
+      "text_preview": "amazing okay now i go on share screen again"
+    },
+    {
+      "index": 116,
+      "text_preview": "and we can start"
+    }
+  ]
+}

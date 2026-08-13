@@ -1,0 +1,926 @@
+[
+  {
+    "experience_id": "078b954f99636b8c",
+    "session_reference": "Lesson06_frame0000",
+    "what_was_seen": "market_state=TRENDING_UP; aggression=ABSORPTION_BUY; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "hello beautiful people how is it going welcome to all the new students\none in chat i know that some of you are already printing\nguys to the new one okay to the new user we have um we have a bunch of p...",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": []
+  },
+  {
+    "experience_id": "f3e13d9d3ad8314f",
+    "session_reference": "Lesson06_frame0001",
+    "what_was_seen": "market_state=BALANCED; aggression=SELLER_AGGRESSIVE; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Getting to the hard point for the sellers to take control.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "ce3224411f59a004",
+      "a7a64797c3861472",
+      "1dbd40ec260a3423",
+      "c3005539b34424c7",
+      "c9e423a7175929c1",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "c8ea9b12392871fb",
+    "session_reference": "Lesson06_frame0002",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Take more profit out, 5000.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "31b5e5c2b60cf07b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "90a239e63943a9aa",
+    "session_reference": "Lesson06_frame0003",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "If it breaks, they explode.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "6de9c71bef211b1a",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "2afcef4a450da3d8",
+    "session_reference": "Lesson06_frame0004",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Look how much absorption there is here, guys.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "35c73102482e9b30",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "89d3d038519bb919",
+    "session_reference": "Lesson06_frame0005",
+    "what_was_seen": "market_state=BALANCED; aggression=BUYER_AGGRESSIVE; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "It's really difficult for buyers.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "c6995f405e1e7438",
+      "1dbd40ec260a3423",
+      "c3005539b34424c7",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "3813d9ad6aba996e"
+    ]
+  },
+  {
+    "experience_id": "9f09c52d5d503c81",
+    "session_reference": "Lesson06_frame0006",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Isn't this amazing or no?",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "cea365463eba5e36"
+    ]
+  },
+  {
+    "experience_id": "056a4a899095e7ae",
+    "session_reference": "Lesson06_frame0007",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "We close at 10,000 today.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "2d756b244e492cbc",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "9e039b60ff32f234"
+    ]
+  },
+  {
+    "experience_id": "6a735c6c101a26f0",
+    "session_reference": "Lesson06_frame0008",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Guys, I've never tried to manage and watch the chart and explain what I'm doing.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "263d70c530f5aacf",
+      "723cc535748137f7",
+      "815080b7e3749849"
+    ]
+  },
+  {
+    "experience_id": "d385e1bfd5976060",
+    "session_reference": "Lesson06_frame0009",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "It's really difficult.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "3813d9ad6aba996e"
+    ]
+  },
+  {
+    "experience_id": "c932221e1706ad4b",
+    "session_reference": "Lesson06_frame0010",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "I hope you understand how much this is more valuable than 1000 dollars.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "03884004c72f753c",
+      "0f1666a8d8a2194a",
+      "1dbd40ec260a3423",
+      "5ef0628bc11c89f6",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "2412048a9f4a3a3d"
+    ]
+  },
+  {
+    "experience_id": "bbebf4b2b0fde26e",
+    "session_reference": "Lesson06_frame0011",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "How much this is more valuable.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "2412048a9f4a3a3d"
+    ]
+  },
+  {
+    "experience_id": "ce7c5eea6ef785ee",
+    "session_reference": "Lesson06_frame0012",
+    "what_was_seen": "market_state=BALANCED; aggression=SELLER_AGGRESSIVE; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "I really wanted to show because someone in the chat asked me, Fabio, how can I take it?",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "6d72aa0455dbe21f",
+      "c3005539b34424c7",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "07a038403c15b1ad",
+    "session_reference": "Lesson06_frame0013",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Did I reply to you on this one?",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "2ee7831385bd5a88",
+    "session_reference": "Lesson06_frame0014",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Now, I don't even know where it is on this one.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "7d35109e65098018",
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "8f60e77d5512a213",
+    "session_reference": "Lesson06_frame0015",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "It's still valid anyway.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "120ddcdc6e881514",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "039496704b8fdad2",
+    "session_reference": "Lesson06_frame0016",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "It's still valid, the setup.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "bf89d1e5283add42",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "95ffe0b079eeafa6"
+    ]
+  },
+  {
+    "experience_id": "d240a7383f9c998d",
+    "session_reference": "Lesson06_frame0017",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "It's still valid.\n1000.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "95ffe0b079eeafa6"
+    ]
+  },
+  {
+    "experience_id": "0db0ef2308a57c87",
+    "session_reference": "Lesson06_frame0018",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "What do you expect the balance market?",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "17381f4268db152d",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "2710e2feb3aa163e",
+    "session_reference": "Lesson06_frame0019",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Jason, did I help you on understanding how you can execute, manage?",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "03884004c72f753c",
+      "bfa56db1afd60a3e",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "2d578f5a9a8732e1",
+    "session_reference": "Lesson06_frame0020",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Is it useful for you?",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "54f07d8963e48af5",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "c1f4ed32ed8044d0",
+    "session_reference": "Lesson06_frame0021",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Guys, we are one hour in the session.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "6127b9cc7590c5df",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "729b1065e5a17a78",
+    "session_reference": "Lesson06_frame0022",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "How many setups we watched today?",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "48aca55d41a4226c",
+      "5ccd1938fca977d4",
+      "2d756b244e492cbc",
+      "bf89d1e5283add42",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "263d70c530f5aacf"
+    ]
+  },
+  {
+    "experience_id": "736654a8e07412eb",
+    "session_reference": "Lesson06_frame0023",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "There is Bogdani, 6.4 thousand for today.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "d121573ff25e5147",
+      "2d756b244e492cbc",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "530cad2644b69876",
+    "session_reference": "Lesson06_frame0024",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Yeah, it felt like 10 minutes because we have a lot of action.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "a8d9e8c881b73ad9",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "3445b241b2d28ada"
+    ]
+  },
+  {
+    "experience_id": "c10fefb2eb154bd6",
+    "session_reference": "Lesson06_frame0025",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Josh, where can we expect the retracement?",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "17381f4268db152d",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "670aae141e11949a"
+    ]
+  },
+  {
+    "experience_id": "4057abfb99826d0b",
+    "session_reference": "Lesson06_frame0026",
+    "what_was_seen": "market_state=BALANCED; aggression=BUYER_AGGRESSIVE; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "The buyers are not...",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "c6995f405e1e7438",
+      "1dbd40ec260a3423",
+      "c3005539b34424c7",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "5ad83437c36607db",
+    "session_reference": "Lesson06_frame0027",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "You see where they reloaded.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "97696799ce593680"
+    ]
+  },
+  {
+    "experience_id": "f7f4935f81973d8d",
+    "session_reference": "Lesson06_frame0028",
+    "what_was_seen": "market_state=BALANCED; aggression=BUYER_AGGRESSIVE; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "You see where they reloaded the buyers at the bottom of the curve.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "c6995f405e1e7438",
+      "1dbd40ec260a3423",
+      "c3005539b34424c7",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "97696799ce593680",
+      "c979f6b3586026fa",
+      "ad24ac2a089804bb"
+    ]
+  },
+  {
+    "experience_id": "330fed469ed49be6",
+    "session_reference": "Lesson06_frame0029",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "I still think we can have an explosion.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "05e82759a7cfc70b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "83f3c996035273cf"
+    ]
+  },
+  {
+    "experience_id": "ceb24f4ca583f2d4",
+    "session_reference": "Lesson06_frame0030",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "I still think we can have an expansion up.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "05e82759a7cfc70b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "26da7ae29f3c703a",
+    "session_reference": "Lesson06_frame0031",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Now, I don't think it's necessary.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "7d35109e65098018",
+      "11308210f2d8a63b",
+      "05e82759a7cfc70b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "5c35ef905d9792f9",
+    "session_reference": "Lesson06_frame0032",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "I don't think it's necessary because I already explained multiple times.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "7d35109e65098018",
+      "11308210f2d8a63b",
+      "05e82759a7cfc70b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "815080b7e3749849"
+    ]
+  },
+  {
+    "experience_id": "48877515e3b96b8a",
+    "session_reference": "Lesson06_frame0033",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "But considering that what I'm doing, it's not common for people.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "06cf5a30cc3f90e4",
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "883a4c1821845f9b",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "22514dd48b819bb6",
+    "session_reference": "Lesson06_frame0034",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "People think that I can risk without caring only because it's a demo.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "06cf5a30cc3f90e4",
+      "11308210f2d8a63b",
+      "05e82759a7cfc70b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "79b95772a164fe9a",
+    "session_reference": "Lesson06_frame0035",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "This one is connected.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "212d15972d4cbb11",
+    "session_reference": "Lesson06_frame0036",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "I think you see the execution.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "05e82759a7cfc70b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "297f4e95d0c33d88",
+    "session_reference": "Lesson06_frame0037",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "This is an interactive account.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "aa80c9e41c172844",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "5b61d5322a8b702a",
+    "session_reference": "Lesson06_frame0038",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "I don't think it's necessary in my community.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "7d35109e65098018",
+      "11308210f2d8a63b",
+      "05e82759a7cfc70b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "16870463b516c1e8"
+    ]
+  },
+  {
+    "experience_id": "50aec39f3eaff281",
+    "session_reference": "Lesson06_frame0039",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "But there are people that think this is demo, really.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "06cf5a30cc3f90e4",
+      "11308210f2d8a63b",
+      "05e82759a7cfc70b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "78e5ebb3036500b7",
+    "session_reference": "Lesson06_frame0040",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Or that it's not connected.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "007140ae8166ad80",
+    "session_reference": "Lesson06_frame0041",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Now we go to the market.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "1ad41c7dd46a893d",
+    "session_reference": "Lesson06_frame0042",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Now the market is getting a little bit choppy, guys.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "cd46e91235482276",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "835dddd7b08a3e2f",
+    "session_reference": "Lesson06_frame0043",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "I just want to see one second if my analysis was correct.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "45becdb51be10f3c",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "1e29d0023b4c539d",
+      "460a18c5d124606e"
+    ]
+  },
+  {
+    "experience_id": "846b67170848aad7",
+    "session_reference": "Lesson06_frame0044",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Because this one would have been an additional 15,000.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "e23a63588f9a531a",
+    "session_reference": "Lesson06_frame0045",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Just want to see if the reading is correct.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "1e29d0023b4c539d"
+    ]
+  },
+  {
+    "experience_id": "28d62f7a17d26840",
+    "session_reference": "Lesson06_frame0046",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "This area that we marked.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86"
+    ]
+  },
+  {
+    "experience_id": "49f4ed2087d994cd",
+    "session_reference": "Lesson06_frame0047",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "Look at the money this guy is making.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "f791b395e73862b4"
+    ]
+  },
+  {
+    "experience_id": "ab5ae505e0dd5b2b",
+    "session_reference": "Lesson06_frame0048",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "How much money are you making?",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "f791b395e73862b4"
+    ]
+  },
+  {
+    "experience_id": "a11d056f55586d3c",
+    "session_reference": "Lesson06_frame0049",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=HIGH; management=OBSERVE",
+    "teacher_explanation": "All connected accounts.",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "11308210f2d8a63b",
+      "aa80c9e41c172844",
+      "5ccd1938fca977d4",
+      "1dbd40ec260a3423",
+      "797af359e7d98d8d",
+      "1ed27b5d52fe1b86",
+      "3d6e856f53b5ef40"
+    ]
+  }
+]

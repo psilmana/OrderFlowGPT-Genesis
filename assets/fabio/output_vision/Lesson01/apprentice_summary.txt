@@ -1,0 +1,71 @@
+GENESIS APPRENTICE — Learning Summary
+======================================================================
+
+Report ID: 2dc1e7a085e9b2cf
+Timestamp: 2026-08-12T17:41:15.211194
+Mode: vision
+
+Lessons Processed: 1
+Concepts Learned: 77
+Experiences Created: 50
+Sessions Completed: 50
+Coach Explanations: 100
+Frames Processed: 50
+Overall Confidence: 49.73%
+
+Concept Coverage:
+ Segments with concepts: 98/105 (93.3%)
+ Segments with NO concepts: 7
+
+Concept Mastery:
+ NOVICE       █████████████████████████████████████████████████████████████████████████████ (77)
+
+Top Concepts:
+ Shoot                0.00
+ Trades               0.00
+ Today                0.00
+ Short                0.00
+ Absorption           0.00
+ Close                0.00
+ Let's                0.00
+ Start                0.00
+ First                0.00
+ Long-term            0.00
+
+What was learned:
+ ✓ Lesson Lesson01: 77 concepts, 50 experiences
+
+What needs more study:
+ ⚠ Absorption (NOVICE)
+ ⚠ Accelerate (NOVICE)
+ ⚠ Additional (NOVICE)
+ ⚠ Aggressive (NOVICE)
+ ⚠ Anticipate (NOVICE)
+ ⚠ Appointment (NOVICE)
+ ⚠ Areas (NOVICE)
+ ⚠ Auction (NOVICE)
+ ⚠ Avoid (NOVICE)
+ ⚠ Beautiful (NOVICE)
+ ⚠ Bottom (NOVICE)
+ ⚠ Break (NOVICE)
+ ⚠ Breakeven (NOVICE)
+ ⚠ Brokers (NOVICE)
+ ⚠ Buyers (NOVICE)
+ ⚠ Choppiness (NOVICE)
+ ⚠ Close (NOVICE)
+ ⚠ Collapse (NOVICE)
+ ⚠ Continue (NOVICE)
+ ⚠ Control (NOVICE)
+
+Knowledge Graph:
+ Concepts: 112
+ Relationships: 28
+
+[NOTE] Running in VISION mode.
+ OpenCV chart analysis is ACTIVE.
+ GPU acceleration: CPU
+ Concept extraction fuses visual evidence + transcript text.
+ Vision-derived concepts: 8
+ Chart detection rate: 40/50 frames
+
+Knowledge graph: 0 concepts, 0 relationships, avg confidence 0

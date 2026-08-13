@@ -1,0 +1,271 @@
+{
+  "report_id": "0b47149d7ab2442e",
+  "report_timestamp": "2026-08-12T15:27:00.571549",
+  "mode": "transcript-only",
+  "total_lessons": 1,
+  "total_concepts_learned": 264,
+  "total_experiences_created": 50,
+  "total_sessions_completed": 50,
+  "total_coach_explanations": 100,
+  "total_frames_processed": 50,
+  "overall_learning_confidence": 0.4041078947368421,
+  "concept_mastery_distribution": [
+    [
+      "NOVICE",
+      264
+    ]
+  ],
+  "top_concepts_by_confidence": [
+    [
+      "Hello",
+      0.0
+    ],
+    [
+      "Beautiful",
+      0.0
+    ],
+    [
+      "People",
+      0.0
+    ],
+    [
+      "Sorry",
+      0.0
+    ],
+    [
+      "Voice",
+      0.0
+    ],
+    [
+      "Today",
+      0.0
+    ],
+    [
+      "Little",
+      0.0
+    ],
+    [
+      "Don't",
+      0.0
+    ],
+    [
+      "Chart",
+      0.0
+    ],
+    [
+      "Rebound",
+      0.0
+    ]
+  ],
+  "what_was_learned": [
+    "Lesson Lesson05: 264 concepts, 50 experiences"
+  ],
+  "what_needs_more_study": [
+    "Absorb (NOVICE)",
+    "Absorption (NOVICE)",
+    "Accelerate (NOVICE)",
+    "Accept (NOVICE)",
+    "Account (NOVICE)",
+    "Accounts (NOVICE)",
+    "Accuracy (NOVICE)",
+    "Additional (NOVICE)",
+    "Advise (NOVICE)",
+    "Aggression (NOVICE)",
+    "Aggressive (NOVICE)",
+    "Agree (NOVICE)",
+    "Amount (NOVICE)",
+    "Analysis (NOVICE)",
+    "Anyway (NOVICE)",
+    "Attempt (NOVICE)",
+    "Average (NOVICE)",
+    "Avoid (NOVICE)",
+    "Awards (NOVICE)",
+    "Balance (NOVICE)"
+  ],
+  "knowledge_graph_summary": "Knowledge graph: 0 concepts, 0 relationships, avg confidence 0",
+  "coverage": {
+    "total_segments": 1121,
+    "covered_segments": 924,
+    "uncovered_segments": 197,
+    "coverage_percent": 82.4,
+    "concept_frequency": {
+      "Lower_Low": 281,
+      "Stop_Loss_in_Profit": 225,
+      "Fundamentals": 172,
+      "Absorption": 147,
+      "Mismanagement": 133,
+      "Direction": 100,
+      "Market_State": 80,
+      "Level": 80,
+      "Breakout": 69,
+      "Break": 64,
+      "Trend_Continuation": 59,
+      "Aggression": 53,
+      "Revenge_Trading": 51,
+      "Candle": 51,
+      "Setup": 47,
+      "Pullback": 43,
+      "Close": 43,
+      "Trade": 41,
+      "Imbalance": 37,
+      "Risk_to_Reward": 32,
+      "Balance": 31,
+      "Opening_Range_Breakout": 30,
+      "Stop_Loss": 30,
+      "Order_Flow": 28,
+      "Market": 27,
+      "Failed_Auction": 25,
+      "Momentum": 23,
+      "Technical_Only": 23,
+      "Aggressive": 23,
+      "Auction": 21,
+      "Entry": 18,
+      "Neutral": 18,
+      "Short": 18,
+      "Daily_Loss_Limit": 17,
+      "Position_Size": 17,
+      "Range": 17,
+      "Price": 16,
+      "Reward": 16,
+      "Profit_Target": 15,
+      "Target": 15,
+      "Psychology": 14,
+      "Displacement": 13,
+      "Footprint": 12,
+      "Reversal": 12,
+      "Opening_Drive": 11,
+      "VAL": 11,
+      "Break-even": 11,
+      "Pre_Market": 10,
+      "Squeeze": 9,
+      "Market_Close": 9,
+      "Bias": 9,
+      "Trade_Management": 9,
+      "Session": 9,
+      "Gap": 8,
+      "Change": 8,
+      "Compression": 7,
+      "Reflection": 7,
+      "Chart": 7,
+      "Expansion": 7,
+      "Mean_Reversion": 6,
+      "Reclaim": 6,
+      "Volatility": 6,
+      "Passive": 6,
+      "Market_Structure": 5,
+      "Structure": 5,
+      "Single": 5,
+      "Volume": 5,
+      "Pattern": 5,
+      "Value_Area": 4,
+      "NASDAQ_Effort": 4,
+      "POC": 3,
+      "LVN": 3,
+      "Trend": 3,
+      "Support": 3,
+      "Triple_A_Setup": 2,
+      "NY_Session": 2,
+      "Volume_Profile": 2,
+      "Exit": 2,
+      "Profile": 2,
+      "Liquidation": 2,
+      "VAH": 2,
+      "Risk-free": 2,
+      "Explosion": 2,
+      "CVD": 2,
+      "Delta": 2,
+      "Initial": 2,
+      "Print": 2,
+      "False_Breakout": 1,
+      "Retracement": 1,
+      "Trailing_Stop": 1,
+      "Discipline": 1,
+      "Resistance": 1,
+      "Lower_High": 1,
+      "Lock-in": 1,
+      "Higher_Low": 1
+    },
+    "uncovered_examples": [
+      {
+        "index": 2,
+        "text_preview": "You just want to make money."
+      },
+      {
+        "index": 7,
+        "text_preview": "Amazing, amazing one."
+      },
+      {
+        "index": 17,
+        "text_preview": "It's not always easy, of course."
+      },
+      {
+        "index": 26,
+        "text_preview": "They told, look, we tried."
+      },
+      {
+        "index": 30,
+        "text_preview": "If it touch the top of the week."
+      },
+      {
+        "index": 40,
+        "text_preview": "Doing live analysis, not delayed, every day."
+      },
+      {
+        "index": 41,
+        "text_preview": "This one, it's not me."
+      },
+      {
+        "index": 44,
+        "text_preview": "Like, there is not one in the..."
+      },
+      {
+        "index": 49,
+        "text_preview": "And we are making sure..."
+      },
+      {
+        "index": 63,
+        "text_preview": "And look where we go."
+      },
+      {
+        "index": 64,
+        "text_preview": "There is nothing else."
+      },
+      {
+        "index": 77,
+        "text_preview": "You are not texting it."
+      },
+      {
+        "index": 78,
+        "text_preview": "You are making money."
+      },
+      {
+        "index": 79,
+        "text_preview": "You little Italian bastard."
+      },
+      {
+        "index": 81,
+        "text_preview": "Of course, I can think to take longs."
+      },
+      {
+        "index": 85,
+        "text_preview": "I use the five minutes, the 15 minutes on the most important demand."
+      },
+      {
+        "index": 88,
+        "text_preview": "And it's part of the game."
+      },
+      {
+        "index": 89,
+        "text_preview": "It's another approach."
+      },
+      {
+        "index": 90,
+        "text_preview": "It's another approach."
+      },
+      {
+        "index": 108,
+        "text_preview": "So, I don't think it gets easier than this."
+      }
+    ]
+  }
+}

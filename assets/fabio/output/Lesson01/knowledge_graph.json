@@ -1,8 +1,8 @@
 {
-  "total_concepts": 114,
-  "total_relationships": 49,
-  "predefined_relationships": 32,
-  "discovered_relationships": 17,
+  "total_concepts": 110,
+  "total_relationships": 12,
+  "predefined_relationships": 0,
+  "discovered_relationships": 12,
   "concepts": [
     "Absorption",
     "Accelerate",
@@ -54,7 +54,6 @@
     "First",
     "Generous",
     "Guarantee",
-    "HVN",
     "Imbalance",
     "Initial",
     "Interactive",
@@ -69,14 +68,12 @@
     "Management",
     "Market",
     "Market_Close",
-    "Mean_Reversion",
     "Momentum",
     "Nasdaq",
     "Opening_Range_Breakout",
     "Order_Flow",
     "POC",
     "Position_Size",
-    "Price",
     "Print",
     "Profile",
     "Profit",
@@ -88,7 +85,6 @@
     "Reload",
     "Report",
     "Retrace",
-    "Reversal",
     "Reward",
     "Risk_to_Reward",
     "Sculpt",
@@ -421,12 +417,6 @@
       "confidence_weight": 0.8
     },
     {
-      "name": "HVN",
-      "category": "Level",
-      "definition": "High Volume Node \u2014 a thick volume area where price tends to stall or reverse. Acts as support/resistance.",
-      "confidence_weight": 0.85
-    },
-    {
       "name": "Imbalance",
       "category": "Market_State",
       "definition": "One side is aggressively pushing price to discover new value. Characterized by displacement, momentum, and directional conviction.",
@@ -511,12 +501,6 @@
       "confidence_weight": 0.8
     },
     {
-      "name": "Mean_Reversion",
-      "category": "Setup",
-      "definition": "Trading back toward POC or balance center after a failed breakout or rejection at the edge of value. Best in balance or compressed markets.",
-      "confidence_weight": 0.9
-    },
-    {
       "name": "Momentum",
       "category": "Order_Flow",
       "definition": "The rate and strength of price movement. Sustained momentum confirms directional conviction.",
@@ -551,12 +535,6 @@
       "category": "Risk_Management",
       "definition": "The number of contracts traded. Fabio scales size based on conviction and volatility. NASDAQ = fewer contracts due to volatility.",
       "confidence_weight": 0.8
-    },
-    {
-      "name": "Price",
-      "category": "Price_Action",
-      "definition": "The current market price. The central variable that all analysis revolves around.",
-      "confidence_weight": 1.0
     },
     {
       "name": "Print",
@@ -623,12 +601,6 @@
       "category": "Extracted",
       "definition": "",
       "confidence_weight": 0.8
-    },
-    {
-      "name": "Reversal",
-      "category": "Price_Action",
-      "definition": "A change in direction after a trend or test. Often preceded by absorption, failed auction, or exhaustion.",
-      "confidence_weight": 0.85
     },
     {
       "name": "Reward",
@@ -808,235 +780,11 @@
   "relationships": [
     {
       "source": "Absorption",
-      "relation": "requires",
-      "target": "Aggression",
-      "strength": 1.0,
-      "description": "Absorption is visible when aggression meets a level and gets absorbed."
-    },
-    {
-      "source": "Absorption",
-      "relation": "often_precedes",
-      "target": "Failed_Auction",
-      "strength": 0.9,
-      "description": "Absorption at a level often leads to a failed auction."
-    },
-    {
-      "source": "Absorption",
-      "relation": "seen_at",
-      "target": "VAH",
-      "strength": 0.85,
-      "description": "Absorption commonly occurs at Value Area High."
-    },
-    {
-      "source": "Absorption",
-      "relation": "seen_at",
-      "target": "VAL",
-      "strength": 0.85,
-      "description": "Absorption commonly occurs at Value Area Low."
-    },
-    {
-      "source": "Absorption",
-      "relation": "seen_at",
-      "target": "POC",
-      "strength": 0.7,
-      "description": "Absorption can occur at POC during balance."
-    },
-    {
-      "source": "Aggression",
-      "relation": "requires",
-      "target": "Imbalance",
-      "strength": 0.9,
-      "description": "Aggression is most meaningful when the market is imbalanced."
-    },
-    {
-      "source": "Aggression",
-      "relation": "confirms",
-      "target": "Breakout",
-      "strength": 0.95,
-      "description": "A breakout without aggression is suspect."
-    },
-    {
-      "source": "Aggression",
-      "relation": "measured_by",
-      "target": "Delta",
-      "strength": 0.9,
-      "description": "Delta quantifies aggression at the micro level."
-    },
-    {
-      "source": "Aggression",
-      "relation": "measured_by",
-      "target": "CVD",
-      "strength": 0.85,
-      "description": "CVD shows sustained aggression over time."
-    },
-    {
-      "source": "Balance",
-      "relation": "contains",
-      "target": "POC",
-      "strength": 1.0,
-      "description": "Balance is defined around the POC."
-    },
-    {
-      "source": "Balance",
-      "relation": "bounded_by",
-      "target": "VAH",
-      "strength": 1.0,
-      "description": "VAH is the upper boundary of balance."
-    },
-    {
-      "source": "Balance",
-      "relation": "bounded_by",
-      "target": "VAL",
-      "strength": 1.0,
-      "description": "VAL is the lower boundary of balance."
-    },
-    {
-      "source": "Balance",
-      "relation": "favors",
-      "target": "Mean_Reversion",
-      "strength": 0.9,
-      "description": "In balance, mean reversion is the higher-probability play."
-    },
-    {
-      "source": "Compression",
-      "relation": "precedes",
-      "target": "Squeeze",
-      "strength": 0.85,
-      "description": "Compression often resolves with a squeeze/breakout."
-    },
-    {
-      "source": "Delta",
-      "relation": "aggregated_into",
-      "target": "CVD",
-      "strength": 1.0,
-      "description": "CVD is the cumulative sum of delta."
-    },
-    {
-      "source": "Displacement",
-      "relation": "requires",
-      "target": "Aggression",
-      "strength": 0.95,
-      "description": "Displacement is driven by aggression."
-    },
-    {
-      "source": "Displacement",
-      "relation": "creates",
-      "target": "LVN",
-      "strength": 0.9,
-      "description": "A displacement move leaves LVNs in its wake."
-    },
-    {
-      "source": "Exhaustion",
-      "relation": "follows",
-      "target": "Aggression",
-      "strength": 0.85,
-      "description": "After sustained aggression, exhaustion sets in."
-    },
-    {
-      "source": "Exhaustion",
-      "relation": "signals",
-      "target": "Reversal",
-      "strength": 0.8,
-      "description": "Exhaustion often signals an impending reversal."
-    },
-    {
-      "source": "Failed_Auction",
-      "relation": "requires",
-      "target": "Absorption",
-      "strength": 0.9,
-      "description": "A failed auction is confirmed by absorption at the level."
-    },
-    {
-      "source": "Failed_Auction",
-      "relation": "triggers",
-      "target": "Mean_Reversion",
-      "strength": 0.85,
-      "description": "Failed auction is a primary mean reversion signal."
-    },
-    {
-      "source": "Imbalance",
-      "relation": "favors",
-      "target": "Trend_Continuation",
-      "strength": 0.9,
-      "description": "In imbalance, trend continuation is the higher-probability play."
-    },
-    {
-      "source": "Imbalance",
-      "relation": "driven_by",
-      "target": "Aggression",
-      "strength": 0.95,
-      "description": "Imbalance is sustained by aggression."
-    },
-    {
-      "source": "LVN",
-      "relation": "used_for",
-      "target": "Trend_Continuation",
-      "strength": 0.9,
-      "description": "LVNs are ideal entry zones for trend continuation."
-    },
-    {
-      "source": "LVN",
-      "relation": "opposite_of",
-      "target": "HVN",
-      "strength": 1.0,
-      "description": "LVN and HVN are opposites in volume profile."
-    },
-    {
-      "source": "Mean_Reversion",
-      "relation": "targets",
-      "target": "POC",
-      "strength": 0.95,
-      "description": "Mean reversion typically targets the POC."
-    },
-    {
-      "source": "POC",
-      "relation": "attracts",
-      "target": "Price",
-      "strength": 0.95,
-      "description": "POC acts as a magnet for price in balance."
-    },
-    {
-      "source": "Risk_to_Reward",
-      "relation": "requires",
-      "target": "Stop_Loss",
-      "strength": 1.0,
-      "description": "R:R is calculated from stop distance."
-    },
-    {
-      "source": "Risk_to_Reward",
-      "relation": "requires",
-      "target": "Target",
-      "strength": 1.0,
-      "description": "R:R is calculated from target distance."
-    },
-    {
-      "source": "Squeeze",
-      "relation": "follows",
-      "target": "Compression",
-      "strength": 0.85,
-      "description": "Squeezes follow periods of compression."
-    },
-    {
-      "source": "VAH",
-      "relation": "resistance_in",
-      "target": "Balance",
-      "strength": 0.9,
-      "description": "VAH acts as resistance when market is balanced."
-    },
-    {
-      "source": "VAL",
-      "relation": "support_in",
-      "target": "Balance",
-      "strength": 0.9,
-      "description": "VAL acts as support when market is balanced."
-    },
-    {
-      "source": "Absorption",
       "target": "VAL",
       "relation": "cooccurs_with",
       "confidence": 0.55,
       "direction": "bidirectional",
-      "matched_text": ".640 --> 00:47.520 the explanation, this one is the long-term value area high, this one is a crazy a",
+      "matched_text": "the explanation, this one is the long-term value area high, this one is a crazy absorption,",
       "cooccurrence_count": 2,
       "method": "cooccurrence",
       "discovered": true,
@@ -1048,7 +796,7 @@
       "relation": "cooccurs_with",
       "confidence": 0.45,
       "direction": "bidirectional",
-      "matched_text": ".760 --> 02:00.640 and now the last target is on the value area low, the bottom of the value area lo",
+      "matched_text": "and now the last target is on the value area low, the bottom of the value area low,",
       "cooccurrence_count": 1,
       "method": "cooccurrence",
       "discovered": true,
@@ -1060,7 +808,7 @@
       "relation": "cooccurs_with",
       "confidence": 0.45,
       "direction": "bidirectional",
-      "matched_text": ".400 --> 03:22.640 interesting volatility I recorded, this one was a short, the reason is that we ha",
+      "matched_text": "interesting volatility I recorded, this one was a short, the reason is that we had an aggression",
       "cooccurrence_count": 1,
       "method": "cooccurrence",
       "discovered": true,
@@ -1072,7 +820,7 @@
       "relation": "cooccurs_with",
       "confidence": 0.45,
       "direction": "bidirectional",
-      "matched_text": ".520 --> 04:30.960 in a choppy day because today we had some volatility but still compression, stop ",
+      "matched_text": "in a choppy day because today we had some volatility but still compression, stop loss in profit",
       "cooccurrence_count": 1,
       "method": "cooccurrence",
       "discovered": true,
@@ -1084,7 +832,7 @@
       "relation": "cooccurs_with",
       "confidence": 0.45,
       "direction": "bidirectional",
-      "matched_text": ".720 --> 04:49.760 risk to reward trade, I'm covered 17,000 above the aggression of the sellers and ",
+      "matched_text": "risk to reward trade, I'm covered 17,000 above the aggression of the sellers and the absorption",
       "cooccurrence_count": 1,
       "method": "cooccurrence",
       "discovered": true,
@@ -1096,79 +844,19 @@
       "relation": "cooccurs_with",
       "confidence": 0.45,
       "direction": "bidirectional",
-      "matched_text": ".040 --> 05:21.440 it's momentum down, it's a crazy absorption of the buyer's reward of the seller, ",
+      "matched_text": "it's momentum down, it's a crazy absorption of the buyer's reward of the seller, I was trying",
       "cooccurrence_count": 1,
       "method": "cooccurrence",
       "discovered": true,
       "segment_index": 47
     },
     {
-      "source": "Momentum",
-      "target": "Slippage",
-      "relation": "cooccurs_with",
-      "confidence": 0.45,
-      "direction": "bidirectional",
-      "matched_text": ".200 --> 06:16.640 slippage, then let's go on, this one still momentum short, failed auction at the ",
-      "cooccurrence_count": 1,
-      "method": "cooccurrence",
-      "discovered": true,
-      "segment_index": 54
-    },
-    {
-      "source": "Setup",
-      "target": "Squeeze",
-      "relation": "cooccurs_with",
-      "confidence": 0.45,
-      "direction": "bidirectional",
-      "matched_text": ".360 --> 06:24.080 a lot of fight here, so I was anticipating a squeeze, I was thinking this is the ",
-      "cooccurrence_count": 1,
-      "method": "cooccurrence",
-      "discovered": true,
-      "segment_index": 55
-    },
-    {
-      "source": "Momentum",
-      "target": "Squeeze",
-      "relation": "cooccurs_with",
-      "confidence": 0.45,
-      "direction": "bidirectional",
-      "matched_text": ".560 --> 07:25.440 day, I was expecting a squeeze, the momentum was short, the bias on the fundament",
-      "cooccurrence_count": 1,
-      "method": "cooccurrence",
-      "discovered": true,
-      "segment_index": 64
-    },
-    {
-      "source": "Absorption",
-      "target": "Squeeze",
-      "relation": "cooccurs_with",
-      "confidence": 0.45,
-      "direction": "bidirectional",
-      "matched_text": ".880 --> 08:29.520 1920, profit target disabsorption of the sellers, was anticipating a squeeze here",
-      "cooccurrence_count": 1,
-      "method": "cooccurrence",
-      "discovered": true,
-      "segment_index": 73
-    },
-    {
       "source": "Absorption",
       "target": "Target",
       "relation": "cooccurs_with",
       "confidence": 0.45,
       "direction": "bidirectional",
-      "matched_text": ".880 --> 08:29.520 1920, profit target disabsorption of the sellers, was anticipating a squeeze here",
-      "cooccurrence_count": 1,
-      "method": "cooccurrence",
-      "discovered": true,
-      "segment_index": 73
-    },
-    {
-      "source": "Squeeze",
-      "target": "Target",
-      "relation": "cooccurs_with",
-      "confidence": 0.45,
-      "direction": "bidirectional",
-      "matched_text": ".880 --> 08:29.520 1920, profit target disabsorption of the sellers, was anticipating a squeeze here",
+      "matched_text": "1920, profit target disabsorption of the sellers, was anticipating a squeeze here,",
       "cooccurrence_count": 1,
       "method": "cooccurrence",
       "discovered": true,
@@ -1180,7 +868,7 @@
       "relation": "cooccurs_with",
       "confidence": 0.45,
       "direction": "bidirectional",
-      "matched_text": ".800 --> 11:28.800 this setup, value area high, crazy absorption level, absorbed buyers, control of ",
+      "matched_text": "this setup, value area high, crazy absorption level, absorbed buyers, control of the sellers,",
       "cooccurrence_count": 1,
       "method": "cooccurrence",
       "discovered": true,
@@ -1192,7 +880,7 @@
       "relation": "cooccurs_with",
       "confidence": 0.45,
       "direction": "bidirectional",
-      "matched_text": ".800 --> 11:28.800 this setup, value area high, crazy absorption level, absorbed buyers, control of ",
+      "matched_text": "this setup, value area high, crazy absorption level, absorbed buyers, control of the sellers,",
       "cooccurrence_count": 1,
       "method": "cooccurrence",
       "discovered": true,
@@ -1204,7 +892,7 @@
       "relation": "cooccurs_with",
       "confidence": 0.45,
       "direction": "bidirectional",
-      "matched_text": ".800 --> 11:28.800 this setup, value area high, crazy absorption level, absorbed buyers, control of ",
+      "matched_text": "this setup, value area high, crazy absorption level, absorbed buyers, control of the sellers,",
       "cooccurrence_count": 1,
       "method": "cooccurrence",
       "discovered": true,
@@ -1216,7 +904,7 @@
       "relation": "cooccurs_with",
       "confidence": 0.45,
       "direction": "bidirectional",
-      "matched_text": ".800 --> 11:28.800 this setup, value area high, crazy absorption level, absorbed buyers, control of ",
+      "matched_text": "this setup, value area high, crazy absorption level, absorbed buyers, control of the sellers,",
       "cooccurrence_count": 1,
       "method": "cooccurrence",
       "discovered": true,
@@ -1228,7 +916,7 @@
       "relation": "cooccurs_with",
       "confidence": 0.45,
       "direction": "bidirectional",
-      "matched_text": ".800 --> 11:28.800 this setup, value area high, crazy absorption level, absorbed buyers, control of ",
+      "matched_text": "this setup, value area high, crazy absorption level, absorbed buyers, control of the sellers,",
       "cooccurrence_count": 1,
       "method": "cooccurrence",
       "discovered": true,

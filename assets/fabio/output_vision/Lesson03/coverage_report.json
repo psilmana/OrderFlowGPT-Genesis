@@ -1,0 +1,170 @@
+{
+  "total_segments": 1316,
+  "covered_segments": 1092,
+  "uncovered_segments": 224,
+  "coverage_percent": 83.0,
+  "concept_frequency": {
+    "Lower_Low": 395,
+    "Stop_Loss_in_Profit": 311,
+    "Fundamentals": 274,
+    "Absorption": 191,
+    "Mismanagement": 159,
+    "Level": 135,
+    "Aggression": 127,
+    "Direction": 124,
+    "Breakout": 104,
+    "Trend_Continuation": 102,
+    "Market_State": 102,
+    "Break": 94,
+    "Trade": 66,
+    "Displacement": 63,
+    "Market": 61,
+    "Failed_Auction": 61,
+    "Technical_Only": 43,
+    "Opening_Range_Breakout": 42,
+    "Short": 41,
+    "Revenge_Trading": 41,
+    "Stop_Loss": 41,
+    "Setup": 39,
+    "Close": 39,
+    "Entry": 39,
+    "Pullback": 38,
+    "Aggressive": 38,
+    "Session": 37,
+    "Balance": 35,
+    "Risk_to_Reward": 34,
+    "Profit_Target": 32,
+    "Order_Flow": 30,
+    "Imbalance": 30,
+    "Target": 28,
+    "VAL": 24,
+    "Neutral": 22,
+    "Position_Size": 22,
+    "Pre_Market": 21,
+    "Price": 20,
+    "NASDAQ_Effort": 20,
+    "Squeeze": 18,
+    "Volatility": 17,
+    "Expansion": 17,
+    "Volume_Profile": 16,
+    "Profile": 16,
+    "Auction": 16,
+    "Print": 16,
+    "Compression": 15,
+    "Reward": 14,
+    "Delta": 14,
+    "Gap": 12,
+    "Trade_Management": 9,
+    "POC": 9,
+    "Reflection": 9,
+    "Momentum": 9,
+    "Opening_Drive": 8,
+    "Footprint": 8,
+    "Market_Close": 7,
+    "Discipline": 6,
+    "Trend": 6,
+    "Value_Area": 6,
+    "CVD": 6,
+    "Explosion": 5,
+    "Reversal": 4,
+    "NY_Session": 3,
+    "Exhaustion": 3,
+    "Bias": 3,
+    "Retracement": 3,
+    "Trailing_Stop": 3,
+    "London_Session": 2,
+    "Psychology": 2,
+    "Mean_Reversion": 2,
+    "False_Breakout": 2,
+    "Reclaim": 2,
+    "Slippage": 2,
+    "Market_Structure": 2,
+    "Liquidation": 2,
+    "VAH": 1,
+    "Exit": 1,
+    "Impulse": 1,
+    "Triple_A_Setup": 1
+  },
+  "uncovered_examples": [
+    {
+      "index": 1,
+      "text_preview": "oh look how many people"
+    },
+    {
+      "index": 2,
+      "text_preview": "we're good we're good"
+    },
+    {
+      "index": 3,
+      "text_preview": "two lost one win today says andrea we try to recover"
+    },
+    {
+      "index": 4,
+      "text_preview": "uh there is also luca now guys i'm"
+    },
+    {
+      "index": 13,
+      "text_preview": "i cannot stress enough how much it's stressful this profession"
+    },
+    {
+      "index": 22,
+      "text_preview": "nice amazing amazing guys now can you see the screen can you see it properly"
+    },
+    {
+      "index": 63,
+      "text_preview": "you are wealthy it's it's a large sum of money it's a personal account it's not proper so the moment you"
+    },
+    {
+      "index": 92,
+      "text_preview": "okay"
+    },
+    {
+      "index": 96,
+      "text_preview": "damage to your account okay so first point"
+    },
+    {
+      "index": 97,
+      "text_preview": "not end of the result end of the process second point"
+    },
+    {
+      "index": 98,
+      "text_preview": "you pay emotional triggers"
+    },
+    {
+      "index": 108,
+      "text_preview": "third point"
+    },
+    {
+      "index": 123,
+      "text_preview": "don't care about you you you can go to die in some forest"
+    },
+    {
+      "index": 125,
+      "text_preview": "let's go let's go to the platform"
+    },
+    {
+      "index": 126,
+      "text_preview": "ah i want to ask you something in the previous year i made amazing results"
+    },
+    {
+      "index": 147,
+      "text_preview": "why we go to the reason"
+    },
+    {
+      "index": 154,
+      "text_preview": "year and is this one"
+    },
+    {
+      "index": 212,
+      "text_preview": "mamma mia"
+    },
+    {
+      "index": 224,
+      "text_preview": "as always guys it's for educational purpose it's not financial advice"
+    },
+    {
+      "index": 256,
+      "text_preview": "no okay then"
+    }
+  ]
+}

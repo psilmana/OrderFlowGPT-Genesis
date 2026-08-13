@@ -1,0 +1,725 @@
+[
+  {
+    "experience_id": "e1a1e0d556b9cf7a",
+    "session_reference": "Lesson01_frame0000",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "Hi guys, I shoot a lot of trades today for you and I will now do the voiceover for the",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": []
+  },
+  {
+    "experience_id": "24597db165617b1b",
+    "session_reference": "Lesson01_frame0001",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "The last short spoiler, I took this absorption, will be floating 20,000, 30,000, no, 20,000",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": []
+  },
+  {
+    "experience_id": "fc99d100d03589c7",
+    "session_reference": "Lesson01_frame0002",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "I close here and then another leg down, let's start with the first one, this one got recorded",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": []
+  },
+  {
+    "experience_id": "a93f6272d01eb543",
+    "session_reference": "Lesson01_frame0003",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "the explanation, this one is the long-term value area high, this one is a crazy absorption,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "7d7bb3d306c511f4"
+    ]
+  },
+  {
+    "experience_id": "9ceb78af3c0a2713",
+    "session_reference": "Lesson01_frame0004",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "absorbed, failed auction, failed auction, failed auction, failed auction, so I marked this area,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": []
+  },
+  {
+    "experience_id": "acba09d6ec9c7230",
+    "session_reference": "Lesson01_frame0005",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "and we started aggressively on the short side so I reconfirm my idea for the short and I was trying",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "b34a1fc1ff949f2d",
+      "d6ac35d6a7c4870c"
+    ]
+  },
+  {
+    "experience_id": "4766865bce3783ec",
+    "session_reference": "Lesson01_frame0006",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "so to take a 2,500 initial risk to make 30,000 on this one, I will go on and I will stop to",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": []
+  },
+  {
+    "experience_id": "3d8e021a8f160af7",
+    "session_reference": "Lesson01_frame0007",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "and the short I was expecting an acceleration down, I put now the NASDAQ profile area,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "b34a1fc1ff949f2d"
+    ]
+  },
+  {
+    "experience_id": "20a192d084010efa",
+    "session_reference": "Lesson01_frame0008",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "and they see two cluster of NASDAQ effort, okay, so the initial stop loss was above the area",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "ddbff6d8394e855b",
+      "206e1355aabf2924"
+    ]
+  },
+  {
+    "experience_id": "cc54e564c7616098",
+    "session_reference": "Lesson01_frame0009",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "and now the last target is on the value area low, the bottom of the value area low,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "a580b6af0e0c5a0d"
+    ]
+  },
+  {
+    "experience_id": "2baaa54b3103693c",
+    "session_reference": "Lesson01_frame0010",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "so one area of control, I was waiting for the market to retrace to fill the area to put my",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": []
+  },
+  {
+    "experience_id": "5688fbfe9e2529eb",
+    "session_reference": "Lesson01_frame0011",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "in profit, another area we print here, so I'm covered above the area, I'm waiting for the",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "03bc757ec1fde22d"
+    ]
+  },
+  {
+    "experience_id": "94a5fd23885b6098",
+    "session_reference": "Lesson01_frame0012",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "to do one squeeze, I'm waiting for something to put my stop loss in profit here, it didn't",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "03bc757ec1fde22d",
+      "8be2fcdaf3310db4"
+    ]
+  },
+  {
+    "experience_id": "be1d7bc311c0d455",
+    "session_reference": "Lesson01_frame0013",
+    "what_was_seen": "aggression=UNKNOWN",
+    "teacher_explanation": "of where to put 16,000 dollars of stop in profit and on this one unfortunately I don't get the",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "8be2fcdaf3310db4"
+    ]
+  },
+  {
+    "experience_id": "00a7cc5de2d90266",
+    "session_reference": "Lesson01_frame0014",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "I think I didn't manage to record two break even and one stop loss, but the majority of the most",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "03bc757ec1fde22d",
+      "52b7f8d5ed0d4402"
+    ]
+  },
+  {
+    "experience_id": "897e4909b9842e7e",
+    "session_reference": "Lesson01_frame0015",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "on the bottom side, so I can see that the sellers are really aggressive here and I'm trying to",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "dd003e891e869ab3",
+      "03bc757ec1fde22d",
+      "ff205c7e33f7b306"
+    ]
+  },
+  {
+    "experience_id": "74774d6d06b5b003",
+    "session_reference": "Lesson01_frame0016",
+    "what_was_seen": "aggression=UNKNOWN",
+    "teacher_explanation": "kick on the face, it's a stop loss, if I'm not wrong the market accelerate and I lose 2,600,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "03bc757ec1fde22d"
+    ]
+  },
+  {
+    "experience_id": "fa7f05d6644dd8e0",
+    "session_reference": "Lesson01_frame0017",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "you can always see the feeling of interactive brokers on the right when I get liquidated to",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "03bc757ec1fde22d",
+      "ff205c7e33f7b306"
+    ]
+  },
+  {
+    "experience_id": "01169431146bb478",
+    "session_reference": "Lesson01_frame0018",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "was a reload, then we have one amazing short cluster of two areas, I shorted late guys,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "b34a1fc1ff949f2d",
+      "03bc757ec1fde22d",
+      "ff205c7e33f7b306"
+    ]
+  },
+  {
+    "experience_id": "a159bfdbafd1752c",
+    "session_reference": "Lesson01_frame0019",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "test, I shorted late, I shorted here and the initial risk was 2,500, then when we have a second",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "b34a1fc1ff949f2d",
+      "ddbff6d8394e855b",
+      "03bc757ec1fde22d",
+      "ff205c7e33f7b306"
+    ]
+  },
+  {
+    "experience_id": "d3ae6aa538ea06ea",
+    "session_reference": "Lesson01_frame0020",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "34,000 full profit on the position, the risk in 2,500 is crazy, the second victory was",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "dbc680989aa7ae71",
+      "03bc757ec1fde22d",
+      "8be2fcdaf3310db4",
+      "ff205c7e33f7b306",
+      "20bb56bbb914df6f"
+    ]
+  },
+  {
+    "experience_id": "7d09b8c5767597e6",
+    "session_reference": "Lesson01_frame0021",
+    "what_was_seen": "aggression=UNKNOWN",
+    "teacher_explanation": "of the buyers, I'm hoping that this area of the NASDAQ effort hold but I get a stop in profit here,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "206e1355aabf2924",
+      "a8b33ea1d449f96c",
+      "8be2fcdaf3310db4"
+    ]
+  },
+  {
+    "experience_id": "04c7bced008c2828",
+    "session_reference": "Lesson01_frame0022",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "high risk to reward profits, then I tried this short, this short is super easy to understand,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "b34a1fc1ff949f2d",
+      "03bc757ec1fde22d",
+      "8be2fcdaf3310db4",
+      "ff205c7e33f7b306"
+    ]
+  },
+  {
+    "experience_id": "b603dca1a5ac90cc",
+    "session_reference": "Lesson01_frame0023",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "to anticipate a squeeze down, I don't remember if this one it's profit or I think it's stop loss",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "03bc757ec1fde22d",
+      "8be2fcdaf3310db4",
+      "6ce163c077af0505",
+      "24fd011665046b77",
+      "15469582a73a4054",
+      "ff205c7e33f7b306"
+    ]
+  },
+  {
+    "experience_id": "f5f37c983f23917d",
+    "session_reference": "Lesson01_frame0024",
+    "what_was_seen": "aggression=UNKNOWN",
+    "teacher_explanation": "you need to close, okay, when you see this you need to close because it's a failed auction,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "5e6620342c4da08c",
+      "88cd40b917465422"
+    ]
+  },
+  {
+    "experience_id": "2b9555ac8c29e45b",
+    "session_reference": "Lesson01_frame0025",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "I made one error, showing you also the painful part, okay, let's wait, I want to show you the",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "3d281d07c71054f3",
+      "03bc757ec1fde22d",
+      "ff205c7e33f7b306"
+    ]
+  },
+  {
+    "experience_id": "341910b51924b74c",
+    "session_reference": "Lesson01_frame0026",
+    "what_was_seen": "aggression=UNKNOWN",
+    "teacher_explanation": "slippage, then let's go on, this one still momentum short, failed auction at the top,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "b34a1fc1ff949f2d",
+      "3d281d07c71054f3",
+      "88cd40b917465422"
+    ]
+  },
+  {
+    "experience_id": "3febda1d837078da",
+    "session_reference": "Lesson01_frame0027",
+    "what_was_seen": "aggression=UNKNOWN",
+    "teacher_explanation": "of the day because I needed to go out but then I had time so the appointment got cancelled",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": []
+  },
+  {
+    "experience_id": "24b5d495d4ed3518",
+    "session_reference": "Lesson01_frame0028",
+    "what_was_seen": "aggression=UNKNOWN",
+    "teacher_explanation": "absorption of the buyers and you can see from the profile that I put later, I'm taking 1,500",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "7d7bb3d306c511f4",
+      "03a12408768fcf4c",
+      "d624f407f2c783a6"
+    ]
+  },
+  {
+    "experience_id": "d3b3874ee92ac3b2",
+    "session_reference": "Lesson01_frame0029",
+    "what_was_seen": "aggression=UNKNOWN",
+    "teacher_explanation": "initial risk was 2,500 and if I'm not wrong I also give some breathing to the market because I was",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "ddbff6d8394e855b",
+      "03bc757ec1fde22d",
+      "384bd573c79ba174"
+    ]
+  },
+  {
+    "experience_id": "f4ff994834706de9",
+    "session_reference": "Lesson01_frame0030",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "here we go 240 dollars and then we have a collapse down, beautiful setup, the most beautiful of the",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "03bc757ec1fde22d",
+      "d2ae80e6862f5ddd",
+      "ff205c7e33f7b306"
+    ]
+  },
+  {
+    "experience_id": "e495b2a0d35f4859",
+    "session_reference": "Lesson01_frame0031",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "I managed the position stopping profit 13 140 on the momentum side, long give the possibility",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "03bc757ec1fde22d",
+      "8be2fcdaf3310db4",
+      "ff205c7e33f7b306",
+      "fd7680fdc4578639"
+    ]
+  },
+  {
+    "experience_id": "73e8b11bc4399c4f",
+    "session_reference": "Lesson01_frame0032",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "gap, I love this gap, I usually wait for it to get recovered and then put stop loss in profit",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "03bc757ec1fde22d",
+      "8be2fcdaf3310db4",
+      "ff205c7e33f7b306"
+    ]
+  },
+  {
+    "experience_id": "ae71dcc6e3db8619",
+    "session_reference": "Lesson01_frame0033",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "first crazy risk to reward trade for the day, let's see this one, ah this one is amazing,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "3d281d07c71054f3",
+      "b7dc5e7e56573848",
+      "dbc680989aa7ae71",
+      "03bc757ec1fde22d",
+      "ff205c7e33f7b306",
+      "a3835a27dba6226e"
+    ]
+  },
+  {
+    "experience_id": "7cc6c0df6c44093b",
+    "session_reference": "Lesson01_frame0034",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "it's absorption of the buyers, reabsorption of the buyers, reabsorption of the buyers again,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "7d7bb3d306c511f4",
+      "03bc757ec1fde22d",
+      "ff205c7e33f7b306",
+      "d624f407f2c783a6"
+    ]
+  },
+  {
+    "experience_id": "6020967d6c1cea37",
+    "session_reference": "Lesson01_frame0035",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "1920, profit target disabsorption of the sellers, was anticipating a squeeze here,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "7d7bb3d306c511f4",
+      "46eb8bb83a8a5299",
+      "03bc757ec1fde22d",
+      "8be2fcdaf3310db4",
+      "6ce163c077af0505",
+      "ff205c7e33f7b306",
+      "fd2751db0600e98f"
+    ]
+  },
+  {
+    "experience_id": "0b2fb03833f16840",
+    "session_reference": "Lesson01_frame0036",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "should be and also continue, like this one could have been 25 000, full take profit,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "03bc757ec1fde22d",
+      "8be2fcdaf3310db4",
+      "ff205c7e33f7b306"
+    ]
+  },
+  {
+    "experience_id": "cde3bbee6e506f1f",
+    "session_reference": "Lesson01_frame0037",
+    "what_was_seen": "aggression=UNKNOWN",
+    "teacher_explanation": "dominion of the sellers, absorption, this is textbook, okay, beautiful, then",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "7d7bb3d306c511f4",
+      "fd2751db0600e98f",
+      "7fdddd07f9368eaf"
+    ]
+  },
+  {
+    "experience_id": "6eb37b6bb58f0d26",
+    "session_reference": "Lesson01_frame0038",
+    "what_was_seen": "aggression=UNKNOWN",
+    "teacher_explanation": "still when you get professional you take some discretionary decision that should be avoided,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": []
+  },
+  {
+    "experience_id": "1e7000e652c95acc",
+    "session_reference": "Lesson01_frame0039",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "you cannot still stay stopping breakeven, because this one was an additional 9 000",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "03bc757ec1fde22d",
+      "ff205c7e33f7b306",
+      "fc4cf4e27b84e26e"
+    ]
+  },
+  {
+    "experience_id": "b7507e41a072937a",
+    "session_reference": "Lesson01_frame0040",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "this one was mismanagement, because this one should have been a full profit target",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "46eb8bb83a8a5299",
+      "03bc757ec1fde22d",
+      "8be2fcdaf3310db4",
+      "ff205c7e33f7b306"
+    ]
+  },
+  {
+    "experience_id": "8ec2aa509415531e",
+    "session_reference": "Lesson01_frame0041",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "I was waiting for the big direction short, and now I show you something funny, because the big",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "b34a1fc1ff949f2d",
+      "03bc757ec1fde22d",
+      "ff205c7e33f7b306"
+    ]
+  },
+  {
+    "experience_id": "b6efbd8ec5af3dbc",
+    "session_reference": "Lesson01_frame0042",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "let me avoid the choppiness for you, so you only get the interesting part,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "03bc757ec1fde22d",
+      "ff205c7e33f7b306"
+    ]
+  },
+  {
+    "experience_id": "1c0c887191584aa9",
+    "session_reference": "Lesson01_frame0043",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "for you guys, oh, never take",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "03bc757ec1fde22d",
+      "ff205c7e33f7b306"
+    ]
+  },
+  {
+    "experience_id": "1df1dd751f404250",
+    "session_reference": "Lesson01_frame0044",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "feel the suffering, read the message at the bottom, one, two, three,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "dd003e891e869ab3",
+      "03bc757ec1fde22d",
+      "ff205c7e33f7b306"
+    ]
+  },
+  {
+    "experience_id": "0119d897b279b222",
+    "session_reference": "Lesson01_frame0045",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "um, closed, this one was a stop in profits, a stupid decision I took,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "5e6620342c4da08c",
+      "03bc757ec1fde22d",
+      "8be2fcdaf3310db4",
+      "ff205c7e33f7b306",
+      "f7bbe7a016cbc2a3",
+      "f79ebcbb400de00b"
+    ]
+  },
+  {
+    "experience_id": "c0aa205589e3ab52",
+    "session_reference": "Lesson01_frame0046",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "this setup, value area high, crazy absorption level, absorbed buyers, control of the sellers,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "7d7bb3d306c511f4",
+      "a580b6af0e0c5a0d",
+      "dbc680989aa7ae71",
+      "f4de11965df88e7d",
+      "03bc757ec1fde22d",
+      "ff205c7e33f7b306",
+      "fd2751db0600e98f",
+      "d624f407f2c783a6",
+      "da75e32c03045ea8"
+    ]
+  },
+  {
+    "experience_id": "285efa738651768f",
+    "session_reference": "Lesson01_frame0047",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "was really late, closing of the session, guys,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "03bc757ec1fde22d",
+      "ff205c7e33f7b306"
+    ]
+  },
+  {
+    "experience_id": "7348aeffd1e6f8f4",
+    "session_reference": "Lesson01_frame0048",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "okay, and now it went even more down, look,",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "03bc757ec1fde22d",
+      "ff205c7e33f7b306"
+    ]
+  },
+  {
+    "experience_id": "5011113a7d1a87ad",
+    "session_reference": "Lesson01_frame0049",
+    "what_was_seen": "market_state=BALANCED; aggression=UNKNOWN; risk=LOW; management=OBSERVE",
+    "teacher_explanation": "guys, I think you can learn more than everything else by me recording myself when I have a high",
+    "has_reasoning": true,
+    "has_outcome": true,
+    "has_reflection": true,
+    "is_complete": true,
+    "concept_references": [
+      "03bc757ec1fde22d",
+      "15469582a73a4054",
+      "ff205c7e33f7b306",
+      "71988213237c5570"
+    ]
+  }
+]

@@ -1,0 +1,69 @@
+GENESIS APPRENTICE — Learning Summary
+======================================================================
+
+Report ID: 0b47149d7ab2442e
+Timestamp: 2026-08-12T15:27:00.571549
+Mode: transcript-only
+
+Lessons Processed: 1
+Concepts Learned: 264
+Experiences Created: 50
+Sessions Completed: 50
+Coach Explanations: 100
+Frames Processed: 50
+Overall Confidence: 40.41%
+
+Concept Coverage:
+ Segments with concepts: 924/1121 (82.4%)
+ Segments with NO concepts: 197
+
+Concept Mastery:
+ NOVICE       ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████ (264)
+
+Top Concepts:
+ Hello                0.00
+ Beautiful            0.00
+ People               0.00
+ Sorry                0.00
+ Voice                0.00
+ Today                0.00
+ Little               0.00
+ Don't                0.00
+ Chart                0.00
+ Rebound              0.00
+
+What was learned:
+ ✓ Lesson Lesson05: 264 concepts, 50 experiences
+
+What needs more study:
+ ⚠ Absorb (NOVICE)
+ ⚠ Absorption (NOVICE)
+ ⚠ Accelerate (NOVICE)
+ ⚠ Accept (NOVICE)
+ ⚠ Account (NOVICE)
+ ⚠ Accounts (NOVICE)
+ ⚠ Accuracy (NOVICE)
+ ⚠ Additional (NOVICE)
+ ⚠ Advise (NOVICE)
+ ⚠ Aggression (NOVICE)
+ ⚠ Aggressive (NOVICE)
+ ⚠ Agree (NOVICE)
+ ⚠ Amount (NOVICE)
+ ⚠ Analysis (NOVICE)
+ ⚠ Anyway (NOVICE)
+ ⚠ Attempt (NOVICE)
+ ⚠ Average (NOVICE)
+ ⚠ Avoid (NOVICE)
+ ⚠ Awards (NOVICE)
+ ⚠ Balance (NOVICE)
+
+Knowledge Graph:
+ Concepts: 304
+ Relationships: 159
+
+[NOTE] Running in TRANSCRIPT-ONLY mode.
+ Video frames provide timestamps only.
+ Concept extraction is keyword-based from transcript text.
+ Vision analysis (Bundles 1-8) is NOT active.
+
+Knowledge graph: 0 concepts, 0 relationships, avg confidence 0

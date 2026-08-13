@@ -1,0 +1,38 @@
+[
+  {
+    "source": "Setup",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "It's still valid, the setup.",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 0
+  },
+  {
+    "source": "Balance",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "What do you expect the balance market?",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 0
+  },
+  {
+    "source": "Aggression",
+    "target": "Short",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "Look at this aggression on the short side.",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 0
+  }
+]

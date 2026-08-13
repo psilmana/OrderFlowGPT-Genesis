@@ -1,0 +1,174 @@
+{
+  "total_segments": 1988,
+  "covered_segments": 1264,
+  "uncovered_segments": 724,
+  "coverage_percent": 63.6,
+  "concept_frequency": {
+    "Lower_Low": 350,
+    "Stop_Loss_in_Profit": 290,
+    "Fundamentals": 229,
+    "Absorption": 187,
+    "Mismanagement": 175,
+    "Direction": 132,
+    "Market_State": 108,
+    "Level": 93,
+    "Displacement": 76,
+    "Trend_Continuation": 75,
+    "Breakout": 74,
+    "Break": 69,
+    "Candle": 61,
+    "Aggression": 60,
+    "Close": 58,
+    "Revenge_Trading": 57,
+    "Setup": 56,
+    "Pullback": 48,
+    "Trade": 46,
+    "Imbalance": 45,
+    "Opening_Range_Breakout": 43,
+    "Risk_to_Reward": 35,
+    "Neutral": 34,
+    "Market": 33,
+    "Balance": 33,
+    "Stop_Loss": 31,
+    "Technical_Only": 28,
+    "Order_Flow": 28,
+    "Failed_Auction": 27,
+    "Momentum": 26,
+    "Aggressive": 26,
+    "Short": 24,
+    "Entry": 21,
+    "Auction": 21,
+    "Profit_Target": 20,
+    "Daily_Loss_Limit": 19,
+    "Target": 19,
+    "Position_Size": 19,
+    "Reward": 18,
+    "Price": 18,
+    "Range": 18,
+    "Opening_Drive": 16,
+    "Reversal": 15,
+    "VAL": 14,
+    "Psychology": 14,
+    "Pre_Market": 13,
+    "Session": 13,
+    "Footprint": 13,
+    "Volume_Profile": 13,
+    "Bias": 11,
+    "Squeeze": 11,
+    "Market_Close": 10,
+    "Trade_Management": 9,
+    "Reflection": 9,
+    "Gap": 9,
+    "Profile": 8,
+    "Compression": 8,
+    "Expansion": 7,
+    "Market_Structure": 6,
+    "Value_Area": 6,
+    "Mean_Reversion": 6,
+    "Reclaim": 6,
+    "Volatility": 6,
+    "Passive": 6,
+    "NASDAQ_Effort": 5,
+    "Trend": 4,
+    "POC": 4,
+    "LVN": 3,
+    "Retracement": 3,
+    "Exit": 2,
+    "Triple_A_Setup": 2,
+    "NY_Session": 2,
+    "False_Breakout": 2,
+    "Liquidation": 2,
+    "VAH": 2,
+    "Explosion": 2,
+    "CVD": 2,
+    "Delta": 2,
+    "Discipline": 2,
+    "Initial": 2,
+    "Print": 2,
+    "Trailing_Stop": 1,
+    "Lower_High": 1,
+    "Higher_Low": 1
+  },
+  "uncovered_examples": [
+    {
+      "index": 1,
+      "text_preview": "i don't feel good but we don't care we need to go live we don't care guys"
+    },
+    {
+      "index": 19,
+      "text_preview": "i experienced this yesterday in the fomc i saw i saw the delay you see also luca is having a little bit"
+    },
+    {
+      "index": 21,
+      "text_preview": "i want to give a quick read"
+    },
+    {
+      "index": 43,
+      "text_preview": "one week is part of the game okay the important stuff is on the long run from the law we are talking"
+    },
+    {
+      "index": 47,
+      "text_preview": "for the finish of the blood sweat and scalp at least"
+    },
+    {
+      "index": 48,
+      "text_preview": "okay at least anyway let's go to the chart guys and let's understand how we can capitalize on this like"
+    },
+    {
+      "index": 63,
+      "text_preview": "an accuracy of 70 percent okay you cannot burn your account these three times out of ten"
+    },
+    {
+      "index": 74,
+      "text_preview": "okay now when we go on the chart and we go"
+    },
+    {
+      "index": 77,
+      "text_preview": "can you see deep charts guys"
+    },
+    {
+      "index": 80,
+      "text_preview": "one and two"
+    },
+    {
+      "index": 84,
+      "text_preview": "give it a little time to load yeah today it's a dump"
+    },
+    {
+      "index": 85,
+      "text_preview": "okay now"
+    },
+    {
+      "index": 93,
+      "text_preview": "here is it true or no"
+    },
+    {
+      "index": 98,
+      "text_preview": "let's go to the previous distribution okay i want you to see"
+    },
+    {
+      "index": 103,
+      "text_preview": "perfect"
+    },
+    {
+      "index": 105,
+      "text_preview": "fail attempt fail they didn't want a single battle"
+    },
+    {
+      "index": 113,
+      "text_preview": "i'm going to show the settings for the con it's the standard you just apply the template"
+    },
+    {
+      "index": 127,
+      "text_preview": "accelerate look at taka"
+    },
+    {
+      "index": 132,
+      "text_preview": "oh look at this now this little boy this little boy"
+    },
+    {
+      "index": 139,
+      "text_preview": "now we are not interested okay we are in the middle we are in the middle okay we are in the middle but as"
+    }
+  ]
+}

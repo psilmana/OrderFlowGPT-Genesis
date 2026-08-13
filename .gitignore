@@ -8,3 +8,13 @@ dist/
 *.egg-info/
 .coverage
 htmlcov/
+
+assets/fabio/videos/*.mp4
+.venv/
+.git/
+assets/fabio/videos/
+__pycache__/
+*.pyc
+src/orderflowgpt_genesis/apprentice/frames/
+assets/fabio/output/Lesson01_vision/
+

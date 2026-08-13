@@ -1,0 +1,3980 @@
+[
+  {
+    "source": "Market",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "do you think the deep trade when it's pre-market guys the the deep trade is 20 because pre-market 20",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 27
+  },
+  {
+    "source": "Break",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "we will go on a breakdown of the setup but guys today i decided to start before because i wanted to",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 35
+  },
+  {
+    "source": "Session",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "and we will do the opening together so you get some value on how to manage also the the session open",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 39
+  },
+  {
+    "source": "Break",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "try to break up of this level again of course later we go to theory guys of course later we cover al",
+    "cooccurrence_count": 5,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 41
+  },
+  {
+    "source": "Setup",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "theory of all the setup and what we trade here for the new people you find in the section that it's",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 42
+  },
+  {
+    "source": "Session",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "usually prefer to trade during the new york session okay so what i do during the uh what i do during",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 45
+  },
+  {
+    "source": "Aggression",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "the buyers try to try to breach this level this point of aggression of the sellers that created this",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 52
+  },
+  {
+    "source": "Break",
+    "target": "Breakout",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "breakout and you see that now there is a liquidity wall here and the liquidity will well it's kept b",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 53
+  },
+  {
+    "source": "Aggression",
+    "target": "Target",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "through this level okay and we manage to have enough aggression to arrive here we we can our target",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 56
+  },
+  {
+    "source": "Level",
+    "target": "Target",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "through this level okay and we manage to have enough aggression to arrive here we we can our target",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 56
+  },
+  {
+    "source": "Session",
+    "target": "Volatility",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "the market reaches and i'm trying to capitalize on also the volatility of the opening session",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 58
+  },
+  {
+    "source": "Market",
+    "target": "Volatility",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "the market reaches and i'm trying to capitalize on also the volatility of the opening session",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 58
+  },
+  {
+    "source": "Market",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "the market reaches and i'm trying to capitalize on also the volatility of the opening session",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 58
+  },
+  {
+    "source": "Trade",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "feel that people are more interested in validating their ego than making exceptional trades so they",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 70
+  },
+  {
+    "source": "Trade",
+    "target": "Trend",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "opening this is a counter trend trade this one we will go through it later but this one it's a pure",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 83
+  },
+  {
+    "source": "Level",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "understanding the trade now i want now i want to see the interaction now they are getting in the lev",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 85
+  },
+  {
+    "source": "Balance",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "not the kind of movement that is appreciated by the market maker so i'm pretty sure we will rebalanc",
+    "cooccurrence_count": 5,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 115
+  },
+  {
+    "source": "Aggressive",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "i am not so aggressive with stopping profit alex because it's pre-market and the liquidity is thin",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 119
+  },
+  {
+    "source": "Absorption",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "that's my analysis let's see let me remove this let me check this is the absorption level so the con",
+    "cooccurrence_count": 4,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 126
+  },
+  {
+    "source": "Balance",
+    "target": "Imbalance",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "that is relevant is this one that is where the imbalance is set okay you can see all this inefficien",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 128
+  },
+  {
+    "source": "Aggression",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "perception okay and you can see this two point of aggression here okay so as i told you market maker",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 129
+  },
+  {
+    "source": "Break",
+    "target": "Candle",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "because the sellers are at the top and if the candle break if the candle break and they don't take",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 138
+  },
+  {
+    "source": "Absorption",
+    "target": "Aggressive",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "aggressive now the buyers and they slice through and they're right here and they have an absorption",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 148
+  },
+  {
+    "source": "Level",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "the market opening watch the chat reply to you chart and manage it's like sensei skill yoda level of",
+    "cooccurrence_count": 5,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 157
+  },
+  {
+    "source": "Chart",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "the market opening watch the chat reply to you chart and manage it's like sensei skill yoda level of",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 157
+  },
+  {
+    "source": "Chart",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "the market opening watch the chat reply to you chart and manage it's like sensei skill yoda level of",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 157
+  },
+  {
+    "source": "Absorption",
+    "target": "Candle",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "relevant it's always relevant guys for example if this candle close with absorption",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 164
+  },
+  {
+    "source": "Absorption",
+    "target": "Close",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "relevant it's always relevant guys for example if this candle close with absorption",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 164
+  },
+  {
+    "source": "Candle",
+    "target": "Close",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "relevant it's always relevant guys for example if this candle close with absorption",
+    "cooccurrence_count": 10,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 164
+  },
+  {
+    "source": "Break",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "and if they break i take another 2000 out of the market what's the problem",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 177
+  },
+  {
+    "source": "Absorption",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "other information on the market but there is a huge absorption okay make sense that if they",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 179
+  },
+  {
+    "source": "Absorption",
+    "target": "Auction",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "look at the perfection this auction is the one that i told you the absorption will hold okay",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 211
+  },
+  {
+    "source": "Break",
+    "target": "Close",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "how does it work okay let's say that they break this one i want to see the candle close",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 235
+  },
+  {
+    "source": "Candle",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "okay i mark the level but i wait for the candle to close okay",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 236
+  },
+  {
+    "source": "Close",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "okay i mark the level but i wait for the candle to close okay",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 236
+  },
+  {
+    "source": "Auction",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "the major possibility to continue the auction down it's from them if you break this level you go up",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 253
+  },
+  {
+    "source": "Auction",
+    "target": "Break",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "the major possibility to continue the auction down it's from them if you break this level you go up",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 253
+  },
+  {
+    "source": "Level",
+    "target": "Passive",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "they reload on the passive level they accelerate okay so it means that when they crash this level an",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 257
+  },
+  {
+    "source": "Aggressive",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "you have another down move really strong okay so when you get aggressive enough on the level on the ",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 263
+  },
+  {
+    "source": "Auction",
+    "target": "Short",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "i told you in all the auction if you want to join the short it's on this horizontal level",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 267
+  },
+  {
+    "source": "Level",
+    "target": "Short",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "i told you in all the auction if you want to join the short it's on this horizontal level",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 267
+  },
+  {
+    "source": "Auction",
+    "target": "Chart",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "amazing short i explained to you how the auction unfold very clearly look at the chart",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 269
+  },
+  {
+    "source": "Chart",
+    "target": "Short",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "amazing short i explained to you how the auction unfold very clearly look at the chart",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 269
+  },
+  {
+    "source": "Candle",
+    "target": "Short",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "if you take the short the stop loss guys it's really close okay either you wait for this candle",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 270
+  },
+  {
+    "source": "Close",
+    "target": "Short",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "if you take the short the stop loss guys it's really close okay either you wait for this candle",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 270
+  },
+  {
+    "source": "Absorption",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "absorption okay that i show you the management side by side and this one per day two amazing setup",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 285
+  },
+  {
+    "source": "Auction",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "gun you don't need to take seven eight ten twenty five setups quality setups you see now the auction",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 287
+  },
+  {
+    "source": "Session",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "the session and already we took six or seven setups all take profit don't get excited okay don't get",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 316
+  },
+  {
+    "source": "Absorption",
+    "target": "Break",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "break through reload from the sellers and absorption okay now where they go they go to spike on the ",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 327
+  },
+  {
+    "source": "Level",
+    "target": "Reversal",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "okay now they are validating the 85 if they break the 85 guys we have a reversal from the bottom lev",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 340
+  },
+  {
+    "source": "Break",
+    "target": "Reversal",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "okay now they are validating the 85 if they break the 85 guys we have a reversal from the bottom lev",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 340
+  },
+  {
+    "source": "Reversal",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "okay now they are validating the 85 if they break the 85 guys we have a reversal from the bottom lev",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 340
+  },
+  {
+    "source": "Level",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "okay now they are validating the 85 if they break the 85 guys we have a reversal from the bottom lev",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 340
+  },
+  {
+    "source": "Break",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "okay now they are validating the 85 if they break the 85 guys we have a reversal from the bottom lev",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 340
+  },
+  {
+    "source": "Reversal",
+    "target": "Short",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "single short the problem is that sooner or later guys you will have a reversal now it's not this the",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 342
+  },
+  {
+    "source": "Absorption",
+    "target": "Balance",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "case okay because they already show another absorption of this level but the market like to rebalanc",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 343
+  },
+  {
+    "source": "Balance",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "case okay because they already show another absorption of this level but the market like to rebalanc",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 343
+  },
+  {
+    "source": "Setup",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "It's still valid, the setup.",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 391
+  },
+  {
+    "source": "Aggression",
+    "target": "Short",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "Look at this aggression on the short side.",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 467
+  },
+  {
+    "source": "Session",
+    "target": "Short",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "yesterday now you want to understand why for me the short today was a short session let's go togethe",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 527
+  },
+  {
+    "source": "Auction",
+    "target": "Profile",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "this one is the profile framing okay so is the auction and how this is unfolding yeah is the auction",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 538
+  },
+  {
+    "source": "Momentum",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "we already took seven or eight from charting setups in the momentum yeah",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 546
+  },
+  {
+    "source": "Chart",
+    "target": "Momentum",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "we already took seven or eight from charting setups in the momentum yeah",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 546
+  },
+  {
+    "source": "Chart",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "we already took seven or eight from charting setups in the momentum yeah",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 546
+  },
+  {
+    "source": "Chart",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "quality okay then you have two sessions with me where we see charting we see execution we see models",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 568
+  },
+  {
+    "source": "Level",
+    "target": "Range",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "you when we were here i marked this level for you because it was the bottom of the range it was wher",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 576
+  },
+  {
+    "source": "Market",
+    "target": "Range",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "25 500 let me mark for you didn't reach this is where i can expect the market to start to go in a ra",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 578
+  },
+  {
+    "source": "Auction",
+    "target": "Compression",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "even lower than middle so the auction is getting tired now and we are getting in a compression phase",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 608
+  },
+  {
+    "source": "Delta",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "high delta level okay you have to consider two things the first one",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 612
+  },
+  {
+    "source": "Auction",
+    "target": "Balance",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "the action auction take control from a speed of day point of view you can go to rebalance all this",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 617
+  },
+  {
+    "source": "Auction",
+    "target": "Retracement",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "reliable guys the auction is getting here so the potential retracement is ready to start we are goin",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 644
+  },
+  {
+    "source": "Auction",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "market guys but i know how to read them this one okay it's an auction that is telling me what they",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 648
+  },
+  {
+    "source": "Fundamentals",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "sometimes you have great fundamentals gate structure but the market gets closed inside",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 669
+  },
+  {
+    "source": "Close",
+    "target": "Fundamentals",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "sometimes you have great fundamentals gate structure but the market gets closed inside",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 669
+  },
+  {
+    "source": "Close",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "sometimes you have great fundamentals gate structure but the market gets closed inside",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 669
+  },
+  {
+    "source": "Candle",
+    "target": "Print",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "and you start to see a printing of a green candle",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 699
+  },
+  {
+    "source": "Aggressive",
+    "target": "Reversal",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "they're starting to be absorbed this one could be a reversal play really aggressive okay and really",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 719
+  },
+  {
+    "source": "Balance",
+    "target": "Reversal",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "we want to try a reversal play guys low risk to go to the rebalance balance area it's up here",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 721
+  },
+  {
+    "source": "Reversal",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "no it's not i risk this one guys reversal trade i go really soft to boost the profit that i already",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 726
+  },
+  {
+    "source": "Break",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "if they break the 418 i don't think it makes sense to to stay in the trade again",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 768
+  },
+  {
+    "source": "Aggressive",
+    "target": "Candle",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "i would expect that an absorption of this quality will bring a candle really aggressive on the upsid",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 773
+  },
+  {
+    "source": "Aggression",
+    "target": "Break",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "aggression on the sellers they want to break it they want to break it you see",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 796
+  },
+  {
+    "source": "Gap",
+    "target": "Retracement",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "oh beautiful gap let's see if they don't manage to do a deep retracement and these buyers",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 811
+  },
+  {
+    "source": "Close",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "yeah we close this trade guys and then we did almost two hours let's see how it goes if the buyers",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 820
+  },
+  {
+    "source": "Close",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "they took us out we close guys at 14 000 of profit for the session i still think we go",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 832
+  },
+  {
+    "source": "Break",
+    "target": "Chart",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "took breakeven i show you the life management we did a lot of charting a lot of trades a lot of theo",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 840
+  },
+  {
+    "source": "Chart",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "took breakeven i show you the life management we did a lot of charting a lot of trades a lot of theo",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 840
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "No_Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.23,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trending_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.25,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Choppy_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.25,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Footprint_Grid",
+    "relation": "cooccurs_with",
+    "confidence": 0.58,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Low_Volatility_Chart",
+    "relation": "cooccurs_with",
+    "confidence": 0.28,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.58,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.3,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Trending_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.32,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Choppy_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.32,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Footprint_Grid",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Low_Volatility_Chart",
+    "relation": "cooccurs_with",
+    "confidence": 0.35,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.38,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Choppy_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.35,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Footprint_Grid",
+    "relation": "cooccurs_with",
+    "confidence": 0.68,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Low_Volatility_Chart",
+    "relation": "cooccurs_with",
+    "confidence": 0.38,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.68,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.4,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Footprint_Grid",
+    "relation": "cooccurs_with",
+    "confidence": 0.68,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Low_Volatility_Chart",
+    "relation": "cooccurs_with",
+    "confidence": 0.38,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.68,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.4,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Low_Volatility_Chart",
+    "relation": "cooccurs_with",
+    "confidence": 0.7,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 1.0,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.72,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.7,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.43,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.72,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.26,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.26,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.26,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.26,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.14,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.14,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.47,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.47,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.97,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.97,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.12,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.12,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.89,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.89,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.97,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.97,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.11,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.11,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.12,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.12,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.4,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.4,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.4,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.4,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.63,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.63,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.1,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.1,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.69,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.69,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.11,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.11,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.56,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.56,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.04,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.04,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.4,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.4,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.4,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.4,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.24,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.24,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.8,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.8,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.06,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.06,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.33,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.33,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.73,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.73,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.06,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.06,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.39,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.39,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.06,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.06,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.24,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.24,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.67,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.67,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.06,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.06,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.79,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.79,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.02,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.02,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.19,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.19,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.67,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.67,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.1,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.1,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.85,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.85,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.45,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.45,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.05,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.05,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.97,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.97,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.05,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.05,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.92,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.92,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.12,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.12,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.56,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.56,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.73,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.73,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.04,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.04,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.73,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.73,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.93,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.93,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.1,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.1,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.77,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.77,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.87,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.87,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.09,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.09,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.84,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.84,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.11,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.11,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.1,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.1,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.1,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.1,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Stop_Loss_in_Profit",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Psychology",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  }
+]

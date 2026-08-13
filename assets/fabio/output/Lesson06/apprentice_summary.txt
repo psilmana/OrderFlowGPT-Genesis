@@ -1,0 +1,69 @@
+GENESIS APPRENTICE — Learning Summary
+======================================================================
+
+Report ID: 85204ae494dde338
+Timestamp: 2026-08-12T15:43:42.087175
+Mode: transcript-only
+
+Lessons Processed: 1
+Concepts Learned: 320
+Experiences Created: 50
+Sessions Completed: 50
+Coach Explanations: 100
+Frames Processed: 50
+Overall Confidence: 29.94%
+
+Concept Coverage:
+ Segments with concepts: 58/88 (65.9%)
+ Segments with NO concepts: 30
+
+Concept Mastery:
+ NOVICE       ████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████ (320)
+
+Top Concepts:
+ Hello                0.00
+ Beautiful            0.00
+ People               0.00
+ Welcome              0.00
+ Students             0.00
+ Bunch                0.00
+ Don't                0.00
+ Quality              0.00
+ Courses              0.00
+ Share                0.00
+
+What was learned:
+ ✓ Lesson Lesson06: 320 concepts, 50 experiences
+
+What needs more study:
+ ⚠ Absorb (NOVICE)
+ ⚠ Absorption (NOVICE)
+ ⚠ Accelerate (NOVICE)
+ ⚠ Accept (NOVICE)
+ ⚠ Account (NOVICE)
+ ⚠ Accounts (NOVICE)
+ ⚠ Additional (NOVICE)
+ ⚠ Advisor (NOVICE)
+ ⚠ Afraid (NOVICE)
+ ⚠ Aggression (NOVICE)
+ ⚠ Aggressive (NOVICE)
+ ⚠ Amount (NOVICE)
+ ⚠ Analysis (NOVICE)
+ ⚠ Andrea (NOVICE)
+ ⚠ Anticipate (NOVICE)
+ ⚠ Antonio (NOVICE)
+ ⚠ Anyway (NOVICE)
+ ⚠ Arrive (NOVICE)
+ ⚠ Attempt (NOVICE)
+ ⚠ Auction (NOVICE)
+
+Knowledge Graph:
+ Concepts: 360
+ Relationships: 122
+
+[NOTE] Running in TRANSCRIPT-ONLY mode.
+ Video frames provide timestamps only.
+ Concept extraction is keyword-based from transcript text.
+ Vision analysis (Bundles 1-8) is NOT active.
+
+Knowledge graph: 0 concepts, 0 relationships, avg confidence 0

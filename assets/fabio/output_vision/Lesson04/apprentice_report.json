@@ -1,0 +1,247 @@
+{
+  "report_id": "5bef9e8b4cc3682b",
+  "report_timestamp": "2026-08-13T03:27:44.047376",
+  "mode": "vision",
+  "total_lessons": 1,
+  "total_concepts_learned": 92,
+  "total_experiences_created": 50,
+  "total_sessions_completed": 50,
+  "total_coach_explanations": 100,
+  "total_frames_processed": 50,
+  "overall_learning_confidence": 0.69758822676639,
+  "concept_mastery_distribution": [
+    [
+      "NOVICE",
+      92
+    ]
+  ],
+  "top_concepts_by_confidence": [
+    [
+      "Hello",
+      0.0
+    ],
+    [
+      "Beautiful",
+      0.0
+    ],
+    [
+      "People",
+      0.0
+    ],
+    [
+      "Uptrend",
+      0.0
+    ],
+    [
+      "Gameplay",
+      0.0
+    ],
+    [
+      "Today",
+      0.0
+    ],
+    [
+      "Ready",
+      0.0
+    ],
+    [
+      "Follow",
+      0.0
+    ],
+    [
+      "Stupid",
+      0.0
+    ],
+    [
+      "Trade",
+      0.0
+    ]
+  ],
+  "what_was_learned": [
+    "Lesson Lesson04: 92 concepts, 50 experiences"
+  ],
+  "what_needs_more_study": [
+    "Absorption (NOVICE)",
+    "Activity (NOVICE)",
+    "Advice (NOVICE)",
+    "Aggression (NOVICE)",
+    "Aggressive (NOVICE)",
+    "Asset (NOVICE)",
+    "Attempt (NOVICE)",
+    "Auction (NOVICE)",
+    "Battle (NOVICE)",
+    "Beautiful (NOVICE)",
+    "Break (NOVICE)",
+    "Build (NOVICE)",
+    "Buyers (NOVICE)",
+    "Candle (NOVICE)",
+    "Check (NOVICE)",
+    "Cherry (NOVICE)",
+    "Close (NOVICE)",
+    "Community (NOVICE)",
+    "Continue (NOVICE)",
+    "Control (NOVICE)"
+  ],
+  "knowledge_graph_summary": "Knowledge graph: 0 concepts, 0 relationships, avg confidence 0",
+  "coverage": {
+    "total_segments": 640,
+    "covered_segments": 585,
+    "uncovered_segments": 55,
+    "coverage_percent": 91.4,
+    "concept_frequency": {
+      "Lower_Low": 223,
+      "Stop_Loss_in_Profit": 192,
+      "Fundamentals": 148,
+      "Absorption": 136,
+      "Mismanagement": 125,
+      "Market_State": 87,
+      "Direction": 84,
+      "Level": 84,
+      "Breakout": 53,
+      "Break": 52,
+      "Aggression": 44,
+      "Pullback": 42,
+      "Revenge_Trading": 41,
+      "Risk_to_Reward": 40,
+      "Trend_Continuation": 39,
+      "Trade": 38,
+      "Market": 33,
+      "Imbalance": 27,
+      "Failed_Auction": 26,
+      "Close": 26,
+      "Position_Size": 25,
+      "Setup": 24,
+      "Opening_Range_Breakout": 24,
+      "Technical_Only": 23,
+      "Auction": 22,
+      "Aggressive": 22,
+      "Displacement": 21,
+      "Balance": 20,
+      "Gap": 18,
+      "Session": 17,
+      "Squeeze": 16,
+      "Trade_Management": 16,
+      "Candle": 15,
+      "Order_Flow": 15,
+      "Reward": 14,
+      "VAL": 14,
+      "Compression": 12,
+      "Price": 12,
+      "Range": 12,
+      "NASDAQ_Effort": 11,
+      "Target": 11,
+      "Stop_Loss": 11,
+      "Opening_Drive": 10,
+      "Expansion": 10,
+      "Neutral": 10,
+      "Profit_Target": 10,
+      "Reflection": 10,
+      "Retracement": 9,
+      "Momentum": 9,
+      "Volume_Profile": 8,
+      "Profile": 8,
+      "Pre_Market": 8,
+      "Triple_A_Setup": 7,
+      "Delta": 6,
+      "Entry": 5,
+      "Footprint": 5,
+      "CVD": 4,
+      "Exit": 4,
+      "Reversal": 4,
+      "Print": 4,
+      "Trend": 3,
+      "Explosion": 3,
+      "Bias": 3,
+      "London_Session": 3,
+      "Volatility": 2,
+      "Mean_Reversion": 2,
+      "Reclaim": 2,
+      "False_Breakout": 1,
+      "Trailing_Stop": 1,
+      "NY_Session": 1,
+      "POC": 1
+    },
+    "uncovered_examples": [
+      {
+        "index": 2,
+        "text_preview": "let me check if i can share screen to you"
+      },
+      {
+        "index": 3,
+        "text_preview": "let's go directly in action"
+      },
+      {
+        "index": 4,
+        "text_preview": "can you see my screen guys"
+      },
+      {
+        "index": 26,
+        "text_preview": "let's see how it goes"
+      },
+      {
+        "index": 33,
+        "text_preview": "get the feel in interactive so it's directly reflected here it's not a demo account it's a"
+      },
+      {
+        "index": 64,
+        "text_preview": "so the the method it's easy guys the method it's easy okay it's not difficult now um ricky i think"
+      },
+      {
+        "index": 85,
+        "text_preview": "this is the protection floor i can think also about scalping a little bit guys this is not"
+      },
+      {
+        "index": 94,
+        "text_preview": "this is our feeling"
+      },
+      {
+        "index": 140,
+        "text_preview": "how much activity of the big zero"
+      },
+      {
+        "index": 141,
+        "text_preview": "exactly first you said we buy at the top but they didn't broke"
+      },
+      {
+        "index": 163,
+        "text_preview": "or no it's worth it okay it's more than one to two yes way more probably it's one to 2.5 one three"
+      },
+      {
+        "index": 171,
+        "text_preview": "also the speed of tape guys speed of tape it's a cheat code"
+      },
+      {
+        "index": 178,
+        "text_preview": "look at this week again"
+      },
+      {
+        "index": 196,
+        "text_preview": "interesting for me please don't don't execute guys it's not financial advice it's to show you also the"
+      },
+      {
+        "index": 229,
+        "text_preview": "okay"
+      },
+      {
+        "index": 235,
+        "text_preview": "i'm pretty sure"
+      },
+      {
+        "index": 242,
+        "text_preview": "so"
+      },
+      {
+        "index": 243,
+        "text_preview": "one second guys i'm observing the interaction it's it's trust me it's crazy difficult to"
+      },
+      {
+        "index": 245,
+        "text_preview": "using 99 of my brain"
+      },
+      {
+        "index": 265,
+        "text_preview": "no there is no delay guys there is no delay i'm doing this live there is no 15 second delay"
+      }
+    ]
+  }
+}

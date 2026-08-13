@@ -352,8 +352,7 @@
         "70% of volume",
         "accepted range",
         "fair value zone",
-        "volume profile area",
-        "area"
+        "volume profile area"
       ],
       "visual_markers": [
         "rectangle on profile between VAH and VAL",
@@ -384,8 +383,7 @@
         "prior day high",
         "prior day low",
         "pdh",
-        "pdl",
-        "high"
+        "pdl"
       ],
       "visual_markers": [
         "horizontal line at prior day extreme",
@@ -416,7 +414,9 @@
         "not getting rewarded",
         "building positions",
         "holding the level",
-        "eating the orders"
+        "eating the orders",
+        "sellers",
+        "buyers"
       ],
       "visual_markers": [
         "large delta bars at level",
@@ -644,7 +644,9 @@
         "nasdaq profile area",
         "effort cluster",
         "cluster of effort",
-        "area of control"
+        "area of control",
+        "nasdaq",
+        "effort"
       ],
       "visual_markers": [
         "cluster of large footprint numbers",
@@ -955,6 +957,7 @@
         "break even",
         "put stop",
         "move stop",
+        "profit",
         "loss"
       ],
       "visual_markers": [
@@ -990,8 +993,7 @@
         "risk 2500",
         "make 30000",
         "risk reward ratio",
-        "risk",
-        "make"
+        "risk"
       ],
       "visual_markers": [
         "entry, stop, and target lines on chart",
@@ -1022,7 +1024,7 @@
         "loss limit",
         "done for the day",
         "no more trades",
-        "more"
+        "trades"
       ],
       "visual_markers": [
         "P&L showing multiple red trades",
@@ -1114,7 +1116,7 @@
         "deserved it",
         "my error",
         "have",
-        "take"
+        "manage"
       ],
       "visual_markers": [
         "trade going from profit to loss",
@@ -1203,7 +1205,8 @@
         "overnight",
         "globex",
         "before open",
-        "early session"
+        "early session",
+        "before"
       ],
       "visual_markers": [
         "thin volume before 9:30",
@@ -1261,7 +1264,8 @@
         "break above",
         "break below",
         "break of structure",
-        "bos"
+        "bos",
+        "above"
       ],
       "visual_markers": [
         "candle closing beyond level",
@@ -1360,7 +1364,8 @@
         "strong move",
         "big candle",
         "drive",
-        "leg"
+        "leg",
+        "strong"
       ],
       "visual_markers": [
         "long body candle",
@@ -1943,7 +1948,8 @@
         "no direction",
         "unclear",
         "wait",
-        "sideways bias"
+        "sideways bias",
+        "clear"
       ],
       "visual_markers": [
         "price inside value area",
@@ -1969,7 +1975,8 @@
         "order flow",
         "microstructure",
         "footprint analysis",
-        "bid ask analysis"
+        "bid ask analysis",
+        "order"
       ],
       "visual_markers": [],
       "parent_concepts": [],
@@ -2143,7 +2150,8 @@
         "trying to get back",
         "emotional trading",
         "chasing losses",
-        "even"
+        "even",
+        "trading"
       ],
       "visual_markers": [
         "immediate re-entry after stop",
@@ -2426,141 +2434,6 @@
     },
     {
       "concept_id": "auto_028",
-      "name": "Shoot",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "shoot",
-        "shoot"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_029",
-      "name": "Trades",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "trades",
-        "trades"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_030",
-      "name": "Today",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "today",
-        "today"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_031",
-      "name": "Blood",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "blood",
-        "blood"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_032",
-      "name": "Sweat",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "sweat",
-        "sweat"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_033",
-      "name": "Sculpt",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "sculpt",
-        "sculpt"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_034",
-      "name": "Community",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "community",
-        "community"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_035",
-      "name": "Content",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "content",
-        "content"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_036",
-      "name": "Guarantee",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "guarantee",
-        "guarantee"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_037",
       "name": "Short",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson01",
@@ -2572,10 +2445,10 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_038",
+      "concept_id": "auto_029",
       "name": "Market",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson01",
@@ -2587,25 +2460,10 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_039",
-      "name": "Expect",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "expect",
-        "expect"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_040",
+      "concept_id": "auto_030",
       "name": "Close",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson01",
@@ -2617,191 +2475,25 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_041",
-      "name": "Let's",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "let's",
-        "let's"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_042",
-      "name": "Start",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "start",
-        "start"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_043",
-      "name": "First",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "first",
-        "first"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_044",
-      "name": "Audio",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "audio",
-        "audio"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_045",
-      "name": "Couldn't",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "couldn't",
-        "couldn't"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_046",
-      "name": "Concentrate",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "concentrate",
-        "concentrate"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_047",
+      "concept_id": "auto_031",
       "name": "Long-term",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson01",
       "keywords": [
         "long-term",
-        "long-term",
-        "long"
+        "long-term"
       ],
       "visual_markers": [],
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_048",
-      "name": "Value",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "value",
-        "value"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_049",
-      "name": "Crazy",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "crazy",
-        "crazy"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_050",
-      "name": "Sellers",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "sellers",
-        "sellers"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_051",
-      "name": "Complete",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "complete",
-        "complete"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_052",
-      "name": "Control",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "control",
-        "control"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_053",
+      "concept_id": "auto_032",
       "name": "Auction",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson01",
@@ -2813,55 +2505,10 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_054",
-      "name": "Caught",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "caught",
-        "caught"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_055",
-      "name": "Report",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "report",
-        "report"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_056",
-      "name": "Reconfirm",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "reconfirm",
-        "reconfirm"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_057",
+      "concept_id": "auto_033",
       "name": "Initial",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson01",
@@ -2873,40 +2520,10 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_058",
-      "name": "Explain",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "explain",
-        "explain"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_059",
-      "name": "Nasdaq",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "nasdaq",
-        "nasdaq"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_060",
+      "concept_id": "auto_034",
       "name": "Profile",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson01",
@@ -2918,115 +2535,10 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_061",
-      "name": "Effort",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "effort",
-        "effort"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_062",
-      "name": "Second",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "second",
-        "second"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_063",
-      "name": "Profit",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "profit",
-        "profit"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_064",
-      "name": "Bottom",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "bottom",
-        "bottom"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_065",
-      "name": "Spark",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "spark",
-        "spark"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_066",
-      "name": "Directional",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "directional",
-        "directional"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_067",
-      "name": "Retrace",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "retrace",
-        "retrace"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_068",
+      "concept_id": "auto_035",
       "name": "Print",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson01",
@@ -3038,25 +2550,10 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_069",
-      "name": "Manage",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "manage",
-        "manage"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_070",
+      "concept_id": "auto_036",
       "name": "Break",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson01",
@@ -3068,130 +2565,10 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_071",
-      "name": "Didn't",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "didn't",
-        "didn't"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_072",
-      "name": "Don't",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "don't",
-        "don't"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_073",
-      "name": "Dollars",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "dollars",
-        "dollars"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_074",
-      "name": "Total",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "total",
-        "total"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_075",
-      "name": "Think",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "think",
-        "think"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_076",
-      "name": "Record",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "record",
-        "record"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_077",
-      "name": "Majority",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "majority",
-        "majority"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_078",
-      "name": "Reason",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "reason",
-        "reason"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_079",
+      "concept_id": "auto_037",
       "name": "Aggressive",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson01",
@@ -3203,160 +2580,10 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_080",
-      "name": "Capitalize",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "capitalize",
-        "capitalize"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_081",
-      "name": "Wrong",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "wrong",
-        "wrong"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_082",
-      "name": "Accelerate",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "accelerate",
-        "accelerate"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_083",
-      "name": "Little",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "little",
-        "little"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_084",
-      "name": "Interactive",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "interactive",
-        "interactive"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_085",
-      "name": "Brokers",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "brokers",
-        "brokers"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_086",
-      "name": "Enjoy",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "enjoy",
-        "enjoy"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_087",
-      "name": "Contracts",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "contracts",
-        "contracts"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_088",
-      "name": "Reload",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "reload",
-        "reload"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_089",
-      "name": "Areas",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "areas",
-        "areas"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_090",
+      "concept_id": "auto_038",
       "name": "Reward",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson01",
@@ -3368,55 +2595,10 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_091",
-      "name": "Generous",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "generous",
-        "generous"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_092",
-      "name": "Choppy",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "choppy",
-        "choppy"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_093",
-      "name": "Victory",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "victory",
-        "victory"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_094",
+      "concept_id": "auto_039",
       "name": "Trade",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson01",
@@ -3428,100 +2610,10 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_095",
-      "name": "Buyers",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "buyers",
-        "buyers"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_096",
-      "name": "Profits",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "profits",
-        "profits"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_097",
-      "name": "Understand",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "understand",
-        "understand"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_098",
-      "name": "Buyer's",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "buyer's",
-        "buyer's"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_099",
-      "name": "Anticipate",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "anticipate",
-        "anticipate"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_100",
-      "name": "Error",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson01",
-      "keywords": [
-        "error",
-        "error"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_101",
+      "concept_id": "auto_040",
       "name": "Management",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson01",
@@ -3533,281 +2625,10 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_102",
-      "name": "Emoji",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "emoji",
-        "emoji"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_103",
-      "name": "People",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "people",
-        "people"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_104",
-      "name": "Settings",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "settings",
-        "settings"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_105",
-      "name": "Remove",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "remove",
-        "remove",
-        "move"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_106",
-      "name": "Share",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "share",
-        "share"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_107",
-      "name": "Platform",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "platform",
-        "platform"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_108",
-      "name": "Screen",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "screen",
-        "screen"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_109",
-      "name": "Visible",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "visible",
-        "visible"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_110",
-      "name": "Perfect",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "perfect",
-        "perfect"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_111",
-      "name": "Welcome",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "welcome",
-        "welcome"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_112",
-      "name": "Scalps",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "scalps",
-        "scalps"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_113",
-      "name": "Minutes",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "minutes",
-        "minutes"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_114",
-      "name": "Connect",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "connect",
-        "connect"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_115",
-      "name": "Clarify",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "clarify",
-        "clarify"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_116",
-      "name": "Beginners",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "beginners",
-        "beginners"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_117",
-      "name": "Point",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "point",
-        "point"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_118",
-      "name": "Friends",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "friends",
-        "friends"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_119",
-      "name": "Study",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "study",
-        "study"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_120",
+      "concept_id": "auto_041",
       "name": "Candle",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson02",
@@ -3819,85 +2640,10 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_121",
-      "name": "Video",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "video",
-        "video"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_122",
-      "name": "Youtube",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "youtube",
-        "youtube"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_123",
-      "name": "Terms",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "terms",
-        "terms"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_124",
-      "name": "Model",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "model",
-        "model"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_125",
-      "name": "Process",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "process",
-        "process"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_126",
+      "concept_id": "auto_042",
       "name": "Break-even",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson02",
@@ -3909,370 +2655,10 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_127",
-      "name": "Stable",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "stable",
-        "stable"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_128",
-      "name": "Equity",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "equity",
-        "equity"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_129",
-      "name": "Clear",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "clear",
-        "clear"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_130",
-      "name": "Moment",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "moment",
-        "moment"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_131",
-      "name": "Instagram",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "instagram",
-        "instagram"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_132",
-      "name": "Cumulative",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "cumulative",
-        "cumulative"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_133",
-      "name": "Audience",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "audience",
-        "audience"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_134",
-      "name": "Followers",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "followers",
-        "followers"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_135",
-      "name": "Maximum",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "maximum",
-        "maximum"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_136",
-      "name": "Percent",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "percent",
-        "percent"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_137",
-      "name": "Mission",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "mission",
-        "mission"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_138",
-      "name": "Achieve",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "achieve",
-        "achieve"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_139",
-      "name": "Soldiers",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "soldiers",
-        "soldiers"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_140",
-      "name": "Hobby",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "hobby",
-        "hobby"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_141",
-      "name": "Killers",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "killers",
-        "killers"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_142",
-      "name": "Professional",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "professional",
-        "professional"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_143",
-      "name": "Three",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "three",
-        "three"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_144",
-      "name": "General",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "general",
-        "general"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_145",
-      "name": "Treat",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "treat",
-        "treat"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_146",
-      "name": "Equip",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "equip",
-        "equip"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_147",
-      "name": "Mindset",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "mindset",
-        "mindset"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_148",
-      "name": "Models",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "models",
-        "models"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_149",
-      "name": "Internet",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "internet",
-        "internet"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_150",
-      "name": "Build",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "build",
-        "build"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_151",
+      "concept_id": "auto_043",
       "name": "Structure",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson02",
@@ -4284,70 +2670,10 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_152",
-      "name": "Battleground",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "battleground",
-        "battleground"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_153",
-      "name": "Announcement",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "announcement",
-        "announcement"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_154",
-      "name": "Receive",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "receive",
-        "receive"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_155",
-      "name": "Topic",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "topic",
-        "topic"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_156",
+      "concept_id": "auto_044",
       "name": "Volume",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson02",
@@ -4359,10 +2685,10 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_157",
+      "concept_id": "auto_045",
       "name": "Single",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson02",
@@ -4374,10 +2700,10 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_158",
+      "concept_id": "auto_046",
       "name": "Session",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson02",
@@ -4389,115 +2715,10 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_159",
-      "name": "Update",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "update",
-        "update"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_160",
-      "name": "Asset",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "asset",
-        "asset"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_161",
-      "name": "Managers",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "managers",
-        "managers"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_162",
-      "name": "Breakdown",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "breakdown",
-        "breakdown"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_163",
-      "name": "Indices",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "indices",
-        "indices"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_164",
-      "name": "Commitment",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "commitment",
-        "commitment"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_165",
-      "name": "Traders",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "traders",
-        "traders"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_166",
+      "concept_id": "auto_047",
       "name": "Non-commercial",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson02",
@@ -4509,100 +2730,10 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_167",
-      "name": "Speculators",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "speculators",
-        "speculators"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_168",
-      "name": "Narrative",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "narrative",
-        "narrative"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_169",
-      "name": "Surprise",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "surprise",
-        "surprise"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_170",
-      "name": "Promise",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "promise",
-        "promise"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_171",
-      "name": "Front",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "front",
-        "front"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_172",
-      "name": "Service",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "service",
-        "service"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_173",
+      "concept_id": "auto_048",
       "name": "Change",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson02",
@@ -4614,1496 +2745,190 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_174",
-      "name": "Input",
+      "concept_id": "auto_049",
+      "name": "Trend",
       "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "input",
-        "input"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_175",
-      "name": "Hours",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "hours",
-        "hours"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_176",
-      "name": "Capable",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "capable",
-        "capable"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_177",
-      "name": "Assistant",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "assistant",
-        "assistant"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_178",
-      "name": "Times",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "times",
-        "times"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_179",
-      "name": "Artificial",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "artificial",
-        "artificial"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_180",
-      "name": "Intelligence",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "intelligence",
-        "intelligence"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_181",
-      "name": "Opportunity",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "opportunity",
-        "opportunity"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_182",
-      "name": "Charts",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "charts",
-        "charts"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_183",
-      "name": "Implement",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "implement",
-        "implement"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_184",
-      "name": "Fabio",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "fabio",
-        "fabio"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_185",
-      "name": "Improve",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "improve",
-        "improve"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_186",
-      "name": "Difficult",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson02",
-      "keywords": [
-        "difficult",
-        "difficult"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_187",
-      "name": "Hello",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "hello",
-        "hello"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_188",
-      "name": "Warriors",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "warriors",
-        "warriors"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_189",
-      "name": "We're",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "we're",
-        "we're"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_190",
-      "name": "Andrea",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "andrea",
-        "andrea"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_191",
-      "name": "Avengers",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "avengers",
-        "avengers"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_192",
-      "name": "Inside",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "inside",
-        "inside"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_193",
-      "name": "Participate",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "participate",
-        "participate"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_194",
-      "name": "Battlefield",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "battlefield",
-        "battlefield"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_195",
-      "name": "Lives",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "lives",
-        "lives"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_196",
-      "name": "Possibility",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "possibility",
-        "possibility"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_197",
-      "name": "Members",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "members",
-        "members"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_198",
-      "name": "Profitable",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "profitable",
-        "profitable"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_199",
-      "name": "Group",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "group",
-        "group"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_200",
-      "name": "Tomorrow",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "tomorrow",
-        "tomorrow"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_201",
-      "name": "Dashboard",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "dashboard",
-        "dashboard"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_202",
-      "name": "Weekend",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "weekend",
-        "weekend"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_203",
-      "name": "Invite",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "invite",
-        "invite"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_204",
-      "name": "Nutritionist",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "nutritionist",
-        "nutritionist"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_205",
-      "name": "Supplements",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "supplements",
-        "supplements"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_206",
-      "name": "Reduce",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "reduce",
-        "reduce"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_207",
-      "name": "Stress",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "stress",
-        "stress"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_208",
-      "name": "Stressful",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "stressful",
-        "stressful"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_209",
-      "name": "Profession",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "profession",
-        "profession"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_210",
-      "name": "Grande",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "grande",
-        "grande"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_211",
-      "name": "Podcast",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "podcast",
-        "podcast"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_212",
-      "name": "Business",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "business",
-        "business"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_213",
-      "name": "Garbage",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "garbage",
-        "garbage"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_214",
-      "name": "Stuff",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "stuff",
-        "stuff"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_215",
-      "name": "Anyway",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "anyway",
-        "anyway"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_216",
-      "name": "Money",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "money",
-        "money"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_217",
-      "name": "Previous",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "previous",
-        "previous"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_218",
-      "name": "Guess",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "guess",
-        "guess"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_219",
-      "name": "Survive",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "survive",
-        "survive"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_220",
-      "name": "Multiple",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "multiple",
-        "multiple"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_221",
-      "name": "Arzalan",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "arzalan",
-        "arzalan"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_222",
-      "name": "Mental",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "mental",
-        "mental"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_223",
-      "name": "Method",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "method",
-        "method"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_224",
-      "name": "Trick",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "trick",
-        "trick"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_225",
-      "name": "Yesterday",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "yesterday",
-        "yesterday"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_226",
-      "name": "Micro",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "micro",
-        "micro"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_227",
-      "name": "Florin",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "florin",
-        "florin"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_228",
-      "name": "Inefficient",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "inefficient",
-        "inefficient"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_229",
-      "name": "Resilience",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "resilience",
-        "resilience"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_230",
-      "name": "Story",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "story",
-        "story"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_231",
-      "name": "World",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "world",
-        "world"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_232",
-      "name": "Champion",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "champion",
-        "champion"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_233",
-      "name": "Different",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "different",
-        "different"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_234",
-      "name": "Brain",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "brain",
-        "brain"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_235",
-      "name": "Personal",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "personal",
-        "personal"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_236",
-      "name": "Capital",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "capital",
-        "capital"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_237",
-      "name": "Threshold",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "threshold",
-        "threshold"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_238",
-      "name": "Example",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "example",
-        "example"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_239",
-      "name": "Millions",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "millions",
-        "millions"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_240",
-      "name": "Streak",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "streak",
-        "streak"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_241",
-      "name": "Happen",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "happen",
-        "happen"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_242",
-      "name": "Damage",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "damage",
-        "damage"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_243",
-      "name": "Hardship",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "hardship",
-        "hardship"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_244",
-      "name": "Sugar",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "sugar",
-        "sugar"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_245",
-      "name": "Transparent",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "transparent",
-        "transparent"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_246",
-      "name": "Upside",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "upside",
-        "upside"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_247",
-      "name": "Downside",
-      "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson03",
       "keywords": [
-        "downside",
-        "downside"
+        "trend",
+        "trend"
       ],
       "visual_markers": [],
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_248",
-      "name": "Rules",
+      "concept_id": "auto_050",
+      "name": "Signal",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson03",
       "keywords": [
-        "rules",
-        "rules"
+        "signal",
+        "signal"
       ],
       "visual_markers": [],
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_249",
-      "name": "Whole",
+      "concept_id": "auto_051",
+      "name": "On-chain",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson03",
       "keywords": [
-        "whole",
-        "whole"
+        "on-chain",
+        "on-chain"
       ],
       "visual_markers": [],
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_250",
-      "name": "Account",
+      "concept_id": "auto_052",
+      "name": "Lock-in",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson03",
       "keywords": [
-        "account",
-        "account"
+        "lock-in",
+        "lock-in"
       ],
       "visual_markers": [],
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_251",
-      "name": "Drawdown",
+      "concept_id": "auto_053",
+      "name": "Pattern",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson03",
       "keywords": [
-        "drawdown",
-        "drawdown"
+        "pattern",
+        "pattern"
       ],
       "visual_markers": [],
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_252",
-      "name": "Strategy",
+      "concept_id": "auto_054",
+      "name": "Chart",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson03",
       "keywords": [
-        "strategy",
-        "strategy"
+        "chart",
+        "chart"
       ],
       "visual_markers": [],
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_253",
-      "name": "Human",
+      "concept_id": "auto_055",
+      "name": "Support",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson03",
       "keywords": [
-        "human",
-        "human"
+        "support",
+        "support"
       ],
       "visual_markers": [],
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_254",
-      "name": "Nature",
+      "concept_id": "auto_056",
+      "name": "Passive",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson03",
       "keywords": [
-        "nature",
-        "nature"
+        "passive",
+        "passive"
       ],
       "visual_markers": [],
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_255",
-      "name": "Shame",
+      "concept_id": "auto_057",
+      "name": "Range",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson03",
       "keywords": [
-        "shame",
-        "shame"
+        "range",
+        "range"
       ],
       "visual_markers": [],
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_256",
-      "name": "Needs",
+      "concept_id": "auto_058",
+      "name": "Risk-free",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson03",
       "keywords": [
-        "needs",
-        "needs",
-        "need"
+        "risk-free",
+        "risk-free"
       ],
       "visual_markers": [],
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_257",
-      "name": "Camera",
+      "concept_id": "auto_059",
+      "name": "Follow-up",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson03",
       "keywords": [
-        "camera",
-        "camera"
+        "follow-up",
+        "follow-up"
       ],
       "visual_markers": [],
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_258",
-      "name": "Congratulations",
+      "concept_id": "auto_060",
+      "name": "Resistance",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson03",
-      "keywords": [
-        "congratulations",
-        "congratulations"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_259",
-      "name": "Beautiful",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "beautiful",
-        "beautiful"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_260",
-      "name": "Check",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "check",
-        "check"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_261",
-      "name": "Points",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "points",
-        "points"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_262",
-      "name": "What's",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "what's",
-        "what's"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_263",
-      "name": "Small",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "small",
-        "small"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_264",
-      "name": "Contract",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "contract",
-        "contract"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_265",
-      "name": "Scalp",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "scalp",
-        "scalp"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_266",
-      "name": "Phase",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "phase",
-        "phase"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_267",
-      "name": "Strong",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "strong",
-        "strong"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_268",
-      "name": "Uptrend",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "uptrend",
-        "uptrend"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_269",
-      "name": "Gameplay",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "gameplay",
-        "gameplay"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_270",
-      "name": "Accept",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "accept",
-        "accept"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_271",
-      "name": "Theory",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "theory",
-        "theory"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_272",
-      "name": "Quality",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
       "keywords": [
-        "quality",
-        "quality"
+        "resistance",
+        "resistance"
       ],
       "visual_markers": [],
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_273",
+      "concept_id": "auto_061",
       "name": "Extension",
       "category": "Auto_Discovered",
       "definition": "Concept extracted from Lesson04",
@@ -6115,352 +2940,67 @@
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_274",
-      "name": "Wakas",
+      "concept_id": "auto_062",
+      "name": "Multi-million",
       "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
+      "definition": "Concept extracted from Lesson05",
       "keywords": [
-        "wakas",
-        "wakas"
+        "multi-million",
+        "multi-million"
       ],
       "visual_markers": [],
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_275",
-      "name": "Thousand",
+      "concept_id": "auto_063",
+      "name": "Composite",
       "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
+      "definition": "Concept extracted from Lesson05",
       "keywords": [
-        "thousand",
-        "thousand"
+        "composite",
+        "composite"
       ],
       "visual_markers": [],
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_276",
-      "name": "Thank",
+      "concept_id": "auto_064",
+      "name": "Pre-market",
       "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
+      "definition": "Concept extracted from Lesson06",
       "keywords": [
-        "thank",
-        "thank"
+        "pre-market",
+        "pre-market"
       ],
       "visual_markers": [],
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     },
     {
-      "concept_id": "auto_277",
-      "name": "Chart",
+      "concept_id": "auto_065",
+      "name": "Excess",
       "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
+      "definition": "Concept extracted from Lesson06",
       "keywords": [
-        "chart",
-        "chart"
+        "excess",
+        "excess"
       ],
       "visual_markers": [],
       "parent_concepts": [],
       "related_concepts": [],
       "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_278",
-      "name": "Arslan",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "arslan",
-        "arslan"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_279",
-      "name": "Ready",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "ready",
-        "ready"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_280",
-      "name": "Follow",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "follow",
-        "follow"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_281",
-      "name": "Eight",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "eight",
-        "eight"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_282",
-      "name": "Incredible",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "incredible",
-        "incredible"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_283",
-      "name": "Broke",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "broke",
-        "broke"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_284",
-      "name": "Sense",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "sense",
-        "sense"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_285",
-      "name": "Stack",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "stack",
-        "stack"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_286",
-      "name": "That's",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "that's",
-        "that's"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_287",
-      "name": "Stupid",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "stupid",
-        "stupid"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_288",
-      "name": "Potential",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "potential",
-        "potential"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_289",
-      "name": "Purpose",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "purpose",
-        "purpose"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_290",
-      "name": "Financial",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "financial",
-        "financial"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_291",
-      "name": "Consultants",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "consultants",
-        "consultants"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_292",
-      "name": "Educational",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "educational",
-        "educational"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_293",
-      "name": "Doesn't",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "doesn't",
-        "doesn't"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_294",
-      "name": "Important",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "important",
-        "important"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_295",
-      "name": "Draft",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "draft",
-        "draft"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
-    },
-    {
-      "concept_id": "auto_296",
-      "name": "Continue",
-      "category": "Auto_Discovered",
-      "definition": "Concept extracted from Lesson04",
-      "keywords": [
-        "continue",
-        "continue"
-      ],
-      "visual_markers": [],
-      "parent_concepts": [],
-      "related_concepts": [],
-      "opposite_concepts": [],
-      "confidence_weight": 0.0
+      "confidence_weight": 0.05
     }
   ],
   "relationships": [
@@ -6771,6 +3311,1370 @@
       "target": "Balance",
       "strength": 0.9,
       "description": "VAL acts as support when market is balanced."
+    },
+    {
+      "source": "Absorption",
+      "target": "Aggression",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Momentum",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Break",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Balance",
+      "target": "Market",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 4
+    },
+    {
+      "source": "Profile",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Absorption",
+      "target": "Breakout",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Break",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Break",
+      "target": "Breakout",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 12
+    },
+    {
+      "source": "Balance",
+      "target": "Profile",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Footprint",
+      "target": "Print",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Market",
+      "target": "Profile",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Aggressive",
+      "target": "Break",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 4
+    },
+    {
+      "source": "Delta",
+      "target": "Reward",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggressive",
+      "target": "Balance",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggressive",
+      "target": "Market",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Break",
+      "target": "Market",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 8
+    },
+    {
+      "source": "Momentum",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Break",
+      "target": "Momentum",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 4
+    },
+    {
+      "source": "Break",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 4
+    },
+    {
+      "source": "Breakout",
+      "target": "Market",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggressive",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Market",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Aggression",
+      "target": "Market",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Reward",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggression",
+      "target": "Break",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Aggressive",
+      "target": "Print",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Balance",
+      "target": "Momentum",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Balance",
+      "target": "Break",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 4
+    },
+    {
+      "source": "Break",
+      "target": "Reward",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Absorption",
+      "target": "Aggressive",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Delta",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggressive",
+      "target": "Auction",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Market",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Market",
+      "target": "Reward",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Balance",
+      "target": "Breakout",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Breakout",
+      "target": "Initial",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Balance",
+      "target": "Initial",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Break",
+      "target": "Initial",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Momentum",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggression",
+      "target": "Print",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Balance",
+      "target": "Candle",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Print",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggressive",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Candle",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggression",
+      "target": "Breakout",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Auction",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Auction",
+      "target": "Break",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Chart",
+      "target": "Profile",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Follow-up",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Break",
+      "target": "Range",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Auction",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Range",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Candle",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Break",
+      "target": "Candle",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Candle",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Break",
+      "target": "Passive",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Auction",
+      "target": "Breakout",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Break",
+      "target": "Break-even",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 4
+    },
+    {
+      "source": "Market",
+      "target": "Range",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Break-even",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Break-even",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Break",
+      "target": "Risk-free",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Balance",
+      "target": "Imbalance",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Market",
+      "target": "Single",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Auction",
+      "target": "Range",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Management",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Management",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Exit",
+      "target": "Management",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggression",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Auction",
+      "target": "Profile",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggression",
+      "target": "Delta",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Profile",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Market",
+      "target": "Passive",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Delta",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Setup",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Risk-free",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Management",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Candle",
+      "target": "Delta",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Candle",
+      "target": "Print",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Delta",
+      "target": "Print",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Auction",
+      "target": "Support",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Break",
+      "target": "Support",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggressive",
+      "target": "Range",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggression",
+      "target": "Aggressive",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Entry",
+      "target": "Exit",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Break",
+      "target": "Profile",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Balance",
+      "target": "Range",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggression",
+      "target": "Momentum",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Candle",
+      "target": "Reward",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggression",
+      "target": "Candle",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 5
+    },
+    {
+      "source": "Breakout",
+      "target": "Candle",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Auction",
+      "target": "Candle",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Auction",
+      "target": "Momentum",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Candle",
+      "target": "Structure",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Auction",
+      "target": "Reversal",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Candle",
+      "target": "Single",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 4
+    },
+    {
+      "source": "Setup",
+      "target": "Single",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Auction",
+      "target": "Break-even",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggressive",
+      "target": "Break-even",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Single",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Break-even",
+      "target": "Entry",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Break",
+      "target": "Entry",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Reward",
+      "target": "Structure",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Chart",
+      "target": "Market",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Chart",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Breakout",
+      "target": "Reward",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Trade",
+      "target": "Trend",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Candle",
+      "target": "Momentum",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Balance",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Candle",
+      "target": "Volume",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Candle",
+      "target": "Range",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Absorption",
+      "target": "Market",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggression",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Initial",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Break",
+      "target": "Print",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Chart",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Lock-in",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Delta",
+      "target": "Profile",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Reward",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggressive",
+      "target": "Initial",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Entry",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggression",
+      "target": "Entry",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
     }
   ],
   "decision_hierarchy": {
@@ -6972,294 +4876,219 @@
     "deduplicate_by_name": true
   },
   "evolution_log": [
-    "ADDED 'Shoot' (auto_028)",
-    "ADDED 'Trades' (auto_029)",
-    "ADDED 'Today' (auto_030)",
-    "ADDED 'Blood' (auto_031)",
-    "ADDED 'Sweat' (auto_032)",
-    "ADDED 'Sculpt' (auto_033)",
-    "ADDED 'Community' (auto_034)",
-    "ADDED 'Content' (auto_035)",
-    "ADDED 'Guarantee' (auto_036)",
-    "ADDED 'Short' (auto_037)",
-    "ADDED 'Market' (auto_038)",
-    "ADDED 'Expect' (auto_039)",
-    "ADDED 'Close' (auto_040)",
-    "ADDED 'Let's' (auto_041)",
-    "ADDED 'Start' (auto_042)",
-    "ADDED 'First' (auto_043)",
-    "ADDED 'Audio' (auto_044)",
-    "ADDED 'Couldn't' (auto_045)",
-    "ADDED 'Concentrate' (auto_046)",
-    "ADDED 'Long-term' (auto_047)",
-    "ADDED 'Value' (auto_048)",
-    "ADDED 'Crazy' (auto_049)",
-    "ADDED 'Sellers' (auto_050)",
-    "ADDED 'Complete' (auto_051)",
-    "ADDED 'Control' (auto_052)",
-    "ADDED 'Auction' (auto_053)",
-    "ADDED 'Caught' (auto_054)",
-    "ADDED 'Report' (auto_055)",
-    "ADDED 'Reconfirm' (auto_056)",
-    "ADDED 'Initial' (auto_057)",
-    "ADDED 'Explain' (auto_058)",
-    "ADDED 'Nasdaq' (auto_059)",
-    "ADDED 'Profile' (auto_060)",
-    "ADDED 'Effort' (auto_061)",
-    "ADDED 'Second' (auto_062)",
-    "ADDED 'Profit' (auto_063)",
-    "ADDED 'Bottom' (auto_064)",
-    "ADDED 'Spark' (auto_065)",
-    "ADDED 'Directional' (auto_066)",
-    "ADDED 'Retrace' (auto_067)",
-    "ADDED 'Print' (auto_068)",
-    "ADDED 'Manage' (auto_069)",
-    "ADDED 'Break' (auto_070)",
-    "ADDED 'Didn't' (auto_071)",
-    "ADDED 'Don't' (auto_072)",
-    "ADDED 'Dollars' (auto_073)",
-    "ADDED 'Total' (auto_074)",
-    "ADDED 'Think' (auto_075)",
-    "ADDED 'Record' (auto_076)",
-    "ADDED 'Majority' (auto_077)",
-    "ADDED 'Reason' (auto_078)",
-    "ADDED 'Aggressive' (auto_079)",
-    "ADDED 'Capitalize' (auto_080)",
-    "ADDED 'Wrong' (auto_081)",
-    "ADDED 'Accelerate' (auto_082)",
-    "ADDED 'Little' (auto_083)",
-    "ADDED 'Interactive' (auto_084)",
-    "ADDED 'Brokers' (auto_085)",
-    "ADDED 'Enjoy' (auto_086)",
-    "ADDED 'Contracts' (auto_087)",
-    "ADDED 'Reload' (auto_088)",
-    "ADDED 'Areas' (auto_089)",
-    "ADDED 'Reward' (auto_090)",
-    "ADDED 'Generous' (auto_091)",
-    "ADDED 'Choppy' (auto_092)",
-    "ADDED 'Victory' (auto_093)",
-    "ADDED 'Trade' (auto_094)",
-    "ADDED 'Buyers' (auto_095)",
-    "ADDED 'Profits' (auto_096)",
-    "ADDED 'Understand' (auto_097)",
-    "ADDED 'Buyer's' (auto_098)",
-    "ADDED 'Anticipate' (auto_099)",
-    "ADDED 'Error' (auto_100)",
-    "ADDED 'Management' (auto_101)",
-    "KEYWORD 'area' -> 'Value_Area' (freq=21)",
+    "ADDED concept 'Short' (auto_028, conf=0.00)",
+    "ADDED concept 'Market' (auto_029, conf=0.00)",
+    "ADDED concept 'Close' (auto_030, conf=0.00)",
+    "ADDED concept 'Long-term' (auto_031, conf=0.00)",
+    "ADDED concept 'Auction' (auto_032, conf=0.00)",
+    "ADDED concept 'Initial' (auto_033, conf=0.00)",
+    "ADDED concept 'Profile' (auto_034, conf=0.00)",
+    "ADDED concept 'Print' (auto_035, conf=0.00)",
+    "ADDED concept 'Break' (auto_036, conf=0.00)",
+    "ADDED concept 'Aggressive' (auto_037, conf=0.00)",
+    "ADDED concept 'Reward' (auto_038, conf=0.00)",
+    "ADDED concept 'Trade' (auto_039, conf=0.00)",
+    "ADDED concept 'Management' (auto_040, conf=0.00)",
+    "FILTERED 61 low-quality invented concepts",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Aggression' (conf=0.45)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Momentum' (conf=0.45)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Setup' (conf=0.45)",
+    "FILTERED 10 low-quality relationships",
+    "KEYWORD 'profit' -> 'Stop_Loss_in_Profit' (freq=28)",
     "KEYWORD 'risk' -> 'Risk_to_Reward' (freq=13)",
     "KEYWORD 'have' -> 'Mismanagement' (freq=12)",
     "KEYWORD 'loss' -> 'Stop_Loss_in_Profit' (freq=11)",
+    "KEYWORD 'sellers' -> 'Absorption' (freq=8)",
     "KEYWORD 'that' -> 'Fundamentals' (freq=8)",
-    "KEYWORD 'high' -> 'Previous_Session_High_Low' (freq=7)",
     "KEYWORD 'failed' -> 'Failed_Auction' (freq=7)",
-    "KEYWORD 'take' -> 'Mismanagement' (freq=7)",
     "KEYWORD 'position' -> 'Position_Size' (freq=7)",
+    "KEYWORD 'nasdaq' -> 'NASDAQ_Effort' (freq=6)",
     "KEYWORD 'even' -> 'Revenge_Trading' (freq=6)",
-    "KEYWORD 'more' -> 'Daily_Loss_Limit' (freq=5)",
-    "ADDED 'Emoji' (auto_102)",
-    "ADDED 'People' (auto_103)",
-    "ADDED 'Settings' (auto_104)",
-    "ADDED 'Remove' (auto_105)",
-    "ADDED 'Share' (auto_106)",
-    "ADDED 'Platform' (auto_107)",
-    "ADDED 'Screen' (auto_108)",
-    "ADDED 'Visible' (auto_109)",
-    "ADDED 'Perfect' (auto_110)",
-    "ADDED 'Welcome' (auto_111)",
-    "ADDED 'Scalps' (auto_112)",
-    "ADDED 'Minutes' (auto_113)",
-    "ADDED 'Connect' (auto_114)",
-    "ADDED 'Clarify' (auto_115)",
-    "ADDED 'Beginners' (auto_116)",
-    "ADDED 'Point' (auto_117)",
-    "ADDED 'Friends' (auto_118)",
-    "ADDED 'Study' (auto_119)",
-    "ADDED 'Candle' (auto_120)",
-    "ADDED 'Video' (auto_121)",
-    "ADDED 'Youtube' (auto_122)",
-    "ADDED 'Terms' (auto_123)",
-    "ADDED 'Model' (auto_124)",
-    "ADDED 'Process' (auto_125)",
-    "ADDED 'Break-even' (auto_126)",
-    "ADDED 'Stable' (auto_127)",
-    "ADDED 'Equity' (auto_128)",
-    "ADDED 'Clear' (auto_129)",
-    "ADDED 'Moment' (auto_130)",
-    "ADDED 'Instagram' (auto_131)",
-    "ADDED 'Cumulative' (auto_132)",
-    "ADDED 'Audience' (auto_133)",
-    "ADDED 'Followers' (auto_134)",
-    "ADDED 'Maximum' (auto_135)",
-    "ADDED 'Percent' (auto_136)",
-    "ADDED 'Mission' (auto_137)",
-    "ADDED 'Achieve' (auto_138)",
-    "ADDED 'Soldiers' (auto_139)",
-    "ADDED 'Hobby' (auto_140)",
-    "ADDED 'Killers' (auto_141)",
-    "ADDED 'Professional' (auto_142)",
-    "ADDED 'Three' (auto_143)",
-    "ADDED 'General' (auto_144)",
-    "ADDED 'Treat' (auto_145)",
-    "ADDED 'Equip' (auto_146)",
-    "ADDED 'Mindset' (auto_147)",
-    "ADDED 'Models' (auto_148)",
-    "ADDED 'Internet' (auto_149)",
-    "ADDED 'Build' (auto_150)",
-    "ADDED 'Structure' (auto_151)",
-    "ADDED 'Battleground' (auto_152)",
-    "ADDED 'Announcement' (auto_153)",
-    "ADDED 'Receive' (auto_154)",
-    "ADDED 'Topic' (auto_155)",
-    "ADDED 'Volume' (auto_156)",
-    "ADDED 'Single' (auto_157)",
-    "ADDED 'Session' (auto_158)",
-    "ADDED 'Update' (auto_159)",
-    "ADDED 'Asset' (auto_160)",
-    "ADDED 'Managers' (auto_161)",
-    "ADDED 'Breakdown' (auto_162)",
-    "ADDED 'Indices' (auto_163)",
-    "ADDED 'Commitment' (auto_164)",
-    "ADDED 'Traders' (auto_165)",
-    "ADDED 'Non-commercial' (auto_166)",
-    "ADDED 'Speculators' (auto_167)",
-    "ADDED 'Narrative' (auto_168)",
-    "ADDED 'Surprise' (auto_169)",
-    "ADDED 'Promise' (auto_170)",
-    "ADDED 'Front' (auto_171)",
-    "ADDED 'Service' (auto_172)",
-    "ADDED 'Change' (auto_173)",
-    "ADDED 'Input' (auto_174)",
-    "ADDED 'Hours' (auto_175)",
-    "ADDED 'Capable' (auto_176)",
-    "ADDED 'Assistant' (auto_177)",
-    "ADDED 'Times' (auto_178)",
-    "ADDED 'Artificial' (auto_179)",
-    "ADDED 'Intelligence' (auto_180)",
-    "ADDED 'Opportunity' (auto_181)",
-    "ADDED 'Charts' (auto_182)",
-    "ADDED 'Implement' (auto_183)",
-    "ADDED 'Fabio' (auto_184)",
-    "ADDED 'Improve' (auto_185)",
-    "ADDED 'Difficult' (auto_186)",
+    "KEYWORD 'buyers' -> 'Absorption' (freq=6)",
+    "KEYWORD 'with' -> 'Trend_Continuation' (freq=4)",
+    "KEYWORD 'effort' -> 'NASDAQ_Effort' (freq=4)",
+    "KEYWORD 'manage' -> 'Mismanagement' (freq=4)",
+    "KEYWORD 'above' -> 'Breakout' (freq=3)",
+    "KEYWORD 'back' -> 'Pullback' (freq=3)",
+    "ADDED concept 'Candle' (auto_041, conf=0.00)",
+    "ADDED concept 'Break-even' (auto_042, conf=0.00)",
+    "ADDED concept 'Structure' (auto_043, conf=0.00)",
+    "ADDED concept 'Volume' (auto_044, conf=0.00)",
+    "ADDED concept 'Single' (auto_045, conf=0.00)",
+    "ADDED concept 'Session' (auto_046, conf=0.00)",
+    "ADDED concept 'Non-commercial' (auto_047, conf=0.00)",
+    "ADDED concept 'Change' (auto_048, conf=0.00)",
+    "FILTERED 93 low-quality invented concepts",
+    "ADDED rel 'Break' --cooccurs_with--> 'Trade' (conf=0.55)",
+    "ADDED rel 'Balance' --cooccurs_with--> 'Market' (conf=0.65)",
+    "ADDED rel 'Profile' --cooccurs_with--> 'Trade' (conf=0.65)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Breakout' (conf=0.45)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Break' (conf=0.65)",
+    "ADDED rel 'Break' --cooccurs_with--> 'Breakout' (conf=0.65)",
+    "ADDED rel 'Balance' --cooccurs_with--> 'Profile' (conf=0.55)",
+    "ADDED rel 'Footprint' --cooccurs_with--> 'Print' (conf=0.45)",
+    "ADDED rel 'Market' --cooccurs_with--> 'Profile' (conf=0.65)",
+    "ADDED rel 'Aggressive' --cooccurs_with--> 'Break' (conf=0.65)",
+    "ADDED rel 'Delta' --cooccurs_with--> 'Reward' (conf=0.45)",
+    "ADDED rel 'Aggressive' --cooccurs_with--> 'Balance' (conf=0.45)",
+    "ADDED rel 'Aggressive' --cooccurs_with--> 'Market' (conf=0.65)",
+    "ADDED rel 'Break' --cooccurs_with--> 'Market' (conf=0.65)",
+    "ADDED rel 'Momentum' --cooccurs_with--> 'Setup' (conf=0.55)",
+    "ADDED rel 'Break' --cooccurs_with--> 'Momentum' (conf=0.65)",
+    "ADDED rel 'Break' --cooccurs_with--> 'Setup' (conf=0.65)",
+    "ADDED rel 'Breakout' --cooccurs_with--> 'Market' (conf=0.45)",
+    "ADDED rel 'Aggressive' --cooccurs_with--> 'Trade' (conf=0.65)",
+    "ADDED rel 'Market' --cooccurs_with--> 'Trade' (conf=0.65)",
+    "ADDED rel 'Aggression' --cooccurs_with--> 'Market' (conf=0.45)",
+    "ADDED rel 'Reward' --cooccurs_with--> 'Trade' (conf=0.45)",
+    "ADDED rel 'Aggression' --cooccurs_with--> 'Break' (conf=0.65)",
+    "ADDED rel 'Aggressive' --cooccurs_with--> 'Print' (conf=0.45)",
+    "ADDED rel 'Balance' --cooccurs_with--> 'Momentum' (conf=0.45)",
+    "ADDED rel 'Balance' --cooccurs_with--> 'Break' (conf=0.65)",
+    "ADDED rel 'Break' --cooccurs_with--> 'Reward' (conf=0.65)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Aggressive' (conf=0.45)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Delta' (conf=0.45)",
+    "ADDED rel 'Aggressive' --cooccurs_with--> 'Auction' (conf=0.45)",
+    "ADDED rel 'Market' --cooccurs_with--> 'Setup' (conf=0.45)",
+    "ADDED rel 'Market' --cooccurs_with--> 'Reward' (conf=0.45)",
+    "ADDED rel 'Balance' --cooccurs_with--> 'Breakout' (conf=0.55)",
+    "ADDED rel 'Breakout' --cooccurs_with--> 'Initial' (conf=0.55)",
+    "ADDED rel 'Balance' --cooccurs_with--> 'Initial' (conf=0.55)",
+    "ADDED rel 'Break' --cooccurs_with--> 'Initial' (conf=0.55)",
+    "ADDED rel 'Momentum' --cooccurs_with--> 'Trade' (conf=0.45)",
+    "ADDED rel 'Aggression' --cooccurs_with--> 'Print' (conf=0.45)",
+    "FILTERED 58 low-quality relationships",
+    "SKIPPED 1 duplicate relationships",
     "KEYWORD 'what' -> 'Market_State' (freq=167)",
-    "KEYWORD 'with' -> 'Trend_Continuation' (freq=82)",
-    "KEYWORD 'back' -> 'Pullback' (freq=60)",
     "KEYWORD 'only' -> 'Technical_Only' (freq=46)",
-    "KEYWORD 'move' -> 'Remove' (freq=46)",
-    "ADDED 'Hello' (auto_187)",
-    "ADDED 'Warriors' (auto_188)",
-    "ADDED 'We're' (auto_189)",
-    "ADDED 'Andrea' (auto_190)",
-    "ADDED 'Avengers' (auto_191)",
-    "ADDED 'Inside' (auto_192)",
-    "ADDED 'Participate' (auto_193)",
-    "ADDED 'Battlefield' (auto_194)",
-    "ADDED 'Lives' (auto_195)",
-    "ADDED 'Possibility' (auto_196)",
-    "ADDED 'Members' (auto_197)",
-    "ADDED 'Profitable' (auto_198)",
-    "ADDED 'Group' (auto_199)",
-    "ADDED 'Tomorrow' (auto_200)",
-    "ADDED 'Dashboard' (auto_201)",
-    "ADDED 'Weekend' (auto_202)",
-    "ADDED 'Invite' (auto_203)",
-    "ADDED 'Nutritionist' (auto_204)",
-    "ADDED 'Supplements' (auto_205)",
-    "ADDED 'Reduce' (auto_206)",
-    "ADDED 'Stress' (auto_207)",
-    "ADDED 'Stressful' (auto_208)",
-    "ADDED 'Profession' (auto_209)",
-    "ADDED 'Grande' (auto_210)",
-    "ADDED 'Podcast' (auto_211)",
-    "ADDED 'Business' (auto_212)",
-    "ADDED 'Garbage' (auto_213)",
-    "ADDED 'Stuff' (auto_214)",
-    "ADDED 'Anyway' (auto_215)",
-    "ADDED 'Money' (auto_216)",
-    "ADDED 'Previous' (auto_217)",
-    "ADDED 'Guess' (auto_218)",
-    "ADDED 'Survive' (auto_219)",
-    "ADDED 'Multiple' (auto_220)",
-    "ADDED 'Arzalan' (auto_221)",
-    "ADDED 'Mental' (auto_222)",
-    "ADDED 'Method' (auto_223)",
-    "ADDED 'Trick' (auto_224)",
-    "ADDED 'Yesterday' (auto_225)",
-    "ADDED 'Micro' (auto_226)",
-    "ADDED 'Florin' (auto_227)",
-    "ADDED 'Inefficient' (auto_228)",
-    "ADDED 'Resilience' (auto_229)",
-    "ADDED 'Story' (auto_230)",
-    "ADDED 'World' (auto_231)",
-    "ADDED 'Champion' (auto_232)",
-    "ADDED 'Different' (auto_233)",
-    "ADDED 'Brain' (auto_234)",
-    "ADDED 'Personal' (auto_235)",
-    "ADDED 'Capital' (auto_236)",
-    "ADDED 'Threshold' (auto_237)",
-    "ADDED 'Example' (auto_238)",
-    "ADDED 'Millions' (auto_239)",
-    "ADDED 'Streak' (auto_240)",
-    "ADDED 'Happen' (auto_241)",
-    "ADDED 'Damage' (auto_242)",
-    "ADDED 'Hardship' (auto_243)",
-    "ADDED 'Sugar' (auto_244)",
-    "ADDED 'Transparent' (auto_245)",
-    "ADDED 'Upside' (auto_246)",
-    "ADDED 'Downside' (auto_247)",
-    "ADDED 'Rules' (auto_248)",
-    "ADDED 'Whole' (auto_249)",
-    "ADDED 'Account' (auto_250)",
-    "ADDED 'Drawdown' (auto_251)",
-    "ADDED 'Strategy' (auto_252)",
-    "ADDED 'Human' (auto_253)",
-    "ADDED 'Nature' (auto_254)",
-    "ADDED 'Shame' (auto_255)",
-    "ADDED 'Needs' (auto_256)",
-    "ADDED 'Camera' (auto_257)",
-    "ADDED 'Congratulations' (auto_258)",
-    "KEYWORD 'need' -> 'Needs' (freq=102)",
-    "KEYWORD 'long' -> 'Long-term' (freq=81)",
-    "ADDED 'Beautiful' (auto_259)",
-    "ADDED 'Check' (auto_260)",
-    "ADDED 'Points' (auto_261)",
-    "ADDED 'What's' (auto_262)",
-    "ADDED 'Small' (auto_263)",
-    "ADDED 'Contract' (auto_264)",
-    "ADDED 'Scalp' (auto_265)",
-    "ADDED 'Phase' (auto_266)",
-    "ADDED 'Strong' (auto_267)",
-    "ADDED 'Uptrend' (auto_268)",
-    "ADDED 'Gameplay' (auto_269)",
-    "ADDED 'Accept' (auto_270)",
-    "ADDED 'Theory' (auto_271)",
-    "ADDED 'Quality' (auto_272)",
-    "ADDED 'Extension' (auto_273)",
-    "ADDED 'Wakas' (auto_274)",
-    "ADDED 'Thousand' (auto_275)",
-    "ADDED 'Thank' (auto_276)",
-    "ADDED 'Chart' (auto_277)",
-    "ADDED 'Arslan' (auto_278)",
-    "ADDED 'Ready' (auto_279)",
-    "ADDED 'Follow' (auto_280)",
-    "ADDED 'Eight' (auto_281)",
-    "ADDED 'Incredible' (auto_282)",
-    "ADDED 'Broke' (auto_283)",
-    "ADDED 'Sense' (auto_284)",
-    "ADDED 'Stack' (auto_285)",
-    "ADDED 'That's' (auto_286)",
-    "ADDED 'Stupid' (auto_287)",
-    "ADDED 'Potential' (auto_288)",
-    "ADDED 'Purpose' (auto_289)",
-    "ADDED 'Financial' (auto_290)",
-    "ADDED 'Consultants' (auto_291)",
-    "ADDED 'Educational' (auto_292)",
-    "ADDED 'Doesn't' (auto_293)",
-    "ADDED 'Important' (auto_294)",
-    "ADDED 'Draft' (auto_295)",
-    "ADDED 'Continue' (auto_296)",
-    "KEYWORD 'make' -> 'Risk_to_Reward' (freq=94)"
+    "KEYWORD 'clear' -> 'Neutral' (freq=26)",
+    "KEYWORD 'strong' -> 'Displacement' (freq=25)",
+    "KEYWORD 'before' -> 'Pre_Market' (freq=24)",
+    "KEYWORD 'order' -> 'Order_Flow' (freq=23)",
+    "KEYWORD 'trading' -> 'Revenge_Trading' (freq=22)",
+    "ADDED concept 'Trend' (auto_049, conf=0.00)",
+    "ADDED concept 'Signal' (auto_050, conf=0.00)",
+    "ADDED concept 'On-chain' (auto_051, conf=0.00)",
+    "ADDED concept 'Lock-in' (auto_052, conf=0.00)",
+    "ADDED concept 'Pattern' (auto_053, conf=0.00)",
+    "ADDED concept 'Chart' (auto_054, conf=0.00)",
+    "ADDED concept 'Support' (auto_055, conf=0.00)",
+    "ADDED concept 'Passive' (auto_056, conf=0.00)",
+    "ADDED concept 'Range' (auto_057, conf=0.00)",
+    "ADDED concept 'Risk-free' (auto_058, conf=0.00)",
+    "ADDED concept 'Follow-up' (auto_059, conf=0.00)",
+    "ADDED concept 'Resistance' (auto_060, conf=0.00)",
+    "FILTERED 495 low-quality invented concepts",
+    "ADDED rel 'Balance' --cooccurs_with--> 'Candle' (conf=0.45)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Print' (conf=0.45)",
+    "ADDED rel 'Aggressive' --cooccurs_with--> 'Setup' (conf=0.45)",
+    "ADDED rel 'Candle' --cooccurs_with--> 'Trade' (conf=0.45)",
+    "ADDED rel 'Aggression' --cooccurs_with--> 'Breakout' (conf=0.45)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Auction' (conf=0.45)",
+    "ADDED rel 'Auction' --cooccurs_with--> 'Break' (conf=0.45)",
+    "FILTERED 13 low-quality relationships",
+    "SKIPPED 7 duplicate relationships",
+    "ADDED concept 'Extension' (auto_061, conf=0.00)",
+    "FILTERED 67 low-quality invented concepts",
+    "ADDED rel 'Chart' --cooccurs_with--> 'Profile' (conf=0.45)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Follow-up' (conf=0.45)",
+    "ADDED rel 'Break' --cooccurs_with--> 'Range' (conf=0.45)",
+    "ADDED rel 'Auction' --cooccurs_with--> 'Trade' (conf=0.55)",
+    "ADDED rel 'Range' --cooccurs_with--> 'Trade' (conf=0.45)",
+    "ADDED rel 'Candle' --cooccurs_with--> 'Setup' (conf=0.45)",
+    "ADDED rel 'Break' --cooccurs_with--> 'Candle' (conf=0.45)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Candle' (conf=0.65)",
+    "ADDED rel 'Break' --cooccurs_with--> 'Passive' (conf=0.45)",
+    "ADDED rel 'Auction' --cooccurs_with--> 'Breakout' (conf=0.55)",
+    "ADDED rel 'Break' --cooccurs_with--> 'Break-even' (conf=0.65)",
+    "ADDED rel 'Market' --cooccurs_with--> 'Range' (conf=0.45)",
+    "ADDED rel 'Break-even' --cooccurs_with--> 'Setup' (conf=0.45)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Break-even' (conf=0.45)",
+    "ADDED rel 'Break' --cooccurs_with--> 'Risk-free' (conf=0.45)",
+    "ADDED rel 'Balance' --cooccurs_with--> 'Imbalance' (conf=0.45)",
+    "ADDED rel 'Market' --cooccurs_with--> 'Single' (conf=0.45)",
+    "ADDED rel 'Auction' --cooccurs_with--> 'Range' (conf=0.45)",
+    "ADDED rel 'Management' --cooccurs_with--> 'Trade' (conf=0.45)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Management' (conf=0.45)",
+    "ADDED rel 'Exit' --cooccurs_with--> 'Management' (conf=0.45)",
+    "ADDED rel 'Aggression' --cooccurs_with--> 'Setup' (conf=0.45)",
+    "ADDED rel 'Auction' --cooccurs_with--> 'Profile' (conf=0.45)",
+    "ADDED rel 'Aggression' --cooccurs_with--> 'Delta' (conf=0.45)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Profile' (conf=0.45)",
+    "ADDED rel 'Market' --cooccurs_with--> 'Passive' (conf=0.45)",
+    "ADDED rel 'Delta' --cooccurs_with--> 'Setup' (conf=0.45)",
+    "ADDED rel 'Setup' --cooccurs_with--> 'Trade' (conf=0.45)",
+    "ADDED rel 'Risk-free' --cooccurs_with--> 'Setup' (conf=0.45)",
+    "ADDED rel 'Management' --cooccurs_with--> 'Setup' (conf=0.45)",
+    "ADDED rel 'Candle' --cooccurs_with--> 'Delta' (conf=0.45)",
+    "ADDED rel 'Candle' --cooccurs_with--> 'Print' (conf=0.45)",
+    "ADDED rel 'Delta' --cooccurs_with--> 'Print' (conf=0.45)",
+    "ADDED rel 'Auction' --cooccurs_with--> 'Support' (conf=0.45)",
+    "ADDED rel 'Break' --cooccurs_with--> 'Support' (conf=0.45)",
+    "ADDED rel 'Aggressive' --cooccurs_with--> 'Range' (conf=0.45)",
+    "ADDED rel 'Aggression' --cooccurs_with--> 'Aggressive' (conf=0.45)",
+    "ADDED rel 'Entry' --cooccurs_with--> 'Exit' (conf=0.45)",
+    "ADDED rel 'Break' --cooccurs_with--> 'Profile' (conf=0.45)",
+    "ADDED rel 'Balance' --cooccurs_with--> 'Range' (conf=0.45)",
+    "FILTERED 77 low-quality relationships",
+    "SKIPPED 24 duplicate relationships",
+    "KEYWORD 'trades' -> 'Daily_Loss_Limit' (freq=50)",
+    "ADDED concept 'Multi-million' (auto_062, conf=0.00)",
+    "ADDED concept 'Composite' (auto_063, conf=0.00)",
+    "FILTERED 234 low-quality invented concepts",
+    "ADDED rel 'Aggression' --cooccurs_with--> 'Momentum' (conf=0.45)",
+    "ADDED rel 'Candle' --cooccurs_with--> 'Reward' (conf=0.45)",
+    "ADDED rel 'Aggression' --cooccurs_with--> 'Candle' (conf=0.65)",
+    "ADDED rel 'Breakout' --cooccurs_with--> 'Candle' (conf=0.45)",
+    "ADDED rel 'Auction' --cooccurs_with--> 'Candle' (conf=0.55)",
+    "ADDED rel 'Auction' --cooccurs_with--> 'Momentum' (conf=0.45)",
+    "ADDED rel 'Candle' --cooccurs_with--> 'Structure' (conf=0.45)",
+    "ADDED rel 'Auction' --cooccurs_with--> 'Reversal' (conf=0.45)",
+    "ADDED rel 'Candle' --cooccurs_with--> 'Single' (conf=0.65)",
+    "ADDED rel 'Setup' --cooccurs_with--> 'Single' (conf=0.55)",
+    "ADDED rel 'Auction' --cooccurs_with--> 'Break-even' (conf=0.45)",
+    "ADDED rel 'Aggressive' --cooccurs_with--> 'Break-even' (conf=0.45)",
+    "ADDED rel 'Single' --cooccurs_with--> 'Trade' (conf=0.45)",
+    "ADDED rel 'Break-even' --cooccurs_with--> 'Entry' (conf=0.45)",
+    "ADDED rel 'Break' --cooccurs_with--> 'Entry' (conf=0.45)",
+    "ADDED rel 'Reward' --cooccurs_with--> 'Structure' (conf=0.45)",
+    "ADDED rel 'Chart' --cooccurs_with--> 'Market' (conf=0.45)",
+    "ADDED rel 'Chart' --cooccurs_with--> 'Trade' (conf=0.45)",
+    "ADDED rel 'Breakout' --cooccurs_with--> 'Reward' (conf=0.45)",
+    "ADDED rel 'Trade' --cooccurs_with--> 'Trend' (conf=0.45)",
+    "ADDED rel 'Candle' --cooccurs_with--> 'Momentum' (conf=0.55)",
+    "ADDED rel 'Balance' --cooccurs_with--> 'Setup' (conf=0.55)",
+    "ADDED rel 'Candle' --cooccurs_with--> 'Volume' (conf=0.45)",
+    "ADDED rel 'Candle' --cooccurs_with--> 'Range' (conf=0.65)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Market' (conf=0.45)",
+    "ADDED rel 'Aggression' --cooccurs_with--> 'Trade' (conf=0.45)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Initial' (conf=0.55)",
+    "ADDED rel 'Break' --cooccurs_with--> 'Print' (conf=0.45)",
+    "ADDED rel 'Chart' --cooccurs_with--> 'Setup' (conf=0.45)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Lock-in' (conf=0.45)",
+    "ADDED rel 'Delta' --cooccurs_with--> 'Profile' (conf=0.45)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Trade' (conf=0.45)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Reward' (conf=0.45)",
+    "ADDED rel 'Aggressive' --cooccurs_with--> 'Initial' (conf=0.45)",
+    "ADDED rel 'Absorption' --cooccurs_with--> 'Entry' (conf=0.45)",
+    "ADDED rel 'Aggression' --cooccurs_with--> 'Entry' (conf=0.45)",
+    "FILTERED 62 low-quality relationships",
+    "SKIPPED 24 duplicate relationships",
+    "ADDED concept 'Pre-market' (auto_064, conf=0.00)",
+    "ADDED concept 'Excess' (auto_065, conf=0.00)",
+    "FILTERED 282 low-quality invented concepts",
+    "FILTERED 2 low-quality relationships",
+    "SKIPPED 1 duplicate relationships"
   ],
-  "evolution_version": "1.0.4"
+  "evolution_version": "1.0.6",
+  "_evolution_stats": {
+    "concepts_added": 2,
+    "concepts_name_filtered": 282,
+    "concepts_freq_filtered": 0,
+    "relationships_added": 0,
+    "relationships_filtered": 2,
+    "relationships_duplicate": 1,
+    "keywords_added": 0,
+    "timestamp": "2026-08-12T15:43:42.411177"
+  }
 }

@@ -1,0 +1,3026 @@
+{
+  "total_concepts": 135,
+  "total_relationships": 183,
+  "predefined_relationships": 0,
+  "discovered_relationships": 183,
+  "concepts": [
+    "Absorption",
+    "Activity",
+    "Advice",
+    "Aggression",
+    "Aggressive",
+    "Asset",
+    "Attempt",
+    "Auction",
+    "Balance",
+    "Battle",
+    "Beautiful",
+    "Break",
+    "Breakout",
+    "Build",
+    "Buyers",
+    "CVD",
+    "Candle",
+    "Chart_Detected",
+    "Check",
+    "Cherry",
+    "Choppy_Structure",
+    "Close",
+    "Community",
+    "Continue",
+    "Control",
+    "Count",
+    "Course",
+    "Crazy",
+    "Dance",
+    "Delta",
+    "Didn't",
+    "Difficult",
+    "Direction",
+    "Directional",
+    "Displacement",
+    "Don't",
+    "Entry",
+    "European",
+    "Euros",
+    "Exhaustion",
+    "Exit",
+    "Failed_Auction",
+    "Finish",
+    "Follow",
+    "Follow-up",
+    "Footprint",
+    "Footprint_Grid",
+    "Funny",
+    "Gameplay",
+    "Gap",
+    "HVN",
+    "Hello",
+    "Imagine",
+    "Imbalance",
+    "Initial",
+    "Inputs",
+    "Inside",
+    "Interactive",
+    "LVN",
+    "Learn",
+    "Let's",
+    "Level",
+    "Little",
+    "Low_Volatility_Chart",
+    "Lower_Low",
+    "Manage",
+    "Market",
+    "Method",
+    "Minutes",
+    "Mission",
+    "Momentum",
+    "Money",
+    "Movement",
+    "Neutral_Delta",
+    "No_Chart_Detected",
+    "Order_Flow",
+    "POC",
+    "Passive",
+    "People",
+    "Personal",
+    "Pizza",
+    "Point",
+    "Previous",
+    "Previous_Session_High_Low",
+    "Price",
+    "Print",
+    "Professional",
+    "Profile",
+    "Profit",
+    "Proof",
+    "Protect",
+    "Range",
+    "Ranging_Structure",
+    "Ready",
+    "Reload",
+    "Repaid",
+    "Respect",
+    "Results",
+    "Retracement",
+    "Reward",
+    "Ricky",
+    "Risk_to_Reward",
+    "Second",
+    "Sellers",
+    "Session",
+    "Setup",
+    "Significant",
+    "Smart",
+    "Space",
+    "Stable",
+    "Stop_Loss",
+    "Stuff",
+    "Stupid",
+    "Sudden",
+    "Target",
+    "Think",
+    "Thousand",
+    "Three",
+    "Times",
+    "Today",
+    "Trade",
+    "Trade_Management",
+    "Trend",
+    "Trending_Structure",
+    "Trust",
+    "Understand",
+    "Uptrend",
+    "VAH",
+    "VAL",
+    "VWAP",
+    "Visual_Balanced",
+    "Visual_Uptrend",
+    "Volatility",
+    "What's",
+    "Yesterday"
+  ],
+  "concept_details": [
+    {
+      "name": "Absorption",
+      "category": "Order_Flow",
+      "definition": "Heavy volume at a level without price continuation. One side is absorbing the other's aggression, often signaling exhaustion and impending reversal.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Activity",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Advice",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Aggression",
+      "category": "Order_Flow",
+      "definition": "One side is actively and forcefully pushing price. Seen in large footprint bubbles, stacked imbalances, and CVD divergence.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Aggressive",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "confidence_weight": 0.05
+    },
+    {
+      "name": "Asset",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Attempt",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Auction",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "confidence_weight": 0.05
+    },
+    {
+      "name": "Balance",
+      "category": "Market_State",
+      "definition": "Market is rotating around fair value, accepting price within a defined range. ~70% of the time. Do NOT trade breakouts here.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Battle",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Beautiful",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Break",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "confidence_weight": 0.05
+    },
+    {
+      "name": "Breakout",
+      "category": "Price_Action",
+      "definition": "Price moves decisively beyond a key level (VAH, VAL, range high/low) with volume and aggression.",
+      "confidence_weight": 0.9
+    },
+    {
+      "name": "Build",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Buyers",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "CVD",
+      "category": "Order_Flow",
+      "definition": "Cumulative Volume Delta \u2014 the running total of delta. Shows which side has been in control over time. Trending CVD = sustained aggression.",
+      "confidence_weight": 0.9
+    },
+    {
+      "name": "Candle",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "confidence_weight": 0.05
+    },
+    {
+      "name": "Chart_Detected",
+      "category": "Auto_Discovered",
+      "definition": "A trading chart region was identified in the video frame through contour analysis.",
+      "confidence_weight": 0.7906835848193872
+    },
+    {
+      "name": "Check",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Cherry",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Choppy_Structure",
+      "category": "Auto_Discovered",
+      "definition": "Chart structure is choppy with no clear directional bias.",
+      "confidence_weight": 0.2
+    },
+    {
+      "name": "Close",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "confidence_weight": 0.05
+    },
+    {
+      "name": "Community",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Continue",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Control",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Count",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Course",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Crazy",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Dance",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Delta",
+      "category": "Order_Flow",
+      "definition": "The net difference between buying and selling pressure at each price level. Positive delta = buyers aggressive; negative = sellers aggressive.",
+      "confidence_weight": 0.9
+    },
+    {
+      "name": "Didn't",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Difficult",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Direction",
+      "category": "Market_Structure",
+      "definition": "The prevailing price trajectory \u2014 up, down, or sideways. Fabio establishes directional bias before any setup.",
+      "confidence_weight": 0.9
+    },
+    {
+      "name": "Directional",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Displacement",
+      "category": "Price_Action",
+      "definition": "A strong, impulsive move with little retracement. Indicates imbalance and institutional participation.",
+      "confidence_weight": 0.9
+    },
+    {
+      "name": "Don't",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Entry",
+      "category": "Setup",
+      "definition": "The specific price and moment where a position is initiated. Must align with State + Level + Flow.",
+      "confidence_weight": 0.95
+    },
+    {
+      "name": "European",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Euros",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Exhaustion",
+      "category": "Order_Flow",
+      "definition": "The aggressive side is running out of orders. Seen as delta divergence, shrinking volume on new highs/lows, and absorption.",
+      "confidence_weight": 0.9
+    },
+    {
+      "name": "Exit",
+      "category": "Risk_Management",
+      "definition": "Closing a position, either at target, stop, or discretionary management point.",
+      "confidence_weight": 0.9
+    },
+    {
+      "name": "Failed_Auction",
+      "category": "Setup",
+      "definition": "Price tests a key level multiple times but fails to break through. Indicates absorption and often leads to a reversal or mean reversion.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Finish",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Follow",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Follow-up",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Footprint",
+      "category": "Order_Flow",
+      "definition": "The ATAS footprint chart showing bid/ask volume at each price level. Reveals microstructure: absorption, aggression, and imbalance.",
+      "confidence_weight": 0.85
+    },
+    {
+      "name": "Footprint_Grid",
+      "category": "Auto_Discovered",
+      "definition": "Detected a footprint chart grid with approximately 468 cells.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Funny",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Gameplay",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Gap",
+      "category": "Price_Action",
+      "definition": "A price discontinuity between close and next open. Fabio notes gaps and often waits for them to fill before managing.",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "HVN",
+      "category": "Level",
+      "definition": "High Volume Node \u2014 a thick volume area where price tends to stall or reverse. Acts as support/resistance.",
+      "confidence_weight": 0.85
+    },
+    {
+      "name": "Hello",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Imagine",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Imbalance",
+      "category": "Market_State",
+      "definition": "One side is aggressively pushing price to discover new value. Characterized by displacement, momentum, and directional conviction.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Initial",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "confidence_weight": 0.05
+    },
+    {
+      "name": "Inputs",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Inside",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Interactive",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "LVN",
+      "category": "Level",
+      "definition": "Low Volume Node \u2014 a thinly traded area in the profile where price moves quickly. Key for entries in trend continuation.",
+      "confidence_weight": 0.95
+    },
+    {
+      "name": "Learn",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Let's",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Level",
+      "category": "Level",
+      "definition": "Abstract root concept for any price location that matters in the market structure. Levels are derived from volume profile, market structure, and prior session data.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Little",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Low_Volatility_Chart",
+      "category": "Auto_Discovered",
+      "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+      "confidence_weight": 0.35
+    },
+    {
+      "name": "Lower_Low",
+      "category": "Market_Structure",
+      "definition": "Price makes a new low below the previous swing low. Bearish structural development.",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Manage",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Market",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "confidence_weight": 0.05
+    },
+    {
+      "name": "Method",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Minutes",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Mission",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Momentum",
+      "category": "Order_Flow",
+      "definition": "The rate and strength of price movement. Sustained momentum confirms directional conviction.",
+      "confidence_weight": 0.9
+    },
+    {
+      "name": "Money",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Movement",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Neutral_Delta",
+      "category": "Auto_Discovered",
+      "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+      "confidence_weight": 0.08263086005818432
+    },
+    {
+      "name": "No_Chart_Detected",
+      "category": "Auto_Discovered",
+      "definition": "No chart region identified in the video frame.",
+      "confidence_weight": 0.3
+    },
+    {
+      "name": "Order_Flow",
+      "category": "Order_Flow",
+      "definition": "Abstract root concept for microstructural evidence of buyer and seller behavior at the footprint level.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "POC",
+      "category": "Level",
+      "definition": "Point of Control \u2014 the price level with the highest traded volume. Represents fair value and the strongest magnet for price.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Passive",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "People",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Personal",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Pizza",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Point",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Previous",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Previous_Session_High_Low",
+      "category": "Level",
+      "definition": "The high and low of the prior trading session. Often acts as key support/resistance and targets.",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Price",
+      "category": "Price_Action",
+      "definition": "The current market price. The central variable that all analysis revolves around.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Print",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "confidence_weight": 0.05
+    },
+    {
+      "name": "Professional",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Profile",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "confidence_weight": 0.05
+    },
+    {
+      "name": "Profit",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Proof",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Protect",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Range",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson03",
+      "confidence_weight": 0.05
+    },
+    {
+      "name": "Ranging_Structure",
+      "category": "Auto_Discovered",
+      "definition": "Chart structure is ranging or balanced.",
+      "confidence_weight": 0.3
+    },
+    {
+      "name": "Ready",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Reload",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Repaid",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Respect",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Results",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Retracement",
+      "category": "Price_Action",
+      "definition": "A temporary price move against the prevailing trend. Synonymous with pullback in Fabio's vocabulary.",
+      "confidence_weight": 0.85
+    },
+    {
+      "name": "Reward",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "confidence_weight": 0.05
+    },
+    {
+      "name": "Ricky",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Risk_to_Reward",
+      "category": "Risk_Management",
+      "definition": "The ratio of potential profit to initial risk. Fabio targets minimum 1:3, often 1:5 or higher on NASDAQ.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Second",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Sellers",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Session",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "confidence_weight": 0.05
+    },
+    {
+      "name": "Setup",
+      "category": "Setup",
+      "definition": "Abstract root concept for specific trade configurations that emerge when State + Level + Flow align.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Significant",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Smart",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Space",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Stable",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Stop_Loss",
+      "category": "Risk_Management",
+      "definition": "The predefined price level where a losing position is closed to limit risk. The maximum acceptable loss per trade.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Stuff",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Stupid",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Sudden",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Target",
+      "category": "Risk_Management",
+      "definition": "The intended exit price for a profitable trade. Synonymous with profit target in Fabio's methodology.",
+      "confidence_weight": 0.95
+    },
+    {
+      "name": "Think",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Thousand",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Three",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Times",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Today",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Trade",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson01",
+      "confidence_weight": 0.05
+    },
+    {
+      "name": "Trade_Management",
+      "category": "Risk_Management",
+      "definition": "Abstract root concept for all position and risk management activities \u2014 entries, stops, targets, sizing, and psychological control.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "Trend",
+      "category": "Auto_Discovered",
+      "definition": "Concept extracted from Lesson02",
+      "confidence_weight": 0.05
+    },
+    {
+      "name": "Trending_Structure",
+      "category": "Auto_Discovered",
+      "definition": "Chart structure is clearly trending with directional bias.",
+      "confidence_weight": 0.35
+    },
+    {
+      "name": "Trust",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Understand",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Uptrend",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "VAH",
+      "category": "Level",
+      "definition": "Value Area High \u2014 the upper boundary of the 70% volume zone. Acts as resistance in balance; breakout target in imbalance.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "VAL",
+      "category": "Level",
+      "definition": "Value Area Low \u2014 the lower boundary of the 70% volume zone. Acts as support in balance; breakdown target in imbalance.",
+      "confidence_weight": 1.0
+    },
+    {
+      "name": "VWAP",
+      "category": "Level",
+      "definition": "Volume Weighted Average Price \u2014 institutional benchmark. Above VWAP = bullish bias; below = bearish bias.",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Visual_Balanced",
+      "category": "Auto_Discovered",
+      "definition": "Price action shows balanced, rotational market conditions.",
+      "confidence_weight": 0.25
+    },
+    {
+      "name": "Visual_Uptrend",
+      "category": "Vision_Derived",
+      "definition": "Price action silhouette indicates upward directional movement.",
+      "confidence_weight": 0.15
+    },
+    {
+      "name": "Volatility",
+      "category": "Market_Structure",
+      "definition": "The degree of price movement. Fabio distinguishes between directional volatility (tradeable) and choppy volatility (avoid).",
+      "confidence_weight": 0.85
+    },
+    {
+      "name": "What's",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    },
+    {
+      "name": "Yesterday",
+      "category": "Extracted",
+      "definition": "",
+      "confidence_weight": 0.8
+    }
+  ],
+  "relationships": [
+    {
+      "source": "Absorption",
+      "target": "Aggression",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Momentum",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Neutral_Delta",
+      "target": "Footprint_Grid",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.68,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Neutral_Delta",
+      "target": "Chart_Detected",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.68,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Trending_Structure",
+      "target": "Footprint_Grid",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.7,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Trending_Structure",
+      "target": "Low_Volatility_Chart",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.4,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Trending_Structure",
+      "target": "Chart_Detected",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.7,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Trending_Structure",
+      "target": "Ranging_Structure",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.4,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "No_Chart_Detected",
+      "target": "Footprint_Grid",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "No_Chart_Detected",
+      "target": "Chart_Detected",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Choppy_Structure",
+      "target": "Footprint_Grid",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Choppy_Structure",
+      "target": "Chart_Detected",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Footprint_Grid",
+      "target": "Low_Volatility_Chart",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.7,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Footprint_Grid",
+      "target": "Chart_Detected",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 1.0,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Footprint_Grid",
+      "target": "Ranging_Structure",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.7,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Low_Volatility_Chart",
+      "target": "Chart_Detected",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.7,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Low_Volatility_Chart",
+      "target": "Ranging_Structure",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.4,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Chart_Detected",
+      "target": "Ranging_Structure",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.7,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Break",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Balance",
+      "target": "Market",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 4
+    },
+    {
+      "source": "Profile",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Absorption",
+      "target": "Breakout",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Break",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Break",
+      "target": "Breakout",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 12
+    },
+    {
+      "source": "Balance",
+      "target": "Profile",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Footprint",
+      "target": "Print",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Market",
+      "target": "Profile",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Aggressive",
+      "target": "Break",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 4
+    },
+    {
+      "source": "Delta",
+      "target": "Reward",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggressive",
+      "target": "Balance",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggressive",
+      "target": "Market",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Break",
+      "target": "Market",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 8
+    },
+    {
+      "source": "Momentum",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Break",
+      "target": "Momentum",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 4
+    },
+    {
+      "source": "Break",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 4
+    },
+    {
+      "source": "Breakout",
+      "target": "Market",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggressive",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Market",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Aggression",
+      "target": "Market",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Reward",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggression",
+      "target": "Break",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Aggressive",
+      "target": "Print",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Balance",
+      "target": "Momentum",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Balance",
+      "target": "Break",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 4
+    },
+    {
+      "source": "Break",
+      "target": "Reward",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Absorption",
+      "target": "Aggressive",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Delta",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggressive",
+      "target": "Auction",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Market",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Market",
+      "target": "Reward",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Balance",
+      "target": "Breakout",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Breakout",
+      "target": "Initial",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Balance",
+      "target": "Initial",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Break",
+      "target": "Initial",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Momentum",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggression",
+      "target": "Print",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Chart_Detected",
+      "target": "Lower_Low",
+      "relation": "confirms",
+      "relationship_type": "confirms",
+      "confidence": 1.0,
+      "direction": "forward",
+      "discovered": true,
+      "method": "vision_transcript_fusion",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Footprint_Grid",
+      "target": "Lower_Low",
+      "relation": "confirms",
+      "relationship_type": "confirms",
+      "confidence": 0.77,
+      "direction": "forward",
+      "discovered": true,
+      "method": "vision_transcript_fusion",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Low_Volatility_Chart",
+      "target": "Lower_Low",
+      "relation": "confirms",
+      "relationship_type": "confirms",
+      "confidence": 0.4,
+      "direction": "forward",
+      "discovered": true,
+      "method": "vision_transcript_fusion",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Ranging_Structure",
+      "target": "Lower_Low",
+      "relation": "confirms",
+      "relationship_type": "confirms",
+      "confidence": 0.4,
+      "direction": "forward",
+      "discovered": true,
+      "method": "vision_transcript_fusion",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Setup",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 4
+    },
+    {
+      "source": "Profile",
+      "target": "Trend",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggression",
+      "target": "Breakout",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Auction",
+      "target": "Break",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Aggression",
+      "target": "Aggressive",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Aggression",
+      "target": "Reward",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Absorption",
+      "target": "Reward",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 4
+    },
+    {
+      "source": "Auction",
+      "target": "Breakout",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Delta",
+      "target": "Market",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Trade",
+      "target": "Trend",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Footprint",
+      "target": "Profile",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Delta",
+      "target": "Footprint",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Delta",
+      "target": "Profile",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Print",
+      "target": "Profile",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Delta",
+      "target": "Print",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggression",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Breakout",
+      "target": "Momentum",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Breakout",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 2
+    },
+    {
+      "source": "Aggressive",
+      "target": "Breakout",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 3
+    },
+    {
+      "source": "Aggressive",
+      "target": "Momentum",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Break",
+      "target": "Print",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 4
+    },
+    {
+      "source": "Exit",
+      "target": "Momentum",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Breakout",
+      "target": "Trend",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Break",
+      "target": "Trend",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Momentum",
+      "target": "Reward",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Momentum",
+      "target": "Print",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Print",
+      "target": "Reward",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Print",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Market",
+      "target": "Trend",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Print",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Aggressive",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Absorption",
+      "target": "Auction",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Market",
+      "target": "Print",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Reward",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Neutral_Delta",
+      "target": "Low_Volatility_Chart",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.44,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Neutral_Delta",
+      "target": "Ranging_Structure",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.44,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Footprint_Grid",
+      "target": "Visual_Balanced",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.62,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Chart_Detected",
+      "target": "Visual_Balanced",
+      "relation": "cooccurs_with",
+      "relationship_type": "cooccurs_with",
+      "confidence": 0.62,
+      "direction": "bidirectional",
+      "discovered": true,
+      "method": "vision_cooccurrence",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Chart_Detected",
+      "target": "Entry",
+      "relation": "confirms",
+      "relationship_type": "confirms",
+      "confidence": 1.0,
+      "direction": "forward",
+      "discovered": true,
+      "method": "vision_transcript_fusion",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Footprint_Grid",
+      "target": "Entry",
+      "relation": "confirms",
+      "relationship_type": "confirms",
+      "confidence": 1.0,
+      "direction": "forward",
+      "discovered": true,
+      "method": "vision_transcript_fusion",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Low_Volatility_Chart",
+      "target": "Entry",
+      "relation": "confirms",
+      "relationship_type": "confirms",
+      "confidence": 0.4,
+      "direction": "forward",
+      "discovered": true,
+      "method": "vision_transcript_fusion",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Ranging_Structure",
+      "target": "Entry",
+      "relation": "confirms",
+      "relationship_type": "confirms",
+      "confidence": 0.4,
+      "direction": "forward",
+      "discovered": true,
+      "method": "vision_transcript_fusion",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Neutral_Delta",
+      "target": "Lower_Low",
+      "relation": "confirms",
+      "relationship_type": "confirms",
+      "confidence": 0.4,
+      "direction": "forward",
+      "discovered": true,
+      "method": "vision_transcript_fusion",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Neutral_Delta",
+      "target": "Entry",
+      "relation": "confirms",
+      "relationship_type": "confirms",
+      "confidence": 0.4,
+      "direction": "forward",
+      "discovered": true,
+      "method": "vision_transcript_fusion",
+      "cooccurrence_count": 1
+    },
+    {
+      "source": "Direction",
+      "target": "Trend",
+      "relation": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "matched_text": "even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have",
+      "cooccurrence_count": 2,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 12
+    },
+    {
+      "source": "Breakout",
+      "target": "Level",
+      "relation": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "matched_text": "the breakout and test of this level but they need to accept it okay i know that i wanted to do theor",
+      "cooccurrence_count": 6,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 13
+    },
+    {
+      "source": "Break",
+      "target": "Level",
+      "relation": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "matched_text": "the breakout and test of this level but they need to accept it okay i know that i wanted to do theor",
+      "cooccurrence_count": 15,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 13
+    },
+    {
+      "source": "Aggressive",
+      "target": "Level",
+      "relation": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "matched_text": "quality is good okay now as you can see the buyers are trying to get aggressive on this level so it ",
+      "cooccurrence_count": 4,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 16
+    },
+    {
+      "source": "Absorption",
+      "target": "Direction",
+      "relation": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "matched_text": "already locked the aggression now let's see if they can hold it or if it's an absorption the directi",
+      "cooccurrence_count": 3,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 23
+    },
+    {
+      "source": "Aggression",
+      "target": "Direction",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "already locked the aggression now let's see if they can hold it or if it's an absorption the directi",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 23
+    },
+    {
+      "source": "Level",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "matched_text": "purpose now they test this level they are not loading back this one so one trade that you can have",
+      "cooccurrence_count": 3,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 41
+    },
+    {
+      "source": "Absorption",
+      "target": "Level",
+      "relation": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "matched_text": "level that we have now because we have a huge also at the top we have absorption of the sellers but",
+      "cooccurrence_count": 10,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 47
+    },
+    {
+      "source": "Level",
+      "target": "Target",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "the first sensitive level that we can have is the round 26 100 this is a level that can become a tar",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 52
+    },
+    {
+      "source": "Level",
+      "target": "Session",
+      "relation": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "matched_text": "completely absorbed i pick same take profit level based off cash session i in previous weeks amazing",
+      "cooccurrence_count": 2,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 60
+    },
+    {
+      "source": "Retracement",
+      "target": "Reward",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "retracement okay and we can have a proper high risk to reward trade this is based on your decision l",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 70
+    },
+    {
+      "source": "Retracement",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "matched_text": "retracement okay and we can have a proper high risk to reward trade this is based on your decision l",
+      "cooccurrence_count": 2,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 70
+    },
+    {
+      "source": "Reward",
+      "target": "Target",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "target target we see it's here it's a big risk to reward trade let's see how it behave we have a flo",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 84
+    },
+    {
+      "source": "Target",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "target target we see it's here it's a big risk to reward trade let's see how it behave we have a flo",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 84
+    },
+    {
+      "source": "Level",
+      "target": "Retracement",
+      "relation": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "matched_text": "okay they can still go in the retracement but till this level hold",
+      "cooccurrence_count": 2,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 100
+    },
+    {
+      "source": "Break",
+      "target": "Range",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "protecting from here this is the top range so this is where also if we break we expect a squeeze see",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 108
+    },
+    {
+      "source": "Level",
+      "target": "Reward",
+      "relation": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "matched_text": "yeah the risk to reward is the same okay you see what happens they reloaded exactly from the level i",
+      "cooccurrence_count": 2,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 111
+    },
+    {
+      "source": "Level",
+      "target": "Market",
+      "relation": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "matched_text": "put risk in the market okay so you have the risk free on this white level guys i'm taking you by the",
+      "cooccurrence_count": 2,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 119
+    },
+    {
+      "source": "Auction",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "matched_text": "failed auction guys it's when they attempt to buy so you have big trades on the top but the price",
+      "cooccurrence_count": 2,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 133
+    },
+    {
+      "source": "Range",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "range or in the bottom range in the middle how much activity of the big trades you have",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 139
+    },
+    {
+      "source": "Candle",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "if this break with a full candle you have not only the setup from here you have also the setup of",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 142
+    },
+    {
+      "source": "Break",
+      "target": "Candle",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "if this break with a full candle you have not only the setup from here you have also the setup of",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 142
+    },
+    {
+      "source": "Absorption",
+      "target": "Candle",
+      "relation": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "matched_text": "bottom with this cell candle but the result is by what does it mean that we add an absorption and no",
+      "cooccurrence_count": 3,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 148
+    },
+    {
+      "source": "Auction",
+      "target": "Level",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "breakout of this level okay this is not a failed auction because they didn't engage the law",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 157
+    },
+    {
+      "source": "Market",
+      "target": "Range",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "how to not let the market take your money back okay now this is one minute it's not range it's not r",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 167
+    },
+    {
+      "source": "Momentum",
+      "target": "VAL",
+      "relation": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "matched_text": "so the invalidation point is really close what am i doing here i'm betting on this case on the momen",
+      "cooccurrence_count": 2,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 190
+    },
+    {
+      "source": "Session",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "matched_text": "position are managed from a break-even point this is not a triple a setup we had better setup last s",
+      "cooccurrence_count": 2,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 197
+    },
+    {
+      "source": "Break",
+      "target": "Session",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "position are managed from a break-even point this is not a triple a setup we had better setup last s",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 197
+    },
+    {
+      "source": "Balance",
+      "target": "Imbalance",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "the speed of tape it's stable the imbalance they create here from a price action point of view",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 231
+    },
+    {
+      "source": "Balance",
+      "target": "Level",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "to the balance level",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 260
+    },
+    {
+      "source": "Auction",
+      "target": "Range",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "now the buyers are dry the auction it's it's not interactive they are closed inside a range we can",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 281
+    },
+    {
+      "source": "Break",
+      "target": "POC",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "if you break the top recover another 500 in our pocket",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 301
+    },
+    {
+      "source": "Session",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "matched_text": "9 598 for the session look what we say this is the perfect management of the trade",
+      "cooccurrence_count": 2,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 310
+    },
+    {
+      "source": "Aggression",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "this is not aaa setup because we didn't add an aggression also okay we had only absorption",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 320
+    },
+    {
+      "source": "Auction",
+      "target": "Profile",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "to use profile framing how to use the main stuff to understand the auction because i want to save",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 350
+    },
+    {
+      "source": "Direction",
+      "target": "Profile",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "you have a directional day okay you have a directional day you are using your fixed profile",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 358
+    },
+    {
+      "source": "Aggression",
+      "target": "Delta",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "because you have the two main peak of delta this is aggression this is executed order this is what i",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 362
+    },
+    {
+      "source": "Market",
+      "target": "Session",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "when the market is going down and you remember the session of last week how many times we executed a",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 365
+    },
+    {
+      "source": "Absorption",
+      "target": "Profile",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "buyers and we can also use the fixed profile and when we go back we see from executed order the abso",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 368
+    },
+    {
+      "source": "Delta",
+      "target": "Direction",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "a setups okay is it clear for everyone guys i have the direction i have the delta level i have the a",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 378
+    },
+    {
+      "source": "Direction",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "confidence": 0.55,
+      "direction": "bidirectional",
+      "matched_text": "a setups okay is it clear for everyone guys i have the direction i have the delta level i have the a",
+      "cooccurrence_count": 2,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 378
+    },
+    {
+      "source": "Direction",
+      "target": "Level",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "a setups okay is it clear for everyone guys i have the direction i have the delta level i have the a",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 378
+    },
+    {
+      "source": "Delta",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "a setups okay is it clear for everyone guys i have the direction i have the delta level i have the a",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 378
+    },
+    {
+      "source": "Delta",
+      "target": "Level",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "a setups okay is it clear for everyone guys i have the direction i have the delta level i have the a",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 378
+    },
+    {
+      "source": "Level",
+      "target": "Setup",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "a setups okay is it clear for everyone guys i have the direction i have the delta level i have the a",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 378
+    },
+    {
+      "source": "Aggression",
+      "target": "Level",
+      "relation": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "matched_text": "aggression of the buyers is this cluster okay this one in the majority so this blue level is the maj",
+      "cooccurrence_count": 3,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 420
+    },
+    {
+      "source": "Candle",
+      "target": "Delta",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "live you see this huge absorption the delta is printing red purple sorry candle they got completely",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 437
+    },
+    {
+      "source": "Candle",
+      "target": "Print",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "live you see this huge absorption the delta is printing red purple sorry candle they got completely",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 437
+    },
+    {
+      "source": "Auction",
+      "target": "Target",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "we continue the auction this one is a little bit stupid target because it's really close",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 474
+    },
+    {
+      "source": "Aggressive",
+      "target": "Range",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "they are aggressive on the sell side while we are at the top range and the buyers are happily",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 478
+    },
+    {
+      "source": "Gap",
+      "target": "Level",
+      "relation": "cooccurs_with",
+      "confidence": 0.65,
+      "direction": "bidirectional",
+      "matched_text": "you cannot see if they go back here it's a reload level there is also a micro gap but it's really",
+      "cooccurrence_count": 4,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 480
+    },
+    {
+      "source": "Candle",
+      "target": "Session",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "with this candle and also buyers at the top a good up and we go and we finish the session",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 486
+    },
+    {
+      "source": "Candle",
+      "target": "Direction",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "direction of the gap so you have a up gap with a green candle and then you you continue you see",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 518
+    },
+    {
+      "source": "Direction",
+      "target": "Gap",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "direction of the gap so you have a up gap with a green candle and then you you continue you see",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 518
+    },
+    {
+      "source": "Candle",
+      "target": "Gap",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "direction of the gap so you have a up gap with a green candle and then you you continue you see",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 518
+    },
+    {
+      "source": "Balance",
+      "target": "Gap",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "another gap here you see it so now they rebalance you see what they shoot they are being absorbed he",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 519
+    },
+    {
+      "source": "Entry",
+      "target": "Exit",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "a lot a lot of fight look at people in the chat showing the zero drawdown entry and the exit at the",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 527
+    },
+    {
+      "source": "Session",
+      "target": "VAL",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "top beautiful crazy value brother was 3000 up before this session what i've learned from watching",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 528
+    },
+    {
+      "source": "Trend",
+      "target": "VAL",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "the video you already paid three times for the value i've been applying your trend following model",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 529
+    },
+    {
+      "source": "Direction",
+      "target": "Print",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "be a money printer on the nifty because the nifty is really directional okay it's really directional",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 535
+    },
+    {
+      "source": "Gap",
+      "target": "VAL",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "at this guys look at this look at this reload on the on the gap now i know how much this is valuable",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 547
+    },
+    {
+      "source": "Break",
+      "target": "Profile",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "so the profile framing was long the profile framing was long and look at the 26 100 they break it",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 556
+    },
+    {
+      "source": "Setup",
+      "target": "VAL",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "so the the potential momentum separate setup it's invalidated they want to retrace",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 573
+    },
+    {
+      "source": "Aggression",
+      "target": "Gap",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "and we see what they do they add an aggression with a gap down",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 590
+    },
+    {
+      "source": "Gap",
+      "target": "Trade",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "yeah there is a macro a micro gap on the downside this is not a good sign for my long trade",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 596
+    },
+    {
+      "source": "Breakout",
+      "target": "Gap",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "you see what they did in the breakout they managed to create another gap i don't know if it's visibl",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 611
+    },
+    {
+      "source": "Break",
+      "target": "Gap",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "you see what they did in the breakout they managed to create another gap i don't know if it's visibl",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 611
+    },
+    {
+      "source": "Balance",
+      "target": "Range",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "we go with a high probability to rebalance this area it is strange that the speed of tape is not",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 615
+    },
+    {
+      "source": "Momentum",
+      "target": "Volatility",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "volatility surge it's finished some amazing trade we managed also to try to do the momentum squeeze",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 618
+    },
+    {
+      "source": "Trade",
+      "target": "Volatility",
+      "relation": "cooccurs_with",
+      "confidence": 0.45,
+      "direction": "bidirectional",
+      "matched_text": "volatility surge it's finished some amazing trade we managed also to try to do the momentum squeeze",
+      "cooccurrence_count": 1,
+      "method": "cooccurrence",
+      "discovered": true,
+      "segment_index": 618
+    },
+    {
+      "source": "Visual_Uptrend",
+      "target": "Footprint_Grid",
+      "relation": "cooccurs_with",
+      "confidence": 0.57,
+      "direction": "bidirectional",
+      "method": "vision_cooccurrence",
+      "discovered": true
+    },
+    {
+      "source": "Visual_Uptrend",
+      "target": "Chart_Detected",
+      "relation": "cooccurs_with",
+      "confidence": 0.57,
+      "direction": "bidirectional",
+      "method": "vision_cooccurrence",
+      "discovered": true
+    },
+    {
+      "source": "Footprint_Grid",
+      "target": "Trade_Management",
+      "relation": "confirms",
+      "confidence": 1.0,
+      "direction": "forward",
+      "method": "vision_transcript_fusion",
+      "discovered": true
+    },
+    {
+      "source": "Chart_Detected",
+      "target": "Trade_Management",
+      "relation": "confirms",
+      "confidence": 0.41,
+      "direction": "forward",
+      "method": "vision_transcript_fusion",
+      "discovered": true
+    },
+    {
+      "source": "Neutral_Delta",
+      "target": "Trade_Management",
+      "relation": "confirms",
+      "confidence": 0.41,
+      "direction": "forward",
+      "method": "vision_transcript_fusion",
+      "discovered": true
+    },
+    {
+      "source": "Low_Volatility_Chart",
+      "target": "Trade_Management",
+      "relation": "confirms",
+      "confidence": 0.4,
+      "direction": "forward",
+      "method": "vision_transcript_fusion",
+      "discovered": true
+    },
+    {
+      "source": "Ranging_Structure",
+      "target": "Trade_Management",
+      "relation": "confirms",
+      "confidence": 0.4,
+      "direction": "forward",
+      "method": "vision_transcript_fusion",
+      "discovered": true
+    }
+  ]
+}

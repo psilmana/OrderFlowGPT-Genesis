@@ -1,0 +1,2134 @@
+GENESIS LIVE COACH — Explanations
+======================================================================
+
+Lesson: Lesson04 | Frame: 0
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson04_frame0000 (similarity 1): hello beautiful people give me one in chat you can hear me how is it going...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: c0193612e81627b6
+============================================================
+
+Lesson: Lesson04 | Frame: 1
+Timestamp: 00:01:41
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_1. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_1.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0000 (similarity 0.2): hello beautiful people give me one in chat you can hear me how is it going...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.2775 (LOW)
+Explanation ID: f5279568e406bceb
+============================================================
+
+Lesson: Lesson04 | Frame: 2
+Timestamp: 00:03:22
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson04_frame0000 (similarity 1): hello beautiful people give me one in chat you can hear me how is it going...
+  • Lesson04_frame0001 (similarity 1): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 1): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: aea544062f993ff5
+============================================================
+
+Lesson: Lesson04 | Frame: 3
+Timestamp: 00:05:04
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_3. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_3.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+  • Lesson04_frame0003 (similarity 0.4): one for me it's a really stupid trade i just wanted to show you that it's connected let's close this...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3175 (LOW)
+Explanation ID: 2089620fd6306144
+============================================================
+
+Lesson: Lesson04 | Frame: 4
+Timestamp: 00:06:45
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson04_frame0000 (similarity 1): hello beautiful people give me one in chat you can hear me how is it going...
+  • Lesson04_frame0001 (similarity 1): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 1): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: f59c6261d58dcaf7
+============================================================
+
+Lesson: Lesson04 | Frame: 5
+Timestamp: 00:08:26
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0003 (similarity 0.4): one for me it's a really stupid trade i just wanted to show you that it's connected let's close this...
+  • Lesson04_frame0005 (similarity 0.4): so the the method it's easy guys the method it's easy okay it's not difficult now um ricky i think...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: eb49de4103ed1d6c
+============================================================
+
+Lesson: Lesson04 | Frame: 6
+Timestamp: 00:10:08
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: BID at price_6. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_6.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+  • Lesson04_frame0003 (similarity 0.4): one for me it's a really stupid trade i just wanted to show you that it's connected let's close this...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3175 (LOW)
+Explanation ID: 83aae1ae498573ec
+============================================================
+
+Lesson: Lesson04 | Frame: 7
+Timestamp: 00:11:49
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_7. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_7.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+  • Lesson04_frame0003 (similarity 0.4): one for me it's a really stupid trade i just wanted to show you that it's connected let's close this...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3175 (LOW)
+Explanation ID: 3ef4e9c127eab51b
+============================================================
+
+Lesson: Lesson04 | Frame: 8
+Timestamp: 00:13:30
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_8. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_8.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+  • Lesson04_frame0003 (similarity 0.4): one for me it's a really stupid trade i just wanted to show you that it's connected let's close this...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3175 (LOW)
+Explanation ID: a5513d6d90747eb1
+============================================================
+
+Lesson: Lesson04 | Frame: 9
+Timestamp: 00:15:12
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_9. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_9.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 150654fe346c7d4f
+============================================================
+
+Lesson: Lesson04 | Frame: 10
+Timestamp: 00:16:53
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_10. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_10.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: dcba9791b02ed368
+============================================================
+
+Lesson: Lesson04 | Frame: 11
+Timestamp: 00:18:34
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_11. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_11.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 05ae08404fa5408b
+============================================================
+
+Lesson: Lesson04 | Frame: 12
+Timestamp: 00:20:16
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_12. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_12.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: eca3495e66b05991
+============================================================
+
+Lesson: Lesson04 | Frame: 13
+Timestamp: 00:21:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson04_frame0000 (similarity 1): hello beautiful people give me one in chat you can hear me how is it going...
+  • Lesson04_frame0001 (similarity 1): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 1): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: a16fea71ab9b4dcc
+============================================================
+
+Lesson: Lesson04 | Frame: 14
+Timestamp: 00:23:38
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_14. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_14.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 084b75fbb1e2ee9d
+============================================================
+
+Lesson: Lesson04 | Frame: 15
+Timestamp: 00:25:20
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_15. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_15.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 3ee0f2b16c94ebc6
+============================================================
+
+Lesson: Lesson04 | Frame: 16
+Timestamp: 00:27:01
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_16. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_16.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: a57b0dfab80221e0
+============================================================
+
+Lesson: Lesson04 | Frame: 17
+Timestamp: 00:28:42
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_17. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_17.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: befee103d577d5bf
+============================================================
+
+Lesson: Lesson04 | Frame: 18
+Timestamp: 00:30:24
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0003 (similarity 0.4): one for me it's a really stupid trade i just wanted to show you that it's connected let's close this...
+  • Lesson04_frame0005 (similarity 0.4): so the the method it's easy guys the method it's easy okay it's not difficult now um ricky i think...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: b24e29741160a892
+============================================================
+
+Lesson: Lesson04 | Frame: 19
+Timestamp: 00:32:05
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_19. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_19.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 008fed3343a53e8a
+============================================================
+
+Lesson: Lesson04 | Frame: 20
+Timestamp: 00:33:46
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_20. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_20.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 6a97d5d5ddceb557
+============================================================
+
+Lesson: Lesson04 | Frame: 21
+Timestamp: 00:35:28
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0003 (similarity 0.4): one for me it's a really stupid trade i just wanted to show you that it's connected let's close this...
+  • Lesson04_frame0005 (similarity 0.4): so the the method it's easy guys the method it's easy okay it's not difficult now um ricky i think...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 4076eaaed4e2349a
+============================================================
+
+Lesson: Lesson04 | Frame: 22
+Timestamp: 00:37:09
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_22. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_22.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 12c83e2614b1b211
+============================================================
+
+Lesson: Lesson04 | Frame: 23
+Timestamp: 00:38:50
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_23. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_23.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 2974c4c12a81eba9
+============================================================
+
+Lesson: Lesson04 | Frame: 24
+Timestamp: 00:40:32
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson04_frame0000 (similarity 1): hello beautiful people give me one in chat you can hear me how is it going...
+  • Lesson04_frame0001 (similarity 1): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 1): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 96aa9c5806aaf39a
+============================================================
+
+Lesson: Lesson04 | Frame: 25
+Timestamp: 00:42:13
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson04_frame0000 (similarity 1): hello beautiful people give me one in chat you can hear me how is it going...
+  • Lesson04_frame0001 (similarity 1): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 1): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: fcd2a0ec6cdec2e2
+============================================================
+
+Lesson: Lesson04 | Frame: 26
+Timestamp: 00:43:54
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson04_frame0000 (similarity 1): hello beautiful people give me one in chat you can hear me how is it going...
+  • Lesson04_frame0001 (similarity 1): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 1): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 121e0407c2ec4c43
+============================================================
+
+Lesson: Lesson04 | Frame: 27
+Timestamp: 00:45:36
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: ASK at price_27. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_27.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: e418b655dcf6e6ad
+============================================================
+
+Lesson: Lesson04 | Frame: 28
+Timestamp: 00:47:17
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: ASK at price_28. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_28.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: b5e7642c4962c97a
+============================================================
+
+Lesson: Lesson04 | Frame: 29
+Timestamp: 00:48:58
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_29. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_29.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 704392af3237e6dc
+============================================================
+
+Lesson: Lesson04 | Frame: 30
+Timestamp: 00:50:40
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: ASK at price_30. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_30.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 9929cfb36e3388e3
+============================================================
+
+Lesson: Lesson04 | Frame: 31
+Timestamp: 00:52:21
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: ASK at price_31. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_31.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 3658335e9d3a2324
+============================================================
+
+Lesson: Lesson04 | Frame: 32
+Timestamp: 00:54:02
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson04_frame0000 (similarity 1): hello beautiful people give me one in chat you can hear me how is it going...
+  • Lesson04_frame0001 (similarity 1): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 1): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: eb3646ab977da8dd
+============================================================
+
+Lesson: Lesson04 | Frame: 33
+Timestamp: 00:55:44
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_33. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_33.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 35ff837906f4951e
+============================================================
+
+Lesson: Lesson04 | Frame: 34
+Timestamp: 00:57:25
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_34. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_34.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 8bf07f38e083563c
+============================================================
+
+Lesson: Lesson04 | Frame: 35
+Timestamp: 00:59:06
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_35. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_35.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: e73b82122cb8bd43
+============================================================
+
+Lesson: Lesson04 | Frame: 36
+Timestamp: 01:00:48
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_36. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_36.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 3a4fa8edf6d180e4
+============================================================
+
+Lesson: Lesson04 | Frame: 37
+Timestamp: 01:02:29
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson04_frame0000 (similarity 1): hello beautiful people give me one in chat you can hear me how is it going...
+  • Lesson04_frame0001 (similarity 1): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 1): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: cf2d642316b9ca85
+============================================================
+
+Lesson: Lesson04 | Frame: 38
+Timestamp: 01:04:10
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson04_frame0000 (similarity 1): hello beautiful people give me one in chat you can hear me how is it going...
+  • Lesson04_frame0001 (similarity 1): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 1): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 0be2a2df67584d67
+============================================================
+
+Lesson: Lesson04 | Frame: 39
+Timestamp: 01:05:52
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_39. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_39.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 35cdfdb4e2efd938
+============================================================
+
+Lesson: Lesson04 | Frame: 40
+Timestamp: 01:07:33
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson04_frame0000 (similarity 1): hello beautiful people give me one in chat you can hear me how is it going...
+  • Lesson04_frame0001 (similarity 1): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 1): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 15474ebcb0059685
+============================================================
+
+Lesson: Lesson04 | Frame: 41
+Timestamp: 01:09:14
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0003 (similarity 0.4): one for me it's a really stupid trade i just wanted to show you that it's connected let's close this...
+  • Lesson04_frame0005 (similarity 0.4): so the the method it's easy guys the method it's easy okay it's not difficult now um ricky i think...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 262754f71c2bfe70
+============================================================
+
+Lesson: Lesson04 | Frame: 42
+Timestamp: 01:10:56
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson04_frame0000 (similarity 1): hello beautiful people give me one in chat you can hear me how is it going...
+  • Lesson04_frame0001 (similarity 1): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 1): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: ff7064ec6ac385f1
+============================================================
+
+Lesson: Lesson04 | Frame: 43
+Timestamp: 01:12:37
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_43. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_43.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 64e30c3d6830e8d8
+============================================================
+
+Lesson: Lesson04 | Frame: 44
+Timestamp: 01:14:18
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: BID at price_44. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_44.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 4fa4bab53551251d
+============================================================
+
+Lesson: Lesson04 | Frame: 45
+Timestamp: 01:16:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0003 (similarity 0.4): one for me it's a really stupid trade i just wanted to show you that it's connected let's close this...
+  • Lesson04_frame0005 (similarity 0.4): so the the method it's easy guys the method it's easy okay it's not difficult now um ricky i think...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: 4a15d448a63f5e82
+============================================================
+
+Lesson: Lesson04 | Frame: 46
+Timestamp: 01:17:41
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 563b0bda63a2d623
+============================================================
+
+Lesson: Lesson04 | Frame: 47
+Timestamp: 01:19:22
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_47. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_47.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 6ab1fd26888d3dd0
+============================================================
+
+Lesson: Lesson04 | Frame: 48
+Timestamp: 01:21:04
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_48. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_48.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 7216a00d3fe97c86
+============================================================
+
+Lesson: Lesson04 | Frame: 49
+Timestamp: 01:22:45
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_49. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_49.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Ready, Follow, Sudden.
+  • Ready (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Follow (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Sudden (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Movement (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Understand (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson04_frame0009 (similarity 0.6): see this sudden movement and then you need to understand if there can be a follow-up or not in...
+  • Lesson04_frame0001 (similarity 0.4): even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have...
+  • Lesson04_frame0002 (similarity 0.4): i feel good ready to go ready to go now we want to see how it follow through on this one...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: c41c42ecc4f312ac
+============================================================
+

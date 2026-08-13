@@ -1,0 +1,168 @@
+{
+  "report_id": "2dc1e7a085e9b2cf",
+  "report_timestamp": "2026-08-12T17:41:15.211194",
+  "mode": "vision",
+  "total_lessons": 1,
+  "total_concepts_learned": 77,
+  "total_experiences_created": 50,
+  "total_sessions_completed": 50,
+  "total_coach_explanations": 100,
+  "total_frames_processed": 50,
+  "overall_learning_confidence": 0.497289200868686,
+  "concept_mastery_distribution": [
+    [
+      "NOVICE",
+      77
+    ]
+  ],
+  "top_concepts_by_confidence": [
+    [
+      "Shoot",
+      0.0
+    ],
+    [
+      "Trades",
+      0.0
+    ],
+    [
+      "Today",
+      0.0
+    ],
+    [
+      "Short",
+      0.0
+    ],
+    [
+      "Absorption",
+      0.0
+    ],
+    [
+      "Close",
+      0.0
+    ],
+    [
+      "Let's",
+      0.0
+    ],
+    [
+      "Start",
+      0.0
+    ],
+    [
+      "First",
+      0.0
+    ],
+    [
+      "Long-term",
+      0.0
+    ]
+  ],
+  "what_was_learned": [
+    "Lesson Lesson01: 77 concepts, 50 experiences"
+  ],
+  "what_needs_more_study": [
+    "Absorption (NOVICE)",
+    "Accelerate (NOVICE)",
+    "Additional (NOVICE)",
+    "Aggressive (NOVICE)",
+    "Anticipate (NOVICE)",
+    "Appointment (NOVICE)",
+    "Areas (NOVICE)",
+    "Auction (NOVICE)",
+    "Avoid (NOVICE)",
+    "Beautiful (NOVICE)",
+    "Bottom (NOVICE)",
+    "Break (NOVICE)",
+    "Breakeven (NOVICE)",
+    "Brokers (NOVICE)",
+    "Buyers (NOVICE)",
+    "Choppiness (NOVICE)",
+    "Close (NOVICE)",
+    "Collapse (NOVICE)",
+    "Continue (NOVICE)",
+    "Control (NOVICE)"
+  ],
+  "knowledge_graph_summary": "Knowledge graph: 0 concepts, 0 relationships, avg confidence 0",
+  "coverage": {
+    "total_segments": 105,
+    "covered_segments": 98,
+    "uncovered_segments": 7,
+    "coverage_percent": 93.3,
+    "concept_frequency": {
+      "Stop_Loss_in_Profit": 45,
+      "Lower_Low": 41,
+      "Stop_Loss": 21,
+      "Absorption": 16,
+      "Direction": 16,
+      "Compression": 9,
+      "Aggression": 8,
+      "Squeeze": 8,
+      "Profit_Target": 8,
+      "Target": 8,
+      "Imbalance": 8,
+      "Failed_Auction": 7,
+      "Neutral": 7,
+      "NASDAQ_Effort": 6,
+      "Risk_to_Reward": 6,
+      "Volatility": 5,
+      "VAL": 5,
+      "Value_Area": 5,
+      "Momentum": 5,
+      "Liquidation": 5,
+      "Mismanagement": 5,
+      "Setup": 5,
+      "Market_Close": 4,
+      "VAH": 4,
+      "Opening_Range_Breakout": 4,
+      "Bias": 4,
+      "Breakout": 4,
+      "Balance": 3,
+      "Slippage": 3,
+      "Fundamentals": 2,
+      "Volume_Profile": 2,
+      "Pullback": 2,
+      "Entry": 2,
+      "Retracement": 2,
+      "Trade_Management": 2,
+      "LVN": 2,
+      "Reflection": 2,
+      "Displacement": 1,
+      "Explosion": 1,
+      "Expansion": 1,
+      "Position_Size": 1,
+      "Gap": 1,
+      "Triple_A_Setup": 1,
+      "Level": 1
+    },
+    "uncovered_examples": [
+      {
+        "index": 13,
+        "text_preview": "explain, let me see if there is something interesting here to explain other than the area"
+      },
+      {
+        "index": 37,
+        "text_preview": "was a reload, then we have one amazing short cluster of two areas, I shorted late guys,"
+      },
+      {
+        "index": 57,
+        "text_preview": "and I could continue to use my profit for the day to capitalize even more, the reason was this crazy"
+      },
+      {
+        "index": 90,
+        "text_preview": "for you guys, oh, never take"
+      },
+      {
+        "index": 93,
+        "text_preview": "nine contract close, in one, two, three, second,"
+      },
+      {
+        "index": 97,
+        "text_preview": "not even the time to put the position, 2000 risk already, one, two, three,"
+      },
+      {
+        "index": 99,
+        "text_preview": "okay, the market start to consolidate here, I close for around 5000 or 6000, something like this,"
+      }
+    ]
+  }
+}

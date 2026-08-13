@@ -7,34 +7,35 @@ Timestamp: 00:00:00
 GENESIS LIVE COACH — What is happening?
 ============================================================
 
-The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+The market is trending up. This is driven by trend engine bullish. Evidence: trend_state=TRENDING_UP, session=RTH. Balanced is present. imbalances balanced. Supporting imbalances: BID at price_0, ASK at price_0. Absorption events: BID at price_0. Risk is assessed as medium. Invalidation if: break of structure.
 
 — Market State —
-The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+The market is trending up. This is driven by trend engine bullish. Evidence: trend_state=TRENDING_UP, session=RTH.
 
 — Location —
 The location within market structure is not determined.
 
 — Aggression —
-Unknown is present.
+Balanced is present. imbalances balanced. Supporting imbalances: BID at price_0, ASK at price_0. Absorption events: BID at price_0.
 
 — Risk —
-Risk is assessed as high.
+Risk is assessed as medium. Invalidation if: break of structure.
 
 — Management —
-Management posture: observe. Watch for: watch for invalidation.
+Management posture: observe.
 
 — Concepts —
 No relevant concepts have been learned yet.
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0000 (similarity 0.2857142857142857142857142857): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.49 (MEDIUM)
 Explanation ID: c0193612e81627b6
 ============================================================
 
@@ -62,17 +63,23 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: f5279568e406bceb
 ============================================================
 
@@ -100,18 +107,24 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: aea544062f993ff5
 ============================================================
 
@@ -139,18 +152,24 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 2089620fd6306144
 ============================================================
 
@@ -178,23 +197,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: f59c6261d58dcaf7
 ============================================================
 
 Lesson: Lesson03 | Frame: 5
-Timestamp: 00:00:00
+Timestamp: 00:02:57
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -217,23 +242,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: eb49de4103ed1d6c
 ============================================================
 
 Lesson: Lesson03 | Frame: 6
-Timestamp: 00:00:00
+Timestamp: 00:02:57
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -256,23 +287,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 83aae1ae498573ec
 ============================================================
 
 Lesson: Lesson03 | Frame: 7
-Timestamp: 00:00:00
+Timestamp: 00:02:57
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -295,23 +332,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 3ef4e9c127eab51b
 ============================================================
 
 Lesson: Lesson03 | Frame: 8
-Timestamp: 00:00:00
+Timestamp: 00:02:57
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -334,23 +377,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: a5513d6d90747eb1
 ============================================================
 
 Lesson: Lesson03 | Frame: 9
-Timestamp: 00:00:00
+Timestamp: 00:02:57
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -373,23 +422,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 150654fe346c7d4f
 ============================================================
 
 Lesson: Lesson03 | Frame: 10
-Timestamp: 00:00:00
+Timestamp: 00:05:55
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -412,23 +467,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: dcba9791b02ed368
 ============================================================
 
 Lesson: Lesson03 | Frame: 11
-Timestamp: 00:00:00
+Timestamp: 00:05:55
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -451,28 +512,34 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 05ae08404fa5408b
 ============================================================
 
 Lesson: Lesson03 | Frame: 12
-Timestamp: 00:00:00
+Timestamp: 00:05:55
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
 
-The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: ASK at price_12. Risk is assessed as high.
 
 — Market State —
 The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
@@ -481,7 +548,7 @@ The market is balanced. This is driven by trend engine balanced. Evidence: trend
 The location within market structure is not determined.
 
 — Aggression —
-Unknown is present.
+Unknown is present. Absorption events: ASK at price_12.
 
 — Risk —
 Risk is assessed as high.
@@ -490,28 +557,34 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: eca3495e66b05991
 ============================================================
 
 Lesson: Lesson03 | Frame: 13
-Timestamp: 00:00:00
+Timestamp: 00:05:55
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
 
-The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: ASK at price_13. Risk is assessed as high.
 
 — Market State —
 The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
@@ -520,7 +593,7 @@ The market is balanced. This is driven by trend engine balanced. Evidence: trend
 The location within market structure is not determined.
 
 — Aggression —
-Unknown is present.
+Unknown is present. Absorption events: ASK at price_13.
 
 — Risk —
 Risk is assessed as high.
@@ -529,23 +602,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: a16fea71ab9b4dcc
 ============================================================
 
 Lesson: Lesson03 | Frame: 14
-Timestamp: 00:00:00
+Timestamp: 00:05:55
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -568,23 +647,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 084b75fbb1e2ee9d
 ============================================================
 
 Lesson: Lesson03 | Frame: 15
-Timestamp: 00:00:00
+Timestamp: 00:08:52
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -607,23 +692,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 3ee0f2b16c94ebc6
 ============================================================
 
 Lesson: Lesson03 | Frame: 16
-Timestamp: 00:00:00
+Timestamp: 00:08:52
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -646,23 +737,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: a57b0dfab80221e0
 ============================================================
 
 Lesson: Lesson03 | Frame: 17
-Timestamp: 00:00:00
+Timestamp: 00:08:52
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -685,23 +782,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: befee103d577d5bf
 ============================================================
 
 Lesson: Lesson03 | Frame: 18
-Timestamp: 00:00:00
+Timestamp: 00:08:52
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -724,23 +827,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: b24e29741160a892
 ============================================================
 
 Lesson: Lesson03 | Frame: 19
-Timestamp: 00:00:00
+Timestamp: 00:08:52
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -763,23 +872,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 008fed3343a53e8a
 ============================================================
 
 Lesson: Lesson03 | Frame: 20
-Timestamp: 00:00:00
+Timestamp: 00:11:50
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -802,23 +917,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 6a97d5d5ddceb557
 ============================================================
 
 Lesson: Lesson03 | Frame: 21
-Timestamp: 00:00:00
+Timestamp: 00:11:50
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -841,23 +962,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 4076eaaed4e2349a
 ============================================================
 
 Lesson: Lesson03 | Frame: 22
-Timestamp: 00:00:00
+Timestamp: 00:11:50
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -880,23 +1007,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 12c83e2614b1b211
 ============================================================
 
 Lesson: Lesson03 | Frame: 23
-Timestamp: 00:00:00
+Timestamp: 00:11:50
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -919,23 +1052,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 2974c4c12a81eba9
 ============================================================
 
 Lesson: Lesson03 | Frame: 24
-Timestamp: 00:00:00
+Timestamp: 00:14:48
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -958,23 +1097,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 96aa9c5806aaf39a
 ============================================================
 
 Lesson: Lesson03 | Frame: 25
-Timestamp: 00:00:00
+Timestamp: 00:14:48
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -997,28 +1142,34 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: fcd2a0ec6cdec2e2
 ============================================================
 
 Lesson: Lesson03 | Frame: 26
-Timestamp: 00:00:00
+Timestamp: 00:14:48
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
 
-The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: ASK at price_26. Risk is assessed as high.
 
 — Market State —
 The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
@@ -1027,7 +1178,7 @@ The market is balanced. This is driven by trend engine balanced. Evidence: trend
 The location within market structure is not determined.
 
 — Aggression —
-Unknown is present.
+Unknown is present. Absorption events: ASK at price_26.
 
 — Risk —
 Risk is assessed as high.
@@ -1036,23 +1187,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 121e0407c2ec4c43
 ============================================================
 
 Lesson: Lesson03 | Frame: 27
-Timestamp: 00:02:57
+Timestamp: 00:14:48
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1075,23 +1232,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: e418b655dcf6e6ad
 ============================================================
 
 Lesson: Lesson03 | Frame: 28
-Timestamp: 00:02:57
+Timestamp: 00:14:48
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1114,23 +1277,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: b5e7642c4962c97a
 ============================================================
 
 Lesson: Lesson03 | Frame: 29
-Timestamp: 00:02:57
+Timestamp: 00:17:45
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1153,28 +1322,34 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 704392af3237e6dc
 ============================================================
 
 Lesson: Lesson03 | Frame: 30
-Timestamp: 00:02:57
+Timestamp: 00:17:45
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
 
-The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: ASK at price_30. Risk is assessed as low.
 
 — Market State —
 The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
@@ -1183,37 +1358,43 @@ The market is balanced. This is driven by trend engine balanced. Evidence: trend
 The location within market structure is not determined.
 
 — Aggression —
-Unknown is present.
+Unknown is present. Absorption events: ASK at price_30.
 
 — Risk —
-Risk is assessed as high.
+Risk is assessed as low.
 
 — Management —
-Management posture: observe. Watch for: watch for invalidation.
+Management posture: observe. Watch for: monitor continuation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.4025 (MEDIUM)
 Explanation ID: 9929cfb36e3388e3
 ============================================================
 
 Lesson: Lesson03 | Frame: 31
-Timestamp: 00:02:57
+Timestamp: 00:17:45
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
 
-The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Seller Aggressive is present. ask imbalances dominant. Supporting imbalances: ASK at price_31. Risk is assessed as high.
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
 
 — Market State —
 The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
@@ -1222,7 +1403,7 @@ The market is balanced. This is driven by trend engine balanced. Evidence: trend
 The location within market structure is not determined.
 
 — Aggression —
-Seller Aggressive is present. ask imbalances dominant. Supporting imbalances: ASK at price_31.
+Unknown is present.
 
 — Risk —
 Risk is assessed as high.
@@ -1231,23 +1412,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0031 (similarity 0.3333333333333333333333333333): .760 --> 04:04.240 charting i want to ask you something guys how many of you lost money not because ...
-  • Lesson03_frame0000 (similarity 0.1666666666666666666666666667): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.1666666666666666666666666667): .080 --> 00:17.440 oh look how many people...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.49 (MEDIUM)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 3658335e9d3a2324
 ============================================================
 
 Lesson: Lesson03 | Frame: 32
-Timestamp: 00:02:57
+Timestamp: 00:17:45
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1270,23 +1457,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: eb3646ab977da8dd
 ============================================================
 
 Lesson: Lesson03 | Frame: 33
-Timestamp: 00:02:57
+Timestamp: 00:17:45
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1309,23 +1502,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 35ff837906f4951e
 ============================================================
 
 Lesson: Lesson03 | Frame: 34
-Timestamp: 00:02:57
+Timestamp: 00:20:43
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1348,23 +1547,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 8bf07f38e083563c
 ============================================================
 
 Lesson: Lesson03 | Frame: 35
-Timestamp: 00:02:57
+Timestamp: 00:20:43
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1387,23 +1592,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: e73b82122cb8bd43
 ============================================================
 
 Lesson: Lesson03 | Frame: 36
-Timestamp: 00:02:57
+Timestamp: 00:20:43
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1426,23 +1637,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 3a4fa8edf6d180e4
 ============================================================
 
 Lesson: Lesson03 | Frame: 37
-Timestamp: 00:02:57
+Timestamp: 00:20:43
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1465,23 +1682,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: cf2d642316b9ca85
 ============================================================
 
 Lesson: Lesson03 | Frame: 38
-Timestamp: 00:02:57
+Timestamp: 00:20:43
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1504,23 +1727,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 0be2a2df67584d67
 ============================================================
 
 Lesson: Lesson03 | Frame: 39
-Timestamp: 00:02:57
+Timestamp: 00:23:41
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1543,23 +1772,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 35cdfdb4e2efd938
 ============================================================
 
 Lesson: Lesson03 | Frame: 40
-Timestamp: 00:02:57
+Timestamp: 00:23:41
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1582,23 +1817,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 15474ebcb0059685
 ============================================================
 
 Lesson: Lesson03 | Frame: 41
-Timestamp: 00:02:57
+Timestamp: 00:23:41
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1621,23 +1862,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 262754f71c2bfe70
 ============================================================
 
 Lesson: Lesson03 | Frame: 42
-Timestamp: 00:02:57
+Timestamp: 00:23:41
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1660,23 +1907,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: ff7064ec6ac385f1
 ============================================================
 
 Lesson: Lesson03 | Frame: 43
-Timestamp: 00:02:57
+Timestamp: 00:23:41
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1699,23 +1952,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 64e30c3d6830e8d8
 ============================================================
 
 Lesson: Lesson03 | Frame: 44
-Timestamp: 00:02:57
+Timestamp: 00:26:38
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1738,28 +1997,34 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 4fa4bab53551251d
 ============================================================
 
 Lesson: Lesson03 | Frame: 45
-Timestamp: 00:02:57
+Timestamp: 00:26:38
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
 
-The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: ASK at price_45. Risk is assessed as high.
 
 — Market State —
 The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
@@ -1768,7 +2033,7 @@ The market is balanced. This is driven by trend engine balanced. Evidence: trend
 The location within market structure is not determined.
 
 — Aggression —
-Unknown is present.
+Unknown is present. Absorption events: ASK at price_45.
 
 — Risk —
 Risk is assessed as high.
@@ -1777,23 +2042,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 4a15d448a63f5e82
 ============================================================
 
 Lesson: Lesson03 | Frame: 46
-Timestamp: 00:02:57
+Timestamp: 00:26:38
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1816,23 +2087,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 563b0bda63a2d623
 ============================================================
 
 Lesson: Lesson03 | Frame: 47
-Timestamp: 00:02:57
+Timestamp: 00:26:38
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1855,23 +2132,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 6ab1fd26888d3dd0
 ============================================================
 
 Lesson: Lesson03 | Frame: 48
-Timestamp: 00:02:57
+Timestamp: 00:29:36
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1894,23 +2177,29 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: 7216a00d3fe97c86
 ============================================================
 
 Lesson: Lesson03 | Frame: 49
-Timestamp: 00:02:57
+Timestamp: 00:29:36
 ============================================================
 GENESIS LIVE COACH — What is happening?
 ============================================================
@@ -1933,18 +2222,24 @@ Risk is assessed as high.
 Management posture: observe. Watch for: watch for invalidation.
 
 — Concepts —
-No relevant concepts have been learned yet.
+Relevant concepts: Hello, Welcome, Warriors.
+  • Hello (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Warriors (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • We're (NOVICE, relevance 0.2): keyword match in definition or explanation
 
 — Similar Lessons —
-  • Lesson03_frame0000 (similarity 0.4): .000 --> 00:13.200 hello everyone and welcome in chat how is it going warriors one in chat can you...
-  • Lesson03_frame0001 (similarity 0.4): .080 --> 00:17.440 oh look how many people...
-  • Lesson03_frame0002 (similarity 0.4): .600 --> 00:20.720 we're good we're good...
+  • Lesson03_frame0000 (similarity 0.4): hello everyone and welcome in chat how is it going warriors one in chat can you
+oh look how many peo...
+  • Lesson03_frame0001 (similarity 0.4): Is I am the guy that is texting me every day?...
+  • Lesson03_frame0002 (similarity 0.4): I don't remember all the name, guys, sorry....
 
 — Missing Evidence —
   • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
   • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
 
-Overall Confidence: 0.315 (LOW)
+Overall Confidence: 0.415 (MEDIUM)
 Explanation ID: c41c42ecc4f312ac
 ============================================================
 

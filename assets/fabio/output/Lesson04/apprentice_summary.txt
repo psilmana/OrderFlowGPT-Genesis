@@ -1,8 +1,8 @@
 GENESIS APPRENTICE — Learning Summary
 ======================================================================
 
-Report ID: 30506ac3f969725d
-Timestamp: 2026-08-10T03:15:25.650567
+Report ID: e1228aa8a37832f7
+Timestamp: 2026-08-12T15:22:28.701827
 Mode: transcript-only
 
 Lessons Processed: 1
@@ -11,59 +11,59 @@ Experiences Created: 50
 Sessions Completed: 50
 Coach Explanations: 100
 Frames Processed: 50
-Overall Confidence: 58.59%
+Overall Confidence: 57.42%
 
 Concept Coverage:
-  Segments with concepts: 610/640 (95.3%)
-  Segments with NO concepts: 30
+ Segments with concepts: 585/640 (91.4%)
+ Segments with NO concepts: 55
 
 Concept Mastery:
-  NOVICE       ███████████████████████████████████████████████████████████████████████████████████ (83)
+ NOVICE       ███████████████████████████████████████████████████████████████████████████████████ (83)
 
 Top Concepts:
-  Hello                0.00
-  Beautiful            0.00
-  People               0.00
-  Today                0.00
-  Topic                0.00
-  Little               0.00
-  Check                0.00
-  Share                0.00
-  Screen               0.00
-  Let's                0.00
+ Hello                0.00
+ Beautiful            0.00
+ People               0.00
+ Today                0.00
+ Topic                0.00
+ Little               0.00
+ Check                0.00
+ Share                0.00
+ Screen               0.00
+ Let's                0.00
 
 What was learned:
-  ✓ Lesson Lesson04: 83 concepts, 50 experiences
+ ✓ Lesson Lesson04: 83 concepts, 50 experiences
 
 What needs more study:
-  ⚠ Absorption (NOVICE)
-  ⚠ Accept (NOVICE)
-  ⚠ Account (NOVICE)
-  ⚠ Aggression (NOVICE)
-  ⚠ Aggressive (NOVICE)
-  ⚠ Andrea (NOVICE)
-  ⚠ Arslan (NOVICE)
-  ⚠ Auction (NOVICE)
-  ⚠ Beautiful (NOVICE)
-  ⚠ Breakout (NOVICE)
-  ⚠ Broke (NOVICE)
-  ⚠ Buyers (NOVICE)
-  ⚠ Capitalize (NOVICE)
-  ⚠ Caught (NOVICE)
-  ⚠ Chart (NOVICE)
-  ⚠ Check (NOVICE)
-  ⚠ Close (NOVICE)
-  ⚠ Consultants (NOVICE)
-  ⚠ Continue (NOVICE)
-  ⚠ Contract (NOVICE)
+ ⚠ Absorption (NOVICE)
+ ⚠ Accept (NOVICE)
+ ⚠ Account (NOVICE)
+ ⚠ Aggression (NOVICE)
+ ⚠ Aggressive (NOVICE)
+ ⚠ Andrea (NOVICE)
+ ⚠ Arslan (NOVICE)
+ ⚠ Auction (NOVICE)
+ ⚠ Beautiful (NOVICE)
+ ⚠ Breakout (NOVICE)
+ ⚠ Broke (NOVICE)
+ ⚠ Buyers (NOVICE)
+ ⚠ Capitalize (NOVICE)
+ ⚠ Caught (NOVICE)
+ ⚠ Chart (NOVICE)
+ ⚠ Check (NOVICE)
+ ⚠ Close (NOVICE)
+ ⚠ Consultants (NOVICE)
+ ⚠ Continue (NOVICE)
+ ⚠ Contract (NOVICE)
 
 Knowledge Graph:
-  Concepts: 183
-  Relationships: 881
+ Concepts: 125
+ Relationships: 140
 
 [NOTE] Running in TRANSCRIPT-ONLY mode.
-  Video frames provide timestamps only.
-  Concept extraction is keyword-based from transcript text.
-  Vision analysis (Bundles 1-8) is NOT active.
+ Video frames provide timestamps only.
+ Concept extraction is keyword-based from transcript text.
+ Vision analysis (Bundles 1-8) is NOT active.
 
 Knowledge graph: 0 concepts, 0 relationships, avg confidence 0

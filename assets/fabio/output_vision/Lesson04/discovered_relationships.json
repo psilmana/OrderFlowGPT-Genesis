@@ -1,0 +1,3524 @@
+[
+  {
+    "source": "Direction",
+    "target": "Trend",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "even if we are we are in um an uptrend okay up direction so we have two gameplay for today we have",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 12
+  },
+  {
+    "source": "Breakout",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "the breakout and test of this level but they need to accept it okay i know that i wanted to do theor",
+    "cooccurrence_count": 6,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 13
+  },
+  {
+    "source": "Break",
+    "target": "Breakout",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "the breakout and test of this level but they need to accept it okay i know that i wanted to do theor",
+    "cooccurrence_count": 10,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 13
+  },
+  {
+    "source": "Break",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "the breakout and test of this level but they need to accept it okay i know that i wanted to do theor",
+    "cooccurrence_count": 15,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 13
+  },
+  {
+    "source": "Aggressive",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "quality is good okay now as you can see the buyers are trying to get aggressive on this level so it ",
+    "cooccurrence_count": 4,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 16
+  },
+  {
+    "source": "Absorption",
+    "target": "Aggression",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "already locked the aggression now let's see if they can hold it or if it's an absorption the directi",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 23
+  },
+  {
+    "source": "Absorption",
+    "target": "Direction",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "already locked the aggression now let's see if they can hold it or if it's an absorption the directi",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 23
+  },
+  {
+    "source": "Aggression",
+    "target": "Direction",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "already locked the aggression now let's see if they can hold it or if it's an absorption the directi",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 23
+  },
+  {
+    "source": "Close",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "one for me it's a really stupid trade i just wanted to show you that it's connected let's close this",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 38
+  },
+  {
+    "source": "Level",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "purpose now they test this level they are not loading back this one so one trade that you can have",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 41
+  },
+  {
+    "source": "Absorption",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "level that we have now because we have a huge also at the top we have absorption of the sellers but",
+    "cooccurrence_count": 10,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 47
+  },
+  {
+    "source": "Level",
+    "target": "Target",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "the first sensitive level that we can have is the round 26 100 this is a level that can become a tar",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 52
+  },
+  {
+    "source": "Close",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "can see the market is getting absorbed is continuing to get absorbed okay is the closest round numbe",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 54
+  },
+  {
+    "source": "Level",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "completely absorbed i pick same take profit level based off cash session i in previous weeks amazing",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 60
+  },
+  {
+    "source": "Absorption",
+    "target": "Break",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "okay so the levels that i would consider here it's this absorption level if we get a break so you ha",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 68
+  },
+  {
+    "source": "Retracement",
+    "target": "Reward",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "retracement okay and we can have a proper high risk to reward trade this is based on your decision l",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 70
+  },
+  {
+    "source": "Retracement",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "retracement okay and we can have a proper high risk to reward trade this is based on your decision l",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 70
+  },
+  {
+    "source": "Reward",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "retracement okay and we can have a proper high risk to reward trade this is based on your decision l",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 70
+  },
+  {
+    "source": "Absorption",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "setup that we took the other time where there is absorption from the sellers okay then there is",
+    "cooccurrence_count": 4,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 72
+  },
+  {
+    "source": "Reward",
+    "target": "Target",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "target target we see it's here it's a big risk to reward trade let's see how it behave we have a flo",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 84
+  },
+  {
+    "source": "Target",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "target target we see it's here it's a big risk to reward trade let's see how it behave we have a flo",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 84
+  },
+  {
+    "source": "Break",
+    "target": "Close",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "for the break even so it's really close so you go risk free pretty fast and then you have a run up",
+    "cooccurrence_count": 5,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 91
+  },
+  {
+    "source": "Level",
+    "target": "Retracement",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "okay they can still go in the retracement but till this level hold",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 100
+  },
+  {
+    "source": "Balance",
+    "target": "Profile",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "in a balanced situation if we go in the profile okay and we mark here we can see that sellers are",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 107
+  },
+  {
+    "source": "Break",
+    "target": "Range",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "protecting from here this is the top range so this is where also if we break we expect a squeeze see",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 108
+  },
+  {
+    "source": "Level",
+    "target": "Reward",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "yeah the risk to reward is the same okay you see what happens they reloaded exactly from the level i",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 111
+  },
+  {
+    "source": "Close",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "told you now when they approach this level all these sellers are forced to close and this is what i ",
+    "cooccurrence_count": 4,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 112
+  },
+  {
+    "source": "Candle",
+    "target": "Close",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "squeeze okay this is what i call squeeze because when they accept and the candle close here all the",
+    "cooccurrence_count": 5,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 113
+  },
+  {
+    "source": "Level",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "put risk in the market okay so you have the risk free on this white level guys i'm taking you by the",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 119
+  },
+  {
+    "source": "Break",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "we did now we use going to break even in a smart way we removed the risk from the market so fast how",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 124
+  },
+  {
+    "source": "Auction",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "failed auction guys it's when they attempt to buy so you have big trades on the top but the price",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 133
+  },
+  {
+    "source": "Range",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "range or in the bottom range in the middle how much activity of the big trades you have",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 139
+  },
+  {
+    "source": "Candle",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "if this break with a full candle you have not only the setup from here you have also the setup of",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 142
+  },
+  {
+    "source": "Break",
+    "target": "Candle",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "if this break with a full candle you have not only the setup from here you have also the setup of",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 142
+  },
+  {
+    "source": "Break",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "if this break with a full candle you have not only the setup from here you have also the setup of",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 142
+  },
+  {
+    "source": "Absorption",
+    "target": "Candle",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "bottom with this cell candle but the result is by what does it mean that we add an absorption and no",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 148
+  },
+  {
+    "source": "Aggressive",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "aggressive order responding here okay aggressive order responding this is where we frame our setup",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 154
+  },
+  {
+    "source": "Auction",
+    "target": "Breakout",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "breakout of this level okay this is not a failed auction because they didn't engage the law",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 157
+  },
+  {
+    "source": "Auction",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "breakout of this level okay this is not a failed auction because they didn't engage the law",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 157
+  },
+  {
+    "source": "Auction",
+    "target": "Break",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "breakout of this level okay this is not a failed auction because they didn't engage the law",
+    "cooccurrence_count": 6,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 157
+  },
+  {
+    "source": "Aggressive",
+    "target": "Break",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "okay if they break the origin of the move of these aggressive sellers they won't go long and how muc",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 160
+  },
+  {
+    "source": "Market",
+    "target": "Range",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "how to not let the market take your money back okay now this is one minute it's not range it's not r",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 167
+  },
+  {
+    "source": "Break",
+    "target": "Momentum",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "was here here at the top failed they attempted to break we had a potential momentum trade but it",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 173
+  },
+  {
+    "source": "Momentum",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "was here here at the top failed they attempted to break we had a potential momentum trade but it",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 173
+  },
+  {
+    "source": "Break",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "was here here at the top failed they attempted to break we had a potential momentum trade but it",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 173
+  },
+  {
+    "source": "Close",
+    "target": "Momentum",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "so the invalidation point is really close what am i doing here i'm betting on this case on the momen",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 190
+  },
+  {
+    "source": "Momentum",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "so the invalidation point is really close what am i doing here i'm betting on this case on the momen",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 190
+  },
+  {
+    "source": "Close",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "so the invalidation point is really close what am i doing here i'm betting on this case on the momen",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 190
+  },
+  {
+    "source": "Session",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "position are managed from a break-even point this is not a triple a setup we had better setup last s",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 197
+  },
+  {
+    "source": "Break",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "position are managed from a break-even point this is not a triple a setup we had better setup last s",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 197
+  },
+  {
+    "source": "Market",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "if we have a triple a setup i will tell you this is how to show you in relaxed market condition",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 198
+  },
+  {
+    "source": "Balance",
+    "target": "Imbalance",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "the speed of tape it's stable the imbalance they create here from a price action point of view",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 231
+  },
+  {
+    "source": "Balance",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "to the balance level",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 260
+  },
+  {
+    "source": "Balance",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "not a lot of interaction this is a balance area let's take other money out of the market",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 278
+  },
+  {
+    "source": "Auction",
+    "target": "Close",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "now the buyers are dry the auction it's it's not interactive they are closed inside a range we can",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 281
+  },
+  {
+    "source": "Auction",
+    "target": "Range",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "now the buyers are dry the auction it's it's not interactive they are closed inside a range we can",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 281
+  },
+  {
+    "source": "Close",
+    "target": "Range",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "now the buyers are dry the auction it's it's not interactive they are closed inside a range we can",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 281
+  },
+  {
+    "source": "Compression",
+    "target": "Range",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "they are joining again the top of the range and you can start to see this huge compression",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 283
+  },
+  {
+    "source": "Break",
+    "target": "POC",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "if you break the top recover another 500 in our pocket",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 301
+  },
+  {
+    "source": "Session",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "9 598 for the session look what we say this is the perfect management of the trade",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 310
+  },
+  {
+    "source": "Close",
+    "target": "Exit",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "and we exit when the seller start to control there is no management method that come close to this o",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 317
+  },
+  {
+    "source": "Aggression",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "this is not aaa setup because we didn't add an aggression also okay we had only absorption",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 320
+  },
+  {
+    "source": "Aggressive",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "give control to the seller so you have aggressive buy trades on the sell movement usually you think",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 327
+  },
+  {
+    "source": "Auction",
+    "target": "Profile",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "to use profile framing how to use the main stuff to understand the auction because i want to save",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 350
+  },
+  {
+    "source": "Direction",
+    "target": "Profile",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "you have a directional day okay you have a directional day you are using your fixed profile",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 358
+  },
+  {
+    "source": "Aggression",
+    "target": "Delta",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "because you have the two main peak of delta this is aggression this is executed order this is what i",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 362
+  },
+  {
+    "source": "Market",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "when the market is going down and you remember the session of last week how many times we executed a",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 365
+  },
+  {
+    "source": "Absorption",
+    "target": "Profile",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "buyers and we can also use the fixed profile and when we go back we see from executed order the abso",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 368
+  },
+  {
+    "source": "Market",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "understand what the market is telling you you are long in bias you are executing your trades from th",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 373
+  },
+  {
+    "source": "Absorption",
+    "target": "Delta",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "a setups okay is it clear for everyone guys i have the direction i have the delta level i have the a",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 378
+  },
+  {
+    "source": "Delta",
+    "target": "Direction",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "a setups okay is it clear for everyone guys i have the direction i have the delta level i have the a",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 378
+  },
+  {
+    "source": "Direction",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "a setups okay is it clear for everyone guys i have the direction i have the delta level i have the a",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 378
+  },
+  {
+    "source": "Direction",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "a setups okay is it clear for everyone guys i have the direction i have the delta level i have the a",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 378
+  },
+  {
+    "source": "Delta",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "a setups okay is it clear for everyone guys i have the direction i have the delta level i have the a",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 378
+  },
+  {
+    "source": "Delta",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "a setups okay is it clear for everyone guys i have the direction i have the delta level i have the a",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 378
+  },
+  {
+    "source": "Level",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "a setups okay is it clear for everyone guys i have the direction i have the delta level i have the a",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 378
+  },
+  {
+    "source": "Setup",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "trades and this is the reason the setup that we saw before it's aa it's not triple a why because",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 394
+  },
+  {
+    "source": "Aggressive",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "it means this or this okay so it means the market telling you that the buyers are aggressively",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 395
+  },
+  {
+    "source": "Close",
+    "target": "Print",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "luca is following me from the beginning studying closed in the room printing money",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 398
+  },
+  {
+    "source": "Aggression",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "this one okay this one it's the moment that the market is telling you if you enter on the aggression",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 400
+  },
+  {
+    "source": "Aggression",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "aggression of the buyers is this cluster okay this one in the majority so this blue level is the maj",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 420
+  },
+  {
+    "source": "Absorption",
+    "target": "Print",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "live you see this huge absorption the delta is printing red purple sorry candle they got completely",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 437
+  },
+  {
+    "source": "Candle",
+    "target": "Delta",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "live you see this huge absorption the delta is printing red purple sorry candle they got completely",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 437
+  },
+  {
+    "source": "Candle",
+    "target": "Print",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "live you see this huge absorption the delta is printing red purple sorry candle they got completely",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 437
+  },
+  {
+    "source": "Delta",
+    "target": "Print",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "live you see this huge absorption the delta is printing red purple sorry candle they got completely",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 437
+  },
+  {
+    "source": "Absorption",
+    "target": "Close",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "this one i didn't execute it but let's make this candle that close with absorption",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 458
+  },
+  {
+    "source": "Auction",
+    "target": "Target",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "we continue the auction this one is a little bit stupid target because it's really close",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 474
+  },
+  {
+    "source": "Close",
+    "target": "Target",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "we continue the auction this one is a little bit stupid target because it's really close",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 474
+  },
+  {
+    "source": "Aggressive",
+    "target": "Range",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "they are aggressive on the sell side while we are at the top range and the buyers are happily",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 478
+  },
+  {
+    "source": "Gap",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "you cannot see if they go back here it's a reload level there is also a micro gap but it's really",
+    "cooccurrence_count": 4,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 480
+  },
+  {
+    "source": "Candle",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "with this candle and also buyers at the top a good up and we go and we finish the session",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 486
+  },
+  {
+    "source": "Close",
+    "target": "Gap",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "the reload phase if they close bullish here they shoot to 100. see this small gap on the white level",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 511
+  },
+  {
+    "source": "Aggression",
+    "target": "Aggressive",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "big aggression now the speed of tape is saying to you they are not fast in getting aggressive but th",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 515
+  },
+  {
+    "source": "Aggression",
+    "target": "Close",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "have a big aggression so usually usually this level you see they weak down they close and then",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 516
+  },
+  {
+    "source": "Candle",
+    "target": "Direction",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "direction of the gap so you have a up gap with a green candle and then you you continue you see",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 518
+  },
+  {
+    "source": "Direction",
+    "target": "Gap",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "direction of the gap so you have a up gap with a green candle and then you you continue you see",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 518
+  },
+  {
+    "source": "Candle",
+    "target": "Gap",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "direction of the gap so you have a up gap with a green candle and then you you continue you see",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 518
+  },
+  {
+    "source": "Balance",
+    "target": "Gap",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "another gap here you see it so now they rebalance you see what they shoot they are being absorbed he",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 519
+  },
+  {
+    "source": "Entry",
+    "target": "Exit",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "a lot a lot of fight look at people in the chat showing the zero drawdown entry and the exit at the",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 527
+  },
+  {
+    "source": "Session",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "top beautiful crazy value brother was 3000 up before this session what i've learned from watching",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 528
+  },
+  {
+    "source": "Trend",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "the video you already paid three times for the value i've been applying your trend following model",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 529
+  },
+  {
+    "source": "Direction",
+    "target": "Print",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "be a money printer on the nifty because the nifty is really directional okay it's really directional",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 535
+  },
+  {
+    "source": "Gap",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "at this guys look at this look at this reload on the on the gap now i know how much this is valuable",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 547
+  },
+  {
+    "source": "Break",
+    "target": "Profile",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "so the profile framing was long the profile framing was long and look at the 26 100 they break it",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 556
+  },
+  {
+    "source": "Close",
+    "target": "Reward",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "we already close with a huge risk to reward okay huge we took two one break even and two amazing lon",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 558
+  },
+  {
+    "source": "Break",
+    "target": "Reward",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "we already close with a huge risk to reward okay huge we took two one break even and two amazing lon",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 558
+  },
+  {
+    "source": "Momentum",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "so the the potential momentum separate setup it's invalidated they want to retrace",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 573
+  },
+  {
+    "source": "Setup",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "so the the potential momentum separate setup it's invalidated they want to retrace",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 573
+  },
+  {
+    "source": "Aggression",
+    "target": "Gap",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "and we see what they do they add an aggression with a gap down",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 590
+  },
+  {
+    "source": "Gap",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "yeah there is a macro a micro gap on the downside this is not a good sign for my long trade",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 596
+  },
+  {
+    "source": "Breakout",
+    "target": "Gap",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "you see what they did in the breakout they managed to create another gap i don't know if it's visibl",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 611
+  },
+  {
+    "source": "Break",
+    "target": "Gap",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "you see what they did in the breakout they managed to create another gap i don't know if it's visibl",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 611
+  },
+  {
+    "source": "Balance",
+    "target": "Range",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "we go with a high probability to rebalance this area it is strange that the speed of tape is not",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 615
+  },
+  {
+    "source": "Momentum",
+    "target": "Volatility",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "volatility surge it's finished some amazing trade we managed also to try to do the momentum squeeze",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 618
+  },
+  {
+    "source": "Trade",
+    "target": "Volatility",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "volatility surge it's finished some amazing trade we managed also to try to do the momentum squeeze",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 618
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "No_Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.36,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trending_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.38,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Visual_Uptrend",
+    "relation": "cooccurs_with",
+    "confidence": 0.28,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Choppy_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.38,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Footprint_Grid",
+    "relation": "cooccurs_with",
+    "confidence": 0.71,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Low_Volatility_Chart",
+    "relation": "cooccurs_with",
+    "confidence": 0.41,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.71,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.41,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Trending_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.32,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Visual_Uptrend",
+    "relation": "cooccurs_with",
+    "confidence": 0.22,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Choppy_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.32,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Footprint_Grid",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Low_Volatility_Chart",
+    "relation": "cooccurs_with",
+    "confidence": 0.35,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.35,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Visual_Uptrend",
+    "relation": "cooccurs_with",
+    "confidence": 0.25,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Choppy_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.35,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Footprint_Grid",
+    "relation": "cooccurs_with",
+    "confidence": 0.68,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Low_Volatility_Chart",
+    "relation": "cooccurs_with",
+    "confidence": 0.38,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.68,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.38,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Visual_Uptrend",
+    "target": "Choppy_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.25,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Visual_Uptrend",
+    "target": "Footprint_Grid",
+    "relation": "cooccurs_with",
+    "confidence": 0.57,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Visual_Uptrend",
+    "target": "Low_Volatility_Chart",
+    "relation": "cooccurs_with",
+    "confidence": 0.28,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Visual_Uptrend",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.57,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Visual_Uptrend",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.28,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Footprint_Grid",
+    "relation": "cooccurs_with",
+    "confidence": 0.68,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Low_Volatility_Chart",
+    "relation": "cooccurs_with",
+    "confidence": 0.38,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.68,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.38,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Low_Volatility_Chart",
+    "relation": "cooccurs_with",
+    "confidence": 0.7,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 1.0,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.7,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.7,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.4,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.7,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.08,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Visual_Uptrend",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.41,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.12,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.45,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.17,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.22,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.52,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.41,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.48,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.73,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.17,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.96,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.97,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.13,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.47,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.33,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.66,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.32,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.72,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.29,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.36,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.22,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.38,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.22,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.6,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.55,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.19,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.4,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.4,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.44,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.19,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.43,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.18,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.02,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.06,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.06,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.07,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.07,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.39,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.17,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.5,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.16,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.38,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.27,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.38,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.24,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.09,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.22,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.31,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.21,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.28,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.11,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.18,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.51,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.21,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.41,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.31,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.82,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.19,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Trade_Management",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  }
+]

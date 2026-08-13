@@ -1,0 +1,259 @@
+{
+  "report_id": "85204ae494dde338",
+  "report_timestamp": "2026-08-12T15:43:42.087175",
+  "mode": "transcript-only",
+  "total_lessons": 1,
+  "total_concepts_learned": 320,
+  "total_experiences_created": 50,
+  "total_sessions_completed": 50,
+  "total_coach_explanations": 100,
+  "total_frames_processed": 50,
+  "overall_learning_confidence": 0.29936666666666667,
+  "concept_mastery_distribution": [
+    [
+      "NOVICE",
+      320
+    ]
+  ],
+  "top_concepts_by_confidence": [
+    [
+      "Hello",
+      0.0
+    ],
+    [
+      "Beautiful",
+      0.0
+    ],
+    [
+      "People",
+      0.0
+    ],
+    [
+      "Welcome",
+      0.0
+    ],
+    [
+      "Students",
+      0.0
+    ],
+    [
+      "Bunch",
+      0.0
+    ],
+    [
+      "Don't",
+      0.0
+    ],
+    [
+      "Quality",
+      0.0
+    ],
+    [
+      "Courses",
+      0.0
+    ],
+    [
+      "Share",
+      0.0
+    ]
+  ],
+  "what_was_learned": [
+    "Lesson Lesson06: 320 concepts, 50 experiences"
+  ],
+  "what_needs_more_study": [
+    "Absorb (NOVICE)",
+    "Absorption (NOVICE)",
+    "Accelerate (NOVICE)",
+    "Accept (NOVICE)",
+    "Account (NOVICE)",
+    "Accounts (NOVICE)",
+    "Additional (NOVICE)",
+    "Advisor (NOVICE)",
+    "Afraid (NOVICE)",
+    "Aggression (NOVICE)",
+    "Aggressive (NOVICE)",
+    "Amount (NOVICE)",
+    "Analysis (NOVICE)",
+    "Andrea (NOVICE)",
+    "Anticipate (NOVICE)",
+    "Antonio (NOVICE)",
+    "Anyway (NOVICE)",
+    "Arrive (NOVICE)",
+    "Attempt (NOVICE)",
+    "Auction (NOVICE)"
+  ],
+  "knowledge_graph_summary": "Knowledge graph: 0 concepts, 0 relationships, avg confidence 0",
+  "coverage": {
+    "total_segments": 88,
+    "covered_segments": 58,
+    "uncovered_segments": 30,
+    "coverage_percent": 65.9,
+    "concept_frequency": {
+      "Lower_Low": 18,
+      "Stop_Loss_in_Profit": 16,
+      "Mismanagement": 11,
+      "Session": 10,
+      "VAL": 7,
+      "Absorption": 7,
+      "Fundamentals": 7,
+      "Market_State": 7,
+      "Direction": 6,
+      "Market": 6,
+      "Setup": 5,
+      "Balance": 4,
+      "Aggression": 4,
+      "Breakout": 4,
+      "Pullback": 4,
+      "Neutral": 4,
+      "Revenge_Trading": 4,
+      "Trade_Management": 4,
+      "Short": 4,
+      "Break": 4,
+      "Trend_Continuation": 3,
+      "Squeeze": 3,
+      "Risk_to_Reward": 3,
+      "Daily_Loss_Limit": 3,
+      "Expansion": 3,
+      "Explosion": 3,
+      "Profit_Target": 3,
+      "Retracement": 3,
+      "Stop_Loss": 3,
+      "Target": 3,
+      "Technical_Only": 3,
+      "Close": 3,
+      "Chart": 3,
+      "Imbalance": 2,
+      "Compression": 2,
+      "Opening_Drive": 2,
+      "NASDAQ_Effort": 2,
+      "Opening_Range_Breakout": 2,
+      "Trailing_Stop": 2,
+      "Position_Size": 2,
+      "Pre_Market": 2,
+      "Reversal": 2,
+      "Displacement": 2,
+      "Volatility": 2,
+      "Order_Flow": 2,
+      "Price": 2,
+      "Psychology": 2,
+      "Reflection": 2,
+      "Level": 2,
+      "Auction": 2,
+      "Print": 2,
+      "Aggressive": 2,
+      "Reward": 2,
+      "Trade": 2,
+      "Management": 2,
+      "Candle": 2,
+      "Volume": 2,
+      "Pattern": 2,
+      "Range": 2,
+      "POC": 2,
+      "LVN": 1,
+      "Value_Area": 1,
+      "Footprint": 1,
+      "Failed_Auction": 1,
+      "NY_Session": 1,
+      "London_Session": 1,
+      "Market_Close": 1,
+      "Slippage": 1,
+      "Bias": 1,
+      "Long-term": 1,
+      "Single": 1,
+      "Change": 1,
+      "Trend": 1,
+      "Passive": 1,
+      "Delta": 1,
+      "Gap": 1,
+      "Entry": 1,
+      "Market_Structure": 1,
+      "Momentum": 1,
+      "Volume_Profile": 1,
+      "Profile": 1,
+      "Structure": 1,
+      "Resistance": 1
+    },
+    "uncovered_examples": [
+      {
+        "index": 6,
+        "text_preview": "Isn't this amazing or no?"
+      },
+      {
+        "index": 13,
+        "text_preview": "Did I reply to you on this one?"
+      },
+      {
+        "index": 20,
+        "text_preview": "Is it useful for you?"
+      },
+      {
+        "index": 23,
+        "text_preview": "There is Bogdani, 6.4 thousand for today."
+      },
+      {
+        "index": 27,
+        "text_preview": "You see where they reloaded."
+      },
+      {
+        "index": 31,
+        "text_preview": "Now, I don't think it's necessary."
+      },
+      {
+        "index": 35,
+        "text_preview": "This one is connected."
+      },
+      {
+        "index": 37,
+        "text_preview": "This is an interactive account."
+      },
+      {
+        "index": 38,
+        "text_preview": "I don't think it's necessary in my community."
+      },
+      {
+        "index": 43,
+        "text_preview": "I just want to see one second if my analysis was correct."
+      },
+      {
+        "index": 45,
+        "text_preview": "Just want to see if the reading is correct."
+      },
+      {
+        "index": 47,
+        "text_preview": "Look at the money this guy is making."
+      },
+      {
+        "index": 48,
+        "text_preview": "How much money are you making?"
+      },
+      {
+        "index": 50,
+        "text_preview": "The analysis was perfect."
+      },
+      {
+        "index": 51,
+        "text_preview": "The analysis was correct."
+      },
+      {
+        "index": 57,
+        "text_preview": "If this goes guys is like a 10R for the day."
+      },
+      {
+        "index": 58,
+        "text_preview": "Building, building, building."
+      },
+      {
+        "index": 60,
+        "text_preview": "I want to show you..."
+      },
+      {
+        "index": 62,
+        "text_preview": "It's not a financial advice."
+      },
+      {
+        "index": 64,
+        "text_preview": "If you are in, it's time to take out."
+      }
+    ]
+  }
+}

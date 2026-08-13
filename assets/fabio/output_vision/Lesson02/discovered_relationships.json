@@ -1,0 +1,4910 @@
+[
+  {
+    "source": "Break",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "and if you are in the process of being a break-even trader and wants to get a stable long equity lin",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 15
+  },
+  {
+    "source": "Break",
+    "target": "Fundamentals",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "the fundamentals of asset managers so i will give you a breakdown on the indices",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 38
+  },
+  {
+    "source": "Compression",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "know that in three days there is the cpi and the market is in compression maybe it's not the best th",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 70
+  },
+  {
+    "source": "Market",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "i will go live because i don't watch at the clock i don't care maybe one time one one session the ma",
+    "cooccurrence_count": 8,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 86
+  },
+  {
+    "source": "Balance",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "the market it's in a balance phase",
+    "cooccurrence_count": 4,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 131
+  },
+  {
+    "source": "Profile",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "opportunity is to trade from the bottom to the poc the second opportunity but this is when the profi",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 141
+  },
+  {
+    "source": "POC",
+    "target": "Profile",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "opportunity is to trade from the bottom to the poc the second opportunity but this is when the profi",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 141
+  },
+  {
+    "source": "POC",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "opportunity is to trade from the bottom to the poc the second opportunity but this is when the profi",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 141
+  },
+  {
+    "source": "Absorption",
+    "target": "Breakout",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "but the absorption at the top you want to go to the value area low and potential breakout why is thi",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 152
+  },
+  {
+    "source": "Absorption",
+    "target": "Break",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "but the absorption at the top you want to go to the value area low and potential breakout why is thi",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 152
+  },
+  {
+    "source": "Absorption",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "but the absorption at the top you want to go to the value area low and potential breakout why is thi",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 152
+  },
+  {
+    "source": "Break",
+    "target": "Breakout",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "but the absorption at the top you want to go to the value area low and potential breakout why is thi",
+    "cooccurrence_count": 12,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 152
+  },
+  {
+    "source": "Breakout",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "but the absorption at the top you want to go to the value area low and potential breakout why is thi",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 152
+  },
+  {
+    "source": "Break",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "but the absorption at the top you want to go to the value area low and potential breakout why is thi",
+    "cooccurrence_count": 7,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 152
+  },
+  {
+    "source": "Balance",
+    "target": "Profile",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "balance model to understand this you need to understand before where you are in the profile framing ",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 155
+  },
+  {
+    "source": "Footprint",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "is it's not changing like the uh order flow related to footprint it's changing a little bit the dist",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 159
+  },
+  {
+    "source": "Footprint",
+    "target": "Print",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "is it's not changing like the uh order flow related to footprint it's changing a little bit the dist",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 159
+  },
+  {
+    "source": "Print",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "is it's not changing like the uh order flow related to footprint it's changing a little bit the dist",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 159
+  },
+  {
+    "source": "Market",
+    "target": "Profile",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "okay when we do profile framing we want to understand who is in domination of the market so",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 163
+  },
+  {
+    "source": "Profile",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "the value is building up okay so if the value is building up i do profile framing and i mark the",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 169
+  },
+  {
+    "source": "Session",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "area high and if the market goes back to this value area low of the cash session the next day",
+    "cooccurrence_count": 6,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 171
+  },
+  {
+    "source": "Market",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "area high and if the market goes back to this value area low of the cash session the next day",
+    "cooccurrence_count": 4,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 171
+  },
+  {
+    "source": "POC",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "i have not only this move back to poc i have also this move back to value rei and i have the",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 172
+  },
+  {
+    "source": "Close",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "choppy so i have the session of today maybe that is closed here inside if i have to choose one",
+    "cooccurrence_count": 5,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 175
+  },
+  {
+    "source": "Delta",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "low is lower and the value area high is lower this is your delta in shift of the single session okay",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 180
+  },
+  {
+    "source": "Delta",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "low is lower and the value area high is lower this is your delta in shift of the single session okay",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 180
+  },
+  {
+    "source": "POC",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "and another one it's the poc as we know no the poc of the single session it's important it's importa",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 182
+  },
+  {
+    "source": "Breakout",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "this and it's important also the poc of the session that created a breakout then we will go to see o",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 183
+  },
+  {
+    "source": "Breakout",
+    "target": "POC",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "this and it's important also the poc of the session that created a breakout then we will go to see o",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 183
+  },
+  {
+    "source": "Break",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "this and it's important also the poc of the session that created a breakout then we will go to see o",
+    "cooccurrence_count": 6,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 183
+  },
+  {
+    "source": "Break",
+    "target": "POC",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "this and it's important also the poc of the session that created a breakout then we will go to see o",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 183
+  },
+  {
+    "source": "Session",
+    "target": "Short",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "it's a session where i took this short play okay on the test and i monetize all the collapse down",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 186
+  },
+  {
+    "source": "Aggressive",
+    "target": "Break",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "all the collapse down also with a confirmation of aggressive buyers not managing to break the top",
+    "cooccurrence_count": 4,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 187
+  },
+  {
+    "source": "Level",
+    "target": "POC",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "so remember that in this case you have sensitive level one and cluster two poc and value rei when yo",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 189
+  },
+  {
+    "source": "Level",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "so remember that in this case you have sensitive level one and cluster two poc and value rei when yo",
+    "cooccurrence_count": 11,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 189
+  },
+  {
+    "source": "Fundamentals",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "fundamentals because on this model i apply also the commitment of traders report so if you want i ca",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 195
+  },
+  {
+    "source": "Neutral",
+    "target": "Short",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "last week it's updated on the dow jones we are neutral in long term and we added 5700 short against ",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 224
+  },
+  {
+    "source": "Market",
+    "target": "Short",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "5 000 short for me it's a strong skew they expect the market to go down the last week okay and what",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 243
+  },
+  {
+    "source": "Close",
+    "target": "Short",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "they it's short here okay it's closing 2000 contract it's even better because they close negative no",
+    "cooccurrence_count": 4,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 245
+  },
+  {
+    "source": "Delta",
+    "target": "Short",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "they close 2000 contract long and they open 5 700 short it means that the delta now is 7 000",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 246
+  },
+  {
+    "source": "Close",
+    "target": "Delta",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "they close 2000 contract long and they open 5 700 short it means that the delta now is 7 000",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 246
+  },
+  {
+    "source": "Close",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "look at this level okay it went to the value area low really close but i think we eat let's check if",
+    "cooccurrence_count": 7,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 288
+  },
+  {
+    "source": "Close",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "look at this level okay it went to the value area low really close but i think we eat let's check if",
+    "cooccurrence_count": 8,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 288
+  },
+  {
+    "source": "Level",
+    "target": "Retracement",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "this level was here and they had this retracement in thermal volume okay then",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 302
+  },
+  {
+    "source": "Level",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "let's think about this no if the market wants to build up what what is the most important level",
+    "cooccurrence_count": 10,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 312
+  },
+  {
+    "source": "Delta",
+    "target": "Reward",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "rejection this is incredible positive delta the buyers are getting rewarded they are extremely",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 320
+  },
+  {
+    "source": "Aggressive",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "aggressive on the level they reload here and what is more important you know what is more important",
+    "cooccurrence_count": 6,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 321
+  },
+  {
+    "source": "Absorption",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "is telling you look i try to be to break above the level of absorption that i had before okay i try ",
+    "cooccurrence_count": 4,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 327
+  },
+  {
+    "source": "Break",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "is telling you look i try to be to break above the level of absorption that i had before okay i try ",
+    "cooccurrence_count": 22,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 327
+  },
+  {
+    "source": "Gap",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "okay if we manage to break this level we have a gap and this gap",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 341
+  },
+  {
+    "source": "Break",
+    "target": "Gap",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "okay if we manage to break this level we have a gap and this gap",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 341
+  },
+  {
+    "source": "Aggressive",
+    "target": "Balance",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "is the first level that the market will aggressively want to rebalance",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 342
+  },
+  {
+    "source": "Aggressive",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "is the first level that the market will aggressively want to rebalance",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 342
+  },
+  {
+    "source": "Balance",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "is the first level that the market will aggressively want to rebalance",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 342
+  },
+  {
+    "source": "Break",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "that the market will not catch me movement like this break out and that's not back okay but that i w",
+    "cooccurrence_count": 8,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 363
+  },
+  {
+    "source": "Balance",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "was the following we have a balance okay this can be either a session profile so the actual cash ses",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 367
+  },
+  {
+    "source": "Profile",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "was the following we have a balance okay this can be either a session profile so the actual cash ses",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 367
+  },
+  {
+    "source": "Momentum",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "okay and then you break it okay and when you break it you have a potential to have a momentum setup ",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 369
+  },
+  {
+    "source": "Break",
+    "target": "Momentum",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "okay and then you break it okay and when you break it you have a potential to have a momentum setup ",
+    "cooccurrence_count": 4,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 369
+  },
+  {
+    "source": "Break",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "okay and then you break it okay and when you break it you have a potential to have a momentum setup ",
+    "cooccurrence_count": 4,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 369
+  },
+  {
+    "source": "Session",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "break the cash session you have the explosion and that's the setup okay but when you understand that",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 376
+  },
+  {
+    "source": "Close",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "break even and then the market comes back and you say okay i had the opportunity to close at one to ",
+    "cooccurrence_count": 7,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 390
+  },
+  {
+    "source": "Break",
+    "target": "Close",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "break even and then the market comes back and you say okay i had the opportunity to close at one to ",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 390
+  },
+  {
+    "source": "Breakout",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "breakout comes back in so this market is really boring for me okay yes you can take some one to one",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 394
+  },
+  {
+    "source": "Aggressive",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "the aggressive market participants filtered for size so what we call the big trades okay it's not on",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 399
+  },
+  {
+    "source": "Market",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "the aggressive market participants filtered for size so what we call the big trades okay it's not on",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 399
+  },
+  {
+    "source": "Aggression",
+    "target": "Market",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "you see that the market is giving you not only big strong aggression level plus cluster of speed of ",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 405
+  },
+  {
+    "source": "Aggression",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "you see that the market is giving you not only big strong aggression level plus cluster of speed of ",
+    "cooccurrence_count": 5,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 405
+  },
+  {
+    "source": "Aggressive",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "no participation from aggressive orders guys i really try my best only to explain models for the fir",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 438
+  },
+  {
+    "source": "Auction",
+    "target": "Direction",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "the range the auction is starting okay they have the speed they have the volume and they have the di",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 452
+  },
+  {
+    "source": "Reward",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "gift you can give to me is taking this trade by yourself it means that my time got rewarded",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 456
+  },
+  {
+    "source": "Aggressive",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "yes speed of tape is helping you speed of tape it's like a validation of the most important aggressi",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 457
+  },
+  {
+    "source": "Aggression",
+    "target": "Break",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "by the moment they break an important level you have an aggression on the upside and you don't come ",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 469
+  },
+  {
+    "source": "Aggressive",
+    "target": "Print",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "they are loading hard so expect that they print and expect that we start to see aggressive buyers",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 473
+  },
+  {
+    "source": "Absorption",
+    "target": "Close",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "this level with participation and absorption all these sellers needs to close and if all these selle",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 480
+  },
+  {
+    "source": "Level",
+    "target": "Print",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "now this level is accepted this is the last station of the sellers i think we will print really soon",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 503
+  },
+  {
+    "source": "Level",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "here now look at this level this is the first level that we saw this is still a valid setup but",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 524
+  },
+  {
+    "source": "Setup",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "here now look at this level this is the first level that we saw this is still a valid setup but",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 524
+  },
+  {
+    "source": "Auction",
+    "target": "Short",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "yeah it was a good short on the failed auction but i told you immediately you saw that the buyers",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 555
+  },
+  {
+    "source": "Breakout",
+    "target": "Level",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "the level that created the most important breakout all this breakout of this area",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 560
+  },
+  {
+    "source": "Break",
+    "target": "Direction",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "a road okay a direction of the road if you break from the bottom you go south if you break from the",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 585
+  },
+  {
+    "source": "Balance",
+    "target": "Momentum",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "this is balance okay when can we expect momentum when you break this level this mean reversion that'",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 610
+  },
+  {
+    "source": "Level",
+    "target": "Momentum",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "this is balance okay when can we expect momentum when you break this level this mean reversion that'",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 610
+  },
+  {
+    "source": "Balance",
+    "target": "Break",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "this is balance okay when can we expect momentum when you break this level this mean reversion that'",
+    "cooccurrence_count": 4,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 610
+  },
+  {
+    "source": "Break",
+    "target": "Reward",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "matched_text": "reward of one to 2.6 and you have a really fast break even point why a really fast break even point",
+    "cooccurrence_count": 3,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 631
+  },
+  {
+    "source": "Close",
+    "target": "Gap",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "this is a level that if the candle close below this gap it can break this but if it recover we go up",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 692
+  },
+  {
+    "source": "Absorption",
+    "target": "Aggressive",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "another confirmation of the absorption but in all this area i don't see aggressive buyers or",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 712
+  },
+  {
+    "source": "Absorption",
+    "target": "Delta",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "if we use delta volume charts it's easy to see absorption i prefer like this i prefer look at this",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 716
+  },
+  {
+    "source": "Balance",
+    "target": "Close",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "balance market is that if you are smart in positioning and fast you can you can close the day at thr",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 767
+  },
+  {
+    "source": "Aggression",
+    "target": "Target",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "aggression of the buyers okay you have a profit potential this level i don't want to put target",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 790
+  },
+  {
+    "source": "Level",
+    "target": "Target",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "aggression of the buyers okay you have a profit potential this level i don't want to put target",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 790
+  },
+  {
+    "source": "Level",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "important waiting for speed of day big trades nothing there is nothing now they are going back to th",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 799
+  },
+  {
+    "source": "Aggressive",
+    "target": "Auction",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "look how sellers are aggressively trying to push the auction down but i don't see anything here",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 835
+  },
+  {
+    "source": "Close",
+    "target": "Reward",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "of course remember what i told you the candle needs to close green now the effort is not being rewar",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 862
+  },
+  {
+    "source": "Absorption",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "one is low in the curve and it's an absorption of the sellers so it's a setup that have an explanati",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 880
+  },
+  {
+    "source": "Session",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "yeah i usually trade all the new york session i'm active i'm active",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 902
+  },
+  {
+    "source": "Level",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "to see the levels of the session with you",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 969
+  },
+  {
+    "source": "Market",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "i don't like the market condition today i would take this setup for the last one and in the worst",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 985
+  },
+  {
+    "source": "Aggressive",
+    "target": "Close",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "damien i'm really close to the value area low so i can have this surge of aggressive sellers that br",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 1030
+  },
+  {
+    "source": "Market",
+    "target": "Reward",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "that healed me a huge risk to reward as an intraday move but the market was not ready to do it today",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 1037
+  },
+  {
+    "source": "Short",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "value area low of the previous and super close to the actual no short from here are a little bit",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 1041
+  },
+  {
+    "source": "Session",
+    "target": "Volatility",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "late new york session so i don't think we will have a volatility surge in the end",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 1049
+  },
+  {
+    "source": "Aggression",
+    "target": "Short",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "i'm in that short still holding till the aggression i love you guys good rick amazing",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 1065
+  },
+  {
+    "source": "Balance",
+    "target": "Breakout",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "ah initial balance breakout okay",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 1082
+  },
+  {
+    "source": "Breakout",
+    "target": "Initial",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "ah initial balance breakout okay",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 1082
+  },
+  {
+    "source": "Balance",
+    "target": "Initial",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "ah initial balance breakout okay",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 1082
+  },
+  {
+    "source": "Break",
+    "target": "Initial",
+    "relation": "cooccurs_with",
+    "confidence": 0.55,
+    "direction": "bidirectional",
+    "matched_text": "ah initial balance breakout okay",
+    "cooccurrence_count": 2,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 1082
+  },
+  {
+    "source": "Momentum",
+    "target": "Short",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "the guys the guys that took this momentum shorts i think it's time to take out your amazing one",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 1084
+  },
+  {
+    "source": "Momentum",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "two three you took an amazing trade this is momentum squeeze it's amazing",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 1085
+  },
+  {
+    "source": "Close",
+    "target": "Setup",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "now they are pushing now they are confirming the setup that i gave you but i need to close",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 886
+  },
+  {
+    "source": "Entry",
+    "target": "Session",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "scalp you see every everyone's scalp they love this session look at this amazing entry",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 1111
+  },
+  {
+    "source": "POC",
+    "target": "Target",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "that is mid between the final target and the other one the invalidation point is this let's go to po",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 1120
+  },
+  {
+    "source": "Target",
+    "target": "VAL",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "that is mid between the final target and the other one the invalidation point is this let's go to po",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 1120
+  },
+  {
+    "source": "Aggression",
+    "target": "Print",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "it creates if it prints an aggression candle really strong an aggression candle really strong you ca",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 1125
+  },
+  {
+    "source": "Target",
+    "target": "Trade",
+    "relation": "cooccurs_with",
+    "confidence": 0.45,
+    "direction": "bidirectional",
+    "matched_text": "profit target of the potential of the trade let's see how it goes my position will have been taken o",
+    "cooccurrence_count": 1,
+    "method": "cooccurrence",
+    "discovered": true,
+    "segment_index": 1153
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "No_Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.28,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Trending_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.26,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Choppy_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.31,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Footprint_Grid",
+    "relation": "cooccurs_with",
+    "confidence": 0.63,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Low_Volatility_Chart",
+    "relation": "cooccurs_with",
+    "confidence": 0.33,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.63,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.33,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Trending_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.28,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Choppy_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.32,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Footprint_Grid",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Low_Volatility_Chart",
+    "relation": "cooccurs_with",
+    "confidence": 0.35,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.65,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.35,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Choppy_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.3,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Footprint_Grid",
+    "relation": "cooccurs_with",
+    "confidence": 0.62,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Low_Volatility_Chart",
+    "relation": "cooccurs_with",
+    "confidence": 0.33,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.62,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.33,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Footprint_Grid",
+    "relation": "cooccurs_with",
+    "confidence": 0.68,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Low_Volatility_Chart",
+    "relation": "cooccurs_with",
+    "confidence": 0.38,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.68,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.38,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Low_Volatility_Chart",
+    "relation": "cooccurs_with",
+    "confidence": 0.7,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 1.0,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.7,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Chart_Detected",
+    "relation": "cooccurs_with",
+    "confidence": 0.7,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.4,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Ranging_Structure",
+    "relation": "cooccurs_with",
+    "confidence": 0.7,
+    "direction": "bidirectional",
+    "method": "vision_cooccurrence",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.77,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.77,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.83,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.83,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.02,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.02,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.02,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.02,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.37,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.37,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.06,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.06,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.21,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.21,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.16,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.16,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.83,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.83,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.07,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.07,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Trending_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.05,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.05,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.07,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.07,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.24,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.24,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.05,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.05,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.03,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.29,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.29,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.11,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.11,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.21,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.21,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.27,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.27,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.02,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.02,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.16,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.16,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.32,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.32,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.5,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.5,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.08,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.08,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.17,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.17,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.26,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.26,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.16,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.16,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.23,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.23,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.35,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.12,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.12,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.4,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.4,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.4,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.4,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.13,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.13,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.4,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.4,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.4,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.4,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.22,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.22,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Choppy_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.77,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.77,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.12,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.12,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.15,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.38,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.38,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.5,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.5,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.06,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.06,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.1,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.1,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.1,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.1,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "No_Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.3,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.6,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.6,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.73,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.73,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.04,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.04,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.2,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.54,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.54,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.05,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.05,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.37,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Chart_Detected",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.37,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Footprint_Grid",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 1.0,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.05,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Neutral_Delta",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.05,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Low_Volatility_Chart",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Lower_Low",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  },
+  {
+    "source": "Ranging_Structure",
+    "target": "Fundamentals",
+    "relation": "confirms",
+    "confidence": 0.25,
+    "direction": "forward",
+    "method": "vision_transcript_fusion",
+    "discovered": true
+  }
+]

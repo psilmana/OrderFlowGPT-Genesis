@@ -1,0 +1,2245 @@
+GENESIS LIVE COACH — Explanations
+======================================================================
+
+Lesson: Lesson06 | Frame: 0
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is trending up. This is driven by trend engine bullish. Evidence: trend_state=TRENDING_UP, session=RTH. Absorption Buy is present. buyer aggression with absorption. Supporting imbalances: BID at price_0, ASK at price_0. Absorption events: BID at price_0. Risk is assessed as high. Invalidation if: break of structure, absorption fails.
+
+— Market State —
+The market is trending up. This is driven by trend engine bullish. Evidence: trend_state=TRENDING_UP, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Absorption Buy is present. buyer aggression with absorption. Supporting imbalances: BID at price_0, ASK at price_0. Absorption events: BID at price_0.
+
+— Risk —
+Risk is assessed as high. Invalidation if: break of structure, absorption fails.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation, absorption resolution.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4285714285714285714285714286): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.615 (MEDIUM)
+Explanation ID: c0193612e81627b6
+============================================================
+
+Lesson: Lesson06 | Frame: 1
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Seller Aggressive is present. ask imbalances dominant. Supporting imbalances: ASK at price_1. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Seller Aggressive is present. ask imbalances dominant. Supporting imbalances: ASK at price_1.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.3333333333333333333333333333): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0001 (similarity 0.3333333333333333333333333333): Getting to the hard point for the sellers to take control....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.59 (MEDIUM)
+Explanation ID: f5279568e406bceb
+============================================================
+
+Lesson: Lesson06 | Frame: 2
+Timestamp: 00:01:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0001 (similarity 0.2): Getting to the hard point for the sellers to take control....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: aea544062f993ff5
+============================================================
+
+Lesson: Lesson06 | Frame: 3
+Timestamp: 00:01:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 2089620fd6306144
+============================================================
+
+Lesson: Lesson06 | Frame: 4
+Timestamp: 00:03:54
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: ASK at price_4. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_4.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: f59c6261d58dcaf7
+============================================================
+
+Lesson: Lesson06 | Frame: 5
+Timestamp: 00:03:54
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Buyer Aggressive is present. bid imbalances dominant. Supporting imbalances: BID at price_5. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Buyer Aggressive is present. bid imbalances dominant. Supporting imbalances: BID at price_5.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.3333333333333333333333333333): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0005 (similarity 0.3333333333333333333333333333): It's really difficult for buyers....
+  • Lesson06_frame0001 (similarity 0.1666666666666666666666666667): Getting to the hard point for the sellers to take control....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.59 (MEDIUM)
+Explanation ID: eb49de4103ed1d6c
+============================================================
+
+Lesson: Lesson06 | Frame: 6
+Timestamp: 00:05:51
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 83aae1ae498573ec
+============================================================
+
+Lesson: Lesson06 | Frame: 7
+Timestamp: 00:05:51
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 3ef4e9c127eab51b
+============================================================
+
+Lesson: Lesson06 | Frame: 8
+Timestamp: 00:07:49
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: a5513d6d90747eb1
+============================================================
+
+Lesson: Lesson06 | Frame: 9
+Timestamp: 00:09:46
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 150654fe346c7d4f
+============================================================
+
+Lesson: Lesson06 | Frame: 10
+Timestamp: 00:09:46
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: dcba9791b02ed368
+============================================================
+
+Lesson: Lesson06 | Frame: 11
+Timestamp: 00:11:43
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 05ae08404fa5408b
+============================================================
+
+Lesson: Lesson06 | Frame: 12
+Timestamp: 00:11:43
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Seller Aggressive is present. ask imbalances dominant. Supporting imbalances: ASK at price_12. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Seller Aggressive is present. ask imbalances dominant. Supporting imbalances: ASK at price_12.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.3333333333333333333333333333): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0001 (similarity 0.3333333333333333333333333333): Getting to the hard point for the sellers to take control....
+  • Lesson06_frame0012 (similarity 0.3333333333333333333333333333): I really wanted to show because someone in the chat asked me, Fabio, how can I take it?...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.59 (MEDIUM)
+Explanation ID: eca3495e66b05991
+============================================================
+
+Lesson: Lesson06 | Frame: 13
+Timestamp: 00:13:41
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: a16fea71ab9b4dcc
+============================================================
+
+Lesson: Lesson06 | Frame: 14
+Timestamp: 00:13:41
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 084b75fbb1e2ee9d
+============================================================
+
+Lesson: Lesson06 | Frame: 15
+Timestamp: 00:15:38
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 3ee0f2b16c94ebc6
+============================================================
+
+Lesson: Lesson06 | Frame: 16
+Timestamp: 00:17:35
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: a57b0dfab80221e0
+============================================================
+
+Lesson: Lesson06 | Frame: 17
+Timestamp: 00:17:35
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: befee103d577d5bf
+============================================================
+
+Lesson: Lesson06 | Frame: 18
+Timestamp: 00:19:33
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: b24e29741160a892
+============================================================
+
+Lesson: Lesson06 | Frame: 19
+Timestamp: 00:19:33
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 008fed3343a53e8a
+============================================================
+
+Lesson: Lesson06 | Frame: 20
+Timestamp: 00:21:30
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 6a97d5d5ddceb557
+============================================================
+
+Lesson: Lesson06 | Frame: 21
+Timestamp: 00:21:30
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 4076eaaed4e2349a
+============================================================
+
+Lesson: Lesson06 | Frame: 22
+Timestamp: 00:23:27
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 12c83e2614b1b211
+============================================================
+
+Lesson: Lesson06 | Frame: 23
+Timestamp: 00:25:24
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 2974c4c12a81eba9
+============================================================
+
+Lesson: Lesson06 | Frame: 24
+Timestamp: 00:25:24
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 96aa9c5806aaf39a
+============================================================
+
+Lesson: Lesson06 | Frame: 25
+Timestamp: 00:27:22
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: fcd2a0ec6cdec2e2
+============================================================
+
+Lesson: Lesson06 | Frame: 26
+Timestamp: 00:27:22
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Buyer Aggressive is present. bid imbalances dominant. Supporting imbalances: BID at price_26. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Buyer Aggressive is present. bid imbalances dominant. Supporting imbalances: BID at price_26.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.3333333333333333333333333333): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0005 (similarity 0.3333333333333333333333333333): It's really difficult for buyers....
+  • Lesson06_frame0026 (similarity 0.3333333333333333333333333333): The buyers are not......
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.59 (MEDIUM)
+Explanation ID: 121e0407c2ec4c43
+============================================================
+
+Lesson: Lesson06 | Frame: 27
+Timestamp: 00:29:19
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: e418b655dcf6e6ad
+============================================================
+
+Lesson: Lesson06 | Frame: 28
+Timestamp: 00:29:19
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Buyer Aggressive is present. bid imbalances dominant. Supporting imbalances: BID at price_28. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Buyer Aggressive is present. bid imbalances dominant. Supporting imbalances: BID at price_28.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.3333333333333333333333333333): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.3333333333333333333333333333): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0005 (similarity 0.3333333333333333333333333333): It's really difficult for buyers....
+  • Lesson06_frame0026 (similarity 0.3333333333333333333333333333): The buyers are not......
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.59 (MEDIUM)
+Explanation ID: b5e7642c4962c97a
+============================================================
+
+Lesson: Lesson06 | Frame: 29
+Timestamp: 00:31:16
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 704392af3237e6dc
+============================================================
+
+Lesson: Lesson06 | Frame: 30
+Timestamp: 00:33:14
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 9929cfb36e3388e3
+============================================================
+
+Lesson: Lesson06 | Frame: 31
+Timestamp: 00:33:14
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 3658335e9d3a2324
+============================================================
+
+Lesson: Lesson06 | Frame: 32
+Timestamp: 00:35:11
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: eb3646ab977da8dd
+============================================================
+
+Lesson: Lesson06 | Frame: 33
+Timestamp: 00:35:11
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 35ff837906f4951e
+============================================================
+
+Lesson: Lesson06 | Frame: 34
+Timestamp: 00:37:08
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 8bf07f38e083563c
+============================================================
+
+Lesson: Lesson06 | Frame: 35
+Timestamp: 00:37:08
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: e73b82122cb8bd43
+============================================================
+
+Lesson: Lesson06 | Frame: 36
+Timestamp: 00:39:06
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 3a4fa8edf6d180e4
+============================================================
+
+Lesson: Lesson06 | Frame: 37
+Timestamp: 00:41:03
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: cf2d642316b9ca85
+============================================================
+
+Lesson: Lesson06 | Frame: 38
+Timestamp: 00:41:03
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 0be2a2df67584d67
+============================================================
+
+Lesson: Lesson06 | Frame: 39
+Timestamp: 00:43:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 35cdfdb4e2efd938
+============================================================
+
+Lesson: Lesson06 | Frame: 40
+Timestamp: 00:43:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 15474ebcb0059685
+============================================================
+
+Lesson: Lesson06 | Frame: 41
+Timestamp: 00:44:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 262754f71c2bfe70
+============================================================
+
+Lesson: Lesson06 | Frame: 42
+Timestamp: 00:44:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: ff7064ec6ac385f1
+============================================================
+
+Lesson: Lesson06 | Frame: 43
+Timestamp: 00:46:55
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 64e30c3d6830e8d8
+============================================================
+
+Lesson: Lesson06 | Frame: 44
+Timestamp: 00:48:52
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 4fa4bab53551251d
+============================================================
+
+Lesson: Lesson06 | Frame: 45
+Timestamp: 00:48:52
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 4a15d448a63f5e82
+============================================================
+
+Lesson: Lesson06 | Frame: 46
+Timestamp: 00:50:49
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 563b0bda63a2d623
+============================================================
+
+Lesson: Lesson06 | Frame: 47
+Timestamp: 00:50:49
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 6ab1fd26888d3dd0
+============================================================
+
+Lesson: Lesson06 | Frame: 48
+Timestamp: 00:52:47
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: 7216a00d3fe97c86
+============================================================
+
+Lesson: Lesson06 | Frame: 49
+Timestamp: 00:52:47
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+Relevant concepts: Hello, Beautiful, People.
+  • Hello (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Beautiful (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • People (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Welcome (NOVICE, relevance 0.4): keyword match in definition or explanation
+  • Students (NOVICE, relevance 0.4): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 0.4): hello beautiful people how is it going welcome to all the new students
+one in chat i know that some ...
+  • Lesson06_frame0002 (similarity 0.4): Take more profit out, 5000....
+  • Lesson06_frame0003 (similarity 0.4): If it breaks, they explode....
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.415 (MEDIUM)
+Explanation ID: c41c42ecc4f312ac
+============================================================
+

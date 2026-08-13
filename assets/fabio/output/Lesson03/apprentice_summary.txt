@@ -1,69 +1,69 @@
 GENESIS APPRENTICE — Learning Summary
 ======================================================================
 
-Report ID: 334f6145cc98db30
-Timestamp: 2026-08-10T01:27:14.910938
+Report ID: d3c1b4f7353bc298
+Timestamp: 2026-08-12T15:19:43.306010
 Mode: transcript-only
 
 Lessons Processed: 1
-Concepts Learned: 108
+Concepts Learned: 547
 Experiences Created: 50
 Sessions Completed: 50
 Coach Explanations: 100
 Frames Processed: 50
-Overall Confidence: 56.43%
+Overall Confidence: 26.58%
 
 Concept Coverage:
-  Segments with concepts: 1160/1316 (88.1%)
-  Segments with NO concepts: 156
+ Segments with concepts: 188/239 (78.7%)
+ Segments with NO concepts: 51
 
 Concept Mastery:
-  NOVICE       ████████████████████████████████████████████████████████████████████████████████████████████████████████████ (108)
+ NOVICE       ███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████ (547)
 
 Top Concepts:
-  Hello                0.00
-  Welcome              0.00
-  Warriors             0.00
-  People               0.00
-  We're                0.00
-  Today                0.00
-  Andrea               0.00
-  Avengers             0.00
-  Traders              0.00
-  Inside               0.00
+ Hello                0.00
+ Welcome              0.00
+ Warriors             0.00
+ People               0.00
+ We're                0.00
+ Today                0.00
+ Andrea               0.00
+ Avengers             0.00
+ Traders              0.00
+ Inside               0.00
 
 What was learned:
-  ✓ Lesson Lesson03: 108 concepts, 50 experiences
+ ✓ Lesson Lesson03: 547 concepts, 50 experiences
 
 What needs more study:
-  ⚠ Account (NOVICE)
-  ⚠ Andrea (NOVICE)
-  ⚠ Anyway (NOVICE)
-  ⚠ Arzalan (NOVICE)
-  ⚠ Avengers (NOVICE)
-  ⚠ Battlefield (NOVICE)
-  ⚠ Battleground (NOVICE)
-  ⚠ Brain (NOVICE)
-  ⚠ Break (NOVICE)
-  ⚠ Business (NOVICE)
-  ⚠ Camera (NOVICE)
-  ⚠ Capital (NOVICE)
-  ⚠ Champion (NOVICE)
-  ⚠ Close (NOVICE)
-  ⚠ Congratulations (NOVICE)
-  ⚠ Control (NOVICE)
-  ⚠ Couldn't (NOVICE)
-  ⚠ Damage (NOVICE)
-  ⚠ Dashboard (NOVICE)
-  ⚠ Different (NOVICE)
+ ⚠ Ability (NOVICE)
+ ⚠ Absorb (NOVICE)
+ ⚠ Absorbed? (NOVICE)
+ ⚠ Absorption (NOVICE)
+ ⚠ Accept (NOVICE)
+ ⚠ Acceptance (NOVICE)
+ ⚠ Account (NOVICE)
+ ⚠ Additional (NOVICE)
+ ⚠ Advice (NOVICE)
+ ⚠ Advise (NOVICE)
+ ⚠ Affect (NOVICE)
+ ⚠ Afraid (NOVICE)
+ ⚠ Aggression (NOVICE)
+ ⚠ Aggressive (NOVICE)
+ ⚠ Agree (NOVICE)
+ ⚠ Alive (NOVICE)
+ ⚠ Alphago (NOVICE)
+ ⚠ Amount (NOVICE)
+ ⚠ Amplify (NOVICE)
+ ⚠ Analysis (NOVICE)
 
 Knowledge Graph:
-  Concepts: 176
-  Relationships: 728
+ Concepts: 586
+ Relationships: 58
 
 [NOTE] Running in TRANSCRIPT-ONLY mode.
-  Video frames provide timestamps only.
-  Concept extraction is keyword-based from transcript text.
-  Vision analysis (Bundles 1-8) is NOT active.
+ Video frames provide timestamps only.
+ Concept extraction is keyword-based from transcript text.
+ Vision analysis (Bundles 1-8) is NOT active.
 
 Knowledge graph: 0 concepts, 0 relationships, avg confidence 0

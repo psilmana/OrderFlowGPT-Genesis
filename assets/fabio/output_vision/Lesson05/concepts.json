@@ -1,0 +1,3740 @@
+[
+  {
+    "concept_id": "db20f6c5b98d8f45",
+    "name": "Hello",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "hello beautiful people how is it going sorry for my voice today i'm a little bit sick",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "a9312197d1ec6dbe",
+    "name": "Beautiful",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "hello beautiful people how is it going sorry for my voice today i'm a little bit sick",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "5cfa067c37d99cea",
+    "name": "People",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "hello beautiful people how is it going sorry for my voice today i'm a little bit sick",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "4156db51bcc04de7",
+    "name": "Sorry",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "hello beautiful people how is it going sorry for my voice today i'm a little bit sick",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "bc4dc15d41d5039c",
+    "name": "Voice",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "hello beautiful people how is it going sorry for my voice today i'm a little bit sick",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "952b5c71de6b8837",
+    "name": "Today",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "hello beautiful people how is it going sorry for my voice today i'm a little bit sick",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "c1770e1de69cbf19",
+    "name": "Little",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "hello beautiful people how is it going sorry for my voice today i'm a little bit sick",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "b0b297f21a31df61",
+    "name": "Community",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "uh another section and for the other section it will be uh the uh q and a between the community",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "bd3b71018cbbaaf7",
+    "name": "Visible",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "should be visible here",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "5540b877aff1bb95",
+    "name": "Setup",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "always need to give you a setup now let's go here let's see what what is happening here again",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "f89f69e510e0b866",
+    "name": "Let's",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "always need to give you a setup now let's go here let's see what what is happening here again",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "f41a3434a3586f96",
+    "name": "Profit",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "that send us directly here okay to take profit",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "b9639fe93e0d1627",
+    "name": "Candle",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "probably the next candle pushes down.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "2128a562febd5ffb",
+    "name": "Pushes",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "probably the next candle pushes down.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "cde3d590fb88ba49",
+    "name": "Don't",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "I don't see him in the chart.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "58043185c1b252bf",
+    "name": "Chart",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "I don't see him in the chart.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "f980e36b3a95ce87",
+    "name": "Depends",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "Depends on how you enter.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "60aa705ec4419337",
+    "name": "Finish",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "I just want to let you finish this setup.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "30b4f7064d4ce2f4",
+    "name": "Template",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "Beautiful template, Carl.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "3a491d12b4ba21ff",
+    "name": "Close",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "And if they close green, they go another run.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "220a4885f224f28a",
+    "name": "Green",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "And if they close green, they go another run.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "5aea50474236039a",
+    "name": "Trades",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "Usually, on these trades, I like to use the profit I made on the first one.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "aba0a244e81155ff",
+    "name": "First",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "Usually, on these trades, I like to use the profit I made on the first one.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "76379a9b58e71b34",
+    "name": "Reward",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "If you want to try the home run and take a big risk to reward, look.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "c239e5dae7d862ef",
+    "name": "Buyers",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "The buyers take control.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "fcb6c0d07b0df2f1",
+    "name": "Control",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "The buyers take control.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "f0aa8ffb40fe6eb1",
+    "name": "Manage",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "I can show you how I manage and do everything.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "d14b261e86f646ab",
+    "name": "Pressure",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "The pressure is still building.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "280796cac98110e7",
+    "name": "Long?",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "Would you consider a long?",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "7b5069eb0957bc61",
+    "name": "Sellers",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "absorbed sellers again",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "262bcc1ff17ea934",
+    "name": "Range",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "breaking a range,",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "6b929ecb32c630b9",
+    "name": "What's",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "You know what's the problem?",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "a19e31eb680a4682",
+    "name": "Problem?",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "You know what's the problem?",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "bd943ea1570f90aa",
+    "name": "Absorption",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "Absorption of the buyers.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "7abe748e38ef2a3d",
+    "name": "Second",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "Let me mark one second the levels.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "03b78b6fafb9420f",
+    "name": "Levels",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "Let me mark one second the levels.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "1ab9ec99a73f83cf",
+    "name": "Trauma",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "And you know what's the trauma that it creates to the industry and why this industry is traumatized?",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "452b15d99da82cdb",
+    "name": "Creates",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "And you know what's the trauma that it creates to the industry and why this industry is traumatized?",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "35b1c3e873d55dac",
+    "name": "Industry",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "And you know what's the trauma that it creates to the industry and why this industry is traumatized?",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "9d5e9f68988a5ab2",
+    "name": "Traumatized?",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "And you know what's the trauma that it creates to the industry and why this industry is traumatized?",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "a9617d60985e2e37",
+    "name": "Threat",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "You give him a threat.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "225ba9b1e463fc2b",
+    "name": "Example",
+    "definition": "Concept extracted from Lesson05",
+    "visual_appearance": "unknown",
+    "teacher_explanation": "Now, going on, this one, it's another example.",
+    "confidence_level": "NOVICE",
+    "confidence_score": 0.0,
+    "evidence_count": 0,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "Lesson05"
+    ],
+    "evolution_events": 0
+  },
+  {
+    "concept_id": "vis_0000_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_0"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0001_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_1"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0002_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_2"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0003_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_3"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0003_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 162 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_3"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0003_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.023835428899831864,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_3"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0003_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_3"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0003_choppy",
+    "name": "Choppy_Structure",
+    "definition": "Chart structure is choppy with no clear directional bias.",
+    "visual_appearance": "Erratic price movement with frequent direction changes and whipsaws.",
+    "teacher_explanation": "Choppy conditions are dangerous. Reduce size or stay out until structure clarifies.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_3"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0004_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_4"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0004_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 125 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_4"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0004_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.023231332410839363,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_4"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0004_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_4"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0004_choppy",
+    "name": "Choppy_Structure",
+    "definition": "Chart structure is choppy with no clear directional bias.",
+    "visual_appearance": "Erratic price movement with frequent direction changes and whipsaws.",
+    "teacher_explanation": "Choppy conditions are dangerous. Reduce size or stay out until structure clarifies.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_4"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0005_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_5"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0006_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_6"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0007_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_7"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0008_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_8"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0009_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_9"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0010_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_10"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0011_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_11"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0012_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2390710382513661,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_12"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0012_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 238 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_12"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0012_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.10812451859206287,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_12"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0012_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.15,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_12"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0012_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.15,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_12"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0013_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.4152060158079626,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_13"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0013_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 512 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_13"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0013_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.1535238822309612,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_13"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0013_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.45,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_13"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0014_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.3044984387197502,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_14"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0014_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 289 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_14"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0014_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2257869315061409,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_14"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0014_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_14"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0014_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_14"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0015_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.30257428278688525,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_15"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0015_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 258 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_15"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0015_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2193474906201589,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_15"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0015_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_15"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0015_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_15"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0016_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.369291569086651,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_16"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0016_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 320 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_16"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0016_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2187119614808837,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_16"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0016_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_16"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0016_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_16"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0017_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2306090212724434,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_17"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0017_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 148 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_17"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0017_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.22140445294750247,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_17"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0017_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_17"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0017_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_17"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0018_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.36085089773614365,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_18"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0018_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 476 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_18"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0018_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.218731729134335,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_18"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0018_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_18"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0018_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_18"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0019_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_19"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0020_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_20"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0020_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 230 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_20"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0020_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.32701171957882696,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_20"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0020_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_20"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0020_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_20"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0021_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.7261904761904762,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_21"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0021_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 114 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.9,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_21"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0021_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.3573422677771774,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_21"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0021_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_21"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0021_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_21"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0022_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_22"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0023_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.27627646857923494,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_23"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0023_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 216 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_23"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0023_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2622209131765544,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_23"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0023_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_23"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0023_choppy",
+    "name": "Choppy_Structure",
+    "definition": "Chart structure is choppy with no clear directional bias.",
+    "visual_appearance": "Erratic price movement with frequent direction changes and whipsaws.",
+    "teacher_explanation": "Choppy conditions are dangerous. Reduce size or stay out until structure clarifies.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_23"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0024_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2617858362607338,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_24"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0024_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 208 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_24"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0024_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.44915168559617225,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_24"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0024_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_24"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0024_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_24"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0025_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.19518747560499605,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_25"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0025_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 272 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_25"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0025_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.42767954429762006,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_25"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0025_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_25"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0025_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_25"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0026_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.29015417642466823,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_26"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0026_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.15294890979174192,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_26"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0026_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_26"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0026_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_26"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0027_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.8731337822014053,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_27"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0027_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 385 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_27"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0027_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.0912829102293376,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_27"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0027_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_27"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0027_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_27"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0028_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_28"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0029_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.44497706869633097,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_29"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0029_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 210 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_29"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0029_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.12383987229612455,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_29"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0029_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_29"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0029_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_29"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0030_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.3181382952771272,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_30"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0030_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 37 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_30"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0030_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.1671608197892094,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_30"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0030_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_30"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0030_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_30"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0031_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_31"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0032_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.26898236241217804,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_32"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0032_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 70 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_32"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0032_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.3395748829481589,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_32"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0032_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_32"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0032_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_32"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0033_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_33"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0034_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.33611436377829823,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_34"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0034_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 70 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_34"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0034_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.14824624351604462,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_34"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0034_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_34"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0034_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_34"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0035_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2968384074941452,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_35"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0035_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 210 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_35"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0035_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.10365686138579912,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_35"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0035_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.15,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_35"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0035_choppy",
+    "name": "Choppy_Structure",
+    "definition": "Chart structure is choppy with no clear directional bias.",
+    "visual_appearance": "Erratic price movement with frequent direction changes and whipsaws.",
+    "teacher_explanation": "Choppy conditions are dangerous. Reduce size or stay out until structure clarifies.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.15,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_35"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0036_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_36"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0037_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.3908201600312256,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_37"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0037_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 152 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.9666666666666667,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_37"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0037_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.17564449243475475,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_37"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0037_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_37"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0037_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_37"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0038_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_38"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0039_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_39"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0040_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_40"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0041_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.8144339139344262,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_41"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0041_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 135 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_41"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0041_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.07013687386974536,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_41"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0041_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_41"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0041_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_41"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0042_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.8144339139344262,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_42"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0042_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 216 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_42"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0042_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.08682058847149435,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_42"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0042_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_42"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0042_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_42"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0043_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.8144339139344262,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_43"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0043_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 140 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_43"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0043_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.08047991298675884,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_43"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0043_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_43"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0043_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.2,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_43"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0044_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.7352623682669789,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_44"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0044_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 224 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_44"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0044_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.1057635015139333,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_44"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0044_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_44"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0044_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_44"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0045_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_45"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0045_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 180 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_45"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0045_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.097396401444135,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_45"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0045_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_45"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0045_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_45"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0046_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_46"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0046_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 432 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_46"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0046_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.06494356032663422,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_46"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0046_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_46"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0046_choppy",
+    "name": "Choppy_Structure",
+    "definition": "Chart structure is choppy with no clear directional bias.",
+    "visual_appearance": "Erratic price movement with frequent direction changes and whipsaws.",
+    "teacher_explanation": "Choppy conditions are dangerous. Reduce size or stay out until structure clarifies.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_46"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0047_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_47"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0047_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 128 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_47"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0047_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.1111325751738253,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_47"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0047_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_47"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0047_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_47"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0048_no_chart",
+    "name": "No_Chart_Detected",
+    "definition": "No chart region identified in the video frame.",
+    "visual_appearance": "Frame contains no discernible chart region.",
+    "teacher_explanation": "When no chart is visible, vision analysis cannot provide trading context.",
+    "confidence_level": "EMERGING",
+    "confidence_score": 0.3,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_48"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0049_chart",
+    "name": "Chart_Detected",
+    "definition": "A trading chart region was identified in the video frame through contour analysis.",
+    "visual_appearance": "Rectangular region with grid-like structure and price action.",
+    "teacher_explanation": "Fabio is showing a live chart. Pay attention to the price levels and delta colors.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.1830387636612022,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_49"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0049_grid",
+    "name": "Footprint_Grid",
+    "definition": "Detected a footprint chart grid with approximately 176 cells.",
+    "visual_appearance": "Horizontal and vertical lines forming a matrix of price\u00d7time cells.",
+    "teacher_explanation": "The grid represents individual price levels over time. Each cell shows volume and delta at that price.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 1.0,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_49"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0049_neutral_delta",
+    "name": "Neutral_Delta",
+    "definition": "Balanced buy/sell delta suggests equilibrium or absorption.",
+    "visual_appearance": "Mixed or muted colors with no clear dominance.",
+    "teacher_explanation": "Neutral delta often indicates absorption \u2014 buyers and sellers are matched. This can precede a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.12758106945791686,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_49"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0049_low_vol",
+    "name": "Low_Volatility_Chart",
+    "definition": "Low volatility detected \u2014 compression or consolidation phase.",
+    "visual_appearance": "Tight price range, small candles, minimal vertical movement.",
+    "teacher_explanation": "Low volatility often precedes expansion. Be ready for a breakout.",
+    "confidence_level": "DEVELOPING",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_49"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  },
+  {
+    "concept_id": "vis_0049_ranging",
+    "name": "Ranging_Structure",
+    "definition": "Chart structure is ranging or balanced.",
+    "visual_appearance": "Price oscillating between defined support and resistance levels.",
+    "teacher_explanation": "In a ranging structure, buy at support and sell at resistance. The POC is your anchor.",
+    "confidence_level": "CONFIDENT",
+    "confidence_score": 0.25,
+    "evidence_count": 1,
+    "positive_examples": 0,
+    "negative_examples": 0,
+    "related_concepts": [],
+    "lesson_references": [
+      "frame_49"
+    ],
+    "evolution_events": 0,
+    "source": "vision"
+  }
+]

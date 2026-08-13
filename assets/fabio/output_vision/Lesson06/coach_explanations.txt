@@ -1,0 +1,2012 @@
+GENESIS LIVE COACH — Explanations
+======================================================================
+
+Lesson: Lesson06 | Frame: 0
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: c0193612e81627b6
+============================================================
+
+Lesson: Lesson06 | Frame: 1
+Timestamp: 00:01:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: BID at price_1. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_1.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0000 (similarity 0.2): hello beautiful people how is it going welcome to all the new students...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.2775 (LOW)
+Explanation ID: f5279568e406bceb
+============================================================
+
+Lesson: Lesson06 | Frame: 2
+Timestamp: 00:03:54
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: BID at price_2. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_2.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0000 (similarity 0.2): hello beautiful people how is it going welcome to all the new students...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.2775 (LOW)
+Explanation ID: aea544062f993ff5
+============================================================
+
+Lesson: Lesson06 | Frame: 3
+Timestamp: 00:05:51
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: BID at price_3. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_3.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.2775 (LOW)
+Explanation ID: 2089620fd6306144
+============================================================
+
+Lesson: Lesson06 | Frame: 4
+Timestamp: 00:07:49
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_4. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_4.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.2775 (LOW)
+Explanation ID: f59c6261d58dcaf7
+============================================================
+
+Lesson: Lesson06 | Frame: 5
+Timestamp: 00:09:46
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_5. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_5.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.2775 (LOW)
+Explanation ID: eb49de4103ed1d6c
+============================================================
+
+Lesson: Lesson06 | Frame: 6
+Timestamp: 00:11:43
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: BID at price_6. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_6.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.2775 (LOW)
+Explanation ID: 83aae1ae498573ec
+============================================================
+
+Lesson: Lesson06 | Frame: 7
+Timestamp: 00:13:41
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: BID at price_7. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_7.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.2775 (LOW)
+Explanation ID: 3ef4e9c127eab51b
+============================================================
+
+Lesson: Lesson06 | Frame: 8
+Timestamp: 00:15:38
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: a5513d6d90747eb1
+============================================================
+
+Lesson: Lesson06 | Frame: 9
+Timestamp: 00:17:35
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 150654fe346c7d4f
+============================================================
+
+Lesson: Lesson06 | Frame: 10
+Timestamp: 00:19:33
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: dcba9791b02ed368
+============================================================
+
+Lesson: Lesson06 | Frame: 11
+Timestamp: 00:21:30
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 05ae08404fa5408b
+============================================================
+
+Lesson: Lesson06 | Frame: 12
+Timestamp: 00:23:27
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: eca3495e66b05991
+============================================================
+
+Lesson: Lesson06 | Frame: 13
+Timestamp: 00:25:24
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: a16fea71ab9b4dcc
+============================================================
+
+Lesson: Lesson06 | Frame: 14
+Timestamp: 00:27:22
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_14. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_14.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.2775 (LOW)
+Explanation ID: 084b75fbb1e2ee9d
+============================================================
+
+Lesson: Lesson06 | Frame: 15
+Timestamp: 00:29:19
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: ASK at price_15. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_15.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.2775 (LOW)
+Explanation ID: 3ee0f2b16c94ebc6
+============================================================
+
+Lesson: Lesson06 | Frame: 16
+Timestamp: 00:31:16
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: ASK at price_16. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_16.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.2775 (LOW)
+Explanation ID: a57b0dfab80221e0
+============================================================
+
+Lesson: Lesson06 | Frame: 17
+Timestamp: 00:33:14
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_17. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_17.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.2775 (LOW)
+Explanation ID: befee103d577d5bf
+============================================================
+
+Lesson: Lesson06 | Frame: 18
+Timestamp: 00:35:11
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: b24e29741160a892
+============================================================
+
+Lesson: Lesson06 | Frame: 19
+Timestamp: 00:37:08
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_19. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_19.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Break, Reload.
+  • Break (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Reload (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3175 (LOW)
+Explanation ID: 008fed3343a53e8a
+============================================================
+
+Lesson: Lesson06 | Frame: 20
+Timestamp: 00:39:06
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 6a97d5d5ddceb557
+============================================================
+
+Lesson: Lesson06 | Frame: 21
+Timestamp: 00:41:03
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 4076eaaed4e2349a
+============================================================
+
+Lesson: Lesson06 | Frame: 23
+Timestamp: 00:44:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 9e53392e84c2632b
+============================================================
+
+Lesson: Lesson06 | Frame: 24
+Timestamp: 00:46:55
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 2295d0b194db36ba
+============================================================
+
+Lesson: Lesson06 | Frame: 25
+Timestamp: 00:48:52
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 23d497cc3f9a332b
+============================================================
+
+Lesson: Lesson06 | Frame: 26
+Timestamp: 00:50:49
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_26. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_26.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Break, Reload.
+  • Break (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Reload (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3175 (LOW)
+Explanation ID: a17f9c569e248e3c
+============================================================
+
+Lesson: Lesson06 | Frame: 27
+Timestamp: 00:52:47
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 0fb67033cfa9a854
+============================================================
+
+Lesson: Lesson06 | Frame: 28
+Timestamp: 00:54:44
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: a0b3b7d96a082829
+============================================================
+
+Lesson: Lesson06 | Frame: 29
+Timestamp: 00:56:41
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_29. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_29.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Break, Reload.
+  • Break (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Reload (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3175 (LOW)
+Explanation ID: c8a53d59f13c389a
+============================================================
+
+Lesson: Lesson06 | Frame: 30
+Timestamp: 00:58:39
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: ASK at price_30. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_30.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Break, Reload.
+  • Break (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Reload (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3175 (LOW)
+Explanation ID: 2c77e63f9f02a083
+============================================================
+
+Lesson: Lesson06 | Frame: 31
+Timestamp: 01:00:36
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: ASK at price_31. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_31.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Break, Reload.
+  • Break (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Reload (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3175 (LOW)
+Explanation ID: 577f59fbbe9f3625
+============================================================
+
+Lesson: Lesson06 | Frame: 32
+Timestamp: 01:02:33
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: ASK at price_32. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_32.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Break, Reload.
+  • Break (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Reload (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3175 (LOW)
+Explanation ID: ce4eb0cdc9dc9620
+============================================================
+
+Lesson: Lesson06 | Frame: 33
+Timestamp: 01:04:30
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 1acbdd472ca53f50
+============================================================
+
+Lesson: Lesson06 | Frame: 34
+Timestamp: 01:06:28
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: ASK at price_34. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_34.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Break, Reload.
+  • Break (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Reload (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3175 (LOW)
+Explanation ID: 6ec589488d985ac0
+============================================================
+
+Lesson: Lesson06 | Frame: 35
+Timestamp: 01:08:25
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_35. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_35.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Break, Reload.
+  • Break (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Reload (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3175 (LOW)
+Explanation ID: 934af2b5960a82a9
+============================================================
+
+Lesson: Lesson06 | Frame: 36
+Timestamp: 01:10:22
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 4742b314be29526a
+============================================================
+
+Lesson: Lesson06 | Frame: 37
+Timestamp: 01:12:20
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: be8bba9bbc3bd27a
+============================================================
+
+Lesson: Lesson06 | Frame: 38
+Timestamp: 01:14:17
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: a71f421eda16ab76
+============================================================
+
+Lesson: Lesson06 | Frame: 39
+Timestamp: 01:16:14
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 344c3ed092e0fe8f
+============================================================
+
+Lesson: Lesson06 | Frame: 40
+Timestamp: 01:18:12
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 3474e601d86b7ed0
+============================================================
+
+Lesson: Lesson06 | Frame: 41
+Timestamp: 01:20:09
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 87cdf900f9d5b149
+============================================================
+
+Lesson: Lesson06 | Frame: 42
+Timestamp: 01:22:06
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: BID at price_42. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_42.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Break, Reload.
+  • Break (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Reload (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3175 (LOW)
+Explanation ID: 8d3d9c50f8efad95
+============================================================
+
+Lesson: Lesson06 | Frame: 43
+Timestamp: 01:24:03
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_43. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_43.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Break, Reload.
+  • Break (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Reload (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3175 (LOW)
+Explanation ID: e462ad96e0d7fdba
+============================================================
+
+Lesson: Lesson06 | Frame: 44
+Timestamp: 01:26:01
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_44. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_44.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Break, Reload.
+  • Break (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Reload (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3175 (LOW)
+Explanation ID: 770f721a20607a49
+============================================================
+
+Lesson: Lesson06 | Frame: 45
+Timestamp: 01:27:58
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 5929c4c5821d9a51
+============================================================
+
+Lesson: Lesson06 | Frame: 46
+Timestamp: 01:29:55
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 16015db03d3df6f9
+============================================================
+
+Lesson: Lesson06 | Frame: 47
+Timestamp: 01:31:53
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson06_frame0000 (similarity 1): hello beautiful people how is it going welcome to all the new students...
+  • Lesson06_frame0001 (similarity 1): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 1): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 51dbb98c157d77b7
+============================================================
+
+Lesson: Lesson06 | Frame: 48
+Timestamp: 01:33:50
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_48. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_48.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Break, Reload.
+  • Break (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Reload (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3175 (LOW)
+Explanation ID: 2faf21a39e0352f9
+============================================================
+
+Lesson: Lesson06 | Frame: 49
+Timestamp: 01:35:47
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_49. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_49.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Break, Reload.
+  • Break (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Reload (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson06_frame0001 (similarity 0.4): it's not easy to to trade live and we need to go to the disclaimer i hope every one of you read it...
+  • Lesson06_frame0002 (similarity 0.4): sellers and it's possible that even if the direction is is clear they will take out my stop loss oka...
+  • Lesson06_frame0003 (similarity 0.4): the the service to put my live streaming in full hd is it clearly visible this absorption here guys...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3175 (LOW)
+Explanation ID: ae969d6a02a09959
+============================================================
+

@@ -1,0 +1,2085 @@
+GENESIS LIVE COACH — Explanations
+======================================================================
+
+Lesson: Lesson03 | Frame: 0
+Timestamp: 00:00:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 1): hello everyone and welcome in chat how is it going warriors one in chat can you...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: c0193612e81627b6
+============================================================
+
+Lesson: Lesson03 | Frame: 1
+Timestamp: 00:02:57
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: ASK at price_1. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_1.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0000 (similarity 0.2): hello everyone and welcome in chat how is it going warriors one in chat can you...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.2775 (LOW)
+Explanation ID: f5279568e406bceb
+============================================================
+
+Lesson: Lesson03 | Frame: 2
+Timestamp: 00:05:55
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+  • Lesson03_frame0000 (similarity 0.2): hello everyone and welcome in chat how is it going warriors one in chat can you...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: aea544062f993ff5
+============================================================
+
+Lesson: Lesson03 | Frame: 3
+Timestamp: 00:08:52
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: ASK at price_3. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_3.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 2089620fd6306144
+============================================================
+
+Lesson: Lesson03 | Frame: 4
+Timestamp: 00:11:50
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: ASK at price_4. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_4.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: f59c6261d58dcaf7
+============================================================
+
+Lesson: Lesson03 | Frame: 5
+Timestamp: 00:14:48
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: ASK at price_5. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_5.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: eb49de4103ed1d6c
+============================================================
+
+Lesson: Lesson03 | Frame: 6
+Timestamp: 00:17:45
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: ASK at price_6. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_6.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 83aae1ae498573ec
+============================================================
+
+Lesson: Lesson03 | Frame: 7
+Timestamp: 00:20:43
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: ASK at price_7. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_7.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 3ef4e9c127eab51b
+============================================================
+
+Lesson: Lesson03 | Frame: 8
+Timestamp: 00:23:41
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 1): hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 1): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 1): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: a5513d6d90747eb1
+============================================================
+
+Lesson: Lesson03 | Frame: 9
+Timestamp: 00:26:38
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_9. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_9.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 150654fe346c7d4f
+============================================================
+
+Lesson: Lesson03 | Frame: 11
+Timestamp: 00:32:33
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_11. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_11.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 564deb5d18ceae45
+============================================================
+
+Lesson: Lesson03 | Frame: 12
+Timestamp: 00:35:31
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_12. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_12.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: d955b28ce77522c5
+============================================================
+
+Lesson: Lesson03 | Frame: 13
+Timestamp: 00:38:29
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_13. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_13.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 0ffd8fc386ab309c
+============================================================
+
+Lesson: Lesson03 | Frame: 14
+Timestamp: 00:41:26
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_14. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_14.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: d2144e91e08cea48
+============================================================
+
+Lesson: Lesson03 | Frame: 15
+Timestamp: 00:44:24
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_15. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_15.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: e60df6f442f55274
+============================================================
+
+Lesson: Lesson03 | Frame: 16
+Timestamp: 00:47:22
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_16. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_16.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 5fbbeb7bb1061227
+============================================================
+
+Lesson: Lesson03 | Frame: 17
+Timestamp: 00:50:19
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_17. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_17.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 694dd1cdedaeea8a
+============================================================
+
+Lesson: Lesson03 | Frame: 18
+Timestamp: 00:53:17
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_18. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_18.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 2cede800d9484b2d
+============================================================
+
+Lesson: Lesson03 | Frame: 19
+Timestamp: 00:56:15
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_19. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_19.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: b9a6244b8d23abbf
+============================================================
+
+Lesson: Lesson03 | Frame: 20
+Timestamp: 00:59:12
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_20. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_20.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: dc1a765e60719a13
+============================================================
+
+Lesson: Lesson03 | Frame: 21
+Timestamp: 01:02:10
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_21. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_21.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 05844ef26e52be74
+============================================================
+
+Lesson: Lesson03 | Frame: 22
+Timestamp: 01:05:07
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_22. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_22.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 23506e2a18c5c6d5
+============================================================
+
+Lesson: Lesson03 | Frame: 24
+Timestamp: 01:11:03
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_24. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_24.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: cbe156ac408f6637
+============================================================
+
+Lesson: Lesson03 | Frame: 25
+Timestamp: 01:14:00
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_25. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_25.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: b36f3eb527a03d7e
+============================================================
+
+Lesson: Lesson03 | Frame: 26
+Timestamp: 01:16:58
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 1): hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 1): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 1): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: f02c1ad10331dc23
+============================================================
+
+Lesson: Lesson03 | Frame: 27
+Timestamp: 01:19:56
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_27. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_27.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 113f534197392ebd
+============================================================
+
+Lesson: Lesson03 | Frame: 28
+Timestamp: 01:22:53
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_28. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_28.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 28bb8c51958d79ab
+============================================================
+
+Lesson: Lesson03 | Frame: 29
+Timestamp: 01:25:51
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_29. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_29.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: d224766b83eab528
+============================================================
+
+Lesson: Lesson03 | Frame: 30
+Timestamp: 01:28:49
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: BID at price_30. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_30.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 83c5032a373b4391
+============================================================
+
+Lesson: Lesson03 | Frame: 31
+Timestamp: 01:31:46
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 1): hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 1): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 1): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: dd1bf42c5dc8c4b6
+============================================================
+
+Lesson: Lesson03 | Frame: 32
+Timestamp: 01:34:44
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: ASK at price_32. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_32.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 7496d28aa1b87c87
+============================================================
+
+Lesson: Lesson03 | Frame: 33
+Timestamp: 01:37:41
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: ASK at price_33. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_33.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: a7fecaa5003003d5
+============================================================
+
+Lesson: Lesson03 | Frame: 34
+Timestamp: 01:40:39
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: ASK at price_34. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: ASK at price_34.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: fa544cc535324b13
+============================================================
+
+Lesson: Lesson03 | Frame: 35
+Timestamp: 01:43:37
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_35. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_35.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: e9e64f938c885e6a
+============================================================
+
+Lesson: Lesson03 | Frame: 36
+Timestamp: 01:46:34
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 1): hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 1): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 1): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: 4c4ad5df5fbc8d05
+============================================================
+
+Lesson: Lesson03 | Frame: 37
+Timestamp: 01:49:32
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Risk is assessed as high.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk is assessed as high.
+
+— Management —
+Management posture: observe. Watch for: watch for invalidation.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+  • Lesson03_frame0003 (similarity 0.4): quick money following your process and they don't have the mindset to stay in this group okay they...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.315 (LOW)
+Explanation ID: d7df9759b4f6058c
+============================================================
+
+Lesson: Lesson03 | Frame: 38
+Timestamp: 01:52:30
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_38. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_38.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 2c9ccae808e0709a
+============================================================
+
+Lesson: Lesson03 | Frame: 39
+Timestamp: 01:55:27
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_39. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_39.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 8b8b3bbdd918126e
+============================================================
+
+Lesson: Lesson03 | Frame: 40
+Timestamp: 01:58:25
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_40. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_40.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 3fa78e5934ab7bbe
+============================================================
+
+Lesson: Lesson03 | Frame: 41
+Timestamp: 02:01:22
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_41. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_41.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 5dec8d23798e2699
+============================================================
+
+Lesson: Lesson03 | Frame: 42
+Timestamp: 02:04:20
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: BID at price_42. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_42.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 7dc1b89d83bb17cc
+============================================================
+
+Lesson: Lesson03 | Frame: 43
+Timestamp: 02:07:18
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_43. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_43.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 30ae48b30fb1bcdb
+============================================================
+
+Lesson: Lesson03 | Frame: 44
+Timestamp: 02:10:15
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_44. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_44.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: f340143ea4bdb85f
+============================================================
+
+Lesson: Lesson03 | Frame: 45
+Timestamp: 02:13:13
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_45. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_45.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 7dd7af25b721c18d
+============================================================
+
+Lesson: Lesson03 | Frame: 46
+Timestamp: 02:16:11
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH. Unknown is present. Absorption events: BID at price_46. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=BALANCED, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_46.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: ff95327a885d8720
+============================================================
+
+Lesson: Lesson03 | Frame: 47
+Timestamp: 02:19:08
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: BID at price_47. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_47.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 51d7f7a586ea7f13
+============================================================
+
+Lesson: Lesson03 | Frame: 48
+Timestamp: 02:22:06
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market state is unclear from the available data. Unknown is present.
+
+— Market State —
+The market state is unclear from the available data.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present.
+
+— Risk —
+Risk cannot be assessed with incomplete data.
+
+— Management —
+No management posture can be determined.
+
+— Concepts —
+No relevant concepts have been learned yet.
+
+— Similar Lessons —
+  • Lesson03_frame0000 (similarity 1): hello everyone and welcome in chat how is it going warriors one in chat can you...
+  • Lesson03_frame0001 (similarity 1): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 1): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • market_state: No trend engine or session data available (Ensure trend engine and session intelligence are running)
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • risk: Cannot assess risk without market state, location, and aggression (Complete lower hierarchy levels first)
+  • management: Cannot determine management posture without risk assessment (Complete risk assessment first)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0 (INSUFFICIENT)
+Explanation ID: d8bbb59fb5e97ed6
+============================================================
+
+Lesson: Lesson03 | Frame: 49
+Timestamp: 02:25:04
+============================================================
+GENESIS LIVE COACH — What is happening?
+============================================================
+
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH. Unknown is present. Absorption events: BID at price_49. Risk is assessed as low.
+
+— Market State —
+The market is balanced. This is driven by trend engine balanced. Evidence: trend_state=CHOPPY, session=RTH.
+
+— Location —
+The location within market structure is not determined.
+
+— Aggression —
+Unknown is present. Absorption events: BID at price_49.
+
+— Risk —
+Risk is assessed as low.
+
+— Management —
+Management posture: observe. Watch for: monitor continuation.
+
+— Concepts —
+Relevant concepts: Quick, Money, Don't.
+  • Quick (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Money (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Don't (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Mindset (NOVICE, relevance 0.2): keyword match in definition or explanation
+  • Group (NOVICE, relevance 0.2): keyword match in definition or explanation
+
+— Similar Lessons —
+  • Lesson03_frame0003 (similarity 0.6): quick money following your process and they don't have the mindset to stay in this group okay they...
+  • Lesson03_frame0001 (similarity 0.4): oh nice one perfect rejection at the poc from 16 but i was delayed because of the profile amazing...
+  • Lesson03_frame0002 (similarity 0.4): satisfaction from end of day result to end of day process what does it mean i have a model okay the...
+
+— Missing Evidence —
+  • location: No market profile or structure data available (Ensure market profile and market structure bundles are running)
+  • reflection: No prior experience outcome available for this setup (Allow experience to complete with outcome and reflection)
+
+Overall Confidence: 0.3775 (LOW)
+Explanation ID: 8c540b4f40b3d5d5
+============================================================
+
